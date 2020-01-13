@@ -4,7 +4,7 @@
     <div class="subscribe" id="subscribe">
       <div class="subscribe__container">
         <span class="subscribe__title">Subscribe</span>
-        <p class="subscribe__text">Get a weekly email of posts I’ve added to the site.</p>
+        <p class="subscribe__text">Get an update when I post new content.</p>
         {% include subscribe-form.html %}
       </div>
     </div>
@@ -12,9 +12,9 @@
     <hr class="sep--white"/>
 
     <div class="footer__container">
-      {% tags_list :threshold => 1, :sort_by => count, :order_by => desc, :limit => 5 %}
-
       {% include social.html %}
+
+      {% include license.html %}
     </div>
   </div>
 </footer>
