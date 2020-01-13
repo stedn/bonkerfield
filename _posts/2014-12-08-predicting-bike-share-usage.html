@@ -1,0 +1,14 @@
+---
+layout: post
+title: Predicting Bike Share Usage
+date: '2014-12-08T08:37:00.000-08:00'
+author: Will Stedden
+tags:
+- DataScience
+modified_time: '2014-12-08T10:22:31.883-08:00'
+image: http://3.bp.blogspot.com/-qlw2VUtEIVo/VIXZPAgqMxI/AAAAAAAAA6A/ZsFmny0Rl-Y/s72-c/1024px-Hangzhou_bike_sharing_station.jpg
+blogger_id: tag:blogger.com,1999:blog-40405577383217050.post-2182011400476169304
+blogger_orig_url: https://www.bonkerfield.org/2014/12/predicting-bike-share-usage.html
+---
+
+<div dir="ltr" style="text-align: left;" trbidi="on"><p>I recently worked on a <a href="https://www.kaggle.com/">Kaggle</a> competition while I was taking Coursera's <a href="https://www.coursera.org/course/datasci">Introduction to Data Science</a>.  Here's a quick summary of what I came up with with some graphs of the data and what not. </p><div class="separator" style="clear: both; text-align: center;"><a href="http://commons.wikimedia.org/wiki/File:Hangzhou_bike_sharing_station.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://3.bp.blogspot.com/-qlw2VUtEIVo/VIXZPAgqMxI/AAAAAAAAA6A/ZsFmny0Rl-Y/s400/1024px-Hangzhou_bike_sharing_station.jpg" /></a></div><p>The goal of this project was to come up with a system to predict how many bikes will be used during a given hour. </p><p>The bike share company provided us with historical data for two years, including hourly weather and weekend/holiday information as well as the number of bikes in use each hour.  I tested my predictions against the hourly bike usage for the last week of every month. </p> <p>Because there were slowly-varying trends in bike share popularity over this time, I decided that the most important factor was the average for a given hour over the past 5-10 days.  I therefore, generated this statistic from the underlying dataset by performing a moving average.  I then supplied the weather and holiday statistics along with the moving average as training data to implementations of a neural network and a random forest.  The random forest performed better on my cross-validation set so I used it in my submission. </p> <p>The data set was surprisingly small so I simply imported it into the memory of a MATLAB runtime environment.  From there, I used a custom script to generate moving averages for every hourly timeslot and added that to the original dataset.  These datasets could be fed directly to existing neural network and random forest packages contained in MATLAB.  The data munging to create the moving average presented a slight difficulty.   </p> <p>The approach was simple but still allowed me to improve greatly over the baseline benchmark, reducing the mean error from 1.5 to 0.75. You can check out the <a href="https://github.com/lots-of-things/biker-predict">biker-predict</a>code on github.  </p>   </div>

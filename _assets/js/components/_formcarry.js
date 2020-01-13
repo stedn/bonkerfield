@@ -53,12 +53,15 @@ const Formcarry = (() => {
             }, 800);
           },
           error: () => {
+            s.body.addClass(s.closing);
+            s.body.removeClass(s.open);
+            s.html.removeClass(s.overflow);
+
             setTimeout(() => {
-              s.formMessage.removeClass(s.animation);
-              s.formMessage.addClass(s.animation);
-              s.formMessage.text('Something Went Wrong');
-            }, 750);
-          }
+              s.form[0].reset();
+              s.body.removeClass(s.closing);
+            }, 800);
+          },
         });
       });
     }

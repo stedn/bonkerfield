@@ -1,0 +1,12 @@
+---
+layout: post
+title: Combining GPT-2 and BERT to make an automated reddit personality
+date: '2019-12-20T15:18:00.000-08:00'
+author: Will Stedden
+tags: 
+modified_time: '2019-12-20T15:18:36.549-08:00'
+blogger_id: tag:blogger.com,1999:blog-40405577383217050.post-7063903136153292905
+blogger_orig_url: https://www.bonkerfield.org/2019/12/combining-gpt-2-and-bert-to-make.html
+---
+
+Getting into the brass tacks of how to finetune/modify gpt2 and bert.  and how to combine them together with the reddit bot.  step 0: get some reddit comment data from your favorite subreddits and filter out [deleted] and [removed] text  step 1: fine tune GPT-2 on reddit "comment [SEP] reply" text https://minimaxir.com/2019/09/howto-gpt2/  step 2a: fine tune BERT to differentiate real replies from fake ones step 2b: fine tune BERT to predict how well real comments perform  step 3: use praw to download current comments  step 4: use fine-tuned GPT2 to generate 10 replies to some comments  step 5: pass the generated replies to both of the BERT models to generate a prediction of realness and score  step 6: use some criteria for selecting which replies to try  step 7: use praw to submit the comments
