@@ -17,11 +17,10 @@ pre {
   padding: 2em 0.75em;
 
   line-height: 1.8;
-  overflow: scroll;
+  overflow-x: scroll;
   color: $color-black;
   background: $color-lightgrey;
   border-radius: 5px;
-  overflow: hidden;
 
   @media (min-width: $mq-med) {
     padding: {
@@ -32,10 +31,6 @@ pre {
 
   #markdown & {
     margin-bottom: 1.5rem;
-
-    @media (min-width: $mq-med) {
-      min-width: 110%;
-    }
   }
 
   code {

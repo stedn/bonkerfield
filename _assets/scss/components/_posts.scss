@@ -36,11 +36,11 @@
         content: '1 .column.posts-full';
       }
 
-      @media screen and (min-width: $mq-med) and (max-width: $mq-xlarge) {
+      @media screen and (min-width: $mq-med) and (max-width: $mq-large) {
         content: '2 .column.posts-half';
       }
 
-      @media screen and (min-width: $mq-xlarge) {
+      @media screen and (min-width: $mq-large) {
         content: '3 .column.posts-third';
       }
     }
