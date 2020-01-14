@@ -6,8 +6,7 @@ google_analytics:
 
 name: Will Stedden
 title: bonkerfield
-description: >
-  Barber is a blog theme for Jekyll built by Thomas Vaeth for Samesies using HTML, Sass, and JavaScript.
+description: "a bonkerfield is just too much"
 url: https://bonkerfield.org
 twitter_username: willstedden
 default_img: /assets/images/seo.jpg
@@ -77,7 +76,6 @@ compress_html:
 exclude:
   - node_modules
   - .DS_Store
-  - barber.jpg
   - Gemfile
   - Gemfile.lock
   - gulpfile.js
