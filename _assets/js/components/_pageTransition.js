@@ -63,17 +63,26 @@ const PageTransition = (() => {
     },
 
     firefox() {
-      s.window.unload(() => {
-        s.window.unbind('unload');
-      });
+      try {
+        s.window.unload(() => {
+          s.window.unbind('unload');
+        });
+      } catch(e) {
+        console.log('not firefox')
+      }
     },
 
     safari() {
-      s.window.bind('pageshow', e => {
-        if (e.originalEvent.persisted) {
-          window.location.reload();
-        }
-      });
+      try {
+        s.window.bind('pageshow', e => {
+          if (e.originalEvent.persisted) {
+            window.location.reload();
+          }
+        });
+      } catch(e){
+        console.log('not safari')
+      }
+      
     }
   };
 })();

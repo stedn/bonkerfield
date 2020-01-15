@@ -1,21 +1,19 @@
 {
-  "name": "barber-jekyll",
-  "description": "Barber is a blog theme for Jekyll built by Thomas Vaeth at Samesies using HTML, Sass, and JavaScript.",
-  "demo": "http://barber.samesies.io",
+  "name": "bonkerfield",
+  "demo": "https://bonkerfield.org",
   "version": "1.0.0",
   "scripts": {
     "start": "bundle exec jekyll serve",
     "build": "bundle exec jekyll build",
-    "deploy": "gulp build && bundle exec jekyll build && s3-website deploy _site",
+    "deploy": "gulp build && bundle exec jekyll build",
     "gulp": "gulp"
   },
   "author": {
-    "name": "Samesies",
-    "email": "okay@samesies.io",
-    "url": "http://samesies.io"
+    "name": "Will Stedden",
+    "email": "",
+    "url": "https://hellowill.bonkerfield.org"
   },
   "keywords": [
-    "barber",
     "jekyll",
     "blog",
     "theme"
