@@ -19,9 +19,9 @@ image: https://1.bp.blogspot.com/-Px6r44nrieA/XUdMsVkcWJI/AAAAAAAAET8/UrfNnZ1Ajc
     To me, there are three drawbacks to werewolf that make it both unrealistic and a little awkward to play.
 </p>
 <ul>
-    <li>voting requires everyone stopping to close our eyes</li>
-    <li>there's no way to verify anything</li>
-    <li>only the werewolves have anything to hide</li>
+<li>voting requires everyone stopping to close our eyes</li>
+<li>there's no way to verify anything</li>
+<li>only the werewolves have anything to hide</li>
 </ul>
 <p>
     When I decided I wanted to adapt the game to have a more immersive take, I knew that I needed to re-imagine some of the central mechanics to fix those problems.
@@ -49,7 +49,7 @@ image: https://1.bp.blogspot.com/-Px6r44nrieA/XUdMsVkcWJI/AAAAAAAAET8/UrfNnZ1Ajc
 <p>
     I was thinking of ways to both make voting more fluid and come up with ways to introduce "true facts." Surprisingly, it turned out that introducing the same tool resolved both issues.
 </p>
-<div class="separator" style="clear: both; text-align: center;"><a href="https://1.bp.blogspot.com/-Px6r44nrieA/XUdMsVkcWJI/AAAAAAAAET8/UrfNnZ1Ajcs8wFW9Pbq1Axmi-ODdkCNnACLcBGAs/s1600/Werewolf-Cell-Phone-User---18386.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="https://1.bp.blogspot.com/-Px6r44nrieA/XUdMsVkcWJI/AAAAAAAAET8/UrfNnZ1Ajcs8wFW9Pbq1Axmi-ODdkCNnACLcBGAs/s400/Werewolf-Cell-Phone-User---18386.jpg" width="400" height="302" data-original-width="184" data-original-height="139" /></a></div>
+<img border="0" src="https://1.bp.blogspot.com/-Px6r44nrieA/XUdMsVkcWJI/AAAAAAAAET8/UrfNnZ1Ajcs8wFW9Pbq1Axmi-ODdkCNnACLcBGAs/s1600/Werewolf-Cell-Phone-User---18386.jpg" title=" "/>
 <p>
     We live within constant connection with our phones to both gather information and inform others of our intentions. Why not leverage our digital extensions to be the primary tool of the game?
 </p>
@@ -80,15 +80,15 @@ image: https://1.bp.blogspot.com/-Px6r44nrieA/XUdMsVkcWJI/AAAAAAAAET8/UrfNnZ1Ajc
 <p>
     This connects to your web browser to allow authentication of the Google account that has Gmail API access.
 </p>
-<pre><br />creds = flow.run_local_server()<br />service = build('gmail', 'v1', credentials=creds)<br /></pre>
+<pre><br/>creds = flow.run_local_server()<br/>service = build('gmail', 'v1', credentials=creds)<br/></pre>
 <p>
     Next, I grab the unread messages and iterate through them.
 </p>
-<pre><br />     unread_msgs = service.users().messages().list(userId='me',labelIds=['INBOX', 'UNREAD']).execute()<br />     mssg_list = unread_msgs['messages']<br />     for mssg in mssg_list:<br />            message = service.users().messages().get(userId='me', id=m_id).execute() # fetch the message using API<br /></pre>
+<pre><br/>     unread_msgs = service.users().messages().list(userId='me',labelIds=['INBOX', 'UNREAD']).execute()<br/>     mssg_list = unread_msgs['messages']<br/>     for mssg in mssg_list:<br/>            message = service.users().messages().get(userId='me', id=m_id).execute() # fetch the message using API<br/></pre>
 <p>
     I step through the header items to get the subject and the sender.
 </p>
-<pre><br />            payld = message['payload']<br />            headr = payld['headers']<br /><br />            for item in headr: # getting the Subject,Time Sent, and Sender<br />                if item['name'] == 'Subject':<br />                    msg_subject = str_clean(item['value'])<br />                elif item['name'] == 'Date':<br />                    msg_date = item['value']<br />                    date_parse = (parser.parse(msg_date))<br />                elif item['name'] == 'From':<br />                    msg_from = str_clean(item['value'].split('>')[0].split('<')[1])<br /><br /></pre>
+<pre><br/>            payld = message['payload']<br/>            headr = payld['headers']<br/><br/>            for item in headr: # getting the Subject,Time Sent, and Sender<br/>                if item['name'] == 'Subject':<br/>                    msg_subject = str_clean(item['value'])<br/>                elif item['name'] == 'Date':<br/>                    msg_date = item['value']<br/>                    date_parse = (parser.parse(msg_date))<br/>                elif item['name'] == 'From':<br/>                    msg_from = str_clean(item['value'].split('&gt;')[0].split('&lt;')[1])<br/><br/></pre>
 <p>
     At this point I go through several rounds of custom logic to compare this to the central database. I won't go into the details of the logic, but I want to mention how I access this "central database" in a very cheap and easily editable way.
 </p>
@@ -96,11 +96,11 @@ image: https://1.bp.blogspot.com/-Px6r44nrieA/XUdMsVkcWJI/AAAAAAAAET8/UrfNnZ1Ajc
 <p>
     To handle both the emailing permissions and the werewolf feature database, I just pulled the details from a Google Sheet. I already described how to connect to gsheets in a <a href="/2019/04/visualizing-shared-budgets-and-dividing.html">previous blog post</a>. I reused the same credentials to download a sheet and convert into a python dictionary with all the info needed.
 </p>
-<pre><br />    sheets_service = build('sheets', 'v4', credentials=creds)<br />    result = sheets_service.spreadsheets().values().get(<br />        spreadsheetId='game_db_spreadsheet_id', range='db!A:I').execute()<br /><br /></pre>
+<pre><br/>    sheets_service = build('sheets', 'v4', credentials=creds)<br/>    result = sheets_service.spreadsheets().values().get(<br/>        spreadsheetId='game_db_spreadsheet_id', range='db!A:I').execute()<br/><br/></pre>
 <p>
     Finally, I sent emails with the requested information back to the players.
 </p>
-<pre><br />        message = MIMEText(message_body)<br />        message['to'] = to<br />        message['from'] = 'robot-db@gmail.com'<br />        message['subject'] = subject<br />        encoded_message = urlsafe_b64encode(message.as_bytes())<br />        service.users().messages().send(userId='me', body={'raw': encoded_message.decode()}).execute()<br /></pre>
+<pre><br/>        message = MIMEText(message_body)<br/>        message['to'] = to<br/>        message['from'] = 'robot-db@gmail.com'<br/>        message['subject'] = subject<br/>        encoded_message = urlsafe_b64encode(message.as_bytes())<br/>        service.users().messages().send(userId='me', body={'raw': encoded_message.decode()}).execute()<br/></pre>
 <p>
     All of this worked by repeatedly calling the API to get the new unread messages and then running through this over and over again. I used the sent email time to prevent people from repeatedly querying the database in less than the alotted time.
 </p>
