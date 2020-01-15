@@ -33,7 +33,7 @@ for f in files:
     with open(f) as page:
         soup = BeautifulSoup(page, "html.parser")
         soup.find('div', {"dir": "ltr", "trbidi":"on"}).replaceWithChildren()
-        [d.decompose() for d in soup.findAll('div', style=re.compile("display:none;"))] 
+        [d.decompose() for d in soup.findAll('div', style=re.compile("display:none"))] 
         for div in soup.findAll('div', {"class": "separator"}):
             img = div.a.img
             if img:
@@ -43,5 +43,6 @@ for f in files:
                     img_src = '/'.join(src_parts[:-2]+[src_parts[-1]])
                     img['src'] = img_src
                 div.replaceWith(img)
-    with open(f, "w") as f_output:
-        f_output.write(str(soup)) 
+    if soup:
+        with open(f, "w") as f_output:
+            f_output.write(str(soup)) 
