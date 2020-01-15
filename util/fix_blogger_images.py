@@ -32,17 +32,21 @@ for f in files:
     soup = None
     with open(f) as page:
         soup = BeautifulSoup(page, "html.parser")
-        soup.find('div', {"dir": "ltr", "trbidi":"on"}).replaceWithChildren()
+        global_div = soup.find('div', {"dir": "ltr", "trbidi":"on"})
+        if global_div:
+            global_div.replaceWithChildren()
         [d.decompose() for d in soup.findAll('div', style=re.compile("display:none"))] 
         for div in soup.findAll('div', {"class": "separator"}):
-            img = div.a.img
-            if img:
-                img['title'] = div.text +' '+ div.a.text
-                if 'blogspot' in img['src']:
-                    src_parts = img['src'].split('/')
-                    img_src = '/'.join(src_parts[:-2]+[src_parts[-1]])
-                    img['src'] = img_src
-                div.replaceWith(img)
+            a = div.a
+            if a:
+                img = a.img
+                if img:
+                    img['title'] = div.text +' '+ div.a.text
+                    if 'blogspot' in img['src']:
+                        src_parts = img['src'].split('/')
+                        img_src = '/'.join(src_parts[:-2]+[src_parts[-1]])
+                        img['src'] = img_src
+                    div.replaceWith(img)
     if soup:
         with open(f, "w") as f_output:
             f_output.write(str(soup)) 
