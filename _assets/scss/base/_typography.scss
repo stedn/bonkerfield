@@ -2,45 +2,45 @@
 // Base typography
 //---------------------------------------------- 
 body {
-  font-family: $font;
-  line-height: $base-lineheight;
-  color: $color-black;
-  background-color: $color-white;
+    font-family: $font;
+    line-height: $base-lineheight;
+    color: $color-black;
+    background-color: $color-white;
 }
 
 //----------------------------------------------
 // Fluid body sizing
 //---------------------------------------------- 
 body {
-  font-size: 100%;
+    font-size: 100%;
 
-  @media (min-width: $mq-small) {
-    font-size: 102.5%;
-  }
+    @media (min-width: $mq-small) {
+        font-size: 102.5%;
+    }
 
-  @media (min-width: $mq-med) {
-    font-size: 105%;
-  }
+    @media (min-width: $mq-med) {
+        font-size: 105%;
+    }
 
-  @media (min-width: $mq-large) {
-    font-size: 107.5%;
-  }
+    @media (min-width: $mq-large) {
+        font-size: 107.5%;
+    }
 
-  @media (min-width: 75em) {
-    font-size: 110%;
-  }
+    @media (min-width: 75em) {
+        font-size: 110%;
+    }
 
-  @media (min-width: $mq-xlarge) {
-    font-size: 115%;
-  }
+    @media (min-width: $mq-xlarge) {
+        font-size: 115%;
+    }
 
-  @media (min-width: $mq-xxlarge) {
-    font-size: 120%;
-  }
+    @media (min-width: $mq-xxlarge) {
+        font-size: 120%;
+    }
 
-  @media (min-width: $mq-xxxlarge) {
-    font-size: 125%;
-  }
+    @media (min-width: $mq-xxxlarge) {
+        font-size: 125%;
+    }
 }
 
 //----------------------------------------------
@@ -52,37 +52,37 @@ h3,
 h4,
 h5,
 h6 {
-  @extend %font-header;
+    @extend %font-header;
 
-  margin: {
-    top: 0;
-    bottom: 0;
-  }
+    margin: {
+        top: 0;
+        bottom: 0;
+    }
 }
 
 //----------------------------------------------
 // H2 Theme
 //---------------------------------------------- 
 h2:not(.posts__text):not(.related__text) {
-  $fontSize: 2em;
+    $fontSize: 2em;
 
-  font-family: $font-post;
-  font-size: $fontSize;
-  line-height: 1.4;
+    font-family: $font;
+    font-size: $fontSize;
+    line-height: 1.4;
 
-  @media (min-width: $mq-xlarge) {
-    font-size: $fontSize + 0.25em;
-  }
+    @media (min-width: $mq-xlarge) {
+        font-size: $fontSize + 0.25em;
+    }
 }
 
 //----------------------------------------------
 // Paragraphs
 //---------------------------------------------- 
 p {
-  margin: {
-    top: 0;
-    bottom: 0.75em;
-  }
+    margin: {
+        top: 0;
+        bottom: 0.75em;
+    }
 }
 
 //----------------------------------------------
@@ -90,74 +90,80 @@ p {
 //---------------------------------------------- 
 q,
 blockquote {
-  @extend %text-center;
+    @extend %text-center;
 
-  margin: 0 0 1.5rem;
+    margin: 0 auto 1.5rem;
 
-  font-family: $font-post;
-  font-weight: 400;
-  font-size: 1.25em;
-  color: $color-black;
-  line-height: 1.4;
+    font-family: $font-post;
+    font-weight: 400;
+    font-size: 1.1em;
+    min-width: 0;
+    border-left: 0.2em solid lighten($color-black, 40%);
+    color: $color-black;
+    background-color: $color-lightgrey;
+    padding: 10px;
+    line-height: 1.4;
+    width: 90%;
+    display: table;
 
-  @media (min-width: $mq-small) {
-    font-size: 1.5em;
-  }
+    @media (min-width: $mq-small) {
+        font-size: 1.25em;
+    }
 }
 
 cite {
-  @extend %font-header;
+    @extend %font-header;
 
-  display: block;
+    display: block;
 
-  font-family: $font;
-  font-size: $font-xxxsmall;
-  font-style: normal;
-  color: $color-black;
-  line-height: $base-lineheight;
+    font-family: $font;
+    font-size: $font-xxxsmall;
+    font-style: normal;
+    color: $color-black;
+    line-height: $base-lineheight;
 
-  &:before {
-    content: "\2014 \0020";
-  }
+    &:before {
+        content: "\2014 \0020";
+    }
 }
 
 //----------------------------------------------
 // Misc
 //---------------------------------------------- 
 strong {
-  @extend %letter-spacing;
+    @extend %letter-spacing;
 }
 
 small {
-  font-size: $font-xsmall;
+    font-size: $font-xsmall;
 }
 
 strong {
-  font-weight: 700;
+    font-weight: 700;
 }
 
 sup,
 sub {
-  font-size: $font-xxsmall;
+    font-size: $font-xxsmall;
 }
 
 sup {
-  top: -0.75em;
+    top: -0.75em;
 }
 
 sub {
-  bottom: -0.75em;
+    bottom: -0.75em;
 }
 
 mark {
-  color: $color-black;
+    color: $color-black;
 }
 
 //----------------------------------------------
 // Selection
 //---------------------------------------------- 
 ::selection {
-  color: $color-white;
-  background: $color-alpha;
-  text-shadow: none;
+    color: $color-white;
+    background: $color-alpha;
+    text-shadow: none;
 }

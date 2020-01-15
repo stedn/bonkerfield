@@ -6,10 +6,10 @@ author: Will Stedden
 tags:
 - Physics
 - WebDesign
-image: assets/images/Hydrogen_Density_Plots.png
+image: /assets/images/Hydrogen_Density_Plots.png
 ---
 <p>
-<small>Update: by some mind-blowing coincidence the <a href="https://journal.burningman.org/2019/10/news/brc-news/burning-man-2020-the-multiverse/">theme of next year's Burning Man</a> happens to be the Multiverse! Note that what follows was all written before the theme was announced.</small>
+    <small>Update: by some mind-blowing coincidence the <a href="https://journal.burningman.org/2019/10/news/brc-news/burning-man-2020-the-multiverse/">theme of next year's Burning Man</a> happens to be the Multiverse! Note that what follows was all written before the theme was announced.</small>
 </p>
 <p>
     My partner and I went to Burning Man this year for the first time. It was an overwhelming experience. So much freedom, so much hard work, so little sleep, so many people. There were parts that were forgettable, parts that were frustrating, but overall it was an experience that changed how I thought about the world.
@@ -35,7 +35,7 @@ image: assets/images/Hydrogen_Density_Plots.png
 <p>
     Then, something happened that physicists found pretty hard to believe. They found some things they literally could not predict.
 </p>
-<img border="0" src="https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fblogs-images.forbes.com%2Fstartswithabang%2Ffiles%2F2017%2F11%2FHydrogen_Density_Plots.jpg" title="The location of an electron is never exactly predictable "/>
+<img border="0" src="https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fblogs-images.forbes.com%2Fstartswithabang%2Ffiles%2F2017%2F11%2FHydrogen_Density_Plots.jpg" title="The location of an electron is never exactly predictable " />
 <p>
     These things weren't even complicated. In fact, they were pretty simple. Most of them just looked like firing a subatomic particle at a detector. Supposedly, they had all the information to be able to predict exactly where these particles would go. But as it turned out, the particle would only end up where it was supposed to go half of the time. The other half, it would go someplace different.
 </p>
@@ -57,7 +57,7 @@ image: assets/images/Hydrogen_Density_Plots.png
 <p>
     This idea leads directly to the sci-fi plot device of two parallel realities. Often this takes the form of a <a href="https://en.wikipedia.org/wiki/Mirror,_Mirror_(Star_Trek:_The_Original_Series)">mirror</a> universe or a <a href="https://community-sitcom.fandom.com/wiki/Darkest_Timeline">darkest timeline</a>. If you're familiar with these kinds of pop-culture references, you can probably easily imagine how this scenario works. Imagine you are watching a movie of someone approaching a potential lover like in this image.
 </p>
-<img border="0" src="https://3.bp.blogspot.com/-PT1529ZfZzE/XaZlg_5jSJI/AAAAAAAAEyk/NnQe1LyrGyIse_xesYHcOLo7SUE3pHofACLcBGAsYHQ/s1600/branching-realities.jpg" title=" "/>
+<img border="0" src="https://3.bp.blogspot.com/-PT1529ZfZzE/XaZlg_5jSJI/AAAAAAAAEyk/NnQe1LyrGyIse_xesYHcOLo7SUE3pHofACLcBGAsYHQ/s1600/branching-realities.jpg" title=" " />
 <p>
     At the moment that the other person responds, the outcome of the universe is undetermined. Then when the decision is made, both outcomes happen in different universes. Reality splits.
 </p>
@@ -80,8 +80,8 @@ image: assets/images/Hydrogen_Density_Plots.png
     To create quantum realities, I needed to do two things
 </p>
 <ol>
-<li>Find some way to generate quantum measurements</li>
-<li>Link quantum measurements to some kind of choice interface</li>
+    <li>Find some way to generate quantum measurements</li>
+    <li>Link quantum measurements to some kind of choice interface</li>
 </ol>
 <p>
 </p>
@@ -95,7 +95,7 @@ image: assets/images/Hydrogen_Density_Plots.png
 <p>
     For a more robust measurement, I turned to the real quantum physicists for expertise. Fortunately, there is <a href="https://anuquantumoptics.org">a team</a> at the Australian National University who has built a really effective quantum number generator. The best part is that they put it onto the internet! Their <a href="http://qrng.anu.edu.au/index.php">website</a> explains a lot more about how their system works, check it out if you are interested. Long story short, they measure excitation of the <a href="https://en.wikipedia.org/wiki/Vacuum_energy">quantum vacuum energy</a>, which in-and-of-itself is a trippy concept.
 </p>
-<img border="0" src="https://3.bp.blogspot.com/-8ZhC-gKfDVQ/XakWXFHLNyI/AAAAAAAAE0o/p4mUsN8Jyc4x1p8zMed6VSwFLWmRkQzsACLcBGAsYHQ/s1600/quantum-machine.jpg" title="(not the actual machine used to generate these numbers, but something like it) "/>
+<img border="0" src="https://3.bp.blogspot.com/-8ZhC-gKfDVQ/XakWXFHLNyI/AAAAAAAAE0o/p4mUsN8Jyc4x1p8zMed6VSwFLWmRkQzsACLcBGAsYHQ/s1600/quantum-machine.jpg" title="(not the actual machine used to generate these numbers, but something like it) " />
 <p>
     I found a python package from <a href="https://twitter.com/paramedoc?lang=en">Ellie Ragone</a> that gave an <a href="https://github.com/EllieRagone/anurandom">example</a> of how to use the ANU-Random API. The API just works by loading data from <a href="http://150.203.48.55/RawBin.php">this page</a>, which appear to be rapidly refreshed on the server side rapidly. The data is a sequence of <a href="https://en.wikipedia.org/wiki/Bit">bits</a> representing the outcome of several measurements. To get a quantum coin flip, I just take the first measurement in the string.
 </p>
@@ -109,7 +109,7 @@ image: assets/images/Hydrogen_Density_Plots.png
 <p>
     I've already started using it to make very important life decisions. You can try it out <a href="http://quantum-multiverse-bifurcator.appspot.com/">here</a>.
 </p>
-<img border="0" src="https://3.bp.blogspot.com/-vdKTCTOMcuA/XalW9bhYtoI/AAAAAAAAE1I/mbaN5hrvC1YXGBQDXud0I4Y-wqB7N0Z5wCLcBGAsYHQ/s1600/ezgif-6-15592130e47b.gif" title=" "/>
+<img border="0" src="https://3.bp.blogspot.com/-vdKTCTOMcuA/XalW9bhYtoI/AAAAAAAAE1I/mbaN5hrvC1YXGBQDXud0I4Y-wqB7N0Z5wCLcBGAsYHQ/s1600/ezgif-6-15592130e47b.gif" title=" " />
 <p>
     I based the website on this <a href="https://github.com/petersimeth/basic-flask-template">minimal template</a> from <a href="https://petersimeth.github.io">Peter Simeth</a>. As usual, all the code is in <a href="https://github.com/lots-of-things/quantum-multiverse-bifurcator">an open source repo on Github</a>. It's about as bare bones as possible, but it gets the job done.
 </p>

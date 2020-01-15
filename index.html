@@ -10,8 +10,9 @@ pagination:
       <h2 itemprop="name headline">bonkerfield</h2>
 
       <p class="post__date">a place to put lots of things</p>
+      {% tags_list :threshold => 1, :sort_by => count, :order_by => desc, :limit => 7 %}
     </div>
-    {% tags_list :threshold => 1, :sort_by => count, :order_by => desc, :limit => 7 %}
+    
 
   </div>
   <div class="grid-xlarge">
