@@ -1,10 +1,11 @@
 
 for v1
-- add reasons page, including highlights of major areas of interest
+- add things page with highlights of major areas of interest
+- add reasons page, including description of the bonkerfield
 - clean up formatting on all posts
 
 
 for v2
 - make "contribute" page that includes info about collaboration and a better pitch for donations
 - fix search to be more functional
-- 
+- dark mode with css https://css-tricks.com/dark-modes-with-css/

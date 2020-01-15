@@ -37,6 +37,18 @@
     color: $color-black;
   }
 
+  &__link {
+    font-size: $font-small;
+    color: $color-darkgrey;
+    transition: color 200ms ease-in-out;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $color-black;
+    }
+  }
+
   &__list {
     @extend %no-list-style;
 
