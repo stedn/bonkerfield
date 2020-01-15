@@ -1,0 +1,23 @@
+---
+layout: page
+title: search
+description: we're all looking for something
+---
+
+<input type="text" id="search-input" placeholder="Search blog posts..">
+<ul id="results-container"></ul>
+
+<script src="{{ '/assets/js/simple-jekyll-search.min.js' | prepend: site.baseurl }}"></script>
+
+
+<script type="text/javascript">
+  SimpleJekyllSearch.init({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    dataSource: "{{ '/search.json' | prepend: site.baseurl }}",
+    searchResultTemplate: "<a href='{url}' title='{title}'><p itemprop='headline'>{title}<\/p><\/a>",
+    noResultsText: 'No results found',
+    limit: 5,
+    fuzzy: true,
+  });
+</script>
