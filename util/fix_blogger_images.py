@@ -28,6 +28,7 @@ for f in files:
 
 
 files = glob.glob('*.html')
+REMOVE_ATTRIBUTES = ['width','height', 'data-original-width', 'data-original-height']
 for f in files:
     soup = None
     with open(f) as page:
@@ -42,9 +43,16 @@ for f in files:
                 img = a.img
                 if img:
                     img['title'] = div.text +' '+ div.a.text
+                    val = 's1600'
+                    if ('width' in img.attrs) and ('height' in img.attrs) and (img['width'] < img['height']):
+                        val = 's800'
+                    for attr in REMOVE_ATTRIBUTES:
+                        if attr in img.attrs:
+                            del img.attrs[attr]
+
                     if 'blogspot' in img['src']:
                         src_parts = img['src'].split('/')
-                        img_src = '/'.join(src_parts[:-2]+[src_parts[-1]])
+                        img_src = '/'.join(src_parts[:-2]+[val]+[src_parts[-1]])
                         img['src'] = img_src
                     div.replaceWith(img)
     if soup:
