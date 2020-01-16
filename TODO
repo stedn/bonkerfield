@@ -1,13 +1,16 @@
 
 for v1
-- add things page with highlights of major areas of interest
-- add reasons page, including description of the bonkerfield
+- add highlights of major areas of interest to things page
+- finish content for help page
+   - make video with pitch and overview of plans
+   - add photo with prototype v2b all shiny like
+   - make prototype v2b blog post
+- have claire edit reasons
+
 - double check formatting across all posts
 - update date format on each post
 - update tags on each post
 
-
 for v2
-- make "contribute" page that includes info about collaboration and a better pitch for donations
 - fix search to be more functional
 - dark mode with css https://css-tricks.com/dark-modes-with-css/
