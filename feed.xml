@@ -5,8 +5,8 @@
     <description>personal information identity spacetime map</description>
     <link>https://bonkerfield.org</link>
     <atom:link href="https://bonkerfield.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 15 Jan 2020 01:12:07 -0800</pubDate>
-    <lastBuildDate>Wed, 15 Jan 2020 01:12:07 -0800</lastBuildDate>
+    <pubDate>Thu, 16 Jan 2020 00:09:05 -0800</pubDate>
+    <lastBuildDate>Thu, 16 Jan 2020 00:09:05 -0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -483,7 +483,7 @@ top (bone dry)
       <item>
         <title>Quantum Multiverse Bifurcator</title>
         <description>&lt;p&gt;
-&lt;small&gt;Update: by some mind-blowing coincidence the &lt;a href=&quot;https://journal.burningman.org/2019/10/news/brc-news/burning-man-2020-the-multiverse/&quot;&gt;theme of next year's Burning Man&lt;/a&gt; happens to be the Multiverse! Note that what follows was all written before the theme was announced.&lt;/small&gt;
+    &lt;small&gt;Update: by some mind-blowing coincidence the &lt;a href=&quot;https://journal.burningman.org/2019/10/news/brc-news/burning-man-2020-the-multiverse/&quot;&gt;theme of next year's Burning Man&lt;/a&gt; happens to be the Multiverse! Note that what follows was all written before the theme was announced.&lt;/small&gt;
 &lt;/p&gt;
 &lt;p&gt;
     My partner and I went to Burning Man this year for the first time. It was an overwhelming experience. So much freedom, so much hard work, so little sleep, so many people. There were parts that were forgettable, parts that were frustrating, but overall it was an experience that changed how I thought about the world.
@@ -509,7 +509,7 @@ top (bone dry)
 &lt;p&gt;
     Then, something happened that physicists found pretty hard to believe. They found some things they literally could not predict.
 &lt;/p&gt;
-&lt;img border=&quot;0&quot; src=&quot;https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fblogs-images.forbes.com%2Fstartswithabang%2Ffiles%2F2017%2F11%2FHydrogen_Density_Plots.jpg&quot; title=&quot;The location of an electron is never exactly predictable &quot;/&gt;
+&lt;img border=&quot;0&quot; src=&quot;https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fblogs-images.forbes.com%2Fstartswithabang%2Ffiles%2F2017%2F11%2FHydrogen_Density_Plots.jpg&quot; title=&quot;The location of an electron is never exactly predictable &quot; /&gt;
 &lt;p&gt;
     These things weren't even complicated. In fact, they were pretty simple. Most of them just looked like firing a subatomic particle at a detector. Supposedly, they had all the information to be able to predict exactly where these particles would go. But as it turned out, the particle would only end up where it was supposed to go half of the time. The other half, it would go someplace different.
 &lt;/p&gt;
@@ -531,7 +531,7 @@ top (bone dry)
 &lt;p&gt;
     This idea leads directly to the sci-fi plot device of two parallel realities. Often this takes the form of a &lt;a href=&quot;https://en.wikipedia.org/wiki/Mirror,_Mirror_(Star_Trek:_The_Original_Series)&quot;&gt;mirror&lt;/a&gt; universe or a &lt;a href=&quot;https://community-sitcom.fandom.com/wiki/Darkest_Timeline&quot;&gt;darkest timeline&lt;/a&gt;. If you're familiar with these kinds of pop-culture references, you can probably easily imagine how this scenario works. Imagine you are watching a movie of someone approaching a potential lover like in this image.
 &lt;/p&gt;
-&lt;img border=&quot;0&quot; src=&quot;https://3.bp.blogspot.com/-PT1529ZfZzE/XaZlg_5jSJI/AAAAAAAAEyk/NnQe1LyrGyIse_xesYHcOLo7SUE3pHofACLcBGAsYHQ/s1600/branching-realities.jpg&quot; title=&quot; &quot;/&gt;
+&lt;img border=&quot;0&quot; src=&quot;https://3.bp.blogspot.com/-PT1529ZfZzE/XaZlg_5jSJI/AAAAAAAAEyk/NnQe1LyrGyIse_xesYHcOLo7SUE3pHofACLcBGAsYHQ/s1600/branching-realities.jpg&quot; title=&quot; &quot; /&gt;
 &lt;p&gt;
     At the moment that the other person responds, the outcome of the universe is undetermined. Then when the decision is made, both outcomes happen in different universes. Reality splits.
 &lt;/p&gt;
@@ -554,8 +554,8 @@ top (bone dry)
     To create quantum realities, I needed to do two things
 &lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;Find some way to generate quantum measurements&lt;/li&gt;
-&lt;li&gt;Link quantum measurements to some kind of choice interface&lt;/li&gt;
+    &lt;li&gt;Find some way to generate quantum measurements&lt;/li&gt;
+    &lt;li&gt;Link quantum measurements to some kind of choice interface&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;
 &lt;/p&gt;
@@ -569,7 +569,7 @@ top (bone dry)
 &lt;p&gt;
     For a more robust measurement, I turned to the real quantum physicists for expertise. Fortunately, there is &lt;a href=&quot;https://anuquantumoptics.org&quot;&gt;a team&lt;/a&gt; at the Australian National University who has built a really effective quantum number generator. The best part is that they put it onto the internet! Their &lt;a href=&quot;http://qrng.anu.edu.au/index.php&quot;&gt;website&lt;/a&gt; explains a lot more about how their system works, check it out if you are interested. Long story short, they measure excitation of the &lt;a href=&quot;https://en.wikipedia.org/wiki/Vacuum_energy&quot;&gt;quantum vacuum energy&lt;/a&gt;, which in-and-of-itself is a trippy concept.
 &lt;/p&gt;
-&lt;img border=&quot;0&quot; src=&quot;https://3.bp.blogspot.com/-8ZhC-gKfDVQ/XakWXFHLNyI/AAAAAAAAE0o/p4mUsN8Jyc4x1p8zMed6VSwFLWmRkQzsACLcBGAsYHQ/s1600/quantum-machine.jpg&quot; title=&quot;(not the actual machine used to generate these numbers, but something like it) &quot;/&gt;
+&lt;img border=&quot;0&quot; src=&quot;https://3.bp.blogspot.com/-8ZhC-gKfDVQ/XakWXFHLNyI/AAAAAAAAE0o/p4mUsN8Jyc4x1p8zMed6VSwFLWmRkQzsACLcBGAsYHQ/s1600/quantum-machine.jpg&quot; title=&quot;(not the actual machine used to generate these numbers, but something like it) &quot; /&gt;
 &lt;p&gt;
     I found a python package from &lt;a href=&quot;https://twitter.com/paramedoc?lang=en&quot;&gt;Ellie Ragone&lt;/a&gt; that gave an &lt;a href=&quot;https://github.com/EllieRagone/anurandom&quot;&gt;example&lt;/a&gt; of how to use the ANU-Random API. The API just works by loading data from &lt;a href=&quot;http://150.203.48.55/RawBin.php&quot;&gt;this page&lt;/a&gt;, which appear to be rapidly refreshed on the server side rapidly. The data is a sequence of &lt;a href=&quot;https://en.wikipedia.org/wiki/Bit&quot;&gt;bits&lt;/a&gt; representing the outcome of several measurements. To get a quantum coin flip, I just take the first measurement in the string.
 &lt;/p&gt;
@@ -583,7 +583,7 @@ top (bone dry)
 &lt;p&gt;
     I've already started using it to make very important life decisions. You can try it out &lt;a href=&quot;http://quantum-multiverse-bifurcator.appspot.com/&quot;&gt;here&lt;/a&gt;.
 &lt;/p&gt;
-&lt;img border=&quot;0&quot; src=&quot;https://3.bp.blogspot.com/-vdKTCTOMcuA/XalW9bhYtoI/AAAAAAAAE1I/mbaN5hrvC1YXGBQDXud0I4Y-wqB7N0Z5wCLcBGAsYHQ/s1600/ezgif-6-15592130e47b.gif&quot; title=&quot; &quot;/&gt;
+&lt;img border=&quot;0&quot; src=&quot;https://3.bp.blogspot.com/-vdKTCTOMcuA/XalW9bhYtoI/AAAAAAAAE1I/mbaN5hrvC1YXGBQDXud0I4Y-wqB7N0Z5wCLcBGAsYHQ/s1600/ezgif-6-15592130e47b.gif&quot; title=&quot; &quot; /&gt;
 &lt;p&gt;
     I based the website on this &lt;a href=&quot;https://github.com/petersimeth/basic-flask-template&quot;&gt;minimal template&lt;/a&gt; from &lt;a href=&quot;https://petersimeth.github.io&quot;&gt;Peter Simeth&lt;/a&gt;. As usual, all the code is in &lt;a href=&quot;https://github.com/lots-of-things/quantum-multiverse-bifurcator&quot;&gt;an open source repo on Github&lt;/a&gt;. It's about as bare bones as possible, but it gets the job done.
 &lt;/p&gt;
@@ -5778,31 +5778,32 @@ function regame() { document.getElementById(&quot;card&quot; + (index + 1)).src 
     
       <item>
         <title>Mo's Tool Pouch</title>
-        <description>So in keeping with the holiday spirit I'm now showing off the little bag I made for my girlfriend's mom. She's an avid &lt;a href=&quot;http://lillstreet.com/department/ceramics-sculpture&quot;&gt;ceramicist&lt;/a&gt; so I made this bag to keep her tools. &lt;img border=&quot;0&quot; src=&quot;http://1.bp.blogspot.com/-NHNTr6jR-Zo/VJi2B-i4GwI/AAAAAAAAA9Q/5s2a-6kX5w4/s1600/2014-12-21%2B14.58.36.jpg&quot; title=&quot; &quot;/&gt;
+        <description>So in keeping with the holiday spirit I'm now showing off the little bag I made for my girlfriend's mom. She's an avid &lt;a href=&quot;http://lillstreet.com/department/ceramics-sculpture&quot;&gt;ceramicist&lt;/a&gt; so I made this bag to keep her tools. &lt;img border=&quot;0&quot; src=&quot;http://1.bp.blogspot.com/-NHNTr6jR-Zo/VJi2B-i4GwI/AAAAAAAAA9Q/5s2a-6kX5w4/s1600/2014-12-21%2B14.58.36.jpg&quot; title=&quot; &quot; /&gt;
 &lt;p&gt;
-        Over the summer she got me a golf bag to replace my old rundown broken one. (Oh how I wish I had a picture of the old one. It was kind of embarrassing. It looked a little something like this except with a gaping 2 foot hole in the side from which clubs would occasionally fall out.) &lt;img border=&quot;0&quot; src=&quot;http://2.bp.blogspot.com/-1TtLY0oCtww/VJH9M2rbiZI/AAAAAAAAA8s/opY6twDVm7E/s1600/m18uBHjUbHQ4tsfQuGPeI6g.jpg&quot; title=&quot; &quot;/&gt;
+    Over the summer she got me a golf bag to replace my old rundown broken one. (Oh how I wish I had a picture of the old one. It was kind of embarrassing. It looked a little something like this except with a gaping 2 foot hole in the side from which clubs would occasionally fall out.) &lt;/p&gt;
+&lt;img border=&quot;0&quot; src=&quot;http://2.bp.blogspot.com/-1TtLY0oCtww/VJH9M2rbiZI/AAAAAAAAA8s/opY6twDVm7E/s1600/m18uBHjUbHQ4tsfQuGPeI6g.jpg&quot; title=&quot; &quot; /&gt;
 &lt;p&gt;
-            I figured she'd really like it if I reused the leather to make her a gift. I was originally thinking about just a leather belt until my girlfriend actually came up with the idea for a tool pouch for her ceramics equipment.
-        &lt;/p&gt;
+    I figured she'd really like it if I reused the leather to make her a gift. I was originally thinking about just a leather belt until my girlfriend actually came up with the idea for a tool pouch for her ceramics equipment.
+&lt;/p&gt;
 &lt;h4&gt;How I made it&lt;/h4&gt;
 &lt;p&gt;
-            The exterior comes from three 4 by 17ish swaths of faux leather/canvas pulled from different intact parts of the bag. I sewed them together lengthwise and rounded the edges for the zipper to go around smoothly.
-        &lt;/p&gt;
-&lt;img border=&quot;0&quot; src=&quot;http://3.bp.blogspot.com/-u3gnN1f3Vvo/VJi2CGdtMWI/AAAAAAAAA9U/k-ZnGNPgLwk/s1600/2014-12-21%2B14.59.10.jpg&quot; title=&quot; &quot;/&gt;
+    The exterior comes from three 4 by 17ish swaths of faux leather/canvas pulled from different intact parts of the bag. I sewed them together lengthwise and rounded the edges for the zipper to go around smoothly.
+&lt;/p&gt;
+&lt;img border=&quot;0&quot; src=&quot;http://3.bp.blogspot.com/-u3gnN1f3Vvo/VJi2CGdtMWI/AAAAAAAAA9U/k-ZnGNPgLwk/s1600/2014-12-21%2B14.59.10.jpg&quot; title=&quot; &quot; /&gt;
 &lt;p&gt;
-            The zipper came from a mid 90s computer case that I condensed to create a 2010s computer case. In that project, I had removed a section which left over a small ribbon of zipper that I could reuse. This didn't leave too much edge for the zipper so my stitching had to be pretty precise to hold.
-        &lt;/p&gt;
-&lt;img border=&quot;0&quot; src=&quot;http://4.bp.blogspot.com/-WoB5YewGNNk/VJi2C8LY1qI/AAAAAAAAA9k/XZ54E9JKauA/s1600/2014-12-21%2B14.59.50.jpg&quot; title=&quot; &quot;/&gt;
+    The zipper came from a mid 90s computer case that I condensed to create a 2010s computer case. In that project, I had removed a section which left over a small ribbon of zipper that I could reuse. This didn't leave too much edge for the zipper so my stitching had to be pretty precise to hold.
+&lt;/p&gt;
+&lt;img border=&quot;0&quot; src=&quot;http://4.bp.blogspot.com/-WoB5YewGNNk/VJi2C8LY1qI/AAAAAAAAA9k/XZ54E9JKauA/s1600/2014-12-21%2B14.59.50.jpg&quot; title=&quot; &quot; /&gt;
 &lt;p&gt;
-            On the inside I wanted to have little tool holder straps for ceramics tools to fit in. I didn't know the exact sizing because I couldn't find a casual way to bring up the dimensions of her ceramics tools without arousing suspicion. So I guessed that I could put strips in two orientations and most things would fit somehow.
-        &lt;/p&gt;
-&lt;img border=&quot;0&quot; src=&quot;http://1.bp.blogspot.com/-RZ2jN5W141c/VJi2B1_kfaI/AAAAAAAAA9c/IjHiJPDWpdA/s1600/2014-12-21%2B14.58.54.jpg&quot; title=&quot; &quot;/&gt;
+    On the inside I wanted to have little tool holder straps for ceramics tools to fit in. I didn't know the exact sizing because I couldn't find a casual way to bring up the dimensions of her ceramics tools without arousing suspicion. So I guessed that I could put strips in two orientations and most things would fit somehow.
+&lt;/p&gt;
+&lt;img border=&quot;0&quot; src=&quot;http://1.bp.blogspot.com/-RZ2jN5W141c/VJi2B1_kfaI/AAAAAAAAA9c/IjHiJPDWpdA/s1600/2014-12-21%2B14.58.54.jpg&quot; title=&quot; &quot; /&gt;
 &lt;p&gt;
-            Interestingly I learned that I would have to add decorative stitching on the outside to continue my lines because otherwise it just looked really bad.
-        &lt;/p&gt;
+    Interestingly I learned that I would have to add decorative stitching on the outside to continue my lines because otherwise it just looked really bad.
+&lt;/p&gt;
 &lt;p&gt;
-            I'm really pleased with the result. Sewing is a new skill to me, but it's worth it to learn. &lt;br/&gt;
-&lt;/p&gt;&lt;/p&gt;</description>
+    I'm really pleased with the result. Sewing is a new skill to me, but it's worth it to learn. &lt;br /&gt;
+&lt;/p&gt;</description>
         <pubDate>Sat, 27 Dec 2014 15:09:00 -0800</pubDate>
         <link>https://bonkerfield.org/2014/12/27/mos-tool-pouch/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2014/12/27/mos-tool-pouch/</guid>
