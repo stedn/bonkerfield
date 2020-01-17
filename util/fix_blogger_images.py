@@ -3,7 +3,8 @@ import glob
 import fileinput
 import sys
 import re
-
+import os
+import urllib.request
 
 files = glob.glob('*.html')
 for f in files:
@@ -55,6 +56,27 @@ for f in files:
                         img_src = '/'.join(src_parts[:-2]+[val]+[src_parts[-1]])
                         img['src'] = img_src
                     div.replaceWith(img)
+    if soup:
+        with open(f, "w") as f_output:
+            f_output.write(str(soup)) 
+
+
+files = glob.glob('*.html')
+for f in files:
+    soup = None
+    with open(f) as page:
+        true_folder = '/assets/images/'+f.split('-')[0]+'/'
+        folder = '..'+true_folder
+        if not os.path.exists(folder):
+            os.mkdir(folder)
+        soup = BeautifulSoup(page, "html.parser")
+        for img in soup.findAll('img'):
+            new_name=img['src'].split('/')[-1]
+            try:
+                urllib.request.urlretrieve(img['src'], folder+new_name)
+                img['src']=true_folder+new_name
+            except:
+                img['src']='/assets/images/main/octopus.jpeg'
     if soup:
         with open(f, "w") as f_output:
             f_output.write(str(soup)) 
