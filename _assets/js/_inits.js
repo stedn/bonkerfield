@@ -30,7 +30,7 @@ $(() => {
   }
 
   if ($('#markdown').length) {
-    miscFlexVid();
+//    miscFlexVid();
     miscZoom();
     miscSocialShare();
   }

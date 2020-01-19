@@ -2,10 +2,26 @@
 layout: post
 title: things
 description: we do these things not because they are easy, but because we thought they would be easy
+author: Will Stedden
 ---
-<p>I am interested in lots of things. Modernity tries to force humans into the deepest ruts of specialization, but I'm trying to maintain as much diversity of activity as I can rerasonably attain. Mostly, this takes the form of making, learning, philosophizing, playing, and wandering.</p>
+<p>I am interested in lots of things. Mostly, this takes the form of making, learning, philosophizing, playing, and wandering. Here are some highlights.</p>
 
 
+  <div class="grid-xlarge">
+
+    <div class="posts__container" itemscope itemtype="http://schema.org/Blog" data-columns>
+
+      {% for post in site.posts %}
+
+      	{% if post.top %}
+
+        	{% include post-card-top.html %}
+
+        {% endif %}
+
+      {% endfor %}
+    </div>
+  </div>
 
 
 <p>To answer why I feel drawn to many things, I have my <a href="{{ '/reasons' | prepend: site.baseurl }}">reasons</a>.</p>
