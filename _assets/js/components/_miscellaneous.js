@@ -7,7 +7,7 @@ import $ from 'jquery';
 // Flex Vid
 // ----------------------------------------------
 const miscFlexVid = () => {
-  const iframeArr = $('.post__content iframe');
+  const iframeArr = $('.post__content .flexme');
 
   iframeArr.each((idx, iframe) => {
     $(iframe).wrap('<div class="flex-vid"></div>');
