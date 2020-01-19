@@ -5,8 +5,8 @@
     <description>personal information identity spacetime map</description>
     <link>https://bonkerfield.org</link>
     <atom:link href="https://bonkerfield.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 18 Jan 2020 22:33:21 -0800</pubDate>
-    <lastBuildDate>Sat, 18 Jan 2020 22:33:21 -0800</lastBuildDate>
+    <pubDate>Sun, 19 Jan 2020 01:52:43 -0800</pubDate>
+    <lastBuildDate>Sun, 19 Jan 2020 01:52:43 -0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -139,9 +139,13 @@ df_scrolls = conn.execute_query(scroll_query)
     In my jupyter notebook, I graph the scrolling progress for a few people. The data is clearly messy because some people just scroll straight to the bottom. Still, this gave my friend a pretty clear idea that for people who were actually reading it, it took about an hour to finish.
 &lt;/p&gt;
 &lt;img border=&quot;0&quot; src=&quot;https://1.bp.blogspot.com/-BN1Su8VptwM/XfGCDzfGpGI/AAAAAAAAFLQ/D5ZMotAq5qso7tUPfbzc4U1LJCPwS2bYwCLcBGAsYHQ/s1600/Screenshot%2Bfrom%2B2019-12-11%2B15-47-15.png&quot; title=&quot; &quot;/&gt;</description>
-        <pubDate>Mon, 30 Dec 2019 12:56:00 -0800</pubDate>
+        <pubDate>Mon, 30 Dec 2019 00:00:00 -0800</pubDate>
         <link>https://bonkerfield.org/2019/12/30/google-analytics-for-scrolling-on/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2019/12/30/google-analytics-for-scrolling-on/</guid>
+        
+        <category>code</category>
+        
+        <category>data science</category>
         
         
       </item>
@@ -175,9 +179,13 @@ df_scrolls = conn.execute_query(scroll_query)
 &lt;p&gt;
     Anyway, I'll be setting a timer to try to get down to 2 minutes by January 1, and after I'll see if I can go the whole year. Please leave a comment if you see something off in my calculations.
 &lt;/p&gt;</description>
-        <pubDate>Sat, 07 Dec 2019 11:09:00 -0800</pubDate>
+        <pubDate>Sat, 07 Dec 2019 00:00:00 -0800</pubDate>
         <link>https://bonkerfield.org/2019/12/07/short-post-on-short-showers/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2019/12/07/short-post-on-short-showers/</guid>
+        
+        <category>energy</category>
+        
+        <category>analysis</category>
         
         
       </item>
@@ -277,11 +285,15 @@ df_scrolls = conn.execute_query(scroll_query)
 &lt;p&gt;
         To take this to the Playa will end up being a pretty major investment so I'm also writing a letter of intent for a Burning Man grant. To make things interesting, I think I'll use the QMB to decide whether I should submit it.
     &lt;/p&gt;&lt;/p&gt;</description>
-        <pubDate>Wed, 23 Oct 2019 12:50:00 -0700</pubDate>
+        <pubDate>Wed, 23 Oct 2019 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2019/10/23/qmb-installation/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2019/10/23/qmb-installation/</guid>
         
-        <category>Art</category>
+        <category>art</category>
+        
+        <category>games</category>
+        
+        <category>physics</category>
         
         
       </item>
@@ -347,11 +359,11 @@ top (bone dry)
 &lt;p&gt;
     I'll update here when I can get a photo of how the plants look after a few months of automate irrigation. My friend has been out of town for multiple weeks already so this will be a good test.
 &lt;/p&gt;</description>
-        <pubDate>Sun, 20 Oct 2019 19:10:00 -0700</pubDate>
+        <pubDate>Sun, 20 Oct 2019 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2019/10/20/green-wall-irrigation/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2019/10/20/green-wall-irrigation/</guid>
         
-        <category>Household</category>
+        <category>misc</category>
         
         
       </item>
@@ -469,13 +481,13 @@ top (bone dry)
 &lt;p&gt;
     I am looking to build a couple more iterations that are a little cleaner. When I've built them, I will update here with details of the operation, and how to calibrate them.
 &lt;/p&gt;</description>
-        <pubDate>Fri, 18 Oct 2019 22:58:00 -0700</pubDate>
+        <pubDate>Fri, 18 Oct 2019 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2019/10/18/quantum-coin-flip-device/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2019/10/18/quantum-coin-flip-device/</guid>
         
-        <category>Physics</category>
+        <category>physics</category>
         
-        <category>Electronics</category>
+        <category>electronics</category>
         
         
       </item>
@@ -591,13 +603,13 @@ top (bone dry)
 &lt;p&gt;
     That's about everything for the build. After I'd built a rough draft of the app, my partner and I actually asked to do a Burning Man Theme Camp using it. Somehow our application got accepted so, next week, we're going to run this for a bunch of burners. I'm looking forward to creating a whole fuck-ton of parallel realities where people do some crazy stuff. I'll write another post afterward with the details of the camp.
 &lt;/p&gt;</description>
-        <pubDate>Thu, 17 Oct 2019 07:58:00 -0700</pubDate>
+        <pubDate>Thu, 17 Oct 2019 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2019/10/17/quantum-multiverse-bifurcator/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2019/10/17/quantum-multiverse-bifurcator/</guid>
         
-        <category>Physics</category>
+        <category>physics</category>
         
-        <category>WebDesign</category>
+        <category>design</category>
         
         
       </item>
@@ -732,11 +744,13 @@ top (bone dry)
 &lt;p&gt;
     For the final step, I wanted people to actually be able to use this thing. So I plan on spending the cash ($25! wtf) for a developer license, so I can upload my app onto the Google Play store. When I get that finished I'll update here a link and how to
 &lt;/p&gt;</description>
-        <pubDate>Tue, 08 Oct 2019 01:00:00 -0700</pubDate>
+        <pubDate>Tue, 08 Oct 2019 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2019/10/08/creating-immediacy/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2019/10/08/creating-immediacy/</guid>
         
-        <category>WebDesign</category>
+        <category>design</category>
+        
+        <category>code</category>
         
         
       </item>
@@ -871,11 +885,13 @@ top (bone dry)
 &lt;p&gt;
     Finally, when one of my friends heard my description of this procedure, she asked a particular intelligent question: &quot;Were there strong correlations between personality traits and sub-identities that terminated?&quot; In other words, after the procedure, did my personality have to change because certain traits were possessed only by the &quot;doubting&quot; identities? I don't know for certain unfortunately, but I do certainly feel like a different person now.
 &lt;/p&gt;</description>
-        <pubDate>Sun, 06 Oct 2019 00:07:00 -0700</pubDate>
+        <pubDate>Sun, 06 Oct 2019 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2019/10/06/sub-identity-suicide/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2019/10/06/sub-identity-suicide/</guid>
         
-        <category>Philosophy</category>
+        <category>philosophy</category>
+        
+        <category>physics</category>
         
         
       </item>
@@ -985,13 +1001,15 @@ top (bone dry)
 &lt;p&gt;
     Over time, I hope to perfect this game even further. If you are reading this in the SF Bay Area and would like to bring this game to your organization, please leave me a comment and I will get in touch to try to run it for you.
 &lt;/p&gt;</description>
-        <pubDate>Sun, 08 Sep 2019 11:36:00 -0700</pubDate>
+        <pubDate>Sun, 08 Sep 2019 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2019/09/08/gmail-auto-responder-for-ai-robot-party/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2019/09/08/gmail-auto-responder-for-ai-robot-party/</guid>
         
-        <category>Games</category>
+        <category>games</category>
         
-        <category>Writing</category>
+        <category>code</category>
+        
+        <category>writing</category>
         
         
       </item>
@@ -1113,9 +1131,11 @@ top (bone dry)
 &lt;p&gt;
     In a &lt;a href=&quot;/2019/04/visualizing-shared-budgets-and-dividing.html&quot;&gt;previous post&lt;/a&gt;, I described how much I like keeping track of my expenses, particularly for hobby projects like this. The overall cost of all this was around $250 for the toilet materials, and about $200 for the caulks, the oils, PPE and other miscellaneous tools. This seemed pretty great since a quote from a boatyard was for 3x that for each. Plus, I gotta admit, I feel closer to Ioni every time I work on her.
 &lt;/p&gt;</description>
-        <pubDate>Sun, 01 Sep 2019 20:18:00 -0700</pubDate>
+        <pubDate>Sun, 01 Sep 2019 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2019/09/01/woodworking-motor-work-and-head/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2019/09/01/woodworking-motor-work-and-head/</guid>
+        
+        <category>boatwork</category>
         
         
       </item>
@@ -1228,9 +1248,9 @@ top (bone dry)
         <link>https://bonkerfield.org/2019/05/01/ionis-solar-electrical-system/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2019/05/01/ionis-solar-electrical-system/</guid>
         
-        <category>Household</category>
+        <category>boatwork</category>
         
-        <category>Electronics</category>
+        <category>energy</category>
         
         
       </item>
@@ -1384,11 +1404,15 @@ top (bone dry)
     &lt;/p&gt;
 &lt;br/&gt;
 </description>
-        <pubDate>Wed, 03 Apr 2019 22:31:00 -0700</pubDate>
+        <pubDate>Wed, 03 Apr 2019 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2019/04/03/visualizing-shared-budgets-and-dividing/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2019/04/03/visualizing-shared-budgets-and-dividing/</guid>
         
-        <category>DataScience</category>
+        <category>data science</category>
+        
+        <category>philosphy</category>
+        
+        <category>code</category>
         
         
       </item>
@@ -1461,11 +1485,11 @@ top (bone dry)
         They made it through the rest of winter at least!
     &lt;/p&gt;
 &lt;img border=&quot;0&quot; src=&quot;https://3.bp.blogspot.com/-TnbQNHBe0DM/XH3v4ufb1vI/AAAAAAAADeQ/vmI1xoUeT-8lXOU_g3AfULei7NOyPQ_XQCKgBGAs/s800/20190302_082724.jpg&quot; title=&quot; &quot;/&gt;&lt;/p&gt;</description>
-        <pubDate>Mon, 04 Mar 2019 19:51:00 -0800</pubDate>
+        <pubDate>Mon, 04 Mar 2019 00:00:00 -0800</pubDate>
         <link>https://bonkerfield.org/2019/03/04/redwood-planter-cabinet/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2019/03/04/redwood-planter-cabinet/</guid>
         
-        <category>Household</category>
+        <category>misc</category>
         
         
       </item>
@@ -1493,11 +1517,15 @@ top (bone dry)
 &lt;p&gt;
     I found &lt;a href=&quot;https://majeruslucie.eu/H-U-M-A-N-I-V-O-R-Y&quot;&gt;another artist&lt;/a&gt; who did &lt;a href=&quot;https://www.treehugger.com/sustainable-product-design/human-ivory-lucie-majerus.html&quot;&gt;something similar&lt;/a&gt; before. Hopefully people aren't too weirded out by the idea as it seems a hell of a lot more reasonable than poaching ivory or sending people into mines for stupid shiny shit.
 &lt;/p&gt;</description>
-        <pubDate>Mon, 21 Jan 2019 18:08:00 -0800</pubDate>
+        <pubDate>Mon, 21 Jan 2019 00:00:00 -0800</pubDate>
         <link>https://bonkerfield.org/2019/01/21/human-ivory-earrings/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2019/01/21/human-ivory-earrings/</guid>
         
-        <category>Art</category>
+        <category>art</category>
+        
+        <category>design</category>
+        
+        <category>craft</category>
         
         
       </item>
@@ -1603,13 +1631,15 @@ Originally, the admins had been using totally static pages. I could have kept th
 &lt;p&gt;
     * The vulnerability is that someone could figure out how to pass a boolean that says that the payment is confirmed even though it isn't. Still, part of @rtifice's ethos is that if you can figure out how to hack our systems you actuallyf deserve whatever tiny spoils you get.
 &lt;/p&gt;</description>
-        <pubDate>Sun, 02 Dec 2018 21:20:00 -0800</pubDate>
+        <pubDate>Sun, 02 Dec 2018 00:00:00 -0800</pubDate>
         <link>https://bonkerfield.org/2018/12/02/rtifice-website-revamp/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2018/12/02/rtifice-website-revamp/</guid>
         
-        <category>WebDesign</category>
+        <category>design</category>
         
-        <category>IT</category>
+        <category>code</category>
+        
+        <category>infra</category>
         
         
       </item>
@@ -1775,11 +1805,15 @@ Originally, the admins had been using totally static pages. I could have kept th
 &lt;li&gt;&lt;a href=&quot;https://developer.android.com/reference/android/widget/NumberPicker#NumberPicker(android.content.Context)&quot;&gt;NumberPicker Object&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt; &lt;br/&gt;
 </description>
-        <pubDate>Sat, 06 Oct 2018 14:06:00 -0700</pubDate>
+        <pubDate>Sat, 06 Oct 2018 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2018/10/06/experiential-puzzle-narrative/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2018/10/06/experiential-puzzle-narrative/</guid>
         
-        <category>Games</category>
+        <category>games</category>
+        
+        <category>code</category>
+        
+        <category>writing</category>
         
         
       </item>
@@ -1849,9 +1883,11 @@ Sails rigged
 &lt;p&gt;
     It does already start to feel like home though. There's a lot of work to do, but I'm excited (and terrified) for it.
 &lt;/p&gt;</description>
-        <pubDate>Wed, 27 Jun 2018 22:03:00 -0700</pubDate>
+        <pubDate>Wed, 27 Jun 2018 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2018/06/27/introducing-ione/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2018/06/27/introducing-ione/</guid>
+        
+        <category>boatwork</category>
         
         
       </item>
@@ -1863,11 +1899,11 @@ Sails rigged
 &lt;/p&gt;
 &lt;hr/&gt;
 &lt;iframe height=&quot;800px&quot; src=&quot;https://docs.google.com/document/d/e/2PACX-1vTjfVtSDoVCI9APvUq9YxmvZLjw0fvqRRALRq7euEvZ-0O9p7pMa9g4r_TYFDGchfRJ1kP2FUWe8822/pub?embedded=true&quot; style=&quot;border:1px solid black; height: 800px&quot; width=&quot;100%&quot;&gt;&lt;/iframe&gt;</description>
-        <pubDate>Sat, 23 Jun 2018 12:47:00 -0700</pubDate>
+        <pubDate>Sat, 23 Jun 2018 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2018/06/23/skylight-chapters-3-4/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2018/06/23/skylight-chapters-3-4/</guid>
         
-        <category>Writing</category>
+        <category>writing</category>
         
         
       </item>
@@ -1878,11 +1914,11 @@ Sails rigged
     I've been working on a novel for what feels like a really long time. I usually don't like to let projects drag on like this so I'm gonna start releasing bits to keep me moving. I feel pretty solid about the first two chapters so here they are for public consumption. Enjoy...
 &lt;/p&gt;
 &lt;div&gt;&lt;iframe height=&quot;800px&quot; src=&quot;https://docs.google.com/document/d/e/2PACX-1vQ29U0iqCXJu16Jk6tiXmknr-r_UDYnZ3DtAFsli0txTrWRd7Q6nSKtAafYakpiNgup3VSrG_Wi_YwD/pub?embedded=true&quot; style=&quot;border:1px solid black; height: 800px&quot; width=&quot;100%&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;</description>
-        <pubDate>Thu, 03 May 2018 19:24:00 -0700</pubDate>
+        <pubDate>Thu, 03 May 2018 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2018/05/03/skylight-chapters-1-2/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2018/05/03/skylight-chapters-1-2/</guid>
         
-        <category>Writing</category>
+        <category>writing</category>
         
         
       </item>
@@ -1939,11 +1975,11 @@ With everything clean, I reapplied gobs of grease and reinserted the bearings. T
     The bike was running smoothly at this point. But I've been having fun so I also threw a rack on the back for good measure. I'll just need to turn one of my bags into some panniers next!
 &lt;/p&gt;
 &lt;img border=&quot;0&quot; src=&quot;https://2.bp.blogspot.com/-OSlfQ08vYUw/Wt0CKrGaHYI/AAAAAAAABoM/29hWgFyI-dMe_91WiTTX0YpNWPkzwtN8ACKgBGAs/s800/IMG_20180421_141308.jpg&quot; title=&quot; &quot;/&gt;</description>
-        <pubDate>Sun, 22 Apr 2018 14:50:00 -0700</pubDate>
+        <pubDate>Sun, 22 Apr 2018 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2018/04/22/notes-on-bike-fixes/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2018/04/22/notes-on-bike-fixes/</guid>
         
-        <category>Mechanical</category>
+        <category>bikes</category>
         
         
       </item>
@@ -1986,11 +2022,11 @@ With everything clean, I reapplied gobs of grease and reinserted the bearings. T
 &lt;p&gt;
     Now the wobble and the friction are both gone! On to the next fix.
 &lt;/p&gt;</description>
-        <pubDate>Sat, 07 Apr 2018 15:04:00 -0700</pubDate>
+        <pubDate>Sat, 07 Apr 2018 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2018/04/07/replacing-bottom-bracket/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2018/04/07/replacing-bottom-bracket/</guid>
         
-        <category>Mechanical</category>
+        <category>bikes</category>
         
         
       </item>
@@ -2052,11 +2088,11 @@ With everything clean, I reapplied gobs of grease and reinserted the bearings. T
 &lt;p&gt;
     Unfortunately, the owner hasn't yet let me sail it, but I'm hoping that these cool modifications along with a trial run or two with him this winter will have me sailing that beauty around the Bay by spring. Fingers crossed.
 &lt;/p&gt;</description>
-        <pubDate>Tue, 02 Jan 2018 15:54:00 -0800</pubDate>
+        <pubDate>Tue, 02 Jan 2018 00:00:00 -0800</pubDate>
         <link>https://bonkerfield.org/2018/01/02/sailboat-light-covers/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2018/01/02/sailboat-light-covers/</guid>
         
-        <category>Household</category>
+        <category>boatwork</category>
         
         
       </item>
@@ -2204,11 +2240,13 @@ With everything clean, I reapplied gobs of grease and reinserted the bearings. T
         &lt;/p&gt;
 &lt;br/&gt;
 &lt;/p&gt;</description>
-        <pubDate>Sun, 19 Nov 2017 18:28:00 -0800</pubDate>
+        <pubDate>Sun, 19 Nov 2017 00:00:00 -0800</pubDate>
         <link>https://bonkerfield.org/2017/11/19/making-better-eyes/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2017/11/19/making-better-eyes/</guid>
         
-        <category>Biology</category>
+        <category>science</category>
+        
+        <category>biology</category>
         
         
       </item>
@@ -2268,11 +2306,11 @@ With everything clean, I reapplied gobs of grease and reinserted the bearings. T
     &lt;/p&gt;
 &lt;br/&gt;
 </description>
-        <pubDate>Fri, 17 Nov 2017 23:32:00 -0800</pubDate>
+        <pubDate>Fri, 17 Nov 2017 00:00:00 -0800</pubDate>
         <link>https://bonkerfield.org/2017/11/17/hope-you-dance-alone/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2017/11/17/hope-you-dance-alone/</guid>
         
-        <category>Music</category>
+        <category>music</category>
         
         
       </item>
@@ -2394,9 +2432,13 @@ With everything clean, I reapplied gobs of grease and reinserted the bearings. T
     &lt;/p&gt;
 &lt;br/&gt;
 </description>
-        <pubDate>Sun, 17 Sep 2017 13:52:00 -0700</pubDate>
+        <pubDate>Sun, 17 Sep 2017 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2017/09/17/indiana-jones-and-elusive-promo-code/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2017/09/17/indiana-jones-and-elusive-promo-code/</guid>
+        
+        <category>games</category>
+        
+        <category>philosophy</category>
         
         
       </item>
@@ -2448,9 +2490,11 @@ With everything clean, I reapplied gobs of grease and reinserted the bearings. T
     &lt;/p&gt;
 &lt;br/&gt;
 </description>
-        <pubDate>Sat, 09 Sep 2017 22:42:00 -0700</pubDate>
+        <pubDate>Sat, 09 Sep 2017 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2017/09/09/marshalling-at-poplar-creek/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2017/09/09/marshalling-at-poplar-creek/</guid>
+        
+        <category>exploring</category>
         
         
       </item>
@@ -2570,11 +2614,13 @@ With everything clean, I reapplied gobs of grease and reinserted the bearings. T
     &lt;/p&gt;
 &lt;br/&gt;
 </description>
-        <pubDate>Sun, 27 Aug 2017 11:51:00 -0700</pubDate>
+        <pubDate>Sun, 27 Aug 2017 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2017/08/27/the-stedden-constitution/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2017/08/27/the-stedden-constitution/</guid>
         
-        <category>Writing</category>
+        <category>writing</category>
+        
+        <category>philosophy</category>
         
         
       </item>
@@ -2736,13 +2782,21 @@ With everything clean, I reapplied gobs of grease and reinserted the bearings. T
 &lt;/p&gt;
 &lt;br/&gt;
 </description>
-        <pubDate>Mon, 14 Aug 2017 19:10:00 -0700</pubDate>
+        <pubDate>Mon, 14 Aug 2017 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2017/08/14/theseus-and-cell-phd-dissertation-story/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2017/08/14/theseus-and-cell-phd-dissertation-story/</guid>
         
-        <category>Biology</category>
+        <category>science</category>
         
-        <category>Writing</category>
+        <category>analysis</category>
+        
+        <category>modeling</category>
+        
+        <category>biology</category>
+        
+        <category>physics</category>
+        
+        <category>writing</category>
         
         
       </item>
@@ -2987,11 +3041,13 @@ With everything clean, I reapplied gobs of grease and reinserted the bearings. T
                 &lt;/p&gt;
 &lt;/i&gt;&lt;br/&gt;
 </description>
-        <pubDate>Sat, 29 Jul 2017 18:21:00 -0700</pubDate>
+        <pubDate>Sat, 29 Jul 2017 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2017/07/29/experiences-with-crowdsourcing-analysis/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2017/07/29/experiences-with-crowdsourcing-analysis/</guid>
         
-        <category>DataScience</category>
+        <category>data science</category>
+        
+        <category>code</category>
         
         
       </item>
@@ -3111,9 +3167,13 @@ With everything clean, I reapplied gobs of grease and reinserted the bearings. T
 &lt;img border=&quot;0&quot; src=&quot;https://1.bp.blogspot.com/-jlI1cNWnLy0/WM8zZM1BKuI/AAAAAAAAHp8/11hZ4GfF83gCqvRT6vvglGWhNCdN68UVwCLcB/s800/earrings2.jpg&quot; title=&quot; &quot;/&gt;
 &lt;br/&gt;
 </description>
-        <pubDate>Fri, 14 Apr 2017 20:01:00 -0700</pubDate>
+        <pubDate>Fri, 14 Apr 2017 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2017/04/14/engagement-ring-from-found-smoky-quartz/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2017/04/14/engagement-ring-from-found-smoky-quartz/</guid>
+        
+        <category>design</category>
+        
+        <category>craft</category>
         
         
       </item>
@@ -3289,13 +3349,17 @@ With everything clean, I reapplied gobs of grease and reinserted the bearings. T
         &lt;/p&gt;
 &lt;br/&gt;
 &lt;/p&gt;</description>
-        <pubDate>Wed, 12 Oct 2016 14:46:00 -0700</pubDate>
+        <pubDate>Wed, 12 Oct 2016 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2016/10/12/text-mining-and-natural-language/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2016/10/12/text-mining-and-natural-language/</guid>
         
-        <category>DataScience</category>
+        <category>data science</category>
         
-        <category>IT</category>
+        <category>machine learning</category>
+        
+        <category>code</category>
+        
+        <category>design</category>
         
         
       </item>
@@ -3367,11 +3431,11 @@ ffmpeg -r 2 -f concat -i list.txt -r 30 -c:v libx264 -pix_fmt yuv420p ../git_pdf
 &lt;p&gt;
     Have fun, and I hope that this encourages you to use open source version control whenever you write/edit any large document project.
 &lt;/p&gt;</description>
-        <pubDate>Mon, 20 Jun 2016 13:20:00 -0700</pubDate>
+        <pubDate>Mon, 20 Jun 2016 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2016/06/20/git-versioned-pdf-visualizer/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2016/06/20/git-versioned-pdf-visualizer/</guid>
         
-        <category>IT</category>
+        <category>code</category>
         
         
       </item>
@@ -3480,13 +3544,15 @@ ffmpeg -r 2 -f concat -i list.txt -r 30 -c:v libx264 -pix_fmt yuv420p ../git_pdf
     &lt;/p&gt;
 &lt;br/&gt;
 </description>
-        <pubDate>Wed, 11 May 2016 13:27:00 -0700</pubDate>
+        <pubDate>Wed, 11 May 2016 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2016/05/11/work-in-progress-parallel-ipython-from/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2016/05/11/work-in-progress-parallel-ipython-from/</guid>
         
-        <category>DataScience</category>
+        <category>data science</category>
         
-        <category>IT</category>
+        <category>infra</category>
+        
+        <category>code</category>
         
         
       </item>
@@ -3618,11 +3684,13 @@ ffmpeg -r 2 -f concat -i list.txt -r 30 -c:v libx264 -pix_fmt yuv420p ../git_pdf
 &lt;script&gt;
 function showDiv() { document.getElementById('welcomeDiv').style.display = &quot;block&quot;; }
 &lt;/script&gt;</description>
-        <pubDate>Mon, 18 Apr 2016 09:34:00 -0700</pubDate>
+        <pubDate>Mon, 18 Apr 2016 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2016/04/18/bluetooth-controlled-redbot-construction/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2016/04/18/bluetooth-controlled-redbot-construction/</guid>
         
-        <category>Electronics</category>
+        <category>electronics</category>
+        
+        <category>robots</category>
         
         
       </item>
@@ -3662,11 +3730,11 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
     &lt;/p&gt;
 &lt;br/&gt;
 </description>
-        <pubDate>Wed, 30 Mar 2016 08:00:00 -0700</pubDate>
+        <pubDate>Wed, 30 Mar 2016 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2016/03/30/connecting-artifice-center-with-shared/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2016/03/30/connecting-artifice-center-with-shared/</guid>
         
-        <category>IT</category>
+        <category>infra</category>
         
         
       </item>
@@ -3738,11 +3806,13 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
 &lt;/p&gt;
 &lt;br/&gt;
 </description>
-        <pubDate>Sun, 07 Feb 2016 21:12:00 -0800</pubDate>
+        <pubDate>Sun, 07 Feb 2016 00:00:00 -0800</pubDate>
         <link>https://bonkerfield.org/2016/02/07/star-wars-themed-settlers-of-catan/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2016/02/07/star-wars-themed-settlers-of-catan/</guid>
         
-        <category>Games</category>
+        <category>games</category>
+        
+        <category>design</category>
         
         
       </item>
@@ -3799,11 +3869,64 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
             &lt;/p&gt;
 &lt;br/&gt;
 &lt;/p&gt;&lt;/p&gt;</description>
-        <pubDate>Tue, 22 Dec 2015 09:06:00 -0800</pubDate>
+        <pubDate>Tue, 22 Dec 2015 00:00:00 -0800</pubDate>
         <link>https://bonkerfield.org/2015/12/22/the-plexirock-boot-tray-accident/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2015/12/22/the-plexirock-boot-tray-accident/</guid>
         
-        <category>Household</category>
+        <category>misc</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Q&amp;amp;A on the Route Crime Calculator</title>
+        <description>&lt;p&gt;
+        I've recently built a cool little web app that helps evaluate the number of crimes occurring along a person's travel route in the City of Chicago. To elaborate a little on the rationale and methodology, I've written this blog post where I answer some plausible questions.
+    &lt;/p&gt;
+&lt;h6&gt;How safe is travelling around in Chicago?&lt;/h6&gt;
+&lt;p&gt;
+        That's hard to say, but hopefully I've made it a little easier to evaluate that. Obviously both native Chicagoans and visitors to the city have often find themselves travelling on public transit through neighborhoods that can make them feel unsafe. I wanted to explore this question and give some way to compare different routes and parts of the city so I started analyzing some of the city's open crime data for answers. This led to some interesting results so I decided to try to open that data up to the public in some reasonable way by making a little webapp.
+    &lt;/p&gt;
+&lt;img border=&quot;0&quot; src=&quot;http://3.bp.blogspot.com/-vLP4HuiJA6A/Vm95iCkSAKI/AAAAAAAAFcY/cMtPnk43kQg/s1600/routecrime.png&quot; title=&quot; &quot;/&gt;
+&lt;h6&gt;So what can it do?&lt;/h6&gt;
+&lt;p&gt;
+        To help prevent exposure to crime and to make everybody feel more safe, this tool evaluates the likelihood of criminal activity based on your transit route. It shows a few options and let's you see whichever one is the &quot;safest.&quot;
+    &lt;/p&gt;
+&lt;h6&gt;So it's like minority report or something?&lt;/h6&gt;
+&lt;p&gt;
+        The problem of predicting crime has been tackled before in &lt;a href=&quot;http://www.theverge.com/2014/2/19/5419854/the-minority-report-this-computer-predicts-crime-but-is-it-racist&quot;&gt;Chicago&lt;/a&gt; and &lt;a href=&quot;http://thinkprogress.org/justice/2015/02/12/3622235/police-departments-use-big-data-predict-crime-will-hit-next/&quot;&gt;elsewhere&lt;/a&gt;. However, it seems like most of the focus I've seen on this matter focused on its relation to policing strategies rather than public awareness. I don't intend to predict crimes, and I certainly don't want to build a tool that could be used to unfairly target citizens. I'd prefer that everybody just be aware of the real dangers (or lack of dangers) presented to them. I wanted to make something that helps the average person better evaluate exactly what they are facing when they take to the street every day.
+    &lt;/p&gt;
+&lt;h6&gt;So then what exactly does it do?&lt;/h6&gt;
+&lt;p&gt;
+        This tool is really just a fancy database query that looks up the past crimes that have occurred at any block in the city. I break the data up based on time of day, day of the week, and month of the year to make the prediction as accurate as possible. With that data, I can compute the average number of crimes that occur at that time and place over the past couple of years, which gives me a rate for crime occurrence.
+    &lt;/p&gt;
+&lt;p&gt;
+        Now from good old &lt;a href=&quot;https://developers.google.com/maps/documentation/directions/?hl=en&quot;&gt;Google Directions API&lt;/a&gt;, I can find out for each route how long you're going to spending in a given region. And from that I can simply add up the total number of crimes that will happen in an area during the time that you will be there. I repeat that for all the areas that you will pass through on your route and that's the total number of crimes that will happen in your vicinity during your trip.
+    &lt;/p&gt;
+&lt;h6&gt;So you present some big number of crimes?&lt;/h6&gt;
+&lt;p&gt;
+        Surprisingly no. The number of crimes is actually pretty darn small, so I present a relatively tiny &lt;a href=&quot;https://en.wikipedia.org/wiki/Probability&quot;&gt;probability&lt;/a&gt; of a crime occurring, in the form of classic &lt;a href=&quot;https://en.wikipedia.org/wiki/Odds&quot;&gt;betting odds&lt;/a&gt;. &lt;h6&gt;And you're satisfied with that?&lt;/h6&gt;
+&lt;p&gt;
+            Actually I'm pretty disappointed with the final result because there's a huge half of the story missing. To really present how likely a crime is to happen to &lt;strong&gt;you&lt;/strong&gt;, I need to know how many people are on the street when a crime occurs. That means I need to have some idea about street traffic, which is harder to find than you'd think. This is my quiet plea for somebody to make that data available somewhere.
+        &lt;/p&gt;
+&lt;h6&gt;Where did you get that data?&lt;/h6&gt;
+&lt;p&gt;
+            Since 2000, the city of Chicago has been tracking all of their criminal activity using their &lt;a href=&quot;https://portal.chicagopolice.org/portal/page/portal/ClearPath/Online%20Services/ICLEAR&quot;&gt;CLEAR database&lt;/a&gt;. The majority of the data on crime type and location has been &lt;a href=&quot;https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-present/ijzp-q8t2&quot;&gt;put online&lt;/a&gt; to allow the public to have open access to it. This has been used in &lt;a href=&quot;http://blog.spotcrime.com/2015/07/impacts-of-open-crime-data.html&quot;&gt;other projects&lt;/a&gt; to &lt;a href=&quot;http://chicagocrimeviewer.roosdesignconsulting.com/&quot;&gt;visualize local crime maps&lt;/a&gt;, &lt;a href=&quot;http://&quot;&gt;report recent crimes&lt;/a&gt;, and &lt;a href=&quot;http://www.crimeinchicago.org/&quot;&gt;display other trends&lt;/a&gt;.
+        &lt;/p&gt;
+&lt;h6&gt;So is that it?&lt;/h6&gt;
+&lt;p&gt;
+            I hope not. I really want other people to pick this up and work on it so I've put it all up in a &lt;a href=&quot;https://github.com/lots-of-things/route-crime-calculator/blob/master/analysis/crime_maps_viz.ipynb&quot;&gt;GitHub project&lt;/a&gt; for someone else to run with. Anyone is free to modify it any way they want, and I'll push their mods to the original if they work. So please help and have fun.
+        &lt;/p&gt;
+&lt;/p&gt;</description>
+        <pubDate>Mon, 14 Dec 2015 00:00:00 -0800</pubDate>
+        <link>https://bonkerfield.org/2015/12/14/route-crime-calculator/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2015/12/14/route-crime-calculator/</guid>
+        
+        <category>data science</category>
+        
+        <category>design</category>
+        
+        <category>code</category>
         
         
       </item>
@@ -3862,62 +3985,13 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
 &lt;div class=&quot;separator&quot; style=&quot;clear: both; text-align: center;&quot;&gt;&lt;iframe allowfullscreen=&quot;&quot; frameborder=&quot;0&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/jEU99vibnBg&quot; width=&quot;420&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
 &lt;br/&gt;
 </description>
-        <pubDate>Mon, 14 Dec 2015 19:45:00 -0800</pubDate>
+        <pubDate>Mon, 14 Dec 2015 00:00:00 -0800</pubDate>
         <link>https://bonkerfield.org/2015/12/14/arfi-robotic-dog/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2015/12/14/arfi-robotic-dog/</guid>
         
-        <category>Electronics</category>
+        <category>electronics</category>
         
-        
-      </item>
-    
-      <item>
-        <title>Q&amp;amp;A on the Route Crime Calculator</title>
-        <description>&lt;p&gt;
-        I've recently built a cool little web app that helps evaluate the number of crimes occurring along a person's travel route in the City of Chicago. To elaborate a little on the rationale and methodology, I've written this blog post where I answer some plausible questions.
-    &lt;/p&gt;
-&lt;h6&gt;How safe is travelling around in Chicago?&lt;/h6&gt;
-&lt;p&gt;
-        That's hard to say, but hopefully I've made it a little easier to evaluate that. Obviously both native Chicagoans and visitors to the city have often find themselves travelling on public transit through neighborhoods that can make them feel unsafe. I wanted to explore this question and give some way to compare different routes and parts of the city so I started analyzing some of the city's open crime data for answers. This led to some interesting results so I decided to try to open that data up to the public in some reasonable way by making a little webapp.
-    &lt;/p&gt;
-&lt;img border=&quot;0&quot; src=&quot;http://3.bp.blogspot.com/-vLP4HuiJA6A/Vm95iCkSAKI/AAAAAAAAFcY/cMtPnk43kQg/s1600/routecrime.png&quot; title=&quot; &quot;/&gt;
-&lt;h6&gt;So what can it do?&lt;/h6&gt;
-&lt;p&gt;
-        To help prevent exposure to crime and to make everybody feel more safe, this tool evaluates the likelihood of criminal activity based on your transit route. It shows a few options and let's you see whichever one is the &quot;safest.&quot;
-    &lt;/p&gt;
-&lt;h6&gt;So it's like minority report or something?&lt;/h6&gt;
-&lt;p&gt;
-        The problem of predicting crime has been tackled before in &lt;a href=&quot;http://www.theverge.com/2014/2/19/5419854/the-minority-report-this-computer-predicts-crime-but-is-it-racist&quot;&gt;Chicago&lt;/a&gt; and &lt;a href=&quot;http://thinkprogress.org/justice/2015/02/12/3622235/police-departments-use-big-data-predict-crime-will-hit-next/&quot;&gt;elsewhere&lt;/a&gt;. However, it seems like most of the focus I've seen on this matter focused on its relation to policing strategies rather than public awareness. I don't intend to predict crimes, and I certainly don't want to build a tool that could be used to unfairly target citizens. I'd prefer that everybody just be aware of the real dangers (or lack of dangers) presented to them. I wanted to make something that helps the average person better evaluate exactly what they are facing when they take to the street every day.
-    &lt;/p&gt;
-&lt;h6&gt;So then what exactly does it do?&lt;/h6&gt;
-&lt;p&gt;
-        This tool is really just a fancy database query that looks up the past crimes that have occurred at any block in the city. I break the data up based on time of day, day of the week, and month of the year to make the prediction as accurate as possible. With that data, I can compute the average number of crimes that occur at that time and place over the past couple of years, which gives me a rate for crime occurrence.
-    &lt;/p&gt;
-&lt;p&gt;
-        Now from good old &lt;a href=&quot;https://developers.google.com/maps/documentation/directions/?hl=en&quot;&gt;Google Directions API&lt;/a&gt;, I can find out for each route how long you're going to spending in a given region. And from that I can simply add up the total number of crimes that will happen in an area during the time that you will be there. I repeat that for all the areas that you will pass through on your route and that's the total number of crimes that will happen in your vicinity during your trip.
-    &lt;/p&gt;
-&lt;h6&gt;So you present some big number of crimes?&lt;/h6&gt;
-&lt;p&gt;
-        Surprisingly no. The number of crimes is actually pretty darn small, so I present a relatively tiny &lt;a href=&quot;https://en.wikipedia.org/wiki/Probability&quot;&gt;probability&lt;/a&gt; of a crime occurring, in the form of classic &lt;a href=&quot;https://en.wikipedia.org/wiki/Odds&quot;&gt;betting odds&lt;/a&gt;. &lt;h6&gt;And you're satisfied with that?&lt;/h6&gt;
-&lt;p&gt;
-            Actually I'm pretty disappointed with the final result because there's a huge half of the story missing. To really present how likely a crime is to happen to &lt;strong&gt;you&lt;/strong&gt;, I need to know how many people are on the street when a crime occurs. That means I need to have some idea about street traffic, which is harder to find than you'd think. This is my quiet plea for somebody to make that data available somewhere.
-        &lt;/p&gt;
-&lt;h6&gt;Where did you get that data?&lt;/h6&gt;
-&lt;p&gt;
-            Since 2000, the city of Chicago has been tracking all of their criminal activity using their &lt;a href=&quot;https://portal.chicagopolice.org/portal/page/portal/ClearPath/Online%20Services/ICLEAR&quot;&gt;CLEAR database&lt;/a&gt;. The majority of the data on crime type and location has been &lt;a href=&quot;https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-present/ijzp-q8t2&quot;&gt;put online&lt;/a&gt; to allow the public to have open access to it. This has been used in &lt;a href=&quot;http://blog.spotcrime.com/2015/07/impacts-of-open-crime-data.html&quot;&gt;other projects&lt;/a&gt; to &lt;a href=&quot;http://chicagocrimeviewer.roosdesignconsulting.com/&quot;&gt;visualize local crime maps&lt;/a&gt;, &lt;a href=&quot;http://&quot;&gt;report recent crimes&lt;/a&gt;, and &lt;a href=&quot;http://www.crimeinchicago.org/&quot;&gt;display other trends&lt;/a&gt;.
-        &lt;/p&gt;
-&lt;h6&gt;So is that it?&lt;/h6&gt;
-&lt;p&gt;
-            I hope not. I really want other people to pick this up and work on it so I've put it all up in a &lt;a href=&quot;https://github.com/lots-of-things/route-crime-calculator/blob/master/analysis/crime_maps_viz.ipynb&quot;&gt;GitHub project&lt;/a&gt; for someone else to run with. Anyone is free to modify it any way they want, and I'll push their mods to the original if they work. So please help and have fun.
-        &lt;/p&gt;
-&lt;/p&gt;</description>
-        <pubDate>Mon, 14 Dec 2015 18:25:00 -0800</pubDate>
-        <link>https://bonkerfield.org/2015/12/14/route-crime-calculator/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2015/12/14/route-crime-calculator/</guid>
-        
-        <category>DataScience</category>
-        
-        <category>WebDesign</category>
+        <category>robots</category>
         
         
       </item>
@@ -4030,13 +4104,13 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
 &lt;p&gt;
     I can't wait to make the other half and start using this. With a cheap chess set like this, I'll never be without the game again!
 &lt;/p&gt;</description>
-        <pubDate>Sun, 29 Nov 2015 22:58:00 -0800</pubDate>
+        <pubDate>Sun, 29 Nov 2015 00:00:00 -0800</pubDate>
         <link>https://bonkerfield.org/2015/11/29/paper-chess-set/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2015/11/29/paper-chess-set/</guid>
         
-        <category>Art</category>
+        <category>art</category>
         
-        <category>Games</category>
+        <category>games</category>
         
         
       </item>
@@ -4077,11 +4151,15 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
     &lt;/p&gt;
 &lt;br/&gt;
 </description>
-        <pubDate>Thu, 13 Aug 2015 17:51:00 -0700</pubDate>
+        <pubDate>Thu, 13 Aug 2015 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2015/08/13/power-analysis-of-indoor-water-fountain/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2015/08/13/power-analysis-of-indoor-water-fountain/</guid>
         
-        <category>Household</category>
+        <category>misc</category>
+        
+        <category>energy</category>
+        
+        <category>analysis</category>
         
         
       </item>
@@ -4129,13 +4207,13 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
                     &lt;/p&gt;
 &lt;br/&gt;
 &lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;</description>
-        <pubDate>Sun, 26 Jul 2015 18:32:00 -0700</pubDate>
+        <pubDate>Sun, 26 Jul 2015 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2015/07/26/the-barbie-hadoop-cluster-multi-node/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2015/07/26/the-barbie-hadoop-cluster-multi-node/</guid>
         
-        <category>DataScience</category>
+        <category>data science</category>
         
-        <category>IT</category>
+        <category>infra</category>
         
         
       </item>
@@ -4149,9 +4227,11 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
     &lt;/p&gt;
 &lt;br/&gt;
 </description>
-        <pubDate>Tue, 07 Jul 2015 14:20:00 -0700</pubDate>
+        <pubDate>Tue, 07 Jul 2015 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2015/07/07/artifice-slideshow/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2015/07/07/artifice-slideshow/</guid>
+        
+        <category>artifice</category>
         
         
       </item>
@@ -4237,11 +4317,11 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
     &lt;/p&gt;
 &lt;br/&gt;
 </description>
-        <pubDate>Sun, 08 Mar 2015 22:39:00 -0700</pubDate>
+        <pubDate>Sun, 08 Mar 2015 00:00:00 -0800</pubDate>
         <link>https://bonkerfield.org/2015/03/08/week-9-laser-activated-trip-wire/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2015/03/08/week-9-laser-activated-trip-wire/</guid>
         
-        <category>Electronics</category>
+        <category>electronics</category>
         
         
       </item>
@@ -4276,11 +4356,11 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
 &lt;br/&gt;
 
 &lt;script src=&quot;https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js&quot;&gt;&lt;/script&gt;</description>
-        <pubDate>Sat, 07 Mar 2015 22:36:00 -0800</pubDate>
+        <pubDate>Sat, 07 Mar 2015 00:00:00 -0800</pubDate>
         <link>https://bonkerfield.org/2015/03/07/raser-week-8-arduino-trip-wire/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2015/03/07/raser-week-8-arduino-trip-wire/</guid>
         
-        <category>Electronics</category>
+        <category>electronics</category>
         
         
       </item>
@@ -4399,11 +4479,17 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
 
 &lt;script src=&quot;http://latex.codecogs.com/latexit.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js&quot;&gt;&lt;/script&gt;</description>
-        <pubDate>Mon, 16 Feb 2015 12:03:00 -0800</pubDate>
+        <pubDate>Mon, 16 Feb 2015 00:00:00 -0800</pubDate>
         <link>https://bonkerfield.org/2015/02/16/procrastinating-with-time-optimization/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2015/02/16/procrastinating-with-time-optimization/</guid>
         
-        <category>Games</category>
+        <category>games</category>
+        
+        <category>design</category>
+        
+        <category>code</category>
+        
+        <category>analysis</category>
         
         
       </item>
@@ -4450,11 +4536,11 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
  &quot;/&gt;
 &lt;br/&gt;
 </description>
-        <pubDate>Fri, 06 Feb 2015 11:31:00 -0800</pubDate>
+        <pubDate>Fri, 06 Feb 2015 00:00:00 -0800</pubDate>
         <link>https://bonkerfield.org/2015/02/06/raser-week-5-review-game/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2015/02/06/raser-week-5-review-game/</guid>
         
-        <category>Electronics</category>
+        <category>electronics</category>
         
         
       </item>
@@ -4546,11 +4632,11 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
 &lt;br/&gt;
 &lt;/p&gt;
 &lt;script src=&quot;https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js&quot;&gt;&lt;/script&gt;</description>
-        <pubDate>Sun, 01 Feb 2015 13:05:00 -0800</pubDate>
+        <pubDate>Sun, 01 Feb 2015 00:00:00 -0800</pubDate>
         <link>https://bonkerfield.org/2015/02/01/raser-week-5-arduino-led-passcode-pad/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2015/02/01/raser-week-5-arduino-led-passcode-pad/</guid>
         
-        <category>Electronics</category>
+        <category>electronics</category>
         
         
       </item>
@@ -4638,11 +4724,11 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
 &lt;br/&gt;
 
 &lt;script src=&quot;https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js&quot;&gt;&lt;/script&gt;</description>
-        <pubDate>Sun, 25 Jan 2015 22:05:00 -0800</pubDate>
+        <pubDate>Sun, 25 Jan 2015 00:00:00 -0800</pubDate>
         <link>https://bonkerfield.org/2015/01/25/raser-week-4-arduino-led-passcode-pad/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2015/01/25/raser-week-4-arduino-led-passcode-pad/</guid>
         
-        <category>Electronics</category>
+        <category>electronics</category>
         
         
       </item>
@@ -4685,11 +4771,13 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
     &lt;/p&gt;
 &lt;br/&gt;
 </description>
-        <pubDate>Thu, 22 Jan 2015 14:09:00 -0800</pubDate>
+        <pubDate>Thu, 22 Jan 2015 00:00:00 -0800</pubDate>
         <link>https://bonkerfield.org/2015/01/22/tweetnote-unfakeable-timestamp-notebook/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2015/01/22/tweetnote-unfakeable-timestamp-notebook/</guid>
         
-        <category>WebDesign</category>
+        <category>design</category>
+        
+        <category>code</category>
         
         
       </item>
@@ -4835,11 +4923,13 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
     &lt;/p&gt;
 &lt;br/&gt;
 </description>
-        <pubDate>Wed, 21 Jan 2015 19:54:00 -0800</pubDate>
+        <pubDate>Wed, 21 Jan 2015 00:00:00 -0800</pubDate>
         <link>https://bonkerfield.org/2015/01/21/the-barbie-hadoop-cluster-stage-1/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2015/01/21/the-barbie-hadoop-cluster-stage-1/</guid>
         
-        <category>IT</category>
+        <category>infra</category>
+        
+        <category>data science</category>
         
         
       </item>
@@ -4923,11 +5013,11 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
     &lt;/p&gt;
 
 &lt;script src=&quot;https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js&quot;&gt;&lt;/script&gt;</description>
-        <pubDate>Sun, 18 Jan 2015 21:48:00 -0800</pubDate>
+        <pubDate>Sun, 18 Jan 2015 00:00:00 -0800</pubDate>
         <link>https://bonkerfield.org/2015/01/18/raser-week-3-arduino-led-blinker/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2015/01/18/raser-week-3-arduino-led-blinker/</guid>
         
-        <category>Electronics</category>
+        <category>electronics</category>
         
         
       </item>
@@ -5022,11 +5112,11 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
     &lt;/p&gt;
 &lt;br/&gt;
 </description>
-        <pubDate>Mon, 12 Jan 2015 23:22:00 -0800</pubDate>
+        <pubDate>Mon, 12 Jan 2015 00:00:00 -0800</pubDate>
         <link>https://bonkerfield.org/2015/01/12/raser-week-2-led-dimmers-and-switches/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2015/01/12/raser-week-2-led-dimmers-and-switches/</guid>
         
-        <category>Electronics</category>
+        <category>electronics</category>
         
         
       </item>
@@ -5098,11 +5188,11 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
     &lt;/p&gt;
 &lt;br/&gt;
 </description>
-        <pubDate>Sun, 11 Jan 2015 19:46:00 -0800</pubDate>
+        <pubDate>Sun, 11 Jan 2015 00:00:00 -0800</pubDate>
         <link>https://bonkerfield.org/2015/01/11/four-humours-collage/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2015/01/11/four-humours-collage/</guid>
         
-        <category>Art</category>
+        <category>art</category>
         
         
       </item>
@@ -5234,13 +5324,15 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
     &lt;/p&gt;
 &lt;br/&gt;
 </description>
-        <pubDate>Thu, 08 Jan 2015 11:01:00 -0800</pubDate>
+        <pubDate>Thu, 08 Jan 2015 00:00:00 -0800</pubDate>
         <link>https://bonkerfield.org/2015/01/08/actsofsuperness-twitter-game/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2015/01/08/actsofsuperness-twitter-game/</guid>
         
-        <category>Games</category>
+        <category>games</category>
         
-        <category>WebDesign</category>
+        <category>design</category>
+        
+        <category>code</category>
         
         
       </item>
@@ -5319,11 +5411,11 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
     &lt;/p&gt;
 &lt;br/&gt;
 </description>
-        <pubDate>Tue, 06 Jan 2015 09:30:00 -0800</pubDate>
+        <pubDate>Tue, 06 Jan 2015 00:00:00 -0800</pubDate>
         <link>https://bonkerfield.org/2015/01/06/raser-week-1-led-circuits/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2015/01/06/raser-week-1-led-circuits/</guid>
         
-        <category>Electronics</category>
+        <category>electronics</category>
         
         
       </item>
@@ -5405,13 +5497,17 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
     &lt;/p&gt;
 
 </description>
-        <pubDate>Mon, 05 Jan 2015 13:24:00 -0800</pubDate>
+        <pubDate>Mon, 05 Jan 2015 00:00:00 -0800</pubDate>
         <link>https://bonkerfield.org/2015/01/05/a-better-linkedin/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2015/01/05/a-better-linkedin/</guid>
         
-        <category>DataScience</category>
+        <category>data science</category>
         
-        <category>WebDesign</category>
+        <category>visualization</category>
+        
+        <category>design</category>
+        
+        <category>code</category>
         
         
       </item>
@@ -5434,11 +5530,11 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
     &lt;/p&gt;
 &lt;a href=&quot;http://3.bp.blogspot.com/-PSVVtIvd6Ek/VKb0ctyIVPI/AAAAAAAACKo/nc98n1nJIuY/s1600/3595809_b.png&quot; imageanchor=&quot;1&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;http://3.bp.blogspot.com/-PSVVtIvd6Ek/VKb0ctyIVPI/AAAAAAAACKo/nc98n1nJIuY/s1600/3595809_b.png&quot; style=&quot;display:none&quot;/&gt;&lt;/a&gt; &lt;br/&gt;
 </description>
-        <pubDate>Sat, 03 Jan 2015 17:39:00 -0800</pubDate>
+        <pubDate>Sat, 03 Jan 2015 00:00:00 -0800</pubDate>
         <link>https://bonkerfield.org/2015/01/03/wire-network/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2015/01/03/wire-network/</guid>
         
-        <category>Art</category>
+        <category>art</category>
         
         
       </item>
@@ -5455,11 +5551,13 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
 &lt;p&gt;
         For closeups of the individual items that I stitched together, you can check &lt;a href=&quot;https://plus.google.com/photos/103585488893025173441/albums/6101303480819525617&quot;&gt;this photo album&lt;/a&gt; on Google+. &lt;img border=&quot;0&quot; src=&quot;http://4.bp.blogspot.com/-MUXg3Mc6wO8/VKrBNbktU0I/AAAAAAAACM4/GXUA-wYINEk/s1600/wallgraph_front.png&quot; style=&quot;display:none&quot;/&gt;&lt;br/&gt;
 &lt;/p&gt;</description>
-        <pubDate>Wed, 31 Dec 2014 16:58:00 -0800</pubDate>
+        <pubDate>Wed, 31 Dec 2014 00:00:00 -0800</pubDate>
         <link>https://bonkerfield.org/2014/12/31/graph-theory-of-wall-decor/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2014/12/31/graph-theory-of-wall-decor/</guid>
         
-        <category>Art</category>
+        <category>art</category>
+        
+        <category>design</category>
         
         
       </item>
@@ -5489,11 +5587,11 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
 &lt;li&gt;Week 13: Arduino security competition &lt;/li&gt;
 &lt;/ul&gt;&lt;br/&gt;
 </description>
-        <pubDate>Tue, 30 Dec 2014 13:55:00 -0800</pubDate>
+        <pubDate>Tue, 30 Dec 2014 00:00:00 -0800</pubDate>
         <link>https://bonkerfield.org/2014/12/30/raser-curriculum/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2014/12/30/raser-curriculum/</guid>
         
-        <category>Electronics</category>
+        <category>electronics</category>
         
         
       </item>
@@ -5710,11 +5808,13 @@ function regame() { document.getElementById(&quot;card&quot; + (index + 1)).src 
     document.getElementById(&quot;bet7&quot;).readOnly = &quot;&quot;;
     document.getElementById(&quot;bet8&quot;).readOnly = &quot;&quot;; }
 &lt;/script&gt;</description>
-        <pubDate>Mon, 29 Dec 2014 10:38:00 -0800</pubDate>
+        <pubDate>Mon, 29 Dec 2014 00:00:00 -0800</pubDate>
         <link>https://bonkerfield.org/2014/12/29/quantum-gambling-game/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2014/12/29/quantum-gambling-game/</guid>
         
-        <category>Games</category>
+        <category>games</category>
+        
+        <category>quantum</category>
         
         
       </item>
@@ -5745,11 +5845,11 @@ function regame() { document.getElementById(&quot;card&quot; + (index + 1)).src 
     &lt;/p&gt;
 &lt;br/&gt;
 </description>
-        <pubDate>Sun, 28 Dec 2014 11:37:00 -0800</pubDate>
+        <pubDate>Sun, 28 Dec 2014 00:00:00 -0800</pubDate>
         <link>https://bonkerfield.org/2014/12/28/pvc-easel/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2014/12/28/pvc-easel/</guid>
         
-        <category>Household</category>
+        <category>misc</category>
         
         
       </item>
@@ -5759,15 +5859,15 @@ function regame() { document.getElementById(&quot;card&quot; + (index + 1)).src 
         <description>This is my first attempt at attaching a solar battery charger like &lt;a href=&quot;http://lifehacker.com/5752731/built-a-4-diy-solar-battery-charger&quot;&gt;this one&lt;/a&gt; to a flower pot.  The style of the pot isn't exactly what I was looking for.  I was hoping to have the top at an angle that faced the sun better, but my friend who made the pots couldn't get them to stay flat during baking.  The next edition will have a better pot and hopefully will work to charge cell phones as well. &lt;img border=&quot;0&quot; src=&quot;http://1.bp.blogspot.com/-0cAr7rofgBk/VJ9Aml-NqBI/AAAAAAAAA_Y/5fi1jvpwTxA/s1600/IMG_0154.JPG&quot; title=&quot; &quot;/&gt;
 &lt;br/&gt;
 </description>
-        <pubDate>Sat, 27 Dec 2014 15:54:00 -0800</pubDate>
+        <pubDate>Sat, 27 Dec 2014 00:00:00 -0800</pubDate>
         <link>https://bonkerfield.org/2014/12/27/solar-battery-charger-flower-pot-first/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2014/12/27/solar-battery-charger-flower-pot-first/</guid>
         
-        <category>Household</category>
+        <category>misc</category>
         
-        <category>Renewable</category>
+        <category>energy</category>
         
-        <category>Electronics</category>
+        <category>electronics</category>
         
         
       </item>
@@ -5800,11 +5900,11 @@ function regame() { document.getElementById(&quot;card&quot; + (index + 1)).src 
 &lt;p&gt;
     I'm really pleased with the result. Sewing is a new skill to me, but it's worth it to learn. &lt;br /&gt;
 &lt;/p&gt;</description>
-        <pubDate>Sat, 27 Dec 2014 15:09:00 -0800</pubDate>
+        <pubDate>Sat, 27 Dec 2014 00:00:00 -0800</pubDate>
         <link>https://bonkerfield.org/2014/12/27/mos-tool-pouch/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2014/12/27/mos-tool-pouch/</guid>
         
-        <category>Household</category>
+        <category>misc</category>
         
         
       </item>
@@ -5815,11 +5915,11 @@ function regame() { document.getElementById(&quot;card&quot; + (index + 1)).src 
  This is what the old case looked like.  Big and clunky. &lt;img border=&quot;0&quot; src=&quot;http://1.bp.blogspot.com/-xHT7ZbYyI-Q/VJi-Wt0ki5I/AAAAAAAAA98/nwnBz_pJB84/s1600/computer%2Bcases%2Bsamsonite%2B001.JPG&quot; title=&quot; &quot;/&gt;
 &lt;br/&gt;
 </description>
-        <pubDate>Sat, 27 Dec 2014 15:09:00 -0800</pubDate>
+        <pubDate>Sat, 27 Dec 2014 00:00:00 -0800</pubDate>
         <link>https://bonkerfield.org/2014/12/27/modernizing-my-computer-case/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2014/12/27/modernizing-my-computer-case/</guid>
         
-        <category>Household</category>
+        <category>misc</category>
         
         
       </item>
@@ -5891,11 +5991,11 @@ function regame() { document.getElementById(&quot;card&quot; + (index + 1)).src 
             Overall, the project took about a week. Now I'll just have to wait to try it out.
         &lt;/p&gt;
 &lt;/p&gt;</description>
-        <pubDate>Tue, 16 Dec 2014 14:58:00 -0800</pubDate>
+        <pubDate>Tue, 16 Dec 2014 00:00:00 -0800</pubDate>
         <link>https://bonkerfield.org/2014/12/16/introducing-daves-grill-it-all/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2014/12/16/introducing-daves-grill-it-all/</guid>
         
-        <category>Household</category>
+        <category>misc</category>
         
         
       </item>
@@ -5925,7 +6025,7 @@ function regame() { document.getElementById(&quot;card&quot; + (index + 1)).src 
         <link>https://bonkerfield.org/2014/12/08/predicting-bike-share-usage/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2014/12/08/predicting-bike-share-usage/</guid>
         
-        <category>DataScience</category>
+        <category>data science</category>
         
         
       </item>
@@ -5939,7 +6039,7 @@ A while back, I wrote a little python code that takes in a word and spits out a 
         <link>https://bonkerfield.org/2014/12/08/a-simple-anagrammer/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2014/12/08/a-simple-anagrammer/</guid>
         
-        <category>Games</category>
+        <category>games</category>
         
         
       </item>
