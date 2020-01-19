@@ -15,9 +15,11 @@
     @extend %no-list-style;
 
     flex-wrap: wrap;
+    max-width: 75%;
+    margin: auto;
 
     & > * {
-      margin-bottom: 2em;
+      margin-bottom: 0.25em;
 
       &:not(:last-child) {
         margin-right: 1em;
