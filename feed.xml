@@ -5,147 +5,45 @@
     <description>personal information identity spacetime map</description>
     <link>https://bonkerfield.org</link>
     <atom:link href="https://bonkerfield.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 19 Jan 2020 01:52:43 -0800</pubDate>
-    <lastBuildDate>Sun, 19 Jan 2020 01:52:43 -0800</lastBuildDate>
+    <pubDate>Mon, 20 Jan 2020 20:56:40 -0800</pubDate>
+    <lastBuildDate>Mon, 20 Jan 2020 20:56:40 -0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
-        <title>Google Analytics for Scrolling on a Static Website (or Google Analytics is Creepy)</title>
-        <description>&lt;p&gt;
-    A couple of months ago, I helped one of my friends set up Scroll Tracking with Google Analytics on an experimental website. While working on this I discovered that I could do really cool/creepy stuff like download the scroll event data on a user-by-user basis.
-&lt;/p&gt;
-&lt;h4&gt;Setting up (free) Google Analytics for Website Usage Tracking&lt;/h4&gt;
-&lt;p&gt;
-    Because my friend was using a static site on Github Pages, it wasn't possible to set up a database to track the interactions with her website. Instead, we decided to use Google Analytics (GA) to do the storing of all that interaction data. This is great because GA can be used for free, but as we'll see, this can lead to drawbacks.
-&lt;/p&gt;
-&lt;p&gt;
-    The first step in scroll tracking is getting Google Analytics set up to listen in on the activity on your website. This process is pretty straightforward and the steps are covered &lt;a href=&quot;https://support.google.com/analytics/answer/1008015&quot;&gt;here&lt;/a&gt;. At the end of this step, you'll be able to log in and see the number of pageviews and such on the GA site.
-&lt;/p&gt;
-&lt;img border=&quot;0&quot; src=&quot;https://3.bp.blogspot.com/-mPJihWJY6FY/XfFneqiZOPI/AAAAAAAAFKA/M7FJ-2O61JgkHa01CatsHuibC1bzSDENACLcBGAsYHQ/s1600/Screenshot%2Bfrom%2B2019-12-11%2B14-01-44.png&quot; title=&quot; &quot;/&gt;
-&lt;p&gt;
-    This is an alright overview of the number of people who have visited the site, but we want to get more interesting event level detail like scroll tracking. There are a number of tutorials that explain how to do Scroll Tracking, but &lt;a href=&quot;https://www.lovesdata.com/blog/tracking-scroll-depth&quot;&gt;this one&lt;/a&gt; was a good start that got it working for me. I added a ton more levels to get granularity down to the single percent. After that is set up, you can view the Behavior-&amp;gt;Events tab and see all of the Scroll Tracking events in a timeline.
-&lt;/p&gt;
-&lt;img border=&quot;0&quot; src=&quot;https://3.bp.blogspot.com/-E9fhXh5a5oI/XfFogxHcbKI/AAAAAAAAFKM/t8jcGRRHkoUXRizzCQPonAaZXDNWAEO2QCLcBGAsYHQ/s1600/Screenshot%2Bfrom%2B2019-12-11%2B14-06-17.png&quot; title=&quot; &quot;/&gt;
-&lt;p&gt;
-    But we're actually interested in how far people scroll down the page. As explained in the link above, you can get this table by selecting the &quot;Top Events&quot; tab and then setting the primary dimension as &quot;Event Action.&quot;
-&lt;/p&gt;
-&lt;img border=&quot;0&quot; src=&quot;https://4.bp.blogspot.com/-HdQL_RiyaUU/XfFpgO_0uEI/AAAAAAAAFKY/pJnuOwpcQ9Ik2YNM7L6JJN6lK8_Pc3K-QCLcBGAsYHQ/s1600/Screenshot%2Bfrom%2B2019-12-11%2B14-10-09.png&quot; title=&quot; &quot;/&gt;
-&lt;p&gt;
-    This table gives a decent overall summary, but it's hard to get down to more detail than this. You can use the &quot;Secondary Dimension&quot; to get it broken down into a little more detail, but it's still pretty high level. Also, if you want to download this data, you can only export the table as it appears, not with any more detail.
-&lt;/p&gt;
-&lt;h4&gt;Getting User-Event Level Data&lt;/h4&gt;
-&lt;p&gt;
-    To get down to Event Level Records I did two things:
-&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Add custom variables to disambiguate users on each event&lt;/li&gt;
-&lt;li&gt;Use google2pandas to download the raw event data&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;
-    The first item was necessary to disambiguate multiple users so that I could reconstruct their scroll event history on an individual basis. Otherwise, everyone who scrolled at the same time would be mixed together in the data. The second item just allowed me to get every record directly instead of needing to go through the GA UI and get aggregated data. I break the process of working with those two thins down in the next sections.
-&lt;/p&gt;
-&lt;h5&gt;Adding User Variables to the Scroll Event Tag&lt;/h5&gt;
-&lt;p&gt;
-    I think that if you pay for Google Analytics then you can see the user associated with every event pretty easily . But I'm kind of broke so I don't have that luxury. Instead, to add the user's ID, I needed to pull it out of Google's tracking stuff from the inside and past it back in as a custom variable. After I'd done that I could grab those variables to store in the Scroll Event Tag for later use.
-&lt;/p&gt;
-&lt;h6&gt;Storing Variables&lt;/h6&gt;
-&lt;p&gt;
-    Google has a way to keep track of the same user across different sessions on your website. It's a little creepy, but it's pretty easy to find a &lt;a href=&quot;https://www.optimizesmart.com/how-to-send-client-id-to-google-analytics-via-google-tag-manager/&quot;&gt;how to&lt;/a&gt; on how to do it. The key part is adding a Custom Javascript variable with the following code.
-&lt;/p&gt;
-&lt;img border=&quot;0&quot; src=&quot;https://1.bp.blogspot.com/-RSEUdlZjI4Q/XfF2Re87ZLI/AAAAAAAAFKk/lbVPkwjH7acX__G7qSezgiX_nQyQAlVbQCLcBGAsYHQ/s1600/Screenshot%2Bfrom%2B2019-12-11%2B15-05-08.png&quot; title=&quot; &quot;/&gt;
-&lt;pre&gt;function() {
- try {
- var tracker = ga.getAll()[0];
- return tracker.get('clientId').toLowerCase().trim();
-} catch(e) {} 
-return 'false';
-}&lt;/pre&gt;
-&lt;p&gt;
-    Apparently, there is a &lt;a href=&quot;https://www.simoahava.com/gtm-tips/use-customtask-access-tracker-values-google-tag-manager/&quot;&gt;better way&lt;/a&gt; to do this, but I didn't find that until now. The drawback with my method is that the clientId variable will be null if Google hasn't set it yet. To take care of this problem I added a second variable (userId), which I manually populate on the first pageload. That way if Google takes a while to setup the clientId, I can go back and use the userId variable to connect earlier events. Kind of hacky but whatever.
-&lt;/p&gt;
-&lt;p&gt;
-    I added the following javascript to my site to make a random ID and add it to the Google Tag Manager's &quot;&lt;a href=&quot;https://support.google.com/tagmanager/answer/6164391?hl=en&quot;&gt;data layer&lt;/a&gt;.&quot; The data layer is just a way to pass variables from your local javascript to the GTM's variable space. Note that I also added the variable called contentVersion to track which site update the user was viewing.
-&lt;/p&gt;
-&lt;p&gt;
-    After adding this code into the &amp;gt;head&amp;lt; html of my site:
-&lt;/p&gt;
-&lt;pre&gt;
-  function makeid() {
-  var text = &quot;&quot;;
-  var possible = &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789&quot;;
+        <title>QMB Prototype Demo</title>
+        <description>&lt;p&gt;Lately, I've been having &lt;a href=&quot;2019/10/23/qmb-installation/&quot;&gt;too much fun&lt;/a&gt;, working on &lt;a href=&quot;2019/10/17/quantum-multiverse-bifurcator/&quot;&gt;quantum randomness generators&lt;/a&gt;.  One of my goals is to build a minimalist device for producing a quantum binary outcome.  I've designed one simple and cost-effective circuit that I think will fit the bill.  Check out the video to see how it works.&lt;/p&gt;
 
-  for (var i = 0; i &amp;lt; 20; i++)
-  text += possible.charAt(Math.floor(Math.random() * possible.length));
+&lt;iframe class=&quot;flexme&quot; width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/0-vfWDAkc1g&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
 
-  return text;
-}
-var userID = makeid();
-dataLayer = [{'userID': userID,'contentVersion':1}];
-&lt;/pre&gt;
 &lt;p&gt;
-    I added a data layer variable with the same name in GTM.
+	The device works by measuring quantum fluctuations in the amount of light hitting two detectors. I have a &lt;a href=&quot;2019/10/18/quantum-coin-flip-device/&quot;&gt;previous post&lt;/a&gt; with details on a similar circuit that I'd built a few months ago, but the main modification for this iteration was to add the enclosement and the aperture.  
 &lt;/p&gt;
-&lt;img border=&quot;0&quot; src=&quot;https://1.bp.blogspot.com/-GwFkxX7qO3I/XfF4-sXjlZI/AAAAAAAAFKw/pWtR4blYoGkaNwLINLeT3wlOcgNzf0ZKACLcBGAsYHQ/s1600/Screenshot%2Bfrom%2B2019-12-11%2B15-16-29.png&quot; title=&quot; &quot;/&gt;
-&lt;h6&gt;Adding variables to Scroll Events Tag&lt;/h6&gt;
-&lt;p&gt;
-    After I made the variables I just needed to add them to the Scroll Event Tag that I had made before. I just put all of the variables I needed into the &quot;Label&quot; field with colons between them.
-&lt;/p&gt;
-&lt;img border=&quot;0&quot; src=&quot;https://2.bp.blogspot.com/-9JLqzB_bcRA/XfF6KU7AQ4I/AAAAAAAAFK8/JubZ8W_bLP4E_AspOkZQIlJPMpWfWO3-QCLcBGAsYHQ/s1600/Screenshot%2Bfrom%2B2019-12-11%2B15-20-02.png&quot; title=&quot; &quot;/&gt;
-&lt;p&gt;
-    To test I just went back to the GA events table we were looking at above and selected &quot;Event Label&quot; as the primary dimension. This shows the event labels in the specified format {{contentVersion}}:{{userID}}:{{clientId}}.
-&lt;/p&gt;
-&lt;img border=&quot;0&quot; src=&quot;https://4.bp.blogspot.com/-T2wnRwrxfvI/XfF6iQQQZXI/AAAAAAAAFLE/kQFXFIVA_-Y2CD79EjjKowDmrUlmHAtNwCLcBGAsYHQ/s800/Screenshot%2Bfrom%2B2019-12-11%2B15-23-09.png&quot; title=&quot; &quot;/&gt;
-&lt;p&gt;
-    You might notice that the last item (clientId) is frequently &quot;false.&quot; That's just because it hadn't been set by google yet.
-&lt;/p&gt;
-&lt;h5&gt;Downloading events with google2pandas&lt;/h5&gt;
-&lt;p&gt;
-    Now that the data is distinguishable by individual userId, it becomes possible to download it at that level. Rather than using the GA UI, I wanted to write some python scripts. Fortunately, the &lt;a href=&quot;https://github.com/panalysis&quot;&gt;panalysis&lt;/a&gt; group on Github, had the &lt;a href=&quot;https://github.com/panalysis/Google2Pandas&quot;&gt;google2pandas repo&lt;/a&gt; that could connect and return the data in a pretty pandas data frame.
-&lt;/p&gt;
-&lt;p&gt;
-    To download the data I have to send a query structured with the GA viewId, the date ranges, the aggregation dimensions, and the metrics to plot. In this example, I basically just add all the features I have as dimensions and then I get the count of totalEvents as the metric (which should be 1 most of the time anyway).
-&lt;/p&gt;
-&lt;pre&gt;
-  from google2pandas import GoogleAnalyticsQueryV4
 
-  conn = GoogleAnalyticsQueryV4(secrets='attention_service_credentials.json')
-  scroll_query = {
-  'reportRequests': [{
-  'viewId' : '187999039',
-  
-  'dateRanges': [{
-  'startDate' : '2019-11-26',
-  'endDate'   : '2020-05-01'}],
+&lt;img title=&quot;Quantum Multiverse Bifurcator prototype&quot; src=&quot;/assets/images/2020/qmb_proto.jpg&quot; alt=&quot;Quantum Multiverse Bifurcator prototype&quot;/&gt;
 
-  'dimensions' : [
-  {'name' : 'ga:eventCategory'},
-  {'name' : 'ga:eventAction'},
-  {'name' : 'ga:eventLabel'},
-  {'name' : 'ga:pagePath'},
-  {'name' : 'ga:pageTitle'},
-  {'name' : 'ga:dateHourMinute'}],
 
-  'metrics'   : [
-  {'expression' : 'ga:totalEvents'}],
-}]
-}
-df_scrolls = conn.execute_query(scroll_query)
-&lt;/pre&gt;
 &lt;p&gt;
-    I have a working &lt;a href=&quot;https://github.com/lots-of-things/attention-tracking&quot;&gt;jupyter notebook&lt;/a&gt; on this if you want a place to start. You will need to enable the GA API and get your own google_service_credentials.json file by following the instructions &lt;a href=&quot;https://developers.google.com/analytics/devguides/reporting/core/v3/quickstart/installed-py&quot;&gt;here&lt;/a&gt;.
+	The aperture itself is based on &lt;a href=&quot;https://www.instructables.com/id/Cardboard-Aperture-v2/&quot;&gt;this instructable&lt;/a&gt;, though there were definitely issues with that design.  I made an adjustment to have the interior disc's slots a little wider and then I mounted that into the tp of the box.
 &lt;/p&gt;
-&lt;h4&gt;Plotting the scrolling progress&lt;/h4&gt;
+
+&lt;img title=&quot;Quantum Multiverse Bifurcator prototype&quot; src=&quot;/assets/images/2020/qmb_proto_open.jpg&quot; alt=&quot;Quantum Multiverse Bifurcator prototype&quot;/&gt;
+
 &lt;p&gt;
-    In my jupyter notebook, I graph the scrolling progress for a few people. The data is clearly messy because some people just scroll straight to the bottom. Still, this gave my friend a pretty clear idea that for people who were actually reading it, it took about an hour to finish.
+	The reason I had to build something to limit the incoming light was that in the open version, the light source was too dificult to stabilize.  With this version I could more carefully place the light source and adjust the aperture width to get a roughly 50-50 split between red and blue lighting up.
 &lt;/p&gt;
-&lt;img border=&quot;0&quot; src=&quot;https://1.bp.blogspot.com/-BN1Su8VptwM/XfGCDzfGpGI/AAAAAAAAFLQ/D5ZMotAq5qso7tUPfbzc4U1LJCPwS2bYwCLcBGAsYHQ/s1600/Screenshot%2Bfrom%2B2019-12-11%2B15-47-15.png&quot; title=&quot; &quot;/&gt;</description>
-        <pubDate>Mon, 30 Dec 2019 00:00:00 -0800</pubDate>
-        <link>https://bonkerfield.org/2019/12/30/google-analytics-for-scrolling-on/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2019/12/30/google-analytics-for-scrolling-on/</guid>
+
+&lt;p&gt;
+	I'm still concerned that this implementation isn't fully quantum though because of noise in the circuit and variation in lighting due to movement.  If you have an idea about how to fix these issues or if you see other problems I haven't thought of, &lt;span class=&quot;popup__open&quot; style=&quot;border-bottom: 0.25px solid $color-grey&quot;&gt;please get in touch &lt;i class=&quot;fa fa-envelope&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 20 Jan 2020 00:00:00 -0800</pubDate>
+        <link>https://bonkerfield.org/2020/01/20/qmb-prototype-demo/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2020/01/20/qmb-prototype-demo/</guid>
         
-        <category>code</category>
+        <category>physics</category>
         
-        <category>data science</category>
+        <category>electronics</category>
         
         
       </item>
@@ -178,6 +76,10 @@ df_scrolls = conn.execute_query(scroll_query)
 &lt;/p&gt;
 &lt;p&gt;
     Anyway, I'll be setting a timer to try to get down to 2 minutes by January 1, and after I'll see if I can go the whole year. Please leave a comment if you see something off in my calculations.
+&lt;/p&gt;
+
+&lt;p&gt;
+	&lt;em&gt;Update: I forgot that part of the reason for showering was to actually get clean.  As it turns out, after a month of showering for 2 minutes I started to get a little gross.  So I'm moderating my usage, but no longer limiting to 2 minutes.  Oh well, worth it while it lasted.&lt;/em&gt; 
 &lt;/p&gt;</description>
         <pubDate>Sat, 07 Dec 2019 00:00:00 -0800</pubDate>
         <link>https://bonkerfield.org/2019/12/07/short-post-on-short-showers/</link>
@@ -1136,6 +1038,147 @@ top (bone dry)
         <guid isPermaLink="true">https://bonkerfield.org/2019/09/01/woodworking-motor-work-and-head/</guid>
         
         <category>boatwork</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Google Analytics for Scrolling on a Static Website (or Google Analytics is Creepy)</title>
+        <description>&lt;p&gt;
+    A couple of months ago, I helped one of my friends set up Scroll Tracking with Google Analytics on an experimental website. While working on this I discovered that I could do really cool/creepy stuff like download the scroll event data on a user-by-user basis.
+&lt;/p&gt;
+&lt;h4&gt;Setting up (free) Google Analytics for Website Usage Tracking&lt;/h4&gt;
+&lt;p&gt;
+    Because my friend was using a static site on Github Pages, it wasn't possible to set up a database to track the interactions with her website. Instead, we decided to use Google Analytics (GA) to do the storing of all that interaction data. This is great because GA can be used for free, but as we'll see, this can lead to drawbacks.
+&lt;/p&gt;
+&lt;p&gt;
+    The first step in scroll tracking is getting Google Analytics set up to listen in on the activity on your website. This process is pretty straightforward and the steps are covered &lt;a href=&quot;https://support.google.com/analytics/answer/1008015&quot;&gt;here&lt;/a&gt;. At the end of this step, you'll be able to log in and see the number of pageviews and such on the GA site.
+&lt;/p&gt;
+&lt;img border=&quot;0&quot; src=&quot;https://3.bp.blogspot.com/-mPJihWJY6FY/XfFneqiZOPI/AAAAAAAAFKA/M7FJ-2O61JgkHa01CatsHuibC1bzSDENACLcBGAsYHQ/s1600/Screenshot%2Bfrom%2B2019-12-11%2B14-01-44.png&quot; title=&quot; &quot;/&gt;
+&lt;p&gt;
+    This is an alright overview of the number of people who have visited the site, but we want to get more interesting event level detail like scroll tracking. There are a number of tutorials that explain how to do Scroll Tracking, but &lt;a href=&quot;https://www.lovesdata.com/blog/tracking-scroll-depth&quot;&gt;this one&lt;/a&gt; was a good start that got it working for me. I added a ton more levels to get granularity down to the single percent. After that is set up, you can view the Behavior-&amp;gt;Events tab and see all of the Scroll Tracking events in a timeline.
+&lt;/p&gt;
+&lt;img border=&quot;0&quot; src=&quot;https://3.bp.blogspot.com/-E9fhXh5a5oI/XfFogxHcbKI/AAAAAAAAFKM/t8jcGRRHkoUXRizzCQPonAaZXDNWAEO2QCLcBGAsYHQ/s1600/Screenshot%2Bfrom%2B2019-12-11%2B14-06-17.png&quot; title=&quot; &quot;/&gt;
+&lt;p&gt;
+    But we're actually interested in how far people scroll down the page. As explained in the link above, you can get this table by selecting the &quot;Top Events&quot; tab and then setting the primary dimension as &quot;Event Action.&quot;
+&lt;/p&gt;
+&lt;img border=&quot;0&quot; src=&quot;https://4.bp.blogspot.com/-HdQL_RiyaUU/XfFpgO_0uEI/AAAAAAAAFKY/pJnuOwpcQ9Ik2YNM7L6JJN6lK8_Pc3K-QCLcBGAsYHQ/s1600/Screenshot%2Bfrom%2B2019-12-11%2B14-10-09.png&quot; title=&quot; &quot;/&gt;
+&lt;p&gt;
+    This table gives a decent overall summary, but it's hard to get down to more detail than this. You can use the &quot;Secondary Dimension&quot; to get it broken down into a little more detail, but it's still pretty high level. Also, if you want to download this data, you can only export the table as it appears, not with any more detail.
+&lt;/p&gt;
+&lt;h4&gt;Getting User-Event Level Data&lt;/h4&gt;
+&lt;p&gt;
+    To get down to Event Level Records I did two things:
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Add custom variables to disambiguate users on each event&lt;/li&gt;
+&lt;li&gt;Use google2pandas to download the raw event data&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+    The first item was necessary to disambiguate multiple users so that I could reconstruct their scroll event history on an individual basis. Otherwise, everyone who scrolled at the same time would be mixed together in the data. The second item just allowed me to get every record directly instead of needing to go through the GA UI and get aggregated data. I break the process of working with those two thins down in the next sections.
+&lt;/p&gt;
+&lt;h5&gt;Adding User Variables to the Scroll Event Tag&lt;/h5&gt;
+&lt;p&gt;
+    I think that if you pay for Google Analytics then you can see the user associated with every event pretty easily . But I'm kind of broke so I don't have that luxury. Instead, to add the user's ID, I needed to pull it out of Google's tracking stuff from the inside and past it back in as a custom variable. After I'd done that I could grab those variables to store in the Scroll Event Tag for later use.
+&lt;/p&gt;
+&lt;h6&gt;Storing Variables&lt;/h6&gt;
+&lt;p&gt;
+    Google has a way to keep track of the same user across different sessions on your website. It's a little creepy, but it's pretty easy to find a &lt;a href=&quot;https://www.optimizesmart.com/how-to-send-client-id-to-google-analytics-via-google-tag-manager/&quot;&gt;how to&lt;/a&gt; on how to do it. The key part is adding a Custom Javascript variable with the following code.
+&lt;/p&gt;
+&lt;img border=&quot;0&quot; src=&quot;https://1.bp.blogspot.com/-RSEUdlZjI4Q/XfF2Re87ZLI/AAAAAAAAFKk/lbVPkwjH7acX__G7qSezgiX_nQyQAlVbQCLcBGAsYHQ/s1600/Screenshot%2Bfrom%2B2019-12-11%2B15-05-08.png&quot; title=&quot; &quot;/&gt;
+&lt;pre&gt;function() {
+ try {
+ var tracker = ga.getAll()[0];
+ return tracker.get('clientId').toLowerCase().trim();
+} catch(e) {} 
+return 'false';
+}&lt;/pre&gt;
+&lt;p&gt;
+    Apparently, there is a &lt;a href=&quot;https://www.simoahava.com/gtm-tips/use-customtask-access-tracker-values-google-tag-manager/&quot;&gt;better way&lt;/a&gt; to do this, but I didn't find that until now. The drawback with my method is that the clientId variable will be null if Google hasn't set it yet. To take care of this problem I added a second variable (userId), which I manually populate on the first pageload. That way if Google takes a while to setup the clientId, I can go back and use the userId variable to connect earlier events. Kind of hacky but whatever.
+&lt;/p&gt;
+&lt;p&gt;
+    I added the following javascript to my site to make a random ID and add it to the Google Tag Manager's &quot;&lt;a href=&quot;https://support.google.com/tagmanager/answer/6164391?hl=en&quot;&gt;data layer&lt;/a&gt;.&quot; The data layer is just a way to pass variables from your local javascript to the GTM's variable space. Note that I also added the variable called contentVersion to track which site update the user was viewing.
+&lt;/p&gt;
+&lt;p&gt;
+    After adding this code into the &amp;gt;head&amp;lt; html of my site:
+&lt;/p&gt;
+&lt;pre&gt;
+  function makeid() {
+  var text = &quot;&quot;;
+  var possible = &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789&quot;;
+
+  for (var i = 0; i &amp;lt; 20; i++)
+  text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+  return text;
+}
+var userID = makeid();
+dataLayer = [{'userID': userID,'contentVersion':1}];
+&lt;/pre&gt;
+&lt;p&gt;
+    I added a data layer variable with the same name in GTM.
+&lt;/p&gt;
+&lt;img border=&quot;0&quot; src=&quot;https://1.bp.blogspot.com/-GwFkxX7qO3I/XfF4-sXjlZI/AAAAAAAAFKw/pWtR4blYoGkaNwLINLeT3wlOcgNzf0ZKACLcBGAsYHQ/s1600/Screenshot%2Bfrom%2B2019-12-11%2B15-16-29.png&quot; title=&quot; &quot;/&gt;
+&lt;h6&gt;Adding variables to Scroll Events Tag&lt;/h6&gt;
+&lt;p&gt;
+    After I made the variables I just needed to add them to the Scroll Event Tag that I had made before. I just put all of the variables I needed into the &quot;Label&quot; field with colons between them.
+&lt;/p&gt;
+&lt;img border=&quot;0&quot; src=&quot;https://2.bp.blogspot.com/-9JLqzB_bcRA/XfF6KU7AQ4I/AAAAAAAAFK8/JubZ8W_bLP4E_AspOkZQIlJPMpWfWO3-QCLcBGAsYHQ/s1600/Screenshot%2Bfrom%2B2019-12-11%2B15-20-02.png&quot; title=&quot; &quot;/&gt;
+&lt;p&gt;
+    To test I just went back to the GA events table we were looking at above and selected &quot;Event Label&quot; as the primary dimension. This shows the event labels in the specified format {{contentVersion}}:{{userID}}:{{clientId}}.
+&lt;/p&gt;
+&lt;img border=&quot;0&quot; src=&quot;https://4.bp.blogspot.com/-T2wnRwrxfvI/XfF6iQQQZXI/AAAAAAAAFLE/kQFXFIVA_-Y2CD79EjjKowDmrUlmHAtNwCLcBGAsYHQ/s800/Screenshot%2Bfrom%2B2019-12-11%2B15-23-09.png&quot; title=&quot; &quot;/&gt;
+&lt;p&gt;
+    You might notice that the last item (clientId) is frequently &quot;false.&quot; That's just because it hadn't been set by google yet.
+&lt;/p&gt;
+&lt;h5&gt;Downloading events with google2pandas&lt;/h5&gt;
+&lt;p&gt;
+    Now that the data is distinguishable by individual userId, it becomes possible to download it at that level. Rather than using the GA UI, I wanted to write some python scripts. Fortunately, the &lt;a href=&quot;https://github.com/panalysis&quot;&gt;panalysis&lt;/a&gt; group on Github, had the &lt;a href=&quot;https://github.com/panalysis/Google2Pandas&quot;&gt;google2pandas repo&lt;/a&gt; that could connect and return the data in a pretty pandas data frame.
+&lt;/p&gt;
+&lt;p&gt;
+    To download the data I have to send a query structured with the GA viewId, the date ranges, the aggregation dimensions, and the metrics to plot. In this example, I basically just add all the features I have as dimensions and then I get the count of totalEvents as the metric (which should be 1 most of the time anyway).
+&lt;/p&gt;
+&lt;pre&gt;
+  from google2pandas import GoogleAnalyticsQueryV4
+
+  conn = GoogleAnalyticsQueryV4(secrets='attention_service_credentials.json')
+  scroll_query = {
+  'reportRequests': [{
+  'viewId' : '187999039',
+  
+  'dateRanges': [{
+  'startDate' : '2019-11-26',
+  'endDate'   : '2020-05-01'}],
+
+  'dimensions' : [
+  {'name' : 'ga:eventCategory'},
+  {'name' : 'ga:eventAction'},
+  {'name' : 'ga:eventLabel'},
+  {'name' : 'ga:pagePath'},
+  {'name' : 'ga:pageTitle'},
+  {'name' : 'ga:dateHourMinute'}],
+
+  'metrics'   : [
+  {'expression' : 'ga:totalEvents'}],
+}]
+}
+df_scrolls = conn.execute_query(scroll_query)
+&lt;/pre&gt;
+&lt;p&gt;
+    I have a working &lt;a href=&quot;https://github.com/lots-of-things/attention-tracking&quot;&gt;jupyter notebook&lt;/a&gt; on this if you want a place to start. You will need to enable the GA API and get your own google_service_credentials.json file by following the instructions &lt;a href=&quot;https://developers.google.com/analytics/devguides/reporting/core/v3/quickstart/installed-py&quot;&gt;here&lt;/a&gt;.
+&lt;/p&gt;
+&lt;h4&gt;Plotting the scrolling progress&lt;/h4&gt;
+&lt;p&gt;
+    In my jupyter notebook, I graph the scrolling progress for a few people. The data is clearly messy because some people just scroll straight to the bottom. Still, this gave my friend a pretty clear idea that for people who were actually reading it, it took about an hour to finish.
+&lt;/p&gt;
+&lt;img border=&quot;0&quot; src=&quot;https://1.bp.blogspot.com/-BN1Su8VptwM/XfGCDzfGpGI/AAAAAAAAFLQ/D5ZMotAq5qso7tUPfbzc4U1LJCPwS2bYwCLcBGAsYHQ/s1600/Screenshot%2Bfrom%2B2019-12-11%2B15-47-15.png&quot; title=&quot; &quot;/&gt;</description>
+        <pubDate>Sun, 30 Jun 2019 00:00:00 -0700</pubDate>
+        <link>https://bonkerfield.org/2019/06/30/google-analytics-for-scrolling-on/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2019/06/30/google-analytics-for-scrolling-on/</guid>
+        
+        <category>code</category>
+        
+        <category>data science</category>
         
         
       </item>
