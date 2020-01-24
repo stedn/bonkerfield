@@ -241,6 +241,13 @@
         max-width: none;
     }
 
+    .small_img {
+        width: 60%;
+        @media (max-width: $mq-small) {
+            width: 100%;
+        }
+    }
+
     .flex-vid {
         margin-bottom: 1.5rem;
 

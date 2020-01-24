@@ -1,12 +1,27 @@
 ---
 layout: post
-title: 'modernizing my blog'
-date: '2019-12-30T20:04:00.001-08:00'
+title: 'Modernizing my Bonkerfield'
+date: '2020-02-10'
 author: Will Stedden
 tags: 
 ---
 
-<p></p>
-- fixing barber theme to work with _site on gh-pages branch
-- search (https://www.supertechcrew.com/instant-search-box-jekyll/ and https://talk.jekyllrb.com/t/escaping-a-json-string/3643/4)
-- features copied directly from artifice website
+<p>The point of this site is to project my <a href="/reasons/">bonkerfield</a> into the world so I thought it was important to make it so this website doesn't suck.  To do that, I wanted to give it a facelift and make it easier to work with.  And so, like many before me, I began the arduous journey of migrating off of Blogger and onto a Github Pages site</p>
+
+<h4>The simple part</h4>
+<p>It was actually pretty easy to migrate the page away and set it up inside a jekyll template  https://github.com/kcargile/blogger2jekyll</p>
+The only tricky bit was that some of the plugins that I used were incompatible with Github Pages build infrastructure.  So rather than submitting the raw jekyll code, I needed two branches: one with the code and one with compiled html, css and javascript, manually generated locally and deployed by hand.
+
+
+<h4>Some Extra Features</h4>
+
+-search: I've had trouble finding my own posts in the past.  I wanted to make this easier by adding a search function.  There is a pretty straightforward jekyll plugin to make that work. https://www.supertechcrew.com/instant-search-box-jekyll/  The only trick is that I use a liot of special characters in my blog, which broke the generation of the searchable json.  To make up for that, I needed to also employ this little hack. https://talk.jekyllrb.com/t/escaping-a-json-string/3643/4  You can try the search out here.
+
+-contact form and donate button: While working on a previous site for an after-school tech education non-profit, I figured out how to implement a Google Sheets Contact Form and how to stylize my own Paypal Donate button. I duplicated those techniques here to make my own contact (ga-envelope) and donate buttons.
+
+-comments: this was a little trickier.  i knew i wanted comments.  even though, comments basically never got used on my blogger site, it just doesn't feel like a complete webpage without them.  Unfortuately, it's hard to serve comments using github pages because I'm just rendering a static site.  To fix this problem, i needed to employ some ouotside tool.  Others have suggested using disqus, or using Github's Issues to fake a comments backend.  I thought there might be an easier way using Google Forms as a backend.  
+I'd already built a way to submit data to Google Forms with a custom frontend so that wasn't an issue.  The trick now was loading the comments stored in the Google Spreadsheet.  I eventually figured out how to do that with the google sheets javascript API.
+
+
+
+<h4>The Bonkerfield Illustrator</h4>
