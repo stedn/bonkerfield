@@ -5,8 +5,8 @@
     <description>personal information identity spacetime map</description>
     <link>https://bonkerfield.org</link>
     <atom:link href="https://bonkerfield.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 20 Jan 2020 21:32:54 -0800</pubDate>
-    <lastBuildDate>Mon, 20 Jan 2020 21:32:54 -0800</lastBuildDate>
+    <pubDate>Thu, 23 Jan 2020 19:20:47 -0800</pubDate>
+    <lastBuildDate>Thu, 23 Jan 2020 19:20:47 -0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -5641,143 +5641,179 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
     
       <item>
         <title>Quantum Gambling Game</title>
-        <description>&lt;p&gt;
-        Have you ever heard of quantum computing? Know what makes it so special? Well, many scientists (and their funding agencies) are hoping that quantum computing's secrets just might help &lt;a href=&quot;http://www.inc.com/will-bourne/d-waves-dream-machine.html&quot;&gt;get them rich&lt;/a&gt;.
-    &lt;/p&gt;
+        <description>&lt;style&gt;
+#markdown img.quantum_im {
+    width:8%;
+    margin:1%;
+    margin-bottom:0;
+    display:inline;
+}
+#markdown input.quantum_input {
+    width:8%;
+    margin:1%;
+    font-size:12px;
+    display:inline;
+}
+&lt;/style&gt;
 &lt;p&gt;
-        I can't promise you that. But I can share this quantum gambling game I made with you. Although it looks simple enough on the surface, this betting game actually reveals an interesting application of &lt;a href=&quot;http://en.wikipedia.org/wiki/Quantum_computing&quot;&gt;quantum computing&lt;/a&gt;, the science turning &quot;spooky&quot; physics into solving real problems.
-    &lt;/p&gt;
+    Have you ever heard of quantum computing? Know what makes it so special? Well, many scientists (and their funding agencies) are hoping that quantum computing's secrets just might help &lt;a href=&quot;http://www.inc.com/will-bourne/d-waves-dream-machine.html&quot;&gt;get them rich&lt;/a&gt;.
+&lt;/p&gt;
 &lt;p&gt;
-        I'll explain more about strategy and its relation to quantum algorithms below, but for now, try the game out! Read below for more instructions.
-    &lt;/p&gt;
-&lt;br/&gt;&lt;br/&gt;
+    I can't promise you that. But I can share this quantum gambling game I made with you. Although it looks simple enough on the surface, this betting game actually reveals an interesting application of &lt;a href=&quot;http://en.wikipedia.org/wiki/Quantum_computing&quot;&gt;quantum computing&lt;/a&gt;, the science turning &quot;spooky&quot; physics into solving real problems.
+&lt;/p&gt;
+&lt;p&gt;
+    I'll explain more about strategy and its relation to quantum algorithms below, but for now, try the game out! Read below for more instructions.
+&lt;/p&gt;
+&lt;br /&gt;&lt;br /&gt;
 &lt;div style=&quot;border:1px solid #AAA;border-radius:5px;width:500px;margin:auto;text-align:center&quot;&gt;
-&lt;h4 style=&quot;text-align:center&quot;&gt; Guess the Quantum Card! &lt;/h4&gt;
-&lt;br/&gt;
-&lt;div&gt;&lt;img border=&quot;0&quot; id=&quot;card1&quot; src=&quot;http://cdn.shopify.com/s/files/1/0200/7616/products/aladdin-back-blue_large.png&quot; style=&quot;width:38px;margin:10px;margin-bottom:0&quot;/&gt;&lt;img border=&quot;0&quot; id=&quot;card2&quot; src=&quot;http://cdn.shopify.com/s/files/1/0200/7616/products/aladdin-back-blue_large.png&quot; style=&quot;width:38px;margin:10px;margin-bottom:0&quot;/&gt;&lt;img border=&quot;0&quot; id=&quot;card3&quot; src=&quot;http://cdn.shopify.com/s/files/1/0200/7616/products/aladdin-back-blue_large.png&quot; style=&quot;width:38px;margin:10px;margin-bottom:0&quot;/&gt;&lt;img border=&quot;0&quot; id=&quot;card4&quot; src=&quot;http://cdn.shopify.com/s/files/1/0200/7616/products/aladdin-back-blue_large.png&quot; style=&quot;width:38px;margin:10px;margin-bottom:0&quot;/&gt;&lt;img border=&quot;0&quot; id=&quot;card5&quot; src=&quot;http://cdn.shopify.com/s/files/1/0200/7616/products/aladdin-back-blue_large.png&quot; style=&quot;width:38px;margin:10px;margin-bottom:0&quot;/&gt;&lt;img border=&quot;0&quot; id=&quot;card6&quot; src=&quot;http://cdn.shopify.com/s/files/1/0200/7616/products/aladdin-back-blue_large.png&quot; style=&quot;width:38px;margin:10px;margin-bottom:0&quot;/&gt;&lt;img border=&quot;0&quot; id=&quot;card7&quot; src=&quot;http://cdn.shopify.com/s/files/1/0200/7616/products/aladdin-back-blue_large.png&quot; style=&quot;width:38px;margin:10px;margin-bottom:0&quot;/&gt;&lt;img border=&quot;0&quot; id=&quot;card8&quot; src=&quot;http://cdn.shopify.com/s/files/1/0200/7616/products/aladdin-back-blue_large.png&quot; style=&quot;width:38px;margin:10px;margin-bottom:0&quot;/&gt; &lt;/div&gt;
-&lt;input id=&quot;bet1&quot; max=&quot;9&quot; min=&quot;0&quot; style=&quot;width:40px;margin:5px;font-size:12px&quot; type=&quot;number&quot; value=&quot;0&quot;/&gt;&lt;input id=&quot;bet2&quot; max=&quot;9&quot; min=&quot;0&quot; style=&quot;width:40px;margin:5px;font-size:12px&quot; type=&quot;number&quot; value=&quot;0&quot;/&gt;&lt;input id=&quot;bet3&quot; max=&quot;9&quot; min=&quot;0&quot; style=&quot;width:40px;margin:5px;font-size:12px&quot; type=&quot;number&quot; value=&quot;0&quot;/&gt;&lt;input id=&quot;bet4&quot; max=&quot;9&quot; min=&quot;0&quot; style=&quot;width:40px;margin:5px;font-size:12px&quot; type=&quot;number&quot; value=&quot;0&quot;/&gt;&lt;input id=&quot;bet5&quot; max=&quot;9&quot; min=&quot;0&quot; style=&quot;width:40px;margin:5px;font-size:12px&quot; type=&quot;number&quot; value=&quot;0&quot;/&gt;&lt;input id=&quot;bet6&quot; max=&quot;9&quot; min=&quot;0&quot; style=&quot;width:40px;margin:5px;font-size:12px&quot; type=&quot;number&quot; value=&quot;0&quot;/&gt;&lt;input id=&quot;bet7&quot; max=&quot;9&quot; min=&quot;0&quot; style=&quot;width:40px;margin:5px;font-size:12px&quot; type=&quot;number&quot; value=&quot;0&quot;/&gt;&lt;input id=&quot;bet8&quot; max=&quot;9&quot; min=&quot;0&quot; style=&quot;width:40px;margin:5px;font-size:12px&quot; type=&quot;number&quot; value=&quot;0&quot;/&gt;
-
-&lt;div&gt;&lt;button id=&quot;paybut&quot; onclick=&quot;payup()&quot; style=&quot;display:none;font-size:1.2em;border-radius:5px&quot; type=&quot;button&quot;&gt;Trade Bets&lt;/button&gt; &lt;button id=&quot;rebut&quot; onclick=&quot;regame()&quot; style=&quot;display:none;font-size:1.2em;border-radius:5px&quot; type=&quot;button&quot;&gt;Restart&lt;/button&gt; &lt;button id=&quot;startbut&quot; onclick=&quot;startgame()&quot; style=&quot;font-size:1.2em;border-radius:5px&quot; type=&quot;button&quot;&gt;Place Bets&lt;/button&gt;&lt;button id=&quot;swapbut&quot; onclick=&quot;swap()&quot; style=&quot;display:none;font-size:1.2em;border-radius:5px&quot; type=&quot;button&quot;&gt;Redistribute&lt;/button&gt;&lt;button id=&quot;endbut&quot; onclick=&quot;endgame()&quot; style=&quot;display:none;font-size:1.2em;border-radius:5px&quot; type=&quot;button&quot;&gt;End Game&lt;/button&gt;&lt;/div&gt;
+    &lt;h4 style=&quot;text-align:center&quot;&gt; Guess the Quantum Card! &lt;/h4&gt;
+    &lt;br /&gt;
+    &lt;div&gt;&lt;img class=&quot;quantum_im&quot; border=&quot;0&quot; id=&quot;card1&quot; src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Bicyclebackside.jpg/153px-Bicyclebackside.jpg&quot; /&gt;
+        &lt;img class=&quot;quantum_im&quot; border=&quot;0&quot; id=&quot;card2&quot; src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Bicyclebackside.jpg/153px-Bicyclebackside.jpg&quot; /&gt;
+        &lt;img class=&quot;quantum_im&quot; border=&quot;0&quot; id=&quot;card3&quot; src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Bicyclebackside.jpg/153px-Bicyclebackside.jpg&quot; /&gt;
+        &lt;img class=&quot;quantum_im&quot; border=&quot;0&quot; id=&quot;card4&quot; src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Bicyclebackside.jpg/153px-Bicyclebackside.jpg&quot; /&gt;
+        &lt;img class=&quot;quantum_im&quot; border=&quot;0&quot; id=&quot;card5&quot; src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Bicyclebackside.jpg/153px-Bicyclebackside.jpg&quot; /&gt;
+        &lt;img class=&quot;quantum_im&quot; border=&quot;0&quot; id=&quot;card6&quot; src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Bicyclebackside.jpg/153px-Bicyclebackside.jpg&quot; /&gt;
+        &lt;img class=&quot;quantum_im&quot; border=&quot;0&quot; id=&quot;card7&quot; src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Bicyclebackside.jpg/153px-Bicyclebackside.jpg&quot; /&gt;
+        &lt;img class=&quot;quantum_im&quot; border=&quot;0&quot; id=&quot;card8&quot; src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Bicyclebackside.jpg/153px-Bicyclebackside.jpg&quot; /&gt; 
+    &lt;/div&gt;
+    &lt;input class=&quot;quantum_input&quot; id=&quot;bet1&quot; max=&quot;9&quot; min=&quot;0&quot; type=&quot;number&quot; value=&quot;0&quot; /&gt;
+    &lt;input class=&quot;quantum_input&quot; id=&quot;bet2&quot; max=&quot;9&quot; min=&quot;0&quot; type=&quot;number&quot; value=&quot;0&quot; /&gt;
+    &lt;input class=&quot;quantum_input&quot; id=&quot;bet3&quot; max=&quot;9&quot; min=&quot;0&quot; type=&quot;number&quot; value=&quot;0&quot; /&gt;
+    &lt;input class=&quot;quantum_input&quot; id=&quot;bet4&quot; max=&quot;9&quot; min=&quot;0&quot; type=&quot;number&quot; value=&quot;0&quot; /&gt;
+    &lt;input class=&quot;quantum_input&quot; id=&quot;bet5&quot; max=&quot;9&quot; min=&quot;0&quot; type=&quot;number&quot; value=&quot;0&quot; /&gt;
+    &lt;input class=&quot;quantum_input&quot; id=&quot;bet6&quot; max=&quot;9&quot; min=&quot;0&quot; type=&quot;number&quot; value=&quot;0&quot; /&gt;
+    &lt;input class=&quot;quantum_input&quot; id=&quot;bet7&quot; max=&quot;9&quot; min=&quot;0&quot; type=&quot;number&quot; value=&quot;0&quot; /&gt;
+    &lt;input class=&quot;quantum_input&quot; id=&quot;bet8&quot; max=&quot;9&quot; min=&quot;0&quot; type=&quot;number&quot; value=&quot;0&quot; /&gt;
+    &lt;div id=&quot;results&quot; style=&quot;display:none&quot;&gt;
+  
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;button id=&quot;paybut&quot; onclick=&quot;payup()&quot; style=&quot;display:none;font-size:1.2em;border-radius:5px&quot; type=&quot;button&quot;&gt;Trade Bets&lt;/button&gt; 
+        &lt;button id=&quot;rebut&quot; onclick=&quot;regame()&quot; style=&quot;display:none;font-size:1.2em;border-radius:5px&quot; type=&quot;button&quot;&gt;Restart&lt;/button&gt; 
+        &lt;button id=&quot;startbut&quot; onclick=&quot;startgame()&quot; style=&quot;font-size:1.2em;border-radius:5px&quot; type=&quot;button&quot;&gt;Place Bets&lt;/button&gt;
+        &lt;button id=&quot;swapbut&quot; onclick=&quot;swap()&quot; style=&quot;display:none;font-size:1.2em;border-radius:5px&quot; type=&quot;button&quot;&gt;Redistribute&lt;/button&gt;
+        &lt;button id=&quot;endbut&quot; onclick=&quot;endgame()&quot; style=&quot;display:none;font-size:1.2em;border-radius:5px&quot; type=&quot;button&quot;&gt;End Game&lt;/button&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
-&lt;br/&gt;&lt;br/&gt;
+&lt;br /&gt;&lt;br /&gt;
 &lt;h4&gt;Instructions&lt;/h4&gt;
 &lt;p&gt;
-        The goal is to get the biggest bet you can onto the Ace of Spades, and to keep your bet off of the decoy cards. But the trick is that during the game none of the cards are ever revealed to you.
-    &lt;/p&gt;
+    The goal is to get the biggest bet you can onto the Ace of Spades, and to keep your bet off of the decoy cards. But the trick is that during the game none of the cards are ever revealed to you.
+&lt;/p&gt;
 &lt;p&gt;
-        You start the game by placing your initial bets on whatever cards you want.
-    &lt;/p&gt;
+    You start the game by placing your initial bets on whatever cards you want.
+&lt;/p&gt;
 &lt;p&gt;
-        After that, you have your choice of two moves, which you get to repeat until you decide you're done.
-    &lt;/p&gt;
+    After that, you have your choice of two moves, which you get to repeat until you decide you're done.
+&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;b&gt;Trade Bets&lt;/b&gt;, meaning any money on the losing cards goes to the dealer, while the money on the winning card stays the same. &lt;/li&gt;
-&lt;li&gt;&lt;b&gt;Redistribute&lt;/b&gt;, meaning you reverse all the bets around the average bet value. So the dealer's money comes back to your side of the average, and vice versa. &lt;/li&gt;
+    &lt;li&gt;&lt;b&gt;Trade Bets&lt;/b&gt;, meaning any money on the losing cards goes to the dealer, while the money on the winning card stays the same. &lt;/li&gt;
+    &lt;li&gt;&lt;b&gt;Redistribute&lt;/b&gt;, meaning you reverse all the bets around the average bet value. So the dealer's money comes back to your side of the average, and vice versa. &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;
-        The redistribute move might seem confusing, so here's what it does graphically.
-    &lt;/p&gt;
+    The redistribute move might seem confusing, so here's what it does graphically.
+&lt;/p&gt;
 &lt;img border=&quot;0&quot; src=&quot;http://3.bp.blogspot.com/-QihHMwqvsF8/VKLpaC0D5uI/AAAAAAAABL4/dbQ1ZZBLngk/s1600/mean_invert_grover.gif&quot; title=&quot;
 How the Redistribute Move Works
 
- &quot;/&gt;
+ &quot; /&gt;
 &lt;p&gt;
-        During the redistribution, the dealer basically just moves the money around so that places where the money is on the dealer's side shift back to places where you still have money. The math can get really complicated based on how many different bets there are going, but it boils down to just flipping the bets like in the graphic.
-    &lt;/p&gt;
+    During the redistribution, the dealer basically just moves the money around so that places where the money is on the dealer's side shift back to places where you still have money. The math can get really complicated based on how many different bets there are going, but it boils down to just flipping the bets like in the graphic.
+&lt;/p&gt;
 &lt;p&gt;
-        Throughout the game, all the money stays on the table. But unfortunately for you, even though the money is changing hands, the dealer never tells you whether a given bet is yours or his on the table.
-    &lt;/p&gt;
+    Throughout the game, all the money stays on the table. But unfortunately for you, even though the money is changing hands, the dealer never tells you whether a given bet is yours or his on the table.
+&lt;/p&gt;
 &lt;p&gt;
-        Whenever you want, you can end the game. At that point, the dealer checks how much money there is on the winning card and gives you back two times that amount. He takes everything else.
-    &lt;/p&gt;
+    Whenever you want, you can end the game. At that point, the dealer checks how much money there is on the winning card and gives you back two times that amount. He takes everything else.
+&lt;/p&gt;
 &lt;h5 style=&quot;text-align:center;font-size:1.5em&quot;&gt;So can you play?&lt;/h5&gt;
 &lt;h5 style=&quot;text-align:center;font-size:1.2em&quot;&gt;And can you figure out how to win... every time?&lt;/h5&gt;
-&lt;br/&gt; &lt;br/&gt;&lt;br/&gt;
+&lt;br /&gt; &lt;br /&gt;&lt;br /&gt;
 &lt;h4&gt;Some Quantum Hints&lt;/h4&gt;
 &lt;p&gt;
-        OK, so you're stumped. Here are some hints.
-    &lt;/p&gt;
+    OK, so you're stumped. Here are some hints.
+&lt;/p&gt;
 &lt;p&gt;
-        I mentioned that it's possible to win &lt;i&gt;every&lt;/i&gt; time—not just &lt;i&gt;most&lt;/i&gt; of the time. That should be a clue that the game doesn't rely on guessing.
-    &lt;/p&gt;
+    I mentioned that it's possible to win &lt;i&gt;every&lt;/i&gt; time—not just &lt;i&gt;most&lt;/i&gt; of the time. That should be a clue that the game doesn't rely on guessing.
+&lt;/p&gt;
 &lt;p&gt;
-        A second clue to point out is that the Trade Bets operation &quot;undoes itself.&quot; That means that if you Trade Bets twice in a row, that's the same thing as not trading bets at all. Take a minute to understand why that's true.
-    &lt;/p&gt;
+    A second clue to point out is that the Trade Bets operation &quot;undoes itself.&quot; That means that if you Trade Bets twice in a row, that's the same thing as not trading bets at all. Take a minute to understand why that's true.
+&lt;/p&gt;
 &lt;p&gt;
-        Finally, I'll just tell you that repeating the Redistribute operation twice in a row isn't necessary to solve the problem.
-    &lt;/p&gt;
+    Finally, I'll just tell you that repeating the Redistribute operation twice in a row isn't necessary to solve the problem.
+&lt;/p&gt;
 &lt;p&gt;
-        If you really don't have any idea what I'm talking about, check out &lt;a href=&quot;#expa&quot; onclick=&quot;expa()&quot;&gt;this appendix&lt;/a&gt; at the bottom of the page for more info.
-    &lt;/p&gt;
+    If you really don't have any idea what I'm talking about, check out &lt;a href=&quot;#expa&quot; onclick=&quot;expa()&quot;&gt;this appendix&lt;/a&gt; at the bottom of the page for more info.
+&lt;/p&gt;
 &lt;p style=&quot;text-align:center&quot;&gt;Now give it another try.
-    &lt;/p&gt;
+&lt;/p&gt;
 &lt;h4&gt;Time out: how is quantum computing supposed to help me? &lt;/h4&gt;
 &lt;p&gt;
-        For quantum computing, it's all about using fewer iterations to get the same job done. A quantum algorithm aims to take a problem that would take billions of calculations on a classical computer and turn it into just hundreds of quantum calculations.
-    &lt;/p&gt;
+    For quantum computing, it's all about using fewer iterations to get the same job done. A quantum algorithm aims to take a problem that would take billions of calculations on a classical computer and turn it into just hundreds of quantum calculations.
+&lt;/p&gt;
 &lt;p&gt;
-        For example, how long could it take you to find the card by guessing in the classical world? If there are 8 cards you could have to guess 8 times. But for the quantum algorithm on which this game is based, you would be guaranteed to find the card with just 2 guesses. How does it do that? Well, you'll have to read on to find out.
-    &lt;/p&gt;
+    For example, how long could it take you to find the card by guessing in the classical world? If there are 8 cards you could have to guess 8 times. But for the quantum algorithm on which this game is based, you would be guaranteed to find the card with just 2 guesses. How does it do that? Well, you'll have to read on to find out.
+&lt;/p&gt;
 &lt;p&gt;
-        But with the 2 repetitions in mind, try the game out again.
-    &lt;/p&gt;
+    But with the 2 repetitions in mind, try the game out again.
+&lt;/p&gt;
 &lt;h4 id=&quot;howtowin&quot;&gt;How to win the Game&lt;/h4&gt;
 &lt;p&gt;
-        The way to win every time starts with eliminating all guessing. What I mean by &quot;no guessing&quot; is that the initial configuration of bets must be the same for every card. For example, you can just bet 1 on each card.
-    &lt;/p&gt;
-&lt;img border=&quot;0&quot; src=&quot;http://3.bp.blogspot.com/-00cL8az7VaQ/VKMHxaKokFI/AAAAAAAABMI/VZN_gyUSRps/s1600/Screen%2BShot%2B2014-12-30%2Bat%2B2.13.20%2BPM.png&quot; title=&quot; &quot;/&gt;
+    The way to win every time starts with eliminating all guessing. What I mean by &quot;no guessing&quot; is that the initial configuration of bets must be the same for every card. For example, you can just bet 1 on each card.
+&lt;/p&gt;
+&lt;img border=&quot;0&quot; src=&quot;http://3.bp.blogspot.com/-00cL8az7VaQ/VKMHxaKokFI/AAAAAAAABMI/VZN_gyUSRps/s1600/Screen%2BShot%2B2014-12-30%2Bat%2B2.13.20%2BPM.png&quot; title=&quot; &quot; /&gt;
 &lt;p&gt;
-        After this we just start trying operations. Because Redistributing on all 1s doesn't change the bet values, we know that we start by Trading Bets with the dealer and then we Redistribute. We could redistribute over and over, but it turns out that won't help (although I don't know why. If you know, put it in the comments). At this point, we just have to toggle back and forth between Trading and Redistributing operations.
-    &lt;/p&gt;
-&lt;img border=&quot;0&quot; src=&quot;http://2.bp.blogspot.com/-pMJqB4nRif8/VKMHxSB8B6I/AAAAAAAABMM/e8VE4AhdiYs/s1600/Screen%2BShot%2B2014-12-30%2Bat%2B2.13.53%2BPM.png&quot; title=&quot; &quot;/&gt;
+    After this we just start trying operations. Because Redistributing on all 1s doesn't change the bet values, we know that we start by Trading Bets with the dealer and then we Redistribute. We could redistribute over and over, but it turns out that won't help (although I don't know why. If you know, put it in the comments). At this point, we just have to toggle back and forth between Trading and Redistributing operations.
+&lt;/p&gt;
+&lt;img border=&quot;0&quot; src=&quot;http://2.bp.blogspot.com/-pMJqB4nRif8/VKMHxSB8B6I/AAAAAAAABMM/e8VE4AhdiYs/s1600/Screen%2BShot%2B2014-12-30%2Bat%2B2.13.53%2BPM.png&quot; title=&quot; &quot; /&gt;
 &lt;p&gt;
-        If we repeat those operations just the right number of times, our initial bets will work their way onto the winning card. Now we just need to figure out how many times to repeat those moves.
-    &lt;/p&gt;
-&lt;img border=&quot;0&quot; src=&quot;http://3.bp.blogspot.com/-WvR0IUoXD1Y/VKMHxZ7UxbI/AAAAAAAABMQ/_kAvN5N_chs/s1600/Screen%2BShot%2B2014-12-30%2Bat%2B2.14.01%2BPM.png&quot; title=&quot; &quot;/&gt;
+    If we repeat those operations just the right number of times, our initial bets will work their way onto the winning card. Now we just need to figure out how many times to repeat those moves.
+&lt;/p&gt;
+&lt;img border=&quot;0&quot; src=&quot;http://3.bp.blogspot.com/-WvR0IUoXD1Y/VKMHxZ7UxbI/AAAAAAAABMQ/_kAvN5N_chs/s1600/Screen%2BShot%2B2014-12-30%2Bat%2B2.14.01%2BPM.png&quot; title=&quot; &quot; /&gt;
 &lt;p&gt;
-        It turns out that the right number of repetitions is two. There's a reason that you have to repeat the pair of operations exactly twice, but I have to wait until after I explain the quantum mechanics to get to that. For now, just try playing it again and show yourself that it actually does work.
-    &lt;/p&gt;
-&lt;br/&gt;
+    It turns out that the right number of repetitions is two. There's a reason that you have to repeat the pair of operations exactly twice, but I have to wait until after I explain the quantum mechanics to get to that. For now, just try playing it again and show yourself that it actually does work.
+&lt;/p&gt;
+&lt;br /&gt;
 &lt;h4&gt;Quantum Information and Grover's Algorithm&lt;/h4&gt;
 &lt;p&gt;
-        The two moves in the game are really just classical ways to describe more &lt;a href=&quot;http://www.technologyreview.com/view/427174/einsteins-spooky-action-at-a-distance-paradox-older-than-thought/&quot;&gt;&quot;spooky&quot;&lt;/a&gt; operators from quantum computing. And the money gained at the end of the game is analogous to your probability of finding a solution to the problem using a &lt;a href=&quot;http://en.wikipedia.org/wiki/Brute-force_search&quot;&gt;search algorithm&lt;/a&gt;.
-    &lt;/p&gt;
+    The two moves in the game are really just classical ways to describe more &lt;a href=&quot;http://www.technologyreview.com/view/427174/einsteins-spooky-action-at-a-distance-paradox-older-than-thought/&quot;&gt;&quot;spooky&quot;&lt;/a&gt; operators from quantum computing. And the money gained at the end of the game is analogous to your probability of finding a solution to the problem using a &lt;a href=&quot;http://en.wikipedia.org/wiki/Brute-force_search&quot;&gt;search algorithm&lt;/a&gt;.
+&lt;/p&gt;
 &lt;p&gt;
-        The Trading Bets operation would be called a Quantum Oracle, which by itself doesn't tell you which solution is right, but will confirm if you have the right answer at the end (by giving you money or taking it). And the Redistribute move is a Grover Diffusion Operator, which essentially lets information about the correct answer &quot;diffuse&quot; from wrong answers. (Note that this is way more complicated than I can explain, and to understand it for real you might need to do &lt;a href=&quot;http://en.wikipedia.org/wiki/Quantum_computing&quot;&gt;more reading&lt;/a&gt; (or even &lt;a href=&quot;https://www.edx.org/course/quantum-mechanics-quantum-computation-uc-berkeleyx-cs-191x#.VKL7kAJBvQ&quot;&gt;take a class&lt;/a&gt;) on the subject.)
-    &lt;/p&gt;
-&lt;img border=&quot;0&quot; src=&quot;http://upload.wikimedia.org/wikipedia/commons/a/ae/Grovers_algorithm.svg&quot; title=&quot; &quot;/&gt;
+    The Trading Bets operation would be called a Quantum Oracle, which by itself doesn't tell you which solution is right, but will confirm if you have the right answer at the end (by giving you money or taking it). And the Redistribute move is a Grover Diffusion Operator, which essentially lets information about the correct answer &quot;diffuse&quot; from wrong answers. (Note that this is way more complicated than I can explain, and to understand it for real you might need to do &lt;a href=&quot;http://en.wikipedia.org/wiki/Quantum_computing&quot;&gt;more reading&lt;/a&gt; (or even &lt;a href=&quot;https://www.edx.org/course/quantum-mechanics-quantum-computation-uc-berkeleyx-cs-191x#.VKL7kAJBvQ&quot;&gt;take a class&lt;/a&gt;) on the subject.)
+&lt;/p&gt;
+&lt;img border=&quot;0&quot; src=&quot;http://upload.wikimedia.org/wikipedia/commons/a/ae/Grovers_algorithm.svg&quot; title=&quot; &quot; /&gt;
 &lt;p&gt;
-        When you repeat these two operations back to back, you end up performing &lt;a href=&quot;http://en.wikipedia.org/wiki/Grover%27s_algorithm&quot;&gt;Grover's Algorithm&lt;/a&gt;, a technique proven to find the right information in a database (i.e. the cards). Lov Grover (not &lt;a href=&quot;http://muppet.wikia.com/wiki/Grover,_Messenger_of_Love&quot;&gt;Love, Grover&lt;/a&gt;) discovered this way of finding information back in the 90s. He was working on a method to compute inverses by letting a quantum function (i.e. the dealer) perform operations (i.e. Trading Bets) that we couldn't see in the classical world (i.e. on our side of the betting table). What was amazing about it was that it allowed you to perform the calculation many fewer times than you would using a classical (asking &quot;Hey, is it that card?&quot;) approach.
-    &lt;/p&gt;
+    When you repeat these two operations back to back, you end up performing &lt;a href=&quot;http://en.wikipedia.org/wiki/Grover%27s_algorithm&quot;&gt;Grover's Algorithm&lt;/a&gt;, a technique proven to find the right information in a database (i.e. the cards). Lov Grover (not &lt;a href=&quot;http://muppet.wikia.com/wiki/Grover,_Messenger_of_Love&quot;&gt;Love, Grover&lt;/a&gt;) discovered this way of finding information back in the 90s. He was working on a method to compute inverses by letting a quantum function (i.e. the dealer) perform operations (i.e. Trading Bets) that we couldn't see in the classical world (i.e. on our side of the betting table). What was amazing about it was that it allowed you to perform the calculation many fewer times than you would using a classical (asking &quot;Hey, is it that card?&quot;) approach.
+&lt;/p&gt;
 &lt;p&gt;
-        In the above game, you only need to repeat the procedure 2 times. Whereas to find the card by guessing, you might have to try 8 times. If you want to learn more about why it's exactly 2, I recommend &lt;a href=&quot;http://arxiv.org/pdf/quant-ph/0504012.pdf&quot;&gt;this in depth article&lt;/a&gt; on the subject.
-    &lt;/p&gt;
+    In the above game, you only need to repeat the procedure 2 times. Whereas to find the card by guessing, you might have to try 8 times. If you want to learn more about why it's exactly 2, I recommend &lt;a href=&quot;http://arxiv.org/pdf/quant-ph/0504012.pdf&quot;&gt;this in depth article&lt;/a&gt; on the subject.
+&lt;/p&gt;
 &lt;p&gt;
-        (And to learn more about Grover's algorithm with cool visualizations, check out &lt;a href=&quot;http://twistedoakstudios.com/blog/Post2644_grovers-quantum-search-algorithm&quot;&gt;this tutorial&lt;/a&gt; from &lt;a href=&quot;http://twistedoakstudios.com/index.php&quot;&gt;Twisted Oak Studios&lt;/a&gt;.
-    &lt;/p&gt;
-&lt;br/&gt;
+    (And to learn more about Grover's algorithm with cool visualizations, check out &lt;a href=&quot;http://twistedoakstudios.com/blog/Post2644_grovers-quantum-search-algorithm&quot;&gt;this tutorial&lt;/a&gt; from &lt;a href=&quot;http://twistedoakstudios.com/index.php&quot;&gt;Twisted Oak Studios&lt;/a&gt;.
+&lt;/p&gt;
+&lt;br /&gt;
 &lt;h4&gt;So what's the big deal?&lt;/h4&gt;
 &lt;p&gt;
-        In the end, what's really important about Grover's algorithm is that this isn't just a mathematical artifact. The crazy laws of quantum mechanics somehow make it possible to perform these operation on real materials. This means that it can be used to find real answers to questions that we can't solve fast enough with current computers.
+    In the end, what's really important about Grover's algorithm is that this isn't just a mathematical artifact. The crazy laws of quantum mechanics somehow make it possible to perform these operation on real materials. This means that it can be used to find real answers to questions that we can't solve fast enough with current computers.
+&lt;/p&gt;
+&lt;p&gt;
+    Unfortunately, building quantum computers is turning out to be &lt;a href=&quot;http://gizmodo.com/why-programming-a-quantum-computer-is-so-damn-hard-1188316086&quot;&gt;insanely hard&lt;/a&gt; so currently we can still do better with classical computers. But hopefully &lt;a href=&quot;http://www.wired.com/2014/10/quantum-computing-close/&quot;&gt;someday soon&lt;/a&gt;, a big breakthrough will make this technology possible. &lt;p&gt;
+        I hope this whetted your appetite to learn more about quantum computing. Or at the least, it's a fun little puzzle to show your friends.
     &lt;/p&gt;
-&lt;p&gt;
-        Unfortunately, building quantum computers is turning out to be &lt;a href=&quot;http://gizmodo.com/why-programming-a-quantum-computer-is-so-damn-hard-1188316086&quot;&gt;insanely hard&lt;/a&gt; so currently we can still do better with classical computers. But hopefully &lt;a href=&quot;http://www.wired.com/2014/10/quantum-computing-close/&quot;&gt;someday soon&lt;/a&gt;, a big breakthrough will make this technology possible. &lt;p&gt;
-            I hope this whetted your appetite to learn more about quantum computing. Or at the least, it's a fun little puzzle to show your friends.
+    &lt;br /&gt;
+    &lt;h4&gt;Playing more with quantum computers&lt;/h4&gt;
+    &lt;p&gt;
+        If you want to work more on this, feel free to check out my code. For starters, you can find the javascript for the game on CodePen &lt;a href=&quot;http://codepen.io/wmcfadd2/details/YPpqBr/&quot;&gt;here&lt;/a&gt;. If you're more interested about the quantum details, you can also check out &lt;a href=&quot;https://github.com/lots-of-things/quantum-comp&quot;&gt;this project&lt;/a&gt; on Github that implements quantum computing gates as MATLAB matrix operations.
+    &lt;/p&gt;
+    .&lt;br /&gt;.&lt;br /&gt;.&lt;br /&gt;
+    &lt;div id=&quot;expa&quot; onclick=&quot;expa()&quot; style=&quot;cursor:pointer&quot;&gt;
+        &lt;h4&gt;Appendix: Basic Primer on the Quantum Betting Game&lt;/h4&gt;
+        &lt;p&gt;
+            In case you need a little background about betting and guessing games, &lt;a href=&quot;#expa&quot;&gt;here's&lt;/a&gt; a little Appendix that will help fill you in.
         &lt;/p&gt;
-&lt;br/&gt;
-&lt;h4&gt;Playing more with quantum computers&lt;/h4&gt;
-&lt;p&gt;
-            If you want to work more on this, feel free to check out my code. For starters, you can find the javascript for the game on CodePen &lt;a href=&quot;http://codepen.io/wmcfadd2/details/YPpqBr/&quot;&gt;here&lt;/a&gt;. If you're more interested about the quantum details, you can also check out &lt;a href=&quot;https://github.com/lots-of-things/quantum-comp&quot;&gt;this project&lt;/a&gt; on Github that implements quantum computing gates as MATLAB matrix operations.
-        &lt;/p&gt;
-        .&lt;br/&gt;.&lt;br/&gt;.&lt;br/&gt;
-&lt;div id=&quot;expa&quot; onclick=&quot;expa()&quot; style=&quot;cursor:pointer&quot;&gt;
-&lt;h4&gt;Appendix: Basic Primer on the Quantum Betting Game&lt;/h4&gt;
-&lt;p&gt;
-                In case you need a little background about betting and guessing games, &lt;a href=&quot;#expa&quot;&gt;here's&lt;/a&gt; a little Appendix that will help fill you in.
-            &lt;/p&gt;
-&lt;/div&gt;
-
-&lt;br/&gt;
+    &lt;/div&gt;
+    &lt;br /&gt;
 &lt;/p&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
 function expa() { if (document.getElementById(&quot;appendix&quot;).style.display == &quot;inline&quot;) { document.getElementById(&quot;appendix&quot;).style.display = &quot;none&quot; } else { document.getElementById(&quot;appendix&quot;).style.display = &quot;inline&quot;; } }
@@ -5789,7 +5825,8 @@ var index;
 var nrm;
 var tog;
 
-function startgame() { document.getElementById(&quot;startbut&quot;).style.display = &quot;none&quot;;
+function startgame() {
+    document.getElementById(&quot;startbut&quot;).style.display = &quot;none&quot;;
     document.getElementById(&quot;paybut&quot;).style.display = &quot;inline&quot;;
     document.getElementById(&quot;swapbut&quot;).style.display = &quot;inline&quot;;
     document.getElementById(&quot;endbut&quot;).style.display = &quot;inline&quot;;
@@ -5809,34 +5846,75 @@ function startgame() { document.getElementById(&quot;startbut&quot;).style.displ
     bets[5] = document.getElementById(&quot;bet6&quot;).value;
     bets[6] = document.getElementById(&quot;bet7&quot;).value;
     bets[7] = document.getElementById(&quot;bet8&quot;).value;
-    index = Math.floor((Math.random() * 8)) nrm = 0;
-    tog = 0; for (i = 0; i &lt; bets.length; i++) { nrm = nrm + Math.pow(bets[i], 2);
-        tog = tog + Math.abs(bets[i]); } nrm = Math.sqrt(nrm) for (i = 0; i &lt; bets.length; i++) { bets[i] = bets[i] / nrm; } }
+    index = Math.floor((Math.random() * 8));
+    nrm = 0;
+    tog = 0;
+    for (i = 0; i &lt; bets.length; i++) {
+        nrm = nrm + Math.pow(bets[i], 2);
+        tog = tog + Math.abs(bets[i]);
+    }
+    nrm = Math.sqrt(nrm);
+    for (i = 0; i &lt; bets.length; i++) { bets[i] = bets[i] / nrm; }
+}
 
-function payup() { for (i = 0; i &lt; bets.length; i++) { if (i != index) bets[i] = -bets[i]; } refresh(); }
+function payup() { 
+    for (i = 0; i &lt; bets.length; i++) 
+        { 
+            if (i != index) bets[i] = -bets[i]; }
+            refresh();
+        }
 
 function swap() { avg = 0; for (i = 0; i &lt; bets.length; i++) { avg = avg + 1 * bets[i]; } avg = avg / 8; for (i = 0; i &lt; bets.length; i++) { bets[i] = 2 * avg - bets[i]; } refresh(); }
 
-function refresh() { sm = 0; for (i = 0; i &lt; bets.length; i++) { sm = sm + Math.abs(bets[i]); } if (sm &gt; 0) { scl = tog / sm; } else { scl = 1; } document.getElementById(&quot;bet1&quot;).value = Math.abs(scl * bets[0]);
+function refresh() {
+    sm = 0;
+    for (i = 0; i &lt; bets.length; i++) { 
+        sm = sm + Math.abs(bets[i]); 
+    }
+    if (sm &gt; 0) { 
+        scl = tog / sm; 
+    } else { 
+        scl = 1; 
+    } 
+    document.getElementById(&quot;bet1&quot;).value = Math.abs(scl * bets[0]);
     document.getElementById(&quot;bet2&quot;).value = Math.abs(scl * bets[1]);
     document.getElementById(&quot;bet3&quot;).value = Math.abs(scl * bets[2]);
     document.getElementById(&quot;bet4&quot;).value = Math.abs(scl * bets[3]);
     document.getElementById(&quot;bet5&quot;).value = Math.abs(scl * bets[4]);
     document.getElementById(&quot;bet6&quot;).value = Math.abs(scl * bets[5]);
     document.getElementById(&quot;bet7&quot;).value = Math.abs(scl * bets[6]);
-    document.getElementById(&quot;bet8&quot;).value = Math.abs(scl * bets[7]); }
+    document.getElementById(&quot;bet8&quot;).value = Math.abs(scl * bets[7]);
+}
 
-function endgame() { val = 0; for (i = 0; i &lt; bets.length; i++) { if (i != index) { val = val - Math.abs(bets[i]); } else { val = val + 2 * Math.abs(bets[i]); } } sm = 0; for (i = 0; i &lt; bets.length; i++) { sm = sm + Math.abs(bets[i]); } scl = tog / sm;
+function endgame() {
+    val = 0;
+    for (i = 0; i &lt; bets.length; i++) { if (i != index) { val = val - Math.abs(bets[i]); } else { val = val + 2 * Math.abs(bets[i]); } } sm = 0;
+    for (i = 0; i &lt; bets.length; i++) { 
+        sm = sm + Math.abs(bets[i]); 
+    } 
+    scl = tog / sm;
     val = val * scl;
-    total = total + val
-    if (val &gt; 0) { document.getElementById(&quot;results&quot;).innerHTML = &quot;Game over.  You won $&quot; + val.toFixed(2); } else { document.getElementById(&quot;results&quot;).innerHTML = &quot;Game over.  You lost $&quot; + (-val).toFixed(2); } if (total &gt; 0) { document.getElementById(&quot;results&quot;).innerHTML = document.getElementById(&quot;results&quot;).innerHTML + &quot;. &lt;br /&gt; Total Winnings= $&quot; + total.toFixed(2); } else { document.getElementById(&quot;results&quot;).innerHTML = document.getElementById(&quot;results&quot;).innerHTML + &quot;. &lt;br /&gt; Total Winnings= -$&quot; + -total.toFixed(2); } document.getElementById(&quot;results&quot;).style.display = &quot;inline&quot;;
+    total = total + val;
+    if (val &gt; 0) { 
+        document.getElementById(&quot;results&quot;).innerHTML = &quot;Game over.  You won $&quot; + val.toFixed(2); 
+    } else { 
+        document.getElementById(&quot;results&quot;).innerHTML = &quot;Game over.  You lost $&quot; + (-val).toFixed(2); 
+    }
+    if (total &gt; 0) { 
+        document.getElementById(&quot;results&quot;).innerHTML = document.getElementById(&quot;results&quot;).innerHTML + &quot;. &lt;br /&gt; Total Winnings= $&quot; + total.toFixed(2); 
+    } else { 
+        document.getElementById(&quot;results&quot;).innerHTML = document.getElementById(&quot;results&quot;).innerHTML + &quot;. &lt;br /&gt; Total Winnings= -$&quot; + -total.toFixed(2); 
+    } 
+    document.getElementById(&quot;results&quot;).style.display = &quot;inline&quot;;
     document.getElementById(&quot;rebut&quot;).style.display = &quot;inline&quot;;
     document.getElementById(&quot;paybut&quot;).style.display = &quot;none&quot;;
     document.getElementById(&quot;swapbut&quot;).style.display = &quot;none&quot;;
     document.getElementById(&quot;endbut&quot;).style.display = &quot;none&quot;;
-    document.getElementById(&quot;card&quot; + (index + 1)).src = &quot;http://upload.wikimedia.org/wikipedia/commons/e/e2/Aceofspades.png&quot;; }
+    document.getElementById(&quot;card&quot; + (index + 1)).src = &quot;http://upload.wikimedia.org/wikipedia/commons/e/e2/Aceofspades.png&quot;;
+}
 
-function regame() { document.getElementById(&quot;card&quot; + (index + 1)).src = &quot;http://cdn.shopify.com/s/files/1/0200/7616/products/aladdin-back-blue_large.png&quot;;
+function regame() {
+    document.getElementById(&quot;card&quot; + (index + 1)).src = &quot;https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Bicyclebackside.jpg/153px-Bicyclebackside.jpg&quot;;
     document.getElementById(&quot;rebut&quot;).style.display = &quot;none&quot;;
     document.getElementById(&quot;results&quot;).style.display = &quot;none&quot;;
     document.getElementById(&quot;startbut&quot;).style.display = &quot;inline&quot;;
@@ -5849,7 +5927,8 @@ function regame() { document.getElementById(&quot;card&quot; + (index + 1)).src 
     document.getElementById(&quot;bet5&quot;).readOnly = &quot;&quot;;
     document.getElementById(&quot;bet6&quot;).readOnly = &quot;&quot;;
     document.getElementById(&quot;bet7&quot;).readOnly = &quot;&quot;;
-    document.getElementById(&quot;bet8&quot;).readOnly = &quot;&quot;; }
+    document.getElementById(&quot;bet8&quot;).readOnly = &quot;&quot;;
+}
 &lt;/script&gt;</description>
         <pubDate>Mon, 29 Dec 2014 00:00:00 -0800</pubDate>
         <link>https://bonkerfield.org/2014/12/29/quantum-gambling-game/</link>
