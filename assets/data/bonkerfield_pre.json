@@ -1,0 +1,13 @@
+[
+{"name":"paragraph.gap.visit.mom","time":120,"size":20,"weight":0.1,"imports":["paragraph"]},
+{"name":"paragraph.gap.visit.memory","time":130,"size":10,"weight":0.01,"imports":["paragraph"]},
+{"name":"paragraph.gap.blog.quotes","time":100,"size":10,"weight":0.05,"imports":["paragraph"]},
+{"name":"paragraph.gap.blog.mobydick.bible","time":50,"size":10,"weight":0.01,"imports":["paragraph"]},
+{"name":"paragraph.gap.blog.mobydick.melville","time":50,"size":10,"weight":0.1,"imports":["paragraph"]},
+{"name":"paragraph.gap.blog.mobydick","time":90,"size":10,"weight":0.05,"imports":[]},
+{"name":"paragraph.gap.visit","time":200,"size":10,"weight":0.05,"imports":[]},
+{"name":"paragraph.gap.blog","time":200,"size":10,"weight":0.05,"imports":[]},
+{"name":"paragraph.gap","time":300,"size":10,"weight":0.05,"imports":[]},
+{"name":"paragraph","time":350,"size":10,"weight":0.05,"imports":[]},
+{"name":"","time":350,"size":10,"weight":0.05,"imports":[]}
+]

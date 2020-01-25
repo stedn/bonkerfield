@@ -1,0 +1,15 @@
+[
+{"name":"paragraph.gap.webmeme.parody.i_ishmael","time":40,"size":30,"weight":0.1,"imports":["paragraph"]},
+{"name":"paragraph.gap.webmeme.parody.who_ishmael.too","time":10,"size":10,"weight":0.1,"imports":["paragraph"]},
+{"name":"paragraph.gap.webmeme.parody.who_ishmael","time":20,"size":10,"weight":0.1,"imports":["paragraph"]},
+{"name":"paragraph.gap.webmeme","time":130,"size":70,"weight":0.1,"imports":["paragraph"]},
+{"name":"paragraph.gap.scholars.melville.zrminskofsky.protege","time":70,"size":10,"weight":0.1,"imports":["paragraph"]},
+{"name":"paragraph.gap.scholars.melville.liebenhelmwitz","time":70,"size":2,"weight":0.1,"imports":["paragraph"]},
+{"name":"paragraph.gap.scholars.melville.zrminskofsky","time":90,"size":10,"weight":0.1,"imports":[]},
+{"name":"paragraph.gap.webmeme.parody","time":60,"size":50,"weight":0.1,"imports":[]},
+{"name":"paragraph.gap.scholars.melville","time":80,"size":10,"weight":0.1,"imports":[]},
+{"name":"paragraph.gap.scholars","time":190,"size":10,"weight":0.1,"imports":[]},
+{"name":"paragraph.gap","time":200,"size":10,"weight":0.1,"imports":[]},
+{"name":"paragraph","time":250,"size":10,"weight":0.1,"imports":[]},
+{"name":"","time":250,"size":10,"weight":0.1,"imports":[]}
+]

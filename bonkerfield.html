@@ -1,0 +1,244 @@
+<style>
+body {
+  background-color:black;
+}
+
+svg {
+  display:inline;
+  position:fixed;
+}
+
+.node_pre {
+  font: 10px sans-serif;
+  fill: white;
+  fill-opacity: 0;
+  stroke: none;
+}
+
+.link_pre {
+  stroke: white;
+  stroke-width: 2px;
+  stroke-opacity: 0.02;
+  fill: none;
+}
+
+
+.node_post {
+  font: 10px sans-serif;
+  fill: white;
+  fill-opacity: 0;
+  stroke: none;
+}
+
+.link_post {
+  stroke: white;
+  stroke-width: 2px;
+  stroke-opacity: 0.07;
+  fill: none;
+}
+
+</style>
+<div id="wrapper">
+<div id="bonkerfield"></div>
+</div>
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script>
+
+function myrandom(){
+  /* approximate a normal distribution (sort of) */
+  /* using straight uniform makes everything look square */
+  var r = 0;
+  for(var i = 3; i > 0; i --){
+      r += Math.random();
+  }
+  return 1.25*(r/3 - 0.5)
+}
+
+var margin = {top: 100, right: 10, bottom: 10, left: 100},
+    width = 400,
+    height = 500;
+
+var cluster_pre = d3.layout.cluster()
+    .size([height, width])
+    .sort(function(a, b) { return d3.ascending(a.name, b.name); })
+    .value(function(d) { return d.size; });
+
+var bundle_pre = d3.layout.bundle();
+
+var line_pre = d3.svg.line()
+    .interpolate("bundle")
+    .tension(1)
+    .x(function(d) {return d.time+myrandom()*d.size;})
+    .y(function(d) {return d.x+myrandom()*d.size; });
+
+var svg_pre = d3.select("#bonkerfield").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+d3.json("/assets/data/bonkerfield_pre.json", function(error, classes) {
+  if (error) throw error;
+
+  var nodes = cluster_pre.nodes(packages.root(classes)),
+      links = packages.imports(nodes);
+
+  svg_pre.selectAll(".link_pre")
+      .data(bundle_pre(links))
+    .enter().append("path")
+      .attr("class", "link_pre")
+      .attr("d", line_pre)
+      .attr("stroke-opacity", function(d) {return d.weight;});
+
+  svg_pre.selectAll(".node_pre")
+      .data(nodes.filter(function(d) { return d.key!='gap'; }))
+    .enter().append("g")
+      .attr("class", "node_pre")
+      .attr("transform", function(d) {return "translate(" + d.time + "," + d.x + ")";})
+    .append("text")
+      .attr("dx", 8)
+      .attr("dy", ".31em")
+      .text(function(d) { return d.key; })
+      .on("mouseover", function(d){d3.select(this).attr("fill-opacity", 1);})
+      .on("mouseout", function(d){d3.select(this).attr("fill-opacity", 0);});
+});
+
+d3.select(self.frameElement).style("height", height + margin.top + margin.bottom + "px");
+
+
+/* BREAK */
+/* BREAK */
+/* BREAK */
+/* BREAK */
+/* BREAK */
+/* BREAK */
+
+
+
+var margin = {top: 140, right: 10, bottom: 10, left: 375},
+    width = 300,
+    height = 500;
+
+
+var cluster_post = d3.layout.cluster()
+    .size([height, width])
+    .sort(function(a, b) { return d3.ascending(a.name, b.name); })
+    .value(function(d) { return d.size; });
+
+var bundle_post = d3.layout.bundle();
+
+var line_post = d3.svg.line()
+    .interpolate("bundle")
+    .tension(1)
+    .x(function(d) {return width-d.time+myrandom()*d.size;})
+    .y(function(d) {return d.x+myrandom()*d.size; });
+
+var svg_post = d3.select("#bonkerfield").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+d3.json("/assets/data/bonkerfield_post.json", function(error, classes) {
+  if (error) throw error;
+
+  var nodes = cluster_post.nodes(packages.root(classes)),
+      links = packages.imports(nodes);
+
+  svg_post.selectAll(".link")
+      .data(bundle_post(links))
+    .enter().append("path")
+      .attr("class", "link_post")
+      .attr("d", line_post)
+      .attr("stroke-opacity", function(d) {return d.weight;});
+
+  svg_post.selectAll(".node")
+      .data(nodes.filter(function(d) { return d.key!='gap'; }))
+    .enter().append("g")
+      .attr("class", "node_post")
+      .attr("transform", function(d) {return "translate(" + (width-d.time) + "," + d.x + ")";})
+    .append("text")
+      .attr("dx", 8)
+      .attr("dy", ".31em")
+      .text(function(d) { return d.key; })
+      .on("mouseover", function(d){d3.select(this).attr("fill-opacity", 1);})
+      .on("mouseout", function(d){d3.select(this).attr("fill-opacity", 0);});
+});
+
+d3.select(self.frameElement).style("height", height + margin.top + margin.bottom + "px");
+
+
+</script>
+
+
+<script type="text/javascript">
+  var packages = {
+
+    /* Lazily construct the package hierarchy from class names. */
+    root: function(classes) {
+      var map = {};
+
+      function find(name, data) {
+        var node = map[name], i;
+        if (!node) {
+          node = map[name] = data || {name: name, children: []};
+          if (name.length) {
+            node.parent = find(name.substring(0, i = name.lastIndexOf(".")));
+            node.parent.children.push(node);
+            node.key = name.substring(i + 1);
+            if (data){
+              node.time = data.time;
+              node.weight = data.weight;
+              node.size = data.size;
+            }else{
+              node.time = null;
+              node.weight = null;
+              node.size = null;
+            }
+            
+          }
+        } else {
+          if(!node.time){
+            if (data){
+              node.time = data.time
+              node.weight = data.weight;
+              node.size = data.size;
+            }
+          }
+        }
+        return node;
+      }
+
+      classes.forEach(function(d) {
+        find(d.name, d);
+      });
+
+      return map[""];
+    },
+
+    /* Return a list of imports for the given array of nodes. */
+    imports: function(nodes) {
+      var map = {},
+          imports = [];
+
+      /* Compute a map from name to node. */
+      nodes.forEach(function(d) {
+        map[d.name] = d;
+      });
+
+      /* For each import, construct a link from the source to target node. */
+      nodes.forEach(function(d) {
+        if (d.imports) d.imports.forEach(function(i) {
+          
+          for (j = 0; j < d.size*d.size; j++) {
+            imports.push({source: map[d.name], target: map[i], time: d.time});
+            
+          }
+          
+        });
+      });
+
+      return imports;
+    }
+  };
+</script>
