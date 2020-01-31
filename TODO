@@ -1,13 +1,11 @@
 for v2
 - fix search to be more functional
 - dark mode with css https://css-tricks.com/dark-modes-with-css/
-- fix quantum gambling game post
 - have claire edit reasons
 - double check formatting across all posts
 
 
 posts
-- bonkerfield viz
 - gpt + bert reddit bot
 - attention
 - releasing immediacy alpha

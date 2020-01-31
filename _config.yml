@@ -1,7 +1,7 @@
 # Site/SEO settings
-email: okay@samesies.io
+email: will@bonkerfield.org
 baseurl: ""
-permalink: /:year/:month/:day/:title/
+permalink: /:year/:month/:title/
 google_analytics: 
 
 name: Will Stedden
