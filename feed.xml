@@ -5,8 +5,8 @@
     <description>personal information identity spacetime map</description>
     <link>https://bonkerfield.org</link>
     <atom:link href="https://bonkerfield.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 28 Jan 2020 22:42:25 -0800</pubDate>
-    <lastBuildDate>Tue, 28 Jan 2020 22:42:25 -0800</lastBuildDate>
+    <pubDate>Thu, 30 Jan 2020 16:19:06 -0800</pubDate>
+    <lastBuildDate>Thu, 30 Jan 2020 16:19:06 -0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -228,8 +228,8 @@ def add_node(node_list, parent_name, parent_time, parent_size, parent_weight):
 &lt;p&gt;There's still much more to do to make the bonkerfield concept clearer.  You can fork the code to render bonkerfields from either the &lt;a href=&quot;https://bl.ocks.org/stedn/5d187e873982e441e1f78d6d69af0030&quot;&gt;simple&lt;/a&gt; or the &lt;a href=&quot;https://bl.ocks.org/stedn/33fd840f81627ec0967448fbc832ed9f&quot;&gt;complex&lt;/a&gt; bl.ocks, and the code for generating the json objects is on &lt;a href=&quot;https://github.com/lots-of-things/random-bonkerfield-generator&quot;&gt;github&lt;/a&gt;. If someone out there likes this idea and would like to take it further, please feel free.  Let me know what you come up with. &lt;/p&gt;
 </description>
         <pubDate>Tue, 28 Jan 2020 00:00:00 -0800</pubDate>
-        <link>https://bonkerfield.org/2020/01/28/visualizing-the-bonkerfield/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2020/01/28/visualizing-the-bonkerfield/</guid>
+        <link>https://bonkerfield.org/2020/01/visualizing-the-bonkerfield/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2020/01/visualizing-the-bonkerfield/</guid>
         
         <category>philosophy</category>
         
@@ -267,8 +267,8 @@ def add_node(node_list, parent_name, parent_time, parent_size, parent_weight):
 
 </description>
         <pubDate>Mon, 20 Jan 2020 00:00:00 -0800</pubDate>
-        <link>https://bonkerfield.org/2020/01/20/qmb-prototype-demo/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2020/01/20/qmb-prototype-demo/</guid>
+        <link>https://bonkerfield.org/2020/01/qmb-prototype-demo/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2020/01/qmb-prototype-demo/</guid>
         
         <category>physics</category>
         
@@ -311,8 +311,8 @@ def add_node(node_list, parent_name, parent_time, parent_size, parent_weight):
 	&lt;em&gt;Update: I forgot that part of the reason for showering was to actually get clean.  As it turns out, after a month of showering for 2 minutes I started to get a little gross.  So I'm moderating my usage, but no longer limiting to 2 minutes.  Oh well, worth it while it lasted.&lt;/em&gt; 
 &lt;/p&gt;</description>
         <pubDate>Sat, 07 Dec 2019 00:00:00 -0800</pubDate>
-        <link>https://bonkerfield.org/2019/12/07/short-post-on-short-showers/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2019/12/07/short-post-on-short-showers/</guid>
+        <link>https://bonkerfield.org/2019/12/short-post-on-short-showers/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2019/12/short-post-on-short-showers/</guid>
         
         <category>energy</category>
         
@@ -417,8 +417,8 @@ def add_node(node_list, parent_name, parent_time, parent_size, parent_weight):
         To take this to the Playa will end up being a pretty major investment so I'm also writing a letter of intent for a Burning Man grant. To make things interesting, I think I'll use the QMB to decide whether I should submit it.
     &lt;/p&gt;&lt;/p&gt;</description>
         <pubDate>Wed, 23 Oct 2019 00:00:00 -0700</pubDate>
-        <link>https://bonkerfield.org/2019/10/23/qmb-installation/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2019/10/23/qmb-installation/</guid>
+        <link>https://bonkerfield.org/2019/10/qmb-installation/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2019/10/qmb-installation/</guid>
         
         <category>art</category>
         
@@ -491,8 +491,8 @@ top (bone dry)
     I'll update here when I can get a photo of how the plants look after a few months of automate irrigation. My friend has been out of town for multiple weeks already so this will be a good test.
 &lt;/p&gt;</description>
         <pubDate>Sun, 20 Oct 2019 00:00:00 -0700</pubDate>
-        <link>https://bonkerfield.org/2019/10/20/green-wall-irrigation/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2019/10/20/green-wall-irrigation/</guid>
+        <link>https://bonkerfield.org/2019/10/green-wall-irrigation/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2019/10/green-wall-irrigation/</guid>
         
         <category>misc</category>
         
@@ -613,8 +613,8 @@ top (bone dry)
     I am looking to build a couple more iterations that are a little cleaner. When I've built them, I will update here with details of the operation, and how to calibrate them.
 &lt;/p&gt;</description>
         <pubDate>Fri, 18 Oct 2019 00:00:00 -0700</pubDate>
-        <link>https://bonkerfield.org/2019/10/18/quantum-coin-flip-device/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2019/10/18/quantum-coin-flip-device/</guid>
+        <link>https://bonkerfield.org/2019/10/quantum-coin-flip-device/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2019/10/quantum-coin-flip-device/</guid>
         
         <category>physics</category>
         
@@ -735,8 +735,8 @@ top (bone dry)
     That's about everything for the build. After I'd built a rough draft of the app, my partner and I actually asked to do a Burning Man Theme Camp using it. Somehow our application got accepted so, next week, we're going to run this for a bunch of burners. I'm looking forward to creating a whole fuck-ton of parallel realities where people do some crazy stuff. I'll write another post afterward with the details of the camp.
 &lt;/p&gt;</description>
         <pubDate>Thu, 17 Oct 2019 00:00:00 -0700</pubDate>
-        <link>https://bonkerfield.org/2019/10/17/quantum-multiverse-bifurcator/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2019/10/17/quantum-multiverse-bifurcator/</guid>
+        <link>https://bonkerfield.org/2019/10/quantum-multiverse-bifurcator/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2019/10/quantum-multiverse-bifurcator/</guid>
         
         <category>physics</category>
         
@@ -876,8 +876,8 @@ top (bone dry)
     For the final step, I wanted people to actually be able to use this thing. So I plan on spending the cash ($25! wtf) for a developer license, so I can upload my app onto the Google Play store. When I get that finished I'll update here a link and how to
 &lt;/p&gt;</description>
         <pubDate>Tue, 08 Oct 2019 00:00:00 -0700</pubDate>
-        <link>https://bonkerfield.org/2019/10/08/creating-immediacy/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2019/10/08/creating-immediacy/</guid>
+        <link>https://bonkerfield.org/2019/10/creating-immediacy/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2019/10/creating-immediacy/</guid>
         
         <category>design</category>
         
@@ -1017,8 +1017,8 @@ top (bone dry)
     Finally, when one of my friends heard my description of this procedure, she asked a particular intelligent question: &quot;Were there strong correlations between personality traits and sub-identities that terminated?&quot; In other words, after the procedure, did my personality have to change because certain traits were possessed only by the &quot;doubting&quot; identities? I don't know for certain unfortunately, but I do certainly feel like a different person now.
 &lt;/p&gt;</description>
         <pubDate>Sun, 06 Oct 2019 00:00:00 -0700</pubDate>
-        <link>https://bonkerfield.org/2019/10/06/sub-identity-suicide/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2019/10/06/sub-identity-suicide/</guid>
+        <link>https://bonkerfield.org/2019/10/sub-identity-suicide/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2019/10/sub-identity-suicide/</guid>
         
         <category>philosophy</category>
         
@@ -1133,8 +1133,8 @@ top (bone dry)
     Over time, I hope to perfect this game even further. If you are reading this in the SF Bay Area and would like to bring this game to your organization, please leave me a comment and I will get in touch to try to run it for you.
 &lt;/p&gt;</description>
         <pubDate>Sun, 08 Sep 2019 00:00:00 -0700</pubDate>
-        <link>https://bonkerfield.org/2019/09/08/gmail-auto-responder-for-ai-robot-party/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2019/09/08/gmail-auto-responder-for-ai-robot-party/</guid>
+        <link>https://bonkerfield.org/2019/09/gmail-auto-responder-for-ai-robot-party/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2019/09/gmail-auto-responder-for-ai-robot-party/</guid>
         
         <category>games</category>
         
@@ -1263,8 +1263,8 @@ top (bone dry)
     In a &lt;a href=&quot;/2019/04/visualizing-shared-budgets-and-dividing.html&quot;&gt;previous post&lt;/a&gt;, I described how much I like keeping track of my expenses, particularly for hobby projects like this. The overall cost of all this was around $250 for the toilet materials, and about $200 for the caulks, the oils, PPE and other miscellaneous tools. This seemed pretty great since a quote from a boatyard was for 3x that for each. Plus, I gotta admit, I feel closer to Ioni every time I work on her.
 &lt;/p&gt;</description>
         <pubDate>Sun, 01 Sep 2019 00:00:00 -0700</pubDate>
-        <link>https://bonkerfield.org/2019/09/01/woodworking-motor-work-and-head/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2019/09/01/woodworking-motor-work-and-head/</guid>
+        <link>https://bonkerfield.org/2019/09/woodworking-motor-work-and-head/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2019/09/woodworking-motor-work-and-head/</guid>
         
         <category>boatwork</category>
         
@@ -1402,8 +1402,8 @@ df_scrolls = conn.execute_query(scroll_query)
 &lt;/p&gt;
 &lt;img border=&quot;0&quot; src=&quot;https://1.bp.blogspot.com/-BN1Su8VptwM/XfGCDzfGpGI/AAAAAAAAFLQ/D5ZMotAq5qso7tUPfbzc4U1LJCPwS2bYwCLcBGAsYHQ/s1600/Screenshot%2Bfrom%2B2019-12-11%2B15-47-15.png&quot; title=&quot; &quot;/&gt;</description>
         <pubDate>Sun, 30 Jun 2019 00:00:00 -0700</pubDate>
-        <link>https://bonkerfield.org/2019/06/30/google-analytics-for-scrolling-on/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2019/06/30/google-analytics-for-scrolling-on/</guid>
+        <link>https://bonkerfield.org/2019/06/google-analytics-for-scrolling-on/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2019/06/google-analytics-for-scrolling-on/</guid>
         
         <category>code</category>
         
@@ -1517,8 +1517,8 @@ df_scrolls = conn.execute_query(scroll_query)
     All in all, the electrical turned out to be quite a bit easier than I thought. It was a good starter before I move onto the next big challenge: plumping.
 &lt;/p&gt;</description>
         <pubDate>Wed, 01 May 2019 19:46:00 -0700</pubDate>
-        <link>https://bonkerfield.org/2019/05/01/ionis-solar-electrical-system/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2019/05/01/ionis-solar-electrical-system/</guid>
+        <link>https://bonkerfield.org/2019/05/ionis-solar-electrical-system/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2019/05/ionis-solar-electrical-system/</guid>
         
         <category>boatwork</category>
         
@@ -1677,8 +1677,8 @@ df_scrolls = conn.execute_query(scroll_query)
 &lt;br/&gt;
 </description>
         <pubDate>Wed, 03 Apr 2019 00:00:00 -0700</pubDate>
-        <link>https://bonkerfield.org/2019/04/03/visualizing-shared-budgets-and-dividing/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2019/04/03/visualizing-shared-budgets-and-dividing/</guid>
+        <link>https://bonkerfield.org/2019/04/visualizing-shared-budgets-and-dividing/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2019/04/visualizing-shared-budgets-and-dividing/</guid>
         
         <category>data science</category>
         
@@ -1758,8 +1758,8 @@ df_scrolls = conn.execute_query(scroll_query)
     &lt;/p&gt;
 &lt;img border=&quot;0&quot; src=&quot;https://3.bp.blogspot.com/-TnbQNHBe0DM/XH3v4ufb1vI/AAAAAAAADeQ/vmI1xoUeT-8lXOU_g3AfULei7NOyPQ_XQCKgBGAs/s800/20190302_082724.jpg&quot; title=&quot; &quot;/&gt;&lt;/p&gt;</description>
         <pubDate>Mon, 04 Mar 2019 00:00:00 -0800</pubDate>
-        <link>https://bonkerfield.org/2019/03/04/redwood-planter-cabinet/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2019/03/04/redwood-planter-cabinet/</guid>
+        <link>https://bonkerfield.org/2019/03/redwood-planter-cabinet/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2019/03/redwood-planter-cabinet/</guid>
         
         <category>misc</category>
         
@@ -1790,8 +1790,8 @@ df_scrolls = conn.execute_query(scroll_query)
     I found &lt;a href=&quot;https://majeruslucie.eu/H-U-M-A-N-I-V-O-R-Y&quot;&gt;another artist&lt;/a&gt; who did &lt;a href=&quot;https://www.treehugger.com/sustainable-product-design/human-ivory-lucie-majerus.html&quot;&gt;something similar&lt;/a&gt; before. Hopefully people aren't too weirded out by the idea as it seems a hell of a lot more reasonable than poaching ivory or sending people into mines for stupid shiny shit.
 &lt;/p&gt;</description>
         <pubDate>Mon, 21 Jan 2019 00:00:00 -0800</pubDate>
-        <link>https://bonkerfield.org/2019/01/21/human-ivory-earrings/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2019/01/21/human-ivory-earrings/</guid>
+        <link>https://bonkerfield.org/2019/01/human-ivory-earrings/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2019/01/human-ivory-earrings/</guid>
         
         <category>art</category>
         
@@ -1904,8 +1904,8 @@ Originally, the admins had been using totally static pages. I could have kept th
     * The vulnerability is that someone could figure out how to pass a boolean that says that the payment is confirmed even though it isn't. Still, part of @rtifice's ethos is that if you can figure out how to hack our systems you actuallyf deserve whatever tiny spoils you get.
 &lt;/p&gt;</description>
         <pubDate>Sun, 02 Dec 2018 00:00:00 -0800</pubDate>
-        <link>https://bonkerfield.org/2018/12/02/rtifice-website-revamp/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2018/12/02/rtifice-website-revamp/</guid>
+        <link>https://bonkerfield.org/2018/12/rtifice-website-revamp/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2018/12/rtifice-website-revamp/</guid>
         
         <category>design</category>
         
@@ -2078,8 +2078,8 @@ Originally, the admins had been using totally static pages. I could have kept th
 &lt;/ul&gt; &lt;br/&gt;
 </description>
         <pubDate>Sat, 06 Oct 2018 00:00:00 -0700</pubDate>
-        <link>https://bonkerfield.org/2018/10/06/experiential-puzzle-narrative/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2018/10/06/experiential-puzzle-narrative/</guid>
+        <link>https://bonkerfield.org/2018/10/experiential-puzzle-narrative/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2018/10/experiential-puzzle-narrative/</guid>
         
         <category>games</category>
         
@@ -2156,8 +2156,8 @@ Sails rigged
     It does already start to feel like home though. There's a lot of work to do, but I'm excited (and terrified) for it.
 &lt;/p&gt;</description>
         <pubDate>Wed, 27 Jun 2018 00:00:00 -0700</pubDate>
-        <link>https://bonkerfield.org/2018/06/27/introducing-ione/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2018/06/27/introducing-ione/</guid>
+        <link>https://bonkerfield.org/2018/06/introducing-ione/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2018/06/introducing-ione/</guid>
         
         <category>boatwork</category>
         
@@ -2172,8 +2172,8 @@ Sails rigged
 &lt;hr/&gt;
 &lt;iframe height=&quot;800px&quot; src=&quot;https://docs.google.com/document/d/e/2PACX-1vTjfVtSDoVCI9APvUq9YxmvZLjw0fvqRRALRq7euEvZ-0O9p7pMa9g4r_TYFDGchfRJ1kP2FUWe8822/pub?embedded=true&quot; style=&quot;border:1px solid black; height: 800px&quot; width=&quot;100%&quot;&gt;&lt;/iframe&gt;</description>
         <pubDate>Sat, 23 Jun 2018 00:00:00 -0700</pubDate>
-        <link>https://bonkerfield.org/2018/06/23/skylight-chapters-3-4/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2018/06/23/skylight-chapters-3-4/</guid>
+        <link>https://bonkerfield.org/2018/06/skylight-chapters-3-4/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2018/06/skylight-chapters-3-4/</guid>
         
         <category>writing</category>
         
@@ -2187,8 +2187,8 @@ Sails rigged
 &lt;/p&gt;
 &lt;div&gt;&lt;iframe height=&quot;800px&quot; src=&quot;https://docs.google.com/document/d/e/2PACX-1vQ29U0iqCXJu16Jk6tiXmknr-r_UDYnZ3DtAFsli0txTrWRd7Q6nSKtAafYakpiNgup3VSrG_Wi_YwD/pub?embedded=true&quot; style=&quot;border:1px solid black; height: 800px&quot; width=&quot;100%&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;</description>
         <pubDate>Thu, 03 May 2018 00:00:00 -0700</pubDate>
-        <link>https://bonkerfield.org/2018/05/03/skylight-chapters-1-2/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2018/05/03/skylight-chapters-1-2/</guid>
+        <link>https://bonkerfield.org/2018/05/skylight-chapters-1-2/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2018/05/skylight-chapters-1-2/</guid>
         
         <category>writing</category>
         
@@ -2248,8 +2248,8 @@ With everything clean, I reapplied gobs of grease and reinserted the bearings. T
 &lt;/p&gt;
 &lt;img border=&quot;0&quot; src=&quot;https://2.bp.blogspot.com/-OSlfQ08vYUw/Wt0CKrGaHYI/AAAAAAAABoM/29hWgFyI-dMe_91WiTTX0YpNWPkzwtN8ACKgBGAs/s800/IMG_20180421_141308.jpg&quot; title=&quot; &quot;/&gt;</description>
         <pubDate>Sun, 22 Apr 2018 00:00:00 -0700</pubDate>
-        <link>https://bonkerfield.org/2018/04/22/notes-on-bike-fixes/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2018/04/22/notes-on-bike-fixes/</guid>
+        <link>https://bonkerfield.org/2018/04/notes-on-bike-fixes/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2018/04/notes-on-bike-fixes/</guid>
         
         <category>bikes</category>
         
@@ -2295,8 +2295,8 @@ With everything clean, I reapplied gobs of grease and reinserted the bearings. T
     Now the wobble and the friction are both gone! On to the next fix.
 &lt;/p&gt;</description>
         <pubDate>Sat, 07 Apr 2018 00:00:00 -0700</pubDate>
-        <link>https://bonkerfield.org/2018/04/07/replacing-bottom-bracket/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2018/04/07/replacing-bottom-bracket/</guid>
+        <link>https://bonkerfield.org/2018/04/replacing-bottom-bracket/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2018/04/replacing-bottom-bracket/</guid>
         
         <category>bikes</category>
         
@@ -2361,8 +2361,8 @@ With everything clean, I reapplied gobs of grease and reinserted the bearings. T
     Unfortunately, the owner hasn't yet let me sail it, but I'm hoping that these cool modifications along with a trial run or two with him this winter will have me sailing that beauty around the Bay by spring. Fingers crossed.
 &lt;/p&gt;</description>
         <pubDate>Tue, 02 Jan 2018 00:00:00 -0800</pubDate>
-        <link>https://bonkerfield.org/2018/01/02/sailboat-light-covers/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2018/01/02/sailboat-light-covers/</guid>
+        <link>https://bonkerfield.org/2018/01/sailboat-light-covers/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2018/01/sailboat-light-covers/</guid>
         
         <category>boatwork</category>
         
@@ -2513,8 +2513,8 @@ With everything clean, I reapplied gobs of grease and reinserted the bearings. T
 &lt;br/&gt;
 &lt;/p&gt;</description>
         <pubDate>Sun, 19 Nov 2017 00:00:00 -0800</pubDate>
-        <link>https://bonkerfield.org/2017/11/19/making-better-eyes/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2017/11/19/making-better-eyes/</guid>
+        <link>https://bonkerfield.org/2017/11/making-better-eyes/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2017/11/making-better-eyes/</guid>
         
         <category>science</category>
         
@@ -2579,8 +2579,8 @@ With everything clean, I reapplied gobs of grease and reinserted the bearings. T
 &lt;br/&gt;
 </description>
         <pubDate>Fri, 17 Nov 2017 00:00:00 -0800</pubDate>
-        <link>https://bonkerfield.org/2017/11/17/hope-you-dance-alone/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2017/11/17/hope-you-dance-alone/</guid>
+        <link>https://bonkerfield.org/2017/11/hope-you-dance-alone/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2017/11/hope-you-dance-alone/</guid>
         
         <category>music</category>
         
@@ -2705,8 +2705,8 @@ With everything clean, I reapplied gobs of grease and reinserted the bearings. T
 &lt;br/&gt;
 </description>
         <pubDate>Sun, 17 Sep 2017 00:00:00 -0700</pubDate>
-        <link>https://bonkerfield.org/2017/09/17/indiana-jones-and-elusive-promo-code/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2017/09/17/indiana-jones-and-elusive-promo-code/</guid>
+        <link>https://bonkerfield.org/2017/09/indiana-jones-and-elusive-promo-code/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2017/09/indiana-jones-and-elusive-promo-code/</guid>
         
         <category>games</category>
         
@@ -2763,8 +2763,8 @@ With everything clean, I reapplied gobs of grease and reinserted the bearings. T
 &lt;br/&gt;
 </description>
         <pubDate>Sat, 09 Sep 2017 00:00:00 -0700</pubDate>
-        <link>https://bonkerfield.org/2017/09/09/marshalling-at-poplar-creek/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2017/09/09/marshalling-at-poplar-creek/</guid>
+        <link>https://bonkerfield.org/2017/09/marshalling-at-poplar-creek/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2017/09/marshalling-at-poplar-creek/</guid>
         
         <category>exploring</category>
         
@@ -2887,8 +2887,8 @@ With everything clean, I reapplied gobs of grease and reinserted the bearings. T
 &lt;br/&gt;
 </description>
         <pubDate>Sun, 27 Aug 2017 00:00:00 -0700</pubDate>
-        <link>https://bonkerfield.org/2017/08/27/the-stedden-constitution/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2017/08/27/the-stedden-constitution/</guid>
+        <link>https://bonkerfield.org/2017/08/the-stedden-constitution/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2017/08/the-stedden-constitution/</guid>
         
         <category>writing</category>
         
@@ -3055,8 +3055,8 @@ With everything clean, I reapplied gobs of grease and reinserted the bearings. T
 &lt;br/&gt;
 </description>
         <pubDate>Mon, 14 Aug 2017 00:00:00 -0700</pubDate>
-        <link>https://bonkerfield.org/2017/08/14/theseus-and-cell-phd-dissertation-story/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2017/08/14/theseus-and-cell-phd-dissertation-story/</guid>
+        <link>https://bonkerfield.org/2017/08/theseus-and-cell-phd-dissertation-story/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2017/08/theseus-and-cell-phd-dissertation-story/</guid>
         
         <category>science</category>
         
@@ -3314,8 +3314,8 @@ With everything clean, I reapplied gobs of grease and reinserted the bearings. T
 &lt;/i&gt;&lt;br/&gt;
 </description>
         <pubDate>Sat, 29 Jul 2017 00:00:00 -0700</pubDate>
-        <link>https://bonkerfield.org/2017/07/29/experiences-with-crowdsourcing-analysis/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2017/07/29/experiences-with-crowdsourcing-analysis/</guid>
+        <link>https://bonkerfield.org/2017/07/experiences-with-crowdsourcing-analysis/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2017/07/experiences-with-crowdsourcing-analysis/</guid>
         
         <category>data science</category>
         
@@ -3440,8 +3440,8 @@ With everything clean, I reapplied gobs of grease and reinserted the bearings. T
 &lt;br/&gt;
 </description>
         <pubDate>Fri, 14 Apr 2017 00:00:00 -0700</pubDate>
-        <link>https://bonkerfield.org/2017/04/14/engagement-ring-from-found-smoky-quartz/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2017/04/14/engagement-ring-from-found-smoky-quartz/</guid>
+        <link>https://bonkerfield.org/2017/04/engagement-ring-from-found-smoky-quartz/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2017/04/engagement-ring-from-found-smoky-quartz/</guid>
         
         <category>design</category>
         
@@ -3622,8 +3622,8 @@ With everything clean, I reapplied gobs of grease and reinserted the bearings. T
 &lt;br/&gt;
 &lt;/p&gt;</description>
         <pubDate>Wed, 12 Oct 2016 00:00:00 -0700</pubDate>
-        <link>https://bonkerfield.org/2016/10/12/text-mining-and-natural-language/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2016/10/12/text-mining-and-natural-language/</guid>
+        <link>https://bonkerfield.org/2016/10/text-mining-and-natural-language/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2016/10/text-mining-and-natural-language/</guid>
         
         <category>data science</category>
         
@@ -3704,8 +3704,8 @@ ffmpeg -r 2 -f concat -i list.txt -r 30 -c:v libx264 -pix_fmt yuv420p ../git_pdf
     Have fun, and I hope that this encourages you to use open source version control whenever you write/edit any large document project.
 &lt;/p&gt;</description>
         <pubDate>Mon, 20 Jun 2016 00:00:00 -0700</pubDate>
-        <link>https://bonkerfield.org/2016/06/20/git-versioned-pdf-visualizer/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2016/06/20/git-versioned-pdf-visualizer/</guid>
+        <link>https://bonkerfield.org/2016/06/git-versioned-pdf-visualizer/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2016/06/git-versioned-pdf-visualizer/</guid>
         
         <category>code</category>
         
@@ -3817,8 +3817,8 @@ ffmpeg -r 2 -f concat -i list.txt -r 30 -c:v libx264 -pix_fmt yuv420p ../git_pdf
 &lt;br/&gt;
 </description>
         <pubDate>Wed, 11 May 2016 00:00:00 -0700</pubDate>
-        <link>https://bonkerfield.org/2016/05/11/work-in-progress-parallel-ipython-from/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2016/05/11/work-in-progress-parallel-ipython-from/</guid>
+        <link>https://bonkerfield.org/2016/05/work-in-progress-parallel-ipython-from/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2016/05/work-in-progress-parallel-ipython-from/</guid>
         
         <category>data science</category>
         
@@ -3957,8 +3957,8 @@ ffmpeg -r 2 -f concat -i list.txt -r 30 -c:v libx264 -pix_fmt yuv420p ../git_pdf
 function showDiv() { document.getElementById('welcomeDiv').style.display = &quot;block&quot;; }
 &lt;/script&gt;</description>
         <pubDate>Mon, 18 Apr 2016 00:00:00 -0700</pubDate>
-        <link>https://bonkerfield.org/2016/04/18/bluetooth-controlled-redbot-construction/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2016/04/18/bluetooth-controlled-redbot-construction/</guid>
+        <link>https://bonkerfield.org/2016/04/bluetooth-controlled-redbot-construction/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2016/04/bluetooth-controlled-redbot-construction/</guid>
         
         <category>electronics</category>
         
@@ -4003,8 +4003,8 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
 &lt;br/&gt;
 </description>
         <pubDate>Wed, 30 Mar 2016 00:00:00 -0700</pubDate>
-        <link>https://bonkerfield.org/2016/03/30/connecting-artifice-center-with-shared/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2016/03/30/connecting-artifice-center-with-shared/</guid>
+        <link>https://bonkerfield.org/2016/03/connecting-artifice-center-with-shared/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2016/03/connecting-artifice-center-with-shared/</guid>
         
         <category>infra</category>
         
@@ -4079,8 +4079,8 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
 &lt;br/&gt;
 </description>
         <pubDate>Sun, 07 Feb 2016 00:00:00 -0800</pubDate>
-        <link>https://bonkerfield.org/2016/02/07/star-wars-themed-settlers-of-catan/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2016/02/07/star-wars-themed-settlers-of-catan/</guid>
+        <link>https://bonkerfield.org/2016/02/star-wars-themed-settlers-of-catan/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2016/02/star-wars-themed-settlers-of-catan/</guid>
         
         <category>games</category>
         
@@ -4142,8 +4142,8 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
 &lt;br/&gt;
 &lt;/p&gt;&lt;/p&gt;</description>
         <pubDate>Tue, 22 Dec 2015 00:00:00 -0800</pubDate>
-        <link>https://bonkerfield.org/2015/12/22/the-plexirock-boot-tray-accident/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2015/12/22/the-plexirock-boot-tray-accident/</guid>
+        <link>https://bonkerfield.org/2015/12/the-plexirock-boot-tray-accident/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2015/12/the-plexirock-boot-tray-accident/</guid>
         
         <category>misc</category>
         
@@ -4191,8 +4191,8 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
         &lt;/p&gt;
 &lt;/p&gt;</description>
         <pubDate>Mon, 14 Dec 2015 00:00:00 -0800</pubDate>
-        <link>https://bonkerfield.org/2015/12/14/route-crime-calculator/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2015/12/14/route-crime-calculator/</guid>
+        <link>https://bonkerfield.org/2015/12/route-crime-calculator/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2015/12/route-crime-calculator/</guid>
         
         <category>data science</category>
         
@@ -4258,8 +4258,8 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
 &lt;br/&gt;
 </description>
         <pubDate>Mon, 14 Dec 2015 00:00:00 -0800</pubDate>
-        <link>https://bonkerfield.org/2015/12/14/arfi-robotic-dog/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2015/12/14/arfi-robotic-dog/</guid>
+        <link>https://bonkerfield.org/2015/12/arfi-robotic-dog/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2015/12/arfi-robotic-dog/</guid>
         
         <category>electronics</category>
         
@@ -4377,8 +4377,8 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
     I can't wait to make the other half and start using this. With a cheap chess set like this, I'll never be without the game again!
 &lt;/p&gt;</description>
         <pubDate>Sun, 29 Nov 2015 00:00:00 -0800</pubDate>
-        <link>https://bonkerfield.org/2015/11/29/paper-chess-set/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2015/11/29/paper-chess-set/</guid>
+        <link>https://bonkerfield.org/2015/11/paper-chess-set/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2015/11/paper-chess-set/</guid>
         
         <category>art</category>
         
@@ -4424,8 +4424,8 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
 &lt;br/&gt;
 </description>
         <pubDate>Thu, 13 Aug 2015 00:00:00 -0700</pubDate>
-        <link>https://bonkerfield.org/2015/08/13/power-analysis-of-indoor-water-fountain/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2015/08/13/power-analysis-of-indoor-water-fountain/</guid>
+        <link>https://bonkerfield.org/2015/08/power-analysis-of-indoor-water-fountain/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2015/08/power-analysis-of-indoor-water-fountain/</guid>
         
         <category>misc</category>
         
@@ -4480,8 +4480,8 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
 &lt;br/&gt;
 &lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;</description>
         <pubDate>Sun, 26 Jul 2015 00:00:00 -0700</pubDate>
-        <link>https://bonkerfield.org/2015/07/26/the-barbie-hadoop-cluster-multi-node/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2015/07/26/the-barbie-hadoop-cluster-multi-node/</guid>
+        <link>https://bonkerfield.org/2015/07/the-barbie-hadoop-cluster-multi-node/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2015/07/the-barbie-hadoop-cluster-multi-node/</guid>
         
         <category>data science</category>
         
@@ -4500,8 +4500,8 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
 &lt;br/&gt;
 </description>
         <pubDate>Tue, 07 Jul 2015 00:00:00 -0700</pubDate>
-        <link>https://bonkerfield.org/2015/07/07/artifice-slideshow/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2015/07/07/artifice-slideshow/</guid>
+        <link>https://bonkerfield.org/2015/07/artifice-slideshow/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2015/07/artifice-slideshow/</guid>
         
         <category>artifice</category>
         
@@ -4590,8 +4590,8 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
 &lt;br/&gt;
 </description>
         <pubDate>Sun, 08 Mar 2015 00:00:00 -0800</pubDate>
-        <link>https://bonkerfield.org/2015/03/08/week-9-laser-activated-trip-wire/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2015/03/08/week-9-laser-activated-trip-wire/</guid>
+        <link>https://bonkerfield.org/2015/03/week-9-laser-activated-trip-wire/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2015/03/week-9-laser-activated-trip-wire/</guid>
         
         <category>electronics</category>
         
@@ -4629,8 +4629,8 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
 
 &lt;script src=&quot;https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js&quot;&gt;&lt;/script&gt;</description>
         <pubDate>Sat, 07 Mar 2015 00:00:00 -0800</pubDate>
-        <link>https://bonkerfield.org/2015/03/07/raser-week-8-arduino-trip-wire/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2015/03/07/raser-week-8-arduino-trip-wire/</guid>
+        <link>https://bonkerfield.org/2015/03/raser-week-8-arduino-trip-wire/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2015/03/raser-week-8-arduino-trip-wire/</guid>
         
         <category>electronics</category>
         
@@ -4752,8 +4752,8 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
 &lt;script src=&quot;http://latex.codecogs.com/latexit.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js&quot;&gt;&lt;/script&gt;</description>
         <pubDate>Mon, 16 Feb 2015 00:00:00 -0800</pubDate>
-        <link>https://bonkerfield.org/2015/02/16/procrastinating-with-time-optimization/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2015/02/16/procrastinating-with-time-optimization/</guid>
+        <link>https://bonkerfield.org/2015/02/procrastinating-with-time-optimization/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2015/02/procrastinating-with-time-optimization/</guid>
         
         <category>games</category>
         
@@ -4809,8 +4809,8 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
 &lt;br/&gt;
 </description>
         <pubDate>Fri, 06 Feb 2015 00:00:00 -0800</pubDate>
-        <link>https://bonkerfield.org/2015/02/06/raser-week-5-review-game/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2015/02/06/raser-week-5-review-game/</guid>
+        <link>https://bonkerfield.org/2015/02/raser-week-5-review-game/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2015/02/raser-week-5-review-game/</guid>
         
         <category>electronics</category>
         
@@ -4905,8 +4905,8 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
 &lt;/p&gt;
 &lt;script src=&quot;https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js&quot;&gt;&lt;/script&gt;</description>
         <pubDate>Sun, 01 Feb 2015 00:00:00 -0800</pubDate>
-        <link>https://bonkerfield.org/2015/02/01/raser-week-5-arduino-led-passcode-pad/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2015/02/01/raser-week-5-arduino-led-passcode-pad/</guid>
+        <link>https://bonkerfield.org/2015/02/raser-week-5-arduino-led-passcode-pad/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2015/02/raser-week-5-arduino-led-passcode-pad/</guid>
         
         <category>electronics</category>
         
@@ -4997,8 +4997,8 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
 
 &lt;script src=&quot;https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js&quot;&gt;&lt;/script&gt;</description>
         <pubDate>Sun, 25 Jan 2015 00:00:00 -0800</pubDate>
-        <link>https://bonkerfield.org/2015/01/25/raser-week-4-arduino-led-passcode-pad/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2015/01/25/raser-week-4-arduino-led-passcode-pad/</guid>
+        <link>https://bonkerfield.org/2015/01/raser-week-4-arduino-led-passcode-pad/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2015/01/raser-week-4-arduino-led-passcode-pad/</guid>
         
         <category>electronics</category>
         
@@ -5044,8 +5044,8 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
 &lt;br/&gt;
 </description>
         <pubDate>Thu, 22 Jan 2015 00:00:00 -0800</pubDate>
-        <link>https://bonkerfield.org/2015/01/22/tweetnote-unfakeable-timestamp-notebook/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2015/01/22/tweetnote-unfakeable-timestamp-notebook/</guid>
+        <link>https://bonkerfield.org/2015/01/tweetnote-unfakeable-timestamp-notebook/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2015/01/tweetnote-unfakeable-timestamp-notebook/</guid>
         
         <category>design</category>
         
@@ -5196,8 +5196,8 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
 &lt;br/&gt;
 </description>
         <pubDate>Wed, 21 Jan 2015 00:00:00 -0800</pubDate>
-        <link>https://bonkerfield.org/2015/01/21/the-barbie-hadoop-cluster-stage-1/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2015/01/21/the-barbie-hadoop-cluster-stage-1/</guid>
+        <link>https://bonkerfield.org/2015/01/the-barbie-hadoop-cluster-stage-1/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2015/01/the-barbie-hadoop-cluster-stage-1/</guid>
         
         <category>infra</category>
         
@@ -5286,8 +5286,8 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
 
 &lt;script src=&quot;https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js&quot;&gt;&lt;/script&gt;</description>
         <pubDate>Sun, 18 Jan 2015 00:00:00 -0800</pubDate>
-        <link>https://bonkerfield.org/2015/01/18/raser-week-3-arduino-led-blinker/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2015/01/18/raser-week-3-arduino-led-blinker/</guid>
+        <link>https://bonkerfield.org/2015/01/raser-week-3-arduino-led-blinker/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2015/01/raser-week-3-arduino-led-blinker/</guid>
         
         <category>electronics</category>
         
@@ -5385,8 +5385,8 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
 &lt;br/&gt;
 </description>
         <pubDate>Mon, 12 Jan 2015 00:00:00 -0800</pubDate>
-        <link>https://bonkerfield.org/2015/01/12/raser-week-2-led-dimmers-and-switches/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2015/01/12/raser-week-2-led-dimmers-and-switches/</guid>
+        <link>https://bonkerfield.org/2015/01/raser-week-2-led-dimmers-and-switches/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2015/01/raser-week-2-led-dimmers-and-switches/</guid>
         
         <category>electronics</category>
         
@@ -5461,8 +5461,8 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
 &lt;br/&gt;
 </description>
         <pubDate>Sun, 11 Jan 2015 00:00:00 -0800</pubDate>
-        <link>https://bonkerfield.org/2015/01/11/four-humours-collage/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2015/01/11/four-humours-collage/</guid>
+        <link>https://bonkerfield.org/2015/01/four-humours-collage/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2015/01/four-humours-collage/</guid>
         
         <category>art</category>
         
@@ -5597,8 +5597,8 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
 &lt;br/&gt;
 </description>
         <pubDate>Thu, 08 Jan 2015 00:00:00 -0800</pubDate>
-        <link>https://bonkerfield.org/2015/01/08/actsofsuperness-twitter-game/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2015/01/08/actsofsuperness-twitter-game/</guid>
+        <link>https://bonkerfield.org/2015/01/actsofsuperness-twitter-game/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2015/01/actsofsuperness-twitter-game/</guid>
         
         <category>games</category>
         
@@ -5684,8 +5684,8 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
 &lt;br/&gt;
 </description>
         <pubDate>Tue, 06 Jan 2015 00:00:00 -0800</pubDate>
-        <link>https://bonkerfield.org/2015/01/06/raser-week-1-led-circuits/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2015/01/06/raser-week-1-led-circuits/</guid>
+        <link>https://bonkerfield.org/2015/01/raser-week-1-led-circuits/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2015/01/raser-week-1-led-circuits/</guid>
         
         <category>electronics</category>
         
@@ -5770,8 +5770,8 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
 
 </description>
         <pubDate>Mon, 05 Jan 2015 00:00:00 -0800</pubDate>
-        <link>https://bonkerfield.org/2015/01/05/a-better-linkedin/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2015/01/05/a-better-linkedin/</guid>
+        <link>https://bonkerfield.org/2015/01/a-better-linkedin/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2015/01/a-better-linkedin/</guid>
         
         <category>data science</category>
         
@@ -5803,8 +5803,8 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
 &lt;a href=&quot;http://3.bp.blogspot.com/-PSVVtIvd6Ek/VKb0ctyIVPI/AAAAAAAACKo/nc98n1nJIuY/s1600/3595809_b.png&quot; imageanchor=&quot;1&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;http://3.bp.blogspot.com/-PSVVtIvd6Ek/VKb0ctyIVPI/AAAAAAAACKo/nc98n1nJIuY/s1600/3595809_b.png&quot; style=&quot;display:none&quot;/&gt;&lt;/a&gt; &lt;br/&gt;
 </description>
         <pubDate>Sat, 03 Jan 2015 00:00:00 -0800</pubDate>
-        <link>https://bonkerfield.org/2015/01/03/wire-network/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2015/01/03/wire-network/</guid>
+        <link>https://bonkerfield.org/2015/01/wire-network/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2015/01/wire-network/</guid>
         
         <category>art</category>
         
@@ -5824,8 +5824,8 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
         For closeups of the individual items that I stitched together, you can check &lt;a href=&quot;https://plus.google.com/photos/103585488893025173441/albums/6101303480819525617&quot;&gt;this photo album&lt;/a&gt; on Google+. &lt;img border=&quot;0&quot; src=&quot;http://4.bp.blogspot.com/-MUXg3Mc6wO8/VKrBNbktU0I/AAAAAAAACM4/GXUA-wYINEk/s1600/wallgraph_front.png&quot; style=&quot;display:none&quot;/&gt;&lt;br/&gt;
 &lt;/p&gt;</description>
         <pubDate>Wed, 31 Dec 2014 00:00:00 -0800</pubDate>
-        <link>https://bonkerfield.org/2014/12/31/graph-theory-of-wall-decor/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2014/12/31/graph-theory-of-wall-decor/</guid>
+        <link>https://bonkerfield.org/2014/12/graph-theory-of-wall-decor/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2014/12/graph-theory-of-wall-decor/</guid>
         
         <category>art</category>
         
@@ -5860,8 +5860,8 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
 &lt;/ul&gt;&lt;br/&gt;
 </description>
         <pubDate>Tue, 30 Dec 2014 00:00:00 -0800</pubDate>
-        <link>https://bonkerfield.org/2014/12/30/raser-curriculum/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2014/12/30/raser-curriculum/</guid>
+        <link>https://bonkerfield.org/2014/12/raser-curriculum/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2014/12/raser-curriculum/</guid>
         
         <category>electronics</category>
         
@@ -6160,8 +6160,8 @@ function regame() {
 }
 &lt;/script&gt;</description>
         <pubDate>Mon, 29 Dec 2014 00:00:00 -0800</pubDate>
-        <link>https://bonkerfield.org/2014/12/29/quantum-gambling-game/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2014/12/29/quantum-gambling-game/</guid>
+        <link>https://bonkerfield.org/2014/12/quantum-gambling-game/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2014/12/quantum-gambling-game/</guid>
         
         <category>games</category>
         
@@ -6197,8 +6197,8 @@ function regame() {
 &lt;br/&gt;
 </description>
         <pubDate>Sun, 28 Dec 2014 00:00:00 -0800</pubDate>
-        <link>https://bonkerfield.org/2014/12/28/pvc-easel/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2014/12/28/pvc-easel/</guid>
+        <link>https://bonkerfield.org/2014/12/pvc-easel/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2014/12/pvc-easel/</guid>
         
         <category>misc</category>
         
@@ -6211,8 +6211,8 @@ function regame() {
 &lt;br/&gt;
 </description>
         <pubDate>Sat, 27 Dec 2014 00:00:00 -0800</pubDate>
-        <link>https://bonkerfield.org/2014/12/27/solar-battery-charger-flower-pot-first/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2014/12/27/solar-battery-charger-flower-pot-first/</guid>
+        <link>https://bonkerfield.org/2014/12/solar-battery-charger-flower-pot-first/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2014/12/solar-battery-charger-flower-pot-first/</guid>
         
         <category>misc</category>
         
@@ -6252,8 +6252,8 @@ function regame() {
     I'm really pleased with the result. Sewing is a new skill to me, but it's worth it to learn. &lt;br /&gt;
 &lt;/p&gt;</description>
         <pubDate>Sat, 27 Dec 2014 00:00:00 -0800</pubDate>
-        <link>https://bonkerfield.org/2014/12/27/mos-tool-pouch/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2014/12/27/mos-tool-pouch/</guid>
+        <link>https://bonkerfield.org/2014/12/mos-tool-pouch/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2014/12/mos-tool-pouch/</guid>
         
         <category>misc</category>
         
@@ -6267,8 +6267,8 @@ function regame() {
 &lt;br/&gt;
 </description>
         <pubDate>Sat, 27 Dec 2014 00:00:00 -0800</pubDate>
-        <link>https://bonkerfield.org/2014/12/27/modernizing-my-computer-case/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2014/12/27/modernizing-my-computer-case/</guid>
+        <link>https://bonkerfield.org/2014/12/modernizing-my-computer-case/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2014/12/modernizing-my-computer-case/</guid>
         
         <category>misc</category>
         
@@ -6343,8 +6343,8 @@ function regame() {
         &lt;/p&gt;
 &lt;/p&gt;</description>
         <pubDate>Tue, 16 Dec 2014 00:00:00 -0800</pubDate>
-        <link>https://bonkerfield.org/2014/12/16/introducing-daves-grill-it-all/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2014/12/16/introducing-daves-grill-it-all/</guid>
+        <link>https://bonkerfield.org/2014/12/introducing-daves-grill-it-all/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2014/12/introducing-daves-grill-it-all/</guid>
         
         <category>misc</category>
         
@@ -6373,8 +6373,8 @@ function regame() {
     The approach was simple but still allowed me to improve greatly over the baseline benchmark, reducing the mean error from 1.5 to 0.75. You can check out the &lt;a href=&quot;https://github.com/lots-of-things/biker-predict&quot;&gt;biker-predict&lt;/a&gt; code on github.
 &lt;/p&gt;</description>
         <pubDate>Mon, 08 Dec 2014 00:00:00 -0800</pubDate>
-        <link>https://bonkerfield.org/2014/12/08/predicting-bike-share-usage/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2014/12/08/predicting-bike-share-usage/</guid>
+        <link>https://bonkerfield.org/2014/12/predicting-bike-share-usage/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2014/12/predicting-bike-share-usage/</guid>
         
         <category>data science</category>
         
@@ -6387,8 +6387,8 @@ function regame() {
 A while back, I wrote a little python code that takes in a word and spits out a list of anagram words.  It kind of takes the fun out of generating anagrams, but it puts the fun back in by letting you figure out how I made them.  Could you do it a better way?  You can look at my &lt;a href=&quot;https://github.com/lots-of-things/simple-anagrammer&quot;&gt; simple-anagrammer &lt;/a&gt; code on github.
 &lt;/div&gt;</description>
         <pubDate>Mon, 08 Dec 2014 00:00:00 -0800</pubDate>
-        <link>https://bonkerfield.org/2014/12/08/a-simple-anagrammer/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2014/12/08/a-simple-anagrammer/</guid>
+        <link>https://bonkerfield.org/2014/12/a-simple-anagrammer/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2014/12/a-simple-anagrammer/</guid>
         
         <category>games</category>
         
