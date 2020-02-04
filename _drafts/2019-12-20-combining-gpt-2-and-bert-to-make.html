@@ -1,29 +1,95 @@
 ---
 layout: post
-title: Combining GPT-2 and BERT to make an automated reddit personality
-date: '2019-12-20T15:18:00.000-08:00'
+title: Combining GPT-2 and BERT to make a fake person
+date: '2019-02-04'
 author: Will Stedden
 tags: 
-modified_time: '2019-12-20T15:18:36.549-08:00'
-blogger_id: tag:blogger.com,1999:blog-40405577383217050.post-7063903136153292905
-blogger_orig_url: https://www.bonkerfield.org/2019/12/combining-gpt-2-and-bert-to-make.html
+- data science
+- artificial intelligence
 ---
 
-Getting into the brass tacks of how to finetune/modify gpt2 and bert.  and how to combine them together with the reddit bot.  
+<p>
+	GPT2 is a massive deep learning model that is able to generate astonishingly coherent English text.  It was released last year, and blew a <a href="https://towardsdatascience.com/openais-gpt-2-the-model-the-hype-and-the-controversy-1109f4bfd5e8">lot</a> <a href="http://approximatelycorrect.com/2019/02/17/openai-trains-language-model-mass-hysteria-ensues/">of</a> <a href="https://www.fast.ai/2019/02/15/openai-gp2/">people's</a> <a href="https://www.theguardian.com/commentisfree/2019/feb/15/ai-write-robot-openai-gpt2-elon-musk">hysterical</a> <a href="https://www.wired.com/story/ai-text-generator-too-dangerous-to-make-public/">minds</a>, including mine.  Its creators at OpenAI were so impressed by the model's performance that they originially didn't release <a href="https://openai.com/blog/better-language-models/">their results</a> for fear of it being too easy to abuse. I think they were right to be concerned.  Here is an excerpt that the model generated, taken from their <a href="https://openai.com/blog/better-language-models/#sample1">release page</a>.
+</p>
 
-step 0: get some reddit comment data from your favorite subreddits and filter out [deleted] and [removed] text  
+<blockquote>
+	In a shocking finding, scientist discovered a herd of unicorns living in a remote, previously unexplored valley, in the Andes Mountains. Even more surprising to the researchers was the fact that the unicorns spoke perfect English.
 
-step 1: fine tune GPT-2 on reddit "comment [SEP] reply" text https://minimaxir.com/2019/09/howto-gpt2/  
+	The scientist named the population, after their distinctive horn, Ovid’s Unicorn. These four-horned, silver-white unicorns were previously unknown to science.
 
-step 2a: fine tune BERT to differentiate real replies from fake ones step 
-2b: fine tune BERT to predict how well real comments perform  
+	Now, after almost two centuries, the mystery of what sparked this odd phenomenon is finally solved.
 
-step 3: use praw to download current comments  
+	Dr. Jorge Pérez, an evolutionary biologist from the University of La Paz, and several companions, were exploring the Andes Mountains when they found a small valley, with no other animals or humans. Pérez noticed that the valley had what appeared to be a natural fountain, surrounded by two peaks of rock and silver snow.
+</blockquote>
+<p><a href="https://openai.com/blog/better-language-models/#sample1">read more</a></p>
 
-step 4: use fine-tuned GPT2 to generate 10 replies to some comments  
+<p>
+	When I saw what GPT-2 was capable of generating, I had chills. We are now so close to effectively simulating humans that it boggles my mind.  I find machine imitation of human communication fascinating; in fact, it's something I've explored in <a href="https://a.ttent.io/n/">my fiction</a> writing previously. But since I've never worked deeply on natural language generation or deep learning, I decided to look more closely at just what this machine could do.
+</p>
 
-step 5: pass the generated replies to both of the BERT models to generate a prediction of realness and score  
 
-step 6: use some criteria for selecting which replies to try  
+<h4>The person you are speaking with is not real</h4>
+<p>
+	My goalAs a rather obvious use case, I wanted to ask whether I could impersonate a real human
+</p>
+<p>
+	 when responding to comments on the social media website, <a href="https://www.reddit.com/">reddit</a>.  I'm pretty much terrible at social media, so I figured at the very least, I could use this tool to become a little more popular. Unfortunately, I quickly learned that GPT-2 on it's own is not quite adequate to impersonate a human most of the time.  But with a little modification, I've found a frightenly passable reddit commentor is not only possible.  It's pretty easy.
+</p>
 
-step 7: use praw to submit the comments
+
+
+<h4>The Shortcoming of GPT-2</h4>
+<p>
+	What GPT-2's creators fail to mention is that while almost everything the model generates is grammatically and syntactically correct, only a tiny fraction of the outputs make any damn sense.  Here is another excerpt that shows just how non-human the output normally looks.
+</p>
+
+<blockquote class="twitter-tweet" data-lang="en" data-dnt="true" data-theme="light"><p lang="en" dir="ltr">Here&#39;s a short story i generated using OpenAI&#39;s GPT-2 tool (prompt in bold) <a href="https://t.co/DGIVwGuAUV">pic.twitter.com/DGIVwGuAUV</a></p>&mdash; will knight (@willknight) <a href="https://twitter.com/willknight/status/1096134045774344199?ref_src=twsrc%5Etfw">February 14, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>
+	When I first started experimenting with I generated a lot of similar gibberish.  As it turns out, GPT2 on its own is fairly prone to getting into weird unintelligble rants.  You can read my other post for more details on how I generated this, but here are some examples.
+</p>
+
+<blockquote>
+	
+</blockquote>
+
+<blockquote>
+	
+</blockquote>
+
+<blockquote>
+	
+</blockquote>
+
+<p>
+	Obviously, I couldn't build a bot that spewed crazy looking respnses like that.  It would be incredibly annoying to other readers and would probably be flagged right away.  But I didn't want to give up on the idea completely so I started brainstorming about ways that I could fix the performance problems with GPT2 and make it more robust.
+</p>
+
+<h5>A lesson from Generative Adversarial Networks</h5>
+<p>
+	One method that had been used in the past to build models that have been astonishingly succesful in impersonating images, music, text, and many other types of data are Generateive Adversarial Networks, or GANs.  The concept of the GAN is pretty simple. You train two models, one to generate fakes, and another to try to detect fakes.  In a classical GAN you then use the two models to improve each other (hence Adversarial).  You can read more about GANs here.
+</p>
+
+GAN example image
+
+<p>
+	Unfortunately, I wasn't quite smart enough to figure out how to modify the pre-existing GPT-2 model to turn it into a GAN.  I think it's possible, but tensorflow is a confusing beast, and I'm not yet at the point where I care enough to untangle that mess.  Instead, I did something a little simpler that was just effective enough to make the results passable.
+</p>
+
+<h4>Hybrid GPT-2 -> BERT generator-discriminator method</h4>
+
+<p>
+	The core of the GAN is the 
+</p>
+
+<h4>Results</h4>
+
+
+
+
+
+
+
+<h4>You can build one too</h4>
+
+<p>If you find this interesting, I've written another entire post describing exactly how I built this and what you'd need to do to recreate one of your own.  I realize there are definite ethicality concerns with building and using something like this so I encourage you to be an <a href="https://en.wikiquote.org/wiki/Bill_%26_Ted%27s_Excellent_Adventure">excellent</a> human and only use this tool sparingly and for that which <a href="https://en.wikipedia.org/wiki/Categorical_imperative">you deem to be good</a>.  If you think what I've done is a problem feel free to <span class="popup__open" style="border-bottom: 0.25px solid $color-grey">email me <i class="fa fa-envelope"></i></span>, or publically shame me on <a href="https://twitter.com/bonkerfield">Twitter</a>.</p>
