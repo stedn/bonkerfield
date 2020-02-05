@@ -1,14 +1,15 @@
 ---
 layout: post
 title: Combining GPT-2 and BERT to make a fake person
-date: '2019-02-04'
+date: '2020-02-04'
 author: Will Stedden
 tags: 
 - machine learning
+image: /assets/images/2020/thiscommentisgreat.png
 ---
 
 <p>
-	GPT2 is a massive deep learning model that is able to generate astonishingly coherent English text.  It was released last year, and blew a <a href="https://towardsdatascience.com/openais-gpt-2-the-model-the-hype-and-the-controversy-1109f4bfd5e8">lot</a> <a href="http://approximatelycorrect.com/2019/02/17/openai-trains-language-model-mass-hysteria-ensues/">of</a> <a href="https://www.fast.ai/2019/02/15/openai-gp2/">people's</a> <a href="https://www.theguardian.com/commentisfree/2019/feb/15/ai-write-robot-openai-gpt2-elon-musk">hysterical</a> <a href="https://www.wired.com/story/ai-text-generator-too-dangerous-to-make-public/">minds</a>, including mine.  Its creators at OpenAI were so impressed by the model's performance that they originially didn't release <a href="https://openai.com/blog/better-language-models/">their results</a> for fear of it being too easy to abuse. I think they were right to be concerned.  Here is an excerpt that the model generated, taken from their <a href="https://openai.com/blog/better-language-models/#sample1">release page</a>.
+	<a href="https://openai.com/blog/better-language-models/">GPT-2</a> is a deep learning model that is able to generate astonishingly coherent English text.  It was released last year, and blew a <a href="https://towardsdatascience.com/openais-gpt-2-the-model-the-hype-and-the-controversy-1109f4bfd5e8">lot</a> <a href="http://approximatelycorrect.com/2019/02/17/openai-trains-language-model-mass-hysteria-ensues/">of</a> <a href="https://www.fast.ai/2019/02/15/openai-gp2/">people's</a> <a href="https://www.theguardian.com/commentisfree/2019/feb/15/ai-write-robot-openai-gpt2-elon-musk">hysterical</a> <a href="https://www.wired.com/story/ai-text-generator-too-dangerous-to-make-public/">minds</a>, including mine.  Its creators at <a href="https://openai.com/">OpenAI</a> were so impressed by the model's performance that they originially didn't release it for fear of it being too easy to abuse. I think they were right to be concerned.  Here is an excerpt that the model generated, taken from their <a href="https://openai.com/blog/better-language-models/#sample1">release page</a>.
 </p>
 
 <blockquote>
@@ -23,16 +24,19 @@ tags:
 <p><a href="https://openai.com/blog/better-language-models/#sample1">read more</a></p>
 
 <p>
-	When I saw what GPT-2 was capable of generating, I had chills. We are now so close to effectively simulating humans that it boggles my mind.  I find machine imitation of human communication fascinating; in fact, it's something I've explored in <a href="https://a.ttent.io/n/">my fiction</a> writing previously. But since I've never worked deeply on natural language generation or deep learning, I decided to look more closely at just what this machine could do.
+	When I saw what GPT-2 was capable of generating, I had chills. We are now very close to effectively simulating human creativity.  I find machine imitation of human communication fascinating; in fact, it's something I've explored in <a href="https://a.ttent.io/n/">my fiction writing</a> previously. But since I've never worked on natural language generation or deep learning, I decided to look more closely at just what this machine could do.
 </p>
 
 
 <h4>The person you are speaking with is not real</h4>
 <p>
-	My goalAs a rather obvious use case, I wanted to ask whether I could impersonate a real human
+	My goal was to see how close I could come to impersonating a real human with algorithmically generated text and almost no manual quality control.  
 </p>
 <p>
-	 when responding to comments on the social media website, <a href="https://www.reddit.com/">reddit</a>.  I'm pretty much terrible at social media, so I figured at the very least, I could use this tool to become a little more popular. Unfortunately, I quickly learned that GPT-2 on it's own is not quite adequate to impersonate a human most of the time.  But with a little modification, I've found a frightenly passable reddit commentor is not only possible.  It's pretty easy.
+	I decided that one of the easiest places to test such a system would be in the responses to comments on the social media website, <a href="https://www.reddit.com/">reddit</a>. My goal became to generate a bot that would respond topically to comments, garner upvotes, and see if it can promote discussion.  
+</p>
+<p>
+	 I was also hoping I could use this tool to become a little more popular. I've been pretty much terrible at interating on social media so I figured this would be quite a challenge.  I quickly learned that just using GPT-2 on it's own is not quite adequate to impersonate a human most of the time.  But with a little modification, I've found that building a frightenly passable reddit commentor is not only possible; it's pretty easy.
 </p>
 
 
@@ -45,11 +49,11 @@ tags:
 <blockquote class="twitter-tweet" data-lang="en" data-dnt="true" data-theme="light"><p lang="en" dir="ltr">Here&#39;s a short story i generated using OpenAI&#39;s GPT-2 tool (prompt in bold) <a href="https://t.co/DGIVwGuAUV">pic.twitter.com/DGIVwGuAUV</a></p>&mdash; will knight (@willknight) <a href="https://twitter.com/willknight/status/1096134045774344199?ref_src=twsrc%5Etfw">February 14, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <p>
-	When I first started experimenting with I generated a lot of similar gibberish.  As it turns out, GPT2 on its own is fairly prone to getting into weird unintelligble rants.  Here are some examples.
+	When I first started experimenting, I generated a lot of similar gibberish.  As it turns out, GPT2 on its own is fairly prone to getting into weird unintelligble rants.  Here are some examples.
 </p>
 
 <blockquote>
-"The idea of the film is very similar to the kind of film we’ve seen before,
+The idea of the film is very similar to the kind of film we’ve seen before,
 “The Road”. The film “took place” at “a time”, “at a place”. 
 “The Road” was set at “a time”, “a place”.”
 “The Road” was also set at a time of the Soviet Union’s collapse,””“a time”, “the collapse” of communism”.
@@ -57,16 +61,19 @@ tags:
 So, “The Road” is a film about the dissolution of the Soviet Union’s grip on the world,”“a time of the Russian Revolution”.
 </blockquote>
 
+<p>Clearly the algorithm is getting confused on the way quotations work.  Then there's this one, which makes grammatical sense, but is clearly a series of statements that no regular person would ever say (unless they were trolling). </p>
+
 <blockquote>
-	
+I still can't believe you. I had the same birthday last year.  
+I'm a 10 year old, and I have never even heard of this novel.
 </blockquote>
 
 <p>
-	And a lot of the time, GPT2 will just start repeating a few crazy phrases over and over.  You can <a href="https://docs.google.com/spreadsheets/d/1n2_IM32ULuu_x9f_hX2YlmRfahF61K_os5fGg2RcgBA/edit?usp=sharing">check out some of the model's output</a> to get a taste of the kinds of things that it generates in the raw.
+	Worse still, a lot of the time, GPT2 will just start repeating a few crazy phrases over and over.  You can <a href="https://docs.google.com/spreadsheets/d/1n2_IM32ULuu_x9f_hX2YlmRfahF61K_os5fGg2RcgBA/edit?usp=sharing">check out some of the model's output</a> to get a taste of the kinds of things that it generates in the raw.
 </p>
 
 <p>
-	I wouldn't want to build a bot that spewed crazy looking responses like that all the time.  It would be incredibly annoying to other readers and would probably be flagged right away.  Still, I didn't want to give up on the idea completely. I started brainstorming about ways that I could fix the performance problems with GPT2 and make it more robust, and I came up with something that was able to filter out a lot of the crap responses.
+	I wouldn't want to build a bot that spewed crazy looking responses like that all the time.  It would be incredibly annoying to other redditors and would probably be flagged right away.  Still, I didn't want to give up on the idea completely. I started brainstorming about ways that I could fix the performance problems with GPT2 and make it more robust, and I came up with something that was able to filter out a lot of the crap responses.
 </p>
 
 <h5>Machines trying to trick other machines</h5>
@@ -77,7 +84,7 @@ So, “The Road” is a film about the dissolution of the Soviet Union’s grip 
 	The concept of the GAN is pretty simple. You train two models, one to generate fakes (generator), and another to try to detect fakes (discriminator).  In a classical GAN you then use the two models to improve each other by having the generator constanly compete to trick the discriminator (hence Adversarial).  
 </p>
 
-<a href="https://www.reddit.com/r/sciencefiction/comments/evqiti/dune_logo_unveiled_at_event_copyright_claimants/fg44yzw/?context=3"><img title="GAN illustration" src="/assets/images/2020/gan_explained.png" alt="GAN illustration"/></a>
+<a href="https://www.reddit.com/r/sciencefiction/comments/evqiti/dune_logo_unveiled_at_event_copyright_claimants/fg44yzw/?context=3"><img title="GAN illustration" src="/assets/images/2020/gan_explain.png" alt="GAN illustration"/></a>
 
 <p>
 	It's a very intuitive and clever concept, and one that I personally feel mirrors the <a href="https://en.wikipedia.org/wiki/Bicameralism_(psychology)">internal dialog</a> that I constantly have in my own brain's decision making system.  The critic in my head feels almost like a discriminator algorithm <a href="https://i.imgur.com/mGva0nK.gif">throwing shade</a> on my internal generator algorithm. Anyway, if you're interested iin how they work in detail, you can read more <a href="https://towardsdatascience.com/understanding-generative-adversarial-networks-gans-cd6e4651a29">here</a>.
@@ -94,54 +101,24 @@ So, “The Road” is a film about the dissolution of the Soviet Union’s grip 
 </p>
 
 <p>
-	To build the standalone discriminator, I fine-tuned another deep-learning language model called <a href="https://towardsdatascience.com/bert-explained-state-of-the-art-language-model-for-nlp-f8b21a9b6270">BERT</a>.  I actually made two models, one for how realistic the reply was and another for how many upvotes the reply would get.  
+	To build the standalone discriminator, I fine-tuned another deep-learning language model called <a href="https://towardsdatascience.com/bert-explained-state-of-the-art-language-model-for-nlp-f8b21a9b6270">BERT</a>.  I actually made two models, one for how realistic the reply was and another for how many upvotes the reply would get. You can read <a href="/2020/02/reddit-bot-gpt2-bert/">this post</a> for a detailed walkthrough of how the whole system was constructed, trained, tested, and deployed. 
 </p>
-
-<h6>Discriminator model performance</h6>
 <p>
-	The realism model was trained just like in a traditional GAN where I had my model make thousands of fakes and then created a dataset that combined my fakes with thousands of real comments.  The model actually has amazingly high distinguishing power between real and fake comments.
+	Just by looking at the initial results, it seemed likely that the bot was going to be able to communicate pretty convincingly.  But the only <a href="https://en.wikipedia.org/wiki/Turing_test">real test</a> was to put it into use and see how people respond.
 </p>
 
-<pre>
-'auc': 0.9933777,
-'eval_accuracy': 0.9986961,
-'f1_score': 0.99929225,
-'false_negatives': 3.0,
-'false_positives': 11.0,
-'precision': 0.9988883,
-'recall': 0.99969655,
-'true_negatives': 839.0,
-'true_positives': 9884.0
-</pre>
-
-<p>
-	Now using this model, every reply that the generator creates is given a score from 0 to 1 based on how realistic the model thinks it is likely to be.  I then just filter to only return comments that are predicted to be the most likely to be real.
-</p>
-
-<p>
-	To predict how many upvotes a reply will get, I built another model in a similar way. This time the model was just trained on a dataset containing a bunch of real reddit comments and how many upvotes they got.  
-</p>
-
-<p>
-	This model also had surprisingly high predictive accuracy.  This <a href="https://www.dataschool.io/roc-curves-and-auc-explained/">ROC curve</a> shows that we can get a lot of true positives correct without having too many false positives. For more on what true positive and false positive means see <a href="https://developers.google.com/machine-learning/crash-course/classification/true-false-positive-negative">this article</a>.  
-</p>
-
-<img title="comment score prediction ROC curve" src="/assets/images/2020/bert_upvote_predict.png.png" alt="BERT score prediction ROC curve"/>
-
-<p>
-	Based on these validation results, it seemed likely that this bot should be able to communicate pretty convincingly.  But the only <a href="https://en.wikipedia.org/wiki/Turing_test">real test</a> is to put it into use and see how people respond.
-</p>
 <h4>Meet tupperware-party</h4>
-
 <p>
-	Once I had the models built and hooked together, the last step was plug the bot into reddit.  I made an account for the bot called <strong>tupperware-party</strong>, which I figured sounded innocuous enough.  I used <a href="https://praw.readthedocs.io/en/latest/">praw</a> to submit the replies automatically, and then I went through and examined all of them to make sure none were too offensive or annoying.  There were so many gems that it's hard to pick examples to share.
+	Once I had the models built and hooked together, the last step was plug the bot into reddit.  I made an account for the bot called <strong>tupperware-party</strong>, which I figured sounded innocuous enough.  I used <a href="https://praw.readthedocs.io/en/latest/">praw</a> to submit the replies automatically, and then I went through and examined all of them to make sure none were too offensive or annoying.  As I was reading through the results, there were so many gems that it's hard to pick just a few examples to share.
 </p>
+
+<h5>What did the robot say?</h5>
 
 <p>
 	This <a href="https://www.reddit.com/r/sciencefiction/comments/evqiti/dune_logo_unveiled_at_event_copyright_claimants/fg44yzw/?context=3">first one</a> seems like a perfect imitation of someone with a strong opinion on the internet. 
 </p>
 
-<a href="https://www.reddit.com/r/sciencefiction/comments/evqiti/dune_logo_unveiled_at_event_copyright_claimants/fg44yzw/?context=3"><img title="reddit-gpt2-bert-bot comment" src="/assets/images/2020/tupperware-party1.png" alt="COMMENT: 'Dune’s fandom is old and intense, and a rich thread in the cultural fabric of the internet generation' BOT_REPLY:'Dune’s fandom is overgrown, underfunded, and in many ways, a poor fit for the new, faster internet generation.'"/></a>
+<a href="https://www.reddit.com/r/sciencefiction/comments/evqiti/dune_logo_unveiled_at_event_copyright_claimants/fg44yzw/?context=3"><img title="reddit-gpt2-bert-bot comment" src="/assets/images/2020/tupperware-party1.png" alt="COMMENT: 'Dune’s fandom is old and intense, and a rich thread in the cultural fabric of the internet generation' BOT_REPLY:'Dune’s fandom is overgrown, underfunded, and in many ways, a poor fit for the new, faster internet generation.'" style="border:2px;"/></a>
 
 
 <p>
@@ -164,13 +141,22 @@ So, “The Road” is a film about the dissolution of the Soviet Union’s grip 
 	I honestly don't even know what to say to that.  Is it possible that every conversation on the internet right now has at least one slightly ill-informed bot in the mix.  We are seriously screwed.  But don't worry, this bot is at least a little woke too already.
 </p>
 
-<a href="https://www.reddit.com/r/writing/comments/ehbfdi/what_are_your_favourite_tropes_be_it_in_books/fcl2im9/?context=3"><img title="reddit-gpt2-bert-bot comment" src="/assets/images/2020/tupperware-party3.png" alt="The first thing I think of when thinking about a villain's face turn is probably that they are a male character. Some males are actually pretty bad in the media..."/></a>
+<a href="https://www.reddit.com/r/writing/comments/ehbfdi/what_are_your_favourite_tropes_be_it_in_books/fcl2im9/?context=3"><img title="reddit-gpt2-bert-bot comment" src="/assets/images/2020/tupperware-party4.png" alt="The first thing I think of when thinking about a villain's face turn is probably that they are a male character. Some males are actually pretty bad in the media..."/></a>
 
 <p>
 	There are so many surprisingly realistic replies that I enourage you to go through <a href="https://www.reddit.com/user/tupperware-party/comments/">tupperware-party's whole comment list</a>.  Overall, the bot wrote 80 replies and 24 of them received at least one upvote. I'm impressed with that and hoping that maybe it will eventually be able to help <a href="https://www.reddit.com/user/bonkerfield">me</a> become more popular on reddit.
 </p>
 
+<p>
+	On the other hand, the single most popular comment (with 8 votes) was <a href="https://www.reddit.com/r/sciencefiction/comments/efej56/the_problem_with_the_original_dune_movie/fc16yq8/?context=3">this one</a>, which is just innocuous flattery.  
+</p>
 
-<h4>You can build one too</h4>
+<a href="https://www.reddit.com/r/artificial/comments/ep26lc/is_china_going_to_overtake_the_us_in_data_science/feik6wg/?context=8&depth=9"><img title="reddit-gpt2-bert-bot comment" src="/assets/images/2020/thiscommentisgreat.png" alt="This comment is great."/></a>
 
-<p>If you find this interesting, I've written another entire post with details and code describing how I built this and showing what you'd need to do to recreate one of your own.  I realize there are definite ethicality concerns with building and using something like this so I encourage you to be an <a href="https://en.wikiquote.org/wiki/Bill_%26_Ted%27s_Excellent_Adventure">excellent</a> human and only use this tool sparingly and for that which <a href="https://en.wikipedia.org/wiki/Categorical_imperative">you deem to be good</a>.  If you think what I've done is a problem feel free to <span class="popup__open" style="border-bottom: 0.25px solid $color-grey">email me <i class="fa fa-envelope"></i></span>, or publically shame me on <a href="https://twitter.com/bonkerfield">Twitter</a>.</p>
+<p>
+	Since this could easily be copy and pasted to every other comment and still be totally in context, I guess maybe I didn't need to try so hard.
+</p>
+
+<h4>You can build one too!</h4>
+
+<p>If you find this interesting, I've written a <a href="/2020/02/reddit-bot-gpt2-bert/">tutorial post</a> with details and code describing how I built everything and showing what you'd need to do to recreate one of your own.  I realize there are definite ethicality concerns with building and using something like this so I encourage you to be an <a href="https://en.wikiquote.org/wiki/Bill_%26_Ted%27s_Excellent_Adventure">excellent</a> human and only use this tool sparingly and for that which <a href="https://en.wikipedia.org/wiki/Categorical_imperative">you deem to be good</a>.  If you think what I've done is a problem feel free to <span class="popup__open" style="border-bottom: 0.25px solid $color-grey">email me <i class="fa fa-envelope"></i></span>, or publically shame me on <a href="https://twitter.com/bonkerfield">Twitter</a>.</p>

@@ -1,0 +1,249 @@
+---
+layout: post
+title: How to build a convincing reddit personality with GPT2 and BERT
+date: '2020-02-03'
+author: Will Stedden
+tags: 
+- machine learning
+- code
+---
+
+<p>
+    Last month, I experimented with building a reddit comment bot that generated natural language replies by combining two pre-trained deep learning models: <a href="http://jalammar.github.io/illustrated-gpt2/">GPT-2</a> and <a hrf="http://jalammar.github.io/illustrated-bert/">BERT</a>. I wrote <a href="/2020/02/combining-gpt-2-and-bert/">another post</a> on the motivation and background, but here I wanted to give a step by step walkthrough so others can work with what I've built.
+</p>
+
+<h4>Model overview</h4>
+
+<p>Before getting into the nitty-gritty, I wanted to give a gneral overview of the process that I'mm going to be using.  There are quite a few steps and I don't want it to get too confusing.  Check out <a href="/2020/02/combining-gpt-2-and-bert/">my previous post</a> for an even higher-level architecture overview.  Here are the steps I'll be explaining in this post.</p>
+
+<ul>
+    <li>
+        step 0: get some reddit comment data from your favorite subreddits and format into strings that look like "comment [SEP] reply"
+    </li>
+    <li>
+        step 1: fine tune GPT-2 to generate reddit "comment [SEP] reply" text   
+    </li>
+    <li>
+    step 2: fine tune two BERT classifiers to:
+    <ul>
+        <li>a: differentiate real replies from GPT-2 generated ones</li>
+        <li>b: predict how many upvotes comments will get</li>
+    </ul>
+    </li>
+    <li>
+    step 3: use praw to download current comments  
+    </li>
+    <li>
+    step 4: use fine-tuned GPT2 to generate many replies for each comment  
+    </li>
+    <li>
+    step 5: pass the generated replies to both of the BERT models to generate a prediction of realness and upvotes  
+    </li>
+    <li>
+    step 6: use some criteria for choosing which replies to submit  
+    </li>
+    <li>
+    step 7: use praw to submit the chosen comments
+    </li>
+    <li>
+    step 8: chuckle with amusement
+    </li>
+</ul>
+
+<h4></h4>
+<p>
+    As with any machine learning project, nothing can start until you have data from which to train your algorithm.
+</p>
+
+<p>
+    The data I used to fine-tune the models came from a <a href="https://bigquery.cloud.google.com/dataset/fh-bigquery:reddit_comments?pli=1">large database of previously retrieved reddit comments</a>.  There is an <a href="https://www.reddit.com/r/bigquery/wiki/datasets">ongoing project</a> that scrapes many sites around the web stores them in a bunch of Google BigQuery tables.  To me, it's very surprising that I couldn't find a central  page about such a big project, but I used a few <a href="https://www.reddit.com/r/bigquery/comments/5z957b/more_than_3_billion_reddit_comments_loaded_on/">reddit</a> and <a href="https://towardsdatascience.com/bigquery-without-a-credit-card-discover-learn-and-share-199e08d4a064">medium</a> posts to piece together the format of the queries I'd need.  
+</p>
+
+<p>
+    To start, I just downloaded a bunch of comment and reply information for the subreddits on 'writing', 'scifi', 'sciencefiction', 'MachineLearning', 'philosophy', 'cogsci', 'neuro', and 'Futurology'. This query works to pull the comments for a specific year and month (<code>{ym}</code>) from bigquery.
+</p>
+
+<pre>
+SELECT s.subreddit as subreddit, 
+s.selftext as submission, a.body AS comment, b.body as reply, 
+s.score as submission_score, a.score as comment_score, b.score as reply_score, 
+s.author as submission_author, a.author as comment_author, b.author as reply_author
+FROM `fh-bigquery.reddit_comments.{ym}` a
+LEFT JOIN `fh-bigquery.reddit_comments.{ym}` b 
+ON CONCAT('t1_',a.id) = b.parent_id
+LEFT JOIN  `fh-bigquery.reddit_posts.{ym}` s
+ON CONCAT('t3_',s.id) = a.parent_id
+where b.body is not null 
+  and s.selftext is not null and s.selftext != ''
+  and b.author != s.author
+  and b.author != a.author
+  and s.subreddit IN ('writing', 
+                      'scifi', 
+                      'sciencefiction', 
+                      'MachineLearning', 
+                      'philosophy', 
+                      'cogsci', 
+                      'neuro', 
+                      'Futurology')
+</pre>
+
+
+<p>
+    I used the <a href="https://cloud.google.com/bigquery/docs/reference/libraries">bigquery python API</a> to automate the generation of the queries I needed to download the data across a number of months in 2017 and 2018.  This script iterated over the periods I needed and downloaded them to local disk into the <code>raw_data/</code> folder.
+</p>
+
+<p>
+    In the end, I'm going to want to be able to prime the algorithm with a comment and generate a reply. To do this, I needed to reformat the data to contain both parts separated by a special <code>[SEP]</code> string to let the algorithm know which part is which.  Each line of training data file will look like the following.
+</p>
+<pre>
+    "a bunch of primary comment text [SEP] all of the reply text"
+</pre>
+
+<p>
+    After I train the model with this format, I can then feed the trained model a string like <code>"some new primary comment text" [SEP]</code>, and it will start to generate the remaining <code>"some new reply"</code> that it thinks fits best based on the training data. I'll explain in more detail below about how to feed this kind of data into the GPT-2 fine-tuning script.  For now, you can use <a href="">this script</a> to convert the data into the format that GPT-2 fine-tuning will need and save it as <code>gpt2_finetune.csv</code> file that I generated in the previous step.The script saves 
+</p>
+
+
+
+
+
+<h4>Fine tuning GPT-2 and generating text for reddit</h4>
+<p>
+    The major advantage of using GPT-2 is that it has been pre-trained on a massive dataset of millions of pages of text on the internet.  However, if you were to use GPT-2 straight "out-of-the-box," you'd end up generating text that could look like anything you might find on the internet.  Sometimes it'll generate a news article, sometimes it'll generate a cooking blog recipe, sometimes it'll generate a rage-filled facebook post.  You don't really have too much control, and therefore, you won't really be able to use it to effectively generate reddit comments.
+</p>
+<p>
+    To overcome this issue, I needed to "fine-tune" the pre-trained model.  Fine-tuning means taking a trained model, and then continung to train it only on the exact type of data that you want to use it on.  This process (somewhat magically) allows you to take a lot of the general information about language from the big pretrained model, and sculpt that down with all the specific information about the exact output format you are trying to generate.
+</p>
+
+<p>
+    Fine-tuning is a standard process, but it still isn't super easy to do.  I'm not an expert deep learning researcher, but fortunately for me, a really <a href="https://minimaxir.com/">wonderful expert</a> had already built some incredibly simple wrapper utilities called <a href="https://github.com/minimaxir/gpt-2-simple">gpt-simple</a> for make fine-tuning GPT-2, well... simple.
+</p>
+
+<p>
+    The best part is that Max Woolf, the author of gpt2-simple, even set up a <a href="https://colab.research.google.com/drive/1VLG8e7YSEwypxU-noRNhsv5dW4NfTGce">Google Colab notebook</a> that walked through fine-tuning.  In case you haven't heard, <a href="https://colab.research.google.com/notebooks/welcome.ipynb">Google Colab</a> is an amazing FREE (<a href="https://meta.stackexchange.com/questions/21932/what-does-the-term-and-free-as-in-free-beer-mean">as in beer</a>) resource that lets you <a href="https://towardsdatascience.com/getting-started-with-google-colab-f2fff97f594c">run a python jupyter notebook</a> on a Google GPU server.  Full disclosure, I am officially a lifetime fanboy of Google for making a free tier on Google App Engine, BigQuery, and Google Colab*. 
+</p>
+
+<p>
+    You can follow along with Max's <a href="https://colab.research.google.com/drive/1VLG8e7YSEwypxU-noRNhsv5dW4NfTGce">tutorial notebook</a> to learn all about how to fine-tune a GPT-2 model with gpt2-simple.  I took all of that code and condensed and reformatted it a little to make my own <a href="">gpt-2 fine tuning notebook</a> that runs off the <code>gpt2_finetune.csv</code> file that I generated in the previous step.  Just like in Max's tutorial, you need to give the notebook permission to read and write from your Google Drive.  The model is then saved into you Google Drive for reloading from later scripts.
+</p>
+
+
+
+<h4>Training BERT models for fake detection and upvote prediction</h4>
+
+<p>
+    Even after fine-tuning, the output of this model, while normally somewhat reasonable, is often pretty weird. To improve the quality of responses, I create a whole bunch of candidate responses using the GPT2 generator above, and then I use another model to filter out which are the best replies I could release.  To determine the best, I actually want to do two things:
+</p>
+
+<ul>
+    <li>Filter out unrealistic replies</li>
+    <li>For the realilstic replies, pick the one that I predict will have the most upvotes</li>
+</ul>
+
+<p>
+    
+</p>
+
+<p>
+    Again, I'm not the biggest expert in working with deep learning infrastructure so luckily, another brilliant soul wrote a tutorial for fine-tuning text classifier models using a pretrained BERT network.  And not only that, by some miracle, they wrote their tutorial in a Google Colab notebook too!  So all I had to do was combine the two.
+</p>
+
+<p>
+    In an ideal world, I would have combined the two scripts into one that could be run from end to end.  Unfortunately, a quirk in the way the designers immplemented the gpt2-simple package made it impossible to have to computation graphs instantiated in the same environment.  Instead, I just stored the intermediate artifacts in csv files on my google drive.  So the protocol is to run the GPT2 generator notebook to generate a batch of candidate replies, and then run the BERT discriminator models to 
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://minimaxir.com/2019/09/howto-gpt2/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h6>Discriminator model performance</h6>
+<p>
+    The realism model was trained just like in a traditional GAN where I had my model make thousands of fakes and then created a dataset that combined my fakes with thousands of real comments.  The model actually has amazingly high distinguishing power between real and fake comments.
+</p>
+
+<pre>
+'auc': 0.9933777,
+'eval_accuracy': 0.9986961,
+'f1_score': 0.99929225,
+'false_negatives': 3.0,
+'false_positives': 11.0,
+'precision': 0.9988883,
+'recall': 0.99969655,
+'true_negatives': 839.0,
+'true_positives': 9884.0
+</pre>
+
+<p>
+    Now using this model, every reply that the generator creates is given a score from 0 to 1 based on how realistic the model thinks it is likely to be.  I then just filter to only return comments that are predicted to be the most likely to be real.
+</p>
+
+<p>
+    To predict how many upvotes a reply will get, I built another model in a similar way. This time the model was just trained on a dataset containing a bunch of real reddit comments and how many upvotes they got.  
+</p>
+
+<p>
+    This model also had surprisingly high predictive accuracy.  This <a href="https://www.dataschool.io/roc-curves-and-auc-explained/">ROC curve</a> shows that we can get a lot of true positives correct without having too many false positives. For more on what true positive and false positive means see <a href="https://developers.google.com/machine-learning/crash-course/classification/true-false-positive-negative">this article</a>.  
+</p>
+
+<img title="comment score prediction ROC curve" src="/assets/images/2020/bert_upvote_predict.png" alt="BERT score prediction ROC curve"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h4>Automating comments with PRAW</h4>
+
+
+
+<h4>Ethicality of impersonating humans</h4>
+
+
+
+
+
+<p><small>
+    * I know someday they will take over and destroy the world, but I still think they (along with Github) have done more good just by making these functions freely available for young tinkerers to explore.
+</small></p>

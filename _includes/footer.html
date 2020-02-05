@@ -28,3 +28,13 @@
 {% endif %}
 
 <script src="{{ '/assets/js/app.min.js' | prepend: site.baseurl }}"></script>
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(http?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
