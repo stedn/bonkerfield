@@ -1,8 +1,9 @@
 ---
 layout: post
 title: How to build a convincing reddit personality with GPT2 and BERT
-date: '2020-02-03'
+date: '2020-02-04'
 author: Will Stedden
+skiphome: true
 tags: 
 - machine learning
 - code
@@ -89,7 +90,7 @@ where b.body is not null
 
 
 <p>
-    I used the <a href="https://cloud.google.com/bigquery/docs/reference/libraries">bigquery python API</a> to automate the generation of the queries I needed to download the data across a number of months in 2017 and 2018.  <a href="">This script</a> iterated over the time periods I needed and downloaded them to local disk in the <code>raw_data/</code> folder.
+    I used the <a href="https://cloud.google.com/bigquery/docs/reference/libraries">bigquery python API</a> to automate the generation of the queries I needed to download the data across a number of months in 2017 and 2018.  <a href="https://github.com/lots-of-things/gpt2-bert-reddit-bot/blob/master/get_reddit_from_gbq.py">This script</a> iterated over the time periods I needed and downloaded them to local disk in the <code>raw_data/</code> folder.
 </p>
 
 <p>
@@ -100,7 +101,7 @@ where b.body is not null
 </pre>
 
 <p>
-    After I train the model with this format, I can then feed the trained model a string like <code>"some new primary comment text" [SEP]</code>, and it will start to generate the remaining <code>"some new reply"</code> that it thinks fits best based on the training data. I'll explain in more detail below about how to feed this kind of data into the GPT-2 fine-tuning script.  For now, you can use <a href="">this script</a> to convert the data into the format that GPT-2 fine-tuning will need and save it as <code>gpt2_finetune.csv</code> 
+    After I train the model with this format, I can then feed the trained model a string like <code>"some new primary comment text" [SEP]</code>, and it will start to generate the remaining <code>"some new reply"</code> that it thinks fits best based on the training data. I'll explain in more detail below about how to feed this kind of data into the GPT-2 fine-tuning script.  For now, you can use <a href="https://github.com/lots-of-things/gpt2-bert-reddit-bot/blob/master/prep_data.py">this script</a> to convert the data into the format that GPT-2 fine-tuning will need and save it as <code>gpt2_finetune.csv</code> 
 </p>
 
 
@@ -123,7 +124,7 @@ where b.body is not null
 </p>
 
 <p>
-    You can follow along with the <a href="https://colab.research.google.com/drive/1VLG8e7YSEwypxU-noRNhsv5dW4NfTGce">tutorial notebook</a> to learn all about how to fine-tune a GPT-2 model with gpt-2-simple.  For my use case, I took all of that code and condensed and reformatted it a little to make my own <a href="">gpt-2 fine tuning notebook</a> that runs off the <code>gpt2_finetune.csv</code> file that I generated in the previous step.  Just like in the original tutorial, you need to give the notebook permission to read and write from your Google Drive.  The model is then saved into you Google Drive for reloading from later scripts.
+    You can follow along with the <a href="https://colab.research.google.com/drive/1VLG8e7YSEwypxU-noRNhsv5dW4NfTGce">tutorial notebook</a> to learn all about how to fine-tune a GPT-2 model with gpt-2-simple.  For my use case, I took all of that code and condensed and reformatted it a little to make my own <a href="https://colab.research.google.com/drive/1VyOU81rsPsP_8WSKq-VZfB8TcMkPszG-">gpt-2 fine tuning notebook</a> that runs off the <code>gpt2_finetune.csv</code> file that I generated in the previous step.  Just like in the original tutorial, you need to give the notebook permission to read and write from your Google Drive.  The model is then saved into you Google Drive for reloading from later scripts.
 </p>
 
 
@@ -151,12 +152,12 @@ where b.body is not null
 </p>
 
 <p>
-    I made <a href="">yet another Colab notebook</a> to handle the fine-tuning of both the realisticness and upvote classifiers.  As part of the training I also did some evaluation of the model's performance on some cross-validation data.
+    In the next section, I'll walk through the fine-tuning and some model evaluation, but if you'd like to get a jumpstart and don't want to bother fine-tuning yourself, you can download the three fine-tuned models from <a href="https://drive.google.com/open?id=1GmGNqihV0nCQ6evLBmopOhjups_RESv-">here</a>, <a href="https://drive.google.com/open?id=1-Bov5PtPrP2DvFw4yD-lxp2wTjGw0bwB">here</a> and <a href="https://drive.google.com/file/d/1DTfYUxXEz80S0baCb4xPSrzx85F0FVTP/view?usp=sharing">here</a>.
 </p>
 
 <h5>BERT Discriminator model performance</h5>
 <p>
-    The realisticness model was trained just like in a traditional GAN where I had my model make thousands of fakes and then created a dataset that combined my fakes with thousands of real comments.  The model actually has amazingly high distinguishing power between real and fake comments.
+    The realisticness model was trained just like in a traditional GAN. I had <a href="https://drive.google.com/open?id=1RLJz_rJmz0UVdRikRGQrYF9TbLMIrrJ8">another Colab notebook</a> generate thousands of fakes and then created a dataset that combined my fakes with thousands of real comments.  I then fed that dataset into a <a href="https://drive.google.com/open?id=1aGswP0SJmdP6GNKEuKMJ5AhP8epNOQW_">BERT realisticness fine-tuning notebook</a> to train and evaluate. The model actually has amazingly high distinguishing power between real and fake comments.
 </p>
 
 <h6>BERT Realisticness Model Metrics</h6>
@@ -173,11 +174,11 @@ where b.body is not null
 </pre>
 
 <p>
-    Now using this model, every reply that the generator creates is given a score from 0 to 1 based on how realistic the model thinks it is likely to be.  I then just filter to only return comments that are predicted to be the most likely to be real.
+    Going forward, every reply that the generator creates can be run through this BERT discriminator to get a score from 0 to 1 based on how realistic it is.  I then just filter to only return comments that are predicted to be the most likely to be real.
 </p>
 
 <p>
-    To predict how many upvotes a reply will get, I built another model in a similar way. This time the model was just trained on a dataset containing a bunch of real reddit comments and how many upvotes they got.
+    To predict how many upvotes a reply will get, I built another model in a <a href="https://drive.google.com/open?id=1vXJjQbBZZ0Jo-LvcwRaNzCSAgAVem1cC">similar way</a>. This time the model was just trained just on a dataset containing a bunch of real reddit comments to predict how many upvotes they actually got. 
 </p>
 
 <p>
@@ -199,7 +200,7 @@ where b.body is not null
 </p>
 
 <p>
-    I used the <a href="https://praw.readthedocs.io/en/latest/">praw library</a> along with the following snippet to get all comments from the top 5 "rising" posts data in a couple of subreddits that I thought would produce some interesting responses.
+    Fortunately, I could use the <a href="https://praw.readthedocs.io/en/latest/">praw library</a> along with the following snippet to get all comments from the top 5 "rising" posts in a couple of subreddits that I thought would produce some interesting responses.
 </p>
 
 <pre>
@@ -216,7 +217,7 @@ for subreddit_name in ['sciencefiction',
 </pre>
 
 <p>
-    With that data I could run each comment through the generator and discriminators to produce a reply.
+    I could run each comment through the generator and discriminators to produce a reply.
 </p>
 
 <h4>Running the generator and discriminators</h4>
@@ -225,17 +226,17 @@ for subreddit_name in ['sciencefiction',
 </p>
 
 <p>
-    So instead, I just ran the <a href="">GPT-2 generator notebook</a> on its own to download new comments, generate a batch of candidate replies, and store themin csv files on my google drive.
-    Then, I reloaded the candidates in a separate <a href="">BERT discriminator notebook</a>to pick the best replies and submit them back to reddit.
+    So instead, I just ran a <a href="https://drive.google.com/open?id=1Z-sXQUsC7kHfLVQSpluTR-SqnBavh9qC">GPT-2 generator notebook</a> on its own to download new comments, generate a batch of candidate replies, and store themin csv files on my google drive.
+    Then, I reloaded the candidates in a separate <a href="https://drive.google.com/open?id=1mWRwK1pY34joZul5gBeMortfTu8M9OPC">BERT discriminator notebook</a>to pick the best replies and submit them back to reddit.
 </p>
 
-<p>You can view the whole workflow in my <a href="https://github.com/lots-of-things/gpt2-bert-reddit-bot">github repo</a> for the project.  Please <a href="https://github.com/lots-of-things/gpt2-bert-reddit-bot/issues">submit issues</a> to the project if you think things can be explained more clearly, or if you find bugs.</p>
+<p>You can view the whole workflow in my <a href="https://github.com/lots-of-things/gpt2-bert-reddit-bot">github repo</a> for the project or in my <a href="https://drive.google.com/open?id=1by97qt6TBpi_o644uKnYmQE5AJB1ybMK">Google Drive folder</a>.  Please <a href="https://github.com/lots-of-things/gpt2-bert-reddit-bot/issues">submit issues</a> to the project if you think things can be explained more clearly, or if you find bugs.</p>
 
 <h4>Last Step: Chuckle with Amusement</h4>
 <p>
-    I submitted all my replies under the reddit account of <a href="">tupperware-party</a>.  You can check out some highlights from the model output <a href="/2020/02/combining-gpt-2-and-bert/#replies">here</a> or see the <a href="https://www.reddit.com/user/tupperware-party/comments/">full list of comments</a> to inspect everything the system outputted.  I've also shared a folder on Google Drive that shares the intermediate files with all of the candidate responses and their scores from the BERT models.
+    I submitted all my replies under the reddit account of <a href="https://www.history.com/news/tupperware-parties-brownie-wise">tupperware-party</a> (which hopefully won't get shut down for trademark shit).  You can check out some highlights from the model output <a href="/2020/02/combining-gpt-2-and-bert/#replies">here</a> or see the <a href="https://www.reddit.com/user/tupperware-party/comments/">full list of comments</a> to inspect everything the system outputted.  I've also shared a <a href="https://drive.google.com/drive/folders/1a2MhIqL6jvyJ-3bGCXAweLbYtNXSUei7?usp=sharing">folder on Google Drive</a> with all of the candidate responses and their scores from the BERT models if you want to take a look.
 </p>
 
 <p>
-    I know there is definitely some ethical considerations when creating something like this.  You can read my thoughts on that <a href="/2020/02/combining-gpt-2-and-bert/#ethics">here</a>.  In short, please try to use this responsibly and spread the word that we are living in a world where this is possible.  And if you have a problem, tell me on <a href="https://twitter.com/bonkerfield">Twitter</a>.  I swear it'll really be me who responds.
+    Finally, I know there are definitely some ethical considerations when creating something like this.  You can read my thoughts on that <a href="/2020/02/combining-gpt-2-and-bert/#ethics">here</a>.  In short, please try to use this responsibly and spread the word that we are living in a world where this is possible.  And if you have a problem, tell me on <a href="https://twitter.com/bonkerfield">Twitter</a>.  I swear it'll really be me who responds.
 </p>
