@@ -9,19 +9,19 @@ tags:
 ---
 
 <p>
-    Last month, I experimented with building a reddit comment bot that generated natural language replies by combining two pre-trained deep learning models: <a href="http://jalammar.github.io/illustrated-gpt2/">GPT-2</a> and <a hrf="http://jalammar.github.io/illustrated-bert/">BERT</a>. I wrote <a href="/2020/02/combining-gpt-2-and-bert/">another post</a> on the motivation and background, but here I wanted to give a step by step walkthrough so others can work with what I've built.
+    Last month, I experimented with building a reddit comment bot that generated natural language replies by combining two pre-trained deep learning models: <a href="http://jalammar.github.io/illustrated-gpt2/">GPT-2</a> and <a hrf="http://jalammar.github.io/illustrated-bert/">BERT</a>. I wrote <a href="/2020/02/combining-gpt-2-and-bert/">another post</a> on the motivation and background, but here I wanted to give a step by step walkthrough so others can work with what I've built.  If you prefer, you can jump straight to the <a href="https://github.com/lots-of-things/gpt2-bert-reddit-bot">project code</a>.
 </p>
 
 <h4>Model overview</h4>
 
-<p>Before getting into the nitty-gritty, I wanted to give a gneral overview of the process that I'mm going to be using.  There are quite a few steps and I don't want it to get too confusing.  Check out <a href="/2020/02/combining-gpt-2-and-bert/">my previous post</a> for an even higher-level architecture overview.  Here are the steps I'll be explaining in this post.</p>
+<p>Before getting into the nitty-gritty, I wanted to give a general overview of the process that I'm going to be using.  There are quite a few steps and I don't want it to get too confusing.  Check out <a href="/2020/02/combining-gpt-2-and-bert/">my previous post</a> for an even higher-level architecture overview.  Here are the steps I'll be explaining in this post.</p>
 
 <ul>
     <li>
         step 0: get some reddit comment data from your favorite subreddits and format into strings that look like "comment [SEP] reply"
     </li>
     <li>
-        step 1: fine tune GPT-2 to generate reddit "comment [SEP] reply" text   
+        step 1: fine tune GPT-2 to generate reddit text in the format "comment [SEP] reply"   
     </li>
     <li>
     step 2: fine tune two BERT classifiers to:
@@ -37,7 +37,7 @@ tags:
     step 4: use fine-tuned GPT2 to generate many replies for each comment  
     </li>
     <li>
-    step 5: pass the generated replies to both of the BERT models to generate a prediction of realness and upvotes  
+    step 5: pass the generated replies to two BERT models to generate a prediction of realisticness and number of upvotes
     </li>
     <li>
     step 6: use some criteria for choosing which replies to submit  
@@ -50,13 +50,13 @@ tags:
     </li>
 </ul>
 
-<h4></h4>
+<h4>Getting lots of reddit comment data</h4>
 <p>
-    As with any machine learning project, nothing can start until you have data from which to train your algorithm.
+    As with any machine learning project, nothing can start until you have data from which to train your model.
 </p>
 
 <p>
-    The data I used to fine-tune the models came from a <a href="https://bigquery.cloud.google.com/dataset/fh-bigquery:reddit_comments?pli=1">large database of previously retrieved reddit comments</a>.  There is an <a href="https://www.reddit.com/r/bigquery/wiki/datasets">ongoing project</a> that scrapes many sites around the web stores them in a bunch of Google BigQuery tables.  To me, it's very surprising that I couldn't find a central  page about such a big project, but I used a few <a href="https://www.reddit.com/r/bigquery/comments/5z957b/more_than_3_billion_reddit_comments_loaded_on/">reddit</a> and <a href="https://towardsdatascience.com/bigquery-without-a-credit-card-discover-learn-and-share-199e08d4a064">medium</a> posts to piece together the format of the queries I'd need.  
+    The data I used to fine-tune the models came from a <a href="https://bigquery.cloud.google.com/dataset/fh-bigquery:reddit_comments?pli=1">large database of previously retrieved reddit comments</a>.  There is an <a href="https://www.reddit.com/r/bigquery/wiki/datasets">ongoing project</a> that scrapes many sites around the web and stores them in a bunch of Google BigQuery tables.  To me, it's very surprising that I couldn't find a central  page about such a big project, but I used a few <a href="https://www.reddit.com/r/bigquery/comments/5z957b/more_than_3_billion_reddit_comments_loaded_on/">reddit</a> and <a href="https://towardsdatascience.com/bigquery-without-a-credit-card-discover-learn-and-share-199e08d4a064">medium</a> posts to piece together the format of the queries I'd need.  
 </p>
 
 <p>
@@ -89,20 +89,19 @@ where b.body is not null
 
 
 <p>
-    I used the <a href="https://cloud.google.com/bigquery/docs/reference/libraries">bigquery python API</a> to automate the generation of the queries I needed to download the data across a number of months in 2017 and 2018.  This script iterated over the periods I needed and downloaded them to local disk into the <code>raw_data/</code> folder.
+    I used the <a href="https://cloud.google.com/bigquery/docs/reference/libraries">bigquery python API</a> to automate the generation of the queries I needed to download the data across a number of months in 2017 and 2018.  <a href="">This script</a> iterated over the time periods I needed and downloaded them to local disk in the <code>raw_data/</code> folder.
 </p>
 
 <p>
-    In the end, I'm going to want to be able to prime the algorithm with a comment and generate a reply. To do this, I needed to reformat the data to contain both parts separated by a special <code>[SEP]</code> string to let the algorithm know which part is which.  Each line of training data file will look like the following.
+    In the end, I'm going to want to be able to prime the GPT-2 network with a comment and generate a reply. To do this, I needed to reformat the data to contain both parts separated by a special <code>[SEP]</code> string to let the algorithm know which part is which.  Each line of training data file will look like the following.
 </p>
 <pre>
     "a bunch of primary comment text [SEP] all of the reply text"
 </pre>
 
 <p>
-    After I train the model with this format, I can then feed the trained model a string like <code>"some new primary comment text" [SEP]</code>, and it will start to generate the remaining <code>"some new reply"</code> that it thinks fits best based on the training data. I'll explain in more detail below about how to feed this kind of data into the GPT-2 fine-tuning script.  For now, you can use <a href="">this script</a> to convert the data into the format that GPT-2 fine-tuning will need and save it as <code>gpt2_finetune.csv</code> file that I generated in the previous step.The script saves 
+    After I train the model with this format, I can then feed the trained model a string like <code>"some new primary comment text" [SEP]</code>, and it will start to generate the remaining <code>"some new reply"</code> that it thinks fits best based on the training data. I'll explain in more detail below about how to feed this kind of data into the GPT-2 fine-tuning script.  For now, you can use <a href="">this script</a> to convert the data into the format that GPT-2 fine-tuning will need and save it as <code>gpt2_finetune.csv</code> 
 </p>
-
 
 
 
@@ -112,19 +111,19 @@ where b.body is not null
     The major advantage of using GPT-2 is that it has been pre-trained on a massive dataset of millions of pages of text on the internet.  However, if you were to use GPT-2 straight "out-of-the-box," you'd end up generating text that could look like anything you might find on the internet.  Sometimes it'll generate a news article, sometimes it'll generate a cooking blog recipe, sometimes it'll generate a rage-filled facebook post.  You don't really have too much control, and therefore, you won't really be able to use it to effectively generate reddit comments.
 </p>
 <p>
-    To overcome this issue, I needed to "fine-tune" the pre-trained model.  Fine-tuning means taking a trained model, and then continung to train it only on the exact type of data that you want to use it on.  This process (somewhat magically) allows you to take a lot of the general information about language from the big pretrained model, and sculpt that down with all the specific information about the exact output format you are trying to generate.
+    To overcome this issue, I needed to "fine-tune" the pre-trained model.  <a href="https://stats.stackexchange.com/questions/331369/what-is-meant-by-fine-tuning-of-neural-network">Fine-tuning</a> means taking a model that was already trained on a big dataset, and then continung to train it on just the specific type of data that you want to use it on.  This process (somewhat magically) allows you to take a lot of the general information about language from the big pretrained model, and sculpt that down with all the specific information about the exact output format you are trying to generate.
 </p>
 
 <p>
-    Fine-tuning is a standard process, but it still isn't super easy to do.  I'm not an expert deep learning researcher, but fortunately for me, a really <a href="https://minimaxir.com/">wonderful expert</a> had already built some incredibly simple wrapper utilities called <a href="https://github.com/minimaxir/gpt-2-simple">gpt-simple</a> for make fine-tuning GPT-2, well... simple.
+    Fine-tuning is a standard process, but it still isn't super easy to do.  I'm not an expert deep learning researcher, but fortunately for me, a really <a href="https://minimaxir.com/">wonderful expert</a> had already built some incredibly simple wrapper utilities called <a href="https://github.com/minimaxir/gpt-2-simple">gpt-2-simple</a> for make fine-tuning GPT-2, well... simple.
 </p>
 
 <p>
-    The best part is that Max Woolf, the author of gpt2-simple, even set up a <a href="https://colab.research.google.com/drive/1VLG8e7YSEwypxU-noRNhsv5dW4NfTGce">Google Colab notebook</a> that walked through fine-tuning.  In case you haven't heard, <a href="https://colab.research.google.com/notebooks/welcome.ipynb">Google Colab</a> is an amazing FREE (<a href="https://meta.stackexchange.com/questions/21932/what-does-the-term-and-free-as-in-free-beer-mean">as in beer</a>) resource that lets you <a href="https://towardsdatascience.com/getting-started-with-google-colab-f2fff97f594c">run a python jupyter notebook</a> on a Google GPU server.  Full disclosure, I am officially a lifetime fanboy of Google for making a free tier on Google App Engine, BigQuery, and Google Colab*. 
+    The best part is that the author of gpt-2-simple, even set up a <a href="https://colab.research.google.com/drive/1VLG8e7YSEwypxU-noRNhsv5dW4NfTGce">Google Colab notebook</a> that walked through fine-tuning.  In case you haven't heard, <a href="https://colab.research.google.com/notebooks/welcome.ipynb">Google Colab</a> is an amazing FREE (<a href="https://meta.stackexchange.com/questions/21932/what-does-the-term-and-free-as-in-free-beer-mean">as in beer</a>) resource that lets you <a href="https://towardsdatascience.com/getting-started-with-google-colab-f2fff97f594c">run a python jupyter notebook</a> on a Google GPU server.  Full disclosure, I am officially a lifetime fanboy of Google for making a free tier on Google App Engine, BigQuery, and Google Colab. 
 </p>
 
 <p>
-    You can follow along with Max's <a href="https://colab.research.google.com/drive/1VLG8e7YSEwypxU-noRNhsv5dW4NfTGce">tutorial notebook</a> to learn all about how to fine-tune a GPT-2 model with gpt2-simple.  I took all of that code and condensed and reformatted it a little to make my own <a href="">gpt-2 fine tuning notebook</a> that runs off the <code>gpt2_finetune.csv</code> file that I generated in the previous step.  Just like in Max's tutorial, you need to give the notebook permission to read and write from your Google Drive.  The model is then saved into you Google Drive for reloading from later scripts.
+    You can follow along with the <a href="https://colab.research.google.com/drive/1VLG8e7YSEwypxU-noRNhsv5dW4NfTGce">tutorial notebook</a> to learn all about how to fine-tune a GPT-2 model with gpt-2-simple.  For my use case, I took all of that code and condensed and reformatted it a little to make my own <a href="">gpt-2 fine tuning notebook</a> that runs off the <code>gpt2_finetune.csv</code> file that I generated in the previous step.  Just like in the original tutorial, you need to give the notebook permission to read and write from your Google Drive.  The model is then saved into you Google Drive for reloading from later scripts.
 </p>
 
 
@@ -132,7 +131,10 @@ where b.body is not null
 <h4>Training BERT models for fake detection and upvote prediction</h4>
 
 <p>
-    Even after fine-tuning, the output of this model, while normally somewhat reasonable, is often pretty weird. To improve the quality of responses, I create a whole bunch of candidate responses using the GPT2 generator above, and then I use another model to filter out which are the best replies I could release.  To determine the best, I actually want to do two things:
+    Even after fine-tuning, the output of this model, while normally somewhat reasonable, is often pretty <a href="/2020/02/combining-gpt-2-and-bert/#gpt2shortcoming">weird</a>. To improve the quality of responses, I adapted the concept of GANs to create another meta-model that is able to throw out all the really weird replies.  So I use GPT-2 to generate a 10+ candidate responses for every comment, and then I use another model to filter out which are the best replies I could release.  
+</p>
+<p>
+    To determine the best, I actually want to do two things:
 </p>
 
 <ul>
@@ -141,49 +143,23 @@ where b.body is not null
 </ul>
 
 <p>
-    
+    So in order to do this, I have to train two classifiers, one to predict the probability of being a real reply and another to predict the probability of being a high scoring reply.  There are lots of ways to perform this prediction task, but one of the most successful language models recently built for this kind of thing is another deep learning architecture called <a href="https://searchengineland.com/welcome-bert-google-artificial-intelligence-for-understanding-search-queries-323976">Bidirectional Encoder Representations from Transformers</a> or BERT. One big benefit of using this model is that, similar to GPT-2, researchers have pre-trained networks on very large corpora of data that I would never have the financial means to access.
 </p>
 
 <p>
-    Again, I'm not the biggest expert in working with deep learning infrastructure so luckily, another brilliant soul wrote a tutorial for fine-tuning text classifier models using a pretrained BERT network.  And not only that, by some miracle, they wrote their tutorial in a Google Colab notebook too!  So all I had to do was combine the two.
+    Again, I'm not the biggest expert in working with deep learning infrastructure so luckily, other <a href="https://www.tensorflow.org/hub">brilliant tensorflowhub experts</a> wrote a <a href="https://colab.research.google.com/github/tensorflow/tpu/blob/master/tools/colab/bert_finetuning_with_cloud_tpus.ipynb">Google Colab tutorial</a> for fine-tuning text classifier models using a pretrained BERT network.  So all I had to do was combine the two with some glue.
 </p>
 
 <p>
-    In an ideal world, I would have combined the two scripts into one that could be run from end to end.  Unfortunately, a quirk in the way the designers immplemented the gpt2-simple package made it impossible to have to computation graphs instantiated in the same environment.  Instead, I just stored the intermediate artifacts in csv files on my google drive.  So the protocol is to run the GPT2 generator notebook to generate a batch of candidate replies, and then run the BERT discriminator models to 
+    I made <a href="">yet another Colab notebook</a> to handle the fine-tuning of both the realisticness and upvote classifiers.  As part of the training I also did some evaluation of the model's performance on some cross-validation data.
 </p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-https://minimaxir.com/2019/09/howto-gpt2/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h6>Discriminator model performance</h6>
+<h5>BERT Discriminator model performance</h5>
 <p>
-    The realism model was trained just like in a traditional GAN where I had my model make thousands of fakes and then created a dataset that combined my fakes with thousands of real comments.  The model actually has amazingly high distinguishing power between real and fake comments.
+    The realisticness model was trained just like in a traditional GAN where I had my model make thousands of fakes and then created a dataset that combined my fakes with thousands of real comments.  The model actually has amazingly high distinguishing power between real and fake comments.
 </p>
 
+<h6>BERT Realisticness Model Metrics</h6>
 <pre>
 'auc': 0.9933777,
 'eval_accuracy': 0.9986961,
@@ -201,7 +177,7 @@ https://minimaxir.com/2019/09/howto-gpt2/
 </p>
 
 <p>
-    To predict how many upvotes a reply will get, I built another model in a similar way. This time the model was just trained on a dataset containing a bunch of real reddit comments and how many upvotes they got.  
+    To predict how many upvotes a reply will get, I built another model in a similar way. This time the model was just trained on a dataset containing a bunch of real reddit comments and how many upvotes they got.
 </p>
 
 <p>
@@ -209,41 +185,57 @@ https://minimaxir.com/2019/09/howto-gpt2/
 </p>
 
 <img title="comment score prediction ROC curve" src="/assets/images/2020/bert_upvote_predict.png" alt="BERT score prediction ROC curve"/>
+<h6 style='text-align:center;'>ROC curve for BERT based upvote prediction </h6>
 
 
+<p>
+    Buoyed by the model cross-valildation performance, I was excited to hook it up to a real-time commenting system and start shipping my bot's thoughts!
+</p>
 
 
+<h4>Pulling real-time comments with PRAW</h4>
+<p>
+    Although I could generate the training sets using data on bigquery, most of that data is actually a couple of months old.  Replying to months old comments is a very non-human thing to do on social media sites so it was important to be able to pull down fresh data from reddit somehow.
+</p>
 
+<p>
+    I used the <a href="https://praw.readthedocs.io/en/latest/">praw library</a> along with the following snippet to get all comments from the top 5 "rising" posts data in a couple of subreddits that I thought would produce some interesting responses.
+</p>
 
+<pre>
+for subreddit_name in ['sciencefiction',
+                       'artificial',
+                       'scifi',
+                       'BurningMan',
+                       'writing',
+                       'MachineLearning',
+                       'randonauts']:
+  subreddit = reddit.subreddit(subreddit_name)
 
+  for h in subreddit.rising(limit=5):
+</pre>
 
+<p>
+    With that data I could run each comment through the generator and discriminators to produce a reply.
+</p>
 
+<h4>Running the generator and discriminators</h4>
+<p>
+    Finally, I just had to build something to reload all the fine-tuned models and pass the new reddit comments through them to get replies. In an ideal world, I would have run both the GPT-2 and the BERT models in one script that could be run from end to end.  Unfortunately, a quirk in the way the designers immplemented the gpt2-simple package made it impossible to have two computation graphs <a href="https://github.com/minimaxir/gpt-2-simple/issues/130">instantiated in the same environment</a>.  
+</p>
 
+<p>
+    So instead, I just ran the <a href="">GPT-2 generator notebook</a> on its own to download new comments, generate a batch of candidate replies, and store themin csv files on my google drive.
+    Then, I reloaded the candidates in a separate <a href="">BERT discriminator notebook</a>to pick the best replies and submit them back to reddit.
+</p>
 
+<p>You can view the whole workflow in my <a href="https://github.com/lots-of-things/gpt2-bert-reddit-bot">github repo</a> for the project.  Please <a href="https://github.com/lots-of-things/gpt2-bert-reddit-bot/issues">submit issues</a> to the project if you think things can be explained more clearly, or if you find bugs.</p>
 
+<h4>Last Step: Chuckle with Amusement</h4>
+<p>
+    I submitted all my replies under the reddit account of <a href="">tupperware-party</a>.  You can check out some highlights from the model output <a href="/2020/02/combining-gpt-2-and-bert/#replies">here</a> or see the <a href="https://www.reddit.com/user/tupperware-party/comments/">full list of comments</a> to inspect everything the system outputted.  I've also shared a folder on Google Drive that shares the intermediate files with all of the candidate responses and their scores from the BERT models.
+</p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-<h4>Automating comments with PRAW</h4>
-
-
-
-<h4>Ethicality of impersonating humans</h4>
-
-
-
-
-
-<p><small>
-    * I know someday they will take over and destroy the world, but I still think they (along with Github) have done more good just by making these functions freely available for young tinkerers to explore.
-</small></p>
+<p>
+    I know there is definitely some ethical considerations when creating something like this.  You can read my thoughts on that <a href="/2020/02/combining-gpt-2-and-bert/#ethics">here</a>.  In short, please try to use this responsibly and spread the word that we are living in a world where this is possible.  And if you have a problem, tell me on <a href="https://twitter.com/bonkerfield">Twitter</a>.  I swear it'll really be me who responds.
+</p>
