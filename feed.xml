@@ -5,9 +5,438 @@
     <description>personal information identity spacetime map</description>
     <link>https://bonkerfield.org</link>
     <atom:link href="https://bonkerfield.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 30 Jan 2020 16:19:06 -0800</pubDate>
-    <lastBuildDate>Thu, 30 Jan 2020 16:19:06 -0800</lastBuildDate>
+    <pubDate>Wed, 05 Feb 2020 21:04:19 -0800</pubDate>
+    <lastBuildDate>Wed, 05 Feb 2020 21:04:19 -0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>How to build a convincing reddit personality with GPT2 and BERT</title>
+        <description>&lt;p&gt;
+    Last month, I experimented with building a reddit comment bot that generated natural language replies by combining two pre-trained deep learning models: &lt;a href=&quot;http://jalammar.github.io/illustrated-gpt2/&quot;&gt;GPT-2&lt;/a&gt; and &lt;a hrf=&quot;http://jalammar.github.io/illustrated-bert/&quot;&gt;BERT&lt;/a&gt;. I wrote &lt;a href=&quot;/2020/02/combining-gpt-2-and-bert/&quot;&gt;another post&lt;/a&gt; on the motivation and background, but here I wanted to give a step by step walkthrough so others can work with what I've built.  If you prefer, you can jump straight to the &lt;a href=&quot;https://github.com/lots-of-things/gpt2-bert-reddit-bot&quot;&gt;project code&lt;/a&gt;.
+&lt;/p&gt;
+
+&lt;h4&gt;Model overview&lt;/h4&gt;
+
+&lt;p&gt;Before getting into the nitty-gritty, I wanted to give a general overview of the process that I'm going to be using.  There are quite a few steps and I don't want it to get too confusing.  Check out &lt;a href=&quot;/2020/02/combining-gpt-2-and-bert/&quot;&gt;my previous post&lt;/a&gt; for an even higher-level architecture overview.  Here are the steps I'll be explaining in this post.&lt;/p&gt;
+
+&lt;ul&gt;
+    &lt;li&gt;
+        step 0: get some reddit comment data from your favorite subreddits and format into strings that look like &quot;comment [SEP] reply&quot;
+    &lt;/li&gt;
+    &lt;li&gt;
+        step 1: fine tune GPT-2 to generate reddit text in the format &quot;comment [SEP] reply&quot;   
+    &lt;/li&gt;
+    &lt;li&gt;
+    step 2: fine tune two BERT classifiers to:
+    &lt;ul&gt;
+        &lt;li&gt;a: differentiate real replies from GPT-2 generated ones&lt;/li&gt;
+        &lt;li&gt;b: predict how many upvotes comments will get&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+    step 3: use praw to download current comments  
+    &lt;/li&gt;
+    &lt;li&gt;
+    step 4: use fine-tuned GPT2 to generate many replies for each comment  
+    &lt;/li&gt;
+    &lt;li&gt;
+    step 5: pass the generated replies to two BERT models to generate a prediction of realisticness and number of upvotes
+    &lt;/li&gt;
+    &lt;li&gt;
+    step 6: use some criteria for choosing which replies to submit  
+    &lt;/li&gt;
+    &lt;li&gt;
+    step 7: use praw to submit the chosen comments
+    &lt;/li&gt;
+    &lt;li&gt;
+    step 8: chuckle with amusement
+    &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Getting lots of reddit comment data&lt;/h4&gt;
+&lt;p&gt;
+    As with any machine learning project, nothing can start until you have data from which to train your model.
+&lt;/p&gt;
+
+&lt;p&gt;
+    The data I used to fine-tune the models came from a &lt;a href=&quot;https://bigquery.cloud.google.com/dataset/fh-bigquery:reddit_comments?pli=1&quot;&gt;large database of previously retrieved reddit comments&lt;/a&gt;.  There is an &lt;a href=&quot;https://www.reddit.com/r/bigquery/wiki/datasets&quot;&gt;ongoing project&lt;/a&gt; that scrapes many sites around the web and stores them in a bunch of Google BigQuery tables.  To me, it's very surprising that I couldn't find a central  page about such a big project, but I used a few &lt;a href=&quot;https://www.reddit.com/r/bigquery/comments/5z957b/more_than_3_billion_reddit_comments_loaded_on/&quot;&gt;reddit&lt;/a&gt; and &lt;a href=&quot;https://towardsdatascience.com/bigquery-without-a-credit-card-discover-learn-and-share-199e08d4a064&quot;&gt;medium&lt;/a&gt; posts to piece together the format of the queries I'd need.  
+&lt;/p&gt;
+
+&lt;p&gt;
+    To start, I just downloaded a bunch of comment and reply information for the subreddits on 'writing', 'scifi', 'sciencefiction', 'MachineLearning', 'philosophy', 'cogsci', 'neuro', and 'Futurology'. This query works to pull the comments for a specific year and month (&lt;code&gt;{ym}&lt;/code&gt;) from bigquery.
+&lt;/p&gt;
+
+&lt;pre&gt;
+SELECT s.subreddit as subreddit, 
+s.selftext as submission, a.body AS comment, b.body as reply, 
+s.score as submission_score, a.score as comment_score, b.score as reply_score, 
+s.author as submission_author, a.author as comment_author, b.author as reply_author
+FROM `fh-bigquery.reddit_comments.{ym}` a
+LEFT JOIN `fh-bigquery.reddit_comments.{ym}` b 
+ON CONCAT('t1_',a.id) = b.parent_id
+LEFT JOIN  `fh-bigquery.reddit_posts.{ym}` s
+ON CONCAT('t3_',s.id) = a.parent_id
+where b.body is not null 
+  and s.selftext is not null and s.selftext != ''
+  and b.author != s.author
+  and b.author != a.author
+  and s.subreddit IN ('writing', 
+                      'scifi', 
+                      'sciencefiction', 
+                      'MachineLearning', 
+                      'philosophy', 
+                      'cogsci', 
+                      'neuro', 
+                      'Futurology')
+&lt;/pre&gt;
+
+
+&lt;p&gt;
+    I used the &lt;a href=&quot;https://cloud.google.com/bigquery/docs/reference/libraries&quot;&gt;bigquery python API&lt;/a&gt; to automate the generation of the queries I needed to download the data across a number of months in 2017 and 2018.  &lt;a href=&quot;https://github.com/lots-of-things/gpt2-bert-reddit-bot/blob/master/get_reddit_from_gbq.py&quot;&gt;This script&lt;/a&gt; iterated over the time periods I needed and downloaded them to local disk in the &lt;code&gt;raw_data/&lt;/code&gt; folder.
+&lt;/p&gt;
+
+&lt;p&gt;
+    In the end, I'm going to want to be able to prime the GPT-2 network with a comment and generate a reply. To do this, I needed to reformat the data to contain both parts separated by a special &lt;code&gt;[SEP]&lt;/code&gt; string to let the algorithm know which part is which.  Each line of training data file will look like the following.
+&lt;/p&gt;
+&lt;pre&gt;
+    &quot;a bunch of primary comment text [SEP] all of the reply text&quot;
+&lt;/pre&gt;
+
+&lt;p&gt;
+    After I train the model with this format, I can then feed the trained model a string like &lt;code&gt;&quot;some new primary comment text&quot; [SEP]&lt;/code&gt;, and it will start to generate the remaining &lt;code&gt;&quot;some new reply&quot;&lt;/code&gt; that it thinks fits best based on the training data. I'll explain in more detail below about how to feed this kind of data into the GPT-2 fine-tuning script.  For now, you can use &lt;a href=&quot;https://github.com/lots-of-things/gpt2-bert-reddit-bot/blob/master/prep_data.py&quot;&gt;this script&lt;/a&gt; to convert the data into the format that GPT-2 fine-tuning will need and save it as &lt;code&gt;gpt2_finetune.csv&lt;/code&gt; 
+&lt;/p&gt;
+
+
+
+
+&lt;h4&gt;Fine tuning GPT-2 and generating text for reddit&lt;/h4&gt;
+&lt;p&gt;
+    The major advantage of using GPT-2 is that it has been pre-trained on a massive dataset of millions of pages of text on the internet.  However, if you were to use GPT-2 straight &quot;out-of-the-box,&quot; you'd end up generating text that could look like anything you might find on the internet.  Sometimes it'll generate a news article, sometimes it'll generate a cooking blog recipe, sometimes it'll generate a rage-filled facebook post.  You don't really have too much control, and therefore, you won't really be able to use it to effectively generate reddit comments.
+&lt;/p&gt;
+&lt;p&gt;
+    To overcome this issue, I needed to &quot;fine-tune&quot; the pre-trained model.  &lt;a href=&quot;https://stats.stackexchange.com/questions/331369/what-is-meant-by-fine-tuning-of-neural-network&quot;&gt;Fine-tuning&lt;/a&gt; means taking a model that was already trained on a big dataset, and then continuing to train it on just the specific type of data that you want to use it on.  This process (somewhat magically) allows you to take a lot of the general information about language from the big pretrained model, and sculpt that down with all the specific information about the exact output format you are trying to generate.
+&lt;/p&gt;
+
+&lt;p&gt;
+    Fine-tuning is a standard process, but it still isn't super easy to do.  I'm not an expert deep learning researcher, but fortunately for me, a really &lt;a href=&quot;https://minimaxir.com/&quot;&gt;wonderful expert&lt;/a&gt; had already built some incredibly simple wrapper utilities called &lt;a href=&quot;https://github.com/minimaxir/gpt-2-simple&quot;&gt;gpt-2-simple&lt;/a&gt; for make fine-tuning GPT-2, well... simple.
+&lt;/p&gt;
+
+&lt;p&gt;
+    The best part is that the author of gpt-2-simple, even set up a &lt;a href=&quot;https://colab.research.google.com/drive/1VLG8e7YSEwypxU-noRNhsv5dW4NfTGce&quot;&gt;Google Colab notebook&lt;/a&gt; that walked through fine-tuning.  In case you haven't heard, &lt;a href=&quot;https://colab.research.google.com/notebooks/welcome.ipynb&quot;&gt;Google Colab&lt;/a&gt; is an amazing FREE (&lt;a href=&quot;https://meta.stackexchange.com/questions/21932/what-does-the-term-and-free-as-in-free-beer-mean&quot;&gt;as in beer&lt;/a&gt;) resource that lets you &lt;a href=&quot;https://towardsdatascience.com/getting-started-with-google-colab-f2fff97f594c&quot;&gt;run a python jupyter notebook&lt;/a&gt; on a Google GPU server.  Full disclosure, I am officially a lifetime fanboy of Google for making a free tier on Google App Engine, BigQuery, and Google Colab. 
+&lt;/p&gt;
+
+&lt;p&gt;
+    You can follow along with the &lt;a href=&quot;https://colab.research.google.com/drive/1VLG8e7YSEwypxU-noRNhsv5dW4NfTGce&quot;&gt;tutorial notebook&lt;/a&gt; to learn all about how to fine-tune a GPT-2 model with gpt-2-simple.  For my use case, I took all of that code and condensed and reformatted it a little to make my own &lt;a href=&quot;https://colab.research.google.com/drive/1VyOU81rsPsP_8WSKq-VZfB8TcMkPszG-&quot;&gt;gpt-2 fine tuning notebook&lt;/a&gt; that runs off the &lt;code&gt;gpt2_finetune.csv&lt;/code&gt; file that I generated in the previous step.  Just like in the original tutorial, you need to give the notebook permission to read and write from your Google Drive.  The model is then saved into you Google Drive for reloading from later scripts.
+&lt;/p&gt;
+
+
+
+&lt;h4&gt;Training BERT models for fake detection and upvote prediction&lt;/h4&gt;
+
+&lt;p&gt;
+    Even after fine-tuning, the output of this model, while normally somewhat reasonable, is often pretty &lt;a href=&quot;/2020/02/combining-gpt-2-and-bert/#gpt2shortcoming&quot;&gt;weird&lt;/a&gt;. To improve the quality of responses, I adapted the concept of GANs to create another meta-model that is able to throw out all the really weird replies.  So I use GPT-2 to generate a 10+ candidate responses for every comment, and then I use another model to filter out which are the best replies I could release.  
+&lt;/p&gt;
+&lt;p&gt;
+    To determine the best, I actually want to do two things:
+&lt;/p&gt;
+
+&lt;ul&gt;
+    &lt;li&gt;Filter out unrealistic replies&lt;/li&gt;
+    &lt;li&gt;For the realistic replies, pick the one that I predict will have the most upvotes&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;
+    So in order to do this, I have to train two classifiers, one to predict the probability of being a real reply and another to predict the probability of being a high scoring reply.  There are lots of ways to perform this prediction task, but one of the most successful language models recently built for this kind of thing is another deep learning architecture called &lt;a href=&quot;https://searchengineland.com/welcome-bert-google-artificial-intelligence-for-understanding-search-queries-323976&quot;&gt;Bidirectional Encoder Representations from Transformers&lt;/a&gt; or BERT. One big benefit of using this model is that, similar to GPT-2, researchers have pre-trained networks on very large corpora of data that I would never have the financial means to access.
+&lt;/p&gt;
+
+&lt;p&gt;
+    Again, I'm not the biggest expert in working with deep learning infrastructure so luckily, other &lt;a href=&quot;https://www.tensorflow.org/hub&quot;&gt;brilliant tensorflowhub experts&lt;/a&gt; wrote a &lt;a href=&quot;https://colab.research.google.com/github/tensorflow/tpu/blob/master/tools/colab/bert_finetuning_with_cloud_tpus.ipynb&quot;&gt;Google Colab tutorial&lt;/a&gt; for fine-tuning text classifier models using a pretrained BERT network.  So all I had to do was combine the two with some glue.
+&lt;/p&gt;
+
+&lt;p&gt;
+    In the next section, I'll walk through the fine-tuning and some model evaluation, but if you'd like to get a jumpstart and don't want to bother fine-tuning yourself, you can download the three fine-tuned models from &lt;a href=&quot;https://drive.google.com/open?id=1GmGNqihV0nCQ6evLBmopOhjups_RESv-&quot;&gt;here&lt;/a&gt;, &lt;a href=&quot;https://drive.google.com/open?id=1-Bov5PtPrP2DvFw4yD-lxp2wTjGw0bwB&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://drive.google.com/file/d/1DTfYUxXEz80S0baCb4xPSrzx85F0FVTP/view?usp=sharing&quot;&gt;here&lt;/a&gt;.
+&lt;/p&gt;
+
+&lt;h5&gt;BERT Discriminator model performance&lt;/h5&gt;
+&lt;p&gt;
+    The realisticness model was trained just like in a traditional GAN. I had &lt;a href=&quot;https://drive.google.com/open?id=1RLJz_rJmz0UVdRikRGQrYF9TbLMIrrJ8&quot;&gt;another Colab notebook&lt;/a&gt; generate thousands of fakes and then created a dataset that combined my fakes with thousands of real comments.  I then fed that dataset into a &lt;a href=&quot;https://drive.google.com/open?id=1aGswP0SJmdP6GNKEuKMJ5AhP8epNOQW_&quot;&gt;BERT realisticness fine-tuning notebook&lt;/a&gt; to train and evaluate. The model actually has amazingly high distinguishing power between real and fake comments.
+&lt;/p&gt;
+
+&lt;h6&gt;BERT Realisticness Model Metrics&lt;/h6&gt;
+&lt;pre&gt;
+'auc': 0.9933777,
+'eval_accuracy': 0.9986961,
+'f1_score': 0.99929225,
+'false_negatives': 3.0,
+'false_positives': 11.0,
+'precision': 0.9988883,
+'recall': 0.99969655,
+'true_negatives': 839.0,
+'true_positives': 9884.0
+&lt;/pre&gt;
+
+&lt;p&gt;
+    Going forward, every reply that the generator creates can be run through this BERT discriminator to get a score from 0 to 1 based on how realistic it is.  I then just filter to only return comments that are predicted to be the most likely to be real.
+&lt;/p&gt;
+
+&lt;p&gt;
+    To predict how many upvotes a reply will get, I built another model in a &lt;a href=&quot;https://drive.google.com/open?id=1vXJjQbBZZ0Jo-LvcwRaNzCSAgAVem1cC&quot;&gt;similar way&lt;/a&gt;. This time the model was just trained just on a dataset containing a bunch of real reddit comments to predict how many upvotes they actually got. 
+&lt;/p&gt;
+
+&lt;p&gt;
+    This model also had surprisingly high predictive accuracy.  This &lt;a href=&quot;https://www.dataschool.io/roc-curves-and-auc-explained/&quot;&gt;ROC curve&lt;/a&gt; shows that we can get a lot of true positives correct without having too many false positives. For more on what true positive and false positive means see &lt;a href=&quot;https://developers.google.com/machine-learning/crash-course/classification/true-false-positive-negative&quot;&gt;this article&lt;/a&gt;.  
+&lt;/p&gt;
+
+&lt;img title=&quot;comment score prediction ROC curve&quot; src=&quot;/assets/images/2020/bert_upvote_predict.png&quot; alt=&quot;BERT score prediction ROC curve&quot;/&gt;
+&lt;h6 style='text-align:center;'&gt;ROC curve for BERT based upvote prediction &lt;/h6&gt;
+
+
+&lt;p&gt;
+    Buoyed by the model cross-validation performance, I was excited to hook it up to a real-time commenting system and start shipping my bot's thoughts!
+&lt;/p&gt;
+
+
+&lt;h4&gt;Pulling real-time comments with PRAW&lt;/h4&gt;
+&lt;p&gt;
+    Although I could generate the training sets using data on bigquery, most of that data is actually a couple of months old.  Replying to months old comments is a very non-human thing to do on social media sites so it was important to be able to pull down fresh data from reddit somehow.
+&lt;/p&gt;
+
+&lt;p&gt;
+    Fortunately, I could use the &lt;a href=&quot;https://praw.readthedocs.io/en/latest/&quot;&gt;praw library&lt;/a&gt; along with the following snippet to get all comments from the top 5 &quot;rising&quot; posts in a couple of subreddits that I thought would produce some interesting responses.
+&lt;/p&gt;
+
+&lt;pre&gt;
+for subreddit_name in ['sciencefiction',
+                       'artificial',
+                       'scifi',
+                       'BurningMan',
+                       'writing',
+                       'MachineLearning',
+                       'randonauts']:
+  subreddit = reddit.subreddit(subreddit_name)
+
+  for h in subreddit.rising(limit=5):
+&lt;/pre&gt;
+
+&lt;p&gt;
+    I could run each comment through the generator and discriminators to produce a reply.
+&lt;/p&gt;
+
+&lt;h4&gt;Running the generator and discriminators&lt;/h4&gt;
+&lt;p&gt;
+    Finally, I just had to build something to reload all the fine-tuned models and pass the new reddit comments through them to get replies. In an ideal world, I would have run both the GPT-2 and the BERT models in one script that could be run from end to end.  Unfortunately, a quirk in the way the designers immplemented the gpt2-simple package made it impossible to have two computation graphs &lt;a href=&quot;https://github.com/minimaxir/gpt-2-simple/issues/130&quot;&gt;instantiated in the same environment&lt;/a&gt;.  
+&lt;/p&gt;
+
+&lt;p&gt;
+    So instead, I just ran a &lt;a href=&quot;https://drive.google.com/open?id=1Z-sXQUsC7kHfLVQSpluTR-SqnBavh9qC&quot;&gt;GPT-2 generator notebook&lt;/a&gt; on its own to download new comments, generate a batch of candidate replies, and store them in csv files on my google drive.
+    Then, I reloaded the candidates in a separate &lt;a href=&quot;https://drive.google.com/open?id=1mWRwK1pY34joZul5gBeMortfTu8M9OPC&quot;&gt;BERT discriminator notebook&lt;/a&gt;to pick the best replies and submit them back to reddit.
+&lt;/p&gt;
+
+&lt;p&gt;You can view the whole workflow in my &lt;a href=&quot;https://github.com/lots-of-things/gpt2-bert-reddit-bot&quot;&gt;github repo&lt;/a&gt; for the project or in my &lt;a href=&quot;https://drive.google.com/open?id=1by97qt6TBpi_o644uKnYmQE5AJB1ybMK&quot;&gt;Google Drive folder&lt;/a&gt;.  Please &lt;a href=&quot;https://github.com/lots-of-things/gpt2-bert-reddit-bot/issues&quot;&gt;submit issues&lt;/a&gt; to the project if you think things can be explained more clearly, or if you find bugs.&lt;/p&gt;
+
+&lt;h4&gt;Last Step: Chuckle with Amusement&lt;/h4&gt;
+&lt;p&gt;
+    I submitted all my replies under the reddit account of &lt;a href=&quot;https://www.history.com/news/tupperware-parties-brownie-wise&quot;&gt;tupperware-party&lt;/a&gt; (which hopefully won't get shut down for trademark shit).  You can check out some highlights from the model output &lt;a href=&quot;/2020/02/combining-gpt-2-and-bert/#replies&quot;&gt;here&lt;/a&gt; or see the &lt;a href=&quot;https://www.reddit.com/user/tupperware-party/comments/&quot;&gt;full list of comments&lt;/a&gt; to inspect everything the system outputted.  I've also shared a &lt;a href=&quot;https://drive.google.com/drive/folders/1a2MhIqL6jvyJ-3bGCXAweLbYtNXSUei7?usp=sharing&quot;&gt;folder on Google Drive&lt;/a&gt; with all of the candidate responses and their scores from the BERT models if you want to take a look.
+&lt;/p&gt;
+
+&lt;p&gt;
+    Finally, I know there are definitely some ethical considerations when creating something like this.  You can read my thoughts on that &lt;a href=&quot;/2020/02/combining-gpt-2-and-bert/#ethics&quot;&gt;here&lt;/a&gt;.  In short, please try to use this responsibly and spread the word that we are living in a world where this is possible.  And if you have a problem, tell me on &lt;a href=&quot;https://twitter.com/bonkerfield&quot;&gt;Twitter&lt;/a&gt;.  I swear it'll really be me who responds.
+&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 04 Feb 2020 00:00:00 -0800</pubDate>
+        <link>https://bonkerfield.org/2020/02/reddit-bot-gpt2-bert/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2020/02/reddit-bot-gpt2-bert/</guid>
+        
+        <category>machine learning</category>
+        
+        <category>code</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Combining GPT-2 and BERT to make a fake person</title>
+        <description>&lt;p&gt;
+	&lt;a href=&quot;https://openai.com/blog/better-language-models/&quot;&gt;GPT-2&lt;/a&gt; is a deep learning model that is able to generate astonishingly coherent English text.  It was released last year, and &lt;a href=&quot;https://towardsdatascience.com/openais-gpt-2-the-model-the-hype-and-the-controversy-1109f4bfd5e8&quot;&gt;everyone’s&lt;/a&gt; &lt;a href=&quot;https://www.fast.ai/2019/02/15/openai-gp2/&quot;&gt;mind&lt;/a&gt; was &lt;a href=&quot;https://www.theguardian.com/commentisfree/2019/feb/15/ai-write-robot-openai-gpt2-elon-musk&quot;&gt;blown&lt;/a&gt; into &lt;a href=&quot;http://approximatelycorrect.com/2019/02/17/openai-trains-language-model-mass-hysteria-ensues/&quot;&gt;histrionic&lt;/a&gt; &lt;a href=&quot;https://www.wired.com/story/ai-text-generator-too-dangerous-to-make-public/&quot;&gt;hyperbole&lt;/a&gt;, including mine.  Its creators at &lt;a href=&quot;https://openai.com/&quot;&gt;OpenAI&lt;/a&gt; were so impressed by the model's performance that they originally didn't release it for fear of it being too easy to abuse. I think they were right to be concerned.  Here is an excerpt that the model generated, taken from their &lt;a href=&quot;https://openai.com/blog/better-language-models/#sample1&quot;&gt;release page&lt;/a&gt;.
+&lt;/p&gt;
+
+&lt;blockquote&gt;
+	In a shocking finding, scientist discovered a herd of unicorns living in a remote, previously unexplored valley, in the Andes Mountains. Even more surprising to the researchers was the fact that the unicorns spoke perfect English.
+
+	The scientist named the population, after their distinctive horn, Ovid’s Unicorn. These four-horned, silver-white unicorns were previously unknown to science.
+
+	Now, after almost two centuries, the mystery of what sparked this odd phenomenon is finally solved.
+
+	Dr. Jorge Pérez, an evolutionary biologist from the University of La Paz, and several companions, were exploring the Andes Mountains when they found a small valley, with no other animals or humans. Pérez noticed that the valley had what appeared to be a natural fountain, surrounded by two peaks of rock and silver snow.
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://openai.com/blog/better-language-models/#sample1&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;
+	When I saw what GPT-2 was capable of generating, I had chills. We are now very close to effectively simulating human creativity.  I find machine imitation of human communication fascinating; in fact, it's something I've explored in &lt;a href=&quot;https://a.ttent.io/n/&quot;&gt;my fiction writing&lt;/a&gt; previously. But since I've never worked on natural language generation or deep learning, I decided to look more closely at just what this machine could do.
+&lt;/p&gt;
+
+
+&lt;h4&gt;The person you are speaking with is not real&lt;/h4&gt;
+&lt;p&gt;
+	My goal was to see how close I could come to impersonating a real human with algorithmically generated text and almost no manual quality control.  
+&lt;/p&gt;
+&lt;p&gt;
+	I decided that one of the easiest places to test such a system would be in the responses to comments on the social media website, &lt;a href=&quot;https://www.reddit.com/&quot;&gt;reddit&lt;/a&gt;. My goal became to generate a bot that would respond topically to comments, garner upvotes, and see if it can promote discussion.  In case you are worried about the ethicality of releasing a surreptitious human on reddit, rest assured I have only deployed the bot sparingly to avoid generating too much annoyance in the world.  And I have manually reviewed evey comment to ensure that it produced nothing too offensive.
+&lt;/p&gt;
+&lt;p&gt;
+	Honestly, I was hoping I could use this tool to become a little more popular on this whole internet thing. I've been pretty much terrible at interacting on social media so I figured maybe I could automate the problem away.  I quickly learned that just using GPT-2 on it's own is not quite adequate to impersonate a human most of the time.  But with a little modification, I've found that building a frighteningly passable reddit commenter is not only possible; it's pretty easy.
+&lt;/p&gt;
+
+
+
+&lt;h4 id=&quot;gpt2shortcoming&quot;&gt;The Shortcoming of GPT-2&lt;/h4&gt;
+&lt;p&gt;
+	What GPT-2's creators fail to mention is that while almost everything the model generates is grammatically and syntactically correct, only a tiny fraction of the outputs make any damn sense.  Here is another excerpt that shows just how non-human the output normally looks.
+&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot; data-dnt=&quot;true&quot; data-theme=&quot;light&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Here&amp;#39;s a short story i generated using OpenAI&amp;#39;s GPT-2 tool (prompt in bold) &lt;a href=&quot;https://t.co/DGIVwGuAUV&quot;&gt;pic.twitter.com/DGIVwGuAUV&lt;/a&gt;&lt;/p&gt;&amp;mdash; will knight (@willknight) &lt;a href=&quot;https://twitter.com/willknight/status/1096134045774344199?ref_src=twsrc%5Etfw&quot;&gt;February 14, 2019&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;
+	When I first started experimenting, I generated a lot of similar gibberish.  As it turns out, GPT2 on its own is fairly prone to getting into weird unintelligible rants.  Here are some examples.
+&lt;/p&gt;
+
+&lt;blockquote&gt;
+The idea of the film is very similar to the kind of film we’ve seen before,
+“The Road”. The film “took place” at “a time”, “at a place”. 
+“The Road” was set at “a time”, “a place”.”
+“The Road” was also set at a time of the Soviet Union’s collapse,””“a time”, “the collapse” of communism”.
+“The Road” is set at a time of the Russian Revolution,”“the collapse” of the Soviet Union’s fall,”“a time”, “the collapse” of the Soviet Union’s collapse.”
+So, “The Road” is a film about the dissolution of the Soviet Union’s grip on the world,”“a time of the Russian Revolution”.
+&lt;/blockquote&gt;
+
+&lt;p&gt;Clearly the algorithm is getting confused on the way quotations work.  Then there's this one, which makes grammatical sense, but is clearly a series of statements that no regular person would ever say (unless they were trolling). &lt;/p&gt;
+
+&lt;blockquote&gt;
+I still can't believe you. I had the same birthday last year.  
+I'm a 10 year old, and I have never even heard of this novel.
+&lt;/blockquote&gt;
+
+&lt;p&gt;
+	Worse still, a lot of the time, GPT2 will just start repeating a few crazy phrases over and over.  You can &lt;a href=&quot;https://docs.google.com/spreadsheets/d/1n2_IM32ULuu_x9f_hX2YlmRfahF61K_os5fGg2RcgBA/edit?usp=sharing&quot;&gt;check out some of the model's output&lt;/a&gt; to get a taste of the kinds of things that it generates in the raw.
+&lt;/p&gt;
+
+&lt;p&gt;
+	I wouldn't want to build a bot that spewed crazy looking responses like that all the time.  It would be incredibly annoying to other redditors and would probably be flagged right away.  Still, I didn't want to give up on the idea completely. I started brainstorming about ways that I could fix the performance problems with GPT2 and make it more robust, and I came up with something that was able to filter out a lot of the crap responses.
+&lt;/p&gt;
+
+&lt;h5&gt;Machines trying to trick other machines&lt;/h5&gt;
+&lt;p&gt;
+	To fix the problem, I borrowed an idea from another deep learning architecture called a &lt;a href=&quot;https://en.wikipedia.org/wiki/Generative_adversarial_network&quot;&gt;generative adversarial network&lt;/a&gt; or GAN.  GANs have been used extensively in the past and  have been astonishingly successful in impersonating &lt;a href=&quot;https://www.thispersondoesnotexist.com/&quot;&gt;images&lt;/a&gt;, &lt;a href=&quot;https://magenta.tensorflow.org/gansynth&quot;&gt;music&lt;/a&gt;, and even &lt;a href=&quot;https://becominghuman.ai/generative-adversarial-networks-for-text-generation-part-1-2b886c8cab10?gi=e90e56af6387&quot;&gt;text&lt;/a&gt; (though it doesn't do text that well).  The rise of the &lt;a href=&quot;https://en.wikipedia.org/wiki/Deepfake#History&quot;&gt;&quot;deep fake&quot;&lt;/a&gt; is mostly thanks to developments in the GAN architecture. 
+&lt;/p&gt;
+&lt;p&gt;
+	The concept of the GAN is pretty simple. You train two algorithms, one to generate text (generator), and another to try to distinguish the generator’s text from human text  (discriminator).  These algorithms are typically called &lt;a href=”https://en.wikipedia.org/wiki/Language_model”&gt;language models&lt;/a&gt; because they attempt to model the way language is produced. In a classical GAN you then use the two models to improve each other by having the generator constantly compete to trick the discriminator (hence Adversarial).  
+&lt;/p&gt;
+
+
+&lt;img title=&quot;GAN illustration&quot; src=&quot;/assets/images/2020/gan_explain.png&quot; alt=&quot;GAN illustration&quot;/&gt;
+&lt;p style=&quot;text-align:center;&quot;&gt;&lt;em&gt;GAN diagram (&lt;a href=&quot;https://developers.google.com/machine-learning/gan/gan_structure&quot;&gt;source&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;
+	It's a very intuitive and clever concept, and one that I personally feel mirrors the &lt;a href=&quot;https://en.wikipedia.org/wiki/Bicameralism_(psychology)&quot;&gt;internal dialog&lt;/a&gt; that I constantly have in my own brain's decision making system.  The critic in my head feels almost like a discriminator algorithm &lt;a href=&quot;https://i.imgur.com/mGva0nK.gif&quot;&gt;throwing shade&lt;/a&gt; on my internal generator algorithm. Anyway, if you're interested in how they work in detail, you can read more &lt;a href=&quot;https://towardsdatascience.com/understanding-generative-adversarial-networks-gans-cd6e4651a29&quot;&gt;here&lt;/a&gt;.
+&lt;/p&gt;
+
+&lt;p&gt;
+	Unfortunately, I wasn't quite smart enough to figure out how to modify the pre-existing GPT-2 model to turn it into a GAN.  I think it's possible, but tensorflow is a &lt;a href=&quot;https://nostalgebraist.tumblr.com/post/189464877164/attention-conservation-notice-machine-learning&quot;&gt;confusing beast&lt;/a&gt;, and I'm not yet at the point where I care enough to untangle that mess.  Instead, I did something a little simpler that was just effective enough to make the results passable.
+&lt;/p&gt;
+
+&lt;h4&gt;Filtered generator -&gt; discriminator method&lt;/h4&gt;
+
+&lt;p&gt;
+	I instead opted for a two-stage modeling framework.  In this setup, I first pick a comment on reddit to serve as seed text for the generator.  I generate a whole bunch of replies for this comment using my GPT-2 model.  Then I pass all the candidates to the discriminator model to filter out the messed up comments and only select the best ones. 
+&lt;/p&gt;
+
+&lt;p&gt;
+	To build the discriminator, I fine-tuned another deep-learning language model called &lt;a href=&quot;https://towardsdatascience.com/bert-explained-state-of-the-art-language-model-for-nlp-f8b21a9b6270&quot;&gt;BERT&lt;/a&gt;.  I actually made two models, one for how realistic the reply was and another for how many upvotes the reply would get. You can read &lt;a href=&quot;/2020/02/reddit-bot-gpt2-bert/&quot;&gt;this post&lt;/a&gt; for a detailed walkthrough of how the whole system was constructed, trained, tested, and deployed. 
+&lt;/p&gt;
+&lt;p&gt;
+	Just by looking at the initial results, it seemed likely that the bot was going to be able to communicate pretty convincingly.  But the only &lt;a href=&quot;https://en.wikipedia.org/wiki/Turing_test&quot;&gt;real test&lt;/a&gt; was to put it into use and see how people respond.
+&lt;/p&gt;
+
+&lt;h4&gt;Meet tupperware-party&lt;/h4&gt;
+&lt;p&gt;
+	Once I had the models built and hooked together, the last step was to plug the bot into reddit.  I made an account for the bot called &lt;strong&gt;tupperware-party&lt;/strong&gt;, which I figured sounded innocuous enough.  I used &lt;a href=&quot;https://praw.readthedocs.io/en/latest/&quot;&gt;praw&lt;/a&gt; to submit the replies automatically, and then I went through and examined all of them to make sure none were too offensive or annoying.  As I was reading through the results, there were so many gems that it's hard to pick just a few examples to share.
+&lt;/p&gt;
+
+&lt;h5 id='replies'&gt;What did the robot say?&lt;/h5&gt;
+
+&lt;p&gt;
+	This &lt;a href=&quot;https://www.reddit.com/r/sciencefiction/comments/evqiti/dune_logo_unveiled_at_event_copyright_claimants/fg44yzw/?context=3&quot;&gt;first one&lt;/a&gt; seems like a perfect imitation of someone with a strong opinion on the internet. 
+&lt;/p&gt;
+
+&lt;img title=&quot;reddit-gpt2-bert-bot comment&quot; src=&quot;/assets/images/2020/tupperware-party1.png&quot; alt=&quot;COMMENT: 'Dune’s fandom is old and intense, and a rich thread in the cultural fabric of the internet generation' BOT_REPLY:'Dune’s fandom is overgrown, underfunded, and in many ways, a poor fit for the new, faster internet generation.'&quot; style=&quot;border:2px;&quot;/&gt;
+
+
+&lt;p&gt;
+	I actually can't explain how &lt;a href=&quot;https://www.reddit.com/r/BurningMan/comments/ep6pyq/playa_lung/feilsjn/?context=8&amp;depth=9&quot;&gt;this next one&lt;/a&gt; could possibly work.  It seems as if the bot is responding to the specific numerical bullet points in the original comment.
+&lt;/p&gt;
+
+&lt;img title=&quot;reddit-gpt2-bert-bot comment&quot; src=&quot;/assets/images/2020/tupperware-party2.png&quot; alt=&quot;bot responds to specific numerical bullet point in source comment&quot;/&gt;
+
+&lt;p&gt;
+	Notice that in the original comment, point 2 is about sleep and the bot says &quot;2&quot; right before talking about sleep. Then it says &quot;3&quot; before switching subjects to talking about something that induces anxiety.  It doesn't make perfect sense but it somehow knows to respond to bullet points separately, which seems like a huge leap given that it was never trained to do that specifically.
+&lt;/p&gt;
+
+&lt;p&gt;
+	This &lt;a href=&quot;https://www.reddit.com/r/artificial/comments/ep26lc/is_china_going_to_overtake_the_us_in_data_science/feik6wg/?context=8&amp;depth=9&quot;&gt; one&lt;/a&gt; is great on a number of levels.  First, it's kind of meta because the bot was posting into the &lt;a href=&quot;https://www.reddit.com/r/artificial/&quot;&gt;r/artifical subreddit&lt;/a&gt;, which is a forum dedicated to artificial intelligence.  Second, not only is the comment pretty darn coherent, it is so much so that the original author writes a well thought out reply further expanding on his point in light of the bot's comment.
+&lt;/p&gt;
+
+&lt;img title=&quot;reddit-gpt2-bert-bot comment&quot; src=&quot;/assets/images/2020/tupperware-party3.png&quot; alt=&quot;gpt2-bert on China&quot;/&gt;
+
+&lt;p&gt;
+	I honestly don't even know what to say to that.  Is it possible that every conversation on the internet right now has at least one slightly ill-informed bot in the mix.  We are seriously screwed.  But don't worry, this bot is at least a little woke too already.
+&lt;/p&gt;
+
+&lt;img title=&quot;reddit-gpt2-bert-bot comment&quot; src=&quot;/assets/images/2020/tupperware-party4.png&quot; alt=&quot;The first thing I think of when thinking about a villain's face turn is probably that they are a male character. Some males are actually pretty bad in the media...&quot;/&gt;
+
+&lt;p&gt;
+	There are so many surprisingly realistic replies that I enourage you to go through &lt;a href=&quot;https://www.reddit.com/user/tupperware-party/comments/&quot;&gt;tupperware-party's whole comment list&lt;/a&gt;.  Overall, the bot wrote 80 replies and 24 of them received at least one upvote. I'm impressed with that and hoping that maybe it will eventually be able to help &lt;a href=&quot;https://www.reddit.com/user/bonkerfield&quot;&gt;me&lt;/a&gt; become more popular on reddit.
+&lt;/p&gt;
+
+&lt;p&gt;
+	On the other hand, the single most popular comment (with 8 votes) was &lt;a href=&quot;https://www.reddit.com/r/sciencefiction/comments/efej56/the_problem_with_the_original_dune_movie/fc16yq8/?context=3&quot;&gt;this one&lt;/a&gt;, which is just innocuous flattery.  
+&lt;/p&gt;
+&lt;img title=&quot;reddit-gpt2-bert-bot comment&quot; src=&quot;/assets/images/2020/thiscommentisgreat.png&quot; alt=&quot;This comment is great.&quot;/&gt;
+
+&lt;p&gt;
+	Since this could easily be copy and pasted to every other comment and still be totally in context, I guess maybe I didn't need to try so hard.
+&lt;/p&gt;
+
+&lt;h4 id=&quot;ethics&quot;&gt;You can build one too!&lt;/h4&gt;
+
+&lt;p&gt;If you find this interesting, I've written a &lt;a href=&quot;/2020/02/reddit-bot-gpt2-bert/&quot;&gt;tutorial post&lt;/a&gt; with details and code describing how I built everything and showing what you'd need to do to recreate one of your own.  I realize there are definite ethicality concerns with building and using something like this so I encourage you to be an &lt;a href=&quot;https://en.wikiquote.org/wiki/Bill_%26_Ted%27s_Excellent_Adventure&quot;&gt;excellent&lt;/a&gt; human and only use this tool sparingly and for that which &lt;a href=&quot;https://en.wikipedia.org/wiki/Categorical_imperative&quot;&gt;you deem to be good&lt;/a&gt;.  
+&lt;/p&gt;
+&lt;h5&gt;Ethical concerns&lt;/h5&gt;
+&lt;p&gt;
+    I know there are definitely some ethical considerations when creating something like this.  The reason I'm presenting it is because I actually think it is &lt;a href=&quot;https://www.wired.com/story/company-wants-billions-make-ai-safe-humanity/&quot;&gt;better&lt;/a&gt; for more people to know about and be able to grapple with this kind of technology. If just a few people know about the capacity of these machines, then it is more likely that those small groups of people can abuse their advantage.
+&lt;/p&gt;
+&lt;p&gt;
+    I also think that this technology is going to change the way we think about what's important about being human.  After all, if a computer can effectively automate the paper-pushing jobs we've constructed and all the bullshit we create on the internet to distract us, then maybe it'll be time for us to move on to something more meaningful.
+&lt;/p&gt;
+
+&lt;p&gt;
+	If you think what I've done is a problem feel free to &lt;span class=&quot;popup__open&quot; style=&quot;border-bottom: 0.25px solid $color-grey&quot;&gt;email me &lt;i class=&quot;fa fa-envelope&quot;&gt;&lt;/i&gt;&lt;/span&gt;, or publically shame me on &lt;a href=&quot;https://twitter.com/bonkerfield&quot;&gt;Twitter&lt;/a&gt;.
+&lt;/p&gt;
+
+
+</description>
+        <pubDate>Tue, 04 Feb 2020 00:00:00 -0800</pubDate>
+        <link>https://bonkerfield.org/2020/02/combining-gpt-2-and-bert/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2020/02/combining-gpt-2-and-bert/</guid>
+        
+        <category>machine learning</category>
+        
+        <category>language</category>
+        
+        <category>end times</category>
+        
+        
+      </item>
     
       <item>
         <title>Visualizing the Bonkerfield</title>
