@@ -15,7 +15,14 @@ tags:
 
 <h4>Model overview</h4>
 
-<p>Before getting into the nitty-gritty, I wanted to give a general overview of the process that I'm going to be using.  There are quite a few steps and I don't want it to get too confusing.  Check out <a href="/2020/02/combining-gpt-2-and-bert/">my previous post</a> for an even higher-level architecture overview.  Here are the steps I'll be explaining in this post.</p>
+<p>Before getting into the nitty-gritty, I wanted to give a general overview of the process that I'm going to be using.  This flow diagram shows the 3 models that I needed to train, as well as the process fr hooking the models together to generate the output.
+</p>
+
+<img title="GPT2 BERT commentor workflow" src="/assets/images/2020/gpt2_bert_workflow.png" alt="GPT2 BERT comment system workflow"/>
+
+<p>
+    There are quite a few steps, but I hope it doesn't get too confusing.  Check out <a href="/2020/02/combining-gpt-2-and-bert/">my previous post</a> for an even higher-level architecture overview.  Here are the steps I'll be explaining in this post.
+</p>
 
 <ul>
     <li>

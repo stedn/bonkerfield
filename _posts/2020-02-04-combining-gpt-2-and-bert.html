@@ -101,11 +101,22 @@ I'm a 10 year old, and I have never even heard of this novel.
 <h4>Filtered generator -> discriminator method</h4>
 
 <p>
-	I instead opted for a two-stage modeling framework.  In this setup, I first pick a comment on reddit to serve as seed text for the generator.  I generate a whole bunch of replies for this comment using my GPT-2 model.  Then I pass all the candidates to the discriminator model to filter out the messed up comments and only select the best ones. 
+	I instead opted for a multi-stage modeling framework, utilizing three separate deep-learning models stitched together one after the next.  This diagram illustrates the many parts that needed to be trained, and how they were strung together to produce replies from comments.
+</p>
+
+<img title="GPT2 BERT commentor workflow" src="/assets/images/2020/gpt2_bert_workflow.png" alt="GPT2 BERT comment system workflow"/>
+
+<p>
+	In this setup, I first pick a comment on reddit to serve as seed text for the generator.  I generate a whole bunch of replies for this comment using my GPT-2 model.  Then I pass all the candidates to the discriminator model to filter out the messed up comments and only select the best ones. 
 </p>
 
 <p>
-	To build the discriminator, I fine-tuned another deep-learning language model called <a href="https://towardsdatascience.com/bert-explained-state-of-the-art-language-model-for-nlp-f8b21a9b6270">BERT</a>.  I actually made two models, one for how realistic the reply was and another for how many upvotes the reply would get. You can read <a href="/2020/02/reddit-bot-gpt2-bert/">this post</a> for a detailed walkthrough of how the whole system was constructed, trained, tested, and deployed. 
+	To build the discriminators, I fine-tuned another deep-learning language model called <a href="https://towardsdatascience.com/bert-explained-state-of-the-art-language-model-for-nlp-f8b21a9b6270">BERT</a>.  I made two models, one for how realistic the reply was and another for how many upvotes the reply would get. 
+</p>
+
+
+<p>
+	You can read <a href="/2020/02/reddit-bot-gpt2-bert/">this post</a> for a detailed walkthrough of how the whole system was constructed, trained, tested, and deployed. 
 </p>
 <p>
 	Just by looking at the initial results, it seemed likely that the bot was going to be able to communicate pretty convincingly.  But the only <a href="https://en.wikipedia.org/wiki/Turing_test">real test</a> was to put it into use and see how people respond.
