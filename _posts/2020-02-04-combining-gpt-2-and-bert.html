@@ -11,7 +11,7 @@ image: /assets/images/2020/thiscommentisgreat.png
 ---
 
 <p>
-	<a href="https://openai.com/blog/better-language-models/">GPT-2</a> is a deep learning model that is able to generate astonishingly coherent English text.  It was released last year, and blew a <a href="https://towardsdatascience.com/openais-gpt-2-the-model-the-hype-and-the-controversy-1109f4bfd5e8">lot</a> <a href="http://approximatelycorrect.com/2019/02/17/openai-trains-language-model-mass-hysteria-ensues/">of</a> <a href="https://www.fast.ai/2019/02/15/openai-gp2/">people's</a> <a href="https://www.theguardian.com/commentisfree/2019/feb/15/ai-write-robot-openai-gpt2-elon-musk">hysterical</a> <a href="https://www.wired.com/story/ai-text-generator-too-dangerous-to-make-public/">minds</a>, including mine.  Its creators at <a href="https://openai.com/">OpenAI</a> were so impressed by the model's performance that they originially didn't release it for fear of it being too easy to abuse. I think they were right to be concerned.  Here is an excerpt that the model generated, taken from their <a href="https://openai.com/blog/better-language-models/#sample1">release page</a>.
+	<a href="https://openai.com/blog/better-language-models/">GPT-2</a> is a deep learning model that is able to generate astonishingly coherent English text.  It was released last year, and <a href="https://towardsdatascience.com/openais-gpt-2-the-model-the-hype-and-the-controversy-1109f4bfd5e8">everyone’s</a> <a href="https://www.fast.ai/2019/02/15/openai-gp2/">mind</a> was <a href="https://www.theguardian.com/commentisfree/2019/feb/15/ai-write-robot-openai-gpt2-elon-musk">blown</a> into <a href="http://approximatelycorrect.com/2019/02/17/openai-trains-language-model-mass-hysteria-ensues/">histrionic</a> <a href="https://www.wired.com/story/ai-text-generator-too-dangerous-to-make-public/">hyperbole</a>, including mine.  Its creators at <a href="https://openai.com/">OpenAI</a> were so impressed by the model's performance that they originally didn't release it for fear of it being too easy to abuse. I think they were right to be concerned.  Here is an excerpt that the model generated, taken from their <a href="https://openai.com/blog/better-language-models/#sample1">release page</a>.
 </p>
 
 <blockquote>
@@ -35,10 +35,10 @@ image: /assets/images/2020/thiscommentisgreat.png
 	My goal was to see how close I could come to impersonating a real human with algorithmically generated text and almost no manual quality control.  
 </p>
 <p>
-	I decided that one of the easiest places to test such a system would be in the responses to comments on the social media website, <a href="https://www.reddit.com/">reddit</a>. My goal became to generate a bot that would respond topically to comments, garner upvotes, and see if it can promote discussion.  
+	I decided that one of the easiest places to test such a system would be in the responses to comments on the social media website, <a href="https://www.reddit.com/">reddit</a>. My goal became to generate a bot that would respond topically to comments, garner upvotes, and see if it can promote discussion.  In case you are worried about the ethicality of releasing a surreptitious human on reddit, rest assured I have only deployed the bot sparingly to avoid generating too much annoyance in the world.  And I have manually reviewed evey comment to ensure that it produced nothing too offensive.
 </p>
 <p>
-	 I was also hoping I could use this tool to become a little more popular. I've been pretty much terrible at interating on social media so I figured this would be quite a challenge.  I quickly learned that just using GPT-2 on it's own is not quite adequate to impersonate a human most of the time.  But with a little modification, I've found that building a frightenly passable reddit commentor is not only possible; it's pretty easy.
+	Honestly, I was hoping I could use this tool to become a little more popular on this whole internet thing. I've been pretty much terrible at interacting on social media so I figured maybe I could automate the problem away.  I quickly learned that just using GPT-2 on it's own is not quite adequate to impersonate a human most of the time.  But with a little modification, I've found that building a frighteningly passable reddit commenter is not only possible; it's pretty easy.
 </p>
 
 
@@ -51,7 +51,7 @@ image: /assets/images/2020/thiscommentisgreat.png
 <blockquote class="twitter-tweet" data-lang="en" data-dnt="true" data-theme="light"><p lang="en" dir="ltr">Here&#39;s a short story i generated using OpenAI&#39;s GPT-2 tool (prompt in bold) <a href="https://t.co/DGIVwGuAUV">pic.twitter.com/DGIVwGuAUV</a></p>&mdash; will knight (@willknight) <a href="https://twitter.com/willknight/status/1096134045774344199?ref_src=twsrc%5Etfw">February 14, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <p>
-	When I first started experimenting, I generated a lot of similar gibberish.  As it turns out, GPT2 on its own is fairly prone to getting into weird unintelligble rants.  Here are some examples.
+	When I first started experimenting, I generated a lot of similar gibberish.  As it turns out, GPT2 on its own is fairly prone to getting into weird unintelligible rants.  Here are some examples.
 </p>
 
 <blockquote>
@@ -80,16 +80,18 @@ I'm a 10 year old, and I have never even heard of this novel.
 
 <h5>Machines trying to trick other machines</h5>
 <p>
-	To fix the problem, I borrowed an idea from another deep learning architecture called a <a href="https://en.wikipedia.org/wiki/Generative_adversarial_network">generative adversarial network</a> or GAN.  GANs have been used extensively in the past to build models that have been astonishingly succesful in impersonating <a href="https://www.thispersondoesnotexist.com/">images</a>, <a href="https://magenta.tensorflow.org/gansynth">music</a>, and even <a href="https://becominghuman.ai/generative-adversarial-networks-for-text-generation-part-1-2b886c8cab10?gi=e90e56af6387">text</a> (though it doesn't do text that well).  The rise of the <a href="https://en.wikipedia.org/wiki/Deepfake#History">"deep fake"</a> is mostly thanks to developments in the GAN architecture. 
+	To fix the problem, I borrowed an idea from another deep learning architecture called a <a href="https://en.wikipedia.org/wiki/Generative_adversarial_network">generative adversarial network</a> or GAN.  GANs have been used extensively in the past and  have been astonishingly successful in impersonating <a href="https://www.thispersondoesnotexist.com/">images</a>, <a href="https://magenta.tensorflow.org/gansynth">music</a>, and even <a href="https://becominghuman.ai/generative-adversarial-networks-for-text-generation-part-1-2b886c8cab10?gi=e90e56af6387">text</a> (though it doesn't do text that well).  The rise of the <a href="https://en.wikipedia.org/wiki/Deepfake#History">"deep fake"</a> is mostly thanks to developments in the GAN architecture. 
 </p>
 <p>
-	The concept of the GAN is pretty simple. You train two models, one to generate fakes (generator), and another to try to detect fakes (discriminator).  In a classical GAN you then use the two models to improve each other by having the generator constanly compete to trick the discriminator (hence Adversarial).  
+	The concept of the GAN is pretty simple. You train two algorithms, one to generate text (generator), and another to try to distinguish the generator’s text from human text  (discriminator).  These algorithms are typically called <a href=”https://en.wikipedia.org/wiki/Language_model”>language models</a> because they attempt to model the way language is produced. In a classical GAN you then use the two models to improve each other by having the generator constantly compete to trick the discriminator (hence Adversarial).  
 </p>
 
-<a href="https://www.reddit.com/r/sciencefiction/comments/evqiti/dune_logo_unveiled_at_event_copyright_claimants/fg44yzw/?context=3"><img title="GAN illustration" src="/assets/images/2020/gan_explain.png" alt="GAN illustration"/></a>
+
+<img title="GAN illustration" src="/assets/images/2020/gan_explain.png" alt="GAN illustration"/>
+<p style="text-align:center;"><em>GAN diagram (<a href="https://developers.google.com/machine-learning/gan/gan_structure">source</a>)</em></p>
 
 <p>
-	It's a very intuitive and clever concept, and one that I personally feel mirrors the <a href="https://en.wikipedia.org/wiki/Bicameralism_(psychology)">internal dialog</a> that I constantly have in my own brain's decision making system.  The critic in my head feels almost like a discriminator algorithm <a href="https://i.imgur.com/mGva0nK.gif">throwing shade</a> on my internal generator algorithm. Anyway, if you're interested iin how they work in detail, you can read more <a href="https://towardsdatascience.com/understanding-generative-adversarial-networks-gans-cd6e4651a29">here</a>.
+	It's a very intuitive and clever concept, and one that I personally feel mirrors the <a href="https://en.wikipedia.org/wiki/Bicameralism_(psychology)">internal dialog</a> that I constantly have in my own brain's decision making system.  The critic in my head feels almost like a discriminator algorithm <a href="https://i.imgur.com/mGva0nK.gif">throwing shade</a> on my internal generator algorithm. Anyway, if you're interested in how they work in detail, you can read more <a href="https://towardsdatascience.com/understanding-generative-adversarial-networks-gans-cd6e4651a29">here</a>.
 </p>
 
 <p>
@@ -99,11 +101,11 @@ I'm a 10 year old, and I have never even heard of this novel.
 <h4>Filtered generator -> discriminator method</h4>
 
 <p>
-	Since I couldn't figure out how to I instead opted for a two-stage modeling framework.  In this setup, I first generate a whole bunch of replies for each comment using my GPT-2 model.  Then I pass all the candidates to a standalone discriminator model to filter out the messed up comments and only select the best ones. 
+	I instead opted for a two-stage modeling framework.  In this setup, I first pick a comment on reddit to serve as seed text for the generator.  I generate a whole bunch of replies for this comment using my GPT-2 model.  Then I pass all the candidates to the discriminator model to filter out the messed up comments and only select the best ones. 
 </p>
 
 <p>
-	To build the standalone discriminator, I fine-tuned another deep-learning language model called <a href="https://towardsdatascience.com/bert-explained-state-of-the-art-language-model-for-nlp-f8b21a9b6270">BERT</a>.  I actually made two models, one for how realistic the reply was and another for how many upvotes the reply would get. You can read <a href="/2020/02/reddit-bot-gpt2-bert/">this post</a> for a detailed walkthrough of how the whole system was constructed, trained, tested, and deployed. 
+	To build the discriminator, I fine-tuned another deep-learning language model called <a href="https://towardsdatascience.com/bert-explained-state-of-the-art-language-model-for-nlp-f8b21a9b6270">BERT</a>.  I actually made two models, one for how realistic the reply was and another for how many upvotes the reply would get. You can read <a href="/2020/02/reddit-bot-gpt2-bert/">this post</a> for a detailed walkthrough of how the whole system was constructed, trained, tested, and deployed. 
 </p>
 <p>
 	Just by looking at the initial results, it seemed likely that the bot was going to be able to communicate pretty convincingly.  But the only <a href="https://en.wikipedia.org/wiki/Turing_test">real test</a> was to put it into use and see how people respond.
@@ -111,7 +113,7 @@ I'm a 10 year old, and I have never even heard of this novel.
 
 <h4>Meet tupperware-party</h4>
 <p>
-	Once I had the models built and hooked together, the last step was plug the bot into reddit.  I made an account for the bot called <strong>tupperware-party</strong>, which I figured sounded innocuous enough.  I used <a href="https://praw.readthedocs.io/en/latest/">praw</a> to submit the replies automatically, and then I went through and examined all of them to make sure none were too offensive or annoying.  As I was reading through the results, there were so many gems that it's hard to pick just a few examples to share.
+	Once I had the models built and hooked together, the last step was to plug the bot into reddit.  I made an account for the bot called <strong>tupperware-party</strong>, which I figured sounded innocuous enough.  I used <a href="https://praw.readthedocs.io/en/latest/">praw</a> to submit the replies automatically, and then I went through and examined all of them to make sure none were too offensive or annoying.  As I was reading through the results, there were so many gems that it's hard to pick just a few examples to share.
 </p>
 
 <h5 id='replies'>What did the robot say?</h5>
@@ -130,7 +132,7 @@ I'm a 10 year old, and I have never even heard of this novel.
 <img title="reddit-gpt2-bert-bot comment" src="/assets/images/2020/tupperware-party2.png" alt="bot responds to specific numerical bullet point in source comment"/>
 
 <p>
-	Notice that in the original comment, point 2 is about sleep and the bot says "2" right before talking about sleep. Then it says "3" before switching subjects to talking about something that induces anxiety.  It doesn't make perfect sense but it somehow knows to respond to bullet points seperately, which seems like a huge leap given that it was never trained to do that specifically.
+	Notice that in the original comment, point 2 is about sleep and the bot says "2" right before talking about sleep. Then it says "3" before switching subjects to talking about something that induces anxiety.  It doesn't make perfect sense but it somehow knows to respond to bullet points separately, which seems like a huge leap given that it was never trained to do that specifically.
 </p>
 
 <p>
@@ -164,7 +166,7 @@ I'm a 10 year old, and I have never even heard of this novel.
 </p>
 <h5>Ethical concerns</h5>
 <p>
-    I know there is definitely some ethical considerations when creating something like this.  The reason I'm presenting it is because I actually think it is <a href="https://www.wired.com/story/company-wants-billions-make-ai-safe-humanity/">better</a> for more people to know about and be able to grapple with this kind of technology. If just a few people know about the capacity of these machines, then it is more likely that those small groups of people can abuse their advantage.
+    I know there are definitely some ethical considerations when creating something like this.  The reason I'm presenting it is because I actually think it is <a href="https://www.wired.com/story/company-wants-billions-make-ai-safe-humanity/">better</a> for more people to know about and be able to grapple with this kind of technology. If just a few people know about the capacity of these machines, then it is more likely that those small groups of people can abuse their advantage.
 </p>
 <p>
     I also think that this technology is going to change the way we think about what's important about being human.  After all, if a computer can effectively automate the paper-pushing jobs we've constructed and all the bullshit we create on the internet to distract us, then maybe it'll be time for us to move on to something more meaningful.
@@ -173,3 +175,5 @@ I'm a 10 year old, and I have never even heard of this novel.
 <p>
 	If you think what I've done is a problem feel free to <span class="popup__open" style="border-bottom: 0.25px solid $color-grey">email me <i class="fa fa-envelope"></i></span>, or publically shame me on <a href="https://twitter.com/bonkerfield">Twitter</a>.
 </p>
+
+

@@ -112,7 +112,7 @@ where b.body is not null
     The major advantage of using GPT-2 is that it has been pre-trained on a massive dataset of millions of pages of text on the internet.  However, if you were to use GPT-2 straight "out-of-the-box," you'd end up generating text that could look like anything you might find on the internet.  Sometimes it'll generate a news article, sometimes it'll generate a cooking blog recipe, sometimes it'll generate a rage-filled facebook post.  You don't really have too much control, and therefore, you won't really be able to use it to effectively generate reddit comments.
 </p>
 <p>
-    To overcome this issue, I needed to "fine-tune" the pre-trained model.  <a href="https://stats.stackexchange.com/questions/331369/what-is-meant-by-fine-tuning-of-neural-network">Fine-tuning</a> means taking a model that was already trained on a big dataset, and then continung to train it on just the specific type of data that you want to use it on.  This process (somewhat magically) allows you to take a lot of the general information about language from the big pretrained model, and sculpt that down with all the specific information about the exact output format you are trying to generate.
+    To overcome this issue, I needed to "fine-tune" the pre-trained model.  <a href="https://stats.stackexchange.com/questions/331369/what-is-meant-by-fine-tuning-of-neural-network">Fine-tuning</a> means taking a model that was already trained on a big dataset, and then continuing to train it on just the specific type of data that you want to use it on.  This process (somewhat magically) allows you to take a lot of the general information about language from the big pretrained model, and sculpt that down with all the specific information about the exact output format you are trying to generate.
 </p>
 
 <p>
@@ -140,7 +140,7 @@ where b.body is not null
 
 <ul>
     <li>Filter out unrealistic replies</li>
-    <li>For the realilstic replies, pick the one that I predict will have the most upvotes</li>
+    <li>For the realistic replies, pick the one that I predict will have the most upvotes</li>
 </ul>
 
 <p>
@@ -190,7 +190,7 @@ where b.body is not null
 
 
 <p>
-    Buoyed by the model cross-valildation performance, I was excited to hook it up to a real-time commenting system and start shipping my bot's thoughts!
+    Buoyed by the model cross-validation performance, I was excited to hook it up to a real-time commenting system and start shipping my bot's thoughts!
 </p>
 
 
@@ -226,7 +226,7 @@ for subreddit_name in ['sciencefiction',
 </p>
 
 <p>
-    So instead, I just ran a <a href="https://drive.google.com/open?id=1Z-sXQUsC7kHfLVQSpluTR-SqnBavh9qC">GPT-2 generator notebook</a> on its own to download new comments, generate a batch of candidate replies, and store themin csv files on my google drive.
+    So instead, I just ran a <a href="https://drive.google.com/open?id=1Z-sXQUsC7kHfLVQSpluTR-SqnBavh9qC">GPT-2 generator notebook</a> on its own to download new comments, generate a batch of candidate replies, and store them in csv files on my google drive.
     Then, I reloaded the candidates in a separate <a href="https://drive.google.com/open?id=1mWRwK1pY34joZul5gBeMortfTu8M9OPC">BERT discriminator notebook</a>to pick the best replies and submit them back to reddit.
 </p>
 
@@ -240,3 +240,4 @@ for subreddit_name in ['sciencefiction',
 <p>
     Finally, I know there are definitely some ethical considerations when creating something like this.  You can read my thoughts on that <a href="/2020/02/combining-gpt-2-and-bert/#ethics">here</a>.  In short, please try to use this responsibly and spread the word that we are living in a world where this is possible.  And if you have a problem, tell me on <a href="https://twitter.com/bonkerfield">Twitter</a>.  I swear it'll really be me who responds.
 </p>
+
