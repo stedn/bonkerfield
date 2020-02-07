@@ -201,6 +201,12 @@
         }
     }
 
+    span {
+        img {
+            display: inline;
+        }
+    }
+
     blockquote {
         min-width: 0;
         p {
@@ -234,6 +240,8 @@
         display: block;
         margin-bottom: 1.5rem;
         min-width: 0;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     img[src$="#full"] {

@@ -10,7 +10,7 @@ tags:
 ---
 
 <p>
-    Last month, I experimented with building a reddit comment bot that generated natural language replies by combining two pre-trained deep learning models: <a href="http://jalammar.github.io/illustrated-gpt2/">GPT-2</a> and <a hrf="http://jalammar.github.io/illustrated-bert/">BERT</a>. I wrote <a href="/2020/02/combining-gpt-2-and-bert/">another post</a> on the motivation and background, but here I wanted to give a step by step walkthrough so others can work with what I've built.  If you prefer, you can jump straight to the <a href="https://github.com/lots-of-things/gpt2-bert-reddit-bot">project code</a>.
+    Last month, I experimented with building a reddit comment bot that generated natural language replies by combining two pre-trained deep learning models: <a href="http://jalammar.github.io/illustrated-gpt2/">GPT-2</a> and <a hrf="http://jalammar.github.io/illustrated-bert/">BERT</a>. I wrote <a href="/2020/02/combining-gpt-2-and-bert/">another post</a> on the motivation and background, but here I wanted to give a step by step walkthrough so others can work with what I've built.  If you prefer, you can jump straight to the <a href="https://github.com/lots-of-things/gpt2-bert-reddit-bot">project code</a>.  And to see the work that I based this on see <a href="https://colab.research.google.com/drive/1VLG8e7YSEwypxU-noRNhsv5dW4NfTGce">this</a> and <a href="https://colab.research.google.com/github/google-research/bert/blob/master/predicting_movie_reviews_with_bert_on_tf_hub.ipynb">this</a>
 </p>
 
 <h4>Model overview</h4>
@@ -155,7 +155,7 @@ where b.body is not null
 </p>
 
 <p>
-    Again, I'm not the biggest expert in working with deep learning infrastructure so luckily, other <a href="https://www.tensorflow.org/hub">brilliant tensorflowhub experts</a> wrote a <a href="https://colab.research.google.com/github/tensorflow/tpu/blob/master/tools/colab/bert_finetuning_with_cloud_tpus.ipynb">Google Colab tutorial</a> for fine-tuning text classifier models using a pretrained BERT network.  So all I had to do was combine the two with some glue.
+    Again, I'm not the biggest expert in working with deep learning infrastructure so luckily, other <a href="https://www.tensorflow.org/hub">brilliant tensorflowhub experts</a> wrote a <a href="https://colab.research.google.com/github/google-research/bert/blob/master/predicting_movie_reviews_with_bert_on_tf_hub.ipynb">Google Colab tutorial</a> for fine-tuning text classifier models using a pretrained BERT network.  So all I had to do was combine the two with some glue.
 </p>
 
 <p>
