@@ -5,14 +5,14 @@
     <description>personal information identity spacetime map</description>
     <link>https://bonkerfield.org</link>
     <atom:link href="https://bonkerfield.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 05 Feb 2020 23:14:01 -0800</pubDate>
-    <lastBuildDate>Wed, 05 Feb 2020 23:14:01 -0800</lastBuildDate>
+    <pubDate>Thu, 06 Feb 2020 17:15:36 -0800</pubDate>
+    <lastBuildDate>Thu, 06 Feb 2020 17:15:36 -0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
         <title>How to build a convincing reddit personality with GPT2 and BERT</title>
         <description>&lt;p&gt;
-    Last month, I experimented with building a reddit comment bot that generated natural language replies by combining two pre-trained deep learning models: &lt;a href=&quot;http://jalammar.github.io/illustrated-gpt2/&quot;&gt;GPT-2&lt;/a&gt; and &lt;a hrf=&quot;http://jalammar.github.io/illustrated-bert/&quot;&gt;BERT&lt;/a&gt;. I wrote &lt;a href=&quot;/2020/02/combining-gpt-2-and-bert/&quot;&gt;another post&lt;/a&gt; on the motivation and background, but here I wanted to give a step by step walkthrough so others can work with what I've built.  If you prefer, you can jump straight to the &lt;a href=&quot;https://github.com/lots-of-things/gpt2-bert-reddit-bot&quot;&gt;project code&lt;/a&gt;.
+    Last month, I experimented with building a reddit comment bot that generated natural language replies by combining two pre-trained deep learning models: &lt;a href=&quot;http://jalammar.github.io/illustrated-gpt2/&quot;&gt;GPT-2&lt;/a&gt; and &lt;a hrf=&quot;http://jalammar.github.io/illustrated-bert/&quot;&gt;BERT&lt;/a&gt;. I wrote &lt;a href=&quot;/2020/02/combining-gpt-2-and-bert/&quot;&gt;another post&lt;/a&gt; on the motivation and background, but here I wanted to give a step by step walkthrough so others can work with what I've built.  If you prefer, you can jump straight to the &lt;a href=&quot;https://github.com/lots-of-things/gpt2-bert-reddit-bot&quot;&gt;project code&lt;/a&gt;.  And to see the work that I based this on see &lt;a href=&quot;https://colab.research.google.com/drive/1VLG8e7YSEwypxU-noRNhsv5dW4NfTGce&quot;&gt;this&lt;/a&gt; and &lt;a href=&quot;https://colab.research.google.com/github/google-research/bert/blob/master/predicting_movie_reviews_with_bert_on_tf_hub.ipynb&quot;&gt;this&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;h4&gt;Model overview&lt;/h4&gt;
@@ -157,7 +157,7 @@ where b.body is not null
 &lt;/p&gt;
 
 &lt;p&gt;
-    Again, I'm not the biggest expert in working with deep learning infrastructure so luckily, other &lt;a href=&quot;https://www.tensorflow.org/hub&quot;&gt;brilliant tensorflowhub experts&lt;/a&gt; wrote a &lt;a href=&quot;https://colab.research.google.com/github/tensorflow/tpu/blob/master/tools/colab/bert_finetuning_with_cloud_tpus.ipynb&quot;&gt;Google Colab tutorial&lt;/a&gt; for fine-tuning text classifier models using a pretrained BERT network.  So all I had to do was combine the two with some glue.
+    Again, I'm not the biggest expert in working with deep learning infrastructure so luckily, other &lt;a href=&quot;https://www.tensorflow.org/hub&quot;&gt;brilliant tensorflowhub experts&lt;/a&gt; wrote a &lt;a href=&quot;https://colab.research.google.com/github/google-research/bert/blob/master/predicting_movie_reviews_with_bert_on_tf_hub.ipynb&quot;&gt;Google Colab tutorial&lt;/a&gt; for fine-tuning text classifier models using a pretrained BERT network.  So all I had to do was combine the two with some glue.
 &lt;/p&gt;
 
 &lt;p&gt;
@@ -5087,116 +5087,143 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
       <item>
         <title>Procrastinating with a Time Optimization Game</title>
         <description>&lt;p&gt;
-        I've got to admit, I'm majorly busy at this time of year. But today, I'm deciding to procrastinate by writing a post on—ironically enough—a game about &lt;a href=&quot;http://xkcd.com/1205/&quot;&gt;optimizing your use of time&lt;/a&gt;!
-    &lt;/p&gt;
-&lt;img border=&quot;0&quot; src=&quot;http://www.explainxkcd.com/wiki/images/e/e5/is_it_worth_the_time.png&quot; title=&quot; &quot;/&gt;
-&lt;br/&gt;
+    I've got to admit, I'm majorly busy at this time of year. But today, I'm deciding to procrastinate by writing a post on—ironically enough—a game about &lt;a href=&quot;http://xkcd.com/1205/&quot;&gt;optimizing your use of time&lt;/a&gt;!
+&lt;/p&gt;
+&lt;img border=&quot;0&quot; src=&quot;http://www.explainxkcd.com/wiki/images/e/e5/is_it_worth_the_time.png&quot; title=&quot; &quot; /&gt;
+&lt;br /&gt;
 &lt;h4&gt;The Background&lt;/h4&gt;
 &lt;p&gt;
-        If you've ever participated in an &lt;a href=&quot;http://en.wikipedia.org/wiki/Behavioral_economics&quot;&gt;economics research study&lt;/a&gt;, you've probably had the pleasure of participating in a &quot;computerized experiment.&quot; These are pretty much just silly games that you play for a little while so the researchers can &quot;measure&quot; your behavior.
-    &lt;/p&gt;
+    If you've ever participated in an &lt;a href=&quot;http://en.wikipedia.org/wiki/Behavioral_economics&quot;&gt;economics research study&lt;/a&gt;, you've probably had the pleasure of participating in a &quot;computerized experiment.&quot; These are pretty much just silly games that you play for a little while so the researchers can &quot;measure&quot; your behavior.
+&lt;/p&gt;
 &lt;p&gt;
-        Recently, I played a game that asked me to choose between two tasks in order to maximize the payoff (I'll give more details below). I did pretty well at making a gut decision on which one to choose during the game, but I knew that there had to be some way to figure out the optimum choice. So afterwards, I decided to analyze the game a little more and find out how to explain it mathematically.
-    &lt;/p&gt;
-&lt;br/&gt;
+    Recently, I played a game that asked me to choose between two tasks in order to maximize the payoff (I'll give more details below). I did pretty well at making a gut decision on which one to choose during the game, but I knew that there had to be some way to figure out the optimum choice. So afterwards, I decided to analyze the game a little more and find out how to explain it mathematically.
+&lt;/p&gt;
+&lt;br /&gt;
 &lt;h4&gt;The Game Premise&lt;/h4&gt;
 &lt;p&gt;
-        Imagine you spend your work dividing your time between two tasks. One of them is an easy task that takes 1 minute, and the other is a hard task that takes 2 minutes.
-    &lt;/p&gt;
+    Imagine you spend your work dividing your time between two tasks. One of them is an easy task that takes 1 minute, and the other is a hard task that takes 2 minutes.
+&lt;/p&gt;
 &lt;p&gt;
-        For the easy task, you're always offered $1, while for the hard task you get offered a different amount between $1 and $5.
-    &lt;/p&gt;
+    For the easy task, you're always offered $1, while for the hard task you get offered a different amount between $1 and $5.
+&lt;/p&gt;
 &lt;p&gt;
-        Unfortunately, whether you pick the easy task or the hard one, you aren't guaranteed to get paid every time. You're told the probability that you'll get paid before you decide which task to take. For simplicity we'll just say the chances of getting paid are 33%, 66%, or 100%.
-    &lt;/p&gt;
+    Unfortunately, whether you pick the easy task or the hard one, you aren't guaranteed to get paid every time. You're told the probability that you'll get paid before you decide which task to take. For simplicity we'll just say the chances of getting paid are 33%, 66%, or 100%.
+&lt;/p&gt;
 &lt;p&gt;
-        So the challenge is to decide whether you want to waste your time on the hard task given the offered payout and the probability of getting payed.
-    &lt;/p&gt;
+    So the challenge is to decide whether you want to waste your time on the hard task given the offered payout and the probability of getting payed.
+&lt;/p&gt;
 &lt;h4&gt;Sample Game&lt;/h4&gt;
 &lt;p&gt;
-        To make the game more clear, I built a &lt;a href=&quot;http://codepen.io/wmcfadd2/full/Joppjg/&quot;&gt;sample game&lt;/a&gt; in javascript on CodePen. The objective is to make the most money you can before you use up all your time.
-    &lt;/p&gt;
-&lt;img border=&quot;0&quot; src=&quot;http://2.bp.blogspot.com/--uoEYazVJfg/VN-hM5Q3_5I/AAAAAAAACnE/BUaxRFWnzVM/s1600/Screen%2BShot%2B2015-02-14%2Bat%2B1.24.08%2BPM.png&quot; title=&quot; &quot;/&gt;
+    To make the game more clear, I built a &lt;a href=&quot;http://codepen.io/wmcfadd2/full/Joppjg/&quot;&gt;sample game&lt;/a&gt; in javascript on CodePen. The objective is to make the most money you can before you use up all your time.
+&lt;/p&gt;
+&lt;img border=&quot;0&quot; src=&quot;http://2.bp.blogspot.com/--uoEYazVJfg/VN-hM5Q3_5I/AAAAAAAACnE/BUaxRFWnzVM/s1600/Screen%2BShot%2B2015-02-14%2Bat%2B1.24.08%2BPM.png&quot; title=&quot; &quot; /&gt;
 &lt;p&gt;
-        Before we look at the answer you should give the game a shot. &lt;a href=&quot;http://codepen.io/wmcfadd2/full/Joppjg/&quot;&gt;Try it out&lt;/a&gt;.
-    &lt;/p&gt;
+    Before we look at the answer you should give the game a shot. &lt;a href=&quot;http://codepen.io/wmcfadd2/full/Joppjg/&quot;&gt;Try it out&lt;/a&gt;.
+&lt;/p&gt;
 &lt;h4&gt;Trying to find a general solution&lt;/h4&gt;
 &lt;p&gt;
-        After playing around for a few minutes you'll probably get the idea of how best to win. It makes sense to only take the hard task when you have a chance of getting more than $2. The real trick though is that sometimes, even though you might make more, the odds that you'll win are so low that you shouldn't waste your time on the hard task.
-    &lt;/p&gt;
+    After playing around for a few minutes you'll probably get the idea of how best to win. It makes sense to only take the hard task when you have a chance of getting more than $2. The real trick though is that sometimes, even though you might make more, the odds that you'll win are so low that you shouldn't waste your time on the hard task.
+&lt;/p&gt;
 &lt;p&gt;
-        My original rule of thumb was to take the hard task only when the expected value of the hard task (i.e. offered payout * chance of winning) was higher than $2. My logic was just that I should only waste my time when I have a reasonable chance of getting the higher payout.
-    &lt;/p&gt;
+    My original rule of thumb was to take the hard task only when the expected value of the hard task (i.e. offered payout * chance of winning) was higher than $2. My logic was just that I should only waste my time when I have a reasonable chance of getting the higher payout.
+&lt;/p&gt;
 &lt;p&gt;
-        But I was pretty sure there must be a more solid way to figure out what the cutoff offer should be. And I wasn't going to rest until I found it.
-    &lt;/p&gt;
+    But I was pretty sure there must be a more solid way to figure out what the cutoff offer should be. And I wasn't going to rest until I found it.
+&lt;/p&gt;
 &lt;h4&gt;Simulate it!&lt;/h4&gt;
 &lt;p&gt;
-        I needed to get a better understanding of what would happen given a cutoff dollar value above which I'd take the hard task. Of course, I didn't want to have to play the game over and over again just to find out the outcome. Instead, I wrote a &lt;a href=&quot;http://en.wikipedia.org/wiki/Computer_simulation&quot;&gt;simulation&lt;/a&gt; of the game in &lt;a href=&quot;http://www.mathworks.com/products/matlab/&quot;&gt;MATLAB&lt;/a&gt;.
-    &lt;/p&gt;
+    I needed to get a better understanding of what would happen given a cutoff dollar value above which I'd take the hard task. Of course, I didn't want to have to play the game over and over again just to find out the outcome. Instead, I wrote a &lt;a href=&quot;http://en.wikipedia.org/wiki/Computer_simulation&quot;&gt;simulation&lt;/a&gt; of the game in &lt;a href=&quot;http://www.mathworks.com/products/matlab/&quot;&gt;MATLAB&lt;/a&gt;.
+&lt;/p&gt;
 &lt;p&gt;
-        I've got the functional &lt;a href=&quot;https://github.com/lots-of-things/task-game/blob/master/taskgame_sim.m&quot;&gt;simulation code&lt;/a&gt; on GitHub. It looks complicated, but it's basically just a loop that picks one probability (33%, 66%, or 100%) and then picks the corresponding &quot;choice&quot; threshold. Then it just simulates the game by offering a random value and letting the &quot;choice&quot; decide whether the offer is accepted. It adds up winnings and time according to the choice and the outcome.
-    &lt;/p&gt;
-&lt;pre class=&quot;prettyprint&quot;&gt;&lt;br/&gt;winnings = 0;&lt;br/&gt;i = 1;&lt;br/&gt;t = 0;&lt;br/&gt;while (t&amp;lt;totaltime)&lt;br/&gt;  index = unidrnd(length(probabilities));&lt;br/&gt;  p = probabilities(index);&lt;br/&gt;  c = choices(index);&lt;br/&gt;  offer = unifrnd(minval, maxval);&lt;br/&gt;  if(unifrnd(0, 1)&amp;lt;p)&lt;br/&gt;    if(offer&amp;gt;c)&lt;br/&gt;      winnings = winnings+offer;&lt;br/&gt;      t = t+hardT;&lt;br/&gt;    else&lt;br/&gt;      winnings = winnings+minval;&lt;br/&gt;      t = t+easyT;&lt;br/&gt;    end&lt;br/&gt;  else&lt;br/&gt;    if(offer&amp;gt;c)&lt;br/&gt;      t = t+hardT;&lt;br/&gt;    else&lt;br/&gt;      t = t+easyT;&lt;br/&gt;    end&lt;br/&gt;  end&lt;br/&gt;end&lt;br/&gt;&lt;br/&gt;&lt;/pre&gt;
+    I've got the functional &lt;a href=&quot;https://github.com/lots-of-things/task-game/blob/master/taskgame_sim.m&quot;&gt;simulation code&lt;/a&gt; on GitHub. It looks complicated, but it's basically just a loop that picks one probability (33%, 66%, or 100%) and then picks the corresponding &quot;choice&quot; threshold. Then it just simulates the game by offering a random value and letting the &quot;choice&quot; decide whether the offer is accepted. It adds up winnings and time according to the choice and the outcome.
+&lt;/p&gt;
+&lt;pre class=&quot;prettyprint&quot;&gt;
+    
+winnings = 0;
+i = 1;
+t = 0;
+while (t&amp;lt;totaltime)
+  index = unidrnd(length(probabilities));
+  p = probabilities(index);
+  c = choices(index);
+  offer = unifrnd(minval, maxval);
+  if(unifrnd(0, 1)&amp;lt;p)
+    if(offer&amp;gt;c)
+      winnings = winnings+offer;
+      t = t+hardT;
+    else
+      winnings = winnings+minval;
+      t = t+easyT;
+    end
+  else
+    if(offer&amp;gt;c)
+      t = t+hardT;
+    else
+      t = t+easyT;
+    end
+  end
+end
+
+
+&lt;/pre&gt;
 &lt;p&gt;
-        With this simulation I was able to graph the winnings as a function of each choice threshold. It's tough to visualize all three dimensions at once, but here I've plotted the winnings as a function of two of the choice thresholds.
-    &lt;/p&gt;
-&lt;img border=&quot;0&quot; src=&quot;http://3.bp.blogspot.com/-bgJF7Tjvk4M/VOJI8HRV3JI/AAAAAAAACtg/t3J2aM1ArZM/s1600/payoff_sim.png&quot; title=&quot; &quot;/&gt;
+    With this simulation I was able to graph the winnings as a function of each choice threshold. It's tough to visualize all three dimensions at once, but here I've plotted the winnings as a function of two of the choice thresholds.
+&lt;/p&gt;
+&lt;img border=&quot;0&quot; src=&quot;http://3.bp.blogspot.com/-bgJF7Tjvk4M/VOJI8HRV3JI/AAAAAAAACtg/t3J2aM1ArZM/s1600/payoff_sim.png&quot; title=&quot; &quot; /&gt;
 &lt;p&gt;
-        You can kind of see that the maximum return takes place with these two thresholds set somewhere around $2 and $3. But still, there should be a way to describe this mathematically so that I can get a nice clean number to set as the threshold.
-    &lt;/p&gt;
+    You can kind of see that the maximum return takes place with these two thresholds set somewhere around $2 and $3. But still, there should be a way to describe this mathematically so that I can get a nice clean number to set as the threshold.
+&lt;/p&gt;
 &lt;h4&gt;Deriving a solution&lt;/h4&gt;
 &lt;p&gt;
-        Using the intuition I got from the simulation, I wanted to work out a mathematical formula that would predict the average payout for a given set of choice thresholds.
-    &lt;/p&gt;
+    Using the intuition I got from the simulation, I wanted to work out a mathematical formula that would predict the average payout for a given set of choice thresholds.
+&lt;/p&gt;
 &lt;p&gt;
-        The outcome is just the product of the number of rounds you play times the average winnings for each round. The average winnings is obviously a function of the choice thresholds because that's what determines whether you take the easy or hard task.
-    &lt;/p&gt;
+    The outcome is just the product of the number of rounds you play times the average winnings for each round. The average winnings is obviously a function of the choice thresholds because that's what determines whether you take the easy or hard task.
+&lt;/p&gt;
 &lt;p&gt;
-        What makes it more interesting is that the number of rounds you play is also a function of your choice thresholds. The lower your choice threshold, the more hard tasks you'll try, meaning you'll get fewer rounds before the time runs up.
-    &lt;/p&gt;
+    What makes it more interesting is that the number of rounds you play is also a function of your choice thresholds. The lower your choice threshold, the more hard tasks you'll try, meaning you'll get fewer rounds before the time runs up.
+&lt;/p&gt;
 &lt;p&gt;
-        So I basically needed a formula that would take those two things into account. I can't go through all of my reasoning because it would be sooooo tedious, but I'll break it down in a few math steps.
-    &lt;/p&gt;
+    So I basically needed a formula that would take those two things into account. I can't go through all of my reasoning because it would be sooooo tedious, but I'll break it down in a few math steps.
+&lt;/p&gt;
 &lt;p&gt;
-        To get started we know that the total winnings is just going to be the sum of the winnings from the easy rounds and the winnings from the hard rounds.
-    &lt;/p&gt;
-&lt;div lang=&quot;latex&quot; style=&quot;text-align:center;&quot;&gt;W_{tot} = f_e\frac{T}{t_e}w_e + f_h\frac{T}{t_h}w_h &lt;/div&gt;
+    To get started we know that the total winnings is just going to be the sum of the winnings from the easy rounds and the winnings from the hard rounds.
+&lt;/p&gt;
+&lt;p lang=&quot;latex&quot; &gt;W_{tot} = f_e\frac{T}{t_e}w_e + f_h\frac{T}{t_h}w_h &lt;/p&gt;
 &lt;p&gt;
-        We know the total time, &lt;span lang=&quot;latex&quot;&gt;T&lt;/span&gt;, and the time it takes for the hard and easy tasks, &lt;span lang=&quot;latex&quot;&gt;t_e, t_h&lt;/span&gt;. So we just need to figure out the fraction of the time spent on the hard and easy tasks (&lt;span lang=&quot;latex&quot;&gt;f_e,f_h&lt;/span&gt;) and the average amount you'd win for both (&lt;span lang=&quot;latex&quot;&gt;w_e,w_h&lt;/span&gt;).
-    &lt;/p&gt;
+    We know the total time, &lt;span lang=&quot;latex&quot;&gt;T&lt;/span&gt;, and the time it takes for the hard and easy tasks, &lt;span lang=&quot;latex&quot;&gt;t_e, t_h&lt;/span&gt;. So we just need to figure out the fraction of the time spent on the hard and easy tasks (&lt;span lang=&quot;latex&quot;&gt;f_e,f_h&lt;/span&gt;) and the average amount you'd win for both (&lt;span lang=&quot;latex&quot;&gt;w_e,w_h&lt;/span&gt;).
+&lt;/p&gt;
 &lt;p&gt;
-        I'm going to leave that part up as an exercise for the reader, but after a little head scratching I was able to figure it out. The solution looks like this
-    &lt;/p&gt;
-&lt;div lang=&quot;latex&quot; style=&quot;text-align:center;&quot;&gt;W_{tot} = \frac{T}{t_e}\left ( 1 - \frac{1}{1+\tfrac{O_{max}-O_{min}}{O_{max}-\bar c}\tfrac{t_e}{t_h-t_e}}\right )w_{avg} &lt;/div&gt;
+    I'm going to leave that part up as an exercise for the reader, but after a little head scratching I was able to figure it out. The solution looks like this
+&lt;/p&gt;
+&lt;p lang=&quot;latex&quot; style=&quot;text-align:center;&quot;&gt;W_{tot} = \frac{T}{t_e}\left ( 1 - \frac{1}{1+\tfrac{O_{max}-O_{min}}{O_{max}-\bar c}\tfrac{t_e}{t_h-t_e}}\right )w_{avg} &lt;/p&gt;
 &lt;p&gt;
-        For the new variables, &lt;span lang=&quot;latex&quot;&gt;O_{max}&lt;/span&gt;and&lt;span lang=&quot;latex&quot;&gt;O_{min}&lt;/span&gt; are the max and min offers, &lt;span lang=&quot;latex&quot;&gt;\bar c&lt;/span&gt; is the average value of your three choice thresholds, and &lt;span lang=&quot;latex&quot;&gt;w_{avg}&lt;/span&gt; is the average payoff for an individual turn.
-    &lt;/p&gt;
-&lt;div lang=&quot;latex&quot; style=&quot;text-align:center;&quot;&gt;w_{avg} = \sum p_i((O_{max}-c_i)(c_i+O_{max})/2 + O_{min}(c_i-O_{min}))/(O_{max}-O_{min}) &lt;/div&gt;
+    For the new variables, &lt;span lang=&quot;latex&quot;&gt;O_{max}&lt;/span&gt;and&lt;span lang=&quot;latex&quot;&gt;O_{min}&lt;/span&gt; are the max and min offers, &lt;span lang=&quot;latex&quot;&gt;\bar c&lt;/span&gt; is the average value of your three choice thresholds, and &lt;span lang=&quot;latex&quot;&gt;w_{avg}&lt;/span&gt; is the average payoff for an individual turn.
+&lt;/p&gt;
+&lt;p lang=&quot;latex&quot; style=&quot;text-align:center;&quot;&gt;w_{avg} = \sum p_i((O_{max}-c_i)(c_i+O_{max})/2 + O_{min}(c_i-O_{min}))/(O_{max}-O_{min}) &lt;/p&gt;
 &lt;p&gt;
-        This ended up being really ugly by the end. To ensure that I was calculating this solution correctly, I wrote another &lt;a href=&quot;https://github.com/lots-of-things/task-game/blob/master/taskgame_estimate.m&quot;&gt;MATLAB function&lt;/a&gt; to print my predicted value just like above. To me, this is a great way to prove whether you carried out the math right. The similarity between my analytical solution and the simulated results makes me confident that I didn't make any mistakes along the way.
-    &lt;/p&gt;
-&lt;img border=&quot;0&quot; src=&quot;http://2.bp.blogspot.com/-TQkyDZ0Mmoo/VOJI8G_asqI/AAAAAAAACtk/Zq3vqA5kb7g/s1600/payoff_est.png&quot; title=&quot; &quot;/&gt;
+    This ended up being really ugly by the end. To ensure that I was calculating this solution correctly, I wrote another &lt;a href=&quot;https://github.com/lots-of-things/task-game/blob/master/taskgame_estimate.m&quot;&gt;MATLAB function&lt;/a&gt; to print my predicted value just like above. To me, this is a great way to prove whether you carried out the math right. The similarity between my analytical solution and the simulated results makes me confident that I didn't make any mistakes along the way.
+&lt;/p&gt;
+&lt;img border=&quot;0&quot; src=&quot;http://2.bp.blogspot.com/-TQkyDZ0Mmoo/VOJI8G_asqI/AAAAAAAACtk/Zq3vqA5kb7g/s1600/payoff_est.png&quot; title=&quot; &quot; /&gt;
 &lt;p&gt;
-        It isn't perfectly easy to see using a point cloud so I binned the data to make it more clear. From this graph, it's pretty clear that the cutoff thresholds are $2.25 for the 100% chance and $2.90 for the 66% chance.
-    &lt;/p&gt;
-&lt;img border=&quot;0&quot; src=&quot;http://3.bp.blogspot.com/-1Z2kuD7legs/VOJI8JewFOI/AAAAAAAACtc/PovqlwgP58k/s1600/payoff_est_max.png&quot; title=&quot; &quot;/&gt;
+    It isn't perfectly easy to see using a point cloud so I binned the data to make it more clear. From this graph, it's pretty clear that the cutoff thresholds are $2.25 for the 100% chance and $2.90 for the 66% chance.
+&lt;/p&gt;
+&lt;img border=&quot;0&quot; src=&quot;http://3.bp.blogspot.com/-1Z2kuD7legs/VOJI8JewFOI/AAAAAAAACtc/PovqlwgP58k/s1600/payoff_est_max.png&quot; title=&quot; &quot; /&gt;
 &lt;p&gt;
-        We could do a little more math to write out the optimum solution, but most of the challenge is over at this point. I think I'm going to call it a night.
-    &lt;/p&gt;
+    We could do a little more math to write out the optimum solution, but most of the challenge is over at this point. I think I'm going to call it a night.
+&lt;/p&gt;
 &lt;h4&gt;What did we learn&lt;/h4&gt;
 &lt;p&gt;
-        Looking at simplified decision-making games is a fun way to think about how we make choices in our everyday life. Every choice offers us some risk that we've wasted our time on an uncertain reward. Maybe this blog post was just such a waste of time. But you know what, I had fun. Can you really &lt;a href=&quot;https://uk.finance.yahoo.com/news/can-you-put-a-price-on-fun-yes-310-346.html&quot;&gt;put a price&lt;/a&gt; on that?
-    &lt;/p&gt;
+    Looking at simplified decision-making games is a fun way to think about how we make choices in our everyday life. Every choice offers us some risk that we've wasted our time on an uncertain reward. Maybe this blog post was just such a waste of time. But you know what, I had fun. Can you really &lt;a href=&quot;https://uk.finance.yahoo.com/news/can-you-put-a-price-on-fun-yes-310-346.html&quot;&gt;put a price&lt;/a&gt; on that?
+&lt;/p&gt;
 &lt;p&gt;
-        By the way, if you're a social psychologist or an economist, please leave a comment. I would love to know what this game is called. There has to be some cool history behind it that I'd like to learn about.
-    &lt;/p&gt;
+    By the way, if you're a social psychologist or an economist, please leave a comment. I would love to know what this game is called. There has to be some cool history behind it that I'd like to learn about.
+&lt;/p&gt;
 &lt;p&gt;
-        As usual you can find all the code for this project on the &lt;a href=&quot;https://github.com/lots-of-things/task-game&quot;&gt;make_loft GitHub account&lt;/a&gt;, and you can find the online game on &lt;a href=&quot;http://codepen.io/wmcfadd2/pen/KwQxxy&quot;&gt;my CodePen account&lt;/a&gt;.
-    &lt;/p&gt;
-&lt;br/&gt;
-
-&lt;script src=&quot;http://latex.codecogs.com/latexit.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+    As usual you can find all the code for this project on the &lt;a href=&quot;https://github.com/lots-of-things/task-game&quot;&gt;make_loft GitHub account&lt;/a&gt;, and you can find the online game on &lt;a href=&quot;http://codepen.io/wmcfadd2/pen/KwQxxy&quot;&gt;my CodePen account&lt;/a&gt;.
+&lt;/p&gt;
+&lt;br /&gt;
+&lt;script src=&quot;https://latex.codecogs.com/latexit.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js&quot;&gt;&lt;/script&gt;</description>
         <pubDate>Mon, 16 Feb 2015 00:00:00 -0800</pubDate>
         <link>https://bonkerfield.org/2015/02/procrastinating-with-time-optimization/</link>
