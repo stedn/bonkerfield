@@ -22,21 +22,27 @@ image: /assets/images/2020/thiscommentisgreat.png
 <a href="http://bl.ocks.org/stedn/b0acdeba81751c5f8e4ccaa74ccb09a9">
 <img src="/assets/images/2020/wuhan_model_viz.gif" title="Wuhan javascript model visualization" alt="Wuhan javascript model visualization"/>
 </a>
-
+<br/>
 <h4>Defining a model of Wuhan virus spread</h4>
-<p style="text-align:center;"><small><em>This section gets a bit math heavy, but you can ignore the equations to get an idea of how it's defined</em>.  To see the full derivation check out <a href="https://github.com/lots-of-things/wuhan-virus-model/blob/master/Wuhan_to_SF_infection_model.pdf">this document</a>.</small></p>
+<p style="text-align:center;"><small><em>I've left out a lot of detail in this section for simplicity.  To see the full derivation check out <a href="https://github.com/lots-of-things/wuhan-virus-model/blob/master/Wuhan_to_SF_infection_model.pdf">this document</a>.</em></small></p>
 
 <p>
 	I wanted to simplify the <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology">standard SIR model</a>, and apply it to two locations. An SIR model normally computes how the spread of an epidemic varies the population moves from Susceptible (S) to Infected (I) to Recovered (R).  
 </p>
 
-<img title="SIR model diagram from wikipedia" alt="SIR model diagram from wikipedia" src="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology#/media/File:SIR.PNG"/>
 
+<img title="SIR model diagram from wikipedia" alt="SIR model diagram from wikipedia" src="https://upload.wikimedia.org/wikipedia/commons/8/8a/SIR.PNG"/>
+<p style="text-align:center"><em>Diagram of transitions in SIR model (<a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology#/media/File:SIR.PNG">source Imoen</a>)</em></p>
 <p>
-	There is a specific dynamical equation that governs how S, I and R vary over time.  However, I'm only interested in the early phase of the epidemic, when it's only spread to a small fraction of the population.  In that case, we don't need to worry about the total population in an area, we just always assume that there are lots of uninfected people around who can become infected.
+	There is a <a href="http://www.public.asu.edu/~hnesse/classes/sir.html">specific dynamics model</a> that governs how S, I and R vary over time.  However, I'm only interested in the early phase of the epidemic, when it's only spread to a small fraction of the population.  In that case, we don't need to worry about how many people are susceptible or recovered, we just always assume that there are lots of uninfected people around who can become infected.
 </p>
 <p>
-	You can <a href="https://github.com/lots-of-things/wuhan-virus-model/blob/master/Wuhan_to_SF_infection_model.pdf">look here</a> for details on how the math works, but here is a short summary. The model works by defining the "net infected rate," which is the number of newly infected people minus the number of people who are moved into quarantine.  We're going to make the assumption that the number of newly infected people is proportional to the current number of infected people.  For the quarantine we're going to make another assumption. We're going to assume that our abililty to quarantine people gets worse and worse as there gets to be more infected people.  To model that, I'm going to use the simplest formula that fits that description, which looks something like
+	I worked through defining a mathematical model that looks just at the early infection phase of an epidemic.  You can <a href="https://github.com/lots-of-things/wuhan-virus-model/blob/master/Wuhan_to_SF_infection_model.pdf">look here</a> for details on how the math works, but I'll just give a short summary here. 
+</p>
+
+<h5>Exponential Infection Model</h5>
+<p>
+	The model works by defining the "net infected rate," which is the number of newly infected people minus the number of people who are moved into quarantine.  We're going to make the assumption that the number of newly infected people is proportional to the current number of infected people.  For the quarantine we're going to make another assumption. We're going to assume that our abililty to quarantine people gets worse and worse as there gets to be more infected people.  To model that, I'm going to use the simplest formula that fits that description, which looks something like
 </p>
 
 <p lang="latex">\frac{dI}{dt} = \gamma I - \kappa</p>
@@ -57,19 +63,19 @@ image: /assets/images/2020/thiscommentisgreat.png
 	I took this model definition and generated simulations that show how the values of <span lang="latex">I_{wu}</span> and <span lang="latex">I_{sf}</span> vary over time. These kinds of simulations just take the equations above and use them to determine how the number of people infected would change over a small unit of time. Then, they do this over and over again to show how the system evolves.  I used prepackaged simulation software to diagram the solution to the equation I had above, and it gave curves that showed the growth in the number of infected in the two locations over time.
 </p>
 
-<img title="example wuhan plot" src="/assets/images/2020/wuhan_model_growth.png"/>
+<img class="small_img" title="example wuhan plot" src="/assets/images/2020/wuhan_model_growth.png"/>
 
 <p>
-	Next, I used the simulation to see what happened if I varied how long before flights were shut down .  I called this time <span lang="latex">t_Q</span>.  In this simulation, I set <span lang="latex">t_Q</span> to be very short and saw that event though the infection started to spread in SF, it went back down to 0 right after flights were stopped.
+	Next, I used the simulation to see what happened if I varied how long before flights were shut down.  I called this time <span lang="latex">t_Q</span>.  In this simulation, I set <span lang="latex">t_Q</span> to be very short and saw that event though the infection started to spread in SF, it went back down to 0 right after flights were stopped.
 </p>
 
-<img title="SF infection drops after flights stop" src="/assets/images/2020/wuhan_sf_safe.png"/>
+<img class="small_img" title="SF infection drops after flights stop" src="/assets/images/2020/wuhan_sf_safe.png"/>
 
 <p>
 	As you might expect, if the time before Wuhan is quarantined (<span lang="latex">t_Q</span>) is short, then the infection doesn't have too much time to spread to SF, and they are able to fight the epidemic back down to 0.  But if I extend <span lang="latex">t_Q</span> past 5, suddenly the model predicted that it wouldn't be possible to keep it under control.
 </p>
 
-<img src="/assets/images/2020/wuhan_model_quarantine.png"/>
+<img class="small_img" src="/assets/images/2020/wuhan_model_quarantine.png"/>
 
 <p>
 	This makes intuitive sense, but it was still quite curious to me what might cause everything to be fine at 4.9 days, but for an outbreak to happen after 5 days.  I decided to see if I could use my model to see what set the time of the "point of no return."
@@ -83,21 +89,21 @@ image: /assets/images/2020/thiscommentisgreat.png
 	I evaluated the time of the "point of no return," <span lang="latex">t_X</span> as
 </p>
 
-<p lang="latex">t_X \approx  \frac1.7{\gamma} \left(ln\left(\frac{\gamma}{\mu} - 1\right)- ln\left(w_0 - \frac{\kappa}{\gamma}\right)\right) </p>
+<p lang="latex">t_X \approx  \frac{1.7}{\gamma} \left(ln\left(\frac{\gamma}{\mu} - 1\right)- ln\left(w_0 - \frac{\kappa}{\gamma}\right)\right) </p>
 
 
 <p>
 	Where I added in the initially infected population in Wuhan <span lang="latex">w_o</span> as another parameter. This might look a little mysterious, but you can read <a href="https://github.com/lots-of-things/wuhan-virus-model/blob/master/Wuhan_to_SF_infection_model.pdf">the math</a> to get a better sense of where it comes from. To double check my work, I directly measured <span lang="latex">t_x</span> using my simulations.  
 </p>
 
-<img src="/assets/images/2020/wuhan_tX.png"/>
+<img class="small_img" src="/assets/images/2020/wuhan_tX.png"/>
 
 <p>
 	This pretty surface matched my prediction closely and showed the correct dependence on the logarithm of the Wuhan to SF flight rate <span lang="latex">\mu</span>.
 </p>
 
 
-<h4>It works in theory</h4>
+<h4>Putting the math into practice</h4>
 
 <p>
 	So that's a nice formula to have, but unfortunately, it's totally useless without knowing what these parameters, <span lang="latex">\gamma</span>, <span lang="latex">\kappa</span>, and <span lang="latex">\mu</span> are.  So how can we figure them out?
@@ -107,7 +113,7 @@ image: /assets/images/2020/thiscommentisgreat.png
 	Well fortunately, we can guesstimate <span lang="latex">\gamma</span> just by looking at what's happend in Wuhan.  If we fit the <a href="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6">data</a> for the early part of the outbreak, which looks roughly exponential. The growth constant of that curve is <span lang="latex">\gamma</span>. 
 </p>
 
-<img src="/assets/images/2020/wuhan_cases.png"/>
+<img class="small_img" src="/assets/images/2020/wuhan_cases.png"/>
 
 <p>
 	I plotted the data in <a href="https://docs.google.com/spreadsheets/d/1uo64yIiPMC5C8chDn3WBe5UA6RljJ3YthmxR3p-rp-A/edit?usp=sharing">this google sheet</a> and got an estimate for <span lang="latex">\gamma</span> of 0.2-0.3 new cases per infected person per day.  The reported number of cases is <a href="https://systems.jhu.edu/research/public-health/ncov-model-2/">probably an underestimate</a> of the total population that is infectious, but if it differs by a constant mulitplicative factor, then (I think) cases should still give a good approximation of that constant.
@@ -140,7 +146,7 @@ image: /assets/images/2020/thiscommentisgreat.png
 	Again, you'll have to go through <a href="https://github.com/lots-of-things/wuhan-virus-model/blob/master/Wuhan_to_SF_infection_model.pdf">my derivation</a> to see the details, but these simulation results showed that the formula for <span lang="latex">t_X</span> was roughly twice the value of the single city estimate.
 </p>
 
-<img src="/assets/images/2020/wuhan_tX_double.png"/>
+<img class="small_img" src="/assets/images/2020/wuhan_tX_double.png"/>
 
 <p>
 	To use this estimate, we'll have to adjust the parameter <span lang="latex">t_X</span> to account for there being more flights from other parts of China than there were for Wuhan. Unfortunately for us, there are about ~100 times more flights coming from all of China than were coming from Wuhan directly.  That makes our estimate for the time we'd need to close the border to all of China at 21 days.  Not impossible to pull off, but depending on how you define exactly when the epidemic started, we might have missed that window.
@@ -167,7 +173,7 @@ image: /assets/images/2020/thiscommentisgreat.png
 </a>
 
 <p>
-	To build it, I based the map projection off of <a href="">this example</a>, and the graph at the bottom on <a href="">this example</a>.   The coolest and most fun part was animating the dots that fly from Wuhan to San Francisco, which I based off this code <a href="">bl.ock</a>.  
+	To build it, I figured out the map projection using <a href="https://bl.ocks.org/d3indepth/f7ece0ab9a3df06a8cecd2c0e33e54ef">this tool</a>, and I added the animated graph at the bottom based off <a href="https://bl.ocks.org/d3noob/7030f35b72de721622b8">this example</a>.   The coolest and most fun part, though, was animating the dots that fly from Wuhan to San Francisco, which I based off this code <a href="https://bl.ocks.org/d3indepth/aa1f036f6a0356cb1152c4b836e93990">bl.ock</a>.  
 </p>
 
 <p>
