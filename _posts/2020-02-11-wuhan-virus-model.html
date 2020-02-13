@@ -1,35 +1,35 @@
 ---
 layout: post
-title: Exploring how long before an outbreak of Wuhan virus in SF
+title: Modeling whether an outbreak of Wuhan virus will hit San Francisco
 date: '2020-02-11'
 author: Will Stedden
 tags: 
-- dynamics
 - analysis
-- data science
 - visualization
+- data science
+- dynamics
 - health
-image: /assets/images/2020/wuhan_toy_1.png
+image: /assets/images/2020/wuhan_overview_im.png
 ---
 <p><em>Epistemic status: To be clear, this is a highly simplified model and should not be used to insight panic or to instill a false sense of security.  Please enjoy with a healthy level of skeptical detachment.</em></p>
 
 <p>
-	I'll admit that I've gotten wrapped up in all this <a href="https://www.vox.com/future-perfect/2020/2/6/21121303/coronavirus-wuhan-panic-pandemic-outbreak">Wuhan virus stuff</a>.  This is the first time that I've lived in a major population center while there is a potential epidemic. But I was wondering whether we're already to the point where it's doomed to spread in the SF Bay Area anyway.  I looked at <a href="https://systems.jhu.edu/research/public-health/ncov-model-2/">some results</a> from one of the <a href="">sophisticated epidemiological models</a>, but I was curious how these models worked under the hood.  
+	I'll admit that I've gotten wrapped up in all this <a href="https://www.vox.com/future-perfect/2020/2/6/21121303/coronavirus-wuhan-panic-pandemic-outbreak">Wuhan virus stuff</a>, especially as it relates to the spread in the <a href="https://www.mercurynews.com/2020/02/03/coronavirus-bay-area-has-highest-concentration-of-u-s-cases-that-shouldnt-be-a-surprise/">SF Bay Area</a>.  This is the first time that I've lived in a large population center while there is a potential epidemic looming, and the situation has me wondering whether we're already to the point where it's bound to spread here anyway.  I looked at <a href="https://systems.jhu.edu/research/public-health/ncov-model-2/">some results</a> from one of the <a href="">sophisticated epidemiological models</a>, and I got some reassurance.  But I was curious how these models worked under the hood.  
 </p>
 
 <p>
-	To get a better intuition, I developed a simplified version of that epidemic model, and live, interactive visualization of my simple simulation.  The model allows you to vary the infection spread rate, the rate of quarantine, and the rate at which people fly from Wuhan to San Francisco.   <a href="http://bl.ocks.org/stedn/b0acdeba81751c5f8e4ccaa74ccb09a9">Try it out</a>, and read below to learn more about how it works.
+	To get a better intuition, I developed a simplified version of that epidemic model, and an interactive visualization of my simple simulation.  The model allows you to vary the infection spread rate, the rate of quarantine, and the rate at which people fly from Wuhan to San Francisco.   <a href="http://bl.ocks.org/stedn/b0acdeba81751c5f8e4ccaa74ccb09a9">Try it out</a>, and read below to learn more about how it works.
 </p>
 
 <a href="http://bl.ocks.org/stedn/b0acdeba81751c5f8e4ccaa74ccb09a9">
-<img src="/assets/images/2020/wuhan_model_viz.gif" title="Wuhan javascript model visualization" alt="Wuhan javascript model visualization"/>
+<img class="link_img" src="/assets/images/2020/wuhan_model_viz.gif" title="Wuhan javascript model visualization" alt="Wuhan javascript model visualization"/>
 </a>
 <br/>
 <h4>Defining a model of Wuhan virus spread</h4>
 <p style="text-align:center;"><small><em>I've left out a lot of detail in this section for simplicity.  To see the full derivation check out <a href="https://github.com/lots-of-things/wuhan-virus-model/blob/master/Wuhan_to_SF_infection_model.pdf">this document</a>.</em></small></p>
 
 <p>
-	I wanted to simplify the <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology">standard SIR model</a>, and apply it to two locations. An SIR model normally computes how the spread of an epidemic varies the population moves from Susceptible (S) to Infected (I) to Recovered (R).  
+	I wanted to simplify the <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology">standard SIR model</a>, and apply it to two locations. An SIR model normally computes how the spread of an epidemic varies as the population moves from Susceptible (S) to Infected (I) to Recovered (R).  
 </p>
 
 
@@ -44,20 +44,27 @@ image: /assets/images/2020/wuhan_toy_1.png
 
 <h5>Exponential Infection Model</h5>
 <p>
-	The model works by defining the "net infected rate," which is the number of newly infected people minus the number of people who are moved into quarantine.  We're going to make the assumption that the number of newly infected people is proportional to the current number of infected people.  For the quarantine we're going to make another assumption. We're going to assume that our ability to quarantine people gets worse and worse as there gets to be more infected people.  To model that, I'm going to use the simplest formula that fits that description, which looks something like
+	The model works by defining the "net infected rate," which is the number of newly infected people minus the number of people who are moved into quarantine.  We're going to make the assumption that the change in the number of infected people, <span lang="latex">I</span>, is equal to the current number of infected people times a constant growth rate, <span lang="latex">\gamma</span>.  We can formalize this in an equation.
+</p>
+<p lang="latex">\frac{dI}{dt} = \gamma I </p>
+<p>
+	This equation can be solved to give the standard exponential growth curve of an early phase epidemic.  However, if this equation were the whole story, this would mean that all infectious diseases should turn into exponentially growing epidemics, and we know that isn't the case.  Specifically, we have public health policies that can work to quarantine and mitigate the spread of a disaster.  For this model, we're going to assume that our ability to quarantine people is set at some fixed constant, <span lang="latex">\kappa</span>, so if the growth rate surpasses that, we'll end up with an outbreak.  To model this, I'm going to combine these two terms into one equation like this.
 </p>
 
 <p lang="latex">\frac{dI}{dt} = \gamma I - \kappa</p>
 
 <p>
-	This model is fairly easy to solve, and gives the expected exponential growth in the infected population.  However, it is not very interesting on it's own.  To make it more interesting, I have to add another location for the disease to spread to. The two equations to model Wuhan and SF look like this:
+	This equation is also fairly easy to solve, and <a href="https://www.wolframalpha.com/input/?i=solve+dx%2Fdt+%3D+g*x+-+k+with+x%280%29%3Dk%2Fg%2B1">the solution</a> grows exponentially whenever the infected population crosses the threshold of <span lang="latex">\kappa / \gamma</span>.  
+</p>
+<p>
+	So this equation will work to model the epidemic in one place, but we want to see how the situation evolves if it can spread to another place, like the case for spreading from Wuhan to San Francisco. The two equations to model Wuhan and SF look like this:
 </p>
 
 <p lang="latex">\frac{dI_{wu}}{dt} = \gamma I_{wu} - \kappa</p>
 
 <p lang="latex">\frac{dI_{sf}}{dt} = \gamma I_{sf} - \kappa + \mu I_{wu}</p>
 <p>
-	You can see that the first part of both equations is the same as the simple infection equation for I above. However, in the <span lang="latex">I_{sf}</span> (ie San Francisco) equation, there's an extra term of <span lang="latex">\mu I_{wu}</span>.  This is the rate of people who are sick in Wuhan flying to San Francisco.
+	You can see that the first part of both equations is the same as the simple infection equation for <span lang="latex">I</span> above. However, in the <span lang="latex">I_{sf}</span> (ie San Francisco) equation, there's an extra term of <span lang="latex">\mu I_{wu}</span>.  This is the rate of people who are sick in Wuhan flying to San Francisco.
 </p>
 
 <h5>Simulations</h5>
@@ -131,12 +138,13 @@ image: /assets/images/2020/wuhan_toy_1.png
 </p>
 
 <p>
-	This means that <span lang="latex">t_X ~</span> 60.  According to <a href="https://www.pharmaceutical-technology.com/news/coronavirus-a-timeline-of-how-the-deadly-outbreak-evolved/">this timeline</a>, the border with Wuhan was closed on Jan 22nd, and the outbreak was only at 200 cases on Jan 19.  From this, it would seem like we should have it very much under control.
+	This means that <span lang="latex">t_X \approx</span> 60.  According to <a href="https://www.pharmaceutical-technology.com/news/coronavirus-a-timeline-of-how-the-deadly-outbreak-evolved/">this timeline</a>, the border with Wuhan was closed on Jan 22nd, and the outbreak was only at 200 cases on Jan 19.  From this, it would seem like we should have it very much under control.
 </p>
 
 <p>
-	Of course, this is way too optimistic because we know that Wuhan isn't the only place where the epidemic has spread.  There were lohat
-<h4>Spreading to many locations</h4>
+	Of course, this is way too optimistic because we know that Wuhan isn't the only place where the epidemic has spread.  The virus has spread over many parts of China by now, and any of those places could serve as a source of the viurs now.
+</p>
+<h4>Modeling two locations</h4>
 
 <p>
 	Unfortunately, I don't quite have time to properly model the general case for when we cross the "point of no return" from a spread from one of many cities.  I assume that my analysis would probably look like the original paper that I was basing this on.  However, I did make a simple approximation for a hop between two cities.
@@ -169,18 +177,18 @@ image: /assets/images/2020/wuhan_toy_1.png
 </p>
 
 <a href="http://bl.ocks.org/stedn/b0acdeba81751c5f8e4ccaa74ccb09a9">
-<img src="/assets/images/2020/wuhan_toy_1.png" title="Wuhan javascript model visualization" alt="Wuhan javascript model visualization"/>
+<img src="/assets/images/2020/wuhan_overview_im.png" title="Wuhan javascript model visualization" alt="Wuhan javascript model visualization"/>
 </a>
 
 <p>
-	To build it, I figured out the map projection using <a href="https://bl.ocks.org/d3indepth/f7ece0ab9a3df06a8cecd2c0e33e54ef">this tool</a>, and I added the animated graph at the bottom based off <a href="https://bl.ocks.org/d3noob/7030f35b72de721622b8">this example</a>.   The coolest and most fun part, though, was animating the dots that fly from Wuhan to San Francisco, which I based off this code <a href="https://bl.ocks.org/d3indepth/aa1f036f6a0356cb1152c4b836e93990">bl.ock</a>.  
+	To build it, I figured out the map projection using <a href="https://bl.ocks.org/d3indepth/f7ece0ab9a3df06a8cecd2c0e33e54ef">this tool</a>, and I added the animated graph at the bottom based off <a href="https://bl.ocks.org/d3noob/7030f35b72de721622b8">this example</a>.   The coolest and most fun part, though, was animating the dots that fly from Wuhan to San Francisco, which I based off this code <a href="https://bl.ocks.org/d3indepth/aa1f036f6a0356cb1152c4b836e93990">block</a>.  
 </p>
 
 <p>
 	The really tricky part was manually implementing a differential equation solver in javascript.  I ended up just using the <a href="">forward Euler</a> method even though that is only <a href="">rough approximation</a> of the true solution.  I figured it was more important to have simplicity in this animation since I'd already done the more <a href="">rigorous simulation</a> with the <a href="">scipy ode solver</a>.  
 </p>
 <p>
-	To implement the solver, I just evaluate the differential equation above and add the value to the . However, In order to visualize the number "in transit" flying from Wuhan to SF, I had to keep track of <code>mu * n_wu</code> separately (ie <code>n_tr</code>). 
+	To implement the solver, I just evaluate the differential equation above and keep track of the change in variable values. However, In order to visualize the number "in transit" flying from Wuhan to SF, I had to keep track of <code>mu * n_wu</code> separately (ie <code>n_tr</code>). 
 </p>
 
 <pre>
@@ -209,7 +217,7 @@ image: /assets/images/2020/wuhan_toy_1.png
 </pre>
 
 <p>
-	The trickiest part was keeping track of the "in transit" dots.  For them, they stayed in the "in transit" list until their animation had brought them across.  It wasn't until that point that I incremented the San Francisco infected count (<code>n_sf</code>.
+	The trickiest part was keeping track of the "in transit" dots.  For them, they stayed in the "in transit" list until their animation had brought them across.  It wasn't until that point that I incremented the San Francisco infected count (<code>n_sf</code>).
 </p>
 
 <pre>
