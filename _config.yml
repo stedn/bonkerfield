@@ -2,7 +2,6 @@
 email: will@bonkerfield.org
 baseurl: ""
 permalink: /:year/:month/:title/
-google_analytics: 
 
 name: Will Stedden
 title: bonkerfield
