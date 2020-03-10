@@ -5,9 +5,110 @@
     <description>personal information identity spacetime map</description>
     <link>https://bonkerfield.org</link>
     <atom:link href="https://bonkerfield.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 15 Feb 2020 09:21:41 -0800</pubDate>
-    <lastBuildDate>Sat, 15 Feb 2020 09:21:41 -0800</lastBuildDate>
+    <pubDate>Tue, 10 Mar 2020 09:52:41 -0700</pubDate>
+    <lastBuildDate>Tue, 10 Mar 2020 09:52:41 -0700</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>Viewfoil: Experimenting with Radical Transparency</title>
+        <description>&lt;p&gt;
+	I've been contemplating privacy and anonymity, and speculating on what those ideas will mean in the future of our society.  During conversations with my friends and family, I've started questioning whether maintaining strengthened privacy is possible, and more importantly, whether strengthened privacy is even still a good thing.
+&lt;/p&gt; 
+&lt;p&gt;
+	But in the spirit of this site, I'm not just theorizing anymore.  I'm currently working on putting myself into an experiment on radical transparency.
+&lt;/p&gt;
+&lt;p&gt;
+	I have a whole bunch of reasons why I think this is the right thing to do.  Below, I offer one &lt;strong&gt;apocalyptic horror story&lt;/strong&gt; that attempts to motivate why I want to try this experiment.   After that, I'll offer a little info about how I'm starting to put my transition into motion.
+&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;
+	tl;dr I think that privacy itself is a conspiracy of the powerful. I'm gonna try to bring back lifestreaming to advocate for a transparent society. I call it the &lt;a href=&quot;https://viewfoil.bonkerfield.org/&quot;&gt;viewfoil&lt;/a&gt; project.
+&lt;/em&gt;&lt;/p&gt;
+&lt;h4&gt;The world we live in&lt;/h4&gt; 
+&lt;p&gt;
+	It isn't super difficult to find ways to be terrified of how technology is mishaping modern life, in ways big and small. 
+&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;corporations have too much access to our data&lt;/li&gt;
+&lt;li&gt;it's stressful constantly projecting a perfect life on social media&lt;/li&gt;
+&lt;li&gt;the internet spreads misinformation from both the ill-informed and the ill-intentioned&lt;/li&gt;
+&lt;li&gt;we're all siloing our ideologies and politically radicalizing&lt;/li&gt;
+&lt;li&gt;our attention spans have been completely annihilated&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;
+	The general response to these issues around dinner tables tends to be &quot;&lt;strong&gt;how can we return things to the good old days before all of this happened&lt;/strong&gt;?&quot;  I generally agree with the sentiment. If it were possible to reverse the overflowing of online life, I would do it.  But as things are, I don't think that society is going to become less digitally connected or more intellectually mature to handle ourselves properly. So I'm left pondering what I can do to contribute to a better world as it is.
+&lt;/p&gt; 
+&lt;p&gt;
+	The suggestions that my friends keep proposing all seem to be based around a classic strategy&amp;mdash;build better defenses. We minimize our exposure to the ideas on the web, and return to our most trusted sources. We hide ourselves and make it harder for third parties to know what we're doing.  We develop tools that force us to disconnect from the devices that fuel our addictions.
+&lt;/p&gt;
+&lt;p&gt;
+	Unfortunately, I believe that these are all bandaids, and that they aren't really capable of protecting us from the dangers that the online information exchange poses. I might be paranoid, but I see it playing out like other industries that have garnered massive power.
+&lt;/p&gt;
+&lt;p&gt;
+	People with power and the capacity to exploit our digital connectivity will do it right up to the edge of what is legal. Attempts to regulate will place undue power with established players who will jockey for control of politicians who will grant loopholes. Attempts to outpace the capacity for manipulation will end up exhausting more and more of our resources. Every advance that lets us hide ourselves better, will let a Russian hacker, troll, or &lt;a href=&quot;https://a.ttent.io/n&quot;&gt;quasi-sentient AI&lt;/a&gt; hide themselves better. To combat them, we will need ever more all-encompassing mechanisms of monitoring, which will be exploited by technologists for our control. Only the wealthy will be able to adequately fight back against increasing digital surveillance. They will then use their privileged privacy to circumvent legal grey areas.  And the cycle will continue.
+&lt;/p&gt; 
+&lt;p&gt;
+	This is a depressing situation that hopefully won't happen, but there isn't really any great safeguard against it.  So if we are heading toward a dystopian world of privacy arms races and corporate surveillance, is there really anything I can do?  
+&lt;/p&gt;  
+
+&lt;h4&gt;The truth shall set you free&lt;/h4&gt; 
+&lt;p&gt;
+	What if we go for the opposite approach?  What if we effectively flank our corporate overlords by demanding a complete end to privacy? Maybe we can imagine a utopian counterpoint to the above doomsday prophecy. It seems that most of the issues mentioned above can be ameliorated. 
+&lt;/p&gt;
+&lt;p&gt;
+	I might hypothesize that in a fully transparent world, any attempts at clandestine manipulation could be nearly instantaneously uncovered. If you could see every piece of information connected to the person on the other end, you could instantaneously determine whether they were a real good-intentioned human or a Russian bot.  If our online behavior was globally accessible, any attempt by corporations to profile our behavior could be reverse engineered to filter such profiling. If our lives were fully transparent, there would be no need to stress over falsely curating our public personas on social media. 
+&lt;/p&gt;
+&lt;p&gt;
+	Beyond this, there could be a whole host of unexplored public goods that would come of this too.  The societal harms that come from organized crime would disappear overnight.  It would become impossible for politicians and corporate executives to broker backroom deals that undermine the public good.  And on a topic closer to &lt;a href=&quot;https://www.color.com/&quot;&gt;my&lt;/a&gt; &lt;a href=&quot;https://anthem.ai/&quot;&gt;heart&lt;/a&gt;, if everyone's medical information was universally accessible, it would make it extremely simple for researchers to uncover exactly what the best medical decision is for each person.
+&lt;/p&gt;
+
+&lt;p&gt;
+	Of course, there are still major systemic roadblocks that prevent this kind of privacy from being possible. Full medical histories can't be revealed because it would lead to widespread discrimination and economic harm to vulnerable individuals. There are still many &lt;a href=&quot;https://www.businessinsider.com/economist-intelligence-unit-2017-democracy-index-worst-countries-2018-1&quot;&gt;extant&lt;/a&gt; &lt;a href= &quot;https://en.wikipedia.org/wiki/List_of_totalitarian_regimes&quot;&gt;despotic&lt;/a&gt; governments that would exploit this kind of information. And there are large numbers of people who casually break minor laws each day&lt;a title=&quot;though I would argue that such laws really ought to be reversed anyway, and universal transparency would make that clear&quot;href=&quot;&quot; onclick=&quot;return false;&quot;&gt;[*]&lt;/a&gt;.
+&lt;/p&gt;
+&lt;p&gt;
+	We are not ready for global transparency yet.  However, I am in a place of unique privilege where I can move myself much closer to a life open to total external inspection.
+&lt;/p&gt;
+&lt;p&gt;
+	If I believe that this future would be better, I simply have to start experimenting to see if it's possible to attain.
+&lt;/p&gt;
+
+&lt;h4&gt;Viewfoil&lt;/h4&gt; 
+&lt;p&gt;
+	To do this, I've been putting in motion a plan to make any and all information about my life accessible to anyone who cares to look.  A lot of people &lt;a href=&quot;https://en.wikipedia.org/wiki/Lifestreaming&quot;&gt;have done this before&lt;/a&gt; &lt;a href=&quot;https://en.wikipedia.org/wiki/Quantified_self&quot;&gt;in various forms&lt;/a&gt; so I don't think it's that bold of an idea.  But like a good millennial, I don't just want to do it, I want to advocate for it. 
+&lt;/p&gt;
+&lt;p&gt;
+	I've outlined the goals I'm trying to work towards during my first year on the project.
+&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;Start revealing an unfiltered version of my life on social media&lt;/li&gt;
+	&lt;li&gt;Start writing my ideas as they are, not as I expect others to want them to appear&lt;/li&gt;
+	&lt;li&gt;Reveal all my secrets and dirty laundry to everyone I know&lt;/li&gt;
+	&lt;li&gt;Carefully get consent to incorporate information about my friends and family&lt;/li&gt;
+	&lt;li&gt;Work towards being able to share more detailed private information without compromising anyone's safety&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+	There's a lot to do for each of these, and I will be elaborating on them (at length) in the future. I don't want this to distract from the content here so I'm building a separate site called &lt;a href=&quot;https://viewfoil.bonkerfield.org/&quot;&gt;Viewfoil&lt;/a&gt; where I'm going to be doing the heavy lifting.  &lt;strong&gt;Viewfoil&lt;/strong&gt; is the technical word for the transparencies from the overhead projectors we used to have back in grade school.  I think it's a fitting name for a &lt;em&gt;project&lt;/em&gt; about being more &lt;em&gt;transparent&lt;/em&gt;.
+&lt;/p&gt;
+&lt;a style=&quot;border:none;box-shadow:none&quot; href=&quot;https://viewfoil.bonkerfield.org/&quot;&gt;&lt;img style=&quot;width:30%;&quot; src=&quot;/assets/images/main/viewfoil.png&quot;/&gt;&lt;/a&gt;
+
+&lt;p&gt;
+	Needless to say, I'm sure I will encounter myriad issues that prevent me from exploring this entirely, but I'm excited to see just where this starts to break down.  I'm quite scared about a lot of things, but hopefully if I move slowly and carefully, I'll learn enough as I go along to survive this thing.
+&lt;/p&gt;
+&lt;p&gt;
+	This is going to be an interesting year.  Check out &lt;a href=&quot;https://viewfoil.bonkerfield.org/&quot;&gt;viewfoil&lt;/a&gt; if you are interested.
+&lt;/p&gt;    
+
+
+</description>
+        <pubDate>Sun, 08 Mar 2020 00:00:00 -0800</pubDate>
+        <link>https://bonkerfield.org/2020/03/viewfoil/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2020/03/viewfoil/</guid>
+        
+        <category>philosophy</category>
+        
+        
+      </item>
     
       <item>
         <title>Modeling whether an outbreak of Wuhan virus will hit San Francisco</title>
