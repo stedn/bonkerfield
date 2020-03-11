@@ -5,8 +5,8 @@
     <description>personal information identity spacetime map</description>
     <link>https://bonkerfield.org</link>
     <atom:link href="https://bonkerfield.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 10 Mar 2020 10:59:10 -0700</pubDate>
-    <lastBuildDate>Tue, 10 Mar 2020 10:59:10 -0700</lastBuildDate>
+    <pubDate>Tue, 10 Mar 2020 23:09:44 -0700</pubDate>
+    <lastBuildDate>Tue, 10 Mar 2020 23:09:44 -0700</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -97,10 +97,11 @@
 	Needless to say, I'm sure I will encounter myriad issues that prevent me from exploring this entirely, but I'm excited to see just where this starts to break down.  I'm quite scared about a lot of things, but hopefully if I move slowly and carefully, I'll learn enough as I go along to survive this thing.
 &lt;/p&gt;
 &lt;p&gt;
-	This is going to be an interesting year.  Check out &lt;a href=&quot;https://viewfoil.bonkerfield.org/&quot;&gt;viewfoil&lt;/a&gt; if you are interested.
+	This is going to be an interesting year.  Check out &lt;a href=&quot;https://viewfoil.bonkerfield.org/&quot;&gt;Viewfoil&lt;/a&gt; if you are interested.
 &lt;/p&gt;    
-
-
+&lt;p&gt;
+	&lt;em&gt;Update: I've already started building onto the Viewfoil site with a parallel feed from &lt;a href=&quot;https://twitter.com/bonkerfield&quot;&gt;my twitter&lt;/a&gt;.  I reused code from my &lt;a href=&quot;https://www.bonkerfield.org/2015/01/tweetnote-unfakeable-timestamp-notebook/&quot;&gt;tweet_note&lt;/a&gt; and &lt;a href=&quot;http://actsofsuperness.appspot.com/&quot;&gt;#ActsOfSuperness&lt;/a&gt; projects from 5 years ago. I don't have time for a full post, but you can see the code that automates pulling from twitter and pushing to blogger &lt;a href=&quot;https://github.com/lots-of-things/viewfoil&quot;&gt;here&lt;/a&gt;.  &lt;/em&gt;
+&lt;/p&gt;
 </description>
         <pubDate>Sun, 08 Mar 2020 00:00:00 -0800</pubDate>
         <link>https://bonkerfield.org/2020/03/viewfoil/</link>
