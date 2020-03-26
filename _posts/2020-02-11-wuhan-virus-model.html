@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Modeling whether an outbreak of Wuhan virus will hit San Francisco
+title: Modeling whether an outbreak of COVID-19 virus will hit San Francisco
 date: '2020-02-11'
 author: Will Stedden
 tags: 
@@ -13,8 +13,11 @@ image: /assets/images/2020/wuhan_overview_im.png
 ---
 <p><em>Epistemic status: To be clear, this is a highly simplified model and should not be used to insight panic or to instill a false sense of security.  Please enjoy with a healthy level of skeptical detachment.</em></p>
 
+<p><strong>Edit: Note that when I originally published this, the WHO had not settled on the name COVID-19 yet so I was referring to it as "Wuhan virus." That has since <a href="https://www.nytimes.com/2020/03/18/us/politics/china-virus.html">become problematic</a> so I am updating to reflect te better terminology. </strong></p>
+
+
 <p>
-	I'll admit that I've gotten wrapped up in all this <a href="https://www.vox.com/future-perfect/2020/2/6/21121303/coronavirus-wuhan-panic-pandemic-outbreak">Wuhan virus stuff</a>, especially as it relates to the spread in the <a href="https://www.mercurynews.com/2020/02/03/coronavirus-bay-area-has-highest-concentration-of-u-s-cases-that-shouldnt-be-a-surprise/">SF Bay Area</a>.  This is the first time that I've lived in a large population center while there is a potential epidemic looming, and the situation has me wondering whether we're already to the point where it's bound to spread here anyway.  I looked at <a href="https://systems.jhu.edu/research/public-health/ncov-model-2/">some results</a> from one of the <a href="">sophisticated epidemiological models</a>, and I got some reassurance.  But I was curious how these models worked under the hood.  
+	I'll admit that I've gotten wrapped up in all this <a href="https://www.vox.com/future-perfect/2020/2/6/21121303/coronavirus-wuhan-panic-pandemic-outbreak"><strike>Wuhan</strike>COVID-19 virus stuff</a>, especially as it relates to the spread in the <a href="https://www.mercurynews.com/2020/02/03/coronavirus-bay-area-has-highest-concentration-of-u-s-cases-that-shouldnt-be-a-surprise/">SF Bay Area</a>.  This is the first time that I've lived in a large population center while there is a potential epidemic looming, and the situation has me wondering whether we're already to the point where it's bound to spread here anyway.  I looked at <a href="https://systems.jhu.edu/research/public-health/ncov-model-2/">some results</a> from one of the <a href="">sophisticated epidemiological models</a>, and I got some reassurance.  But I was curious how these models worked under the hood.  
 </p>
 
 <p>
@@ -25,7 +28,7 @@ image: /assets/images/2020/wuhan_overview_im.png
 <img class="link_img" src="/assets/images/2020/wuhan_model_viz.gif" title="Wuhan javascript model visualization" alt="Wuhan javascript model visualization"/>
 </a>
 <br/>
-<h4>Defining a model of Wuhan virus spread</h4>
+<h4>Defining a model of <strike>Wuhan</strike>coronavirus virus spread</h4>
 <p style="text-align:center;"><small><em>I've left out a lot of detail in this section for simplicity.  To see the full derivation check out <a href="https://github.com/lots-of-things/wuhan-virus-model/blob/master/Wuhan_to_SF_infection_model.pdf">this document</a>.</em></small></p>
 
 <p>
