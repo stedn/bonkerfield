@@ -8,6 +8,7 @@ layout: default
                 <h2 itemprop="name headline p-name">{{ page.title }}</h2>
                 <time class="post__date dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%Y·%m·%d" }}</time>
                 <p class="post__date p-summary">{{ page.description }}</p>
+                <a class="u-url" style="display:none;" href="{{ page.url | absolute_url }}"></a>
             </div>
         </div>
         <div class="post__content section-padding">
