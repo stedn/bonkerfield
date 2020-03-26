@@ -5,8 +5,8 @@
     <description>personal information identity spacetime map</description>
     <link>https://bonkerfield.org</link>
     <atom:link href="https://bonkerfield.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 25 Mar 2020 16:32:03 -0700</pubDate>
-    <lastBuildDate>Wed, 25 Mar 2020 16:32:03 -0700</lastBuildDate>
+    <pubDate>Thu, 26 Mar 2020 00:06:56 -0700</pubDate>
+    <lastBuildDate>Thu, 26 Mar 2020 00:06:56 -0700</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -141,11 +141,14 @@
       </item>
     
       <item>
-        <title>Modeling whether an outbreak of Wuhan virus will hit San Francisco</title>
+        <title>Modeling whether an outbreak of COVID-19 virus will hit San Francisco</title>
         <description>&lt;p&gt;&lt;em&gt;Epistemic status: To be clear, this is a highly simplified model and should not be used to insight panic or to instill a false sense of security.  Please enjoy with a healthy level of skeptical detachment.&lt;/em&gt;&lt;/p&gt;
 
+&lt;p&gt;&lt;strong&gt;Edit: Note that when I originally published this, the WHO had not settled on the name COVID-19 yet so I was referring to it as &quot;Wuhan virus.&quot; That has since &lt;a href=&quot;https://www.nytimes.com/2020/03/18/us/politics/china-virus.html&quot;&gt;become problematic&lt;/a&gt; so I am updating to reflect te better terminology. &lt;/strong&gt;&lt;/p&gt;
+
+
 &lt;p&gt;
-	I'll admit that I've gotten wrapped up in all this &lt;a href=&quot;https://www.vox.com/future-perfect/2020/2/6/21121303/coronavirus-wuhan-panic-pandemic-outbreak&quot;&gt;Wuhan virus stuff&lt;/a&gt;, especially as it relates to the spread in the &lt;a href=&quot;https://www.mercurynews.com/2020/02/03/coronavirus-bay-area-has-highest-concentration-of-u-s-cases-that-shouldnt-be-a-surprise/&quot;&gt;SF Bay Area&lt;/a&gt;.  This is the first time that I've lived in a large population center while there is a potential epidemic looming, and the situation has me wondering whether we're already to the point where it's bound to spread here anyway.  I looked at &lt;a href=&quot;https://systems.jhu.edu/research/public-health/ncov-model-2/&quot;&gt;some results&lt;/a&gt; from one of the &lt;a href=&quot;&quot;&gt;sophisticated epidemiological models&lt;/a&gt;, and I got some reassurance.  But I was curious how these models worked under the hood.  
+	I'll admit that I've gotten wrapped up in all this &lt;a href=&quot;https://www.vox.com/future-perfect/2020/2/6/21121303/coronavirus-wuhan-panic-pandemic-outbreak&quot;&gt;&lt;strike&gt;Wuhan&lt;/strike&gt;COVID-19 virus stuff&lt;/a&gt;, especially as it relates to the spread in the &lt;a href=&quot;https://www.mercurynews.com/2020/02/03/coronavirus-bay-area-has-highest-concentration-of-u-s-cases-that-shouldnt-be-a-surprise/&quot;&gt;SF Bay Area&lt;/a&gt;.  This is the first time that I've lived in a large population center while there is a potential epidemic looming, and the situation has me wondering whether we're already to the point where it's bound to spread here anyway.  I looked at &lt;a href=&quot;https://systems.jhu.edu/research/public-health/ncov-model-2/&quot;&gt;some results&lt;/a&gt; from one of the &lt;a href=&quot;&quot;&gt;sophisticated epidemiological models&lt;/a&gt;, and I got some reassurance.  But I was curious how these models worked under the hood.  
 &lt;/p&gt;
 
 &lt;p&gt;
@@ -156,7 +159,7 @@
 &lt;img class=&quot;link_img&quot; src=&quot;/assets/images/2020/wuhan_model_viz.gif&quot; title=&quot;Wuhan javascript model visualization&quot; alt=&quot;Wuhan javascript model visualization&quot;/&gt;
 &lt;/a&gt;
 &lt;br/&gt;
-&lt;h4&gt;Defining a model of Wuhan virus spread&lt;/h4&gt;
+&lt;h4&gt;Defining a model of &lt;strike&gt;Wuhan&lt;/strike&gt;coronavirus virus spread&lt;/h4&gt;
 &lt;p style=&quot;text-align:center;&quot;&gt;&lt;small&gt;&lt;em&gt;I've left out a lot of detail in this section for simplicity.  To see the full derivation check out &lt;a href=&quot;https://github.com/lots-of-things/wuhan-virus-model/blob/master/Wuhan_to_SF_infection_model.pdf&quot;&gt;this document&lt;/a&gt;.&lt;/em&gt;&lt;/small&gt;&lt;/p&gt;
 
 &lt;p&gt;
