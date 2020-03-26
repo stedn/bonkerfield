@@ -2,17 +2,17 @@
 layout: default
 ---
 <div class="post">
-    <article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+    <article class="h-entry" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
         <div class="post__header section-padding-half">
             <div class="grid-small">
-                <h2 itemprop="name headline">{{ page.title }}</h2>
-                <time class="post__date" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%Y·%m·%d" }}</time>
-                <p class="post__date">{{ page.description }}</p>
+                <h2 itemprop="name headline p-name">{{ page.title }}</h2>
+                <time class="post__date dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%Y·%m·%d" }}</time>
+                <p class="post__date p-summary">{{ page.description }}</p>
             </div>
         </div>
         <div class="post__content section-padding">
             <div class="grid">
-                <div id="markdown" itemprop="articleBody">
+                <div class="e-content" id="markdown" itemprop="articleBody">
                     {{content}}
                 </div>
                 {% include share.html %}
@@ -26,9 +26,9 @@ layout: default
             </div>
         </div>
         <div class="section-padding">
-            <div class="grid-small">
+            <div class="grid-small h-card">
                 {% for author in site.author %}
-                <span class="post__author">Posted by {% if author["name"] == page.author and author["url"] %}<a href="{{ author['url'] }}" title="More By {{ page.author }}">{% endif %}{{ page.author }}{% if author["name"] == page.author and author["url"] %}</a>{% endif %}</span>
+                <span class="post__author">Posted by {% if author["name"] == page.author and author["url"] %}<a class="p-name u-url" href="{{ author['url'] }}" title="More By {{ page.author }}">{% endif %}{{ page.author }}{% if author["name"] == page.author and author["url"] %}</a>{% endif %}</span>
                 {% if author["name"] == page.author %}
                 <p class="post__bio">{{ author["bio"] }}</p>
                 {% endif %}
