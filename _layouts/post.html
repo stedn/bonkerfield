@@ -26,7 +26,7 @@ layout: default
             </div>
         </div>
         <div class="section-padding">
-            <div class="grid-small h-card">
+            <div class="grid-small p-author h-card">
                 {% for author in site.author %}
                 <span class="post__author">Posted by {% if author["name"] == page.author and author["url"] %}<a class="p-name u-url" href="{{ author['url'] }}" title="More By {{ page.author }}">{% endif %}{{ page.author }}{% if author["name"] == page.author and author["url"] %}</a>{% endif %}</span>
                 {% if author["name"] == page.author %}
