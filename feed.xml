@@ -5,12 +5,12 @@
     <description>personal information identity spacetime map</description>
     <link>https://bonkerfield.org</link>
     <atom:link href="https://bonkerfield.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 28 Mar 2020 04:42:51 -0700</pubDate>
-    <lastBuildDate>Sat, 28 Mar 2020 04:42:51 -0700</lastBuildDate>
+    <pubDate>Sat, 28 Mar 2020 04:46:55 -0700</pubDate>
+    <lastBuildDate>Sat, 28 Mar 2020 04:46:55 -0700</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
-        <image>/assets/images/2020/skylight_optical.jpg</image>
+        <image>https://bonkerfield.org/assets/images/2020/skylight_optical.jpg</image>
         <title>Skylight Chapters 5 &amp;amp; 6</title>
         <description>&lt;p&gt;
     Three years ago, I started writing a story called &lt;em&gt;Skylight&lt;/em&gt;. The story takes place in another solar system where society never looked up and wondered about the stars, until one day, they did.  If I ever publish this, I might use this skylight optical illusion from &lt;a href=&quot;https://www.flickr.com/photos/kweston/769636098&quot;&gt;Keith Weston&lt;/a&gt; as the cover art. Do you see the pyramid?
@@ -35,7 +35,7 @@
       </item>
     
       <item>
-        <image>/assets/images/main/viewfoil.png</image>
+        <image>https://bonkerfield.org/assets/images/main/viewfoil.png</image>
         <title>Viewfoil: Experimenting with Radical Transparency</title>
         <description>&lt;p&gt;
 	I've been contemplating privacy and anonymity, and speculating on what those ideas will mean in the future of our society.  During conversations with my friends and family, I've started questioning whether maintaining strengthened privacy is possible, and more importantly, whether strengthened privacy is even still a good thing.
@@ -143,7 +143,7 @@
       </item>
     
       <item>
-        <image>/assets/images/2020/wuhan_overview_im.png</image>
+        <image>https://bonkerfield.org/assets/images/2020/wuhan_overview_im.png</image>
         <title>Modeling whether an outbreak of COVID-19 virus will hit San Francisco</title>
         <description>&lt;p&gt;&lt;em&gt;Epistemic status: To be clear, this is a highly simplified model and should not be used to insight panic or to instill a false sense of security.  Please enjoy with a healthy level of skeptical detachment.&lt;/em&gt;&lt;/p&gt;
 
@@ -404,7 +404,7 @@
       </item>
     
       <item>
-        <image></image>
+        <image>https://bonkerfield.org</image>
         <title>How to build a convincing reddit personality with GPT2 and BERT</title>
         <description>&lt;p&gt;
     Last month, I experimented with building a reddit comment bot that generated natural language replies by combining two pre-trained deep learning models: &lt;a href=&quot;http://jalammar.github.io/illustrated-gpt2/&quot;&gt;GPT-2&lt;/a&gt; and &lt;a hrf=&quot;http://jalammar.github.io/illustrated-bert/&quot;&gt;BERT&lt;/a&gt;. I wrote &lt;a href=&quot;/2020/02/combining-gpt-2-and-bert/&quot;&gt;another post&lt;/a&gt; on the motivation and background, but here I wanted to give a step by step walkthrough so others can work with what I've built.  If you prefer, you can jump straight to the &lt;a href=&quot;https://github.com/lots-of-things/gpt2-bert-reddit-bot&quot;&gt;project code&lt;/a&gt;.  And to see the work that I based this on see &lt;a href=&quot;https://colab.research.google.com/drive/1VLG8e7YSEwypxU-noRNhsv5dW4NfTGce&quot;&gt;this&lt;/a&gt; and &lt;a href=&quot;https://colab.research.google.com/github/google-research/bert/blob/master/predicting_movie_reviews_with_bert_on_tf_hub.ipynb&quot;&gt;this&lt;/a&gt;
@@ -658,7 +658,7 @@ for subreddit_name in ['sciencefiction',
       </item>
     
       <item>
-        <image>/assets/images/2020/thiscommentisgreat.png</image>
+        <image>https://bonkerfield.org/assets/images/2020/thiscommentisgreat.png</image>
         <title>Combining GPT-2 and BERT to make a fake person</title>
         <description>&lt;p&gt;
 	&lt;a href=&quot;https://openai.com/blog/better-language-models/&quot;&gt;GPT-2&lt;/a&gt; is a deep learning model that is able to generate astonishingly coherent English text.  It was released last year, and &lt;a href=&quot;https://towardsdatascience.com/openais-gpt-2-the-model-the-hype-and-the-controversy-1109f4bfd5e8&quot;&gt;everyone’s&lt;/a&gt; &lt;a href=&quot;https://www.fast.ai/2019/02/15/openai-gp2/&quot;&gt;mind&lt;/a&gt; was &lt;a href=&quot;https://www.theguardian.com/commentisfree/2019/feb/15/ai-write-robot-openai-gpt2-elon-musk&quot;&gt;blown&lt;/a&gt; into &lt;a href=&quot;http://approximatelycorrect.com/2019/02/17/openai-trains-language-model-mass-hysteria-ensues/&quot;&gt;histrionic&lt;/a&gt; &lt;a href=&quot;https://www.wired.com/story/ai-text-generator-too-dangerous-to-make-public/&quot;&gt;hyperbole&lt;/a&gt;, including mine.  Its creators at &lt;a href=&quot;https://openai.com/&quot;&gt;OpenAI&lt;/a&gt; were so impressed by the model's performance that they originally didn't release it for fear of it being too easy to abuse. I think they were right to be concerned.  Here is an excerpt that the model generated, taken from their &lt;a href=&quot;https://openai.com/blog/better-language-models/#sample1&quot;&gt;release page&lt;/a&gt;.
@@ -853,7 +853,7 @@ I'm a 10 year old, and I have never even heard of this novel.
       </item>
     
       <item>
-        <image>/assets/images/2020/big_bonkerfield.png</image>
+        <image>https://bonkerfield.org/assets/images/2020/big_bonkerfield.png</image>
         <title>Visualizing the Bonkerfield</title>
         <description>&lt;p&gt;For the past few weeks, I've been trying to figure out how to visually describe a philosophical concept that I've come up with called a &lt;strong&gt;bonkerfield&lt;/strong&gt;. It's something I find fascinating, but quite hard to wrap my own head around entirely.  I've been ruminating on how to convey it for a while now, trying to be able to get the idea across and not sound like a crazy person or an idiot. &lt;/p&gt;
 
@@ -1083,7 +1083,7 @@ def add_node(node_list, parent_name, parent_time, parent_size, parent_weight):
       </item>
     
       <item>
-        <image>/assets/images/2020/qmb_proto.jpg</image>
+        <image>https://bonkerfield.org/assets/images/2020/qmb_proto.jpg</image>
         <title>QMB Prototype Demo</title>
         <description>&lt;p&gt;Lately, I've been having &lt;a href=&quot;2019/10/23/qmb-installation/&quot;&gt;too much fun&lt;/a&gt;, working on &lt;a href=&quot;2019/10/17/quantum-multiverse-bifurcator/&quot;&gt;quantum randomness generators&lt;/a&gt;.  One of my goals is to build a minimalist device for producing a quantum binary outcome.  I've designed one simple and cost-effective circuit that I think will fit the bill.  Check out the video to see how it works.&lt;/p&gt;
 
@@ -1123,7 +1123,7 @@ def add_node(node_list, parent_name, parent_time, parent_size, parent_weight):
       </item>
     
       <item>
-        <image></image>
+        <image>https://bonkerfield.org</image>
         <title>Short Post on Short Showers</title>
         <description>&lt;p&gt;
     I finally was able to reduce my flying this year to just two flights to visit family for the holidays. My partner still points out that I take long showers so I should get off my high horse. I've decided to fix that.
@@ -1168,7 +1168,7 @@ def add_node(node_list, parent_name, parent_time, parent_size, parent_weight):
       </item>
     
       <item>
-        <image>/assets/images/2020/qmb_isntallation.jpg</image>
+        <image>https://bonkerfield.org/assets/images/2020/qmb_isntallation.jpg</image>
         <title>Quantum Multiverse Bifurcator Installation</title>
         <description>&lt;p&gt;
     For the past few months, I've been working on a series of &lt;a href=&quot;/2019/10/quantum-multiverse-bifurcator.html&quot;&gt;interconnected&lt;/a&gt; &lt;a href=&quot;/2019/10/quantum-coin-flip-device.html&quot;&gt;projects&lt;/a&gt; and &lt;a href=&quot;/2019/10/sub-identity-suicide.html&quot;&gt;thought experiments&lt;/a&gt; centered around the concept of the &lt;a href=&quot;https://science.howstuffworks.com/science-vs-myth/everyday-myths/parallel-universe2.htm&quot;&gt;quantum multiverse&lt;/a&gt;, a theoretical interpretation of quantum mechanics that implies that many parallel universes are created by the outcomes of every quantum mechanical measurement. It's a fairly trippy concept, and I'm pretty sure that my interest in it is making me go a little crazy. Still, I think this concept is cool enough that I want to share it with as many people as possible. To do that, I've decided to expand the &lt;a href=&quot;http://quantum-multiverse-bifurcator.appspot.com/&quot;&gt;experimental system&lt;/a&gt; into a full-scale art experience.
@@ -1277,7 +1277,7 @@ def add_node(node_list, parent_name, parent_time, parent_size, parent_weight):
       </item>
     
       <item>
-        <image>https://2.bp.blogspot.com/-jLqU2ZJvQT4/XZwXHM77bLI/AAAAAAAAEuk/AlHkKXE1mokWjYHLQUEt0iHaFcdRKmG3ACKgBGAsYHg/IMG_20190915_143649.jpg</image>
+        <image>https://bonkerfield.orghttps://2.bp.blogspot.com/-jLqU2ZJvQT4/XZwXHM77bLI/AAAAAAAAEuk/AlHkKXE1mokWjYHLQUEt0iHaFcdRKmG3ACKgBGAsYHg/IMG_20190915_143649.jpg</image>
         <title>Green Wall Irrigation</title>
         <description>&lt;p&gt;
     Last winter, my friend and I set out to build a sort of &quot;&lt;a href=&quot;/2019/03/redwood-planter-cabinet.html&quot;&gt;green wall&lt;/a&gt;&quot; in his back yard. It was a very fun project, and the building and planting turned out to be quite easy.
@@ -1348,7 +1348,7 @@ top (bone dry)
       </item>
     
       <item>
-        <image>https://2.bp.blogspot.com/-2t52RMTXdAU/XaopNS-HFaI/AAAAAAAAE2Q/ekmM-lhYz4sUgY3ZhB_2a41jkuDFOKU0ACLcBGAsYHQ/circuit-20191018-0928.png</image>
+        <image>https://bonkerfield.orghttps://2.bp.blogspot.com/-2t52RMTXdAU/XaopNS-HFaI/AAAAAAAAE2Q/ekmM-lhYz4sUgY3ZhB_2a41jkuDFOKU0ACLcBGAsYHQ/circuit-20191018-0928.png</image>
         <title>Quantum Coin Flip Device</title>
         <description>&lt;p&gt;
     Over the past few months, I've been working on building tools to connect human decisions with the outcomes of quantum measurements. The goal is to allow people to let their decisions be chosen using the &lt;a href=&quot;https://en.wikipedia.org/wiki/Many-worlds_interpretation&quot;&gt;many-worlds interpretation&lt;/a&gt; of quantum mechanics, which will end up creating parallel realities where all outcomes occur. You can read &lt;a href=&quot;/2019/10/quantum-multiverse-bifurcator.html&quot;&gt;this post&lt;/a&gt; to learn more about the idea and how I built a web-based &lt;a href=&quot;https://quantum-multiverse-bifurcator.appspot.com&quot;&gt;Quantum Multiverse Bifurcator&lt;/a&gt;.
@@ -1473,7 +1473,7 @@ top (bone dry)
       </item>
     
       <item>
-        <image>https://3.bp.blogspot.com/-vdKTCTOMcuA/XalW9bhYtoI/AAAAAAAAE1I/mbaN5hrvC1YXGBQDXud0I4Y-wqB7N0Z5wCLcBGAsYHQ/s1600/ezgif-6-15592130e47b.gif</image>
+        <image>https://bonkerfield.orghttps://3.bp.blogspot.com/-vdKTCTOMcuA/XalW9bhYtoI/AAAAAAAAE1I/mbaN5hrvC1YXGBQDXud0I4Y-wqB7N0Z5wCLcBGAsYHQ/s1600/ezgif-6-15592130e47b.gif</image>
         <title>Quantum Multiverse Bifurcator</title>
         <description>&lt;p&gt;
     &lt;small&gt;Update: by some mind-blowing coincidence the &lt;a href=&quot;https://journal.burningman.org/2019/10/news/brc-news/burning-man-2020-the-multiverse/&quot;&gt;theme of next year's Burning Man&lt;/a&gt; happens to be the Multiverse! Note that what follows was all written before the theme was announced.&lt;/small&gt;
@@ -1596,7 +1596,7 @@ top (bone dry)
       </item>
     
       <item>
-        <image>https://1.bp.blogspot.com/-zi73O59MuA4/XZw_Dj9wOpI/AAAAAAAAEvo/D3PsJ82fZLAqnjd7YZ4dN4bbLTD9kiXMgCLcBGAsYHQ/5314782360_f32ff3aab7_c.jpg</image>
+        <image>https://bonkerfield.orghttps://1.bp.blogspot.com/-zi73O59MuA4/XZw_Dj9wOpI/AAAAAAAAEvo/D3PsJ82fZLAqnjd7YZ4dN4bbLTD9kiXMgCLcBGAsYHQ/5314782360_f32ff3aab7_c.jpg</image>
         <title>Creating Immediacy</title>
         <description>&lt;p&gt;
     I'm filled with a constant sense of urgency right now. Each day I feel a little more of my time burning away from me.
@@ -1738,7 +1738,7 @@ top (bone dry)
       </item>
     
       <item>
-        <image>https://3.bp.blogspot.com/-GSMO2VFKZGw/XXVt3ILyxDI/AAAAAAAAEZI/a4eiMciIXawuFe1GUYAQvK_ShSM7yIoxgCLcBGAs/112175045_e8d2231042_b.jpg</image>
+        <image>https://bonkerfield.orghttps://3.bp.blogspot.com/-GSMO2VFKZGw/XXVt3ILyxDI/AAAAAAAAEZI/a4eiMciIXawuFe1GUYAQvK_ShSM7yIoxgCLcBGAs/112175045_e8d2231042_b.jpg</image>
         <title>Sub-Identity Suicide</title>
         <description>&lt;p&gt;
 &lt;i&gt;&lt;small&gt;Epistemic status: In this post, I attempt to describe a thought experiment that allowed me to overcome chronic depression and existential doubts. This is a metaphysical proposition and may not be amenable to a determination of its validity.&lt;/small&gt;&lt;/i&gt;
@@ -1880,7 +1880,7 @@ top (bone dry)
       </item>
     
       <item>
-        <image>https://1.bp.blogspot.com/-Px6r44nrieA/XUdMsVkcWJI/AAAAAAAAET8/UrfNnZ1Ajcs8wFW9Pbq1Axmi-ODdkCNnACLcBGAs/Werewolf-Cell-Phone-User---18386.jpg</image>
+        <image>https://bonkerfield.orghttps://1.bp.blogspot.com/-Px6r44nrieA/XUdMsVkcWJI/AAAAAAAAET8/UrfNnZ1Ajcs8wFW9Pbq1Axmi-ODdkCNnACLcBGAs/Werewolf-Cell-Phone-User---18386.jpg</image>
         <title>Gmail Auto-Responder for AI Robot Party Game</title>
         <description>&lt;p&gt;
     I'm a big fan of immersive social games! Last fall, I built an &lt;a href=&quot;/2018/10/experiential-puzzle-narrative.html&quot;&gt;escape room&lt;/a&gt; for the engineering social at my company. For the &lt;a href=&quot;http://www.artificechicago.org/&quot;&gt;three&lt;/a&gt; &lt;a href=&quot;https://munrolab.uchicago.edu/&quot;&gt;prior&lt;/a&gt; &lt;a href=&quot;https://www.color.com/&quot;&gt;organizations&lt;/a&gt; I've worked for, I've also run a social mystery game similar to &lt;a href=&quot;https://en.wikipedia.org/wiki/Ultimate_Werewolf&quot;&gt;Werewolf&lt;/a&gt;/&lt;a href=&quot;https://en.wikipedia.org/wiki/Mafia_(party_game)&quot;&gt;Mafia&lt;/a&gt;, but themed around self-aware human-like robots (aka &lt;a href=&quot;https://ideas.4brad.com/everybody-cylon&quot;&gt;everyone is a Cylon&lt;/a&gt;). The game is far more individualized than generic werewolf, including very specific character narratives and powers. I customized each character to have things that only they know how to do, and to create specific connections between characters that need to be uncovered throughout play.
@@ -1999,7 +1999,7 @@ top (bone dry)
       </item>
     
       <item>
-        <image>https://3.bp.blogspot.com/-fhRKzpUFnPw/XXVQA7nzpII/AAAAAAAAEYo/zM03M09avR4CLDOa8qcHRW_KF8K53jUdACKgBGAs/IMG_20190618_152054.jpg</image>
+        <image>https://bonkerfield.orghttps://3.bp.blogspot.com/-fhRKzpUFnPw/XXVQA7nzpII/AAAAAAAAEYo/zM03M09avR4CLDOa8qcHRW_KF8K53jUdACKgBGAs/IMG_20190618_152054.jpg</image>
         <title>Woodworking, Motor Work, and Head Replacement on Ioni</title>
         <description>&lt;p&gt;
     Claire and I have been refurbishing our sailboat this summer. Our top priorities were to replace our defunct head, and to reseal and treat our wood and recaulk the topside.
@@ -2126,7 +2126,7 @@ top (bone dry)
       </item>
     
       <item>
-        <image>https://1.bp.blogspot.com/-BN1Su8VptwM/XfGCDzfGpGI/AAAAAAAAFLQ/D5ZMotAq5qso7tUPfbzc4U1LJCPwS2bYwCLcBGAsYHQ/Screenshot%2Bfrom%2B2019-12-11%2B15-47-15.png</image>
+        <image>https://bonkerfield.orghttps://1.bp.blogspot.com/-BN1Su8VptwM/XfGCDzfGpGI/AAAAAAAAFLQ/D5ZMotAq5qso7tUPfbzc4U1LJCPwS2bYwCLcBGAsYHQ/Screenshot%2Bfrom%2B2019-12-11%2B15-47-15.png</image>
         <title>Google Analytics for Scrolling on a Static Website (or Google Analytics is Creepy)</title>
         <description>&lt;p&gt;
     A couple of months ago, I helped one of my friends set up Scroll Tracking with Google Analytics on an experimental website. While working on this I discovered that I could do really cool/creepy stuff like download the scroll event data on a user-by-user basis.
@@ -2268,7 +2268,7 @@ df_scrolls = conn.execute_query(scroll_query)
       </item>
     
       <item>
-        <image>https://4.bp.blogspot.com/-UGYDFBT9iTg/XEaClT1EDwI/AAAAAAAADT0/DYfxVt0t790-RsIPku87KJ-l-TQ9TaemQCKgBGAs/20180828_175812.jpg</image>
+        <image>https://bonkerfield.orghttps://4.bp.blogspot.com/-UGYDFBT9iTg/XEaClT1EDwI/AAAAAAAADT0/DYfxVt0t790-RsIPku87KJ-l-TQ9TaemQCKgBGAs/20180828_175812.jpg</image>
         <title>Solar Electrical System on Ioni</title>
         <description>&lt;p style=&quot;text-align:center&quot;&gt;&lt;i&gt;Daughters of Nereus, resident in caves, merged deep in sea, sporting through the waves;&lt;br/&gt;whose forms half wide are nourished by the deep, leaping and wandering through the liquid sea.&lt;br/&gt;Bright, watery dolphins, sonorous and gay, well-pleased to sport with Bacchanalian play;&lt;br/&gt;Nymphs beauteous-eyed, whom sacrifice delights, give plenteous wealth, and bless our mystic rites;&lt;/i&gt;
 &lt;/p&gt;
@@ -2384,7 +2384,7 @@ df_scrolls = conn.execute_query(scroll_query)
       </item>
     
       <item>
-        <image>https://1.bp.blogspot.com/-_tf3KY6IKew/XJsCuBf0TGI/AAAAAAAADmg/hP2k6zaGSokoPBK_4Vhn2Svv2bjpIdz1wCLcBGAs/Screen%2BShot%2B2019-03-26%2Bat%2B9.57.17%2BPM.png</image>
+        <image>https://bonkerfield.orghttps://1.bp.blogspot.com/-_tf3KY6IKew/XJsCuBf0TGI/AAAAAAAADmg/hP2k6zaGSokoPBK_4Vhn2Svv2bjpIdz1wCLcBGAs/Screen%2BShot%2B2019-03-26%2Bat%2B9.57.17%2BPM.png</image>
         <title>Visualizing shared budgets and dividing up household expenses fairly</title>
         <description>&lt;p&gt;
         My partner and I have been tracking our finances ever since we moved in together back in 2014. Originally, we started just tracking our shared expenses like rent and groceries in order to make it easier to divide our household contributions &lt;a href=&quot;http://lesswrong.com/lw/ru/the_bedrock_of_fairness/&quot;&gt;*fairly*&lt;/a&gt; (for more, check out the post on our &lt;a href=&quot;/2017/08/the-stedden-constitution.html&quot;&gt;Marriage Constitution&lt;/a&gt;).
@@ -2547,7 +2547,7 @@ df_scrolls = conn.execute_query(scroll_query)
       </item>
     
       <item>
-        <image>https://4.bp.blogspot.com/-BWDJKx2T98s/XHoHhskJ7II/AAAAAAAADdg/Pq0bXqvX5JQlK0k3BE7WU03U43wnylRXwCKgBGAs/20181210_083237.jpg</image>
+        <image>https://bonkerfield.orghttps://4.bp.blogspot.com/-BWDJKx2T98s/XHoHhskJ7II/AAAAAAAADdg/Pq0bXqvX5JQlK0k3BE7WU03U43wnylRXwCKgBGAs/20181210_083237.jpg</image>
         <title>Redwood Planter Cabinet</title>
         <description>&lt;p&gt;
     My &lt;a href=&quot;https://www.instagram.com/mysfmountain/&quot;&gt;friend&lt;/a&gt; had really been wanting to build his own &lt;a href=&quot;https://www.pinterest.com/pin/72972456436478855&quot;&gt;green wall&lt;/a&gt; in his back yard in the Mission in SF. So this winter, we took a weekend, planned it out, and built it. Here's the haphazard, meandering process we went through.
@@ -2625,7 +2625,7 @@ df_scrolls = conn.execute_query(scroll_query)
       </item>
     
       <item>
-        <image>https://3.bp.blogspot.com/-qTlakxg1tSI/XEZ7ycNPETI/AAAAAAAADSw/LoxKdWkuP38S3ohYzk6nlPtHPfubg0yBwCLcBGAs/20181218_191642.jpg</image>
+        <image>https://bonkerfield.orghttps://3.bp.blogspot.com/-qTlakxg1tSI/XEZ7ycNPETI/AAAAAAAADSw/LoxKdWkuP38S3ohYzk6nlPtHPfubg0yBwCLcBGAs/20181218_191642.jpg</image>
         <title>Human Ivory Earrings</title>
         <description>&lt;p&gt;
     Ever since working on my partner's &lt;a href=&quot;http://www.makeloft.org/2017/04/engagement-ring-from-found-smoky-quartz.html&quot;&gt;engagement ring&lt;/a&gt; last year, I've become more and more interested in making custom jewelry for people. Recently, I happened upon another interesting raw material, and I decided to see what I could make.
@@ -2662,7 +2662,7 @@ df_scrolls = conn.execute_query(scroll_query)
       </item>
     
       <item>
-        <image>https://2.bp.blogspot.com/-k7IGUdP6QFE/XJGdGWRt_0I/AAAAAAAADkQ/NBd_jknvCxcIo_HMZqkWvSGYNu1GdkfSgCLcBGAs/Screen%2BShot%2B2019-03-19%2Bat%2B6.52.54%2BPM.png</image>
+        <image>https://bonkerfield.orghttps://2.bp.blogspot.com/-k7IGUdP6QFE/XJGdGWRt_0I/AAAAAAAADkQ/NBd_jknvCxcIo_HMZqkWvSGYNu1GdkfSgCLcBGAs/Screen%2BShot%2B2019-03-19%2Bat%2B6.52.54%2BPM.png</image>
         <title>@rtifice Website Revamp</title>
         <description>&lt;p&gt;
     A few months ago, a non-profit I volunteer for &lt;a href=&quot;http://www.artificechicago.org/&quot;&gt;@rtifice tech education&lt;/a&gt;, needed to get its digital face revamped. I spent a few weeks working on a full website and blog revamping.
@@ -2777,7 +2777,7 @@ Originally, the admins had been using totally static pages. I could have kept th
       </item>
     
       <item>
-        <image>https://1.bp.blogspot.com/-3l5FjSZn1Ew/W7bsXFQuUyI/AAAAAAAAC3E/cHx_ncuyizkxbMEUF4i154hyodMWWUVwgCLcBGAs/abacus.png</image>
+        <image>https://bonkerfield.orghttps://1.bp.blogspot.com/-3l5FjSZn1Ew/W7bsXFQuUyI/AAAAAAAAC3E/cHx_ncuyizkxbMEUF4i154hyodMWWUVwgCLcBGAs/abacus.png</image>
         <title>Experiential Puzzle Narrative</title>
         <description>&lt;p&gt;
         I recently completed a long-time dream of building my own experiential puzzle narrative, also known as an &lt;a href=&quot;https://en.wikipedia.org/wiki/Escape_room&quot;&gt;escape room&lt;/a&gt;. I ran it as an engineering social (not &lt;a href=&quot;https://en.wikipedia.org/wiki/Social_engineering_(security)&quot;&gt;this&lt;/a&gt;) at my current place of employment, &lt;a href=&quot;https://www.color.com&quot;&gt;Color&lt;/a&gt;. Below is some documentation on both the narrative and the mechanics that went into building the puzzles.
@@ -2952,7 +2952,7 @@ Originally, the admins had been using totally static pages. I could have kept th
       </item>
     
       <item>
-        <image>https://2.bp.blogspot.com/-GjSpEzzqqlw/Wy6pybYkEBI/AAAAAAAACPA/tRxkLdkX4PcXN34Xgjo2J9GxAjNMgWZJQCKgBGAs/IMG_20180606_075423.jpg</image>
+        <image>https://bonkerfield.orghttps://2.bp.blogspot.com/-GjSpEzzqqlw/Wy6pybYkEBI/AAAAAAAACPA/tRxkLdkX4PcXN34Xgjo2J9GxAjNMgWZJQCKgBGAs/IMG_20180606_075423.jpg</image>
         <title>Introducing Ioni</title>
         <description>&lt;p&gt;
     I recently purchased a beautiful Dolphin 24 sailboat. The boat was manufactured in 1968 and has a &lt;a href=&quot;http://www.dolphin24.org/san_jose_dolphin.html&quot;&gt;great history&lt;/a&gt; compiled by Ron at &lt;a href=&quot;http://www.dolphin24.org/&quot;&gt;dolphin24.org&lt;/a&gt;. I'm honored to be a part of her story, and I hope to take great care of her over the next few years.
@@ -3027,7 +3027,7 @@ Sails rigged
       </item>
     
       <item>
-        <image>https://4.bp.blogspot.com/-n-IaIEjZ7dI/Wy6jECSF6II/AAAAAAAACOI/ljGqaAqk3PgriDnaX9fz5Zw6EYYWaK6DgCLcBGAs/14117166008_3817a7bd9f_z.jpg</image>
+        <image>https://bonkerfield.orghttps://4.bp.blogspot.com/-n-IaIEjZ7dI/Wy6jECSF6II/AAAAAAAACOI/ljGqaAqk3PgriDnaX9fz5Zw6EYYWaK6DgCLcBGAs/14117166008_3817a7bd9f_z.jpg</image>
         <title>Skylight Chapters 3 &amp;amp; 4</title>
         <description>&lt;p&gt;
     Another two chapters from my novel. &lt;a href=&quot;/2018/05/03/skylight-chapters-1-2/&quot;&gt;Click here&lt;/a&gt; to read the first two chapters.
@@ -3044,7 +3044,7 @@ Sails rigged
       </item>
     
       <item>
-        <image>https://3.bp.blogspot.com/-jd0H8cvT3Ps/WuvELaKIVWI/AAAAAAAABvQ/j1Yjr-EE1KUDJNcJbjqHpuP9_VbHSBXMgCLcBGAs/Screen%2BShot%2B2018-05-03%2Bat%2B7.22.55%2BPM.png</image>
+        <image>https://bonkerfield.orghttps://3.bp.blogspot.com/-jd0H8cvT3Ps/WuvELaKIVWI/AAAAAAAABvQ/j1Yjr-EE1KUDJNcJbjqHpuP9_VbHSBXMgCLcBGAs/Screen%2BShot%2B2018-05-03%2Bat%2B7.22.55%2BPM.png</image>
         <title>Skylight Chapters 1 &amp;amp; 2</title>
         <description>&lt;p&gt;
     I've been working on a novel for what feels like a really long time. I usually don't like to let projects drag on like this so I'm gonna start releasing bits to keep me moving. I feel pretty solid about the first two chapters so here they are for public consumption. Enjoy...
@@ -3060,7 +3060,7 @@ Sails rigged
       </item>
     
       <item>
-        <image>https://4.bp.blogspot.com/-Wd6UtSuoGAk/Wtz6vam3vmI/AAAAAAAABnY/DrxxLEr5Z1IZlv8VZERWB8OGHcKx3v7DgCKgBGAs/IMG_20180418_195658.jpg</image>
+        <image>https://bonkerfield.orghttps://4.bp.blogspot.com/-Wd6UtSuoGAk/Wtz6vam3vmI/AAAAAAAABnY/DrxxLEr5Z1IZlv8VZERWB8OGHcKx3v7DgCKgBGAs/IMG_20180418_195658.jpg</image>
         <title>Notes on Bike Fixes</title>
         <description>&lt;p&gt;
     I've been hanging out at &lt;a href=&quot;http://bikekitchen.org/&quot;&gt;Bike Kitchen&lt;/a&gt; in SF for the past couple of weeks. I previously wrote a little something about &lt;a href=&quot;http://www.makeloft.org/2018/04/replacing-bottom-bracket.html&quot;&gt;replacing a bottom bracket&lt;/a&gt;. Below are my notes on a few more key fixes.
@@ -3122,7 +3122,7 @@ With everything clean, I reapplied gobs of grease and reinserted the bearings. T
       </item>
     
       <item>
-        <image>https://2.bp.blogspot.com/-yRriFPg6uK8/Wsk_c9sNdZI/AAAAAAAABb4/rtnl4uAIqo4D0GPRix05w08Oh9mjDhNhQCKgBGAs/IMG_20180405_191331.jpg</image>
+        <image>https://bonkerfield.orghttps://2.bp.blogspot.com/-yRriFPg6uK8/Wsk_c9sNdZI/AAAAAAAABb4/rtnl4uAIqo4D0GPRix05w08Oh9mjDhNhQCKgBGAs/IMG_20180405_191331.jpg</image>
         <title>Replacing a Bottom Bracket</title>
         <description>&lt;p&gt;
 &lt;strong&gt;The &lt;a href=&quot;https://en.wikipedia.org/wiki/Bottom_bracket&quot;&gt;bottom bracket&lt;/a&gt; is one of the most fundamental parts of the bike. Like many highly important things, it's also one that gets totally overlooked. That is until it starts to break.&lt;/strong&gt;
@@ -3170,7 +3170,7 @@ With everything clean, I reapplied gobs of grease and reinserted the bearings. T
       </item>
     
       <item>
-        <image>https://2.bp.blogspot.com/-lFaEVQJrE2s/WhJ1L0-weqI/AAAAAAAAA74/OR1DLky2mEs8gD6rp8wAvpDtitTflFxYwCKgBGAs/IMG_20171114_080512.jpg</image>
+        <image>https://bonkerfield.orghttps://2.bp.blogspot.com/-lFaEVQJrE2s/WhJ1L0-weqI/AAAAAAAAA74/OR1DLky2mEs8gD6rp8wAvpDtitTflFxYwCKgBGAs/IMG_20171114_080512.jpg</image>
         <title>Sailboat Light Covers</title>
         <description>&lt;p&gt;
     Starting in November 2017, I began renting a boat at Coyote Point Marina in Burlingame, CA. I'm using it as a crashpad near my work so that I don't have to commute from SF every day.
@@ -3237,7 +3237,7 @@ With everything clean, I reapplied gobs of grease and reinserted the bearings. T
       </item>
     
       <item>
-        <image>https://2.bp.blogspot.com/-4ZgtsQLJgpw/WWJq8wDEgAI/AAAAAAAAIpQ/mPvZHgPxLwgQg6owh8Zvxg1qDlSwekfAQCLcBGAs/IMG_20170709_103715.jpg</image>
+        <image>https://bonkerfield.orghttps://2.bp.blogspot.com/-4ZgtsQLJgpw/WWJq8wDEgAI/AAAAAAAAIpQ/mPvZHgPxLwgQg6owh8Zvxg1qDlSwekfAQCLcBGAs/IMG_20170709_103715.jpg</image>
         <title>Making Better Eyes</title>
         <description>&lt;p&gt;
 &lt;i&gt;Epistemic status: Currently engaging in exploratory experiments to determine validity of hypothesis. 10% confidence of success, but experiment is low risk, which makes it worth pursuing.&lt;/i&gt;
@@ -3392,7 +3392,7 @@ With everything clean, I reapplied gobs of grease and reinserted the bearings. T
       </item>
     
       <item>
-        <image>https://3.bp.blogspot.com/-8Ztl7NFEjQw/WTo4DMnOYnI/AAAAAAAAIY0/Q_i-Cws8TbwfnkxKB06EBGjm7rAw1aSJQCLcB/Screenshot%2Bfrom%2B2017-06-08%2B22-52-11.png</image>
+        <image>https://bonkerfield.orghttps://3.bp.blogspot.com/-8Ztl7NFEjQw/WTo4DMnOYnI/AAAAAAAAIY0/Q_i-Cws8TbwfnkxKB06EBGjm7rAw1aSJQCLcB/Screenshot%2Bfrom%2B2017-06-08%2B22-52-11.png</image>
         <title>hope you dance (alone)</title>
         <description>&lt;img border=&quot;0&quot; src=&quot;https://3.bp.blogspot.com/-8Ztl7NFEjQw/WTo4DMnOYnI/AAAAAAAAIY0/Q_i-Cws8TbwfnkxKB06EBGjm7rAw1aSJQCLcB/s1600/Screenshot%2Bfrom%2B2017-06-08%2B22-52-11.png&quot; title=&quot; &quot;/&gt;
 &lt;p&gt;
@@ -3457,7 +3457,7 @@ With everything clean, I reapplied gobs of grease and reinserted the bearings. T
       </item>
     
       <item>
-        <image>https://2.bp.blogspot.com/-2ktRD2ZG9C8/Waj7MWjgbNI/AAAAAAAAI8w/PDn4EYAwgdE7QP2k0gpsAi3DR3US3Tj0ACKgBGAs/IMG_20170830_181342.jpg</image>
+        <image>https://bonkerfield.orghttps://2.bp.blogspot.com/-2ktRD2ZG9C8/Waj7MWjgbNI/AAAAAAAAI8w/PDn4EYAwgdE7QP2k0gpsAi3DR3US3Tj0ACKgBGAs/IMG_20170830_181342.jpg</image>
         <title>Indiana Jones and the Elusive Promo Code</title>
         <description>&lt;p&gt;
         In a lot of ways, my brother and I share a lot of the same opinions, but there are a few subjects where we disagree vehemently. One of the places where our difference of opinion has led to conflict has been on the subject of gift giving. To explain the paradox of our situation, I wrote the following allegory.
@@ -3586,7 +3586,7 @@ With everything clean, I reapplied gobs of grease and reinserted the bearings. T
       </item>
     
       <item>
-        <image>https://2.bp.blogspot.com/-HfxqZIkhosQ/WUWpoFsLbwI/AAAAAAAAIc8/srWh-DTh7Bo9P42QsWeWeM-TM7tq7m32QCKgBGAs/VID_20170617_074634.mp4</image>
+        <image>https://bonkerfield.orghttps://2.bp.blogspot.com/-HfxqZIkhosQ/WUWpoFsLbwI/AAAAAAAAIc8/srWh-DTh7Bo9P42QsWeWeM-TM7tq7m32QCKgBGAs/VID_20170617_074634.mp4</image>
         <title>Marshalling at Poplar Creek</title>
         <description>&lt;p&gt;
 &lt;i&gt;Epistemic status: First hand account, additional reflections on life are purely my own musings. &lt;/i&gt;
@@ -3643,7 +3643,7 @@ With everything clean, I reapplied gobs of grease and reinserted the bearings. T
       </item>
     
       <item>
-        <image>https://2.bp.blogspot.com/-S0wDJ8pgbIA/WZkQ5QRKtQI/AAAAAAAAI4Q/UPX824oNWMksuOjYVPyabVJdTE7194eGwCLcBGAs/Screen%2BShot%2B2017-08-19%2Bat%2B9.32.15%2BPM.png</image>
+        <image>https://bonkerfield.orghttps://2.bp.blogspot.com/-S0wDJ8pgbIA/WZkQ5QRKtQI/AAAAAAAAI4Q/UPX824oNWMksuOjYVPyabVJdTE7194eGwCLcBGAs/Screen%2BShot%2B2017-08-19%2Bat%2B9.32.15%2BPM.png</image>
         <title>The Stedden Constitution</title>
         <description>&lt;p&gt;
 &lt;i&gt;Epistemic status: Strongly convinced of personal utility, haven't fully considered all ramifications of broader adoption.&lt;/i&gt;
@@ -3770,7 +3770,7 @@ With everything clean, I reapplied gobs of grease and reinserted the bearings. T
       </item>
     
       <item>
-        <image>https://3.bp.blogspot.com/-aExL4L6pT8g/WTgYr_JKqhI/AAAAAAAAIXE/Cye57SqPgKIwsrX_-gjW-Dh5ANiFTQtOgCLcB/Embryo.gif</image>
+        <image>https://bonkerfield.orghttps://3.bp.blogspot.com/-aExL4L6pT8g/WTgYr_JKqhI/AAAAAAAAIXE/Cye57SqPgKIwsrX_-gjW-Dh5ANiFTQtOgCLcB/Embryo.gif</image>
         <title>Theseus and the Cell (a PhD dissertation story)</title>
         <description>&lt;p&gt;
 &lt;i&gt;Epistemic status: High confidence in technical validity of model, low confidence in biological applications.&lt;/i&gt;
@@ -3947,7 +3947,7 @@ With everything clean, I reapplied gobs of grease and reinserted the bearings. T
       </item>
     
       <item>
-        <image>https://3.bp.blogspot.com/-1IVZ3gQl6Mw/WWLffNqxr2I/AAAAAAAAIrw/rqxcHrOLbiUboUlFBuNVThYCCp9J1y6VQCLcBGAs/WPS%2BDiscipline.png</image>
+        <image>https://bonkerfield.orghttps://3.bp.blogspot.com/-1IVZ3gQl6Mw/WWLffNqxr2I/AAAAAAAAIrw/rqxcHrOLbiUboUlFBuNVThYCCp9J1y6VQCLcBGAs/WPS%2BDiscipline.png</image>
         <title>Analyzing Edge.org forum data - Experiences with Crowdsourcing Analysis</title>
         <description>&lt;p&gt;
 &lt;i&gt;Epistemic status: First foray into this type of analysis, expecting a 33% chance of at least 1 major technical error.&lt;/i&gt;
@@ -4199,7 +4199,7 @@ With everything clean, I reapplied gobs of grease and reinserted the bearings. T
       </item>
     
       <item>
-        <image>https://1.bp.blogspot.com/-FEZWAlMmtRk/WPGKsWYHewI/AAAAAAAAH9g/037ZKdxEiSUOLBbK6dS8No0WEsk6O1dQgCLcB/IMG_4928.jpeg</image>
+        <image>https://bonkerfield.orghttps://1.bp.blogspot.com/-FEZWAlMmtRk/WPGKsWYHewI/AAAAAAAAH9g/037ZKdxEiSUOLBbK6dS8No0WEsk6O1dQgCLcB/IMG_4928.jpeg</image>
         <title>Engagement Ring from Found Smoky Quartz</title>
         <description>&lt;img border=&quot;0&quot; height=&quot;480&quot; src=&quot;https://1.bp.blogspot.com/-FEZWAlMmtRk/WPGKsWYHewI/AAAAAAAAH9g/037ZKdxEiSUOLBbK6dS8No0WEsk6O1dQgCLcB/s640/IMG_4928.jpeg&quot; style=&quot;display:none&quot; width=&quot;640&quot;/&gt;
 &lt;p&gt;
@@ -4326,7 +4326,7 @@ With everything clean, I reapplied gobs of grease and reinserted the bearings. T
       </item>
     
       <item>
-        <image>https://4.bp.blogspot.com/-eDtnSA_LrOk/V_6IY2EOMLI/AAAAAAAAHDE/cqVsQMqK4PQT5H720zmOrH-3aw-R6Tw8wCLcB/png%253Bbase64de1231217d364075.png</image>
+        <image>https://bonkerfield.orghttps://4.bp.blogspot.com/-eDtnSA_LrOk/V_6IY2EOMLI/AAAAAAAAHDE/cqVsQMqK4PQT5H720zmOrH-3aw-R6Tw8wCLcB/png%253Bbase64de1231217d364075.png</image>
         <title>Text Mining and Natural Language Processing on Health Forums</title>
         <description>&lt;p&gt;
         As part of the &lt;a href=&quot;http://insighthealthdata.com/&quot;&gt;Insight Health Data Science Fellowship&lt;/a&gt;, I just got to spend the last 3 weeks working on a pretty fun project applying natural language processing to medical health forums. The goal is to curate health forums so that people can get instant advice on sexual health problems and then see the most relevant forum posts on those issues.
@@ -4513,7 +4513,7 @@ With everything clean, I reapplied gobs of grease and reinserted the bearings. T
       </item>
     
       <item>
-        <image>https://1.bp.blogspot.com/-VKPf9qgeyLY/V2hP1oPA9zI/AAAAAAAAGYk/K3C78Q2_9joKCPEIR9lA_uRYFh1N6YzugCLcB/hqdefault.jpg</image>
+        <image>https://bonkerfield.orghttps://1.bp.blogspot.com/-VKPf9qgeyLY/V2hP1oPA9zI/AAAAAAAAGYk/K3C78Q2_9joKCPEIR9lA_uRYFh1N6YzugCLcB/hqdefault.jpg</image>
         <title>Git Versioned PDF Visualizer</title>
         <description>&lt;a href=&quot;https://github.com/lots-of-things/git-pdf-viz&quot;&gt;jump to the code&lt;/a&gt;
 &lt;p&gt;
@@ -4590,7 +4590,7 @@ ffmpeg -r 2 -f concat -i list.txt -r 30 -c:v libx264 -pix_fmt yuv420p ../git_pdf
       </item>
     
       <item>
-        <image>https://3.bp.blogspot.com/-IP2Dr2Tqd8c/VzuMv7lD59I/AAAAAAAAGNw/u1r8hWqeKx4pexG-dLyuDH3OfJL9CKrGACLcB/Screenshot%2Bfrom%2B2016-05-17%2B16%253A27%253A04.png</image>
+        <image>https://bonkerfield.orghttps://3.bp.blogspot.com/-IP2Dr2Tqd8c/VzuMv7lD59I/AAAAAAAAGNw/u1r8hWqeKx4pexG-dLyuDH3OfJL9CKrGACLcB/Screenshot%2Bfrom%2B2016-05-17%2B16%253A27%253A04.png</image>
         <title>Parallel IPython with Jupyter Notebooks on a SLURM cluster</title>
         <description>&lt;p&gt;
         I figured it would be such a piece of cake to get my Jupyter IPython notebooks to run parallel on my work cluster, but in the end, I had so much trouble trying to find the simple steps for setting it up. After much fiddling, I offer you an explanation of what is sort of working.
@@ -4708,7 +4708,7 @@ ffmpeg -r 2 -f concat -i list.txt -r 30 -c:v libx264 -pix_fmt yuv420p ../git_pdf
       </item>
     
       <item>
-        <image>https://3.bp.blogspot.com/-XWaEhvNkWMI/VxUDQrKEcpI/AAAAAAAAGBE/v_GPtW_YD3g0D00sVyaHbNwniVz8uzkHQCKgB/IMG_20160418_103145.jpg</image>
+        <image>https://bonkerfield.orghttps://3.bp.blogspot.com/-XWaEhvNkWMI/VxUDQrKEcpI/AAAAAAAAGBE/v_GPtW_YD3g0D00sVyaHbNwniVz8uzkHQCKgB/IMG_20160418_103145.jpg</image>
         <title>Bluetooth controlled Redbot construction</title>
         <description>&lt;p&gt;
         For part of the Ray elementary after school electronics and robotics club (R-ASER), I'm prototyping a robot that can be remotely controlled via a serial connection through bluetooth. The following is the rough draft of the classroom instructions. (PS, volunteering with kids is fun so go out and do it.)
@@ -4847,7 +4847,7 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
       </item>
     
       <item>
-        <image>https://4.bp.blogspot.com/-uz-UeIv9vhc/Vz54Bh5sTtI/AAAAAAAAGOo/UIHzIL2AglwfrH_ks9BnkDmK5ohzc7vxACKgB/CAM00041.jpg</image>
+        <image>https://bonkerfield.orghttps://4.bp.blogspot.com/-uz-UeIv9vhc/Vz54Bh5sTtI/AAAAAAAAGOo/UIHzIL2AglwfrH_ks9BnkDmK5ohzc7vxACKgB/CAM00041.jpg</image>
         <title>Connecting the Artifice Center with a Shared NAS Drive</title>
         <description>&lt;p&gt;
         These are some quick instructions for anybody interested in connecting a NAS to Linux computers on a closed local network. In particular, this guide will help to reconnect the NAS drive to the computers at the &lt;a href=&quot;www.artificechicago.org&quot;&gt;Artifice Tech Center&lt;/a&gt; in Woodlawn.
@@ -4892,7 +4892,7 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
       </item>
     
       <item>
-        <image>https://2.bp.blogspot.com/-63w9Rl8tGLI/Vrgh8uWuEjI/AAAAAAAAF4o/dKeaPCS_mOQ/IMG_20160207_225952.jpg</image>
+        <image>https://bonkerfield.orghttps://2.bp.blogspot.com/-63w9Rl8tGLI/Vrgh8uWuEjI/AAAAAAAAF4o/dKeaPCS_mOQ/IMG_20160207_225952.jpg</image>
         <title>Star Wars Themed Settlers of Catan</title>
         <description>&lt;p&gt;
         I have been wanting to get a Settlers of Catan game for ourselves ever since I played it for the first time a few months ago. It looked like an incredibly simple game setup so my girlfriend and I figured it would easy enough to build the game ourselves.
@@ -4971,7 +4971,7 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
       </item>
     
       <item>
-        <image>http://3.bp.blogspot.com/-f-a5ltIGHv0/Vni1dxc9W0I/AAAAAAAAFpI/svbf1BgmCaA/IMG_20151218_172725.jpg</image>
+        <image>https://bonkerfield.orghttp://3.bp.blogspot.com/-f-a5ltIGHv0/Vni1dxc9W0I/AAAAAAAAFpI/svbf1BgmCaA/IMG_20151218_172725.jpg</image>
         <title>The Plexi+Rock Boot Tray Accident</title>
         <description>&lt;p&gt;
         Over the holidays, I always end up with new projects to make for gifts for my friends and family. This time for Christmas my gf's mom asked me to make a boot tray for her new apartment. She specifically said, &quot;use any materials you want,&quot; so I took her up on that by combining left-over plexiglass and tumbled gravel to make a classic, &lt;a href=&quot;https://www.google.com/search?q=rock+shoe+tray&amp;amp;source=lnms&amp;amp;tbm=isch&amp;amp;sa=X&amp;amp;ved=0ahUKEwjIvvu4t-7JAhXDKx4KHWlQANoQ_AUICCgC&amp;amp;biw=1319&amp;amp;bih=671&quot;&gt;rock boot tray&lt;/a&gt;.
@@ -5033,7 +5033,7 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
       </item>
     
       <item>
-        <image>http://3.bp.blogspot.com/-vLP4HuiJA6A/Vm95iCkSAKI/AAAAAAAAFcY/cMtPnk43kQg/routecrime.png</image>
+        <image>https://bonkerfield.orghttp://3.bp.blogspot.com/-vLP4HuiJA6A/Vm95iCkSAKI/AAAAAAAAFcY/cMtPnk43kQg/routecrime.png</image>
         <title>Q&amp;amp;A on the Route Crime Calculator</title>
         <description>&lt;p&gt;
         I've recently built a cool little web app that helps evaluate the number of crimes occurring along a person's travel route in the City of Chicago. To elaborate a little on the rationale and methodology, I've written this blog post where I answer some plausible questions.
@@ -5087,7 +5087,7 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
       </item>
     
       <item>
-        <image>http://2.bp.blogspot.com/-YHdCwZrollQ/Vm-K1o3JEjI/AAAAAAAAFc8/QF2LTMuCzmk/CNrF-7aWsAAqvLM.jpg%253Alarge.jpeg</image>
+        <image>https://bonkerfield.orghttp://2.bp.blogspot.com/-YHdCwZrollQ/Vm-K1o3JEjI/AAAAAAAAFc8/QF2LTMuCzmk/CNrF-7aWsAAqvLM.jpg%253Alarge.jpeg</image>
         <title>ARFI: A Robotic Dog</title>
         <description>&lt;p&gt;
         Over the past couple of months, me and my friends at &lt;a href=&quot;http://blog.artificechicago.org/&quot;&gt;Artifice Tech Education&lt;/a&gt; have been building our very own robot dog mascot, &lt;a href=&quot;http://blog.artificechicago.org/p/arfi-robotic-dog.html&quot;&gt;ARFI&lt;/a&gt;. He's been a lot of fun to build, and although we really don't have much in the way of &lt;a href=&quot;https://github.com/lots-of-things/arfi-the-kionoid&quot;&gt;plans&lt;/a&gt; or intricate design specs, I thought I'd share some of the production experience here. Hope you enjoy...
@@ -5153,7 +5153,7 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
       </item>
     
       <item>
-        <image>http://3.bp.blogspot.com/-mroh4I9gYU0/Vlv0H3wzd-I/AAAAAAAAFZI/h4MVdNrbpOQ/IMG_20151128_123019.jpg</image>
+        <image>https://bonkerfield.orghttp://3.bp.blogspot.com/-mroh4I9gYU0/Vlv0H3wzd-I/AAAAAAAAFZI/h4MVdNrbpOQ/IMG_20151128_123019.jpg</image>
         <title>Paper Chess Set</title>
         <description>&lt;p&gt;
         I've recently started playing chess with the students at the &lt;a href=&quot;http://blog.artificechicago.org/&quot;&gt;after-school program&lt;/a&gt; where I volunteer. It's fun, but we only have one chess set so only two students get to play at a time. Since our program is being run on such a shoestring budget, I decided I'd try to build a super economical chess set out just four pieces of paper and some hot glue.
@@ -5273,7 +5273,7 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
       </item>
     
       <item>
-        <image>http://2.bp.blogspot.com/-sCw0KnIFbjc/Vc07qYWEjxI/AAAAAAAAEWU/ALv1aEL2tsM/CAM00277.jpg</image>
+        <image>https://bonkerfield.orghttp://2.bp.blogspot.com/-sCw0KnIFbjc/Vc07qYWEjxI/AAAAAAAAEWU/ALv1aEL2tsM/CAM00277.jpg</image>
         <title>Power Analysis of an Indoor Water Fountain</title>
         <description>&lt;p&gt;
         Craving tranquil water splashing in your tiny apartment? You can have a relaxing fountain for under $10 if you have an old phone charger lying around.
@@ -5323,7 +5323,7 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
       </item>
     
       <item>
-        <image>http://2.bp.blogspot.com/-XGwAxKreBtw/VbWKR9SptdI/AAAAAAAAEHU/FgdjpgyQkKM/CAM00240.jpg</image>
+        <image>https://bonkerfield.orghttp://2.bp.blogspot.com/-XGwAxKreBtw/VbWKR9SptdI/AAAAAAAAEHU/FgdjpgyQkKM/CAM00240.jpg</image>
         <title>The Barbie Hadoop Cluster (Multi-Node Cluster)</title>
         <description>&lt;p&gt;
         I've finally finished the Barbie Hadoop Cluster! It's been several months since I &lt;a href=&quot;/2015/01/the-barbie-hadoop-cluster-stage-1.html&quot;&gt;started the project&lt;/a&gt;, but after the hiatus I was ready to come back and get it finished.
@@ -5378,7 +5378,7 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
       </item>
     
       <item>
-        <image>http://3.bp.blogspot.com/-O-XIJtZFxaw/VZw8tBrXSgI/AAAAAAAAD_Q/eJzGSVL5xk4/CAM00081.jpg</image>
+        <image>https://bonkerfield.orghttp://3.bp.blogspot.com/-O-XIJtZFxaw/VZw8tBrXSgI/AAAAAAAAD_Q/eJzGSVL5xk4/CAM00081.jpg</image>
         <title>Artifice Slideshow</title>
         <description>&lt;meta content=&quot;250&quot; http-equiv=&quot;refresh&quot;/&gt;
 &lt;a href=&quot;http://3.bp.blogspot.com/-O-XIJtZFxaw/VZw8tBrXSgI/AAAAAAAAD_Q/eJzGSVL5xk4/s1600/CAM00081.jpg&quot; imageanchor=&quot;1&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;http://3.bp.blogspot.com/-O-XIJtZFxaw/VZw8tBrXSgI/AAAAAAAAD_Q/eJzGSVL5xk4/s200/CAM00081.jpg&quot; style=&quot;visibility:hidden&quot;/&gt;&lt;/a&gt; &lt;embed flashvars=&quot;host=picasaweb.google.com&amp;amp;hl=en_US&amp;amp;feat=flashalbum&amp;amp;RGB=0x000000&amp;amp;feed=https%3A%2F%2Fpicasaweb.google.com%2Fdata%2Ffeed%2Fapi%2Fuser%2F103585488893025173441%2Falbumid%2F6168872337058837057%3Falt%3Drss%26kind%3Dphoto%26hl%3Den_US&quot; height=&quot;400&quot; pluginspage=&quot;http://www.macromedia.com/go/getflashplayer&quot; src=&quot;https://photos.gstatic.com/media/slideshow.swf&quot; type=&quot;application/x-shockwave-flash&quot; width=&quot;600&quot;/&gt;
@@ -5397,7 +5397,7 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
       </item>
     
       <item>
-        <image>https://i.ytimg.com/vi/7lXQL_aAJZs/default.jpg</image>
+        <image>https://bonkerfield.orghttps://i.ytimg.com/vi/7lXQL_aAJZs/default.jpg</image>
         <title>RASER Week 9: Laser activated trip wire</title>
         <description>&lt;p&gt;
         After last week's success with the physical trip wires, it's time to move on to some serious spy trip wire technology: LASERS!
@@ -5488,7 +5488,7 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
       </item>
     
       <item>
-        <image></image>
+        <image>https://bonkerfield.org</image>
         <title>RASER Week 8: Arduino trip wire</title>
         <description>&lt;p&gt;
         Today's project is a challenge to build a trip wire. The challenge builds on the Arduino input and output skills we put into practice last week. All we have to do is slightly adapt last weeks PushButton project.
@@ -5528,7 +5528,7 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
       </item>
     
       <item>
-        <image>http://www.explainxkcd.com/wiki/images/e/e5/is_it_worth_the_time.png</image>
+        <image>https://bonkerfield.orghttp://www.explainxkcd.com/wiki/images/e/e5/is_it_worth_the_time.png</image>
         <title>Procrastinating with a Time Optimization Game</title>
         <description>&lt;p&gt;
     I've got to admit, I'm majorly busy at this time of year. But today, I'm deciding to procrastinate by writing a post on—ironically enough—a game about &lt;a href=&quot;http://xkcd.com/1205/&quot;&gt;optimizing your use of time&lt;/a&gt;!
@@ -5685,7 +5685,7 @@ end
       </item>
     
       <item>
-        <image>http://4.bp.blogspot.com/-i9dF1aglhMc/VKi-4ipoxAI/AAAAAAAACLk/7z70tCT0MAA/LED-CIRCUIT2.png</image>
+        <image>https://bonkerfield.orghttp://4.bp.blogspot.com/-i9dF1aglhMc/VKi-4ipoxAI/AAAAAAAACLk/7z70tCT0MAA/LED-CIRCUIT2.png</image>
         <title>RASER Week 5 - Review Game</title>
         <description>&lt;p&gt;
         We've learned a lot so far in the RASER program by now. So to remind us about all of the things we've learned, we want to have a competition and see who remembers the most.
@@ -5737,7 +5737,7 @@ end
       </item>
     
       <item>
-        <image>http://1.bp.blogspot.com/-V1PPucOh9sM/VdaBCotvrgI/AAAAAAAAEg0/_hIhIfwt6Hk/photo%2B3jan26.JPG</image>
+        <image>https://bonkerfield.orghttp://1.bp.blogspot.com/-V1PPucOh9sM/VdaBCotvrgI/AAAAAAAAEg0/_hIhIfwt6Hk/photo%2B3jan26.JPG</image>
         <title>RASER Week 6: Arduino LED Passcode Pad - Part 2</title>
         <description>&lt;p&gt;
         Two weeks ago, we started learning about one of the most important things Arduinos can do: read input voltages. We want to continue working on reading input this week and connect our input back to output LEDs.
@@ -5834,7 +5834,7 @@ end
       </item>
     
       <item>
-        <image>http://learning.codasign.com/images/f/f9/Arduino_serial.png</image>
+        <image>https://bonkerfield.orghttp://learning.codasign.com/images/f/f9/Arduino_serial.png</image>
         <title>RASER Week 4: Arduino LED Passcode Pad - Part 1</title>
         <description>&lt;p&gt;
         This will be the first lesson where we really get into programming the Arduino to do something cool. The Arduino is an amazing tool for making devices that react to external inputs. In this lesson, we'll learn about how to work with both input and output by connecting buttons that can toggle LEDs on and off.
@@ -5927,7 +5927,7 @@ end
       </item>
     
       <item>
-        <image>http://graphics8.nytimes.com/images/2012/05/17/technology/bits-Twittermask/bits-Twittermask-tmagArticle.jpg</image>
+        <image>https://bonkerfield.orghttp://graphics8.nytimes.com/images/2012/05/17/technology/bits-Twittermask/bits-Twittermask-tmagArticle.jpg</image>
         <title>tweet_note: An unfakeable timestamp notebook</title>
         <description>&lt;img border=&quot;0&quot; src=&quot;http://graphics8.nytimes.com/images/2012/05/17/technology/bits-Twittermask/bits-Twittermask-tmagArticle.jpg&quot; title=&quot; &quot;/&gt;
 &lt;p&gt;
@@ -5977,7 +5977,7 @@ end
       </item>
     
       <item>
-        <image>http://1.bp.blogspot.com/-9aomi0wmZTw/VMB19czVNeI/AAAAAAAACbQ/E5mgCHmcBak/barbie.png</image>
+        <image>https://bonkerfield.orghttp://1.bp.blogspot.com/-9aomi0wmZTw/VMB19czVNeI/AAAAAAAACbQ/E5mgCHmcBak/barbie.png</image>
         <title>The Barbie Hadoop Cluster - Stage 1</title>
         <description>&lt;p&gt;
         Ever since I took Coursera's &lt;a href=&quot;https://www.coursera.org/course/datasci&quot;&gt;Intro to Data Science&lt;/a&gt; course, I've been dreaming of getting my own &lt;a href=&quot;http://www-01.ibm.com/software/data/infosphere/hadoop/mapreduce/&quot;&gt;MapReduce&lt;/a&gt; system up and running. It just seems so much more rewarding to have my own data framework right in front of me rather than paying for &lt;a href=&quot;http://aws.amazon.com/&quot;&gt;Amazon AWS&lt;/a&gt; or &lt;a href=&quot;https://cloud.google.com/&quot;&gt;Google Cloud&lt;/a&gt;.
@@ -6130,7 +6130,7 @@ end
       </item>
     
       <item>
-        <image>http://2.bp.blogspot.com/-pS_t0Y86OK0/VdZ_KF0pbGI/AAAAAAAAEgE/V8Mq7jX19Z8/photo%2B1.JPG</image>
+        <image>https://bonkerfield.orghttp://2.bp.blogspot.com/-pS_t0Y86OK0/VdZ_KF0pbGI/AAAAAAAAEgE/V8Mq7jX19Z8/photo%2B1.JPG</image>
         <title>RASER Week 3: Arduino LED blinker</title>
         <description>&lt;p&gt;
         Electronics engineers can build really complicated devices by controlling when and where simple circuits turn on and off. For example, check out this flat screen monitor that I've opened up to see the inside. The monitor uses signals from the computer to turn on tiny spots on the screen, called pixels. By turning the correct pixels on and off at the right time, we perceive a moving image.
@@ -6219,7 +6219,7 @@ end
       </item>
     
       <item>
-        <image>http://1.bp.blogspot.com/-Ws3vCbgsCQk/VMLe5La_Y-I/AAAAAAAAC78/MTL-uDu9EiQ/photo%2B2.JPG</image>
+        <image>https://bonkerfield.orghttp://1.bp.blogspot.com/-Ws3vCbgsCQk/VMLe5La_Y-I/AAAAAAAAC78/MTL-uDu9EiQ/photo%2B2.JPG</image>
         <title>RASER Week 2: LED dimmers and switches</title>
         <description>&lt;p&gt;
         This lesson will extend our knowledge of electricity and resistance by adding variable resistors and switches.
@@ -6319,7 +6319,7 @@ end
       </item>
     
       <item>
-        <image>http://2.bp.blogspot.com/-3z4RanS6SUQ/VLM0n06C9YI/AAAAAAAACUY/I2m0oILZ0PU/IMG_1393.jpg</image>
+        <image>https://bonkerfield.orghttp://2.bp.blogspot.com/-3z4RanS6SUQ/VLM0n06C9YI/AAAAAAAACUY/I2m0oILZ0PU/IMG_1393.jpg</image>
         <title>Four Humours Collage</title>
         <description>&lt;p&gt;
         Claire and I had these fairly cheesy Monet reprints from the Art Institute that I didn't like.
@@ -6396,7 +6396,7 @@ end
       </item>
     
       <item>
-        <image>http://3.bp.blogspot.com/-E3BGaAk6Jp8/VK7_R2F0ORI/AAAAAAAACQA/fz-tKxVcE8c/Screen%2BShot%2B2015-01-08%2Bat%2B4.05.34%2BPM.png</image>
+        <image>https://bonkerfield.orghttp://3.bp.blogspot.com/-E3BGaAk6Jp8/VK7_R2F0ORI/AAAAAAAACQA/fz-tKxVcE8c/Screen%2BShot%2B2015-01-08%2Bat%2B4.05.34%2BPM.png</image>
         <title>#ActsOfSuperness Twitter Game</title>
         <description>&lt;p&gt;
         Three days ago at about 3 a.m. I woke up with an idea to make people be nicer to each other. I know it might sound kind of corny, but I wanted to build a Twitter game to encourage people to do (and tweet) good things.
@@ -6537,7 +6537,7 @@ end
       </item>
     
       <item>
-        <image>http://4.bp.blogspot.com/-RtArN_4bKd4/VKjGxZlx9RI/AAAAAAAACL0/0njBoguVdjI/photo%2B2.JPG</image>
+        <image>https://bonkerfield.orghttp://4.bp.blogspot.com/-RtArN_4bKd4/VKjGxZlx9RI/AAAAAAAACL0/0njBoguVdjI/photo%2B2.JPG</image>
         <title>RASER Week 1: LED circuits</title>
         <description>&lt;p&gt;
         In this lesson we'll learn how the electricity lighting up our gadgets flows through wires from batteries.
@@ -6621,7 +6621,7 @@ end
       </item>
     
       <item>
-        <image>http://3.bp.blogspot.com/-jY_OzVGxHDc/VKr_aNryzKI/AAAAAAAACOE/qBjSFJC6ly8/Screen%2BShot%2B2015-01-05%2Bat%2B3.10.05%2BPM.png</image>
+        <image>https://bonkerfield.orghttp://3.bp.blogspot.com/-jY_OzVGxHDc/VKr_aNryzKI/AAAAAAAACOE/qBjSFJC6ly8/Screen%2BShot%2B2015-01-05%2Bat%2B3.10.05%2BPM.png</image>
         <title>A Better LinkedIn</title>
         <description>&lt;br/&gt;
 
@@ -6714,7 +6714,7 @@ end
       </item>
     
       <item>
-        <image>http://4.bp.blogspot.com/-8kj16-cnC7o/VKYaElP2m3I/AAAAAAAACJw/ql9jVVPZFhI/network.png</image>
+        <image>https://bonkerfield.orghttp://4.bp.blogspot.com/-8kj16-cnC7o/VKYaElP2m3I/AAAAAAAACJw/ql9jVVPZFhI/network.png</image>
         <title>Wire Network</title>
         <description>&lt;p&gt;
         For the past 10 years or so, I've been saving up my broken metal guitar strings. (For the record, I know I'm a packrat.) A couple of weeks ago, I finally put them to use on this Wire Netowrk Sculpture.
@@ -6742,7 +6742,7 @@ end
       </item>
     
       <item>
-        <image>http://4.bp.blogspot.com/-vkLL0Xgx53M/VKwsofqeMAI/AAAAAAAACPQ/yuGHlTiJTSI/wallgraph_front.png</image>
+        <image>https://bonkerfield.orghttp://4.bp.blogspot.com/-vkLL0Xgx53M/VKwsofqeMAI/AAAAAAAACPQ/yuGHlTiJTSI/wallgraph_front.png</image>
         <title>Graph Theory of Wall Decor</title>
         <description>&lt;p&gt;
         This is just a short post about a hallway wall decoration I made over the weekend. It's supposed to resemble a &lt;a href=&quot;http://en.wikipedia.org/wiki/Network_theory&quot;&gt;network graph&lt;/a&gt;, linking the different pieces together.
@@ -6766,7 +6766,7 @@ end
       </item>
     
       <item>
-        <image>http://4.bp.blogspot.com/-flG2HLm3sdw/VKMlSnwVzKI/AAAAAAAABQA/jjtWOSHlH5Y/Screen%2BShot%2B2014-12-30%2Bat%2B4.20.32%2BPM.png</image>
+        <image>https://bonkerfield.orghttp://4.bp.blogspot.com/-flG2HLm3sdw/VKMlSnwVzKI/AAAAAAAABQA/jjtWOSHlH5Y/Screen%2BShot%2B2014-12-30%2Bat%2B4.20.32%2BPM.png</image>
         <title>RASER Curriculum</title>
         <description>&lt;img border=&quot;0&quot; src=&quot;http://4.bp.blogspot.com/-flG2HLm3sdw/VKMlSnwVzKI/AAAAAAAABQA/jjtWOSHlH5Y/s1600/Screen%2BShot%2B2014-12-30%2Bat%2B4.20.32%2BPM.png&quot; title=&quot; &quot;/&gt;
 &lt;p&gt;
@@ -6801,7 +6801,7 @@ end
       </item>
     
       <item>
-        <image>http://3.bp.blogspot.com/-WvR0IUoXD1Y/VKMHxZ7UxbI/AAAAAAAABMQ/_kAvN5N_chs/Screen%2BShot%2B2014-12-30%2Bat%2B2.14.01%2BPM.png</image>
+        <image>https://bonkerfield.orghttp://3.bp.blogspot.com/-WvR0IUoXD1Y/VKMHxZ7UxbI/AAAAAAAABMQ/_kAvN5N_chs/Screen%2BShot%2B2014-12-30%2Bat%2B2.14.01%2BPM.png</image>
         <title>Quantum Gambling Game</title>
         <description>&lt;style&gt;
 #markdown img.quantum_im {
@@ -7104,7 +7104,7 @@ function regame() {
       </item>
     
       <item>
-        <image>http://4.bp.blogspot.com/-KcNroociJ_4/VKBYiGSAwQI/AAAAAAAABDA/x11ijF3jW0o/14%2B-%2B1</image>
+        <image>https://bonkerfield.orghttp://4.bp.blogspot.com/-KcNroociJ_4/VKBYiGSAwQI/AAAAAAAABDA/x11ijF3jW0o/14%2B-%2B1</image>
         <title>PVC Easel</title>
         <description>&lt;p&gt;
         One of my gifts to my girlfriend this year was a set of paints and brushes that I found on &lt;a href=&quot;http://www.craigslist.org/about/sites&quot;&gt;craigslist&lt;/a&gt;. She'd been holding on to some canvases, but it didn't look like she'd ever do anything with them unless somebody went out and got the paints for her.
@@ -7140,7 +7140,7 @@ function regame() {
       </item>
     
       <item>
-        <image>http://1.bp.blogspot.com/-0cAr7rofgBk/VJ9Aml-NqBI/AAAAAAAAA_Y/5fi1jvpwTxA/IMG_0154.JPG</image>
+        <image>https://bonkerfield.orghttp://1.bp.blogspot.com/-0cAr7rofgBk/VJ9Aml-NqBI/AAAAAAAAA_Y/5fi1jvpwTxA/IMG_0154.JPG</image>
         <title>Solar battery charger &amp;amp; flower pot (first try)</title>
         <description>This is my first attempt at attaching a solar battery charger like &lt;a href=&quot;http://lifehacker.com/5752731/built-a-4-diy-solar-battery-charger&quot;&gt;this one&lt;/a&gt; to a flower pot.  The style of the pot isn't exactly what I was looking for.  I was hoping to have the top at an angle that faced the sun better, but my friend who made the pots couldn't get them to stay flat during baking.  The next edition will have a better pot and hopefully will work to charge cell phones as well. &lt;img border=&quot;0&quot; src=&quot;http://1.bp.blogspot.com/-0cAr7rofgBk/VJ9Aml-NqBI/AAAAAAAAA_Y/5fi1jvpwTxA/s1600/IMG_0154.JPG&quot; title=&quot; &quot;/&gt;
 &lt;br/&gt;
@@ -7159,7 +7159,7 @@ function regame() {
       </item>
     
       <item>
-        <image>http://1.bp.blogspot.com/-NHNTr6jR-Zo/VJi2B-i4GwI/AAAAAAAAA9Q/5s2a-6kX5w4/2014-12-21%2B14.58.36.jpg</image>
+        <image>https://bonkerfield.orghttp://1.bp.blogspot.com/-NHNTr6jR-Zo/VJi2B-i4GwI/AAAAAAAAA9Q/5s2a-6kX5w4/2014-12-21%2B14.58.36.jpg</image>
         <title>Mo's Tool Pouch</title>
         <description>So in keeping with the holiday spirit I'm now showing off the little bag I made for my girlfriend's mom. She's an avid &lt;a href=&quot;http://lillstreet.com/department/ceramics-sculpture&quot;&gt;ceramicist&lt;/a&gt; so I made this bag to keep her tools. &lt;img border=&quot;0&quot; src=&quot;http://1.bp.blogspot.com/-NHNTr6jR-Zo/VJi2B-i4GwI/AAAAAAAAA9Q/5s2a-6kX5w4/s1600/2014-12-21%2B14.58.36.jpg&quot; title=&quot; &quot; /&gt;
 &lt;p&gt;
@@ -7197,7 +7197,7 @@ function regame() {
       </item>
     
       <item>
-        <image>http://3.bp.blogspot.com/-ZOlGCYGGU-E/VJi9pRYu9VI/AAAAAAAAA90/V-jiITbZhJE/2014-12-21%2B15.02.04.jpg</image>
+        <image>https://bonkerfield.orghttp://3.bp.blogspot.com/-ZOlGCYGGU-E/VJi9pRYu9VI/AAAAAAAAA90/V-jiITbZhJE/2014-12-21%2B15.02.04.jpg</image>
         <title>Modernizing my computer case</title>
         <description> I had an old laptop case from the 90s that I wanted to update for use.  Mostly I just wanted to shrink it down to a reasonable size for a modern laptop. Here's the result. &lt;img border=&quot;0&quot; src=&quot;http://3.bp.blogspot.com/-ZOlGCYGGU-E/VJi9pRYu9VI/AAAAAAAAA90/V-jiITbZhJE/s1600/2014-12-21%2B15.02.04.jpg&quot; title=&quot; &quot;/&gt;
  This is what the old case looked like.  Big and clunky. &lt;img border=&quot;0&quot; src=&quot;http://1.bp.blogspot.com/-xHT7ZbYyI-Q/VJi-Wt0ki5I/AAAAAAAAA98/nwnBz_pJB84/s1600/computer%2Bcases%2Bsamsonite%2B001.JPG&quot; title=&quot; &quot;/&gt;
@@ -7213,7 +7213,7 @@ function regame() {
       </item>
     
       <item>
-        <image>http://2.bp.blogspot.com/-LJVJObaTKi8/VJjccD3eRfI/AAAAAAAAA-Y/iUFX8Ka01to/2014-12-22%2B16.41.48.jpg</image>
+        <image>https://bonkerfield.orghttp://2.bp.blogspot.com/-LJVJObaTKi8/VJjccD3eRfI/AAAAAAAAA-Y/iUFX8Ka01to/2014-12-22%2B16.41.48.jpg</image>
         <title>Introducing Dave's Grill-It-All</title>
         <description>&lt;p&gt;
         My girlfriend's dad (Dave) is really into grilling (&lt;a href=&quot;http://www.bonappetit.com/entertaining-style/pop-culture/article/tv-dads-kitchen-skills&quot;&gt;as are all dads&lt;/a&gt;). So for Christmas we figured we'd go in together to get him one of these grill attachments that he had been talking about.
@@ -7290,7 +7290,7 @@ function regame() {
       </item>
     
       <item>
-        <image>http://3.bp.blogspot.com/-qlw2VUtEIVo/VIXZPAgqMxI/AAAAAAAAA6A/ZsFmny0Rl-Y/1024px-Hangzhou_bike_sharing_station.jpg</image>
+        <image>https://bonkerfield.orghttp://3.bp.blogspot.com/-qlw2VUtEIVo/VIXZPAgqMxI/AAAAAAAAA6A/ZsFmny0Rl-Y/1024px-Hangzhou_bike_sharing_station.jpg</image>
         <title>Predicting Bike Share Usage</title>
         <description>&lt;p&gt;
     I recently worked on a &lt;a href=&quot;https://www.kaggle.com/&quot;&gt;Kaggle&lt;/a&gt; competition while I was taking Coursera's &lt;a href=&quot;https://www.coursera.org/course/datasci&quot;&gt;Introduction to Data Science&lt;/a&gt;. Here's a quick summary of what I came up with.
@@ -7321,7 +7321,7 @@ function regame() {
       </item>
     
       <item>
-        <image>http://1.bp.blogspot.com/-V0-qs1QmbXg/VIYjmqZZZKI/AAAAAAAAA6Q/Cy8C6MaNU3A/5716341932_1c5d7f234d_b.jpg</image>
+        <image>https://bonkerfield.orghttp://1.bp.blogspot.com/-V0-qs1QmbXg/VIYjmqZZZKI/AAAAAAAAA6Q/Cy8C6MaNU3A/5716341932_1c5d7f234d_b.jpg</image>
         <title>A Simple Anagrammer</title>
         <description>&lt;div&gt;
 A while back, I wrote a little python code that takes in a word and spits out a list of anagram words.  It kind of takes the fun out of generating anagrams, but it puts the fun back in by letting you figure out how I made them.  Could you do it a better way?  You can look at my &lt;a href=&quot;https://github.com/lots-of-things/simple-anagrammer&quot;&gt; simple-anagrammer &lt;/a&gt; code on github.
