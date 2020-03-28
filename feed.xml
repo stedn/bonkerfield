@@ -13,7 +13,7 @@ layout: null
     <generator>Jekyll v{{ jekyll.version }}</generator>
     {% for post in site.posts %}
       <item>
-        <image>{{ post.image | xml_escape }}</image>
+        <image>{{ post.image | prepend: site.baseurl | prepend: site.url }}</image>
         <title>{{ post.title | xml_escape }}</title>
         <description>{{ post.content | xml_escape }}</description>
         <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
