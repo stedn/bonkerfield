@@ -21,6 +21,8 @@ social:
     url: https://codepen.io/stedn/
   - name: reddit-alien
     url: https://www.reddit.com/user/bonkerfield
+  - name: mastodon
+    url: https://fosstodon.org/@bonkerfield
 
 # Contact settings
 contact_img: /assets/images/2020/big_bonkerfield.png
