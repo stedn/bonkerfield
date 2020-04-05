@@ -7,10 +7,18 @@ layout: default
             <div class="grid-small">
                 <h2 itemprop="name headline p-name">{{ page.title }}</h2>
                 <time class="post__date dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%Y·%m·%d" }}</time>
-                <p class="post__date p-summary">{{ page.description }}</p>
+                {% if page.author %}
+                        {% for author in site.author %}
+                        <span class="post__author"> | {% if author["name"] == page.author and author["url"] %}<a class="p-name u-url" href="{{ author['url'] }}" title="about">{% endif %}{{ page.author }}{% if author["name"] == page.author and author["url"] %}</a>{% endif %}
+                        </span>
+                        {% endfor %}
+                {% endif %}
+                <p class="post__description p-summary">{{ page.description }}</p>
                 <a class="u-url" style="display:none;" href="{{ page.url | absolute_url }}"></a>
+                
             </div>
         </div>
+        
         <div class="post__content section-padding">
             <div class="grid">
                 <div class="e-content" id="markdown" itemprop="articleBody">
@@ -28,21 +36,7 @@ layout: default
                 {% include share.html %}
             </div>
         </div>
-        <!-- Everything inside the #author tags pulls data from the author -->
-        {% if page.author %}
-        <div class="section-padding--none">
-            <div class="grid">
-                <hr class="sep" />
-            </div>
-        </div>
-        <div class="section-padding">
-            <div class="grid-small p-author h-card">
-                {% for author in site.author %}
-                <span class="post__author">Posted by {% if author["name"] == page.author and author["url"] %}<a class="p-name u-url" href="{{ author['url'] }}" title="More By {{ page.author }}">{% endif %}{{ page.author }}{% if author["name"] == page.author and author["url"] %}</a>{% endif %}</span>
-                {% endfor %}
-            </div>
-        </div>
-        {% endif %}
+        
     </article>
 </div>
 <!-- Links to Previous/Next posts -->

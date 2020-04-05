@@ -16,7 +16,7 @@
     &__date {
         @extend %font-header;
 
-        display: block;
+        display: inline;
         margin-top: 0.25em;
 
         font-size: $font-xsmall;
@@ -86,8 +86,35 @@
 
     &__author {
         @extend %font-header;
-        @extend %font-size;
 
+        display: inline;
+        margin-top: 0.25em;
+
+        font-size: $font-xsmall;
+
+        a {
+            color: $color-black;
+            transition: color 200ms ease-in-out;
+
+            &:hover,
+            &:active,
+            &:focus {
+                color: darken($color-black, 5);
+            }
+        }
+    }
+
+
+    &__description {
+        @extend %font-header;
+
+        display: block;
+        margin-top: 0.25em;
+
+        font-size: $font-xsmall;
+    }
+
+    &__discussion {
         display: block;
 
         a {
@@ -282,7 +309,7 @@
 #webmentions h2 {
     font-size: medium;
     margin: 0;
-    padding: 10px;
+    padding: 4px;
 }
 
 #webmentions .reacts img {

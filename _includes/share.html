@@ -1,6 +1,10 @@
-<p class="post__author">Discussion</p>
+<p class="post__discussion">discussion from around the <a href="https://indieweb.org/Webmention">web</a></p>
+
 <div id="webmentions"></div>
 <hr style="margin: 5px 0;" class="sep" />
+
+<p>join the conversation</p>
+
 <form target="_blank" name="tweet" action="https://twitter.com/share" method="get"> 
   <input type="hidden" name="original_referer" value="{{ page.url | absolute_url }}"> 
   <input type="hidden" name="source" value="bonkerfield">   
@@ -9,7 +13,9 @@
   <input type="hidden" name="url" value="{{ page.url | absolute_url }}">
   <button class="btn btn-sm btn-social btn-tw" type="submit" id="button">  <i class="fab fa-twitter"></i> <br/>comment by tweet  </button>  
 </form>
+
 <hr style="margin: 5px 0;" class="sep" />
+
 <form target="_blank" name="tweet" action="https://www.reddit.com/submit" method="get"> 
   <input type="hidden" name="source" value="bonkerfield">   
    <textarea style="border-color:#aaa;" id="textar" name="title" maxlength="140"></textarea>
@@ -20,27 +26,3 @@
 </form>
 
 <script src="{{ '/assets/js/webmention.min.js' | prepend: site.baseurl }}"></script>
-<style>
-.btn-social,
-.btn-social:visited,
-.btn-social:focus,
-.btn-social:hover,
-.btn-social:active {
-  margin-left: 10px;
-  width: 25%;
-  color: #ffffff;
-  text-decoration: none;
-  border-color: #aaa;
-  transition: opacity .15s ease-in-out;
-}
-.btn-social:hover,
-.btn-social:active {
- opacity: .75;
-}
-.btn-tw {
-  background-color: #1da1f2;
-}
-.btn-rd {
-  background-color: #ff4500;
-}
-</style>

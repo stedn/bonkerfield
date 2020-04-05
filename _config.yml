@@ -3,7 +3,7 @@ email: will@bonkerfield.org
 baseurl: ""
 permalink: /:year/:month/:title/
 
-name: Will Stedden
+name: will stedden
 title: bonkerfield
 description: personal information identity spacetime map
 url: https://bonkerfield.org
@@ -36,7 +36,7 @@ mailchimp_input: b_68d1146ea8fe327def203f254_e88ba623c5
 
 # Author settings
 author:
-  - name: Will Stedden
+  - name: will stedden
     url: http://hellowill.bonkerfield.org
 
 # Pagination settings
