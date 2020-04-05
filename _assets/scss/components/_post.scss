@@ -282,8 +282,7 @@
 #webmentions h2 {
     font-size: medium;
     margin: 0;
-    padding: 2px;
-    background: #ccc;
+    padding: 10px;
 }
 
 #webmentions .reacts img {
@@ -334,4 +333,27 @@
 
 #webmentions .comments li .name {
     color: #111;
+}
+
+.btn-social,
+.btn-social:visited,
+.btn-social:focus,
+.btn-social:hover,
+.btn-social:active {
+  margin-left: 10px;
+  width: 25%;
+  color: #ffffff;
+  text-decoration: none;
+  border-color: #aaa;
+  transition: opacity .15s ease-in-out;
+}
+.btn-social:hover,
+.btn-social:active {
+ opacity: .75;
+}
+.btn-tw {
+  background-color: #1da1f2;
+}
+.btn-rd {
+  background-color: #ff4500;
 }

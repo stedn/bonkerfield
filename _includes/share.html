@@ -1,6 +1,46 @@
-<ul class="post__social">
-  <li><a href="https://twitter.com/intent/tweet?&text={{ page.title }}+{{ page.url | absolute_url }}{% if page.author %}+by+{{ page.author }}{% endif %}" target="_blank"><i class="fa fa-twitter"></i></a></li>
-  <li><a href="https://www.reddit.com/submit?url={{ page.url | absolute_url }}" target="_blank"><i class="fa fa-reddit-alien"></i></a></li>
-</ul>
+<p class="post__author">Discussion</p>
 <div id="webmentions"></div>
+<hr style="margin: 5px 0;" class="sep" />
+<form target="_blank" name="tweet" action="https://twitter.com/share" method="get"> 
+  <input type="hidden" name="original_referer" value="{{ page.url | absolute_url }}"> 
+  <input type="hidden" name="source" value="bonkerfield">   
+   <textarea style="border-color:#aaa;" id="textar" name="text" maxlength="140"></textarea>
+    <!--must provide twitter with a url string that has characters in it or else they will add the current url into the tweet-->
+  <input type="hidden" name="url" value="{{ page.url | absolute_url }}">
+  <button class="btn btn-sm btn-social btn-tw" type="submit" id="button">  <i class="fab fa-twitter"></i> <br/>comment by tweet  </button>  
+</form>
+<hr style="margin: 5px 0;" class="sep" />
+<form target="_blank" name="tweet" action="https://www.reddit.com/submit" method="get"> 
+  <input type="hidden" name="source" value="bonkerfield">   
+   <textarea style="border-color:#aaa;" id="textar" name="title" maxlength="140"></textarea>
+    <!--must provide twitter with a url string that has characters in it or else they will add the current url into the tweet-->
+  <button class="btn btn-sm btn-social btn-rd" type="submit" id="button">  <i class="fab fa-reddit-alien"></i> <br/>submit to reddit  </button> 
+  <input type="hidden" name="url" value="{{ page.url | absolute_url }}">
+   
+</form>
+
 <script src="{{ '/assets/js/webmention.min.js' | prepend: site.baseurl }}"></script>
+<style>
+.btn-social,
+.btn-social:visited,
+.btn-social:focus,
+.btn-social:hover,
+.btn-social:active {
+  margin-left: 10px;
+  width: 25%;
+  color: #ffffff;
+  text-decoration: none;
+  border-color: #aaa;
+  transition: opacity .15s ease-in-out;
+}
+.btn-social:hover,
+.btn-social:active {
+ opacity: .75;
+}
+.btn-tw {
+  background-color: #1da1f2;
+}
+.btn-rd {
+  background-color: #ff4500;
+}
+</style>
