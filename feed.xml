@@ -5,8 +5,8 @@
     <description>personal information identity spacetime map</description>
     <link>https://bonkerfield.org</link>
     <atom:link href="https://bonkerfield.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 09 Apr 2020 18:49:21 -0700</pubDate>
-    <lastBuildDate>Thu, 09 Apr 2020 18:49:21 -0700</lastBuildDate>
+    <pubDate>Thu, 09 Apr 2020 19:28:46 -0700</pubDate>
+    <lastBuildDate>Thu, 09 Apr 2020 19:28:46 -0700</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -50,9 +50,6 @@
 &lt;p&gt;
     The beauty of this tool is that it distributes discussions all around the web rather than keeping it locked up in one place. 
 &lt;span class=&quot;h-entry&quot;&gt;
- &lt;a style=&quot;display:none;&quot; class=&quot;p-author h-card&quot; href=&quot;http://bonkerfield.org&quot;&gt;
-   &lt;img alt=&quot;&quot; src=&quot;http://hellowill.bonkerfield.org/im/face_prof.jpg&quot;/&gt;
-   will stedden&lt;/a&gt;
  &lt;span class=&quot;p-name p-content&quot;&gt;To learn more about webmentions check out &lt;a href=&quot;https://mxb.dev/blog/using-webmentions-on-static-sites/&quot; class=&quot;u-in-reply-to&quot;&gt;this wonderful post&lt;/a&gt; by Max Bock.&lt;/span&gt;
 &lt;/span&gt;
     And as a living example of webmention in action, you can check out the &lt;a href=&quot;https://mxb.dev/blog/using-webmentions-on-static-sites/#webmentions&quot;&gt;comments&lt;/a&gt; on Max's site to see my mention of his blog.  It should look like this:
@@ -81,9 +78,6 @@
     Bridgy sends the webmention to bonkerfield.org for me, and then I route bridgy's notification to another awesome tool called &lt;a href=&quot;https://webmention.io/&quot;&gt;webmention.io&lt;/a&gt;.
 
 &lt;span class=&quot;h-entry&quot;&gt;
- &lt;a style=&quot;display:none;&quot; class=&quot;p-author h-card&quot; href=&quot;http://bonkerfield.org&quot;&gt;
-   &lt;img alt=&quot;&quot; src=&quot;http://hellowill.bonkerfield.org/im/face_prof.jpg&quot;/&gt;
-   will stedden&lt;/a&gt;
  &lt;span class=&quot;p-name p-content&quot;&gt;Webmention.io is awesome and made it possible for me to get up and running really quickly. And, guess what, I'm thanking its creator Aaron Parecki by webmentioning &lt;a href=&quot;https://aaronparecki.com/2018/06/30/11/your-first-webmention&quot; class=&quot;u-in-reply-to&quot;&gt;his post that introduced me to getting webmentions running&lt;/a&gt;!&lt;/span&gt;
 &lt;/span&gt;
 &lt;/p&gt;
@@ -92,9 +86,6 @@
 &lt;p&gt;
     Next,   
 &lt;span class=&quot;h-entry&quot;&gt;
- &lt;a style=&quot;display:none;&quot; class=&quot;p-author h-card&quot; href=&quot;http://bonkerfield.org&quot;&gt;
-   &lt;img alt=&quot;&quot; src=&quot;http://hellowill.bonkerfield.org/im/face_prof.jpg&quot;/&gt;
-   will stedden&lt;/a&gt;
  &lt;span class=&quot;p-name p-content&quot;&gt;I use a cool little javascript tool called &lt;a href=&quot;&quot;&gt;webmention.js&lt;/a&gt; to pull down the comments and render them in my page (thank you to &lt;a href=&quot;https://beesbuzz.biz/blog/4908-webmention-js-updated&quot; class=&quot;u-in-reply-to&quot;&gt;fluffy&lt;/a&gt;).&lt;/span&gt;
 &lt;/span&gt; I might be updating that part of the stack to customize it, but it's great to have something to get it working right away. This is how it renders now on another page.
 &lt;/p&gt;
@@ -103,9 +94,6 @@
 
 &lt;p&gt;Hopefully by the time you're seeing this, there will be some comments from twitter at the bottom of the page.  And if not, I encourage you to try out the tweet box to add your own.  It'll take a bit before your tweet gets pulled and updated on the page. 
 &lt;span class=&quot;h-entry&quot;&gt;
- &lt;a style=&quot;display:none;&quot; class=&quot;p-author h-card&quot; href=&quot;http://bonkerfield.org&quot;&gt;
-   &lt;img alt=&quot;&quot; src=&quot;http://hellowill.bonkerfield.org/im/face_prof.jpg&quot;/&gt;
-   will stedden&lt;/a&gt;
  &lt;span class=&quot;p-name p-content&quot;&gt; I think it's amazing that such a cross-site collaboration is possible. Thank you snarfed for building this and keeping it going. I'm looking forward to playing with &lt;a href=&quot;https://snarfed.org/2019-01-02_bridgy-stats-update-4&quot; class=&quot;u-in-reply-to&quot;&gt;bridgy's usage data&lt;/a&gt; someday.&lt;/span&gt;
 &lt;/span&gt;
 &lt;/p&gt;
@@ -123,7 +111,13 @@
 
 &lt;img src=&quot;/assets/images/2020/webmention_fail_2.png&quot;/&gt;
 
-&lt;p&gt;&lt;em&gt;Looks like I had a misplaced p-author h-card in my comments section.  I guess I have a little more to debug. 🤦&lt;/em&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;em&gt;Looks like I had a misplaced p-author h-card in my comments section.  I guess I have a little more to debug. 🤦&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Update 2: I reran it for aaronpk's site and things look at least a little better. content still doesn't show up, but that's a problem for another day.&lt;/em&gt;&lt;/p&gt;
+
+
+&lt;img src=&quot;/assets/images/2020/webmention_better.png&quot; /&gt;
+</description>
         <pubDate>Thu, 09 Apr 2020 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2020/04/getting-so-so-social/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2020/04/getting-so-so-social/</guid>
