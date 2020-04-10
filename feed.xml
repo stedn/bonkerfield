@@ -5,8 +5,8 @@
     <description>personal information identity spacetime map</description>
     <link>https://bonkerfield.org</link>
     <atom:link href="https://bonkerfield.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 09 Apr 2020 19:28:46 -0700</pubDate>
-    <lastBuildDate>Thu, 09 Apr 2020 19:28:46 -0700</lastBuildDate>
+    <pubDate>Thu, 09 Apr 2020 19:58:33 -0700</pubDate>
+    <lastBuildDate>Thu, 09 Apr 2020 19:58:33 -0700</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -52,10 +52,7 @@
 &lt;span class=&quot;h-entry&quot;&gt;
  &lt;span class=&quot;p-name p-content&quot;&gt;To learn more about webmentions check out &lt;a href=&quot;https://mxb.dev/blog/using-webmentions-on-static-sites/&quot; class=&quot;u-in-reply-to&quot;&gt;this wonderful post&lt;/a&gt; by Max Bock.&lt;/span&gt;
 &lt;/span&gt;
-    And as a living example of webmention in action, you can check out the &lt;a href=&quot;https://mxb.dev/blog/using-webmentions-on-static-sites/#webmentions&quot;&gt;comments&lt;/a&gt; on Max's site to see my mention of his blog.  It should look like this:
-&lt;/p&gt;
-&lt;p&gt;
-&lt;em&gt;note: I will update below with an image when the comment goes through.&lt;/em&gt;
+    And as a living example of webmention in action, you can check out the &lt;a href=&quot;https://mxb.dev/blog/using-webmentions-on-static-sites/#webmentions&quot;&gt;comments&lt;/a&gt; on Max's site to see my mention of his blog.  
 &lt;/p&gt;
 &lt;p&gt;
     That comment will (hopefully) be posted to his site automatically by a python script that I wrote (using &lt;a href=&quot;https://indieweb.org/ronkyuu&quot;&gt;ronkyuu&lt;/a&gt;) to send mentions to all the sites I link to from my blog.  If everything works right, Max's site will hear my desperate cry for attention and pull the comment off my site and onto his.
