@@ -5,15 +5,15 @@
     <description>personal information identity spacetime map</description>
     <link>https://bonkerfield.org</link>
     <atom:link href="https://bonkerfield.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 09 Apr 2020 18:17:05 -0700</pubDate>
-    <lastBuildDate>Thu, 09 Apr 2020 18:17:05 -0700</lastBuildDate>
+    <pubDate>Thu, 09 Apr 2020 18:21:41 -0700</pubDate>
+    <lastBuildDate>Thu, 09 Apr 2020 18:21:41 -0700</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
         <image>https://bonkerfield.org/assets/images/2020/social_media.png</image>
         <title>Getting so-so-social with #bridgy and the #IndieWeb</title>
         <description>&lt;p&gt;
-    I've avoided it for a long time, but recently, I've started to get really into social media&lt;a title=&quot;and not just because I can't go outside anymore&quot; onclick=&quot;return false;&quot;&gt;*&lt;/a&gt;. I've written about &lt;a href=&quot;https://viewfoil.bonkerfield.org/search/label/viewfoil&quot;&gt;why I bother elsewhere&lt;/a&gt;, but mostly it's to help contribute to fighting the bad parts of online life, like &lt;a href=&quot;https://www.wired.com/story/internet-deception-stay-what-do-now/&quot;&gt;disinformation&lt;/a&gt;, unrealistic &lt;a href=&quot;https://www.cnbc.com/2016/03/16/social-media-creates-group-think.html&quot;&gt;groupthink&lt;/a&gt;, and &lt;a href=&quot;https://newsroom.ucla.edu/releases/the-teenage-brain-on-social-media&quot;&gt;&lt;/a&gt;rising anxiety&lt;/a&gt;. I want to try to be a good internet citizen and make the social web a place where everyone acts in a way that they're proud of. 
+    I've avoided it for a long time, but recently, I've started to get really into social media&lt;a title=&quot;and not just because I can't go outside anymore&quot; onclick=&quot;return false;&quot;&gt;*&lt;/a&gt;. I've written about &lt;a href=&quot;https://viewfoil.bonkerfield.org/search/label/viewfoil&quot;&gt;why I bother&lt;/a&gt;, but briefly, it's to help contribute to fighting the bad parts of online life, like &lt;a href=&quot;https://www.wired.com/story/internet-deception-stay-what-do-now/&quot;&gt;disinformation&lt;/a&gt;, unrealistic &lt;a href=&quot;https://www.cnbc.com/2016/03/16/social-media-creates-group-think.html&quot;&gt;groupthink&lt;/a&gt;, and &lt;a href=&quot;https://newsroom.ucla.edu/releases/the-teenage-brain-on-social-media&quot;&gt;&lt;/a&gt;rising anxiety&lt;/a&gt;. I want to try to be a good internet citizen and make the social web a place where everyone acts in a way that they're proud of. 
 &lt;/p&gt;
 &lt;p&gt;
     As a first step, I started by building an aggregator of all my blog and social activity to my &lt;a href=&quot;https://viewfoil.bonkerfield.org/&quot;&gt;&quot;viewfoil&quot;&lt;/a&gt;.  The goal is to have anybody on any social media platform be able to get a good sense of who I am (and that I am indeed a real person and not a bot/Russian troll). I now have most of my personal sources in the stream, and I've made it filterable by source.
