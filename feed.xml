@@ -5,15 +5,15 @@
     <description>personal information identity spacetime map</description>
     <link>https://bonkerfield.org</link>
     <atom:link href="https://bonkerfield.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 09 Apr 2020 18:21:41 -0700</pubDate>
-    <lastBuildDate>Thu, 09 Apr 2020 18:21:41 -0700</lastBuildDate>
+    <pubDate>Thu, 09 Apr 2020 18:29:37 -0700</pubDate>
+    <lastBuildDate>Thu, 09 Apr 2020 18:29:37 -0700</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
         <image>https://bonkerfield.org/assets/images/2020/social_media.png</image>
         <title>Getting so-so-social with #bridgy and the #IndieWeb</title>
         <description>&lt;p&gt;
-    I've avoided it for a long time, but recently, I've started to get really into social media&lt;a title=&quot;and not just because I can't go outside anymore&quot; onclick=&quot;return false;&quot;&gt;*&lt;/a&gt;. I've written about &lt;a href=&quot;https://viewfoil.bonkerfield.org/search/label/viewfoil&quot;&gt;why I bother&lt;/a&gt;, but briefly, it's to help contribute to fighting the bad parts of online life, like &lt;a href=&quot;https://www.wired.com/story/internet-deception-stay-what-do-now/&quot;&gt;disinformation&lt;/a&gt;, unrealistic &lt;a href=&quot;https://www.cnbc.com/2016/03/16/social-media-creates-group-think.html&quot;&gt;groupthink&lt;/a&gt;, and &lt;a href=&quot;https://newsroom.ucla.edu/releases/the-teenage-brain-on-social-media&quot;&gt;&lt;/a&gt;rising anxiety&lt;/a&gt;. I want to try to be a good internet citizen and make the social web a place where everyone acts in a way that they're proud of. 
+    I've avoided it for a long time, but recently, I've started to get really into social media&lt;a title=&quot;and not just because I can't go outside anymore&quot; onclick=&quot;return false;&quot;&gt;*&lt;/a&gt;. I've written about &lt;a href=&quot;https://viewfoil.bonkerfield.org/search/label/viewfoil&quot;&gt;why I bother&lt;/a&gt;, but briefly, it's to help contribute to fighting the bad parts of online life, like &lt;a href=&quot;https://www.wired.com/story/internet-deception-stay-what-do-now/&quot;&gt;disinformation&lt;/a&gt;, unrealistic &lt;a href=&quot;https://www.cnbc.com/2016/03/16/social-media-creates-group-think.html&quot;&gt;groupthink&lt;/a&gt;, and &lt;a href=&quot;https://newsroom.ucla.edu/releases/the-teenage-brain-on-social-media&quot;&gt;rising anxiety&lt;/a&gt;. I want to try to be a good internet citizen and make the social web a place where everyone acts in a way that they're proud of. 
 &lt;/p&gt;
 &lt;p&gt;
     As a first step, I started by building an aggregator of all my blog and social activity to my &lt;a href=&quot;https://viewfoil.bonkerfield.org/&quot;&gt;&quot;viewfoil&quot;&lt;/a&gt;.  The goal is to have anybody on any social media platform be able to get a good sense of who I am (and that I am indeed a real person and not a bot/Russian troll). I now have most of my personal sources in the stream, and I've made it filterable by source.
@@ -41,7 +41,7 @@
     As it turns out, the &lt;a href=&quot;https://indieweb.org/&quot;&gt;IndieWeb&lt;/a&gt; movement is also focused on consolidating your online identity and creating decentralized interactivity&amp;mdash;the two things that I was trying to do!  It seems the &lt;a href=&quot;https://indieweb.org/why&quot;&gt;motivations&lt;/a&gt; for this in the IndieWeb community might be slightly different from my own, but I feel like there's enough alignment in the general sentiment. Plus one of the IndieWeb &lt;a href=&quot;https://indieweb.org/principles&quot;&gt;principles&lt;/a&gt; is &lt;a href=&quot;https://indieweb.org/plurality&quot;&gt;plurality&lt;/a&gt; anyway, which is a principle I can always get behind. :)
 &lt;/p&gt;
 &lt;p&gt;
-    There are many facets to what the IndieWeb is trying to do, and I encourage you to &lt;a href=&quot;https://www.jvt.me/posts/2019/10/20/indieweb-talk/&quot;&gt;learn more&lt;/a&gt;. But I want to focus in on one technical component that I'm utilizing, called the &lt;a href=&quot;https://indieweb.org/Webmention&quot;&gt;webmention&lt;/a&gt;. A webmention is a way for your site to publically notify another site that you've mentioned it.  
+    There are many facets to what the IndieWeb is trying to do, and I encourage you to &lt;a href=&quot;https://www.jvt.me/posts/2019/10/20/indieweb-talk/&quot;&gt;learn more&lt;/a&gt;. But I want to focus in on one technical component that I'm utilizing, called the &lt;a href=&quot;https://indieweb.org/Webmention&quot;&gt;webmention&lt;/a&gt;. A webmention is a way for your site to publicly notify another site that you've mentioned it.  
 &lt;/p&gt;
 &lt;blockquote&gt;
     an @ mention that works across websites
@@ -114,7 +114,9 @@
 
 &lt;p&gt;Reddit is one of social sites, but bridgy does not yet have a reddit integration. I want to be able to pull interactions from my reddit posts too so I'm currently working on the project with snarfed to get reddit commenting up and running. Hopefully pretty soon, anyone will be able to connect a reddit thread with their website too.  I'm really excited to have stumbled on this community, and I'm really happy to have the chance to contribute.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;PS: I set up a lot of my links above to be webmentions. I'll update with the results when I see which (if any) worked.&lt;/em&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;em&gt;PS: I set up a lot of my links above to be webmentions. I'll update with the results when I see which (if any) worked.&lt;/em&gt;&lt;/p&gt;
+
+</description>
         <pubDate>Thu, 09 Apr 2020 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2020/04/getting-so-so-social/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2020/04/getting-so-so-social/</guid>
