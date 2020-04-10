@@ -5,9 +5,124 @@
     <description>personal information identity spacetime map</description>
     <link>https://bonkerfield.org</link>
     <atom:link href="https://bonkerfield.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 09 Apr 2020 13:46:28 -0700</pubDate>
-    <lastBuildDate>Thu, 09 Apr 2020 13:46:28 -0700</lastBuildDate>
+    <pubDate>Thu, 09 Apr 2020 18:17:05 -0700</pubDate>
+    <lastBuildDate>Thu, 09 Apr 2020 18:17:05 -0700</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <image>https://bonkerfield.org/assets/images/2020/social_media.png</image>
+        <title>Getting so-so-social with #bridgy and the #IndieWeb</title>
+        <description>&lt;p&gt;
+    I've avoided it for a long time, but recently, I've started to get really into social media&lt;a title=&quot;and not just because I can't go outside anymore&quot; onclick=&quot;return false;&quot;&gt;*&lt;/a&gt;. I've written about &lt;a href=&quot;https://viewfoil.bonkerfield.org/search/label/viewfoil&quot;&gt;why I bother elsewhere&lt;/a&gt;, but mostly it's to help contribute to fighting the bad parts of online life, like &lt;a href=&quot;https://www.wired.com/story/internet-deception-stay-what-do-now/&quot;&gt;disinformation&lt;/a&gt;, unrealistic &lt;a href=&quot;https://www.cnbc.com/2016/03/16/social-media-creates-group-think.html&quot;&gt;groupthink&lt;/a&gt;, and &lt;a href=&quot;https://newsroom.ucla.edu/releases/the-teenage-brain-on-social-media&quot;&gt;&lt;/a&gt;rising anxiety&lt;/a&gt;. I want to try to be a good internet citizen and make the social web a place where everyone acts in a way that they're proud of. 
+&lt;/p&gt;
+&lt;p&gt;
+    As a first step, I started by building an aggregator of all my blog and social activity to my &lt;a href=&quot;https://viewfoil.bonkerfield.org/&quot;&gt;&quot;viewfoil&quot;&lt;/a&gt;.  The goal is to have anybody on any social media platform be able to get a good sense of who I am (and that I am indeed a real person and not a bot/Russian troll). I now have most of my personal sources in the stream, and I've made it filterable by source.
+&lt;/p&gt;
+
+&lt;img class=&quot;small_img&quot; src=&quot;/assets/images/2020/social_media.png&quot;/&gt;
+
+&lt;p&gt;
+    Letting strangers see everything I do online is a start, but it's not very social if my site only contains content from me. I want my site to be open to input from others.
+&lt;/p&gt;
+
+&lt;h4&gt;Connecting the social web back into bonkerfield&lt;/h4&gt;
+
+&lt;p&gt;
+    A few months ago, I put &lt;a href=&quot;/2020/02/combining-gpt-2-and-bert/&quot;&gt;one of my blog posts&lt;/a&gt; on reddit and twitter.  People on reddit had &lt;a href=&quot;https://www.reddit.com/r/MachineLearning/comments/ezv3f2/p_gpt2_bert_reddit_replier_i_built_a_system_that/&quot;&gt;conversations&lt;/a&gt; about the results, and people on Twitter made &lt;a href=&quot;https://twitter.com/search?q=bonkerfield.org%2F2020%2F02%2Fcombining-gpt-2-and-bert%2F&quot;&gt;remarks&lt;/a&gt; too. At the time, I'd thought it would be so cool if the conversations from both sites could be pulled back onto my page so that anyone reading it could see all of the opinions that other people were sharing.
+&lt;/p&gt;
+
+&lt;p&gt;
+    While I was thinking about how to do this, my friend &lt;a href=&quot;https://snarfed.org/&quot;&gt;Ryan (aka snarfed)&lt;/a&gt; reached out to me to hang out virtually&lt;a title=&quot;this is all during the covid-19 lockdown&quot; onclick=&quot;return false;&quot;&gt;*&lt;/a&gt;.  Little did I know, he was the creator of a widely used &lt;a href=&quot;https://brid.gy/&quot;&gt;tool&lt;/a&gt; that does exactly what I was looking to do! And not only that, he introduced me to the &lt;a href=&quot;https://indieweb.org/&quot;&gt;IndieWeb&lt;/a&gt;, a community working to create an awesome, interactive, pluralistic form of social internet. Honestly, what more could I ask for?
+&lt;/p&gt;
+
+&lt;h5&gt;Welcome to the IndieWeb!&lt;/h5&gt;
+
+&lt;p&gt;
+    As it turns out, the &lt;a href=&quot;https://indieweb.org/&quot;&gt;IndieWeb&lt;/a&gt; movement is also focused on consolidating your online identity and creating decentralized interactivity&amp;mdash;the two things that I was trying to do!  It seems the &lt;a href=&quot;https://indieweb.org/why&quot;&gt;motivations&lt;/a&gt; for this in the IndieWeb community might be slightly different from my own, but I feel like there's enough alignment in the general sentiment. Plus one of the IndieWeb &lt;a href=&quot;https://indieweb.org/principles&quot;&gt;principles&lt;/a&gt; is &lt;a href=&quot;https://indieweb.org/plurality&quot;&gt;plurality&lt;/a&gt; anyway, which is a principle I can always get behind. :)
+&lt;/p&gt;
+&lt;p&gt;
+    There are many facets to what the IndieWeb is trying to do, and I encourage you to &lt;a href=&quot;https://www.jvt.me/posts/2019/10/20/indieweb-talk/&quot;&gt;learn more&lt;/a&gt;. But I want to focus in on one technical component that I'm utilizing, called the &lt;a href=&quot;https://indieweb.org/Webmention&quot;&gt;webmention&lt;/a&gt;. A webmention is a way for your site to publically notify another site that you've mentioned it.  
+&lt;/p&gt;
+&lt;blockquote&gt;
+    an @ mention that works across websites
+    &lt;cite&gt;&lt;a href=&quot;https://twitter.com/rngala/status/852354426983591937&quot;&gt;Rony Ngala&lt;/a&gt;&lt;/cite&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+    The beauty of this tool is that it distributes discussions all around the web rather than keeping it locked up in one place. 
+&lt;span class=&quot;h-entry&quot;&gt;
+ &lt;a style=&quot;display:none;&quot; class=&quot;p-author h-card&quot; href=&quot;http://bonkerfield.org&quot;&gt;
+   &lt;img alt=&quot;&quot; src=&quot;http://hellowill.bonkerfield.org/im/face_prof.jpg&quot;/&gt;
+   will stedden&lt;/a&gt;
+ &lt;span class=&quot;p-name p-content&quot;&gt;To learn more about webmentions check out &lt;a href=&quot;https://mxb.dev/blog/using-webmentions-on-static-sites/&quot; class=&quot;u-in-reply-to&quot;&gt;this wonderful post&lt;/a&gt; by Max Bock.&lt;/span&gt;
+&lt;/span&gt;
+    And as a living example of webmention in action, you can check out the &lt;a href=&quot;https://mxb.dev/blog/using-webmentions-on-static-sites/#webmentions&quot;&gt;comments&lt;/a&gt; on Max's site to see my mention of his blog.  It should look like this:
+&lt;/p&gt;
+&lt;p&gt;
+&lt;em&gt;note: I will update below with an image when the comment goes through.&lt;/em&gt;
+&lt;/p&gt;
+&lt;p&gt;
+    That comment will (hopefully) be posted to his site automatically by a python script that I wrote (using &lt;a href=&quot;https://indieweb.org/ronkyuu&quot;&gt;ronkyuu&lt;/a&gt;) to send mentions to all the sites I link to from my blog.  If everything works right, Max's site will hear my desperate cry for attention and pull the comment off my site and onto his.
+&lt;/p&gt;
+
+&lt;p&gt;
+    Sending webmentions is great for people who are into programming and web development, but it still has a learning curve and is in the &quot;early adopter&quot; phase (remember playing with &lt;a href=&quot;https://en.wikipedia.org/wiki/Yahoo!_GeoCities&quot;&gt;geocities&lt;/a&gt; as a kid?).  To make it more universally accessible, my friend ryan's contribution, &lt;a href=&quot;https://brid.gy/&quot;&gt;bridgy&lt;/a&gt;, turns &lt;strong&gt;any&lt;/strong&gt; social media post into a webmention and routes it to the mentioned site.
+&lt;/p&gt;
+
+&lt;h4&gt;Using bridgy to connect social media&lt;/h4&gt;
+
+&lt;p&gt;
+    &lt;a href=&quot;https://brid.gy/&quot;&gt;Bridgy&lt;/a&gt; searches social networks for links back to my blog and then sends the discussion to my own site as webmentions.  Currently, I have it set up to look for comments from Twitter, Mastodon, and my Viewfoil site.  The UI shows all the content Bridgy has picked up and which things have a proper webmention that can be routed back to my site.
+
+&lt;/p&gt;
+
+&lt;img src=&quot;/assets/images/2020/bridgy_ui.png&quot; style=&quot;border-style: solid;border-color:black&quot;/&gt;
+
+&lt;p&gt;
+    Bridgy sends the webmention to bonkerfield.org for me, and then I route bridgy's notification to another awesome tool called &lt;a href=&quot;https://webmention.io/&quot;&gt;webmention.io&lt;/a&gt;.
+
+&lt;span class=&quot;h-entry&quot;&gt;
+ &lt;a style=&quot;display:none;&quot; class=&quot;p-author h-card&quot; href=&quot;http://bonkerfield.org&quot;&gt;
+   &lt;img alt=&quot;&quot; src=&quot;http://hellowill.bonkerfield.org/im/face_prof.jpg&quot;/&gt;
+   will stedden&lt;/a&gt;
+ &lt;span class=&quot;p-name p-content&quot;&gt;Webmention.io is awesome and made it possible for me to get up and running really quickly. And, guess what, I'm thanking its creator Aaron Parecki by webmentioning &lt;a href=&quot;https://mxb.dev/blog/using-webmentions-on-static-sites/&quot; class=&quot;u-in-reply-to&quot;&gt;his post that introduced me to getting webmentions running&lt;/a&gt;!&lt;/span&gt;
+&lt;/span&gt;
+&lt;/p&gt;
+
+
+&lt;p&gt;
+    Next,   
+&lt;span class=&quot;h-entry&quot;&gt;
+ &lt;a style=&quot;display:none;&quot; class=&quot;p-author h-card&quot; href=&quot;http://bonkerfield.org&quot;&gt;
+   &lt;img alt=&quot;&quot; src=&quot;http://hellowill.bonkerfield.org/im/face_prof.jpg&quot;/&gt;
+   will stedden&lt;/a&gt;
+ &lt;span class=&quot;p-name p-content&quot;&gt;I use a cool little javascript tool called &lt;a href=&quot;&quot;&gt;webmention.js&lt;/a&gt; to pull down the comments and render them in my page (thank you to &lt;a href=&quot;https://beesbuzz.biz/blog/4908-webmention-js-updated&quot; class=&quot;u-in-reply-to&quot;&gt;fluffy&lt;/a&gt;).&lt;/span&gt;
+&lt;/span&gt; I might be updating that part of the stack to customize it, but it's great to have something to get it working right away. This is how it renders now on another page.
+&lt;/p&gt;
+
+&lt;img src=&quot;/assets/images/2020/bridgy_bonk.png&quot; style=&quot;border-style: solid;border-color:black&quot;/&gt;
+
+&lt;p&gt;Hopefully by the time you're seeing this, there will be some comments from twitter at the bottom of the page.  And if not, I encourage you to try out the tweet box to add your own.  It'll take a bit before your tweet gets pulled and updated on the page. 
+&lt;span class=&quot;h-entry&quot;&gt;
+ &lt;a style=&quot;display:none;&quot; class=&quot;p-author h-card&quot; href=&quot;http://bonkerfield.org&quot;&gt;
+   &lt;img alt=&quot;&quot; src=&quot;http://hellowill.bonkerfield.org/im/face_prof.jpg&quot;/&gt;
+   will stedden&lt;/a&gt;
+ &lt;span class=&quot;p-name p-content&quot;&gt; I think it's amazing that such a cross-site collaboration is possible. Thank you snarfed for building this and keeping it going. I'm looking forward to playing with &lt;a href=&quot;https://snarfed.org/2019-01-02_bridgy-stats-update-4&quot; class=&quot;u-in-reply-to&quot;&gt;bridgy's usage data&lt;/a&gt; someday.&lt;/span&gt;
+&lt;/span&gt;
+&lt;/p&gt;
+
+&lt;h4&gt;Next Steps: Expanding Bridgy to reddit&lt;/h4&gt;
+
+&lt;p&gt;Reddit is one of social sites, but bridgy does not yet have a reddit integration. I want to be able to pull interactions from my reddit posts too so I'm currently working on the project with snarfed to get reddit commenting up and running. Hopefully pretty soon, anyone will be able to connect a reddit thread with their website too.  I'm really excited to have stumbled on this community, and I'm really happy to have the chance to contribute.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;PS: I set up a lot of my links above to be webmentions. I'll update with the results when I see which (if any) worked.&lt;/em&gt;&lt;/p&gt;</description>
+        <pubDate>Thu, 09 Apr 2020 00:00:00 -0700</pubDate>
+        <link>https://bonkerfield.org/2020/04/getting-so-so-social/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2020/04/getting-so-so-social/</guid>
+        
+        <category>web</category>
+        
+        
+      </item>
     
       <item>
         <image>https://bonkerfield.org/assets/images/2020/skylight_optical.jpg</image>
