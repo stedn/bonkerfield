@@ -4,24 +4,23 @@
 
 <p>join the conversation</p>
 
-<form target="_blank" name="tweet" action="https://twitter.com/share" method="get"> 
-  <input type="hidden" name="original_referer" value="{{ page.url | absolute_url }}"> 
-  <input type="hidden" name="source" value="bonkerfield">   
+<form target="_blank" name="tweet" action="https://twitter.com/share" method="get">
+  <input type="hidden" name="original_referer" value="{{ page.url | absolute_url }}">
+  <input type="hidden" name="source" value="bonkerfield">
    <textarea style="border-color:#aaa;" id="textar" name="text" maxlength="140"></textarea>
     <!--must provide twitter with a url string that has characters in it or else they will add the current url into the tweet-->
   <input type="hidden" name="url" value="{{ page.url | absolute_url }}">
-  <button class="btn btn-sm btn-social btn-tw" type="submit" id="button">  <i class="fab fa-twitter"></i> <br/>comment by tweet  </button>  
+  <button class="btn btn-sm btn-social btn-tw" type="submit" id="button">  <i class="fab fa-twitter"></i> <br/>comment by tweet  </button>
 </form>
 
-<hr style="margin: 5px 0;" class="sep" />
+<!-- <hr style="margin: 5px 0;" class="sep" />
 
-<form target="_blank" name="tweet" action="https://www.reddit.com/submit" method="get"> 
-  <input type="hidden" name="source" value="bonkerfield">   
+<form target="_blank" name="tweet" action="https://www.reddit.com/submit" method="get">
+  <input type="hidden" name="source" value="bonkerfield">
    <textarea style="border-color:#aaa;" id="textar" name="title" maxlength="140"></textarea>
-    <!--must provide twitter with a url string that has characters in it or else they will add the current url into the tweet-->
-  <button class="btn btn-sm btn-social btn-rd" type="submit" id="button">  <i class="fab fa-reddit-alien"></i> <br/>submit to reddit  </button> 
+  <button class="btn btn-sm btn-social btn-rd" type="submit" id="button">  <i class="fab fa-reddit-alien"></i> <br/>submit to reddit  </button>
   <input type="hidden" name="url" value="{{ page.url | absolute_url }}">
-   
-</form>
+
+</form> -->
 
 <script src="{{ '/assets/js/webmention.min.js' | prepend: site.baseurl }}"></script>
