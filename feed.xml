@@ -5,9 +5,118 @@
     <description>just your standard information identity spacetime field</description>
     <link>https://bonkerfield.org</link>
     <atom:link href="https://bonkerfield.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 11 Apr 2020 12:04:40 -0700</pubDate>
-    <lastBuildDate>Sat, 11 Apr 2020 12:04:40 -0700</lastBuildDate>
+    <pubDate>Sat, 18 Apr 2020 01:38:23 -0700</pubDate>
+    <lastBuildDate>Sat, 18 Apr 2020 01:38:23 -0700</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <image>https://bonkerfield.org/assets/images/2020/tup_too_real.png</image>
+        <title>A GPT2+BERT reddit reply bot in 20 minutes</title>
+        <description>&lt;p&gt;
+    There's a new subreddit called &lt;a href=&quot;https://www.reddit.com/r/talkwithgpt2bots/&quot;&gt;talkwithgpt2bots&lt;/a&gt; that's intended to let people interact with AI based comment bots. I got my &lt;a href=&quot;https://www.reddit.com/user/tupperware-party&quot;&gt;tupperware-party&lt;/a&gt; bot working again on there, but it would be awesome to have a bunch of bots interacting there. To help others get started building comment bots, I figured I could simplify my previous &lt;a href=&quot;/2020/02/reddit-bot-gpt2-bert/&quot;&gt;GPT2-BERT tutorial&lt;/a&gt; to be even simpler to run.
+&lt;/p&gt;
+&lt;p&gt;
+    I put all of the code, data, and models for tupperware-party in one place. Below I've written out a guide to run a duplicate of my bot explaining each of these steps:
+&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;1. Make a reddit app so your bot has credentials&lt;/li&gt;
+&lt;li&gt;2. Copy the data and notebooks into your Google Drive home directory&lt;/li&gt;
+&lt;li&gt;3. Enter your credentials into the Google Colab notebooks&lt;/li&gt;
+&lt;li&gt;4. Run the reddit_reply_bot_simple_step1.ipynb notebook and let it finish&lt;/li&gt;
+&lt;li&gt;5. Run the reddit_reply_bot_simple_step2.ipynb notebook&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;
+    Below, I'll go into those 5 steps in a little more detail.
+&lt;/p&gt;
+
+&lt;h4&gt;1. Make a reddit app&lt;/h4&gt;
+
+&lt;p&gt;
+    Your bot will need credentials to post replies on reddit.  To get credentials you can follow these directions I took from &lt;a href=&quot;https://github.com/reddit-archive/reddit/wiki/OAuth2-Quick-Start-Example#first-steps&quot;&gt;this page&lt;/a&gt;.
+&lt;/p&gt;
+&lt;p&gt;
+Go to your &lt;a href=&quot;https://www.reddit.com/prefs/apps&quot;&gt;app preferences&lt;/a&gt;. Click the &quot;Create app&quot; or &quot;Create another app&quot; button. Fill out the form like so:
+&lt;/p&gt;
+&lt;pre&gt;
+    name: My Example App
+    App type: Choose the script option
+    description: You can leave this blank
+    about url: You can leave this blank
+    redirect url: http://www.example.com/unused/redirect/uri (We won't be using this as a redirect)
+&lt;/pre&gt;
+&lt;p&gt;
+Hit the &quot;create app&quot; button. Make note of the client ID and client secret. For the rest of this page, it will be assumed that:
+&lt;/p&gt;
+&lt;img src=&quot;/assets/images/2020/reddit_credentials.png&quot; /&gt;
+
+&lt;h4&gt;2. Copy the data and all the code on Google Drive&lt;/h4&gt;
+
+&lt;p&gt;
+    I've put all the code, all the data you'll need, and the pretrained models into &lt;a href=&quot;https://drive.google.com/drive/folders/1P0iSXn44V9NPy-aFHVlotHR7B4jG-b84?usp=sharing&quot;&gt;this shared folder&lt;/a&gt; on Google Drive.  Open that and make save your own copy to your Google Drive.
+&lt;/p&gt;
+
+&lt;img src=&quot;/assets/images/2020/make_a_copy.jpg&quot; /&gt;
+
+&lt;p&gt;
+    Note: You need to save all of that into the top level folder of your Google Drive.  The example code assumes that all of the necessary files are sitting in the top level (ie &quot;My Drive&quot; not a subfolder).
+&lt;/p&gt;
+
+&lt;h4&gt;3. Enter your credentials&lt;/h4&gt;
+
+&lt;p&gt;
+    Once you have your own copies, you need to edit the two Google Colab notebooks (reddit_reply_bot_simple_step1.ipynb and reddit_reply_bot_simple_step1.ipynb) with the specific details for your reddit app from Step 1 above. All the changes should take place right at the top of the file.
+&lt;/p&gt;
+
+&lt;img src=&quot;/assets/images/2020/colab_edit.png&quot; /&gt;
+
+&lt;p&gt;
+    You can also change the name of the intermediate file (&lt;code&gt;save_to_drive_csv_name = 'proposed_replies_testing.csv'&lt;/code&gt;) to whatever you want.
+&lt;/p&gt;
+
+&lt;h4&gt;4. Run reddit_reply_bot_simple_&lt;strong&gt;step1&lt;/strong&gt;.ipynb&lt;/h4&gt;
+
+&lt;p&gt;
+    With your credentials you can now run the . Press the play button in the top left corner.  It will spin for a while and a bunch of text will start to be outputed below.  Eventually, the following prompt will appear.
+&lt;/p&gt;
+
+&lt;img src=&quot;/assets/images/2020/mount_gdrive.png&quot; /&gt;
+
+&lt;p&gt;
+    Follow the link to mount your Google Drive into the Google Colab environment.  This allows you to load the pretrained models.
+&lt;/p&gt;
+
+
+&lt;h4&gt;5. Run reddit_reply_bot_simple_&lt;strong&gt;step2&lt;/strong&gt;.ipynb&lt;/h4&gt;
+
+&lt;p&gt;
+    Now open the step2 notebook, make sure the credentials are the same, and run it.  More stuff will be printed out, and you'll need to mount your Google Drive just like in step 4.  This one will take even longer to run.  Eventually you will see some output that contains &lt;code&gt;REPLYING NOW WITH:&lt;/code&gt; like the following.
+&lt;/p&gt;
+
+&lt;img src=&quot;/assets/images/2020/tup_reply.png&quot; /&gt;
+
+&lt;p&gt;
+    When this is being printed, the bot should be submitting responses in real-time.  You can log onto reddit and find the corresponding threads to see its response there. Or go to your bots home page (&lt;code&gt;reddit.com/user/{your_bot_name}&lt;/code&gt;) to see all of its comments.
+&lt;/p&gt;
+
+&lt;h4&gt;Questions?&lt;/h4&gt;
+
+&lt;p&gt;
+    If you run into any issues or if there's something confusing, please let me know.  I'll be quickest to respond on &lt;a href=&quot;https://twitter.com/bonkerfield&quot;&gt;Twitter&lt;/a&gt; or &lt;a href=&quot;https://fosstodon.org/@bonkerfield&quot;&gt;Mastodon&lt;/a&gt;.  You can learn more about this project &lt;a href=&quot;/2020/02/combining-gpt-2-and-bert/&quot;&gt;here&lt;/a&gt; or learn how to customize this bot on new input data &lt;a href=&quot;/2020/02/reddit-bot-gpt2-bert/&quot;&gt;here&lt;/a&gt;.  Have fun with this, but please, think before you use it for something bad.
+&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 18 Apr 2020 00:00:00 -0700</pubDate>
+        <link>https://bonkerfield.org/2020/04/twenty-minute-gpt2-reply-bot/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2020/04/twenty-minute-gpt2-reply-bot/</guid>
+        
+        <category>code</category>
+        
+        <category>machine learning</category>
+        
+        
+      </item>
     
       <item>
         <image>https://bonkerfield.org/assets/images/2020/qmb_model.png</image>
