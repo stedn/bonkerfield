@@ -1,0 +1,66 @@
+---
+layout: post
+title: Building a Virtual Black Rock City
+date: '2020-04-22'
+author: will stedden
+tags:
+- games
+- design
+- code
+image: /assets/images/2020/vbrc.gif
+---
+
+<p>
+    When Burning Man announced that they were canceling the party in the desert this year, they hinted that they wanted to try to make an online Black Rock City experience.  But as <a href="https://journal.burningman.org/2020/04/philosophical-center/tenprinciples/trapped-in-the-multiverse-what-should-a-digital-burning-man-be/">others have mentioned</a>, it's going to be kind of disappointing trying to pretend that we're in the Black Rock Desert when we're really at home on our laptops. I've been thinking of ways to do something different than <a href="https://journal.burningman.org/2020/04/philosophical-center/tenprinciples/creating-art-experiences-in-a-plague-world-we-can-do-this/">quirky Zoom meetings</a>.
+</p>
+
+<p>
+    My <a href="/2019/10/creating-immediacy/">favorite part</a> of Burning Man is walking around and being able to connect with anybody around you.  So I tried to build a lo-fi webgame version of that experience as a test-bed for what a virtual playa could look like.
+</p>
+
+
+<img src="/assets/images/2020/vbrc.gif" title="gif of running around virtual black rock city"/>
+
+<p>
+    The idea is to keep it extremely bare-bones, just like the black rock desert is before we all get there.  Then everyone who comes builds there own things, and they come to v-playa to tell other people about them.  So we all wander around and try to find things to do and people to hang out with. Just like irl, well kind of.
+</p>
+
+<p>
+    I've built the demo and deployed it online <a href="https://v-playa.web.app/#!/">here</a>.  You can log in with any username and password (8 character or more).  It's still in early testing so expect everything to break all the time of course.  And if too many people use it, I think the server will get overloaded and maybe explode.  Who knows.
+</p>
+
+<p>
+    I've been hacking this together, and I really don't know what I'm doing. If you're interested in working on it, drop me a line on <a href="https://twitter.com/bonkerfield">twitter</a> or <span class="popup__open"><i class="fa fa-envelope"></i></span>.  And please send me feedback if you like it/hate or whatever.
+</p>
+
+<p>If you're just curious, I also described a little about how it works below.</p>
+
+<h4>How it's made</h4>
+
+<p>
+    Three days ago I didn't know anything about how to build an online multiplayer game, but I learned by modifiying the <a href="https://github.com/prateek3255/MultiplayerOnlineTicTacToe">open source code</a> from this <a href="https://tic-tac-toe-3eed7.firebaseapp.com/#!/">tutorial tic-tac-toe game</a> by <a href="https://prateeksurana.me/">Prateek Surana</a>.
+</p>
+
+<p>
+    I built it all in javascript using <a href="https://firebase.google.com/">Firebase</a> for the database where all the information gets shared.  I picked Firebase mostly because it has a free tier so it's cheap for me to prototype.
+</p>
+
+<img src="/assets/images/2020/firebase_data.png" />
+
+<p>
+    The local javacsript just listens for you to type on your keybard and stores how you've moved.  There's a big map of BRC in the background of the page that gets moved around so it looks like you're moving.
+</p>
+
+<img src="/assets/images/2020/brc_map.png" />
+
+<p>
+    The database is being called in the background to tell your browser where the people around you are standing.  And it also sends an update letting others know where you are and what your message is.
+</p>
+
+<p>
+    The most fun part was adding in changes to the environment like making it go dark and having "whiteouts" occur.  For those who've never been, a whiteout is where everything goes white because you're in a duststorm.
+</p>
+
+<p>
+    Anyway, if you're interested in trying to help build it, or if you just want to make your own thing, all the code is posted <a href="https://github.com/lots-of-things/vbrc">here</a>.  Please <a href="https://twitter.com/bonkerfield">reach out</a> if you have any questions or would like to participate.
+</p>
