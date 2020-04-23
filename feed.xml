@@ -5,9 +5,79 @@
     <description>just your standard information identity spacetime field</description>
     <link>https://bonkerfield.org</link>
     <atom:link href="https://bonkerfield.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 19 Apr 2020 16:32:48 -0700</pubDate>
-    <lastBuildDate>Sun, 19 Apr 2020 16:32:48 -0700</lastBuildDate>
+    <pubDate>Wed, 22 Apr 2020 21:49:58 -0700</pubDate>
+    <lastBuildDate>Wed, 22 Apr 2020 21:49:58 -0700</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <image>https://bonkerfield.org/assets/images/2020/vbrc.gif</image>
+        <title>Building a Virtual Black Rock City</title>
+        <description>&lt;p&gt;
+    When Burning Man &lt;a href=&quot;https://journal.burningman.org/2020/04/news/official-announcements/brc-2020-update/&quot;&gt;announced&lt;/a&gt; that they were canceling the party in the desert this year, they hinted that they wanted to try to make an online Black Rock City experience.  But as &lt;a href=&quot;https://journal.burningman.org/2020/04/philosophical-center/tenprinciples/trapped-in-the-multiverse-what-should-a-digital-burning-man-be/&quot;&gt;others have mentioned&lt;/a&gt;, it's going to be kind of disappointing trying to pretend that we're in the Black Rock Desert when we're really at home on our laptops. I've been thinking of ways to do something different than &lt;a href=&quot;https://journal.burningman.org/2020/04/philosophical-center/tenprinciples/creating-art-experiences-in-a-plague-world-we-can-do-this/&quot;&gt;quirky Zoom meetings&lt;/a&gt;.
+&lt;/p&gt;
+
+&lt;p&gt;
+    My &lt;a href=&quot;/2019/10/creating-immediacy/&quot;&gt;favorite part&lt;/a&gt; of Burning Man is walking around and being able to connect with anybody around you.  So I tried to build a lo-fi webgame version of that experience as a test-bed for what a virtual playa could look like.
+&lt;/p&gt;
+
+
+&lt;img src=&quot;/assets/images/2020/vbrc.gif&quot; title=&quot;gif of running around virtual black rock city&quot;/&gt;
+
+&lt;p&gt;
+    The idea is to keep it extremely bare-bones, just like the black rock desert is before we all get there.  Then everyone who comes builds there own things, and they come to v-playa to tell other people about them.  So we all wander around and try to find things to do and people to hang out with. Just like irl, well kind of.
+&lt;/p&gt;
+
+&lt;p&gt;
+    I've built the demo and deployed it online &lt;a href=&quot;https://v-playa.web.app/#!/&quot;&gt;here&lt;/a&gt;.  You can log in with any username and password (8 character or more).  It's still in early testing so expect everything to break all the time of course.  And if too many people use it, I think the server will get overloaded and maybe explode.  Who knows.
+&lt;/p&gt;
+
+&lt;p&gt;
+    I've been hacking this together, and I really don't know what I'm doing. If you're interested in working on it, drop me a line on &lt;a href=&quot;https://twitter.com/bonkerfield&quot;&gt;twitter&lt;/a&gt; or &lt;span class=&quot;popup__open&quot;&gt;&lt;i class=&quot;fa fa-envelope&quot;&gt;&lt;/i&gt;&lt;/span&gt;.  And please send me feedback if you like it/hate or whatever.
+&lt;/p&gt;
+
+&lt;p&gt;If you're just curious, I also described a little about how it works below.&lt;/p&gt;
+
+&lt;h4&gt;How it's made&lt;/h4&gt;
+
+&lt;p&gt;
+    Three days ago I didn't know anything about how to build an online multiplayer game, but I learned by modifiying the &lt;a href=&quot;https://github.com/prateek3255/MultiplayerOnlineTicTacToe&quot;&gt;open source code&lt;/a&gt; from this &lt;a href=&quot;https://tic-tac-toe-3eed7.firebaseapp.com/#!/&quot;&gt;tutorial tic-tac-toe game&lt;/a&gt; by &lt;a href=&quot;https://prateeksurana.me/&quot;&gt;Prateek Surana&lt;/a&gt;.
+&lt;/p&gt;
+
+&lt;p&gt;
+    I built it all in javascript using &lt;a href=&quot;https://firebase.google.com/&quot;&gt;Firebase&lt;/a&gt; for the database where all the information gets shared.  I picked Firebase mostly because it has a free tier so it's cheap for me to prototype.
+&lt;/p&gt;
+
+&lt;img src=&quot;/assets/images/2020/firebase_data.png&quot; /&gt;
+
+&lt;p&gt;
+    The local javacsript just listens for you to type on your keybard and stores how you've moved.  There's a big map of BRC in the background of the page that gets moved around so it looks like you're moving.
+&lt;/p&gt;
+
+&lt;img src=&quot;/assets/images/2020/brc_map.png&quot; /&gt;
+
+&lt;p&gt;
+    The database is being called in the background to tell your browser where the people around you are standing.  And it also sends an update letting others know where you are and what your message is.
+&lt;/p&gt;
+
+&lt;p&gt;
+    The most fun part was adding in changes to the environment like making it go dark and having &quot;whiteouts&quot; occur.  For those who've never been, a whiteout is where everything goes white because you're in a duststorm.
+&lt;/p&gt;
+
+&lt;p&gt;
+    Anyway, if you're interested in trying to help build it, or if you just want to make your own thing, all the code is posted &lt;a href=&quot;https://github.com/lots-of-things/vbrc&quot;&gt;here&lt;/a&gt;.  Please &lt;a href=&quot;https://twitter.com/bonkerfield&quot;&gt;reach out&lt;/a&gt; if you have any questions or would like to participate.
+&lt;/p&gt;</description>
+        <pubDate>Wed, 22 Apr 2020 00:00:00 -0700</pubDate>
+        <link>https://bonkerfield.org/2020/04/virtual-black-rock-city/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2020/04/virtual-black-rock-city/</guid>
+        
+        <category>games</category>
+        
+        <category>design</category>
+        
+        <category>code</category>
+        
+        
+      </item>
     
       <item>
         <image>https://bonkerfield.org/assets/images/2020/tup_too_real.png</image>
