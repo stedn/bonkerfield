@@ -5,8 +5,8 @@
     <description>just your standard information identity spacetime field</description>
     <link>https://bonkerfield.org</link>
     <atom:link href="https://bonkerfield.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 22 Apr 2020 21:49:58 -0700</pubDate>
-    <lastBuildDate>Wed, 22 Apr 2020 21:49:58 -0700</lastBuildDate>
+    <pubDate>Sat, 25 Apr 2020 22:04:51 -0700</pubDate>
+    <lastBuildDate>Sat, 25 Apr 2020 22:04:51 -0700</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -364,7 +364,7 @@ Hit the &quot;create app&quot; button. Make note of the client ID and client sec
         <title>Viewfoil: Experimenting with Radical Transparency</title>
         <description>&lt;p&gt;
 	I've been contemplating privacy and anonymity, and speculating on what those ideas will mean in the future of our society.  During conversations with my friends and family, I've started questioning whether maintaining strengthened privacy is possible, and more importantly, whether strengthened privacy is even still a good thing.
-&lt;/p&gt; 
+&lt;/p&gt;
 &lt;p&gt;
 	But in the spirit of this site, I'm not just theorizing anymore.  I'm currently working on putting myself into an experiment on radical transparency.
 &lt;/p&gt;
@@ -374,9 +374,9 @@ Hit the &quot;create app&quot; button. Make note of the client ID and client sec
 &lt;p&gt;&lt;em&gt;
 	tl;dr I think that privacy itself is a conspiracy of the powerful. I'm gonna try to bring back lifestreaming to advocate for a transparent society. I call it the &lt;a href=&quot;https://viewfoil.bonkerfield.org/&quot;&gt;viewfoil&lt;/a&gt; project.
 &lt;/em&gt;&lt;/p&gt;
-&lt;h4&gt;The world we live in&lt;/h4&gt; 
+&lt;h4&gt;The world we live in&lt;/h4&gt;
 &lt;p&gt;
-	It isn't super difficult to find ways to be terrified of how technology is mishaping modern life, in ways big and small. 
+	It isn't super difficult to find ways to be terrified of how technology is mishaping modern life, in ways big and small.
 &lt;/p&gt;
 
 &lt;ul&gt;
@@ -389,7 +389,7 @@ Hit the &quot;create app&quot; button. Make note of the client ID and client sec
 
 &lt;p&gt;
 	The general response to these issues around dinner tables tends to be &quot;&lt;strong&gt;how can we return things to the good old days before all of this happened&lt;/strong&gt;?&quot;  I generally agree with the sentiment. If it were possible to reverse the overflowing of online life, I would do it.  But as things are, I don't think that society is going to become less digitally connected or more intellectually mature to handle ourselves properly. So I'm left pondering what I can do to contribute to a better world as it is.
-&lt;/p&gt; 
+&lt;/p&gt;
 &lt;p&gt;
 	The suggestions that my friends keep proposing all seem to be based around a classic strategy&amp;mdash;build better defenses. We minimize our exposure to the ideas on the web, and return to our most trusted sources. We hide ourselves and make it harder for third parties to know what we're doing.  We develop tools that force us to disconnect from the devices that fuel our addictions.
 &lt;/p&gt;
@@ -398,17 +398,17 @@ Hit the &quot;create app&quot; button. Make note of the client ID and client sec
 &lt;/p&gt;
 &lt;p&gt;
 	People with power and the capacity to exploit our digital connectivity will do it right up to the edge of what is legal. Attempts to regulate will place undue power with established players who will jockey for control of politicians who will grant loopholes. Attempts to outpace the capacity for manipulation will end up exhausting more and more of our resources. Every advance that lets us hide ourselves better, will let a Russian hacker, troll, or &lt;a href=&quot;https://a.ttent.io/n&quot;&gt;quasi-sentient AI&lt;/a&gt; hide themselves better. To combat them, we will need ever more all-encompassing mechanisms of monitoring, which will be exploited by technologists for our control. Only the wealthy will be able to adequately fight back against increasing digital surveillance. They will then use their privileged privacy to circumvent legal grey areas.  And the cycle will continue.
-&lt;/p&gt; 
-&lt;p&gt;
-	This is a depressing situation that hopefully won't happen, but there isn't really any great safeguard against it.  So if we are heading toward a dystopian world of privacy arms races and corporate surveillance, is there really anything I can do?  
-&lt;/p&gt;  
-
-&lt;h4&gt;The truth shall set you free&lt;/h4&gt; 
-&lt;p&gt;
-	What if we go for the opposite approach?  What if we effectively flank our corporate overlords by demanding a complete end to privacy? Maybe we can imagine a utopian counterpoint to the above doomsday prophecy. It seems that most of the issues mentioned above can be ameliorated. 
 &lt;/p&gt;
 &lt;p&gt;
-	I might hypothesize that in a fully transparent world, any attempts at clandestine manipulation could be nearly instantaneously uncovered. If you could see every piece of information connected to the person on the other end, you could instantaneously determine whether they were a real good-intentioned human or a Russian bot.  If our online behavior was globally accessible, any attempt by corporations to profile our behavior could be reverse engineered to filter such profiling. If our lives were fully transparent, there would be no need to stress over falsely curating our public personas on social media. 
+	This is a depressing situation that hopefully won't happen, but there isn't really any great safeguard against it.  So if we are heading toward a dystopian world of privacy arms races and corporate surveillance, is there really anything I can do?
+&lt;/p&gt;
+
+&lt;h4&gt;The truth shall set you free&lt;/h4&gt;
+&lt;p&gt;
+	What if we go for the opposite approach?  What if we effectively flank our corporate overlords by demanding a complete end to privacy? Maybe we can imagine a utopian counterpoint to the above doomsday prophecy. It seems that most of the issues mentioned above can be ameliorated.
+&lt;/p&gt;
+&lt;p&gt;
+	I might hypothesize that in a fully transparent world, any attempts at clandestine manipulation could be nearly instantaneously uncovered. If you could see every piece of information connected to the person on the other end, you could instantaneously determine whether they were a real good-intentioned human or a Russian bot.  If our online behavior was globally accessible, any attempt by corporations to profile our behavior could be reverse engineered to filter such profiling. If our lives were fully transparent, there would be no need to stress over falsely curating our public personas on social media.
 &lt;/p&gt;
 &lt;p&gt;
 	Beyond this, there could be a whole host of unexplored public goods that would come of this too.  The societal harms that come from organized crime would disappear overnight.  It would become impossible for politicians and corporate executives to broker backroom deals that undermine the public good.  And on a topic closer to &lt;a href=&quot;https://www.color.com/&quot;&gt;my&lt;/a&gt; &lt;a href=&quot;https://anthem.ai/&quot;&gt;heart&lt;/a&gt;, if everyone's medical information was universally accessible, it would make it extremely simple for researchers to uncover exactly what the best medical decision is for each person.
@@ -424,9 +424,9 @@ Hit the &quot;create app&quot; button. Make note of the client ID and client sec
 	If I believe that this future would be better, I simply have to start experimenting to see if it's possible to attain.
 &lt;/p&gt;
 
-&lt;h4&gt;Viewfoil&lt;/h4&gt; 
+&lt;h4&gt;Viewfoil&lt;/h4&gt;
 &lt;p&gt;
-	To do this, I've been putting in motion a plan to make any and all information about my life accessible to anyone who cares to look.  A lot of people &lt;a href=&quot;https://en.wikipedia.org/wiki/Lifestreaming&quot;&gt;have done this before&lt;/a&gt; &lt;a href=&quot;https://en.wikipedia.org/wiki/Quantified_self&quot;&gt;in various forms&lt;/a&gt; so I don't think it's that bold of an idea.  But like a good millennial, I don't just want to do it, I want to advocate for it. 
+	To do this, I've been putting in motion a plan to make any and all information about my life accessible to anyone who cares to look.  A lot of people &lt;a href=&quot;https://en.wikipedia.org/wiki/Lifestreaming&quot;&gt;have done this before&lt;/a&gt; &lt;a href=&quot;https://en.wikipedia.org/wiki/Quantified_self&quot;&gt;in various forms&lt;/a&gt; so I don't think it's that bold of an idea.  But like a good millennial, I don't just want to do it, I want to advocate for it.
 &lt;/p&gt;
 &lt;p&gt;
 	I've outlined the goals I'm trying to work towards during my first year on the project.
@@ -449,13 +449,13 @@ Hit the &quot;create app&quot; button. Make note of the client ID and client sec
 &lt;/p&gt;
 &lt;p&gt;
 	This is going to be an interesting year.  Check out &lt;a href=&quot;https://viewfoil.bonkerfield.org/&quot;&gt;Viewfoil&lt;/a&gt; if you are interested.
-&lt;/p&gt;    
+&lt;/p&gt;
 &lt;p&gt;
 	&lt;em&gt;Update: I've already started building onto the Viewfoil site with a parallel feed from &lt;a href=&quot;https://twitter.com/bonkerfield&quot;&gt;my twitter&lt;/a&gt;.  I reused code from my &lt;a href=&quot;https://www.bonkerfield.org/2015/01/tweetnote-unfakeable-timestamp-notebook/&quot;&gt;tweet_note&lt;/a&gt; and &lt;a href=&quot;http://actsofsuperness.appspot.com/&quot;&gt;#ActsOfSuperness&lt;/a&gt; projects from 5 years ago. I don't have time for a full post, but you can see the code that automates pulling from twitter and pushing to blogger &lt;a href=&quot;https://github.com/lots-of-things/viewfoil&quot;&gt;here&lt;/a&gt;.  &lt;/em&gt;
 &lt;/p&gt;
 &lt;p&gt;
-    &lt;em&gt;Update2: I also built something to add embedded posts from my newly formed &lt;a href=&quot;https://twitter.com/bonkerfield&quot;&gt;instagram&lt;/a&gt;.  &lt;a href=&quot;https://github.com/lots-of-things/viewfoil&quot;&gt;The script&lt;/a&gt; is a total hack-job and requires a headless browser.  &lt;/em&gt;
-&lt;/p&gt; 
+    &lt;em&gt;Update2: I also built something to add embedded posts from my newly formed &lt;a href=&quot;https://twitter.com/bonkerfield&quot;&gt;twitter&lt;/a&gt;.  &lt;a href=&quot;https://github.com/lots-of-things/viewfoil&quot;&gt;The script&lt;/a&gt; is a total hack-job and requires a headless browser.  &lt;/em&gt;
+&lt;/p&gt;
 &lt;img style=&quot;width:50%;&quot; src=&quot;/assets/images/2020/viewfoil_insta.png&quot;/&gt;
 </description>
         <pubDate>Sun, 08 Mar 2020 00:00:00 -0800</pubDate>
