@@ -1,0 +1,47 @@
+---
+layout: post
+title: Reddit Support for Bridgy (beta)
+date: '2020-04-30'
+author: will stedden
+tags:
+- indieweb
+- code
+image: /assets/images/2020/vbrc.gif
+---
+
+<p>
+    Last month I enabled <a href="https://bonkerfield.org/2020/04/getting-so-so-social/">webmention and bridgy</a> support for on this site so that I could connect my posts here to social media and join in on all the <a href="https://indieweb.org/">IndieWeb</a> fun.  This also allowed me to set up a blog comment system (see below) that leverages Twitter for people to share their thoughts publically and have them incorporated automatically into the context of my site.
+</p>
+<p>
+    However, to me, Twitter only represents half of the online content sharing universe.  Twitter is a form of identity-centric sharing, where content is organized based on the real-world identity of those who do the sharing.  The other form of sharing is topic organized, where content of is placed where it's expected to be relevant.  To me, the epicenter of topic organized social media is Reddit.
+</p>
+
+<p>
+    So over the past month or so, I've been working with my friend <a href="https://snarfed.org">snarfed</a> to add Reddit support into <a href="https://brig.gy">Bridgy</a>.  So now whenever anyone on reddit submits a link to one of my posts there will be a link in the comments section of that page that points to the conversation on reddit.  In addition, if I link to my website in a reddit submission, all of the replies to my submission will also be carried over.
+</p>
+
+<h4>You can have this too!</h4>
+
+<p>
+    Bridgy is free to use so anyone can run this same system on their personal blog too.  Just visit <a href="https://brig.gy">brid.gy</a> and click the reddit button to go through the authorization flow.  The authorization just gives permission to scan reddit on your behalf. To make bridgy display you'll need to set up your website to receive and display webmentions.  There are <a href="https://indieweb.org/Webmention#IndieWeb_Examples">a lot</a> of ways to do that, but check out <a href="https://indiewebify.me/">indiewebify.me</a> for some instructions.  I'm going to be writing a video explanation of webmention soon, which I'll update with here.
+</p>
+
+<h4>Room for improvement</h4>
+
+<p>
+    Bridgy is under active development at the moment so if there's a feature you want, file an <a href="https://github.com/snarfed/bridgy/issues">issue</a> or be the <a href="https://github.com/snarfed/bridgy/pulls">pull request</a> you want to see in the world. There's a really great development <a href="https://bridgy.readthedocs.io/">docs</a> and all the code is <a href="https://github.com/snarfed/bridgy/">available</a>.  Most of the useful changes I made to add reddit support are logged in this series of pull requests.
+</p>
+
+<ul>
+<li><a href="https://github.com/snarfed/oauth-dropins/pull/30">oauth-dropins #30</a></li>
+<li><a href="https://github.com/snarfed/oauth-dropins/pull/34">oauth-dropins #34</a></li>
+<li><a href="https://github.com/snarfed/granary/pull/197">granary #197</a></li>
+<li><a href="https://github.com/snarfed/granary/pull/198">granary #198</a></li>
+<li><a href="https://github.com/snarfed/granary/pull/200">granary #200</a></li>
+<li><a href="https://github.com/snarfed/granary/pull/201">granary #201</a></li>
+<li><a href="https://github.com/snarfed/bridgy/pull/935">bridgy #935</a></li>
+</ul>
+
+<p>
+    For other social sites, Bridgy provides support to allow blog posts to be published directly from your blog. So the next step that I'm working on will be too allow publishing to reddit from within Bridgy.  When I get publish support added, I'll update on <a href="https://twitter.com/bonkerfield">twitter</a> and <a href="https://fosstodon.org/@bonkerfield">mastodon</a>, and naturally, <a href="https://reddit.com/user/bonkerfield">reddit</a> too.
+</p>
