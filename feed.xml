@@ -5,9 +5,97 @@
     <description>just your standard information identity spacetime field</description>
     <link>https://bonkerfield.org</link>
     <atom:link href="https://bonkerfield.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 01 May 2020 23:59:06 -0700</pubDate>
-    <lastBuildDate>Fri, 01 May 2020 23:59:06 -0700</lastBuildDate>
+    <pubDate>Sat, 02 May 2020 02:18:57 -0700</pubDate>
+    <lastBuildDate>Sat, 02 May 2020 02:18:57 -0700</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <image>https://bonkerfield.org/assets/images/2020/vbrc.gif</image>
+        <title>Amplifying Yeast</title>
+        <description>&lt;p&gt;
+    In this time of minimally available yeast, it's important for bakers to extend their yeast supplies a bit.  Many have turned to sourdough, but if you don't eat bread every day, feeding a sourdough starter can seem a little wasteful.  As an alternative, here's how I've been amplifying my instant yeast stock with brown sugar for the past few weeks.
+&lt;/p&gt;
+
+&lt;p&gt;
+    This is just my rough guide.  I'll update if I get more scientific information if I learn anything.
+&lt;/p&gt;
+
+&lt;h4&gt;Ingredients&lt;/h4&gt;
+&lt;p&gt;
+    We will be combining sugar, water, and yeast in a sterilized container.  The exact proportions probably matter a lot, but I don't know how.  I combine &lt;strong&gt;1/2 cup to a whole cup of water&lt;/strong&gt; with about &lt;strong&gt;1 tablespoon of brown sugar&lt;/strong&gt;.  I use as little yeast as I can get away with, normally around a &lt;strong&gt;1/4 teaspoon of yeast&lt;/strong&gt;.
+&lt;/p&gt;
+&lt;p&gt;
+    Hopefully, a very good yeast biologist or home brewer will get in touch soon and tell me exactly what the ratio should be.  I'll keep you posted.
+&lt;/p&gt;
+
+&lt;h4&gt;Equipment&lt;/h4&gt;
+&lt;p&gt;
+    All we really need is some place for our yeast to live while they eat.  I do this with a glass jar and a bit of tin foil to cover it.  You probably don't want to seal the jar with a lid because the yeast will be belching out CO2 and we don't really want to pressurize our jar/carbonate our water if we can help it.
+&lt;/p&gt;
+
+
+&lt;h4&gt;Sanitize&lt;/h4&gt;
+&lt;p&gt;
+    Because we aren't going for sourbread we want to try to get our amplification environment as free from outside bacteria as possible.  To do this we boil our jar and the tin foil covering. I put it in boiling water for about 5 minute and then pull it out with afork.
+&lt;/p&gt;
+
+&lt;h4&gt;Boil Wort&lt;/h4&gt;
+&lt;p&gt;
+    The yeast will be eating sugar in water.  We want the sugar well mixed and free from bacteria so we boil it first. I boil for a couple of minutes.
+&lt;/p&gt;
+&lt;img src=&quot;/assets/images/2020/boil_wort.jpg&quot; /&gt;
+
+
+&lt;h4&gt;Cool Wort&lt;/h4&gt;
+&lt;p&gt;
+    Drinking boiling sugar water hurts yeast just as much as it hurts us (maybe even more).  Pour the boiling wort into the jar and cool the jar from the outside with some water.  I throw some ice cubes in to cool it faster.
+&lt;/p&gt;
+
+&lt;img src=&quot;/assets/images/2020/cool_wort.jpg&quot; /&gt;
+
+
+&lt;p&gt;
+    &lt;strong&gt;It's crucially important that you don't put yeast in while the wort is still hot.&lt;/strong&gt;  That will kill the yeast.  And don't be fooled if the outside is cool when in the water bath.  The outside temp of the jar can be low while the water on the inside is still hot.  Take the jar out of the water bath and let it sit for a minute before testing the temperature.  If it's close to room temperature then it should be safe to move on.
+&lt;/p&gt;
+
+&lt;h4&gt;Add Yeast&lt;/h4&gt;
+&lt;p&gt;
+    Once the wort is cool, toss in some yeast.  There should be quite a bit of action right at the beginning but over time it should slow down.
+&lt;/p&gt;
+&lt;img src=&quot;/assets/images/2020/add_yeast.jpg&quot; /&gt;
+
+&lt;h4&gt;Let Them Grow&lt;/h4&gt;
+&lt;p&gt;
+    Set it someplace dark and warmish for a long time. It should bubble and start to smell like bread before too long.  Good yeast can get really active in there so watch out!  I don't know how long it takes to consume all the sugar and how fast they multiply.  I normally do 8 hours.  &lt;strong&gt;If you know the science facts about yeast replication, please tell me and I'll report it here.&lt;/strong&gt;
+&lt;/p&gt;
+
+&lt;h4&gt;Smell Them&lt;/h4&gt;
+&lt;p&gt;
+    After you've let it go for a couple of hours give it a big smell.  If it reminds you of delicious bread, then .  If it smells a little of then you might want to taste it before you put it into your bread.  Though, even if you've been a little unsanitary, in just a few hours, I don't think you can grow anything that toxic.  It'll probably just taste like sourdough.
+&lt;/p&gt;
+
+&lt;h4&gt;Bake Them&lt;/h4&gt;
+&lt;p&gt;
+    Use it just like the water and yeast mixture it is.
+&lt;/p&gt;
+
+
+&lt;h4&gt;Things to consider&lt;/h4&gt;
+&lt;p&gt;
+    If you open a packet of yeast and only use part, make sure you &lt;strong&gt;put the rest in the fridge/freezer&lt;/strong&gt;.  For my first packet I left it out, and it definetly degraded the activity of the yeast.
+&lt;/p&gt;</description>
+        <pubDate>Sat, 02 May 2020 00:00:00 -0700</pubDate>
+        <link>https://bonkerfield.org/2020/05/amplifying-yeast/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2020/05/amplifying-yeast/</guid>
+        
+        <category>food</category>
+        
+        <category>design</category>
+        
+        <category>code</category>
+        
+        
+      </item>
     
       <item>
         <image>https://bonkerfield.org/assets/images/2020/vbrc.gif</image>
