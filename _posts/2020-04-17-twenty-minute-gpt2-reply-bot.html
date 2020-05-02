@@ -20,25 +20,29 @@ tags:
 <li>1. Make a reddit app so your bot has credentials</li>
 <li>2. Copy the data and notebooks into your Google Drive home directory</li>
 <li>3. Enter your credentials into the Google Colab notebooks</li>
-<li>4. Run the reddit_reply_bot_simple_step1.ipynb notebook and let it finish</li>
-<li>5. Run the reddit_reply_bot_simple_step2.ipynb notebook</li>
+<li>4. Run the *step1.ipynb notebook and let it finish</li>
+<li>5. Run the *step2.ipynb notebook</li>
 </ul>
 
 <p>
     Below, I'll go into those 5 steps in a little more detail.
 </p>
 
+<p>
+    <em>Update 05/01: I've added a new bot script that doesn't just reply in place. The new script pulls a comment from another subreddit and adds it to our <a href="https://www.reddit.com/r/talkwithgpt2bots/">talkwithgpt2bots</a> subreddit along with an AI generated reply.</em>
+</p>
+
 <h4>1. Make a reddit app</h4>
 
 <p>
-    Your bot will need credentials to post replies on reddit.  To get credentials you can follow these directions I took from <a href="https://github.com/reddit-archive/reddit/wiki/OAuth2-Quick-Start-Example#first-steps">this page</a>.
+    Your bot will need credentials to post replies on reddit.  Reddit apps are completely free to make.  To get your app credentials set up you can follow the following directions (which I addapted from <a href="https://github.com/reddit-archive/reddit/wiki/OAuth2-Quick-Start-Example#first-steps">this page</a>).
 </p>
 <p>
 Go to your <a href="https://www.reddit.com/prefs/apps">app preferences</a>. Click the "Create app" or "Create another app" button. Fill out the form like so:
 </p>
 <pre>
     name: My Example App
-    App type: Choose the script option
+    App type: Choose the "script" option
     description: You can leave this blank
     about url: You can leave this blank
     redirect url: http://www.example.com/unused/redirect/uri (We won't be using this as a redirect)
@@ -69,13 +73,17 @@ Hit the "create app" button. Make note of the client ID and client secret. For t
 <img src="/assets/images/2020/colab_edit.png" />
 
 <p>
-    You can also change the name of the intermediate file (<code>save_to_drive_csv_name = 'proposed_replies_testing.csv'</code>) to whatever you want.
+    You can change the name of the intermediate file (<code>save_to_drive_csv_name = 'proposed_replies_testing.csv'</code>) to whatever you want.
 </p>
 
 <h4>4. Run reddit_reply_bot_simple_<strong>step1</strong>.ipynb</h4>
 
 <p>
-    With your credentials you can now run the . Press the play button in the top left corner.  It will spin for a while and a bunch of text will start to be outputed below.  Eventually, the following prompt will appear.
+    With your credentials you can now run the script that creates replies. There are two additional parameters that you can change, which will randomize the output message.  If you leave these params the same, your bot will exactly match what tupperware-party says.
+</p>
+
+<p>
+    When you're ready, press the play button in the top left corner.  It will spin for a while and a bunch of text will start to be outputed below.  Eventually, the following prompt will appear.
 </p>
 
 <img src="/assets/images/2020/mount_gdrive.png" />
@@ -84,17 +92,31 @@ Hit the "create app" button. Make note of the client ID and client secret. For t
     Follow the link to mount your Google Drive into the Google Colab environment.  This allows you to load the pretrained models.
 </p>
 
+<p>
+    After a bit longer the script will finish, and you'll have saved a bunch of candidate replies in the file <code>save_to_drive_csv_name</code>.  Then you are ready to move onto step 2.
+</p>
+
 
 <h4>5. Run reddit_reply_bot_simple_<strong>step2</strong>.ipynb</h4>
 
 <p>
-    Now open the step2 notebook, make sure the credentials are the same, and run it.  More stuff will be printed out, and you'll need to mount your Google Drive just like in step 4.  This one will take even longer to run.  Eventually you will see some output that contains <code>REPLYING NOW WITH:</code> like the following.
+    Now open the step2 notebook, make sure the credentials are the same as from part 1.  There are a few other parameters that you can edit here.  They control how strongly you filter the replies.  Edit them how you like, if you don't get any results make these filters less stringent.
+</p>
+<img src="/assets/images/2020/colab_params.png" />
+
+<p>
+    Run the script by pressing the play button. More stuff will be printed out, and you'll need to mount your Google Drive just like in step 4.  This one will take even longer to run.  Eventually you will see some output that contains <code>REPLYING NOW WITH:</code> like the following.
 </p>
 
 <img src="/assets/images/2020/tup_reply.png" />
 
 <p>
     When this is being printed, the bot should be submitting responses in real-time.  You can log onto reddit and find the corresponding threads to see its response there. Or go to your bots home page (<code>reddit.com/user/{your_bot_name}</code>) to see all of its comments.
+</p>
+
+<h4>*Bonus: Generating posts from replies in other subreddits.</h4>
+<p>
+    I've added two additional scripts in the Google Drive folder called <code>reddit_post_bot_simple_step1.ipynb</code> and <code>reddit_post_bot_simple_step2.ipynb</code>.  As their names suggest, these bots will actually generate new posts on <a href="https://www.reddit.com/r/talkwithgpt2bots/">talkwithgpt2bots</a> based off of comments from other subreddits.  You can use them in exactly the same way as the above two scripts but they have a few extra features.  I challenge you to figure out the details, but feel free to ask questions.
 </p>
 
 <h4>Questions?</h4>
