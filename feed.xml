@@ -5,9 +5,69 @@
     <description>just your standard information identity spacetime field</description>
     <link>https://bonkerfield.org</link>
     <atom:link href="https://bonkerfield.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 02 May 2020 10:36:29 -0700</pubDate>
-    <lastBuildDate>Sat, 02 May 2020 10:36:29 -0700</lastBuildDate>
+    <pubDate>Mon, 04 May 2020 11:07:33 -0700</pubDate>
+    <lastBuildDate>Mon, 04 May 2020 11:07:33 -0700</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <image>https://bonkerfield.org/assets/images/2020/twitter_hipster.gif</image>
+        <title>Twitter for Hipster</title>
+        <description>&lt;p&gt;&lt;small&gt;&lt;em&gt;
+    tl;dr; I made a web extension that removes all the really popular tweets from your timeline.  You can &lt;a href=&quot;https://lots-of-things.github.io/twitter-for-hipster/twitter_for_hipster-1.0-fx.xpi&quot;&gt;install it for Firefox&lt;/a&gt;, and view the open source code &lt;a href=&quot;https://github.com/lots-of-things/twitter-for-hipster&quot;&gt;here&lt;/a&gt;.
+&lt;/em&gt;&lt;/small&gt;&lt;/p&gt;
+
+&lt;p&gt;
+    As I've been reading Twitter I've been getting increasingly fed up with all the distracting &quot;fun&quot; content that people post.   I'm on Twitter to hear about interesting machine learning and science project and to be reminded that the world is a terrifying place.
+&lt;/p&gt;
+
+&lt;p&gt;
+    Then a few days ago I realized the issue.  I don't like the things that are capable of becoming popular.
+&lt;/p&gt;
+
+&lt;blockquote&gt;
+    So yeah, I understand now it. I am a grumpy hipster.
+&lt;/blockquote&gt;
+
+&lt;p&gt;
+    At first I thought I might be alone in my misanthropy, but then a few days ago I learned about two other #GrumpyTwitter™ projects &lt;a href=&quot;https://bengrosser.com/projects/twitter-demetricator/&quot;&gt;Twitter Demetricator&lt;/a&gt; and &lt;a href=&quot;https://github.com/thomaswang/minimal-twitter&quot;&gt;Minimal Twitter&lt;/a&gt;. These are two browser extensions that remove noise from Twitter, and I use both of them now (thanks &lt;a href=&quot;https://twitter.com/ThomasWang&quot;&gt;@ThomasWang&lt;/a&gt; and &lt;a href=&quot;https://twitter.com/bengrosser&quot;&gt;@bengrosser&lt;/a&gt;).  As I was looking at how these tools worked, I realized that I could hack my Twitter experience too!
+&lt;/p&gt;
+
+&lt;h2&gt;Twitter for Hipster&lt;/h2&gt;
+
+&lt;p&gt;
+    So last night, I built a &lt;a href=&quot;https://en.wikipedia.org/wiki/Browser_extension&quot;&gt;browser extension&lt;/a&gt; that finds all the tweets on the page with more than 1000 likes and just removes them. That's all it does.
+&lt;/p&gt;
+
+&lt;img src=&quot;/assets/images/2020/twitter_hipster.gif&quot; /&gt;
+
+&lt;p&gt;
+    Behold in amazement as all of those annoying meme derivatives dissappear from your timeline!
+&lt;/p&gt;
+
+&lt;h3&gt;You can be a hipster too&lt;/h3&gt;
+&lt;p&gt;
+    If you want to get rid of that crap too and you're using Firefox (like a good web hipster), this link should install it for you.
+&lt;/p&gt;
+
+&lt;h5 style=&quot;text-align: center;&quot;&gt;&lt;a href=&quot;https://lots-of-things.github.io/twitter-for-hipster/twitter_for_hipster-1.0-fx.xpi&quot;&gt;Install add-on for Firefox&lt;/a&gt;&lt;/h5&gt;
+
+&lt;p&gt;
+    All the code is also free and open source &lt;a href=&quot;https://github.com/lots-of-things/twitter-for-hipster&quot;&gt;here&lt;/a&gt; in case you want to modify it.  I've got instructions for installing on Chrome there too.  Also, I'm very open to even more grumpy hipster modifications, like hiding memes and pandering.  It'd be cool to detect that stuff using some tensorflow-js like in &lt;a href=&quot;https://github.com/JK0N/tensorflow-image-recognition-chrome-extension&quot;&gt;this web extension project&lt;/a&gt;.
+&lt;/p&gt;
+
+&lt;p&gt;
+    But, anyway, first I'm just gonna filter all the tweets with 0 likes so I don't have to listen to how happy my friends are that they aren't drinking their artisinal coffee...
+&lt;/p&gt;</description>
+        <pubDate>Mon, 04 May 2020 00:00:00 -0700</pubDate>
+        <link>https://bonkerfield.org/2020/05/twitter-for-hipster/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2020/05/twitter-for-hipster/</guid>
+        
+        <category>design</category>
+        
+        <category>code</category>
+        
+        
+      </item>
     
       <item>
         <image>https://bonkerfield.org/assets/images/2020/add_yeast.jpg</image>
