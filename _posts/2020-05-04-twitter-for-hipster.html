@@ -1,0 +1,57 @@
+---
+layout: post
+title: Twitter for Hipster
+date: '2020-05-04'
+author: will stedden
+tags:
+- design
+- code
+image: /assets/images/2020/twitter_hipster.gif
+---
+
+<p><small><em>
+    tl;dr; I made a web extension that removes all the really popular tweets from your timeline.  You can <a href="https://lots-of-things.github.io/twitter-for-hipster/twitter_for_hipster-1.0-fx.xpi">install it for Firefox</a>, and view the open source code <a href="https://github.com/lots-of-things/twitter-for-hipster">here</a>.
+</em></small></p>
+
+<p>
+    As I've been reading Twitter I've been getting increasingly fed up with all the distracting "fun" content that people post.   I'm on Twitter to hear about interesting machine learning and science project and to be reminded that the world is a terrifying place.
+</p>
+
+<p>
+    Then a few days ago I realized the issue.  I don't like the things that are capable of becoming popular.
+</p>
+
+<blockquote>
+    So yeah, I understand now it. I am a grumpy hipster.
+</blockquote>
+
+<p>
+    At first I thought I might be alone in my misanthropy, but then a few days ago I learned about two other #GrumpyTwitter™ projects <a href="https://bengrosser.com/projects/twitter-demetricator/">Twitter Demetricator</a> and <a href="https://github.com/thomaswang/minimal-twitter">Minimal Twitter</a>. These are two browser extensions that remove noise from Twitter, and I use both of them now (thanks <a href="https://twitter.com/ThomasWang">@ThomasWang</a> and <a href="https://twitter.com/bengrosser">@bengrosser</a>).  As I was looking at how these tools worked, I realized that I could hack my Twitter experience too!
+</p>
+
+<h2>Twitter for Hipster</h2>
+
+<p>
+    So last night, I built a <a href="https://en.wikipedia.org/wiki/Browser_extension">browser extension</a> that finds all the tweets on the page with more than 1000 likes and just removes them. That's all it does.
+</p>
+
+<img src="/assets/images/2020/twitter_hipster.gif" />
+
+<p>
+    Behold in amazement as all of those annoying meme derivatives dissappear from your timeline!
+</p>
+
+<h3>You can be a hipster too</h3>
+<p>
+    If you want to get rid of that crap too and you're using Firefox (like a good web hipster), this link should install it for you.
+</p>
+
+<h5 style="text-align: center;"><a href="https://lots-of-things.github.io/twitter-for-hipster/twitter_for_hipster-1.0-fx.xpi">Install add-on for Firefox</a></h5>
+
+<p>
+    All the code is also free and open source <a href="https://github.com/lots-of-things/twitter-for-hipster">here</a> in case you want to modify it.  I've got instructions for installing on Chrome there too.  Also, I'm very open to even more grumpy hipster modifications, like hiding memes and pandering.  It'd be cool to detect that stuff using some tensorflow-js like in <a href="https://github.com/JK0N/tensorflow-image-recognition-chrome-extension">this web extension project</a>.
+</p>
+
+<p>
+    But, anyway, first I'm just gonna filter all the tweets with 0 likes so I don't have to listen to how happy my friends are that they aren't drinking their artisinal coffee...
+</p>
