@@ -5,8 +5,8 @@
     <description>just your standard information identity spacetime field</description>
     <link>https://bonkerfield.org</link>
     <atom:link href="https://bonkerfield.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 04 May 2020 11:07:33 -0700</pubDate>
-    <lastBuildDate>Mon, 04 May 2020 11:07:33 -0700</lastBuildDate>
+    <pubDate>Fri, 08 May 2020 10:35:48 -0700</pubDate>
+    <lastBuildDate>Fri, 08 May 2020 10:35:48 -0700</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -1356,15 +1356,17 @@ I'm a 10 year old, and I have never even heard of this novel.
     
       <item>
         <image>https://bonkerfield.org/assets/images/2020/big_bonkerfield.png</image>
-        <title>Visualizing the Bonkerfield</title>
-        <description>&lt;p&gt;For the past few weeks, I've been trying to figure out how to visually describe a philosophical concept that I've come up with called a &lt;strong&gt;bonkerfield&lt;/strong&gt;. It's something I find fascinating, but quite hard to wrap my own head around entirely.  I've been ruminating on how to convey it for a while now, trying to be able to get the idea across and not sound like a crazy person or an idiot. &lt;/p&gt;
+        <title>Visualizing the Identifield</title>
+        <description>&lt;p&gt;&lt;em&gt;&lt;small&gt;Edit: I've revised the term for the concept described below to be &lt;strong&gt;identifield&lt;/strong&gt;. I was originally calling it a bonkerfield but realized that is too confusing.&lt;/small&gt;&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;I've elaborated on this subject at length on my &lt;a href=&quot;/reasons/&quot;&gt;reasons&lt;/a&gt; page, but in short, a bonkerfield is a map of everywhere that any information has resided throughout all of space and time.  The idea sounds convoluted in words, but it's something that I have a pretty decent image of in my mind.&lt;/p&gt;
+&lt;p&gt;For the past few weeks, I've been trying to figure out how to visually describe a philosophical concept that I've come up with called a &lt;strong&gt;identifield&lt;/strong&gt;. It's something I find fascinating, but quite hard to wrap my own head around entirely.  I've been ruminating on how to convey it for a while now, trying to be able to get the idea across and not sound like a crazy person or an idiot. &lt;/p&gt;
+
+&lt;p&gt;I've elaborated on this subject at length on my &lt;a href=&quot;/reasons/&quot;&gt;reasons&lt;/a&gt; page, but in short, a identifield is a map of everywhere that any information has resided throughout all of space and time.  The idea sounds convoluted in words, but it's something that I have a pretty decent image of in my mind.&lt;/p&gt;
 
 &lt;p&gt;Originally I was planning to create a conceptual piece without too much detail.  I made a weak attempt in this sketch. Hopefully, You get the idea of connectedness between different spots as if the idea is kind of being put together towards a single point in time and then disseminated on the other side.&lt;/p&gt;
 
 
-&lt;img class=&quot;small_img&quot; title=&quot;Medium Bonkerfield&quot; src=&quot;/assets/images/2020/bonker_sketch.jpg&quot;&gt;
+&lt;img class=&quot;small_img&quot; title=&quot;Medium Identifield&quot; src=&quot;/assets/images/2020/bonker_sketch.jpg&quot;&gt;
 
 
 &lt;p&gt;As I thought about it more, I figured it would be possible to realize this idea in a more concrete way.  I could find someone's record of the formation and dissemination of some idea and visualize the actual data itself.&lt;/p&gt;
@@ -1376,14 +1378,14 @@ I'm a 10 year old, and I have never even heard of this novel.
 &lt;h4&gt;Spatiotemporally Fixed Hierarchical Clustering in d3&lt;/h4&gt;
 &lt;p&gt;Like I normally do in this situation, I went and scanned the web for things that already look kind of similar to what I'm trying to build.  At it's core, I wanted swoopy, pretty lines that connected nodes.  I figured that &lt;a href=&quot;https://en.wikipedia.org/wiki/Mike_Bostock&quot;&gt;Mike Bostock&lt;/a&gt; of d3 fame must've built something like this at some point, and I wasn't dissapointed.&lt;/p&gt;
 
-&lt;img src=&quot;/assets/images/2020/hierarchical_edge_bundling.png&quot; title=&quot;Hierarchical Edge BUndling Viz by Mike Bostock&quot;&gt;
+&lt;img src=&quot;/assets/images/2020/hierarchical_edge_bundling.png&quot; title=&quot;Hierarchical Edge Bundling Viz by Mike Bostock&quot;&gt;
 
 
 &lt;p&gt;He'd built this &lt;a href=&quot;https://bl.ocks.org/mbostock/5672200&quot;&gt;hierarchical clustering vizualitation&lt;/a&gt; that is a little different than what I want, but still really reminds me of the general feel. The data he was vizualizing in this example was the interconnectivity of software packages in a codebase.  He's used this as a basis for &lt;a href=&quot;https://observablehq.com/@d3/hierarchical-edge-bundling&quot;&gt;several&lt;/a&gt; &lt;a href=&quot;https://bl.ocks.org/mbostock/4341134&quot;&gt;different&lt;/a&gt; &lt;a href=&quot;https://bl.ocks.org/mbostock/5672200&quot;&gt;visualizations&lt;/a&gt;, and humorously, I had previously exploited some of his &lt;a href=&quot;https://bost.ocks.org/mike/hive/&quot;&gt;related work&lt;/a&gt; to make another attempted &lt;a href=&quot;hellowill.bonkerfield.org&quot;&gt;vizualization&lt;/a&gt; of all the people I had worked with in my life.&lt;/p&gt;
 
 &lt;img src=&quot;/assets/images/2020/hellowill_viz.png&quot; title=&quot;plot of people projects and skills from my digital resume&quot;&gt;
 
-&lt;p&gt;I have &lt;a href=&quot;/2015/01/05/a-better-linkedin/&quot;&gt;another post&lt;/a&gt; that explains building that visual.  It had constrained all projects along one radial line, skills on another, and people on a third.  To vizualize the bonkerfield, I needed to do something similar except the positional constraint would be along the x-axis and it would vary based on time.&lt;/p&gt;
+&lt;p&gt;I have &lt;a href=&quot;/2015/01/05/a-better-linkedin/&quot;&gt;another post&lt;/a&gt; that explains building that visual.  It had constrained all projects along one radial line, skills on another, and people on a third.  To vizualize the identifield, I needed to do something similar except the positional constraint would be along the x-axis and it would vary based on time.&lt;/p&gt;
 
 &lt;p&gt;The time of interest is the time that some discernible event related to the formation of an idea would take place.  For now, I decided that spatial position wouldn't be demarked explicitly along the other axis.  Instead, I would use the clustering of events to automatically set where they lay. This way there shouldn't be too many overlapping lines in the final result.&lt;/p&gt;
 
@@ -1392,31 +1394,31 @@ I'm a 10 year old, and I have never even heard of this novel.
 
 &lt;p&gt;To get started testing, I needed a simple example scenario to try to visualize. &lt;/p&gt;
 
-&lt;p style=&quot;text-align:center;&quot;&gt;&lt;em&gt;Imagine an author is writing a paragraph about a childhood memory with her mother.  In the paragraph, she quotes the phrase &quot;Call me Ishmael&quot; from Moby Dick.  Both of those pieces of information are baked into the bonkerfield of that paragraph.  After she publishes that paragraph in her memoir, a few Melville academics cite her.  In addition, something she says in that paragraph blows up as a meme on the internet.&lt;/em&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:center;&quot;&gt;&lt;em&gt;Imagine an author is writing a paragraph about a childhood memory with her mother.  In the paragraph, she quotes the phrase &quot;Call me Ishmael&quot; from Moby Dick.  Both of those pieces of information are baked into the identifield of that paragraph.  After she publishes that paragraph in her memoir, a few Melville academics cite her.  In addition, something she says in that paragraph blows up as a meme on the internet.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;
-  Maybe this scenario isn't that realistic, and definitely not the best candidate to demonstrate the value of the bonkerfield as a construct. Still, it's simple enough and contained enough that I could keep it in my head long enough to hand annotate the data structure I was going to use for it.
+  Maybe this scenario isn't that realistic, and definitely not the best candidate to demonstrate the value of the identifield as a construct. Still, it's simple enough and contained enough that I could keep it in my head long enough to hand annotate the data structure I was going to use for it.
 &lt;/p&gt;
 
 &lt;h4 id=&quot;results&quot;&gt;Results&lt;/h4&gt;
 &lt;p&gt;You can view below for the implementation details, but before that I wanted to show what the general results were. Below is an implementation of the scenario above.  On the top left, is the reference to Moby Dick's &quot;Call me Ishmael&quot;, which in turn references Ishmael in the Bible.  The bottom right is the &quot;viral&quot; expansion as that paragraph blows up on the internet.&lt;/p&gt;
 
 
-&lt;img title=&quot;Tame Bonkerfield&quot; src=&quot;/assets/images/2020/bonker_viz_1.png&quot;&gt;
+&lt;img title=&quot;Tame Identifield&quot; src=&quot;/assets/images/2020/bonker_viz_1.png&quot;&gt;
 
-&lt;p&gt;There were a number of variations that I want to be able to work with when building bonkerfields.  The framework I've built allows me to vary the number of lines, the opacity and the random dispersion of their endpoints.  The next two images show what happens when I turn up the randomness on the viral part of the example.&lt;/p&gt;
+&lt;p&gt;There were a number of variations that I want to be able to work with when building identifields.  The framework I've built allows me to vary the number of lines, the opacity and the random dispersion of their endpoints.  The next two images show what happens when I turn up the randomness on the viral part of the example.&lt;/p&gt;
 
-&lt;img class=&quot;small_img&quot; title=&quot;Medium Bonkerfield&quot; src=&quot;/assets/images/2020/bonker_viz_2.png&quot;&gt;
-&lt;img class=&quot;small_img&quot; title=&quot;Wild Bonkerfield&quot; src=&quot;/assets/images/2020/bonker_viz_3.png&quot;&gt;
+&lt;img class=&quot;small_img&quot; title=&quot;Medium Identifield&quot; src=&quot;/assets/images/2020/bonker_viz_2.png&quot;&gt;
+&lt;img class=&quot;small_img&quot; title=&quot;Wild Identifield&quot; src=&quot;/assets/images/2020/bonker_viz_3.png&quot;&gt;
 
 
-&lt;p&gt;You can see the live d3 graph and the code to produce it on &lt;a href=&quot;https://bl.ocks.org/stedn/5d187e873982e441e1f78d6d69af0030&quot;&gt;this bl.ock&lt;/a&gt;.  Next, I want to explore building more complex underlying bonkerfields. &lt;/p&gt;
+&lt;p&gt;You can see the live d3 graph and the code to produce it on &lt;a href=&quot;https://bl.ocks.org/stedn/5d187e873982e441e1f78d6d69af0030&quot;&gt;this bl.ock&lt;/a&gt;.  Next, I want to explore building more complex underlying identifields. &lt;/p&gt;
 
-&lt;h5&gt;A more complex bonkerfield&lt;/h5&gt;
+&lt;h5&gt;A more complex identifield&lt;/h5&gt;
 &lt;p&gt;After building the simple version, I really wanted to scale it up to a more complex and interesting example.  Unfortunately, I didn't quite have time to compile real data or come up with another complicated story for this one.  Instead, I just tried generating a random hierarchy. The results were quite surprising. &lt;/p&gt;
 
 
-&lt;img title=&quot;Complicated Bonkerfield&quot; src=&quot;/assets/images/2020/big_bonkerfield.png&quot; /&gt;
+&lt;img title=&quot;Complicated Identifield&quot; src=&quot;/assets/images/2020/big_bonkerfield.png&quot; /&gt;
 
 
 &lt;p&gt;When this image rendered, I've was overwhelmed with the similarity to a neuron.  There's really a beautiful correspondence between the bonkerfield and the brain that hadn't even occurred to me as I was building it.  The bonkerfield of any information in a human mind could be traced down through the individual neurons that collectively record it. So it's really fitting that  like in &lt;a href=&quot;https://en.wikipedia.org/wiki/Neuron#/media/File:PurkinjeCell.jpg&quot;&gt;this classic illustration&lt;/a&gt; from &lt;a href=&quot;https://en.wikipedia.org/wiki/Santiago_Ram%C3%B3n_y_Cajal&quot;&gt;Santiago Ramón y Cajal&lt;/a&gt;.&lt;/p&gt;
@@ -1428,13 +1430,13 @@ I'm a 10 year old, and I have never even heard of this novel.
 &lt;p&gt;What's more amazing, was the how the parameters that I used to generate the random graph varied the the overall structure&lt;/p&gt;
 
 
-&lt;p&gt;See below for implementation details. I will be back soon with an analysis of how a few parameters can control the architecture of the complicated.  And once I get a really good example where I can work through and compile the data, I'll update with a thorough explanation of a rendering of a true bonkerfield.&lt;/p&gt;
+&lt;p&gt;See below for implementation details. I will be back soon with an analysis of how a few parameters can control the architecture of the complicated.  And once I get a really good example where I can work through and compile the data, I'll update with a thorough explanation of a rendering of a true identifield.&lt;/p&gt;
 
 &lt;h4&gt;Implementation&lt;/h4&gt;
-&lt;p&gt;The rest of this article can help walk you through adapting my code and data to build your own bonkerfields.&lt;/p&gt;
+&lt;p&gt;The rest of this article can help walk you through adapting my code and data to build your own identifield visualizations.&lt;/p&gt;
 &lt;h5&gt;Compiling the data&lt;/h5&gt;
 &lt;p&gt;
-  I had to hand annotate a json document in the structure needed for d3 to render it using the d3 &quot;bundle&quot; layout. Even though my data isn't really any kind of hierarchy, I'm sort of hacking the format that the d3 hierarchical bundling wants. 
+  I had to hand annotate a json document in the structure needed for d3 to render it using the d3 &quot;bundle&quot; layout. Even though my data isn't really any kind of hierarchy, I'm sort of hacking the format that the d3 hierarchical bundling wants.
 &lt;/p&gt;
 
 &lt;p&gt;The minimal format to make it work requires two things:&lt;/p&gt;
@@ -1494,7 +1496,7 @@ function find(name, data) {
 &gt;          }else{
 &gt;            node.time = null;
 &gt;          }
-          
+
         }
 &gt;      } else {
 &gt;        if(!node.time){
@@ -1541,7 +1543,7 @@ var line_pre = d3.svg.line()
 &lt;/pre&gt;
 
 &lt;h5&gt;Styling&lt;/h5&gt;
-&lt;p&gt;There's some additional styling that yu can check out in the code directly.  To make the opposite side of the bonkerfield, I duplicated all the above, but inverted the x-axis by sutracting the x positions from width (eg &lt;code&gt;.x(function(d) {return width - d.time+myrandom()*d.size;})&lt;/code&gt;).  &lt;/p&gt;
+&lt;p&gt;There's some additional styling that yu can check out in the code directly.  To make the opposite side of the identifield, I duplicated all the above, but inverted the x-axis by sutracting the x positions from width (eg &lt;code&gt;.x(function(d) {return width - d.time+myrandom()*d.size;})&lt;/code&gt;).  &lt;/p&gt;
 
 &lt;h4&gt;The complicated graph&lt;/h4&gt;
 &lt;p&gt;Since I didn't want to hand generate a really big graph, I used some python code to generate the structure for me. The function is really quite simple; it just randomly branches a tree with probability &lt;code&gt;child_prob&lt;/code&gt;, and then adds an arm to the tree that is also randomly chosen from &lt;code&gt;time_inc_rand&lt;/code&gt;. &lt;/p&gt;
@@ -1571,7 +1573,7 @@ def add_node(node_list, parent_name, parent_time, parent_size, parent_weight):
 
 
 &lt;h4&gt;More To Do&lt;/h4&gt;
-&lt;p&gt;There's still much more to do to make the bonkerfield concept clearer.  You can fork the code to render bonkerfields from either the &lt;a href=&quot;https://bl.ocks.org/stedn/5d187e873982e441e1f78d6d69af0030&quot;&gt;simple&lt;/a&gt; or the &lt;a href=&quot;https://bl.ocks.org/stedn/33fd840f81627ec0967448fbc832ed9f&quot;&gt;complex&lt;/a&gt; bl.ocks, and the code for generating the json objects is on &lt;a href=&quot;https://github.com/lots-of-things/random-bonkerfield-generator&quot;&gt;github&lt;/a&gt;. If someone out there likes this idea and would like to take it further, please feel free.  Let me know what you come up with. &lt;/p&gt;
+&lt;p&gt;There's still much more to do to make the identifield concept clearer.  You can fork the code to render identifields from either the &lt;a href=&quot;https://bl.ocks.org/stedn/5d187e873982e441e1f78d6d69af0030&quot;&gt;simple&lt;/a&gt; or the &lt;a href=&quot;https://bl.ocks.org/stedn/33fd840f81627ec0967448fbc832ed9f&quot;&gt;complex&lt;/a&gt; bl.ocks, and the code for generating the json objects is on &lt;a href=&quot;https://github.com/lots-of-things/random-bonkerfield-generator&quot;&gt;github&lt;/a&gt;. If someone out there likes this idea and would like to take it further, please feel free.  Let me know what you come up with. &lt;/p&gt;
 </description>
         <pubDate>Tue, 28 Jan 2020 00:00:00 -0800</pubDate>
         <link>https://bonkerfield.org/2020/01/visualizing-the-bonkerfield/</link>
