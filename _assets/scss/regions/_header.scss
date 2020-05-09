@@ -1,6 +1,6 @@
 //----------------------------------------------
 // Header
-//---------------------------------------------- 
+//----------------------------------------------
 .header {
   @extend %letter-spacing;
   @extend %box-shadow;
@@ -35,6 +35,13 @@
 
     font-size: $font-xsmall;
     color: $color-black;
+  }
+
+  &__leadin {
+    @extend %font-header;
+
+    font-size: $font-small;
+    color: $color-darkgrey;
   }
 
   &__link {
