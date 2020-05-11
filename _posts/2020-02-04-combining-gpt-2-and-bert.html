@@ -3,7 +3,7 @@ layout: post
 title: Combining GPT-2 and BERT to make a fake person
 date: '2020-02-04'
 author: will stedden
-tags: 
+tags:
 - machine learning
 - language
 - end times
@@ -33,7 +33,7 @@ image: /assets/images/2020/thiscommentisgreat.png
 
 <h4>The person you are speaking with is not real</h4>
 <p>
-	My goal was to see how close I could come to impersonating a real human with algorithmically generated text and almost no manual quality control.  
+	My goal was to see how close I could come to impersonating a real human with algorithmically generated text and almost no manual quality control.
 </p>
 <p>
 	I decided that one of the easiest places to test such a system would be in the responses to comments on the social media website, <a href="https://www.reddit.com/">reddit</a>. My goal became to generate a bot that would respond topically to comments, garner upvotes, and see if it can promote discussion.  In case you are worried about the ethicality of releasing a surreptitious human on reddit, rest assured I have only deployed the bot sparingly to avoid generating too much annoyance in the world.  And I have manually reviewed evey comment to ensure that it produced nothing too offensive.
@@ -57,7 +57,7 @@ image: /assets/images/2020/thiscommentisgreat.png
 
 <blockquote>
 The idea of the film is very similar to the kind of film we’ve seen before,
-“The Road”. The film “took place” at “a time”, “at a place”. 
+“The Road”. The film “took place” at “a time”, “at a place”.
 “The Road” was set at “a time”, “a place”.”
 “The Road” was also set at a time of the Soviet Union’s collapse,””“a time”, “the collapse” of communism”.
 “The Road” is set at a time of the Russian Revolution,”“the collapse” of the Soviet Union’s fall,”“a time”, “the collapse” of the Soviet Union’s collapse.”
@@ -67,7 +67,7 @@ So, “The Road” is a film about the dissolution of the Soviet Union’s grip 
 <p>Clearly the algorithm is getting confused on the way quotations work.  Then there's this one, which makes grammatical sense, but is clearly a series of statements that no regular person would ever say (unless they were trolling). </p>
 
 <blockquote>
-I still can't believe you. I had the same birthday last year.  
+I still can't believe you. I had the same birthday last year.
 I'm a 10 year old, and I have never even heard of this novel.
 </blockquote>
 
@@ -81,10 +81,10 @@ I'm a 10 year old, and I have never even heard of this novel.
 
 <h5>Machines trying to trick other machines</h5>
 <p>
-	To fix the problem, I borrowed an idea from another deep learning architecture called a <a href="https://en.wikipedia.org/wiki/Generative_adversarial_network">generative adversarial network</a> or GAN.  GANs have been used extensively in the past and  have been astonishingly successful in impersonating <a href="https://www.thispersondoesnotexist.com/">images</a>, <a href="https://magenta.tensorflow.org/gansynth">music</a>, and even <a href="https://becominghuman.ai/generative-adversarial-networks-for-text-generation-part-1-2b886c8cab10?gi=e90e56af6387">text</a> (though it doesn't do text that well).  The rise of the <a href="https://en.wikipedia.org/wiki/Deepfake#History">"deep fake"</a> is mostly thanks to developments in the GAN architecture. 
+	To fix the problem, I borrowed an idea from another deep learning architecture called a <a href="https://en.wikipedia.org/wiki/Generative_adversarial_network">generative adversarial network</a> or GAN.  GANs have been used extensively in the past and  have been astonishingly successful in impersonating <a href="https://www.thispersondoesnotexist.com/">images</a>, <a href="https://magenta.tensorflow.org/gansynth">music</a>, and even <a href="https://becominghuman.ai/generative-adversarial-networks-for-text-generation-part-1-2b886c8cab10?gi=e90e56af6387">text</a> (though it doesn't do text that well).  The rise of the <a href="https://en.wikipedia.org/wiki/Deepfake#History">"deep fake"</a> is mostly thanks to developments in the GAN architecture.
 </p>
 <p>
-	The concept of the GAN is pretty simple. You train two algorithms, one to generate text (generator), and another to try to distinguish the generator’s text from human text  (discriminator).  These algorithms are typically called <a href=”https://en.wikipedia.org/wiki/Language_model”>language models</a> because they attempt to model the way language is produced. In a classical GAN you then use the two models to improve each other by having the generator constantly compete to trick the discriminator (hence Adversarial).  
+	The concept of the GAN is pretty simple. You train two algorithms, one to generate text (generator), and another to try to distinguish the generator’s text from human text  (discriminator).  These algorithms are typically called <a href=”https://en.wikipedia.org/wiki/Language_model”>language models</a> because they attempt to model the way language is produced. In a classical GAN you then use the two models to improve each other by having the generator constantly compete to trick the discriminator (hence Adversarial).
 </p>
 
 
@@ -108,16 +108,16 @@ I'm a 10 year old, and I have never even heard of this novel.
 <img title="GPT2 BERT commentor workflow" src="/assets/images/2020/gpt2_bert_workflow.png" alt="GPT2 BERT comment system workflow"/>
 
 <p>
-	In this setup, I first pick a comment on reddit to serve as seed text for the generator.  I generate a whole bunch of replies for this comment using my GPT-2 model.  Then I pass all the candidates to the discriminator model to filter out the messed up comments and only select the best ones. 
+	In this setup, I first pick a comment on reddit to serve as seed text for the generator.  I generate a whole bunch of replies for this comment using my GPT-2 model.  Then I pass all the candidates to the discriminator model to filter out the messed up comments and only select the best ones.
 </p>
 
 <p>
-	To build the discriminators, I fine-tuned another deep-learning language model called <a href="https://towardsdatascience.com/bert-explained-state-of-the-art-language-model-for-nlp-f8b21a9b6270">BERT</a>.  I made two models, one for how realistic the reply was and another for how many upvotes the reply would get. 
+	To build the discriminators, I fine-tuned another deep-learning language model called <a href="https://towardsdatascience.com/bert-explained-state-of-the-art-language-model-for-nlp-f8b21a9b6270">BERT</a>.  I made two models, one for how realistic the reply was and another for how many upvotes the reply would get.
 </p>
 
 
 <p>
-	You can read <a href="/2020/02/reddit-bot-gpt2-bert/">this post</a> for a detailed walkthrough of how the whole system was constructed, trained, tested, and deployed. 
+	You can read <a href="/2020/02/reddit-bot-gpt2-bert/">this post</a> for a detailed walkthrough of how the whole system was constructed, trained, tested, and deployed.
 </p>
 <p>
 	Just by looking at the initial results, it seemed likely that the bot was going to be able to communicate pretty convincingly.  But the only <a href="https://en.wikipedia.org/wiki/Turing_test">real test</a> was to put it into use and see how people respond.
@@ -131,7 +131,7 @@ I'm a 10 year old, and I have never even heard of this novel.
 <h5 id='replies'>What did the robot say?</h5>
 
 <p>
-	This <a href="https://www.reddit.com/r/sciencefiction/comments/evqiti/dune_logo_unveiled_at_event_copyright_claimants/fg44yzw/?context=3">first one</a> seems like a perfect imitation of someone with a strong opinion on the internet. 
+	This <a href="https://www.reddit.com/r/sciencefiction/comments/evqiti/dune_logo_unveiled_at_event_copyright_claimants/fg44yzw/?context=3">first one</a> seems like a perfect imitation of someone with a strong opinion on the internet.
 </p>
 
 <img title="reddit-gpt2-bert-bot comment" src="/assets/images/2020/tupperware-party1.png" alt="COMMENT: 'Dune’s fandom is old and intense, and a rich thread in the cultural fabric of the internet generation' BOT_REPLY:'Dune’s fandom is overgrown, underfunded, and in many ways, a poor fit for the new, faster internet generation.'" style="border:2px;"/>
@@ -164,7 +164,7 @@ I'm a 10 year old, and I have never even heard of this novel.
 </p>
 
 <p>
-	On the other hand, the single most popular comment (with 8 votes) was <a href="https://www.reddit.com/r/sciencefiction/comments/efej56/the_problem_with_the_original_dune_movie/fc16yq8/?context=3">this one</a>, which is just innocuous flattery.  
+	On the other hand, the single most popular comment (with 8 votes) was <a href="https://www.reddit.com/r/sciencefiction/comments/efej56/the_problem_with_the_original_dune_movie/fc16yq8/?context=3">this one</a>, which is just innocuous flattery.
 </p>
 <img title="reddit-gpt2-bert-bot comment" src="/assets/images/2020/thiscommentisgreat.png" alt="This comment is great."/>
 
@@ -174,7 +174,7 @@ I'm a 10 year old, and I have never even heard of this novel.
 
 <h4 id="ethics">You can build one too!</h4>
 
-<p>If you find this interesting, I've written a <a href="/2020/02/reddit-bot-gpt2-bert/">tutorial post</a> with details and code describing how I built everything and showing what you'd need to do to recreate one of your own.  I realize there are definite ethicality concerns with building and using something like this so I encourage you to be an <a href="https://en.wikiquote.org/wiki/Bill_%26_Ted%27s_Excellent_Adventure">excellent</a> human and only use this tool sparingly and for that which <a href="https://en.wikipedia.org/wiki/Categorical_imperative">you deem to be good</a>.  
+<p>If you find this interesting, I've written a <a href="/2020/02/reddit-bot-gpt2-bert/">tutorial post</a> with details and code describing how I built everything and showing what you'd need to do to recreate one of your own.  I realize there are definite ethicality concerns with building and using something like this so I encourage you to be an <a href="https://en.wikiquote.org/wiki/Bill_%26_Ted%27s_Excellent_Adventure">excellent</a> human and only use this tool sparingly and for that which <a href="https://en.wikipedia.org/wiki/Categorical_imperative">you deem to be good</a>.
 </p>
 <h5>Ethical concerns</h5>
 <p>
@@ -185,7 +185,7 @@ I'm a 10 year old, and I have never even heard of this novel.
 </p>
 
 <p>
-	If you think what I've done is a problem feel free to <span class="popup__open" style="border-bottom: 0.25px solid $color-grey">email me <i class="fa fa-envelope"></i></span>, or publically shame me on <a href="https://twitter.com/bonkerfield">Twitter</a>.
+	If you think what I've done is a problem feel free to <a href="https://viewfoil.bonkerfield.org">send me a message</a>, or publically shame me on <a href="https://twitter.com/bonkerfield">Twitter</a>.
 </p>
 
 

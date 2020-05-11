@@ -1,0 +1,115 @@
+---
+layout: post
+title: Timeline Streamgraph from Google Sheets Data
+date: '2020-05-10'
+author: will stedden
+tags:
+- visualization
+- code
+image: /assets/images/2020/political_ads.png
+---
+
+<p>
+    I've made a new kind of visualization called a <strong>Timeline Streamgraph</strong>.  It's a modification of a conventional <a href="http://leebyron.com/streamgraph/">streamgraph</a>, flipped on its side so that time flows from bottom to top.
+</p>
+<p>
+    I built it this way to evoke the sensation we experience when we view online media "timelines." Although a standard streamgraph can convey the same information, having to scroll down for older information tries to remind the viewer that, like media streams, the data is still being generated "in front" of them.
+</p>
+
+<p>
+    As an example, I generated this figure of political ad spend on Google Ads.
+</p>
+
+<img src="/assets/images/2020/political_ads.png"/>
+
+<p>
+    I can imagine a lot of other interesting uses so I've made the viz very easy to replicate and modify. The coolest part is that it <strong>pulls data directly from a Google Sheet</strong> so I can easily keep the data fresh by just copy and pasting the new data into the sheet.
+</p>
+
+<p>
+    Below I have a tutorial that explains how to take my code and build one yourself.
+</p>
+
+<h3>How to Make a Timeline Streamgraph</h3>
+<p>
+    To replicate this figure with your own data you just need to
+</p>
+
+<ul>
+<li>Fork <a href="https://codepen.io/stedn/pen/BaoxGwr">from Codepen</a> or <a href="https://gist.github.com/stedn/ccd784c9c52ce76d01e1569cd60d213e">from Github gist</a></li>
+<li>Put data into a Google Sheet</li>
+<li>Add the Google Sheet key to the code</li>
+</ul>
+
+<h4>Fork a gist or codepen</h4>
+
+<p>I've made the code available on gist or on codepen so you can copy it from whichever is easiest for you.</p>
+
+<h5>Fork from codepen</h5>
+
+<p>If you have a codepen account, you can view <a href="https://codepen.io/stedn/pen/BaoxGwr">this pen</a> and click "Fork" in the bottom right corner to make a copy that you can edit.</p>
+
+<h5>Fork a gist</h5>
+<p>
+    If you have a Github account you can view <a href="">this gist</a> and "fork" a copy of it that will make it editable by you.  When you do this the project will be set up at <code>https://gist.github.com/GITHUB_USERNAME/ID_OF_PROJECT</code>.
+</p>
+<p>
+    If you want to view your visualization you can use the amazing bl.ocks.org from Mike Bostock.  Just go to the following URL, using the same <code>GITHUB_USERNAME</code> and <code>ID_OF_PROJECT</code> that you see for your gist.
+</p>
+<pre>
+https://bl.ocks.org/GITHUB_USERNAME/ID_OF_PROJECT
+</pre>
+<p>
+    You should see an exact copy of the original vizualization.  Next you just need to modify it to point to your own data.
+</p>
+
+
+<h4>Putting Data in a Google Sheet</h4>
+<p>
+    The viz just pulls from any published Google Sheet.  It looks for data in three columns with the following format and headings.
+</p>
+
+<img src="/assets/images/2020/dataformat.png"/>
+
+<p>
+    For this demo, I wrote a query to get political ad spend from Google Ads data on BigQuery.  But, keep in mind, you can use any data you want as long as it follows the <code>key</code>, <code>date</code>, <code>value</code> format.  IMPORTANT, your data can not have any repeated key, date pairs. Make sure that the same data does not appear repeated for any individual key.
+</p>
+
+
+<p>
+    To allow access to your data, you need to publish the sheet.  You can find the publish dialog here.
+</p>
+<img src="/assets/images/2020/dataformat.png"/>
+
+
+<p>
+    Select to publish the entire document as web page.
+</p>
+
+<h4>Connect D3 viz to Google Sheet</h4>
+<p>
+    On codepen or gist you'll see at the top of the HTML there is a variable named "google_sheets_id." Fill that in with the corresponding key from your published google sheet.  You can see the key directly in the url on the edit page.
+</p>
+
+<img src="/assets/images/2020/googlesheetkey.png"/>
+
+<p>
+    If you're using Codepen, then the page should update right away with your new data.  If you are using gist you'll need to save the gist, and wait a few minutes for the changes to propagate to bl.ocks.org.
+</p>
+
+
+<h5>Bonus: Add custom colors</h5>
+<p>
+    I've also added a way to specify the colors from the same Google Sheet. You just need to add a second sheet with a column for <code>key</code> and a column for <code>color</code>. You need to have one color for every key on the first sheet. Any key that isn't included will show up black. Also, make sure that you don't change the order of the sheets.
+</p>
+
+
+<h4>Example uses</h4>
+<p>
+    I'm very curious what other uses people come up with for this viz.  If you try something out, please <a href="">let me know</a> and I'll a link to it here.
+</p>
+
+<ul>
+    <li>political ad spend 2020 - example from this blog post</li>
+    <li><a href="https://will.stedden.org">will.stedden project history</a> - visual curriculum vitae that shows all the projects I've worked on concurrently over the past few years</li>
+</ul>
