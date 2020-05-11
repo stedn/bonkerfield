@@ -5,8 +5,8 @@
     <description>just your standard information identity spacetime field</description>
     <link>https://bonkerfield.org</link>
     <atom:link href="https://bonkerfield.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 10 May 2020 19:17:46 -0700</pubDate>
-    <lastBuildDate>Sun, 10 May 2020 19:17:46 -0700</lastBuildDate>
+    <pubDate>Sun, 10 May 2020 19:58:47 -0700</pubDate>
+    <lastBuildDate>Sun, 10 May 2020 19:58:47 -0700</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -54,7 +54,7 @@
 
 &lt;h5&gt;Fork a gist&lt;/h5&gt;
 &lt;p&gt;
-    If you have a Github account you can view &lt;a href=&quot;&quot;&gt;this gist&lt;/a&gt; and &quot;fork&quot; a copy of it that will make it editable by you.  When you do this the project will be set up at &lt;code&gt;https://gist.github.com/GITHUB_USERNAME/ID_OF_PROJECT&lt;/code&gt;.
+    If you have a Github account you can view &lt;a href=&quot;https://gist.github.com/stedn/ccd784c9c52ce76d01e1569cd60d213e&quot;&gt;this gist&lt;/a&gt; and &quot;fork&quot; a copy of it that will make it editable by you.  When you do this the project will be set up at &lt;code&gt;https://gist.github.com/GITHUB_USERNAME/ID_OF_PROJECT&lt;/code&gt;.
 &lt;/p&gt;
 &lt;p&gt;
     If you want to view your visualization you can use the amazing bl.ocks.org from Mike Bostock.  Just go to the following URL, using the same &lt;code&gt;GITHUB_USERNAME&lt;/code&gt; and &lt;code&gt;ID_OF_PROJECT&lt;/code&gt; that you see for your gist.
@@ -109,7 +109,7 @@ https://bl.ocks.org/GITHUB_USERNAME/ID_OF_PROJECT
 
 &lt;h4&gt;Example uses&lt;/h4&gt;
 &lt;p&gt;
-    I'm very curious what other uses people come up with for this viz.  If you try something out, please &lt;a href=&quot;&quot;&gt;let me know&lt;/a&gt; and I'll a link to it here.
+    I'm very curious what other uses people come up with for this viz.  If you try something out, please &lt;a href=&quot;https://viewfoil.bonkerfield.org&quot;&gt;let me know&lt;/a&gt; and I'll a link to it here.
 &lt;/p&gt;
 
 &lt;ul&gt;
