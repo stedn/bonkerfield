@@ -5,9 +5,610 @@
     <description>just your standard information identity spacetime field</description>
     <link>https://bonkerfield.org</link>
     <atom:link href="https://bonkerfield.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 13 May 2020 22:28:35 -0700</pubDate>
-    <lastBuildDate>Wed, 13 May 2020 22:28:35 -0700</lastBuildDate>
+    <pubDate>Mon, 18 May 2020 22:58:48 -0700</pubDate>
+    <lastBuildDate>Mon, 18 May 2020 22:58:48 -0700</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <image>https://bonkerfield.org/assets/images/2020/big_bonkerfield.png</image>
+        <title>Identifield: information in the material universe</title>
+        <description>&lt;p&gt;&lt;em&gt;&lt;small&gt;
+    Epistemic status: It should go without saying that I don't have any certainty about the fundamental nature of the universe.  This is just a bit of conjecture that gets me through my day.
+&lt;/small&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;
+    As I moved from physics to biology and now into machine learning, my worldview has shifted from one focused on material reality to one that deals largely with abstractions of information.  I've thought a great deal about these two viewpoints and wondered about their relationship. Importantly, as I've interacted with people ensconced in these two fields, I've noticed a tangible difference between two distinctive mental models of the fundamental space that things occupy.
+&lt;/p&gt;
+&lt;p&gt;
+    The material view focuses on conventional spacetime as the true space that existing entities occupy. Meanwhile, the information-centric view defines the space of ideas as the true space that existing entities occupy. To put a finer point on the distinction, I've assigned names based on pairs of philosophers and scientists who I think most closely represents each conception of reality
+&lt;/p&gt;
+&lt;table style=&quot;border-collapse: collapse;&quot;&gt;
+&lt;thead&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Aristotelian/Feynmanian&lt;/th&gt;
+    &lt;th&gt;Platonic/Einsteinian&lt;/th&gt;
+  &lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody style='text-align:center;'&gt;
+  &lt;tr&gt;
+    &lt;td&gt;A standard material universe&lt;/td&gt;
+    &lt;td&gt;A space of purified ideas&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Reality is physical&lt;/td&gt;
+    &lt;td&gt;Reality is the ideals we uncover&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;There is no real space where ideas exist, they are just an artifact of our discourse&lt;/td&gt;
+    &lt;td&gt;The particular details of the different manifestations of these ideals are largely unimportant&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Our useful efforts lie in efficiently cataloging the physical by the discussion of observations of phenomena&lt;/td&gt;
+    &lt;td&gt;Our useful efforts lie in properly mapping specific phenomena back into the space of ideals where their fundamental principles are truly defined&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;hr&gt;
+&lt;p&gt;
+    So &lt;strong&gt;which is correct&lt;/strong&gt;?  I've thought a lot about the relation between our material universe and the idealistic universe, and as with every other ethical or epistemological dualism I've seen in my life, the answer may be just the most boring: &lt;strong&gt;both&lt;/strong&gt;. It seems to me that the very thing that makes our universe an interesting one to inhabit is that the two spaces coexist and are intermingled. And perhaps, the very validity of our consciousness is predicated on the comingling of these two spaces.
+&lt;/p&gt;
+
+&lt;p&gt;
+    To describe this third &quot;necessary combination&quot; view, I've had to develop what I believe to be a new description of the way that entities exist in this third space interpretation of the universe.  I've called this new construct an &lt;strong&gt;identifield&lt;/strong&gt; (pronounced identi-field), and I'd like to take the rest of this blog post to describe the idea.
+&lt;/p&gt;
+
+&lt;h3&gt;What is an identifield?&lt;/h3&gt;
+&lt;p&gt;
+    Identifield is a shorthand term for an &lt;strong&gt;information identity spacetime field&lt;/strong&gt;. It is a means for articulating how a thing of information (ie platonic ideal) exists in the material world (ie in physical reality).  To look at an identifield is to look at how an idea fits into the evolution of all ideas spread across physical time and space.  That sounds a little extravagant, but once it's broken down, I think it isn't totally crazy.
+&lt;/p&gt;
+&lt;p&gt;
+    I'll first explain the concept by example, and then explain the terminology in detail.
+&lt;/p&gt;
+
+&lt;h4&gt;Explained By Example&lt;/h4&gt;
+&lt;p&gt;
+    It might help to take a simple example where we are looking at the information contained in a single paragraph in a book.  We would start by asking, &quot;Does the information live just in the printed words of a single page?&quot;  No, at the very least it has to be present in all the printed copies of that book. But the information can be thought to exist in a whole lot of other places too.
+&lt;/p&gt;
+&lt;p&gt;
+    Imagine that paragraph contains the quote &quot;Call me Ishmael&quot; from Moby Dick. That would mean some of the information lives in a small part of all the copies of Moby Dick as well.  And suppose that when the author quoted that line in Moby Dick, she did so because she had also read an article that suggested quoting Moby Dick is a good strategy for getting published. So some seed of the generation of the paragraph was formed in that article too. All the places where the author gathered information to write that paragraph include some partial component of the information contained within it.
+&lt;/p&gt;
+&lt;p&gt;
+    And that isn't the end of it either. It's also present in the minds of anyone who might read the paragraph and internalize that information.  How much of the information is present will vary depending on how much attention the audience was paying, and whether they correctly translated the information into their own brains.  Finally, the information in that paragraph may someday be referenced in another novel, which can lead to diffusion to a whole other set of people.
+&lt;/p&gt;
+&lt;p&gt;
+    So if you were to try to imagine where that information lives at all times and how &quot;strong&quot; of a residue of the information is present, you'd have to picture a 4D spacetime field occupying all the places we just mentioned.  That's an identifield.
+&lt;/p&gt;
+
+&lt;h4&gt;Explained in greater detail&lt;/h4&gt;
+&lt;p&gt;
+    If the craziness above wasn't enough for you, here's a little more explanation.  Lets break down the defintion of identifield, &lt;strong&gt;information identity spacetime field&lt;/strong&gt;.
+&lt;/p&gt;
+&lt;h5&gt;Information Identity&lt;/h5&gt;
+&lt;p&gt;
+    To start, I should explain what I mean by an &lt;em&gt;information identity&lt;/em&gt;.  I'm using the term to mean, literally, that identity which defines some information. Of course, to understand that we need to break down what I mean by information and identity.
+&lt;/p&gt;
+&lt;p&gt;
+    Even though information is a fairly abstract concept, I think most people seem to have a pretty intuitive sense of what it is.  To cut to the chase, let's just say information is a description of ideas that we can transmit around through physical manifestations. Note that information is not the physical manifestation itself.  For example, If I hand you a piece of paper with the words, &quot;Hi, my name is Will,&quot; typed on it, the piece of paper and ink is not the information, the words are the information. The words convey the idea that my name is Will, but this idea is not the information either.  Keep in mind that words are not the only form of information.  As another example, biological organisms contain DNA, which transmits the information of the individual's genetic code.
+&lt;/p&gt;
+&lt;p&gt;
+    We can tackle identity in a similar way. I like to use a definition of identity that hybridizes the &lt;a href=&quot;https://en.wikipedia.org/wiki/Identity_(philosophy)&quot;&gt;philosophical definition&lt;/a&gt; with our more intuitive understanding of &lt;a href=&quot;https://en.wikipedia.org/wiki/Identity_(social_science)&quot;&gt;personal identity&lt;/a&gt;. So for the sake of this discussion let's say that identity is the combination of all those aspects of a thing that make it that unique thing in and of itself.  So your jacket's identity is all the things that make your jacket, your jacket and not somebody else's.
+&lt;/p&gt;
+&lt;p&gt;
+    The information identity is then just the way of distinguishing a piece of information as unique to itself.  It's important to remember that unlike the identity of a physical jacket, information is not the medium itself, but rather the meaning conveyed on the medium. This means that information can be replicated exactly, and so the information identity can be shared among many different conduits of information all over the world. As an example, take the information contained in one's genetic code.  If we were to read that information by sequencing someone's genome and store the sequence of the genome in a computer.  The information identity is that which makes the person's genetic sequence their own. Importantly, it is present in both the sequence in their physical DNA and in the sequence of bits stored in the computer that has read their genome.
+&lt;/p&gt;
+
+&lt;h5&gt;Spacetime&lt;/h5&gt;
+&lt;p&gt;
+    To picture an information identity as it exists in the world, we'd need to mentally visualize the locations of all the copies of that information in the world.  If we were imagining the information in a news article we would imagine all the open web browsers that are viewing that article and all the copies sitting on computer servers.  Next, we'd further imagine the location in each person's mind where they are storing the information that they have just read. And if they communicate the story verbally, the information is contained in the waves of air particles propagating from their mouths.
+&lt;/p&gt;
+&lt;p&gt;
+    All of this is overwhelming to picture in the moment because there are some people navigating to and from the page, reading, forgetting, and discussing, off and on all the time.  For me, it helps to broaden our imagination of information existing in all points in space and take it one step further. We imagine not just where that information is at this instant, but where it has been at all points in time.
+&lt;/p&gt;
+&lt;p&gt;
+    To imagine this, we turn to a concept from physics called spacetime.  If you are unfamiliar with the idea of spacetime, I've written a &lt;a href=&quot;/2020/05/spacetime-explained/&quot;&gt;short visual explainer&lt;/a&gt; to give some background.  But for those who are familiar with the concept, you will recall that spacetime allows us to project a single physical object, like a bowling ball, simultaneously to all points in space that it will ever occupy.  This turns compact objects into extruded ones such as the one in this illustration.
+&lt;/p&gt;
+&lt;img src=&quot;/assets/images/main/bowlingslice_stack.png&quot; alt=&quot;bowling ball rolling slices&quot; /&gt;
+&lt;p&gt;
+    Here, a bowling ball starts at one end of the lane and is rolled to the other end.  But extruded through time, it looks like a tube that connects from end to end.  This is the same situation for the information identities described above.  However, the information identity isn't relegated to a single tube like the bowling ball because the information identity may exist in many, far-reaching locations at once.
+&lt;/p&gt;
+&lt;p&gt;
+    We can think about what happens when we start replicating information.  For example, imagine my friend wants to come over and copy a flash drive.  Well if you looked at some information identity housed on that flashdrive in spacetime, you'd see it would look like a single tube at early times (like the bowling ball) and then suddenly it would split to become two tubes that snake around independently.
+&lt;/p&gt;
+&lt;p&gt;
+    This takes us a long way to seeing the full picture of information residing in the physical world. But there is still one problem: How do we deal with pieces of information that are very similar but slightly different. To begin, let's ask, what happens if something goes wrong when we copy the flash drive and some small difference appears.  Are they two totally different information identities now?  How do we deal with that?
+&lt;/p&gt;
+&lt;h5&gt;Field&lt;/h5&gt;
+&lt;p&gt;
+    The final piece of the identifield is allowing the information identity to exist in a continuous state rather than as something fully binary. We want the &quot;presence&quot; of the information to vary continuously from 100% when you have an exact copy to 0% when you have something that is totally unrelated.  To describe this we turn to another physics concept called a &lt;em&gt;field&lt;/em&gt;.
+&lt;/p&gt;
+&lt;p&gt;
+    We're mostly familiar with fields in physics like gravitational force fields and elecromagnetic fields.  But any quantity that varies in space can be described as a field.  We can talk about the temperature field to describe how temperature varies throughout a house (warmer by the sunny windows, colder in the basement). We can even talk about more abstract things like an &quot;intelligence field&quot; that quantifies how intelligent the entities in one region of space are.  For an intelligence field, parts of the world occupied by humans have a high value, parts occupied by slugs have a lower value (presumably) and rocks would have even lower value.
+&lt;/p&gt;
+&lt;p&gt;
+    We're interested in the information identity spacetime field, which we can define as how much of the information identity is present across different points in space and time.  This accounts for minor corruptions in the information as well as intentional changes to the underlying information. Importantly, when your identifiable unit of information is first &quot;formed,&quot; it is often constructed by some restructuring of multiple previously existing pieces of information. This means that going back prior to its formation, you would see partial remnants of the information identity in any preceding ideas that might have been important.
+&lt;/p&gt;
+&lt;p&gt;
+    Taken together, these elements allow us to visualize like in the example below.  For more information on the visualization see &lt;a href=&quot;&quot;&gt;this post&lt;/a&gt;.
+&lt;/p&gt;
+
+&lt;img src=&quot;/assets/images/2020/big_bonkerfield.png&quot; alt=&quot;&quot; /&gt;
+
+&lt;p&gt;
+    The continuous nature of the identifield allows us to get away from the necessity of drawing hard demarcating lines for where two similar ideas diverge. Although this notion is necessarily abstract, there already exist many ways to compute the similarity of two pieces of information.  The identifield does not predicate a single metric that need be used for measurement of similarity, only that some measurement exists and that we may assume many small perturbations will continue to change the measurement in a continuous manner.[&lt;a href=&quot;#sizes&quot;&gt;*&lt;/a&gt;]
+&lt;/p&gt;
+
+&lt;h3&gt;Implications of the Identifield&lt;/h3&gt;
+&lt;p&gt;
+    The purpose of framing the identifield is to aid in thinking about how ideas exist in the real world.  Once you begin to imagine information identities existing in 4D spacetime, it's hard not to start thinking of the whole world in terms of this construct. I think there are at least three significant application areas of the identifield that could help us see the world with slightly greater clarity.
+&lt;/p&gt;
+&lt;h5&gt;Mapping between idea space and physical space&lt;/h5&gt;
+&lt;p&gt;
+    You could imagine that some things are compact in the space of ideas, but sprawling in physical space.  At the same time, certain philosophies could cover wide swaths of idea space, but only exist within the mind of a single meditating monk. Including the identifield in our vocabulary allows us to more clearly see that distinction.
+&lt;/p&gt;
+&lt;h5&gt;Redefining the Self&lt;/h5&gt;
+&lt;p&gt;
+    I believe the most interesting implication of the identifield is what it means for our dearest information identity, our self. In my mind, I now see myself as composite identifield, processing and transforming all sources of information that I have absorbed.  This is a sizable idea to unpack so I have elaborated &lt;a href=&quot;/2020/05/redefining-identity/&quot;&gt;in this post&lt;/a&gt;.
+&lt;/p&gt;
+&lt;h5&gt;Intuiting meaning for the universe&lt;/h5&gt;
+&lt;p&gt;
+    I am currently writing at length about my interpretation of a meaning for the universe. The key takeaway (argued elsewhere) is that if (1) you are concerned with the outcomes of your actions and (2) remain unsure how specifically to act, it can be deduced that (3) you should assume that the universe falls into the class of universes &lt;a href=&quot;/2020/05/philosophical-grind/&quot;&gt;with a purpose&lt;/a&gt; that can be &lt;a href=&quot;/2020/05/intuition-probability/&quot;&gt;discovered by intuition&lt;/a&gt;.  The argument is long and complex so I encourage reading &lt;a href=&quot;/reasons/&quot;&gt;my reasons articles&lt;/a&gt; if you are curious.
+&lt;/p&gt;
+&lt;p&gt;
+    Unfortunately, I do not have a way to prove which of my intuitions is correct.  However, I've personally found it useful to use the mind-broadening effects of contemplating things as identifields to hone my intuition on the relation between my immediate action and the space of outcomes in the universe.  This is only an intuitive connection, but it's one that personally holds meaning for me so I thought I should include it in this list of implications.
+&lt;/p&gt;
+
+
+&lt;h3&gt;Conclusion&lt;/h3&gt;
+&lt;p&gt;
+    Unfortunately, there is no concrete conclusion offered by this framework.  In fact, the identifield construct posits specifically that so long as you are thinking about even part of this idea, the idea does not conclude at all.
+&lt;/p&gt;
+&lt;p&gt;
+    My website is my attempt to catalog the identifield of all the (useful) information that passes through Will Stedden. This particular identifield, is what I've called the bonkerfield (an identifield that is perhaps a little bit bonkers).  If you take the information identity on this site with you and it informs your life, then you become a part of its identifield.  And bonkerfield becomes a part of you.
+&lt;/p&gt;
+&lt;p&gt;
+    ...and if you share your thoughts with others in the comments, then well, it makes it much easier to watch the identifield forming :)
+&lt;/p&gt;
+
+
+&lt;small&gt;&lt;em&gt;
+&lt;h6 id=&quot;sizes&quot;&gt;A note on continuity and sizes&lt;/h6&gt;
+&lt;p&gt;
+    All of this assumes that there is some granularity of space and time over which we will define a piece of information as coherent and allow changes between two discrete states to blur.  For example, if you delete a few words in a paragraph and rewrite them, the identifield of the paragraph in that interim should not be meaningfully modified.
+&lt;/p&gt;
+&lt;p&gt;
+    A careful observer may try to punch a hole in the physicality of the identifield by noting that physical fields are normally defined at arbitrarily small units of space.  They will point out that to define a space as containing information you need to create some envelope with a macroscopic spatial scale. I agree that is necessary. However, that is not a problem as it should be noted that temperature and many other quantities that are commonly considered fields do not actually exist on an infinitesimal scale.
+&lt;/p&gt;
+&lt;/em&gt;&lt;/small&gt;
+&lt;!-- &lt;h6&gt;Aristotelian/Feynmanian space&lt;/h6&gt;
+&lt;ul&gt;
+    &lt;li&gt;A standard material universe&lt;/li&gt;
+    &lt;li&gt;Reality is physical&lt;/li&gt;
+    &lt;li&gt;There is no fundamental space that unify ideas outside of our discourse&lt;/li&gt;
+    &lt;li&gt;Our useful efforts lie in efficiently cataloging the physical by the discussion of observations of phenomena&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h6&gt;Platonic/Einsteinian space&lt;/h6&gt;
+&lt;ul&gt;
+    &lt;li&gt;A space of purified ideas&lt;/li&gt;
+    &lt;li&gt;Reality &lt;strong&gt;is&lt;/strong&gt; the ideals we uncover&lt;/li&gt;
+    &lt;li&gt;the particular details of the different manifestations of these ideals are largely unimportant&lt;/li&gt;
+    &lt;li&gt;our useful efforts lie in properly mapping specific phenomena back into the space of ideals where their fundamental principles are truly defined&lt;/li&gt;
+&lt;/ul&gt; --&gt;</description>
+        <pubDate>Mon, 18 May 2020 00:00:00 -0700</pubDate>
+        <link>https://bonkerfield.org/2020/05/what-is-an-identifield/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2020/05/what-is-an-identifield/</guid>
+        
+        <category>philosophy</category>
+        
+        
+      </item>
+    
+      <item>
+        <image>https://bonkerfield.org/assets/images/main/bowlingslice_stack.png</image>
+        <title>A Spacetime Visual Explanation</title>
+        <description>&lt;h4&gt;Spacetime Explained&lt;/h4&gt;
+&lt;p&gt;
+    It can be tricky to think about where something is in not only space, but time too.  Physicists picture the location of objects in space and time using a concept called &lt;a href=&quot;https://en.wikipedia.org/wiki/Spacetime&quot;&gt;spacetime&lt;/a&gt;.  They generally think about this in regard to physical objects, and that's a good place to get an introduction to the concept.  As an example, check out this bowling ball rolling in this gif I found.
+&lt;/p&gt;
+&lt;img src=&quot;/assets/images/main/bowlingball.gif&quot; alt=&quot;bowling ball rolling&quot; /&gt;
+&lt;p&gt;
+    The ball is more or less traveling in a straight line down the alley so at any point in time we can describe its position along the single spatial dimension of the length of the alley.  We can view the position along that dimension of space at multiple time points by looking at still frames from the movie next to each other.
+&lt;/p&gt;
+&lt;img src=&quot;/assets/images/main/bowlingslice.png&quot; alt=&quot;bowling ball rolling slices&quot; /&gt;
+&lt;p&gt;
+    Now if we were to narrow the slices and take more of them, the path of the ball would become filled in along that single dimension.  We can draw this out as a filled in tube in a 2D plane.
+&lt;/p&gt;
+&lt;img src=&quot;/assets/images/main/bowlingslice_stack.png&quot; alt=&quot;bowling ball rolling slices&quot; /&gt;
+
+&lt;p&gt;
+    This is two dimensions of the spacetime that the bowling ball occupies (one spatial dimension and one time dimension).  If you think beyond the timeframe in the video, you can imagine the bowling ball going on to be used over and over again.  The full spacetime location of the bowling ball is the path traced out by it through its entire existence.
+&lt;/p&gt;</description>
+        <pubDate>Mon, 18 May 2020 00:00:00 -0700</pubDate>
+        <link>https://bonkerfield.org/2020/05/spacetime-explained/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2020/05/spacetime-explained/</guid>
+        
+        <category>philosophy</category>
+        
+        
+      </item>
+    
+      <item>
+        <image>https://bonkerfield.org/assets/images/2020/big_bonkerfield.png</image>
+        <title>Redefining Identity: A continuum approach</title>
+        <description>&lt;p&gt;&lt;em&gt;&lt;small&gt;
+    Epistemic status: This is an attempt to define personal identity for myself.  I believe that it is a more developed description than most, but I always welcome new insights.
+&lt;/small&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;
+    There are two hurdles that I've needed to overcome in defining my &lt;em&gt;personal identity&lt;/em&gt;.  First, I've had trouble holding onto what it is that makes up &quot;me.&quot;&quot;  I've changed so much throughout the course of my life, that thinking about what &quot;I&quot; think seems almost impossible. Second, I'm troubled with the concept of identity as labels. I've found myself falling into the same routine as others these days, reducing blocks of humans to caricatures.
+&lt;/p&gt;
+&lt;p&gt;
+    To me, both of these problems arise because we have tried as a culture to define identity as discrete.  Here, I'd like to describe what I've arrived at for a continuum philosophy of personal identity, and explain how it might help us fix a few societal problems that have come out of the individualistic mindset.
+&lt;/p&gt;
+
+
+&lt;h4&gt;Subdividing and Extruding Identity&lt;/h4&gt;
+&lt;p&gt;
+    Over the past few years, I have reframed my definition of identity away from either the external model of the atomic individual, or the internal model of our mental monologue directing thought and action. When I say &quot;me,&quot; I mean an amorphous continuum of procedures operating on information and information transforming procedures.  Crucially, this model does not lend itself to easily demarcating what constitutes actions taken by the self as opposed to actions imposed on the self. This can be confusing, so to better clarify, I've operationalized my definition of self with a working model, called the &lt;strong&gt;continuum identity&lt;/strong&gt;. This model has two components, subdivision and extrusion.
+&lt;/p&gt;
+
+&lt;h5&gt;Subdivision&lt;/h5&gt;
+&lt;p&gt;
+    Subdivision means that our experience of a coherent identity is actually a composite of other subidentities, which can be divided and analyzed on their own. Considering the self as a bundle dates back to at least Hume, and probably to the Buddha. For a very lengthy discussion of this topic, you can read any of these refs [&lt;a href=&quot;https://en.wikipedia.org/wiki/Personal_identity&quot;&gt;1&lt;/a&gt;],[&lt;a href=&quot;https://medium.com/@AnjaBasha/ego-theory-of-the-self-and-bundle-theory-of-personal-identity-locke-and-hume-e38ee75e236e&quot;&gt;2&lt;/a&gt;],[&lt;a href=&quot;https://www.giffordlectures.org/books/elusive-self/5-continuous-identity&quot;&gt;3&lt;/a&gt;].  But I don't believe you need any of these authorities to understand the concept. Just ask yourself if you've ever noticed that you can see two sides of the same story or that you've held two conflicting opinions in rapid succession? I interpret that sensation as multiple subidentities debating a position.  I've written about this at length in &lt;a href=&quot;/2019/10/sub-identity-suicide/&quot;&gt;this post&lt;/a&gt; as well.
+&lt;/p&gt;
+&lt;p&gt;
+    To summarize the concept of identity subdivision, imagine every piece of information contained in your mind and add to it every way that you could act on that information. Each of these components constitutes a subidentity that could conceivably be remixed in a different person to form a part of their identity.  In fact, you share some of these pieces of information and procedure with others around you, which leads to the next component of continuum identity, extrusion.
+&lt;/p&gt;
+
+&lt;h5&gt;Extrusion&lt;/h5&gt;
+&lt;p&gt;
+    Extrusion means that for every rule or piece of information that I have incorporated into my identity, its origins can be extruded backwards to the external sources where the information was derived or forwards to those places where that information will be outputted by myself.  To make this clearer, I've introduced the concept of the identifield, which I've elaborated on in &lt;a href=&quot;&quot;&gt;this post&lt;/a&gt;. The identifield places a tighter physical interpretation on this idea, but the intuition is just that any idea inside of me can be physically linked by the media that transmitted the idea to me. And this chain can be walked back again and again to connect the idea in me to that same idea wherever it resides throughout the entire universe.
+&lt;/p&gt;
+
+&lt;p&gt;
+    So in conclusion, my coherent sense of self can be subdivided into many subidentities and then I can extrude those through spacetime to track how they came to be within me.  When carried out to its limit, this subdivision and extrusion converts my discrete identity into a continuous blur of billions of information streams.
+&lt;/p&gt;
+&lt;p&gt;
+    This philosophy both extends my ego and dilutes it until it is indistinguishable precisely where my contribution comes from and where I am just the continuation of independent external factors.
+&lt;/p&gt;
+
+
+&lt;h4&gt;Why is a continuum identity better?&lt;/h4&gt;
+&lt;p&gt;
+    Although the above philosophical reasons have led me to derive my continuum interpretation of identity, I wouldn't want to adopt that framework unless I thought that it had practical societal value as well.  Here I outline just a few ways that I think it is an improvement over other popular alternatives.
+&lt;/p&gt;
+
+
+&lt;h5&gt;Continuum identity allows for constant change and growth&lt;/h5&gt;
+&lt;p&gt;
+    With discrete identity, you are defined by a coherent snapshot. At one point, you are a child and then, you are an adult.  At one point a student, and then a professional. Your change in definition needs to come in these extensive leaps from state A to state B.  This has two pitfalls. First, that it delays our recognition of progress until the tipping point.  Second, it linearizes our transitions along a single trajectory.  With a continuum identity, you transition continuously based solely on what you already know, and you are allowed to transition along multiple paths simultaneously.
+&lt;/p&gt;
+
+&lt;h5&gt;Continuum identity subdues self-centeredness&lt;/h5&gt;
+&lt;p&gt;
+    Discrete identities promote the idea that you are a self-contained whole.  To me, this seems to advocate for a strong preference of the ideas and attitudes of the self at the cost of non-self. Importantly, this leads one to take difference of opinion very personally because disputes can only be manifested as conflicts with your entire identity.  Switching to a continuum model recognizes that non-self can become a part of self if you internalize it.  In this case, the conflict that arises from protecting self is less necessary.
+&lt;/p&gt;
+
+&lt;h5&gt;Discrete identity necessitates cognitive dissonance&lt;/h5&gt;
+&lt;p&gt;
+    Under a discrete identity model, you can never justify believing two disparate things at once.  However, humans frequently have to confront  concepts that aren’t so black-and-white and that it is reasonable to struggle to align with just one side or the other on a given topic. With a continuum identity one can acknowledge the separate parts and how they relate to each other internally and based on external factors.
+&lt;/p&gt;
+
+&lt;h5&gt;Discrete identity is a bad way to structure society&lt;/h5&gt;
+&lt;p&gt;
+    By discretizing identity, we force humans into tightly bound descriptions which can be easily grouped and acted upon as if they were objects. Importantly, &quot;me&quot; should never be thought of as a voting block or a consumer base.  &quot;I&quot; am not &quot;white,&quot; &quot;queer,&quot; &quot;scientific,&quot; or &quot;liberal.&quot; Those are imperfect descriptors of parts of me.
+&lt;/p&gt;
+&lt;p&gt;
+    With continuum identity, a person is always some quantitative mixture of different information streams that can lead to a continuum labeling. Importantly, if I am 87% liberal and my ideological opponent is only 12% liberal, I am no longer dealing with someone who is qualitatively distinct from myself.  There is no more &quot;otherness&quot; because I can see the flow of continuous small adjustments that could bring us to the same viewpoint.
+&lt;/p&gt;
+
+&lt;h6&gt;Conclusion: &quot;We&quot; as a Preferred Pronoun?&lt;/h6&gt;
+&lt;p&gt;
+    This definition of identity is strange and may be uncomfortable to think about.  The implications may be misguided and wrong, and I may learn to regret this whole thought process someday.  But at least as an experiment for the time being, this is how I think of myself.
+&lt;/p&gt;
+&lt;p&gt;
+    In my mind, I'm not really a singular entity at all. I feel most comfortable describing my own actions ensconced directly with their connection to those inputs that lead to it.  In fact, if I had my choice, I'd prefer to use &quot;we&quot; for all descriptions of my self.  Or rather, by our estimate, about 60% of our self prefers the pronoun we. As an experiment, we'd like to present ourselves as &quot;we&quot; for the conclusion of this essay.
+&lt;/p&gt;
+&lt;p&gt;
+    We'd like to close by asking you to reflect on the implications of a continuum identity.  However, we can see that we've already provided more than enough of our own opinion on this topic.  So if you'd like to continue the conversation, please reach out.  We're fascinated with where others can take this idea and would love to discuss further.
+&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 18 May 2020 00:00:00 -0700</pubDate>
+        <link>https://bonkerfield.org/2020/05/redefining-identity/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2020/05/redefining-identity/</guid>
+        
+        <category>philosophy</category>
+        
+        
+      </item>
+    
+      <item>
+        <image>https://bonkerfield.org</image>
+        <title>Philosophical Grind: why assume that your actions matter</title>
+        <description>&lt;p&gt;&lt;em&gt;&lt;small&gt;
+    Epistemic status: It should go without saying that I don't have any certainty about the fundamental nature of the universe.  This is just a bit of conjecture that gets me through my day.
+&lt;/small&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;
+    What causes us to choose one action as opposed to another?  There are, of course, instantaneous needs that must be met, but how do we decide the bigger questions in life?
+&lt;/p&gt;
+
+&lt;p&gt;
+    Over the past several months I have formulated a resolution to this question that I believe makes the fewest necessary assumptions about the structure of the universe.  It is mostly centered around an abstracted form of Pascal's wager, but without the necessity of assuming extrinsic rewards or a particular belief system.  It can be summarized with the following statement that I am terming the Philosophical Grind.
+&lt;/p&gt;
+&lt;blockquote&gt;
+Assuming that a purpose to the universe is not impossible, and that one wishes to help fulfill the purpose of the universe, then one should attempt to hold the belief that their actions can be conducive to fulfilling that purpose and choose their actions accordingly.
+&lt;/blockquote&gt;
+&lt;p&gt;
+    I have previously &lt;a href=&quot;/2019/10/sub-identity-suicide/&quot;&gt;worked through&lt;/a&gt; a personally limited justification of the above statement. Below I will try to prove this statement more generally and show what it implies.
+&lt;/p&gt;
+
+&lt;h4&gt;The Philosophical Grind&lt;/h4&gt;
+&lt;h5&gt;Premises&lt;/h5&gt;
+&lt;p&gt;
+    The statement has two necessary premises that must first be addressed. These can be restated as answers to the following questions.
+&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;Is it possible that the universe has a purpose?&lt;/li&gt;
+    &lt;li&gt;If the universe has a purpose, would you prioritize trying to fulfill it?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+    The first question only asks whether it is possible; it need not even be likely. This leads to the first premise of this philosophy, &lt;strong&gt;that a purpose to the universe is not impossible&lt;/strong&gt;. This premise seems easy to satisfy, and to negate it would require some sort of proof that I have not seen. The second question is truly up to the individual, but I can safely answer it &quot;yes,&quot; and to me, it feels reasonable to assume the same for most people who would concern themselves with these questions. This leads to the second premise, &lt;strong&gt;that one wishes to help fulfill the purpose of the universe&lt;/strong&gt;.
+&lt;/p&gt;
+&lt;h5&gt;Should we act as though the universe has a purpose?&lt;/h5&gt;
+&lt;p&gt;
+    Given the first premise we can posit that the universe we live in must fall into one of three mutually exclusive classes.
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Universe has no purpose&lt;/li&gt;
+&lt;li&gt;Universe has some purpose but our actions cannot influence its fulfillment&lt;/li&gt;
+&lt;li&gt;Universe has some purpose and our actions may influence its fulfillment&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;
+    Using the second premise, we can state whether we should modify our actions dependent on which of the above three types of universes we live in.
+&lt;/p&gt;
+&lt;p&gt;
+    In the first two types of universe (no purpose or non-influenceable purpose), there is no reason to modify the course of my action.  If either of the first two options are true, then no matter how hard I try, I can never arrive at a particular action I should take to improve the likelihood of fulfilling its purpose. In one case, I can't because there is no purpose to fulfill, and in the other it is because nothing I can do will have an impact.
+&lt;/p&gt;
+&lt;p&gt;
+    In contrast, if the universe's purpose can be influenced, under the second premise, I would wish to modify my course of action to try to fulfill that purpose.
+&lt;/p&gt;
+&lt;p&gt;
+    If I then assume I can be in any of the universes, I can decide which action to take based on some combination of all possible actions, dependent on the universe I occupy. But of course, the only universe with an actual prescribed action was the one where the universe has a purpose. In the other universes, the modification of action is ignorable because, under those conditions, the outcome is the same regardless of whether I do or do not modify my actions. Therefore, regardless of which universe I actually occupy, I should behave as if I occupy the universe where my actions influence the outcome of the universe because that is the only one where my outcomes matter anyway.
+&lt;/p&gt;
+
+&lt;h4&gt;Notes on an influenceable purpose&lt;/h4&gt;
+&lt;p&gt;
+    Given the above, it becomes necessary to ask, how can I discover the purpose of the universe in order that I may act to fulfill it?  What we are trying to determine, specifically, is how one should make decisions in order to fulfill the purpose of the universe. This unfortunately is not an easily solved problem.  To show why, I try to break down the universe with an influenceable purpose into its three mutually exclusive subcategories.
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Universe's purpose is knowable and actions toward its purpose are inherently determinable&lt;/li&gt;
+&lt;li&gt;Universe's purpose is unknowable and actions toward its purpose are not determinable&lt;/li&gt;
+&lt;li&gt;Universe's purpose is unknowable but actions toward its purpose are determinable&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+    For the first, I would argue that we have no reason to believe that the universe's purpose is completely knowable. While it isn't possible to negate this on purely logical grounds, I will fall back to an empirical argument that the reader may accept or deny based on their own views.
+&lt;/p&gt;
+&lt;p&gt;
+    For the universe's purpose to be known, we would need a direct exposition of the purpose.  However, any proposed direct exposition would need to be evaluated in the context of all other possible expositions. Since there are infinitely many possible purposes, it would seem to be impossible to negate them all in favor of a single finite collection of views on a certainly knowable universe.  Without making further assumptions, any favorite flavor of purpose must be regarded as possible, but not certain, equivalent to any of the uncountable infinity of other possible explanations that no one has ever even fathomed.
+&lt;/p&gt;
+&lt;p&gt;
+    Next we take on the second possibility, of a universe with an unknowable purpose where how actions act toward the goal of the universe is also fundamentally not determinable.  In this set of universes, while our actions have an impact, there is no mechanism we can use to detect which will be beneficial, and therefore, we have no way of deciding which actions to take.  That is to say, our thinking about our actions will have no influence on whether our actions aid in the fulfillment of the purpose. From the point of view of making decisions, this possible situation is equivalent to a universe where our actions have no influence and can be ignored for the same reason as that argued above.
+&lt;/p&gt;
+&lt;p&gt;
+    Based on these arguments, I hold that the only possible set of universes that we need to worry about living in are those where actions conducive to the resolution of the purpose of the universe are ascertainable even though the direct explanation of the purpose is not.
+&lt;/p&gt;
+&lt;p&gt;
+    While this aids us by limiting further argument to a defined set of options, it unfortunately does not depict in detail how one is able to detect appropriate actions.  To further pursue this line of reasoning, I have written &lt;a href=&quot;/2020/05/intuition-probability/&quot;&gt;a separate post&lt;/a&gt; which aims to describe how intuition could be interpreted as the means by which appropriate actions become determinable.
+&lt;/p&gt;
+
+
+&lt;h4&gt;Conclusion&lt;/h4&gt;
+&lt;p&gt;
+    In this thought-experiment I believe I have shown that given our premises, it is correct to assume that
+&lt;/p&gt;
+    &lt;ul&gt;
+        &lt;li&gt;there is a purpose to the universe, &lt;/li&gt;
+        &lt;li&gt;our actions can influence the fulfillment of that purpose, &lt;/li&gt;
+        &lt;li&gt;it is not knowable what the purpose is, and&lt;/li&gt;
+        &lt;li&gt;that there must be some way to discern the necessary actions for fulfillment of this purpose despite not knowing the purpose itself.&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;p&gt;
+    This is, of course, a highly debatable topic, and I don't pretend that I have all the answers.  However, I think that this offers a valid rebuttal to materialistic nihilism, and I encourage you to utilize the argument if you find yourself dealing with an individual who advocates such a position.
+&lt;/p&gt;
+&lt;p&gt;
+    If you have any feedback on this philosophy I would greatly appreciate it.
+&lt;/p&gt;
+
+
+&lt;h4&gt;Note: Differences with Pascal's wager&lt;/h4&gt;
+&lt;p&gt;
+    There is some similarity between this argument and Pascal's wager. Pascal's wager posits that a person should choose to believe in God because the reward is infinite while the sacrifice is at most finite. However, there are several flaws with argument. To me the crucial flaw is that it starts with a multitude of assumptions that corner it into a very small corner of the entire space of universe possibilities.
+&lt;/p&gt;
+&lt;p&gt;
+    To begin, it assumes a binary choice between a single God to worship or not to worship. In reality, there are multiple established gods that are worshipped on Earth, each of whom provides a distinct course of correct action.  As such, the wager fails to account for multiple possible vengeful gods who will damn you if you choose your actions poorly.
+&lt;/p&gt;
+&lt;p&gt;
+    Furthermore, it requires one to desire everlasting reward. It seems that this in itself is not necessarily something that a reasonable person needs to desire.  For other shortcomings with the wager see the &lt;a href=&quot;https://rationalwiki.org/wiki/Pascal%27s_wager&quot;&gt;rationalwiki&lt;/a&gt; page on the topic.
+&lt;/p&gt;</description>
+        <pubDate>Mon, 18 May 2020 00:00:00 -0700</pubDate>
+        <link>https://bonkerfield.org/2020/05/philosophical-grind/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2020/05/philosophical-grind/</guid>
+        
+        <category>philosophy</category>
+        
+        
+      </item>
+    
+      <item>
+        <image>https://bonkerfield.org</image>
+        <title>Intuition as Unobserved Probabilistic Function Exploration</title>
+        <description>&lt;p&gt;&lt;em&gt;&lt;small&gt;
+    Epistemic status: It should go without saying that I don't have any certainty about the fundamental nature of the universe.  This is just a bit of conjecture that gets me through my day.
+&lt;/small&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;
+    In my previous writing, I've derived arguments to show that I should act as though &lt;a href=&quot;/2019/10/sub-identity-suicide/&quot;&gt;the universe has a purpose&lt;/a&gt;, and that while the universe's purpose is not knowable with certainty, I should act as though correct action &lt;a href=&quot;/2020/05/philosophical-grind/&quot;&gt;is discoverable&lt;/a&gt;.  In this work, I wish to lay out my argument for intuition as a way of sensing the correct actions that will aid in the fulfillment of the underlying purpose of the universe.
+&lt;/p&gt;
+&lt;p&gt;
+    While this post is not as thorough as my prior arguments, I wish to point out ahead of time that the method of argumentation used is consistent with the method of action advocated by the argument (ie intuition).  In this sense, the following is at least self-consistent, though potentially not entirely rigorous to all counterarguments.
+&lt;/p&gt;
+
+&lt;h4&gt;Decision making and uncertainty&lt;/h4&gt;
+&lt;p&gt;
+    Previously, I've noted that the purpose of the universe is probably &lt;a href=&quot;/2020/05/philosophical-grind/&quot;&gt;not directly detectable&lt;/a&gt;, and that there exist an infinite number of possible explanations for the universe's purpose that we cannot even imagine. Nevertheless, it can help introduce this derivation by imagining that we have some finite set of options that we believe could be plausible descriptions of the purpose of the universe.
+&lt;/p&gt;
+&lt;p&gt;
+    If this were the case, then it would be possible to enumerate the options and assign our estimated confidence that each one was the true purpose of the universe. Take for example the following three arbitrarily chosen pet hypotheses.
+&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;Religion: Satisfactorily worship a specific deity&lt;/li&gt;
+    &lt;li&gt;Time Miners: Allow a species that exists in an external metauniverse to drill holes to mine time&lt;/li&gt;
+    &lt;li&gt;Simulation: Simulate the real earth to prevent a natural disaster&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+    For each of these pet theories we could then assign some probability that we think it is the true purpose of the universe.  Take for example these three assignments.
+&lt;/p&gt;
+&lt;table style=&quot;border-collapse: collapse;&quot;&gt;
+&lt;thead&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Purpose&lt;/th&gt;
+    &lt;th&gt;Probability&lt;/th&gt;
+  &lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody style='text-align:center;'&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Religion&lt;/td&gt;
+    &lt;td&gt;0.5&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Time Miners&lt;/td&gt;
+    &lt;td&gt;0.3&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Simulation&lt;/td&gt;
+    &lt;td&gt;0.2&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;
+    Now, if we assume that we wish to maximize the probability that we would be aiding the purpose of the universe with our actions, we could allocate our efforts to take the set of actions best suited to that goal. As an example, assume that we have the following three actions to choose from, which each contribute toward the above goals by differing amounts. In addition, each costs us a certain amount of time per day.
+&lt;/p&gt;
+
+&lt;table style=&quot;border-collapse: collapse;&quot;&gt;
+&lt;thead&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Action&lt;/th&gt;
+    &lt;th&gt;Contribution to Religion&lt;/th&gt;
+    &lt;th&gt;Contribution to Time Miners&lt;/th&gt;
+    &lt;th&gt;Contribution to Simulation&lt;/th&gt;
+    &lt;th&gt;Time Allocation (hours per day)&lt;/th&gt;
+  &lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody style='text-align:center;'&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Go to church once a week&lt;/td&gt;
+    &lt;td&gt;0.8&lt;/td&gt;
+    &lt;td&gt;0.2&lt;/td&gt;
+    &lt;td&gt;0.3&lt;/td&gt;
+    &lt;td&gt;0.01&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Become a devout monk&lt;/td&gt;
+    &lt;td&gt;0.95&lt;/td&gt;
+    &lt;td&gt;0.2&lt;/td&gt;
+    &lt;td&gt;0.1&lt;/td&gt;
+    &lt;td&gt;24&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Study quantum physics&lt;/td&gt;
+    &lt;td&gt;0.0&lt;/td&gt;
+    &lt;td&gt;0.7&lt;/td&gt;
+    &lt;td&gt;0.3&lt;/td&gt;
+    &lt;td&gt;8&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;
+    Stepping through this table, we see that becoming a monk would most likely satisfy the religion purpose, while going to church has some likelihood of satisfying it.  Of course, studying quantum physics doesn't contribute meaningfully to the religion purpose but contributes more to helping the Time Miners (if they exist).
+&lt;/p&gt;
+&lt;p&gt;
+    So, assuming we had only the above three options, and that we had confidence that our assessment of the probability of each of the above purposes is correct, we could optimize our total probability of aiding the universe in fulfilling its purpose. As an example, let us compare these two options: becoming a devout monk vs studying quantum physics and going to church once a week.
+&lt;/p&gt;
+&lt;p&gt;
+    By the above estimate, becoming a devout monk is all consuming (24 hours/day) so we only account for that action's success probabilities.  In other words, our total probability of helping the universe as a monk is &lt;code&gt;0.95*0.5 + 0.2*0.3 + 0.1*0.2 = 0.555&lt;/code&gt;.  Next we compare this with the total probability of success for studying quantum physics and going to church once a week.  For that we can add the probabilities of both actions because we have the bandwidth to do both things. This set of actions results in &lt;code&gt;(0.0+0.8)*0.5 + (0.7+0.2)*0.3 + (0.3+0.3)*0.2 = 0.79&lt;/code&gt;*.
+&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;small&gt;
+    *Caveat: The way I've combined the probabilities isn't exactly proper here.  I should account for the &lt;a href=&quot;https://en.wikipedia.org/wiki/Law_of_total_probability&quot;&gt;total probability&lt;/a&gt; dependent on each set of other choices.  However, this only complicates the math and doesn't contribute deeply to the gist of the argument so I've simplified here.
+&lt;/small&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;
+    From this calculation we would conclude that it's better to study quantum physics and go to church than to become a devout monk.  Even though becoming a devout monk best satisfies the thing we have assumed is most important (appeasing an angry god), its all-consuming nature prevents us from satisfying other plausible purposes at the same time.  Therefore, it is too costly to devote ourselves entirely to that cause at the expense of other propositions.
+&lt;/p&gt;
+
+&lt;p&gt;
+    So if choosing our path in life just came down to working out some probabilistic math, then it would seem our decisions should be simple. Unfortunately, it can't be quite that easy.
+&lt;/p&gt;
+
+
+&lt;h4&gt;The problem with assigning probabilities&lt;/h4&gt;
+
+&lt;p&gt;
+    The problem with assigning probabilities is that we just cannot know all the possible purposes of the universe and the probabilities of each. In fact, rather than being able to enumerate a precise list of purposes, we should probably assume that there are actually infinite possibilities.  If this is the case, there is &lt;a href=&quot;https://en.wikipedia.org/wiki/Infinitesimal&quot;&gt;effectively 0&lt;/a&gt; probability that any single purpose that we decide on is the correct one.
+&lt;/p&gt;
+&lt;p&gt;
+    Beyond this, there are a staggering number of actions available to us.  While the number of options isn't truly infinite, the varying degrees to which we can devote ourselves to each course of action available places the number of distinct possible lives we could live outside the limit of my imagination at least.
+&lt;/p&gt;
+&lt;p&gt;
+    So there is clearly no way to directly compute the proper course of action using the above procedure without making other assumptions about the space of available purposes and actions.  There is no easy resolution, and yet, through &lt;a href=&quot;/2020/05/philosophical-grind/&quot;&gt;previous arguments&lt;/a&gt;, we still should assume there is some resolution.  So what is there to do?
+&lt;/p&gt;
+
+&lt;h4&gt;Using Intuition&lt;/h4&gt;
+&lt;p&gt;
+    I posit that the only resolution to this conundrum is that there must be some subtle revelation of the correct course of action that is available to each actor in the universe.  This revelation could occur in many ways, depending on the exact form of the actor to whom the action is revealed.  While it is not entirely clear how this revelation takes place in general, I think in a few cases we could hypothesize something to approximately describe how it works.
+&lt;/p&gt;
+&lt;p&gt;
+    The hypothesis suggests that somehow the universe reveals to every element within it the set of actions that will help the universe's purpose be fulfilled. I do not know how this revelation is manifested in all people, and indeed I don't even know how other people internally manifest their sensation of interacting with the world. All I know is the internal sensation of reality that I experience.  Based on my internal sensation, the most likely mechanism of this revelation seems to be through some indescribable set of instincts and biases we call our &lt;em&gt;intuition&lt;/em&gt;
+&lt;/p&gt;
+&lt;p&gt;
+    My main contention is that our intuitions are the most likely conduit by which we would qualitatively sense the universe's goals. To think about how intuition can satisfy this problem, let's further define intuition.  By intuition, I mean the combined set of inclinations that direct what &lt;em&gt;I would do if I could&lt;/em&gt;. I would describe these motivations as a subset of my complete &lt;a href=&quot;/2020/05/redefining-identity/&quot;&gt;identity&lt;/a&gt;.  I do not necessarily suggest that there is anything supernatural about this set of motivations; they could be entirely circumscribed by the interaction of the physical laws of nature. The only suggestion is that the proper course of action must always be somehow suggested to our decision making mind, and that there is no other way to explain that phenomenon without resorting to something like intuition as defined above.
+&lt;/p&gt;
+&lt;p&gt;
+    To state my above argument more formally, I propose that intuition is a way of detecting the relative values of a function that indicates whether an action helps to fulfill the purpose of the universe without being able to view the state of this function directly. My intuition for deriving this model of intuition came from my understanding of the way a quantum &lt;a href=&quot;https://en.wikipedia.org/wiki/Wave_function&quot;&gt;wave function&lt;/a&gt; explores &lt;a href=&quot;https://uwaterloo.ca/institute-for-quantum-computing/quantum-computing-101#Superposition-and-entanglement&quot;&gt;all possibilities of a quantum state&lt;/a&gt; in a probabilistic manner without allowing access to the underlying state directly[&lt;a href=&quot;https://arxiv.org/pdf/quant-ph/9712011.pdf&quot;&gt;ref&lt;/a&gt;]*.
+&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;small&gt;
+    *Note that I’ve left this analogy a little underdeveloped, as describing the exact correspondence between my intuition about intuition and my understanding of quantum physics is beyond this set of posts. Hopefully I can expand on the connection later when I have time and will link here when I do.
+&lt;/small&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;
+    One intuitive reason that I find this analogy compelling is that it offers a plausible justification for why we would live in a universe with such preposterous physics as is suggested by our understanding of quantum mechanics.  First, it is because we would need this physical example as ansuch an analogy to help us recognize the strange model of how intuition could guide usunderstand this mechanism, and second because quantum physics could in fact be the underlying physical mechanism by which this theoretical construct of intuition becomes real.
+&lt;/p&gt;
+
+&lt;p&gt;
+    Nevertheless, I understand that the leap to accepting intuition as a valid directive lacks the rigor that previous derivations built upon. However, I cannot propose any other resolution given the constraints of my &lt;a href=&quot;/2020/05/philosophical-grind/&quot;&gt;previously derived philosophy&lt;/a&gt;. Therefore, I am currently accepting this hypothesis in order to make decisions about my life. In addition, as I have arrived at this leap using my own intuition, it is at the least not out of keeping with the philosophy it proposes. (Since Goedel tells us we can't have completeness and consistency anyway, I will at least choose to keep consistency where possible.)
+&lt;/p&gt;
+
+&lt;h4&gt;Conclusion&lt;/h4&gt;
+&lt;p&gt;
+    This is the current conclusion of my philosophical statement of beliefs.  It is a work in progress, and I reserve the right to edit parts as it becomes clearer how to improve this thesis.
+&lt;/p&gt;
+&lt;p&gt;
+    Importantly, I wish the reader to recognize that this philosophy really does underpin the work I am trying to do with my life.  It is an important anchor in my productive goals, and the creative works that I produce.
+&lt;/p&gt;
+&lt;p&gt;
+    Finally, I hope it goes without saying that I only want this philosophy to improve. If you believe that you see a major flaw in my reasoning, or if you believe something is underexplained, please do not hesitate to &lt;a href=&quot;https://viewfoil.bonkerfield.org/&quot;&gt;contact me&lt;/a&gt; to start a conversation.  I will definitely respond to any good faith attempts at refutation.
+&lt;/p&gt;
+&lt;p&gt;
+    OK, that concludes this philosophical effort for now.  Bye, have fun existing!
+&lt;/p&gt;</description>
+        <pubDate>Mon, 18 May 2020 00:00:00 -0700</pubDate>
+        <link>https://bonkerfield.org/2020/05/intuition-probability/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2020/05/intuition-probability/</guid>
+        
+        <category>philosophy</category>
+        
+        
+      </item>
     
       <item>
         <image>https://bonkerfield.org/assets/images/2020/swale_logo.svg</image>
