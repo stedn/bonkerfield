@@ -5,8 +5,8 @@
     <description>just your standard information identity spacetime field</description>
     <link>https://bonkerfield.org</link>
     <atom:link href="https://bonkerfield.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 23 Jul 2020 22:26:46 -0700</pubDate>
-    <lastBuildDate>Thu, 23 Jul 2020 22:26:46 -0700</lastBuildDate>
+    <pubDate>Fri, 24 Jul 2020 09:40:53 -0700</pubDate>
+    <lastBuildDate>Fri, 24 Jul 2020 09:40:53 -0700</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -6743,7 +6743,7 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
       </item>
     
       <item>
-        <image>https://bonkerfield.orghttp://2.bp.blogspot.com/-YHdCwZrollQ/Vm-K1o3JEjI/AAAAAAAAFc8/QF2LTMuCzmk/CNrF-7aWsAAqvLM.jpg%253Alarge.jpeg</image>
+        <image>https://bonkerfield.orghttps://2.bp.blogspot.com/-YHdCwZrollQ/Vm-K1o3JEjI/AAAAAAAAFc8/QF2LTMuCzmk/CNrF-7aWsAAqvLM.jpg%253Alarge.jpeg</image>
         <title>ARFI: A Robotic Dog</title>
         <description>&lt;p&gt;
         Over the past couple of months, me and my friends at &lt;a href=&quot;http://blog.artificechicago.org/&quot;&gt;Artifice Tech Education&lt;/a&gt; have been building our very own robot dog mascot, &lt;a href=&quot;http://blog.artificechicago.org/p/arfi-robotic-dog.html&quot;&gt;ARFI&lt;/a&gt;. He's been a lot of fun to build, and although we really don't have much in the way of &lt;a href=&quot;https://github.com/lots-of-things/arfi-the-kionoid&quot;&gt;plans&lt;/a&gt; or intricate design specs, I thought I'd share some of the production experience here. Hope you enjoy...
