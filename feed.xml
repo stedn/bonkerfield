@@ -5,13 +5,13 @@
     <description>just your standard information identity spacetime field</description>
     <link>https://bonkerfield.org</link>
     <atom:link href="https://bonkerfield.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 23 Jul 2020 22:21:59 -0700</pubDate>
-    <lastBuildDate>Thu, 23 Jul 2020 22:21:59 -0700</lastBuildDate>
+    <pubDate>Thu, 23 Jul 2020 22:26:46 -0700</pubDate>
+    <lastBuildDate>Thu, 23 Jul 2020 22:26:46 -0700</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
         <image>https://bonkerfield.org/assets/images/2020/braccio_summary.gif</image>
-        <title>su_chef: Grabbing Apples with a robotic arm YOLO object detection controlling a Braccio </title>
+        <title>su_chef prototype 1: My robotic arm that detects apples and picks them up</title>
         <description>&lt;p&gt;
     In my &lt;a href=&quot;/2020/07/automated-foodtruck-idea/&quot;&gt;previous post&lt;/a&gt;, I described my idea to start a worker-owned automation company by building a robotic food truck. I've started designing the interior of the truck and simulating it, but before I finish that, I wanted to get some experience working with a functional robotics tech stack.
 &lt;/p&gt;
