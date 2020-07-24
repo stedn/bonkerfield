@@ -5,9 +5,174 @@
     <description>just your standard information identity spacetime field</description>
     <link>https://bonkerfield.org</link>
     <atom:link href="https://bonkerfield.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 13 Jul 2020 20:00:20 -0700</pubDate>
-    <lastBuildDate>Mon, 13 Jul 2020 20:00:20 -0700</lastBuildDate>
+    <pubDate>Thu, 23 Jul 2020 22:21:59 -0700</pubDate>
+    <lastBuildDate>Thu, 23 Jul 2020 22:21:59 -0700</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <image>https://bonkerfield.org/assets/images/2020/braccio_summary.gif</image>
+        <title>su_chef: Grabbing Apples with a robotic arm YOLO object detection controlling a Braccio </title>
+        <description>&lt;p&gt;
+    In my &lt;a href=&quot;/2020/07/automated-foodtruck-idea/&quot;&gt;previous post&lt;/a&gt;, I described my idea to start a worker-owned automation company by building a robotic food truck. I've started designing the interior of the truck and simulating it, but before I finish that, I wanted to get some experience working with a functional robotics tech stack.
+&lt;/p&gt;
+
+&lt;p&gt;
+    After consulting with &lt;a href=&quot;https://github.com/jmichaux&quot;&gt;my friend&lt;/a&gt; who is getting a PhD in robotics, he suggested I get my feet wet by building a sous-chef. I thought that was perfect! But it's not &lt;strong&gt;sous&lt;/strong&gt; (meaning under in french), it's &lt;strong&gt;su&lt;/strong&gt; (meaning substitute user in Unix-speak).
+&lt;/p&gt;
+
+&lt;h2&gt;su_chef v0.1.1&lt;/h2&gt;
+
+&lt;p&gt;
+    Thanks to the amazing open source ROS and Arduino communities, it took me a little over a week to go from just parts and an idea to this functioning prototype.
+&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;400&quot; style=&quot;margin-bottom:10px;&quot; src=&quot;https://www.youtube.com/embed/y_R0t8rGT8o&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;
+    The Arduino Braccio arm works pretty well for the task and was fairly easy to set up. The ROS stack was more complex to set up but it allowed me to leverage a number of existing project and combine them. Finally, the reason that this project is (comparatively) cheap and easy to produce is that it is operating on a single surface. All the objects for detection are on the same plane so it becomes much easier to calibrate a mapping from a 2D image without the need for a fancy depth-aware camera.
+&lt;/p&gt;
+
+&lt;p&gt;
+    In the rest of this post I'll break down how the project works at a high level. But if you want to build it yourself and see how to run it, you can go straight to the instructions in my &lt;a href=&quot;https://github.com/lots-of-things/ros_braccio_opencv_obj_detect_grab&quot;&gt;source repository&lt;/a&gt;.
+&lt;/p&gt;
+
+
+&lt;h2&gt;Project Build&lt;/h2&gt;
+
+&lt;p&gt;
+    To connect the many parts of a production automation stack, robotics engineers will often use some kind of framework to coordinate tasks. For this project, I used an open source robotics operating system called &lt;a href=&quot;http://wiki.ros.org/ROS/Introduction&quot;&gt;ROS&lt;/a&gt; (Robot Operating System).
+&lt;/p&gt;
+&lt;p&gt;
+    The amazing thing about how ROS works is that messages from many different subtasks are passed through a shared communication system. So essentially, I just take usb images with one interface, pass them to a script for image detection, pass the output detections to a control script, and pass the control instructions to the Arduino. Importantly, all of those subtasks run independently with messages passing back and forth, and I don't have to deal with any of the communication handling.  It's kind of magical.
+&lt;/p&gt;
+
+&lt;p&gt;
+    Here is a diagram of the system architecture for this project.
+ &lt;/p&gt;
+
+&lt;img src=&quot;/assets/images/2020/braccio_pipeline.png&quot; alt=&quot;Braccio system architecture&quot;/&gt;
+
+&lt;p&gt;
+    In the following sections I'll go over some of the main components.
+&lt;/p&gt;
+
+&lt;h4&gt;Braccio Arm build&lt;/h4&gt;
+&lt;p&gt;For this project, I used a 5 degree-of-freedom (5 DOF) robotic arm called the &lt;a href=&quot;https://store.arduino.cc/usa/tinkerkit-braccio&quot;&gt;Arduino Braccio&lt;/a&gt;.  The arm is driven by an Arduino Uno which can be controlled from my laptop via a USB cable. The arm came with an end gripper that is capable of picking up objects of at least 1kg. It cost less than $250 and took about an hour to put together.&lt;/p&gt;
+
+&lt;div style=&quot;text-align:center;margin-left:auto;margin-right:auto;&quot;&gt;
+&lt;img style=&quot;display:inline;&quot; src=&quot;/assets/images/2020/20200714_175448.jpg&quot; alt=&quot;Braccio parts&quot; width=&quot;50%&quot;/&gt;
+
+&lt;img style=&quot;display:inline;&quot; src=&quot;/assets/images/2020/20200714_201821.jpg&quot; alt=&quot;Braccio mostly assembled&quot; width=&quot;28%&quot;/&gt;
+&lt;/div&gt;
+&lt;p&gt; The Arduino library for Braccio comes with basic tests that run directly on the Arduino to ensure that motors work.&lt;/p&gt;
+&lt;img src=&quot;/assets/images/2020/braccio_simple.gif&quot; alt=&quot;Braccio example motion&quot; width=&quot;40%&quot;/&gt;
+
+&lt;p&gt;
+    The Braccio Library demo program could control the motors with preprogrammed positions, but they didn't provide an interface to control the Braccio with external inputs.  For that I turned to existing ROS packages which worked by sending messages over the USB &lt;code&gt;/dev/ttyACM*&lt;/code&gt; port.
+&lt;/p&gt;
+
+&lt;h4&gt;Braccio Arm control with ROS RViz and MoveIt&lt;/h4&gt;
+
+&lt;p&gt;
+    I found a ROS-based &lt;a href=&quot;https://github.com/ohlr/braccio_arduino_ros_rviz&quot;&gt;project&lt;/a&gt; that allowed direct joint position control for the Braccio using RViz to vizualize its &lt;a href=&quot;https://industrial-training-master.readthedocs.io/en/melodic/_source/session3/Intro-to-URDF.html&quot;&gt;URDF&lt;/a&gt;. However, this project didn't easily show how to do motion planning or programmatic control so I combined that with another &lt;a href=&quot;https://github.com/zakizadeh/ros_braccio_moveit&quot;&gt;project&lt;/a&gt; that integrated with ROS MoveIt to allow connection through MoveIt's python interface. This subcomponent can be tried out in simulation using just RViz and an included URDF file.
+&lt;/p&gt;
+
+&lt;img src=&quot;/assets/images/2020/braccio_rviz.gif&quot; alt=&quot;Braccio motion simulated with RViz&quot; /&gt;
+
+&lt;p&gt;
+    When connected to the real Braccio arm this allowed me to directly program a few basic motions to pick up items.
+&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/tSzIZNoPe3g&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;
+    However, this method required manual specification of the arm position for each item to pick up, which isn't at all useful for grabbing and passing arbitrarily position items.  For that I needed to add image detection.
+&lt;/p&gt;
+
+&lt;h4&gt;OpenCV image detection integrated with ROS&lt;/h4&gt;
+
+&lt;p&gt;
+    Again, I combined a few projects together here.  I started with a project called &lt;a href=&quot;https://braccio-camai.readthedocs.io/en/latest/&quot;&gt;Braccio CamAI&lt;/a&gt; that was set up to use webcam object detection to control the Braccio. Unfortunately, the code relied on a standalone Edge TPU to run the image detection algorithm, which was expensive and a bit overkill for the task in my opinion.  I didn't want to buy one of those so I converted the modeling task over to OpenCV's YOLOv3 implementation based on &lt;a href=&quot;https://github.com/arunponnusamy/object-detection-opencv&quot;&gt;this project&lt;/a&gt;.
+&lt;/p&gt;
+
+&lt;p&gt;
+    The &lt;a href=&quot;https://medium.com/@ODSC/overview-of-the-yolo-object-detection-algorithm-7b52a745d3e0&quot;&gt;YOLO object detection algorithm&lt;/a&gt; applies a deep neural network to the image and identifies bounding boxes around any objects in the image that it is trained to recognize. The best thing about it is that it runs on the whole image just one time (hence the name You Only Look Once). This makes it fast enough that it can make repeated detections on streaming video even just on my wimpy CPU. For my purposes I started with a pre-trained model that had been trained with the capacity to identify apples amongst other things.
+&lt;/p&gt;
+
+&lt;img src=&quot;/assets/images/2020/braccio_detection.png&quot; alt=&quot;Apple Detected with OpenCV YOLOv3&quot; /&gt;
+
+&lt;h4&gt;Calibration and Transformation&lt;/h4&gt;
+
+&lt;p&gt;
+    The final and most difficult piece was the connection between image detection and Braccio control. This requires both transformation of object location from the image frame into a frame relative to the arm, and tranformation from desired arm grasping location into joint angles for the motors.
+&lt;/p&gt;
+
+&lt;p&gt;
+    To compute the mapping from image to real space, I designed a calibration protocol that moved the arm to various locations and then required me to click the location in the image. I recorded the locations of these points in image space and then used OpenCv's &lt;code&gt;cv2.findHomography&lt;/code&gt; and &lt;code&gt;cv2.perspectiveTransform&lt;/code&gt; functions. You can find more information on using those for python &lt;a href=&quot;https://docs.opencv.org/3.4/d1/de0/tutorial_py_feature_homography.html&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://stackoverflow.com/questions/27585355/python-open-cv-perspectivetransform&quot;&gt;here&lt;/a&gt;.
+&lt;/p&gt;
+
+&lt;img src=&quot;/assets/images/2020/braccio_calibration.gif&quot; alt=&quot;Braccio 2D calibration&quot; /&gt;
+
+&lt;p&gt;
+    Finally, to tranform from position to joint angles, I converted to polar coordinates with the arm base as the origin.  I also manually computed the shoulder, elbow, and wrist angles required for the gripper to position at a certain distance from the base based on the geometry of the arm itself and their joint angle limitations.
+&lt;/p&gt;
+
+&lt;img src=&quot;/assets/images/2020/braccio_dimensions.png&quot; alt=&quot;Braccio motion simulated with RViz&quot; /&gt;s
+
+&lt;p&gt;
+    Unfortunately, the Braccio has a limited annulus of positions from which it can lift objects off the 2D plane.  To address this, I added a small tweak that caused it to &quot;push back&quot; an object if it is too close to pick up.
+&lt;/p&gt;
+
+
+&lt;img src=&quot;/assets/images/2020/braccio_push.gif&quot; alt=&quot;Braccio pushing apple backwards&quot; /&gt;s
+
+&lt;p&gt;
+    With all these parts combined, the arm is able to identify and pick up apples. At this point, I still use the interface to manually control it, but it would be possible to layer on more logic to determine when and where the apple should be picked up and delivered.
+&lt;/p&gt;
+
+&lt;img src=&quot;/assets/images/2020/braccio_summary.gif&quot; alt=&quot;Braccio apple detection in action&quot; /&gt;s
+
+
+&lt;h2&gt;Next Steps&lt;/h2&gt;
+
+&lt;p&gt;
+    This is really just the start of the su_chef project. In another post I'll be elaborating on the whole design of the project, but here is a rough outline of the other things that need to be built.
+&lt;/p&gt;
+
+&lt;h5&gt;Identifying more objects&lt;/h5&gt;
+&lt;p&gt;
+    The first improvement will be adding more objects to identify for pickup.  Currently I've only implemented pickup of apples, but there are a few more food items I'd like to be able to find.  Unfortunately, this will probably involve training my own YOLO model on a specialized dataset.
+&lt;/p&gt;
+
+&lt;h5&gt;Building a veggie slicer&lt;/h5&gt;
+&lt;p&gt;
+    This won't involve robotic arm control per se, but it is still very important.  I essentially want to build something like a food slicer that can have veggies dropped from the top and output into a bowl below.
+&lt;/p&gt;
+
+&lt;h5&gt;Moving bowls&lt;/h5&gt;
+&lt;p&gt;
+    After chopping, the ingredients should drop into bowls below. Only one set of ingredients should be chopped at a time so the bowls will need to be repositioned on the opposite side of the robot.
+&lt;/p&gt;
+
+&lt;h5&gt;Spooning&lt;/h5&gt;
+&lt;p&gt;
+    Probably the hardest mechanical challenge will be spooning the chopped veggies from bowls onto the plate.  I suspect that I'll need to design a special spoon that can be reliably lifted by the arm.
+&lt;/p&gt;
+
+&lt;h5&gt;Smarter controls&lt;/h5&gt;
+&lt;p&gt;
+    After the mechanical components are taken care of, I'll need to wrap the logic behind the whole device together.  This will entail some kind of intelligent detection for when ingredient bowls are empty, and identifying which item to pick up and chop.
+&lt;/p&gt;</description>
+        <pubDate>Thu, 23 Jul 2020 00:00:00 -0700</pubDate>
+        <link>https://bonkerfield.org/2020/07/su-chef-braccio-yolo/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2020/07/su-chef-braccio-yolo/</guid>
+        
+        <category>robots</category>
+        
+        <category>technology</category>
+        
+        
+      </item>
     
       <item>
         <image>https://bonkerfield.org/assets/images/2020/robot_fist_bump.jpg</image>
