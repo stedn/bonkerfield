@@ -1,0 +1,65 @@
+---
+layout: post
+title: 'Updating su_chef object detection with custom trained model'
+date: '2020-07-23'
+author: will stedden
+tags:
+- robots
+- cooking
+- su_chef
+image: /assets/images/2020/apple_pepper_tomato_realtime.gif
+---
+
+
+<p>As part of my <a href="/su_chef.html">su_chef project</a>, I needed to expand the camera object detection model to include more classes that I am interested in. Originally, I was using the standard YOLOv3 weights file from <a href="https://pjreddie.com/darknet/yolo/">pjreddie's original</a>.  That model has 80 classes that it can identify, but unfortunately, most of them weren't really useful for my use case of finding and picking up fruits and vegetables.</p>
+
+<p>So last weekend, I learned how to fine-tune a YOLOv3 model using my own custom image dataset. It would be impractically slow to train the neural net on my personal computer without a GPU so I used Google Colab to train using their free GPUs.</p>
+
+<p>For the code, I packaged up a <a href="https://github.com/lots-of-things/yolo-colab-simple">tutorial repo</a> (based on <a href="https://github.com/kriyeng/yolo-on-colab-notebook
+">this one</a>) that pulls in training data from Google Drive, trains, and then stores trained model directly back into my Google Drive. I also included my example data and a test script to make it easier for others.  If you want to try it yourself, clone <a href="https://github.com/lots-of-things/yolo-colab-simple">the repo</a>, copy it to your Google Drive, and follow the instructions in the <code>README.md</code> file.
+</p>
+
+<p>Read on to see how it performed for my task.</p>
+
+<h4>Initial Results</h4>
+
+<p>To start, I just used some previously annotated data from Google's <a href="https://storage.googleapis.com/openimages/web/visualizer/index.html?set=train&type=detection&c=%2Fm%2F0jg57">OpenImages project</a> to get a dataset that includes apples, tomatoes, and bell peppers. After training for 2500 iterations it was doing a fair job at distinguishing between the three on example images like this.</p>
+
+<img src="/assets/images/2020/yolo_results.png" alt="Apple Tomato and Bell Pepper properly distinguished by YOLO model" />
+
+<p>Importantly, because I'm using the Darknet implementation, detection still works in near real-time even on my crappy CPU machine.  I incorporated this new model into my <a href="https://github.com/lots-of-things/ros_braccio_opencv_obj_detect_grab">ros_braccio_opencv_obj_detect_grab repo</a> and ran just the detection subroutine. It does a decent job of distinguishing between the three.</p>
+
+<img src="/assets/images/2020/apple_pepper_tomato_realtime.gif" alt="Apple Tomato and Bell Pepper properly distinguished by YOLO model" />
+
+<p>It isn't quite perfect, particularly with distinguishing the bell pepper from the tomato, but it's worth a shot to try it out with the full setup.</p>
+
+<p>When I use the new model with the overhead cam and try to pick things up, the performance is markedly worse.  As you can see, there .</p>
+
+
+
+
+<p>I kept training for more than 3k iterations but the avg loss had stopped improving on the test set, and there wasn't a noticeable improvement. I could take some time and quantify this, but I'm not writing a paper here, I'm just trying to pick up some veggies. I suspect the main failure is coming from the difference between my training data and the images that the overhead cam is providing since the annotated images are much higher quality than webcam images in my actual setup.  </p>
+
+<h4>Adding more and better training data</h4>
+
+<p>
+    To improve my performance I've begun adding more manually annotated data. During this process I learned something about myself.
+</p>
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">You know you&#39;ve found a machine learning project you love when you are willing to annotate your own data.</p>&mdash; Will Stedden (@bonkerfield) <a href="https://twitter.com/bonkerfield/status/1288267178672705536?ref_src=twsrc%5Etfw">July 29, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+<p>
+    Since I'm adding manually taken pictures from the overhead cam, I'm only able to add a few images at a time now.  Still, even after just adding 30 images and retraining for 1k more iterations, I'm seeing some qualitative improvement.
+</p>
+
+
+
+<p>
+    There will always be room for incremental improvement on this type of model, but this is good enough for me for now.
+</p>
+
+<h4>Next steps</h4>
+<p>
+    As outlined in <a href="/2020/07/su-chef-braccio-yolo/">my last post</a>, the next steps are going to be building my veggie slicer and moving around bowls under the slicer.  I've already started on the design of the slicer and I hope to spin that up by end of next week.
+</p>
