@@ -16,7 +16,7 @@ image: /assets/images/2020/apple_pepper_tomato_realtime.gif
 <p>So last weekend, I learned how to fine-tune a YOLOv3 model using my own custom image dataset. It would be impractically slow to train the neural net on my personal computer without a GPU so I used Google Colab to train using their free GPUs.</p>
 
 <p>For the code, I packaged up a <a href="https://github.com/lots-of-things/yolo-colab-simple">tutorial repo</a> (based on <a href="https://github.com/kriyeng/yolo-on-colab-notebook
-">this one</a>) that pulls in training data from Google Drive, trains, and then stores trained model directly back into my Google Drive. I also included my example data and a test script to make it easier for others.  If you want to try it yourself, clone <a href="https://github.com/lots-of-things/yolo-colab-simple">the repo</a>, copy it to your Google Drive, and follow the instructions in the <code>README.md</code> file.
+">this one</a>) that pulls in training data from Google Drive, trains, and then stores trained model directly back into my Google Drive. I also included my example data and a test script to make it easier for others.  If you want to try it yourself or adapt it, clone <a href="https://github.com/lots-of-things/yolo-colab-simple">the repo</a>, copy it to your Google Drive, and follow the instructions in the <code>README.md</code> file.
 </p>
 
 <p>Read on to see how it performed for my task.</p>
@@ -25,20 +25,17 @@ image: /assets/images/2020/apple_pepper_tomato_realtime.gif
 
 <p>To start, I just used some previously annotated data from Google's <a href="https://storage.googleapis.com/openimages/web/visualizer/index.html?set=train&type=detection&c=%2Fm%2F0jg57">OpenImages project</a> to get a dataset that includes apples, tomatoes, and bell peppers. After training for 2500 iterations it was doing a fair job at distinguishing between the three on example images like this.</p>
 
-<img src="/assets/images/2020/yolo_results.png" alt="Apple Tomato and Bell Pepper properly distinguished by YOLO model" />
+<img src="/assets/images/2020/yolo_first_results.png" alt="Apple Tomato and Bell Pepper properly distinguished by YOLO model" />
 
 <p>Importantly, because I'm using the Darknet implementation, detection still works in near real-time even on my crappy CPU machine.  I incorporated this new model into my <a href="https://github.com/lots-of-things/ros_braccio_opencv_obj_detect_grab">ros_braccio_opencv_obj_detect_grab repo</a> and ran just the detection subroutine. It does a decent job of distinguishing between the three.</p>
 
 <img src="/assets/images/2020/apple_pepper_tomato_realtime.gif" alt="Apple Tomato and Bell Pepper properly distinguished by YOLO model" />
 
-<p>It isn't quite perfect, particularly with distinguishing the bell pepper from the tomato, but it's worth a shot to try it out with the full setup.</p>
+<p>It isn't quite perfect though, particularly with distinguishing the bell pepper from the tomato. And when I use the new model with the overhead cam and try to pick things up, the performance is markedly worse.  Particularly, as shown in this example, the apple is almost always identified as a tomato and the tomato is often mistaken for bell pepper.</p>
 
-<p>When I use the new model with the overhead cam and try to pick things up, the performance is markedly worse.  As you can see, there .</p>
+<img src="/assets/images/2020/yolo_fail.gif" alt="YOLO model failing and misidentifying objects" />
 
-
-
-
-<p>I kept training for more than 3k iterations but the avg loss had stopped improving on the test set, and there wasn't a noticeable improvement. I could take some time and quantify this, but I'm not writing a paper here, I'm just trying to pick up some veggies. I suspect the main failure is coming from the difference between my training data and the images that the overhead cam is providing since the annotated images are much higher quality than webcam images in my actual setup.  </p>
+<p>Overall, this made the results unsatisfactory. I kept training for more than 3k iterations but the avg loss had stopped improving on the test set, and there wasn't a noticeable improvement. I could take some time and quantify this, but I'm not writing a paper here, I'm just trying to pick up some veggies. I suspect the main failure is coming from the difference between my training data and the images that the overhead cam is providing since the annotated images are much higher quality than webcam images in my actual setup.  </p>
 
 <h4>Adding more and better training data</h4>
 
@@ -50,16 +47,17 @@ image: /assets/images/2020/apple_pepper_tomato_realtime.gif
 
 
 <p>
-    Since I'm adding manually taken pictures from the overhead cam, I'm only able to add a few images at a time now.  Still, even after just adding 30 images and retraining for 1k more iterations, I'm seeing some qualitative improvement.
+    I took pictures directly from the overhead cam using the fruits and vegetables that we had in the house. Even after just adding just 40 images and retraining for 2k more iterations, I'm seeing some qualitative improvement.  Here's a hand-picked (pun intended) example.
 </p>
 
-
+<img src="/assets/images/2020/yolo_custom_data.png" alt="Comparison of YOLOv3 object detection of apples before and after training with custom data. Before: 4 apples are detected as tomato. After: 2 are detected as apple and other two are missed." />
 
 <p>
-    There will always be room for incremental improvement on this type of model, but this is good enough for me for now.
+    There will always be room for improvement on this type of model, but this is good enough for me for now. I'll continue fine-tuning as needed.
 </p>
 
 <h4>Next steps</h4>
 <p>
-    As outlined in <a href="/2020/07/su-chef-braccio-yolo/">my last post</a>, the next steps are going to be building my veggie slicer and moving around bowls under the slicer.  I've already started on the design of the slicer and I hope to spin that up by end of next week.
+    At least for now, this lets me update my pickup script to allow targeting of specific objects, which will enable the next phase. As outlined in <a href="/2020/07/su-chef-braccio-yolo/">my last post</a>, the next steps are going to be building my veggie slicer and moving around bowls under the slicer.  I've already started on the design of the slicer and I hope to spin that up by end of next week.
 </p>
+
