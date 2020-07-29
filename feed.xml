@@ -5,8 +5,8 @@
     <description>just your standard information identity spacetime field</description>
     <link>https://bonkerfield.org</link>
     <atom:link href="https://bonkerfield.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 29 Jul 2020 06:37:22 -0700</pubDate>
-    <lastBuildDate>Wed, 29 Jul 2020 06:37:22 -0700</lastBuildDate>
+    <pubDate>Wed, 29 Jul 2020 06:54:17 -0700</pubDate>
+    <lastBuildDate>Wed, 29 Jul 2020 06:54:17 -0700</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -528,7 +528,7 @@
     We're interested in the information identity spacetime field, which we can define as how much of the information identity is present across different points in space and time.  This accounts for minor corruptions in the information as well as intentional changes to the underlying information. Importantly, when your identifiable unit of information is first &quot;formed,&quot; it is often constructed by some restructuring of multiple previously existing pieces of information. This means that going back prior to its formation, you would see partial remnants of the information identity in any preceding ideas that might have been important.
 &lt;/p&gt;
 &lt;p&gt;
-    Taken together, these elements allow us to visualize like in the example below.  For more information on the visualization see &lt;a href=&quot;&quot;&gt;this post&lt;/a&gt;.
+    Taken together, these elements allow us to visualize like in the example below.  For more information on the visualization see &lt;a href=&quot;/2020/01/visualizing-the-bonkerfield/&quot;&gt;this post&lt;/a&gt;.
 &lt;/p&gt;
 
 &lt;img src=&quot;/assets/images/2020/big_bonkerfield.png&quot; alt=&quot;&quot; /&gt;
@@ -661,7 +661,7 @@
 
 &lt;h5&gt;Extrusion&lt;/h5&gt;
 &lt;p&gt;
-    Extrusion means that for every rule or piece of information that I have incorporated into my identity, its origins can be extruded backwards to the external sources where the information was derived or forwards to those places where that information will be outputted by myself.  To make this clearer, I've introduced the concept of the identifield, which I've elaborated on in &lt;a href=&quot;&quot;&gt;this post&lt;/a&gt;. The identifield places a tighter physical interpretation on this idea, but the intuition is just that any idea inside of me can be physically linked by the media that transmitted the idea to me. And this chain can be walked back again and again to connect the idea in me to that same idea wherever it resides throughout the entire universe.
+    Extrusion means that for every rule or piece of information that I have incorporated into my identity, its origins can be extruded backwards to the external sources where the information was derived or forwards to those places where that information will be outputted by myself.  To make this clearer, I've introduced the concept of the identifield, which I've elaborated on in &lt;a href=&quot;/2020/05/what-is-an-identifield/&quot;&gt;this post&lt;/a&gt;. The identifield places a tighter physical interpretation on this idea, but the intuition is just that any idea inside of me can be physically linked by the media that transmitted the idea to me. And this chain can be walked back again and again to connect the idea in me to that same idea wherever it resides throughout the entire universe.
 &lt;/p&gt;
 
 &lt;p&gt;
@@ -1044,7 +1044,7 @@ Epistemic status: Minimally researched musings from someone who has blogged (poo
     Unfortunately, in this instance, the modalities as described are incompatible. The Stream that is discrete and time ordered, is by definition non-isomorphic with the Garden. This are qualitatively distinct modes of representation, and so I must choose.
 &lt;/p&gt;
 &lt;p&gt;
-    But of course, no, that isn't true either. Similar to my &lt;a href=&quot;&quot;&gt;recent musings (link coming soon)&lt;/a&gt;  on the dualism of matter vs information, I find that the real beauty may lie precisely in the complexity of their combination.
+    But of course, no, that isn't true either. Similar to my &lt;a href=&quot;/2020/05/what-is-an-identifield/&quot;&gt;recent musings (link coming soon)&lt;/a&gt;  on the dualism of matter vs information, I find that the real beauty may lie precisely in the complexity of their combination.
 &lt;/p&gt;
 
 &lt;h4&gt;Swale&lt;/h4&gt;
@@ -1623,7 +1623,7 @@ Hit the &quot;create app&quot; button. Make note of the client ID and client sec
         <image>https://bonkerfield.org/assets/images/2020/social_media.png</image>
         <title>Getting so-so-social with #bridgy and the #IndieWeb</title>
         <description>&lt;p&gt;
-    I've avoided it for a long time, but recently, I've started to get really into social media&lt;a title=&quot;and not just because I can't go outside anymore&quot; onclick=&quot;return false;&quot;&gt;*&lt;/a&gt;. I've written about &lt;a href=&quot;https://viewfoil.bonkerfield.org/search/label/viewfoil&quot;&gt;why I bother&lt;/a&gt;, but briefly, it's to help contribute to fighting the bad parts of online life, like &lt;a href=&quot;https://www.wired.com/story/internet-deception-stay-what-do-now/&quot;&gt;disinformation&lt;/a&gt;, unrealistic &lt;a href=&quot;https://www.cnbc.com/2016/03/16/social-media-creates-group-think.html&quot;&gt;groupthink&lt;/a&gt;, and &lt;a href=&quot;https://newsroom.ucla.edu/releases/the-teenage-brain-on-social-media&quot;&gt;rising anxiety&lt;/a&gt;. I want to try to be a good internet citizen and make the social web a place where everyone acts in a way that they're proud of. 
+    I've avoided it for a long time, but recently, I've started to get really into social media&lt;a title=&quot;and not just because I can't go outside anymore&quot; onclick=&quot;return false;&quot;&gt;*&lt;/a&gt;. I've written about &lt;a href=&quot;https://viewfoil.bonkerfield.org/search/label/viewfoil&quot;&gt;why I bother&lt;/a&gt;, but briefly, it's to help contribute to fighting the bad parts of online life, like &lt;a href=&quot;https://www.wired.com/story/internet-deception-stay-what-do-now/&quot;&gt;disinformation&lt;/a&gt;, unrealistic &lt;a href=&quot;https://www.cnbc.com/2016/03/16/social-media-creates-group-think.html&quot;&gt;groupthink&lt;/a&gt;, and &lt;a href=&quot;https://newsroom.ucla.edu/releases/the-teenage-brain-on-social-media&quot;&gt;rising anxiety&lt;/a&gt;. I want to try to be a good internet citizen and make the social web a place where everyone acts in a way that they're proud of.
 &lt;/p&gt;
 &lt;p&gt;
     As a first step, I started by building an aggregator of all my blog and social activity to my &lt;a href=&quot;https://viewfoil.bonkerfield.org/&quot;&gt;&quot;viewfoil&quot;&lt;/a&gt;.  The goal is to have anybody on any social media platform be able to get a good sense of who I am (and that I am indeed a real person and not a bot/Russian troll). I now have most of my personal sources in the stream, and I've made it filterable by source.
@@ -1651,18 +1651,18 @@ Hit the &quot;create app&quot; button. Make note of the client ID and client sec
     As it turns out, the &lt;a href=&quot;https://indieweb.org/&quot;&gt;IndieWeb&lt;/a&gt; movement is also focused on consolidating your online identity and creating decentralized interactivity&amp;mdash;the two things that I was trying to do!  It seems the &lt;a href=&quot;https://indieweb.org/why&quot;&gt;motivations&lt;/a&gt; for this in the IndieWeb community might be slightly different from my own, but I feel like there's enough alignment in the general sentiment. Plus one of the IndieWeb &lt;a href=&quot;https://indieweb.org/principles&quot;&gt;principles&lt;/a&gt; is &lt;a href=&quot;https://indieweb.org/plurality&quot;&gt;plurality&lt;/a&gt; anyway, which is a principle I can always get behind. :)
 &lt;/p&gt;
 &lt;p&gt;
-    There are many facets to what the IndieWeb is trying to do, and I encourage you to &lt;a href=&quot;https://www.jvt.me/posts/2019/10/20/indieweb-talk/&quot;&gt;learn more&lt;/a&gt;. But I want to focus in on one technical component that I'm utilizing, called the &lt;a href=&quot;https://indieweb.org/Webmention&quot;&gt;webmention&lt;/a&gt;. A webmention is a way for your site to publicly notify another site that you've mentioned it.  
+    There are many facets to what the IndieWeb is trying to do, and I encourage you to &lt;a href=&quot;https://www.jvt.me/posts/2019/10/20/indieweb-talk/&quot;&gt;learn more&lt;/a&gt;. But I want to focus in on one technical component that I'm utilizing, called the &lt;a href=&quot;https://indieweb.org/Webmention&quot;&gt;webmention&lt;/a&gt;. A webmention is a way for your site to publicly notify another site that you've mentioned it.
 &lt;/p&gt;
 &lt;blockquote&gt;
     an @ mention that works across websites
     &lt;cite&gt;&lt;a href=&quot;https://twitter.com/rngala/status/852354426983591937&quot;&gt;Rony Ngala&lt;/a&gt;&lt;/cite&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;
-    The beauty of this tool is that it distributes discussions all around the web rather than keeping it locked up in one place. 
+    The beauty of this tool is that it distributes discussions all around the web rather than keeping it locked up in one place.
 &lt;span class=&quot;h-entry&quot;&gt;
  &lt;span class=&quot;p-name p-content&quot;&gt;To learn more about webmentions check out &lt;a href=&quot;https://mxb.dev/blog/using-webmentions-on-static-sites/&quot; class=&quot;u-in-reply-to&quot;&gt;this wonderful post&lt;/a&gt; by Max Bock.&lt;/span&gt;
 &lt;/span&gt;
-    And as a living example of webmention in action, you can check out the &lt;a href=&quot;https://mxb.dev/blog/using-webmentions-on-static-sites/#webmentions&quot;&gt;comments&lt;/a&gt; on Max's site to see my mention of his blog.  
+    And as a living example of webmention in action, you can check out the &lt;a href=&quot;https://mxb.dev/blog/using-webmentions-on-static-sites/#webmentions&quot;&gt;comments&lt;/a&gt; on Max's site to see my mention of his blog.
 &lt;/p&gt;
 &lt;p&gt;
     That comment will (hopefully) be posted to his site automatically by a python script that I wrote (using &lt;a href=&quot;https://indieweb.org/ronkyuu&quot;&gt;ronkyuu&lt;/a&gt;) to send mentions to all the sites I link to from my blog.  If everything works right, Max's site will hear my desperate cry for attention and pull the comment off my site and onto his.
@@ -1691,15 +1691,15 @@ Hit the &quot;create app&quot; button. Make note of the client ID and client sec
 
 
 &lt;p&gt;
-    Next,   
+    Next,
 &lt;span class=&quot;h-entry&quot;&gt;
- &lt;span class=&quot;p-name p-content&quot;&gt;I use a cool little javascript tool called &lt;a href=&quot;&quot;&gt;webmention.js&lt;/a&gt; to pull down the comments and render them in my page (thank you to &lt;a href=&quot;https://beesbuzz.biz/blog/4908-webmention-js-updated&quot; class=&quot;u-in-reply-to&quot;&gt;fluffy&lt;/a&gt;).&lt;/span&gt;
+ &lt;span class=&quot;p-name p-content&quot;&gt;I use a cool little javascript tool called &lt;a href=&quot;https://github.com/PlaidWeb/webmention.js&quot;&gt;webmention.js&lt;/a&gt; to pull down the comments and render them in my page (thank you to &lt;a href=&quot;https://beesbuzz.biz/blog/4908-webmention-js-updated&quot; class=&quot;u-in-reply-to&quot;&gt;fluffy&lt;/a&gt;).&lt;/span&gt;
 &lt;/span&gt; I might be updating that part of the stack to customize it, but it's great to have something to get it working right away. This is how it renders now on another page.
 &lt;/p&gt;
 
 &lt;img src=&quot;/assets/images/2020/bridgy_bonk.png&quot; style=&quot;border-style: solid;border-color:black&quot;/&gt;
 
-&lt;p&gt;Hopefully by the time you're seeing this, there will be some comments from twitter at the bottom of the page.  And if not, I encourage you to try out the tweet box to add your own.  It'll take a bit before your tweet gets pulled and updated on the page. 
+&lt;p&gt;Hopefully by the time you're seeing this, there will be some comments from twitter at the bottom of the page.  And if not, I encourage you to try out the tweet box to add your own.  It'll take a bit before your tweet gets pulled and updated on the page.
 &lt;span class=&quot;h-entry&quot;&gt;
  &lt;span class=&quot;p-name p-content&quot;&gt; I think it's amazing that such a cross-site collaboration is possible. Thank you snarfed for building this and keeping it going. I'm looking forward to playing with &lt;a href=&quot;https://snarfed.org/2019-01-02_bridgy-stats-update-4&quot; class=&quot;u-in-reply-to&quot;&gt;bridgy's usage data&lt;/a&gt; someday.&lt;/span&gt;
 &lt;/span&gt;
@@ -1815,7 +1815,7 @@ Hit the &quot;create app&quot; button. Make note of the client ID and client sec
 &lt;/p&gt;
 
 &lt;p&gt;
-	Of course, there are still major systemic roadblocks that prevent this kind of privacy from being possible. Full medical histories can't be revealed because it would lead to widespread discrimination and economic harm to vulnerable individuals. There are still many &lt;a href=&quot;https://www.businessinsider.com/economist-intelligence-unit-2017-democracy-index-worst-countries-2018-1&quot;&gt;extant&lt;/a&gt; &lt;a href= &quot;https://en.wikipedia.org/wiki/List_of_totalitarian_regimes&quot;&gt;despotic&lt;/a&gt; governments that would exploit this kind of information. And there are large numbers of people who casually break minor laws each day&lt;a title=&quot;though I would argue that such laws really ought to be reversed anyway, and universal transparency would make that clear&quot;href=&quot;&quot; onclick=&quot;return false;&quot;&gt;[*]&lt;/a&gt;.
+	Of course, there are still major systemic roadblocks that prevent this kind of privacy from being possible. Full medical histories can't be revealed because it would lead to widespread discrimination and economic harm to vulnerable individuals. There are still many &lt;a href=&quot;https://www.businessinsider.com/economist-intelligence-unit-2017-democracy-index-worst-countries-2018-1&quot;&gt;extant&lt;/a&gt; &lt;a href= &quot;https://en.wikipedia.org/wiki/List_of_totalitarian_regimes&quot;&gt;despotic&lt;/a&gt; governments that would exploit this kind of information. And there are large numbers of people who casually break minor laws each day&lt;a title=&quot;though I would argue that such laws really ought to be reversed anyway, and universal transparency would make that clear&quot; href=&quot;&quot; onclick=&quot;return false;&quot;&gt;[*]&lt;/a&gt;.
 &lt;/p&gt;
 &lt;p&gt;
 	We are not ready for global transparency yet.  However, I am in a place of unique privilege where I can move myself much closer to a life open to total external inspection.
@@ -1876,7 +1876,7 @@ Hit the &quot;create app&quot; button. Make note of the client ID and client sec
 
 
 &lt;p&gt;
-	I'll admit that I've gotten wrapped up in all this &lt;a href=&quot;https://www.vox.com/future-perfect/2020/2/6/21121303/coronavirus-wuhan-panic-pandemic-outbreak&quot;&gt;&lt;strike&gt;Wuhan&lt;/strike&gt;COVID-19 virus stuff&lt;/a&gt;, especially as it relates to the spread in the &lt;a href=&quot;https://www.mercurynews.com/2020/02/03/coronavirus-bay-area-has-highest-concentration-of-u-s-cases-that-shouldnt-be-a-surprise/&quot;&gt;SF Bay Area&lt;/a&gt;.  This is the first time that I've lived in a large population center while there is a potential epidemic looming, and the situation has me wondering whether we're already to the point where it's bound to spread here anyway.  I looked at &lt;a href=&quot;https://systems.jhu.edu/research/public-health/ncov-model-2/&quot;&gt;some results&lt;/a&gt; from one of the &lt;a href=&quot;&quot;&gt;sophisticated epidemiological models&lt;/a&gt;, and I got some reassurance.  But I was curious how these models worked under the hood.  
+	I'll admit that I've gotten wrapped up in all this &lt;a href=&quot;https://www.vox.com/future-perfect/2020/2/6/21121303/coronavirus-wuhan-panic-pandemic-outbreak&quot;&gt;&lt;strike&gt;Wuhan&lt;/strike&gt;COVID-19 virus stuff&lt;/a&gt;, especially as it relates to the spread in the &lt;a href=&quot;https://www.mercurynews.com/2020/02/03/coronavirus-bay-area-has-highest-concentration-of-u-s-cases-that-shouldnt-be-a-surprise/&quot;&gt;SF Bay Area&lt;/a&gt;.  This is the first time that I've lived in a large population center while there is a potential epidemic looming, and the situation has me wondering whether we're already to the point where it's bound to spread here anyway.  I looked at &lt;a href=&quot;https://systems.jhu.edu/research/public-health/ncov-model-2/&quot;&gt;some results&lt;/a&gt; from one of the sophisticated epidemiological models, and I got some reassurance.  But I was curious how these models worked under the hood.
 &lt;/p&gt;
 
 &lt;p&gt;
@@ -1891,7 +1891,7 @@ Hit the &quot;create app&quot; button. Make note of the client ID and client sec
 &lt;p style=&quot;text-align:center;&quot;&gt;&lt;small&gt;&lt;em&gt;I've left out a lot of detail in this section for simplicity.  To see the full derivation check out &lt;a href=&quot;https://github.com/lots-of-things/wuhan-virus-model/blob/master/Wuhan_to_SF_infection_model.pdf&quot;&gt;this document&lt;/a&gt;.&lt;/em&gt;&lt;/small&gt;&lt;/p&gt;
 
 &lt;p&gt;
-	I wanted to simplify the &lt;a href=&quot;https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology&quot;&gt;standard SIR model&lt;/a&gt;, and apply it to two locations. An SIR model normally computes how the spread of an epidemic varies as the population moves from Susceptible (S) to Infected (I) to Recovered (R).  
+	I wanted to simplify the &lt;a href=&quot;https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology&quot;&gt;standard SIR model&lt;/a&gt;, and apply it to two locations. An SIR model normally computes how the spread of an epidemic varies as the population moves from Susceptible (S) to Infected (I) to Recovered (R).
 &lt;/p&gt;
 
 
@@ -1901,7 +1901,7 @@ Hit the &quot;create app&quot; button. Make note of the client ID and client sec
 	There is a &lt;a href=&quot;http://www.public.asu.edu/~hnesse/classes/sir.html&quot;&gt;specific dynamics model&lt;/a&gt; that governs how S, I and R vary over time.  However, I'm only interested in the early phase of the epidemic, when it's only spread to a small fraction of the population.  In that case, we don't need to worry about how many people are susceptible or recovered, we just always assume that there are lots of uninfected people around who can become infected.
 &lt;/p&gt;
 &lt;p&gt;
-	I worked through defining a mathematical model that looks just at the early infection phase of an epidemic.  You can &lt;a href=&quot;https://github.com/lots-of-things/wuhan-virus-model/blob/master/Wuhan_to_SF_infection_model.pdf&quot;&gt;look here&lt;/a&gt; for details on how the math works, but I'll just give a short summary here. 
+	I worked through defining a mathematical model that looks just at the early infection phase of an epidemic.  You can &lt;a href=&quot;https://github.com/lots-of-things/wuhan-virus-model/blob/master/Wuhan_to_SF_infection_model.pdf&quot;&gt;look here&lt;/a&gt; for details on how the math works, but I'll just give a short summary here.
 &lt;/p&gt;
 
 &lt;h5&gt;Exponential Infection Model&lt;/h5&gt;
@@ -1916,7 +1916,7 @@ Hit the &quot;create app&quot; button. Make note of the client ID and client sec
 &lt;p lang=&quot;latex&quot;&gt;\frac{dI}{dt} = \gamma I - \kappa&lt;/p&gt;
 
 &lt;p&gt;
-	This equation is also fairly easy to solve, and &lt;a href=&quot;https://www.wolframalpha.com/input/?i=solve+dx%2Fdt+%3D+g*x+-+k+with+x%280%29%3Dk%2Fg%2B1&quot;&gt;the solution&lt;/a&gt; grows exponentially whenever the infected population crosses the threshold of &lt;span lang=&quot;latex&quot;&gt;\kappa / \gamma&lt;/span&gt;.  
+	This equation is also fairly easy to solve, and &lt;a href=&quot;https://www.wolframalpha.com/input/?i=solve+dx%2Fdt+%3D+g*x+-+k+with+x%280%29%3Dk%2Fg%2B1&quot;&gt;the solution&lt;/a&gt; grows exponentially whenever the infected population crosses the threshold of &lt;span lang=&quot;latex&quot;&gt;\kappa / \gamma&lt;/span&gt;.
 &lt;/p&gt;
 &lt;p&gt;
 	So this equation will work to model the epidemic in one place, but we want to see how the situation evolves if it can spread to another place, like the case for spreading from Wuhan to San Francisco. The two equations to model Wuhan and SF look like this:
@@ -1954,7 +1954,7 @@ Hit the &quot;create app&quot; button. Make note of the client ID and client sec
 
 &lt;h5&gt;Predicting the &quot;point of no return&quot;&lt;/h5&gt;
 &lt;p&gt;
-	I worked through this model a little more rigorously both with the simulations and with an analytical theory. I'm going to gloss over the rest of the analysis I did for this post, but please read &lt;a href=&quot;https://github.com/lots-of-things/wuhan-virus-model/blob/master/Wuhan_to_SF_infection_model.pdf&quot;&gt;the full article&lt;/a&gt;, and my &lt;a href=&quot;&quot;&gt;analysis notebook&lt;/a&gt; if you're curious how I arrived at the results. 
+	I worked through this model a little more rigorously both with the simulations and with an analytical theory. I'm going to gloss over the rest of the analysis I did for this post, but please read &lt;a href=&quot;https://github.com/lots-of-things/wuhan-virus-model/blob/master/Wuhan_to_SF_infection_model.pdf&quot;&gt;the full article&lt;/a&gt;, and my &lt;a href=&quot;https://github.com/lots-of-things/wuhan-virus-model/blob/master/wuhan_sf_infection_model.ipynb&quot;&gt;analysis notebook&lt;/a&gt; if you're curious how I arrived at the results.
 &lt;/p&gt;
 &lt;p&gt;
 	I evaluated the time of the &quot;point of no return,&quot; &lt;span lang=&quot;latex&quot;&gt;t_X&lt;/span&gt; as
@@ -1964,7 +1964,7 @@ Hit the &quot;create app&quot; button. Make note of the client ID and client sec
 
 
 &lt;p&gt;
-	Where I added in the initially infected population in Wuhan &lt;span lang=&quot;latex&quot;&gt;w_o&lt;/span&gt; as another parameter. This might look a little mysterious, but you can read &lt;a href=&quot;https://github.com/lots-of-things/wuhan-virus-model/blob/master/Wuhan_to_SF_infection_model.pdf&quot;&gt;the math&lt;/a&gt; to get a better sense of where it comes from. To double check my work, I directly measured &lt;span lang=&quot;latex&quot;&gt;t_x&lt;/span&gt; using my simulations.  
+	Where I added in the initially infected population in Wuhan &lt;span lang=&quot;latex&quot;&gt;w_o&lt;/span&gt; as another parameter. This might look a little mysterious, but you can read &lt;a href=&quot;https://github.com/lots-of-things/wuhan-virus-model/blob/master/Wuhan_to_SF_infection_model.pdf&quot;&gt;the math&lt;/a&gt; to get a better sense of where it comes from. To double check my work, I directly measured &lt;span lang=&quot;latex&quot;&gt;t_x&lt;/span&gt; using my simulations.
 &lt;/p&gt;
 
 &lt;img class=&quot;small_img&quot; src=&quot;/assets/images/2020/wuhan_tX.png&quot;/&gt;
@@ -1981,7 +1981,7 @@ Hit the &quot;create app&quot; button. Make note of the client ID and client sec
 &lt;/p&gt;
 
 &lt;p&gt;
-	Well fortunately, we can guesstimate &lt;span lang=&quot;latex&quot;&gt;\gamma&lt;/span&gt; just by looking at what's happened in Wuhan.  If we fit the &lt;a href=&quot;https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6&quot;&gt;data&lt;/a&gt; for the early part of the outbreak, which looks roughly exponential. The growth constant of that curve is &lt;span lang=&quot;latex&quot;&gt;\gamma&lt;/span&gt;. 
+	Well fortunately, we can guesstimate &lt;span lang=&quot;latex&quot;&gt;\gamma&lt;/span&gt; just by looking at what's happened in Wuhan.  If we fit the &lt;a href=&quot;https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6&quot;&gt;data&lt;/a&gt; for the early part of the outbreak, which looks roughly exponential. The growth constant of that curve is &lt;span lang=&quot;latex&quot;&gt;\gamma&lt;/span&gt;.
 &lt;/p&gt;
 
 &lt;img class=&quot;small_img&quot; src=&quot;/assets/images/2020/wuhan_cases.png&quot;/&gt;
@@ -2043,14 +2043,14 @@ Hit the &quot;create app&quot; button. Make note of the client ID and client sec
 &lt;/a&gt;
 
 &lt;p&gt;
-	To build it, I figured out the map projection using &lt;a href=&quot;https://bl.ocks.org/d3indepth/f7ece0ab9a3df06a8cecd2c0e33e54ef&quot;&gt;this tool&lt;/a&gt;, and I added the animated graph at the bottom based off &lt;a href=&quot;https://bl.ocks.org/d3noob/7030f35b72de721622b8&quot;&gt;this example&lt;/a&gt;.   The coolest and most fun part, though, was animating the dots that fly from Wuhan to San Francisco, which I based off this code &lt;a href=&quot;https://bl.ocks.org/d3indepth/aa1f036f6a0356cb1152c4b836e93990&quot;&gt;block&lt;/a&gt;.  
+	To build it, I figured out the map projection using &lt;a href=&quot;https://bl.ocks.org/d3indepth/f7ece0ab9a3df06a8cecd2c0e33e54ef&quot;&gt;this tool&lt;/a&gt;, and I added the animated graph at the bottom based off &lt;a href=&quot;https://bl.ocks.org/d3noob/7030f35b72de721622b8&quot;&gt;this example&lt;/a&gt;.   The coolest and most fun part, though, was animating the dots that fly from Wuhan to San Francisco, which I based off this code &lt;a href=&quot;https://bl.ocks.org/d3indepth/aa1f036f6a0356cb1152c4b836e93990&quot;&gt;block&lt;/a&gt;.
 &lt;/p&gt;
 
 &lt;p&gt;
-	The really tricky part was manually implementing a differential equation solver in javascript.  I ended up just using the &lt;a href=&quot;&quot;&gt;forward Euler&lt;/a&gt; method even though that is only &lt;a href=&quot;&quot;&gt;rough approximation&lt;/a&gt; of the true solution.  I figured it was more important to have simplicity in this animation since I'd already done the more &lt;a href=&quot;&quot;&gt;rigorous simulation&lt;/a&gt; with the &lt;a href=&quot;&quot;&gt;scipy ode solver&lt;/a&gt;.  
+	The really tricky part was manually implementing a differential equation solver in javascript.  I ended up just using the &lt;a href=&quot;https://en.wikipedia.org/wiki/Euler_method&quot;&gt;forward Euler&lt;/a&gt; method even though that is only rough approximation of the true solution.  I figured it was more important to have simplicity in this animation since I'd already done the more &lt;a href=&quot;&quot;&gt;rigorous simulation&lt;/a&gt; with the &lt;a href=&quot;https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.odeint.html&quot;&gt;scipy ode solver&lt;/a&gt;.
 &lt;/p&gt;
 &lt;p&gt;
-	To implement the solver, I just evaluate the differential equation above and keep track of the change in variable values. However, In order to visualize the number &quot;in transit&quot; flying from Wuhan to SF, I had to keep track of &lt;code&gt;mu * n_wu&lt;/code&gt; separately (ie &lt;code&gt;n_tr&lt;/code&gt;). 
+	To implement the solver, I just evaluate the differential equation above and keep track of the change in variable values. However, In order to visualize the number &quot;in transit&quot; flying from Wuhan to SF, I had to keep track of &lt;code&gt;mu * n_wu&lt;/code&gt; separately (ie &lt;code&gt;n_tr&lt;/code&gt;).
 &lt;/p&gt;
 
 &lt;pre&gt;
@@ -2060,7 +2060,7 @@ Hit the &quot;create app&quot; button. Make note of the client ID and client sec
 
   n_wu = n_wu + d_wu;
   n_sf = n_sf + d_sf;
-  
+
   d_tr = (mu * n_wu) * dt;
   n_tr = n_tr + d_tr;
 &lt;/pre&gt;
@@ -6060,7 +6060,7 @@ With everything clean, I reapplied gobs of grease and reinserted the bearings. T
     &lt;/p&gt;
 &lt;img border=&quot;0&quot; src=&quot;https://4.bp.blogspot.com/-eDtnSA_LrOk/V_6IY2EOMLI/AAAAAAAAHDE/cqVsQMqK4PQT5H720zmOrH-3aw-R6Tw8wCLcB/s1600/png%253Bbase64de1231217d364075.png&quot; title=&quot; &quot;/&gt;
 &lt;p&gt;
-        The web app is up and running. To try it out, hop on over to &lt;a href=&quot;sexpertise.makeloft.org&quot;&gt;sexpertise.makeloft.org&lt;/a&gt; (maybe use an incognito tab if you're skiddish about your search history). I'll eventually do another post all about the AWS backend API and the D3 frontend stuff, but for this post I want to focus in just on the text mining and analysis that went into building the condition suggester. To jump straight to the code you can check out &lt;a href=&quot;&quot;&gt;my Github repo&lt;/a&gt;.
+        The web app is up and running. To try it out, hop on over to &lt;a href=&quot;sexpertise.makeloft.org&quot;&gt;sexpertise.makeloft.org&lt;/a&gt; (maybe use an incognito tab if you're skiddish about your search history). I'll eventually do another post all about the AWS backend API and the D3 frontend stuff, but for this post I want to focus in just on the text mining and analysis that went into building the condition suggester. To jump straight to the code you can check out &lt;a href=&quot;https://github.com/lots-of-things/health-forum-analysis&quot;&gt;my Github repo&lt;/a&gt;.
     &lt;/p&gt;
 &lt;h3&gt;Health Forum Datasets&lt;/h3&gt;
 &lt;p&gt;
