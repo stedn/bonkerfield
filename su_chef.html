@@ -1,0 +1,23 @@
+---
+layout: post
+title: su_chef
+description: robotic substitute user for the kitchen
+---
+<p>Extra extra read all about it</p>
+
+
+  <div class="grid-xlarge">
+
+    <div class="posts__container" itemscope itemtype="http://schema.org/Blog" data-columns>
+
+      {% for post in site.posts %}
+
+        {% if post.tags contains 'su_chef' %}
+
+            {% include post-card-top.html %}
+
+        {% endif %}
+
+      {% endfor %}
+    </div>
+  </div>

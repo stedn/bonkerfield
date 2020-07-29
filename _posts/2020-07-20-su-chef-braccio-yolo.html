@@ -6,6 +6,7 @@ author: will stedden
 tags:
 - robots
 - technology
+- su_chef
 image: /assets/images/2020/braccio_summary.gif
 ---
 
@@ -114,20 +115,20 @@ image: /assets/images/2020/braccio_summary.gif
     Finally, to tranform from position to joint angles, I converted to polar coordinates with the arm base as the origin.  I also manually computed the shoulder, elbow, and wrist angles required for the gripper to position at a certain distance from the base based on the geometry of the arm itself and their joint angle limitations.
 </p>
 
-<img src="/assets/images/2020/braccio_dimensions.png" alt="Braccio motion simulated with RViz" />s
+<img src="/assets/images/2020/braccio_dimensions.png" alt="Braccio motion simulated with RViz" />
 
 <p>
     Unfortunately, the Braccio has a limited annulus of positions from which it can lift objects off the 2D plane.  To address this, I added a small tweak that caused it to "push back" an object if it is too close to pick up.
 </p>
 
 
-<img src="/assets/images/2020/braccio_push.gif" alt="Braccio pushing apple backwards" />s
+<img src="/assets/images/2020/braccio_push.gif" alt="Braccio pushing apple backwards" />
 
 <p>
     With all these parts combined, the arm is able to identify and pick up apples. At this point, I still use the interface to manually control it, but it would be possible to layer on more logic to determine when and where the apple should be picked up and delivered.
 </p>
 
-<img src="/assets/images/2020/braccio_summary.gif" alt="Braccio apple detection in action" />s
+<img src="/assets/images/2020/braccio_summary.gif" alt="Braccio apple detection in action" />
 
 
 <h2>Next Steps</h2>
