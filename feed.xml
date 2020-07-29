@@ -5,9 +5,76 @@
     <description>just your standard information identity spacetime field</description>
     <link>https://bonkerfield.org</link>
     <atom:link href="https://bonkerfield.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 24 Jul 2020 09:40:53 -0700</pubDate>
-    <lastBuildDate>Fri, 24 Jul 2020 09:40:53 -0700</lastBuildDate>
+    <pubDate>Wed, 29 Jul 2020 06:27:22 -0700</pubDate>
+    <lastBuildDate>Wed, 29 Jul 2020 06:27:22 -0700</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <image>https://bonkerfield.org/assets/images/2020/apple_pepper_tomato_realtime.gif</image>
+        <title>Updating su_chef object detection with custom trained model</title>
+        <description>&lt;p&gt;As part of my &lt;a href=&quot;/su_chef.html&quot;&gt;su_chef project&lt;/a&gt;, I needed to expand the camera object detection model to include more classes that I am interested in. Originally, I was using the standard YOLOv3 weights file from &lt;a href=&quot;https://pjreddie.com/darknet/yolo/&quot;&gt;pjreddie's original&lt;/a&gt;.  That model has 80 classes that it can identify, but unfortunately, most of them weren't really useful for my use case of finding and picking up fruits and vegetables.&lt;/p&gt;
+
+&lt;p&gt;So last weekend, I learned how to fine-tune a YOLOv3 model using my own custom image dataset. It would be impractically slow to train the neural net on my personal computer without a GPU so I used Google Colab to train using their free GPUs.&lt;/p&gt;
+
+&lt;p&gt;For the code, I packaged up a &lt;a href=&quot;https://github.com/lots-of-things/yolo-colab-simple&quot;&gt;tutorial repo&lt;/a&gt; (based on &lt;a href=&quot;https://github.com/kriyeng/yolo-on-colab-notebook
+&quot;&gt;this one&lt;/a&gt;) that pulls in training data from Google Drive, trains, and then stores trained model directly back into my Google Drive. I also included my example data and a test script to make it easier for others.  If you want to try it yourself or adapt it, clone &lt;a href=&quot;https://github.com/lots-of-things/yolo-colab-simple&quot;&gt;the repo&lt;/a&gt;, copy it to your Google Drive, and follow the instructions in the &lt;code&gt;README.md&lt;/code&gt; file.
+&lt;/p&gt;
+
+&lt;p&gt;Read on to see how it performed for my task.&lt;/p&gt;
+
+&lt;h4&gt;Initial Results&lt;/h4&gt;
+
+&lt;p&gt;To start, I just used some previously annotated data from Google's &lt;a href=&quot;https://storage.googleapis.com/openimages/web/visualizer/index.html?set=train&amp;type=detection&amp;c=%2Fm%2F0jg57&quot;&gt;OpenImages project&lt;/a&gt; to get a dataset that includes apples, tomatoes, and bell peppers. After training for 2500 iterations it was doing a fair job at distinguishing between the three on example images like this.&lt;/p&gt;
+
+&lt;img src=&quot;/assets/images/2020/yolo_first_results.png&quot; alt=&quot;Apple Tomato and Bell Pepper properly distinguished by YOLO model&quot; /&gt;
+
+&lt;p&gt;Importantly, because I'm using the Darknet implementation, detection still works in near real-time even on my crappy CPU machine.  I incorporated this new model into my &lt;a href=&quot;https://github.com/lots-of-things/ros_braccio_opencv_obj_detect_grab&quot;&gt;ros_braccio_opencv_obj_detect_grab repo&lt;/a&gt; and ran just the detection subroutine. It does a decent job of distinguishing between the three.&lt;/p&gt;
+
+&lt;img src=&quot;/assets/images/2020/apple_pepper_tomato_realtime.gif&quot; alt=&quot;Apple Tomato and Bell Pepper properly distinguished by YOLO model&quot; /&gt;
+
+&lt;p&gt;It isn't quite perfect though, particularly with distinguishing the bell pepper from the tomato. And when I use the new model with the overhead cam and try to pick things up, the performance is markedly worse.  Particularly, as shown in this example, the apple is almost always identified as a tomato and the tomato is often mistaken for bell pepper.&lt;/p&gt;
+
+&lt;img src=&quot;/assets/images/2020/yolo_fail.gif&quot; alt=&quot;YOLO model failing and misidentifying objects&quot; /&gt;
+
+&lt;p&gt;Overall, this made the results unsatisfactory. I kept training for more than 3k iterations but the avg loss had stopped improving on the test set, and there wasn't a noticeable improvement. I could take some time and quantify this, but I'm not writing a paper here, I'm just trying to pick up some veggies. I suspect the main failure is coming from the difference between my training data and the images that the overhead cam is providing since the annotated images are much higher quality than webcam images in my actual setup.  &lt;/p&gt;
+
+&lt;h4&gt;Adding more and better training data&lt;/h4&gt;
+
+&lt;p&gt;
+    To improve my performance I've begun adding more manually annotated data. During this process I learned something about myself.
+&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;You know you&amp;#39;ve found a machine learning project you love when you are willing to annotate your own data.&lt;/p&gt;&amp;mdash; Will Stedden (@bonkerfield) &lt;a href=&quot;https://twitter.com/bonkerfield/status/1288267178672705536?ref_src=twsrc%5Etfw&quot;&gt;July 29, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;
+    I took pictures directly from the overhead cam using the fruits and vegetables that we had in the house. Even after just adding just 40 images and retraining for 2k more iterations, I'm seeing some qualitative improvement.  Here's a hand-picked (pun intended) example.
+&lt;/p&gt;
+
+&lt;img src=&quot;/assets/images/2020/yolo_custom_data.png&quot; alt=&quot;Comparison of YOLOv3 object detection of apples before and after training with custom data. Before: 4 apples are detected as tomato. After: 2 are detected as apple and other two are missed.&quot; /&gt;
+
+&lt;p&gt;
+    There will always be room for improvement on this type of model, but this is good enough for me for now. I'll continue fine-tuning as needed.
+&lt;/p&gt;
+
+&lt;h4&gt;Next steps&lt;/h4&gt;
+&lt;p&gt;
+    At least for now, this lets me update my pickup script to allow targeting of specific objects, which will enable the next phase. As outlined in &lt;a href=&quot;/2020/07/su-chef-braccio-yolo/&quot;&gt;my last post&lt;/a&gt;, the next steps are going to be building my veggie slicer and moving around bowls under the slicer.  I've already started on the design of the slicer and I hope to spin that up by end of next week.
+&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 23 Jul 2020 00:00:00 -0700</pubDate>
+        <link>https://bonkerfield.org/2020/07/yolo-colab-veggie-identifier/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2020/07/yolo-colab-veggie-identifier/</guid>
+        
+        <category>robots</category>
+        
+        <category>cooking</category>
+        
+        <category>su_chef</category>
+        
+        
+      </item>
     
       <item>
         <image>https://bonkerfield.org/assets/images/2020/braccio_summary.gif</image>
@@ -117,20 +184,20 @@
     Finally, to tranform from position to joint angles, I converted to polar coordinates with the arm base as the origin.  I also manually computed the shoulder, elbow, and wrist angles required for the gripper to position at a certain distance from the base based on the geometry of the arm itself and their joint angle limitations.
 &lt;/p&gt;
 
-&lt;img src=&quot;/assets/images/2020/braccio_dimensions.png&quot; alt=&quot;Braccio motion simulated with RViz&quot; /&gt;s
+&lt;img src=&quot;/assets/images/2020/braccio_dimensions.png&quot; alt=&quot;Braccio motion simulated with RViz&quot; /&gt;
 
 &lt;p&gt;
     Unfortunately, the Braccio has a limited annulus of positions from which it can lift objects off the 2D plane.  To address this, I added a small tweak that caused it to &quot;push back&quot; an object if it is too close to pick up.
 &lt;/p&gt;
 
 
-&lt;img src=&quot;/assets/images/2020/braccio_push.gif&quot; alt=&quot;Braccio pushing apple backwards&quot; /&gt;s
+&lt;img src=&quot;/assets/images/2020/braccio_push.gif&quot; alt=&quot;Braccio pushing apple backwards&quot; /&gt;
 
 &lt;p&gt;
     With all these parts combined, the arm is able to identify and pick up apples. At this point, I still use the interface to manually control it, but it would be possible to layer on more logic to determine when and where the apple should be picked up and delivered.
 &lt;/p&gt;
 
-&lt;img src=&quot;/assets/images/2020/braccio_summary.gif&quot; alt=&quot;Braccio apple detection in action&quot; /&gt;s
+&lt;img src=&quot;/assets/images/2020/braccio_summary.gif&quot; alt=&quot;Braccio apple detection in action&quot; /&gt;
 
 
 &lt;h2&gt;Next Steps&lt;/h2&gt;
@@ -170,6 +237,8 @@
         <category>robots</category>
         
         <category>technology</category>
+        
+        <category>su_chef</category>
         
         
       </item>
@@ -334,6 +403,8 @@
         <category>technology</category>
         
         <category>philosophy</category>
+        
+        <category>su_chef</category>
         
         
       </item>

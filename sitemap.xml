@@ -361,6 +361,10 @@
 <lastmod>2020-07-23T00:00:00-07:00</lastmod>
 </url>
 <url>
+<loc>https://bonkerfield.org/2020/07/yolo-colab-veggie-identifier/</loc>
+<lastmod>2020-07-23T00:00:00-07:00</lastmod>
+</url>
+<url>
 <loc>https://bonkerfield.org/404</loc>
 </url>
 <url>
@@ -368,6 +372,9 @@
 </url>
 <url>
 <loc>https://bonkerfield.org/search/</loc>
+</url>
+<url>
+<loc>https://bonkerfield.org/su_chef/</loc>
 </url>
 <url>
 <loc>https://bonkerfield.org/subscribe/</loc>
@@ -491,5 +498,11 @@
 </url>
 <url>
 <loc>https://bonkerfield.org/tag/technology/</loc>
+</url>
+<url>
+<loc>https://bonkerfield.org/tag/su_chef/</loc>
+</url>
+<url>
+<loc>https://bonkerfield.org/tag/cooking/</loc>
 </url>
 </urlset>
