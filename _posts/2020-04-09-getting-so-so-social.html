@@ -4,12 +4,12 @@ title: 'Getting so-so-social with #bridgy and the #IndieWeb'
 date: '2020-04-09'
 author: will stedden
 image: /assets/images/2020/social_media.png
-tags: 
+tags:
 - web
 ---
 
 <p>
-    I've avoided it for a long time, but recently, I've started to get really into social media<a title="and not just because I can't go outside anymore" onclick="return false;">*</a>. I've written about <a href="https://viewfoil.bonkerfield.org/search/label/viewfoil">why I bother</a>, but briefly, it's to help contribute to fighting the bad parts of online life, like <a href="https://www.wired.com/story/internet-deception-stay-what-do-now/">disinformation</a>, unrealistic <a href="https://www.cnbc.com/2016/03/16/social-media-creates-group-think.html">groupthink</a>, and <a href="https://newsroom.ucla.edu/releases/the-teenage-brain-on-social-media">rising anxiety</a>. I want to try to be a good internet citizen and make the social web a place where everyone acts in a way that they're proud of. 
+    I've avoided it for a long time, but recently, I've started to get really into social media<a title="and not just because I can't go outside anymore" onclick="return false;">*</a>. I've written about <a href="https://viewfoil.bonkerfield.org/search/label/viewfoil">why I bother</a>, but briefly, it's to help contribute to fighting the bad parts of online life, like <a href="https://www.wired.com/story/internet-deception-stay-what-do-now/">disinformation</a>, unrealistic <a href="https://www.cnbc.com/2016/03/16/social-media-creates-group-think.html">groupthink</a>, and <a href="https://newsroom.ucla.edu/releases/the-teenage-brain-on-social-media">rising anxiety</a>. I want to try to be a good internet citizen and make the social web a place where everyone acts in a way that they're proud of.
 </p>
 <p>
     As a first step, I started by building an aggregator of all my blog and social activity to my <a href="https://viewfoil.bonkerfield.org/">"viewfoil"</a>.  The goal is to have anybody on any social media platform be able to get a good sense of who I am (and that I am indeed a real person and not a bot/Russian troll). I now have most of my personal sources in the stream, and I've made it filterable by source.
@@ -37,18 +37,18 @@ tags:
     As it turns out, the <a href="https://indieweb.org/">IndieWeb</a> movement is also focused on consolidating your online identity and creating decentralized interactivity&mdash;the two things that I was trying to do!  It seems the <a href="https://indieweb.org/why">motivations</a> for this in the IndieWeb community might be slightly different from my own, but I feel like there's enough alignment in the general sentiment. Plus one of the IndieWeb <a href="https://indieweb.org/principles">principles</a> is <a href="https://indieweb.org/plurality">plurality</a> anyway, which is a principle I can always get behind. :)
 </p>
 <p>
-    There are many facets to what the IndieWeb is trying to do, and I encourage you to <a href="https://www.jvt.me/posts/2019/10/20/indieweb-talk/">learn more</a>. But I want to focus in on one technical component that I'm utilizing, called the <a href="https://indieweb.org/Webmention">webmention</a>. A webmention is a way for your site to publicly notify another site that you've mentioned it.  
+    There are many facets to what the IndieWeb is trying to do, and I encourage you to <a href="https://www.jvt.me/posts/2019/10/20/indieweb-talk/">learn more</a>. But I want to focus in on one technical component that I'm utilizing, called the <a href="https://indieweb.org/Webmention">webmention</a>. A webmention is a way for your site to publicly notify another site that you've mentioned it.
 </p>
 <blockquote>
     an @ mention that works across websites
     <cite><a href="https://twitter.com/rngala/status/852354426983591937">Rony Ngala</a></cite>
 </blockquote>
 <p>
-    The beauty of this tool is that it distributes discussions all around the web rather than keeping it locked up in one place. 
+    The beauty of this tool is that it distributes discussions all around the web rather than keeping it locked up in one place.
 <span class="h-entry">
  <span class="p-name p-content">To learn more about webmentions check out <a href="https://mxb.dev/blog/using-webmentions-on-static-sites/" class="u-in-reply-to">this wonderful post</a> by Max Bock.</span>
 </span>
-    And as a living example of webmention in action, you can check out the <a href="https://mxb.dev/blog/using-webmentions-on-static-sites/#webmentions">comments</a> on Max's site to see my mention of his blog.  
+    And as a living example of webmention in action, you can check out the <a href="https://mxb.dev/blog/using-webmentions-on-static-sites/#webmentions">comments</a> on Max's site to see my mention of his blog.
 </p>
 <p>
     That comment will (hopefully) be posted to his site automatically by a python script that I wrote (using <a href="https://indieweb.org/ronkyuu">ronkyuu</a>) to send mentions to all the sites I link to from my blog.  If everything works right, Max's site will hear my desperate cry for attention and pull the comment off my site and onto his.
@@ -77,15 +77,15 @@ tags:
 
 
 <p>
-    Next,   
+    Next,
 <span class="h-entry">
- <span class="p-name p-content">I use a cool little javascript tool called <a href="">webmention.js</a> to pull down the comments and render them in my page (thank you to <a href="https://beesbuzz.biz/blog/4908-webmention-js-updated" class="u-in-reply-to">fluffy</a>).</span>
+ <span class="p-name p-content">I use a cool little javascript tool called <a href="https://github.com/PlaidWeb/webmention.js">webmention.js</a> to pull down the comments and render them in my page (thank you to <a href="https://beesbuzz.biz/blog/4908-webmention-js-updated" class="u-in-reply-to">fluffy</a>).</span>
 </span> I might be updating that part of the stack to customize it, but it's great to have something to get it working right away. This is how it renders now on another page.
 </p>
 
 <img src="/assets/images/2020/bridgy_bonk.png" style="border-style: solid;border-color:black"/>
 
-<p>Hopefully by the time you're seeing this, there will be some comments from twitter at the bottom of the page.  And if not, I encourage you to try out the tweet box to add your own.  It'll take a bit before your tweet gets pulled and updated on the page. 
+<p>Hopefully by the time you're seeing this, there will be some comments from twitter at the bottom of the page.  And if not, I encourage you to try out the tweet box to add your own.  It'll take a bit before your tweet gets pulled and updated on the page.
 <span class="h-entry">
  <span class="p-name p-content"> I think it's amazing that such a cross-site collaboration is possible. Thank you snarfed for building this and keeping it going. I'm looking forward to playing with <a href="https://snarfed.org/2019-01-02_bridgy-stats-update-4" class="u-in-reply-to">bridgy's usage data</a> someday.</span>
 </span>

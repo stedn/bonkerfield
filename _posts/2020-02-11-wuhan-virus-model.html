@@ -3,7 +3,7 @@ layout: post
 title: Modeling whether an outbreak of COVID-19 virus will hit San Francisco
 date: '2020-02-11'
 author: will stedden
-tags: 
+tags:
 - analysis
 - visualization
 - data science
@@ -17,7 +17,7 @@ image: /assets/images/2020/wuhan_overview_im.png
 
 
 <p>
-	I'll admit that I've gotten wrapped up in all this <a href="https://www.vox.com/future-perfect/2020/2/6/21121303/coronavirus-wuhan-panic-pandemic-outbreak"><strike>Wuhan</strike>COVID-19 virus stuff</a>, especially as it relates to the spread in the <a href="https://www.mercurynews.com/2020/02/03/coronavirus-bay-area-has-highest-concentration-of-u-s-cases-that-shouldnt-be-a-surprise/">SF Bay Area</a>.  This is the first time that I've lived in a large population center while there is a potential epidemic looming, and the situation has me wondering whether we're already to the point where it's bound to spread here anyway.  I looked at <a href="https://systems.jhu.edu/research/public-health/ncov-model-2/">some results</a> from one of the <a href="">sophisticated epidemiological models</a>, and I got some reassurance.  But I was curious how these models worked under the hood.  
+	I'll admit that I've gotten wrapped up in all this <a href="https://www.vox.com/future-perfect/2020/2/6/21121303/coronavirus-wuhan-panic-pandemic-outbreak"><strike>Wuhan</strike>COVID-19 virus stuff</a>, especially as it relates to the spread in the <a href="https://www.mercurynews.com/2020/02/03/coronavirus-bay-area-has-highest-concentration-of-u-s-cases-that-shouldnt-be-a-surprise/">SF Bay Area</a>.  This is the first time that I've lived in a large population center while there is a potential epidemic looming, and the situation has me wondering whether we're already to the point where it's bound to spread here anyway.  I looked at <a href="https://systems.jhu.edu/research/public-health/ncov-model-2/">some results</a> from one of the sophisticated epidemiological models, and I got some reassurance.  But I was curious how these models worked under the hood.
 </p>
 
 <p>
@@ -32,7 +32,7 @@ image: /assets/images/2020/wuhan_overview_im.png
 <p style="text-align:center;"><small><em>I've left out a lot of detail in this section for simplicity.  To see the full derivation check out <a href="https://github.com/lots-of-things/wuhan-virus-model/blob/master/Wuhan_to_SF_infection_model.pdf">this document</a>.</em></small></p>
 
 <p>
-	I wanted to simplify the <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology">standard SIR model</a>, and apply it to two locations. An SIR model normally computes how the spread of an epidemic varies as the population moves from Susceptible (S) to Infected (I) to Recovered (R).  
+	I wanted to simplify the <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology">standard SIR model</a>, and apply it to two locations. An SIR model normally computes how the spread of an epidemic varies as the population moves from Susceptible (S) to Infected (I) to Recovered (R).
 </p>
 
 
@@ -42,7 +42,7 @@ image: /assets/images/2020/wuhan_overview_im.png
 	There is a <a href="http://www.public.asu.edu/~hnesse/classes/sir.html">specific dynamics model</a> that governs how S, I and R vary over time.  However, I'm only interested in the early phase of the epidemic, when it's only spread to a small fraction of the population.  In that case, we don't need to worry about how many people are susceptible or recovered, we just always assume that there are lots of uninfected people around who can become infected.
 </p>
 <p>
-	I worked through defining a mathematical model that looks just at the early infection phase of an epidemic.  You can <a href="https://github.com/lots-of-things/wuhan-virus-model/blob/master/Wuhan_to_SF_infection_model.pdf">look here</a> for details on how the math works, but I'll just give a short summary here. 
+	I worked through defining a mathematical model that looks just at the early infection phase of an epidemic.  You can <a href="https://github.com/lots-of-things/wuhan-virus-model/blob/master/Wuhan_to_SF_infection_model.pdf">look here</a> for details on how the math works, but I'll just give a short summary here.
 </p>
 
 <h5>Exponential Infection Model</h5>
@@ -57,7 +57,7 @@ image: /assets/images/2020/wuhan_overview_im.png
 <p lang="latex">\frac{dI}{dt} = \gamma I - \kappa</p>
 
 <p>
-	This equation is also fairly easy to solve, and <a href="https://www.wolframalpha.com/input/?i=solve+dx%2Fdt+%3D+g*x+-+k+with+x%280%29%3Dk%2Fg%2B1">the solution</a> grows exponentially whenever the infected population crosses the threshold of <span lang="latex">\kappa / \gamma</span>.  
+	This equation is also fairly easy to solve, and <a href="https://www.wolframalpha.com/input/?i=solve+dx%2Fdt+%3D+g*x+-+k+with+x%280%29%3Dk%2Fg%2B1">the solution</a> grows exponentially whenever the infected population crosses the threshold of <span lang="latex">\kappa / \gamma</span>.
 </p>
 <p>
 	So this equation will work to model the epidemic in one place, but we want to see how the situation evolves if it can spread to another place, like the case for spreading from Wuhan to San Francisco. The two equations to model Wuhan and SF look like this:
@@ -95,7 +95,7 @@ image: /assets/images/2020/wuhan_overview_im.png
 
 <h5>Predicting the "point of no return"</h5>
 <p>
-	I worked through this model a little more rigorously both with the simulations and with an analytical theory. I'm going to gloss over the rest of the analysis I did for this post, but please read <a href="https://github.com/lots-of-things/wuhan-virus-model/blob/master/Wuhan_to_SF_infection_model.pdf">the full article</a>, and my <a href="">analysis notebook</a> if you're curious how I arrived at the results. 
+	I worked through this model a little more rigorously both with the simulations and with an analytical theory. I'm going to gloss over the rest of the analysis I did for this post, but please read <a href="https://github.com/lots-of-things/wuhan-virus-model/blob/master/Wuhan_to_SF_infection_model.pdf">the full article</a>, and my <a href="https://github.com/lots-of-things/wuhan-virus-model/blob/master/wuhan_sf_infection_model.ipynb">analysis notebook</a> if you're curious how I arrived at the results.
 </p>
 <p>
 	I evaluated the time of the "point of no return," <span lang="latex">t_X</span> as
@@ -105,7 +105,7 @@ image: /assets/images/2020/wuhan_overview_im.png
 
 
 <p>
-	Where I added in the initially infected population in Wuhan <span lang="latex">w_o</span> as another parameter. This might look a little mysterious, but you can read <a href="https://github.com/lots-of-things/wuhan-virus-model/blob/master/Wuhan_to_SF_infection_model.pdf">the math</a> to get a better sense of where it comes from. To double check my work, I directly measured <span lang="latex">t_x</span> using my simulations.  
+	Where I added in the initially infected population in Wuhan <span lang="latex">w_o</span> as another parameter. This might look a little mysterious, but you can read <a href="https://github.com/lots-of-things/wuhan-virus-model/blob/master/Wuhan_to_SF_infection_model.pdf">the math</a> to get a better sense of where it comes from. To double check my work, I directly measured <span lang="latex">t_x</span> using my simulations.
 </p>
 
 <img class="small_img" src="/assets/images/2020/wuhan_tX.png"/>
@@ -122,7 +122,7 @@ image: /assets/images/2020/wuhan_overview_im.png
 </p>
 
 <p>
-	Well fortunately, we can guesstimate <span lang="latex">\gamma</span> just by looking at what's happened in Wuhan.  If we fit the <a href="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6">data</a> for the early part of the outbreak, which looks roughly exponential. The growth constant of that curve is <span lang="latex">\gamma</span>. 
+	Well fortunately, we can guesstimate <span lang="latex">\gamma</span> just by looking at what's happened in Wuhan.  If we fit the <a href="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6">data</a> for the early part of the outbreak, which looks roughly exponential. The growth constant of that curve is <span lang="latex">\gamma</span>.
 </p>
 
 <img class="small_img" src="/assets/images/2020/wuhan_cases.png"/>
@@ -184,14 +184,14 @@ image: /assets/images/2020/wuhan_overview_im.png
 </a>
 
 <p>
-	To build it, I figured out the map projection using <a href="https://bl.ocks.org/d3indepth/f7ece0ab9a3df06a8cecd2c0e33e54ef">this tool</a>, and I added the animated graph at the bottom based off <a href="https://bl.ocks.org/d3noob/7030f35b72de721622b8">this example</a>.   The coolest and most fun part, though, was animating the dots that fly from Wuhan to San Francisco, which I based off this code <a href="https://bl.ocks.org/d3indepth/aa1f036f6a0356cb1152c4b836e93990">block</a>.  
+	To build it, I figured out the map projection using <a href="https://bl.ocks.org/d3indepth/f7ece0ab9a3df06a8cecd2c0e33e54ef">this tool</a>, and I added the animated graph at the bottom based off <a href="https://bl.ocks.org/d3noob/7030f35b72de721622b8">this example</a>.   The coolest and most fun part, though, was animating the dots that fly from Wuhan to San Francisco, which I based off this code <a href="https://bl.ocks.org/d3indepth/aa1f036f6a0356cb1152c4b836e93990">block</a>.
 </p>
 
 <p>
-	The really tricky part was manually implementing a differential equation solver in javascript.  I ended up just using the <a href="">forward Euler</a> method even though that is only <a href="">rough approximation</a> of the true solution.  I figured it was more important to have simplicity in this animation since I'd already done the more <a href="">rigorous simulation</a> with the <a href="">scipy ode solver</a>.  
+	The really tricky part was manually implementing a differential equation solver in javascript.  I ended up just using the <a href="https://en.wikipedia.org/wiki/Euler_method">forward Euler</a> method even though that is only rough approximation of the true solution.  I figured it was more important to have simplicity in this animation since I'd already done the more <a href="">rigorous simulation</a> with the <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.odeint.html">scipy ode solver</a>.
 </p>
 <p>
-	To implement the solver, I just evaluate the differential equation above and keep track of the change in variable values. However, In order to visualize the number "in transit" flying from Wuhan to SF, I had to keep track of <code>mu * n_wu</code> separately (ie <code>n_tr</code>). 
+	To implement the solver, I just evaluate the differential equation above and keep track of the change in variable values. However, In order to visualize the number "in transit" flying from Wuhan to SF, I had to keep track of <code>mu * n_wu</code> separately (ie <code>n_tr</code>).
 </p>
 
 <pre>
@@ -201,7 +201,7 @@ image: /assets/images/2020/wuhan_overview_im.png
 
   n_wu = n_wu + d_wu;
   n_sf = n_sf + d_sf;
-  
+
   d_tr = (mu * n_wu) * dt;
   n_tr = n_tr + d_tr;
 </pre>
