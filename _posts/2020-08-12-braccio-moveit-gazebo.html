@@ -1,0 +1,39 @@
+---
+layout: post
+title: 'Simulating the su_chef with ROS and Gazebo'
+date: '2020-08-12'
+author: will stedden
+tags:
+- robots
+- coding
+- su_chef
+image: /assets/images/2020/braccio_pick_demo.gif
+---
+
+As I'm continuing to develop my <a href="/su_chef"><code>su_chef</code></a>, I've realized it makes a lot of sense to start to work on some projects in simulation.  So last weekend, I took a deep dive in to integrating ROS MoveIt with the Gazebo physics simulator using a model of Arduino Braccio arm.  Gazebo lets me integrate a physics engine with my robot control so that I can have the robot apply forces to "realistic" objects to see how it will work in real life.
+
+In this demo, you can see the arm finding and moving the red block and the blue bowl.
+"
+<img src="/assets/images/2020/braccio_pick_demo.gif" alt="Simulated robot arm moves red block and blue bowl around."/>
+
+The red block is operating as a standin for the fruit or vegetable that I will eventually want the robot to chop up. It drops the block onto a little ramp and it rolls into a nearby bowl.
+
+Since the Braccio arm is fairly small and simple, it has a limited domain where it's able to pick up items.  To overcome this, I needed to program pickup from above and from the side, as well as subroutines that reposition the block if it's outside of the graspable region.
+
+Below I'll describe in more detail how I built the solver that converts block position into robot arm position, as well as some testing I did to see how often the arm succeeds at its task. Or if you'd like to jump into using it, as usual, the code is freely available here.
+
+
+<h4>The inverse kinematics solver</h4>
+
+<h4>Simulation interface</h4>
+I built a command line interface to control the
+
+
+<h4>Performance</h4>
+Finally, once I had the tools for manual control, I added feature to run many iterations sequentially to find shortcomings in the program.  It works by resetting the block to random positions that should be within the grabbable range.  Then it repeatedly runs the grab command until, the block is moved into the bowl area.  Then it moves the bowl and sees if everything works out OK.
+
+As you can see.
+
+<h4>Fine-tuning simulation physics parameters</h4>
+
+There is a lot of weirdness
