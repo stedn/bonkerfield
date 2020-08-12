@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Simulating the Braccio robotic arm with ROS and Gazebo'
-date: '2020-08-11'
+date: '2020-08-12'
 author: will stedden
 tags:
 - robots
@@ -11,20 +11,20 @@ image: /assets/images/2020/braccio_pick_demo.gif
 ---
 
 <p>
-    As I'm continuing to build my <a href="/su_chef"><code>su_chef</code> project</a>, I've realized it will be better to work using simulations for easier prototyping.  So last weekend, I took a deep dive into integrating motion planning with <a href="https://moveit.ros.org/">ROS MoveIt</a> with the <a href="http://gazebosim.org/">Gazebo physics simulator</a> using a virtual model of my <a href="https://store.arduino.cc/usa/tinkerkit-braccio">Arduino Braccio</a> arm.  Using these tools, I'm able to simulate my robot interacting with objects to quickly test how it will work without needing to have my whole setup running.
+    As I'm continuing to build my <a href="/su_chef"><code>su_chef</code> robotic food prep project</a>, I've realized it will be more efficient to design and prototype using robotics simulations.  So last weekend, I took a deep dive into integrating motion planning via <a href="https://moveit.ros.org/">ROS MoveIt</a> with the <a href="http://gazebosim.org/">Gazebo physics simulator</a> using a virtual model of my <a href="https://store.arduino.cc/usa/tinkerkit-braccio">Arduino Braccio</a> arm.  Using these tools, I'm able to simulate my robot interacting with objects to quickly test how it will work without needing to have my physical setup running.
 </p>
 
 <p>
-    In this demo, you can see the arm finding and moving the red block and the blue bowl.
+    In this demo, you can see the arm grabbing and moving the red block and the blue bowl.
 </p>
 
 <img src="/assets/images/2020/braccio_pick_demo.gif" alt="Simulated robot arm moves red block and blue bowl around."/>
 
 <p>
-    The red block is a stand-in for the vegetables that I will eventually want the <code>su_chef</code> to pick for chopping. Rolling down a ramp into a bowl is a major simplification of the actual process, but I figure that it made sense to first make a simplified package so that others could hopefully have an easier time getting started simulating with the Braccio arm and Gazebo.
+    The red block is a stand-in for the vegetables that I will eventually want the <code>su_chef</code> to pick for chopping. Rolling down a ramp into a bowl is a major simplification of the actual process, but I thought I would first make a simplified package so that others could reuse it and have an easier time getting started simulating with the Braccio arm and Gazebo.
 </p>
 <p>
-    I wasn't able to find anyone else's working simulator for the Braccio so I set up my own by combining a <a href="https://github.com/CesMak/kuka_arm">number</a> <a href="https://github.com/berkeleyopenarms/blue_moveit">of</a> <a href="https://github.com/jonabalzer/braccio_moveit_config">other</a> <a href="https://github.com/dpakshimpo/braccio-study">examples</a> I found.  I built a very bare-bones command line utility to control the robotic simulator to make it easier to interact with right off the bat.
+    I wasn't able to find anyone else's working simulator for the Braccio so I combined <a href="https://github.com/CesMak/kuka_arm">bits</a> from <a href="https://github.com/berkeleyopenarms/blue_moveit">several</a> <a href="https://github.com/jonabalzer/braccio_moveit_config">other</a> <a href="https://github.com/dpakshimpo/braccio-study">examples</a> I found.  I built a very bare-bones command line program that controls the robotic simulator to make it easier to use right off the bat.
 </p>
 <img class="small_img" src="/assets/images/2020/cmd_line_welcome.png" alt="ASCII splash screen for Arduino Braccio Pick+Drop Simulator."/>
 
@@ -45,11 +45,14 @@ image: /assets/images/2020/braccio_pick_demo.gif
     In my <a href="/2020/07/su-chef-braccio-yolo/">previous version</a> I just hard coded the equation to determine the angles needed for a given position.  However, this isn't ideal because (a) it's a lot of messy math to debug, and (2) this limits me to exactly 1 solution when really there are many acceptable solutions within a small window around the exact solution. To do this more generally, I needed an <a href="https://en.wikipedia.org/wiki/Inverse_kinematics#:~:text=In%20computer%20animation%20and%20robotics,the%20start%20of%20the%20chain.">inverse kinematics</a> (IK) solver. There are existing robotic arm inverse kinematics solvers, but most of them work on 6 degree-of-freedom (DOF) arms, while the Braccio only has 5 DOF.  This doesn't sound like a huge difference, but it means that the Braccio is actually highly constrained in the range of poses that it can take, which breaks most standard IK solvers.
 </p>
 <p>
-    So for this attempt, I switched to using a simple 2D IK solver based on <a href="https://studywolf.wordpress.com/2013/04/11/inverse-kinematics-of-3-link-arm-with-constrained-minimization-in-python/">this post</a> from <a href="https://twitter.com/northproof">Travis DeWolf</a>.  This solver aims to get the arm as close to the target point as posibble while maintaining allowed angle restrictions and certain height restrictions to keep it off the ground.  If you'd like to know more about how it works, I suggest Travis's <a href="https://studywolf.wordpress.com/2013/04/11/inverse-kinematics-of-3-link-arm-with-constrained-minimization-in-python/">blog post</a> or check out <a href="https://github.com/lots-of-things/braccio_moveit_gazebo/blob/965d95dbb96f9e418582252e8bc2ea056ab9b532/braccio_moveit_gazebo/scripts/target_object_sim.py#L477">the working solver code</a> in my simulation package.
+    So for this attempt, I switched to using a simple 2D IK solver based on <a href="https://studywolf.wordpress.com/2013/04/11/inverse-kinematics-of-3-link-arm-with-constrained-minimization-in-python/">this post</a> from <a href="https://twitter.com/northproof">Travis DeWolf</a>.  This solver aims to get the arm as close to the target point as posibble while maintaining allowed angle restrictions and certain height restrictions to keep it the right distance from the ground.  If you'd like to know more about how it works, I suggest Travis's <a href="https://studywolf.wordpress.com/2013/04/11/inverse-kinematics-of-3-link-arm-with-constrained-minimization-in-python/">blog post</a> or check out <a href="https://github.com/lots-of-things/braccio_moveit_gazebo/blob/965d95dbb96f9e418582252e8bc2ea056ab9b532/braccio_moveit_gazebo/scripts/target_object_sim.py#L477">the working solver code</a> in my simulation package.
 </p>
 <h4>Performance</h4>
 <p>
-    It took a few days of fine-tuning and retesting to get both the physics and the robot measurements worked out to the point where it was working consistently. Once I had it working somewhat consistently, I automated running many iterations sequentially to see how it performs.  I reset the block to random positions, and then attempt to pick it it up. I analyzed the data after about 100 runs and found that the performance was OK, but not great.  For the "top" picker the success rate was about 50%, while for the "side" picker it was only 33%.
+    It took a few days of fine-tuning and retesting to get both the physics and the robot measurements worked out to the point where it was working consistently. Once I had it working somewhat consistently, I collected data on many trials sequentially to see how it performs.  I reset the block to random positions, and then attempt to pick it it up.
+</p>
+<p>
+    For the "top" picker the success rate was about 50%, while for the "side" picker it was only 33%.
 </p>
 <img src="/assets/images/2020/braccio_gazebo_analysis_2.png" alt="Success vs failure counts" />
 <p>
@@ -65,7 +68,7 @@ image: /assets/images/2020/braccio_pick_demo.gif
 <iframe width="560" height="315" src="https://www.youtube.com/embed/uwx_z1y-S3I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <p>
-    After a little more digging, it became clear that the main problem was the sliding phase.  For the successful attempts, they all get into the pickup range correctly. In the figure on the right, you can see the two areas where the arm can reach to pick up.
+    After a little more digging, it became clear that the main problem was the sliding phase. Since the range of motion is so constrained there were only two narrow bands where the pick up was successful.  So if the block starts outside of that area, it needs to be slid back into that area first.  For the successful attempts, they all get into the pickup range correctly. In the figure on the right, you can see the two areas where the arm can reach to pick up.
 </p>
 
 <img src="/assets/images/2020/braccio_gazebo_analysis_4.png" alt="Success locations top vs side" />
@@ -76,9 +79,9 @@ image: /assets/images/2020/braccio_pick_demo.gif
 
 <h4>Next steps</h4>
 <p>
-    I could definitely optimize this further, but I figured it would be more valuable to wait until I have a more specific design for my <a href="/su_chef.html"><code>su_chef</code> project</a>.  So I'm just releasing this playground package for the Arduino and ROS communities to work with while I refine the <code>su_chef</code> design further.
+    I could definitely optimize this further, but I figured it would be more valuable to wait until I have a more specific environment for my <a href="/su_chef.html"><code>su_chef</code> design</a>.  But I figured I'd release this playground package for Arduino and ROS hackers like me to work with.
 </p>
 
 <p>
-    If you are interest in making it work better, always feel free to <a href="https://viewfoil.bonkerfield.org/">contact me</a>.  And if you want to hear more about the <code>su_chef</code> and my dream to start a worker-owned automated foodtruck follow me on <a href="https://twitter.com/bonkerfield">Twitter</a> or check out my newsletter below for updates.
+    If you are interest in making it work better, always feel free to <a href="https://viewfoil.bonkerfield.org/">contact me</a> or submit issues and pull requests<a href="https://github.com/lots-of-things/braccio_moveit_gazebo">on Github</a>.  And if you want to hear more about <code>su_chef</code> and my dream to start a worker-owned automated foodtruck follow me on <a href="https://twitter.com/bonkerfield">Twitter</a> or check out my newsletter below for updates.
 </p>
