@@ -5,8 +5,8 @@
     <description>just your standard information identity spacetime field</description>
     <link>https://bonkerfield.org</link>
     <atom:link href="https://bonkerfield.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 12 Aug 2020 08:39:55 -0700</pubDate>
-    <lastBuildDate>Wed, 12 Aug 2020 08:39:55 -0700</lastBuildDate>
+    <pubDate>Wed, 12 Aug 2020 08:42:11 -0700</pubDate>
+    <lastBuildDate>Wed, 12 Aug 2020 08:42:11 -0700</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -94,7 +94,9 @@
         
         <category>robots</category>
         
-        <category>coding</category>
+        <category>code</category>
+        
+        <category>analysis</category>
         
         <category>su_chef</category>
         
