@@ -5,12 +5,104 @@
     <description>just your standard information identity spacetime field</description>
     <link>https://bonkerfield.org</link>
     <atom:link href="https://bonkerfield.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 29 Jul 2020 06:54:17 -0700</pubDate>
-    <lastBuildDate>Wed, 29 Jul 2020 06:54:17 -0700</lastBuildDate>
+    <pubDate>Wed, 12 Aug 2020 08:39:55 -0700</pubDate>
+    <lastBuildDate>Wed, 12 Aug 2020 08:39:55 -0700</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
-        <image>https://bonkerfield.org/assets/images/2020/apple_pepper_tomato_realtime.gif</image>
+        <image>https://bonkerfield.org/assets/images/2020/braccio_pick_demo.gif</image>
+        <title>Simulating the Braccio robotic arm with ROS and Gazebo</title>
+        <description>&lt;p&gt;
+    As I'm continuing to build my &lt;a href=&quot;/su_chef&quot;&gt;&lt;code&gt;su_chef&lt;/code&gt; robotic food prep project&lt;/a&gt;, I've realized it will be more efficient to design and prototype using robotics simulations.  So last weekend, I took a deep dive into integrating motion planning via &lt;a href=&quot;https://moveit.ros.org/&quot;&gt;ROS MoveIt&lt;/a&gt; with the &lt;a href=&quot;http://gazebosim.org/&quot;&gt;Gazebo physics simulator&lt;/a&gt; using a virtual model of my &lt;a href=&quot;https://store.arduino.cc/usa/tinkerkit-braccio&quot;&gt;Arduino Braccio&lt;/a&gt; arm.  Using these tools, I'm able to simulate my robot interacting with objects to quickly test how it will work without needing to have my physical setup running.
+&lt;/p&gt;
+
+&lt;p&gt;
+    In this demo, you can see the arm grabbing and moving the red block and the blue bowl.
+&lt;/p&gt;
+
+&lt;img src=&quot;/assets/images/2020/braccio_pick_demo.gif&quot; alt=&quot;Simulated robot arm moves red block and blue bowl around.&quot;/&gt;
+
+&lt;p&gt;
+    The red block is a stand-in for the vegetables that I will eventually want the &lt;code&gt;su_chef&lt;/code&gt; to pick for chopping. Rolling down a ramp into a bowl is a major simplification of the actual process, but I thought I would first make a simplified package so that others could reuse it and have an easier time getting started simulating with the Braccio arm and Gazebo.
+&lt;/p&gt;
+&lt;p&gt;
+    I wasn't able to find anyone else's working simulator for the Braccio so I combined &lt;a href=&quot;https://github.com/CesMak/kuka_arm&quot;&gt;bits&lt;/a&gt; from &lt;a href=&quot;https://github.com/berkeleyopenarms/blue_moveit&quot;&gt;several&lt;/a&gt; &lt;a href=&quot;https://github.com/jonabalzer/braccio_moveit_config&quot;&gt;other&lt;/a&gt; &lt;a href=&quot;https://github.com/dpakshimpo/braccio-study&quot;&gt;examples&lt;/a&gt; I found.  I built a very bare-bones command line program that controls the robotic simulator to make it easier to use right off the bat.
+&lt;/p&gt;
+&lt;img class=&quot;small_img&quot; src=&quot;/assets/images/2020/cmd_line_welcome.png&quot; alt=&quot;ASCII splash screen for Arduino Braccio Pick+Drop Simulator.&quot;/&gt;
+
+&lt;p&gt;
+    If you'd like to jump into using it, the code and instructions are &lt;a href=&quot;https://github.com/lots-of-things/braccio_moveit_gazebo&quot;&gt;available here&lt;/a&gt;. Below I've describe how arm is able to determine where to pick up, as well as some testing I did to see how often the arm succeeds at its task.
+&lt;/p&gt;
+
+&lt;h4&gt;The Inverse Kinematics solver&lt;/h4&gt;
+
+&lt;p&gt;
+    Since the Braccio arm is fairly small and simple, it has a limited domain where it's able to pick up items.  To overcome this, I needed to program the ability to pick up from above and from the side, as well as subroutines that reposition the block if it's outside of the graspable region.
+&lt;/p&gt;
+&lt;p&gt;
+    The problem is that the arm itself is controlled by its joint angles so there is no direct way to tell it to go to a certain point in space. Instead, I had to compute what the arm's angles should be given a target location and orientation.  Working out the direction to turn the arm's base is fairly easy, but it is more difficult to figure out how to adjust the shoulder, elbow, and wrist angles to get to a specific distance from the base, labeled &lt;i&gt;r&lt;/i&gt; in this image.
+&lt;/p&gt;
+&lt;img src=&quot;/assets/images/2020/braccio_dimensions.png&quot; alt=&quot;Braccio arm calculations&quot; /&gt;
+&lt;p&gt;
+    In my &lt;a href=&quot;/2020/07/su-chef-braccio-yolo/&quot;&gt;previous version&lt;/a&gt; I just hard coded the equation to determine the angles needed for a given position.  However, this isn't ideal because (a) it's a lot of messy math to debug, and (2) this limits me to exactly 1 solution when really there are many acceptable solutions within a small window around the exact solution. To do this more generally, I needed an &lt;a href=&quot;https://en.wikipedia.org/wiki/Inverse_kinematics#:~:text=In%20computer%20animation%20and%20robotics,the%20start%20of%20the%20chain.&quot;&gt;inverse kinematics&lt;/a&gt; (IK) solver. There are existing robotic arm inverse kinematics solvers, but most of them work on 6 degree-of-freedom (DOF) arms, while the Braccio only has 5 DOF.  This doesn't sound like a huge difference, but it means that the Braccio is actually highly constrained in the range of poses that it can take, which breaks most standard IK solvers.
+&lt;/p&gt;
+&lt;p&gt;
+    So for this attempt, I switched to using a simple 2D IK solver based on &lt;a href=&quot;https://studywolf.wordpress.com/2013/04/11/inverse-kinematics-of-3-link-arm-with-constrained-minimization-in-python/&quot;&gt;this post&lt;/a&gt; from &lt;a href=&quot;https://twitter.com/northproof&quot;&gt;Travis DeWolf&lt;/a&gt;.  This solver aims to get the arm as close to the target point as posibble while maintaining allowed angle restrictions and certain height restrictions to keep it the right distance from the ground.  If you'd like to know more about how it works, I suggest Travis's &lt;a href=&quot;https://studywolf.wordpress.com/2013/04/11/inverse-kinematics-of-3-link-arm-with-constrained-minimization-in-python/&quot;&gt;blog post&lt;/a&gt; or check out &lt;a href=&quot;https://github.com/lots-of-things/braccio_moveit_gazebo/blob/965d95dbb96f9e418582252e8bc2ea056ab9b532/braccio_moveit_gazebo/scripts/target_object_sim.py#L477&quot;&gt;the working solver code&lt;/a&gt; in my simulation package.
+&lt;/p&gt;
+&lt;h4&gt;Performance&lt;/h4&gt;
+&lt;p&gt;
+    It took a few days of fine-tuning and retesting to get both the physics and the robot measurements worked out to the point where it was working consistently. Once I had it working somewhat consistently, I collected data on many trials sequentially to see how it performs.  I reset the block to random positions, and then attempt to pick it it up.
+&lt;/p&gt;
+&lt;p&gt;
+    For the &quot;top&quot; picker the success rate was about 50%, while for the &quot;side&quot; picker it was only 33%.
+&lt;/p&gt;
+&lt;img src=&quot;/assets/images/2020/braccio_gazebo_analysis_2.png&quot; alt=&quot;Success vs failure counts&quot; /&gt;
+&lt;p&gt;
+    At first, I assumed that there were probably consistent regions where it was failing, but after plotting the start positions of each, I couldn't see any real pattern.
+&lt;/p&gt;
+
+&lt;img src=&quot;/assets/images/2020/braccio_gazebo_analysis_3.png&quot; alt=&quot;Success vs failure locations&quot; /&gt;
+
+&lt;p&gt;
+    As you can see from this longer video there are a lot of ways to mess up.
+&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/uwx_z1y-S3I&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;
+    After a little more digging, it became clear that the main problem was the sliding phase. Since the range of motion is so constrained there were only two narrow bands where the pick up was successful.  So if the block starts outside of that area, it needs to be slid back into that area first.  For the successful attempts, they all get into the pickup range correctly. In the figure on the right, you can see the two areas where the arm can reach to pick up.
+&lt;/p&gt;
+
+&lt;img src=&quot;/assets/images/2020/braccio_gazebo_analysis_4.png&quot; alt=&quot;Success locations top vs side&quot; /&gt;
+
+&lt;p&gt;
+    For a little more analysis check out &lt;a href=&quot;https://github.com/lots-of-things/braccio_moveit_gazebo/blob/main/braccio_moveit_gazebo/scripts/results_analysis.ipynb&quot;&gt;this notebook&lt;/a&gt;.
+&lt;/p&gt;
+
+&lt;h4&gt;Next steps&lt;/h4&gt;
+&lt;p&gt;
+    I could definitely optimize this further, but I figured it would be more valuable to wait until I have a more specific environment for my &lt;a href=&quot;/su_chef.html&quot;&gt;&lt;code&gt;su_chef&lt;/code&gt; design&lt;/a&gt;.  But I figured I'd release this playground package for Arduino and ROS hackers like me to work with.
+&lt;/p&gt;
+
+&lt;p&gt;
+    If you are interest in making it work better, always feel free to &lt;a href=&quot;https://viewfoil.bonkerfield.org/&quot;&gt;contact me&lt;/a&gt; or submit issues and pull requests&lt;a href=&quot;https://github.com/lots-of-things/braccio_moveit_gazebo&quot;&gt;on Github&lt;/a&gt;.  And if you want to hear more about &lt;code&gt;su_chef&lt;/code&gt; and my dream to start a worker-owned automated foodtruck follow me on &lt;a href=&quot;https://twitter.com/bonkerfield&quot;&gt;Twitter&lt;/a&gt; or check out my newsletter below for updates.
+&lt;/p&gt;
+</description>
+        <pubDate>Wed, 12 Aug 2020 00:00:00 -0700</pubDate>
+        <link>https://bonkerfield.org/2020/08/braccio-moveit-gazebo/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2020/08/braccio-moveit-gazebo/</guid>
+        
+        <category>robots</category>
+        
+        <category>coding</category>
+        
+        <category>su_chef</category>
+        
+        
+      </item>
+    
+      <item>
+        <image>https://bonkerfield.org/assets/images/2020/yolo_veggie_still.png</image>
         <title>Updating su_chef object detection with custom trained model</title>
         <description>&lt;p&gt;As part of my &lt;a href=&quot;/su_chef.html&quot;&gt;su_chef project&lt;/a&gt;, I needed to expand the camera object detection model to include more classes that I am interested in. Originally, I was using the standard YOLOv3 weights file from &lt;a href=&quot;https://pjreddie.com/darknet/yolo/&quot;&gt;pjreddie's original&lt;/a&gt;.  That model has 80 classes that it can identify, but unfortunately, most of them weren't really useful for my use case of finding and picking up fruits and vegetables.&lt;/p&gt;
 
