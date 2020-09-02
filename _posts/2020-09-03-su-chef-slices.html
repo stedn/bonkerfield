@@ -1,0 +1,82 @@
+---
+layout: post
+title: 'su_chef slices'
+date: '2020-09-02'
+author: will stedden
+tags:
+- robots
+- code
+- electronics
+- su_chef
+image: /assets/images/2020/suchef_overhead.jpg
+---
+
+
+<p>
+    My <a href="/su_chef"><code>su_chef</code> robotics project</a> is coming along, and I've finally gotten to the point where I can actually slice vegetables.  It's still a little finicky, but the arm can identify vegetables, pick them up, drop them into a slicer, and then slice them. Check it out in action.
+</p>
+
+<iframe width="560" height="420" alt="robot arm drops tomato into meat slicer. meat slicer tray moves back and forth" src="https://www.youtube.com/embed/g6uELSKyPFU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>
+    This feels like such a huge milestone, and I'm kind of shocked that I got it working. I know I'm still far away from a robust functional prototype, but now, for the first time, I'm starting to actually believe that this idea might really happen.
+</p>
+
+<p>
+    If you're interested in setting up a similar system, you can check out the instructions and code <a href="https://github.com/lots-of-things/su_chef">here</a>.  In the rest of this post, I'm going over the build details for the slicer control.
+</p>
+
+
+<h4>Building the Slicer</h4>
+
+<p>Aside from some fine tuning my previous <a href="">arm controller</a> and <a href="">object detection algorithm</a>, the only new component that I added to the <code>su_chef</code> was the slicing apparatus. To build it, I combined a kitchen meat slicer, a motor and carriage from a broken printer, and an Arduino based relay.</p>
+
+<p>The printer carriage and motor move the slicer tray back and forth. They're to the meat slicer with a little wood brace that I built to fit around the base of the slicer.</p>
+<div style="text-align:center;margin-left:auto;margin-right:auto;">
+<img style="display:inline;" src="/assets/images/2020/slicer_view1.jpg" alt="Slicer carriage" width="40%"/>
+
+<img style="display:inline;" src="/assets/images/2020/slicer_view2.jpg" alt="Slicer carriage attached" width="40%"/>
+</div>
+
+<p>
+    The motor just turns a band in chassis, which moves the carriage back and forth.
+</p>
+
+<img src="/assets/images/2020/slice_manual.gif" alt="slicer tray slides under power"/>
+
+<p>
+    To control the slicer tray, I connected the motor to a relay that was controlled by an Arduino.  The relay circuit looks like the following.
+</p>
+
+<a href="https://quasarelectronics.co.uk/dc-motor-reversing-circuits-automatic-remote-control"><img class="small_img" src="/assets/images/2020/reversible-dc-motor-using-2-relays.gif" alt="reversible relay circuit"/></a>
+
+<p>
+    The pair of relays hooked up in this manner is required so that current can flow either direction depending on which way the relays are switched.  This lets the DC motor run backwards and forwards so the tray can move both ways.
+</p>
+<p>
+    To keep the motor from ramming the sides, I also added two small "fail-safe" switches in the track.  These will send a signal if the motor runs into them, informing the controller that the motor shouldn't push any further in that direction.
+</p>
+
+<img class="small_img" src="/assets/images/2020/failsafe_switch.jpg" alt="failsafe switch"/>
+
+<h4>Controlling the slicer tray motion</h4>
+
+<p>
+    To trigger the motion of the tray, I have to control the relays. To do this, I use a bit of Arduino code that can be found <a href="https://github.com/lots-of-things/su_chef/blob/main/scripts/relay.ino">here</a>.  The code flips the relays on for a preset time, but also checks if the fail-safe switches are triggered and closes the relays if that happens.
+</p>
+
+
+<p>
+    Finally, I also added some ROS specific code to the Arduino that listens over the serial connection to trigger the slice.  In my <a href="https://github.com/lots-of-things/su_chef/blob/6aace233b80e2e50d8bda6f88f7625671942e5c3/scripts/target_object.py#L484">python control script</a>, I send the <code>"go"</code> message whenever I want the slicer to go back and forth one time.
+</p>
+<img width="25%" src="/assets/images/2020/slice_relay.gif" alt="slicer tray slides with relay"/>
+
+
+<h4>Next Steps</h4>
+<p>
+    Thus far, the whole thing is very fragile, but my next step to get to v0.3.0 is to update the pickup part to make it better able to lift things in more orientations.  Also, I want to put in some checks that make sure the prior task completes before the next begins and aborts if something is going wrong.  Eventually, I know I will need to upgrade to a more precise arm, but I'm going to push as far as I can with the current one first.
+</p>
+
+<p>
+    In the meantime, I am starting to work on organizing a worker-owned company around this project, which I'm calling WORC Foods for Worker-Owned Robotics Cooperative Foods. You can read more about it on <a href="https://worcfoods.com">our website</a>. If you are at all interested in cofounding such a venture, please <a href="https://viewfoil.bonkerfield.org/">reach out</a>!
+</p>
