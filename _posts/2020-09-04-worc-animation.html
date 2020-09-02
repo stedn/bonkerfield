@@ -1,0 +1,78 @@
+---
+layout: post
+title: 'WORC Foods website animation'
+date: '2020-09-05'
+author: will stedden
+tags:
+- animation
+- design
+image: /assets/images/2020/road_animation.gif
+---
+
+
+<p>
+     A few weeks ago, while talking about my <a href="/su_chef">startup idea</a>, someone asked me if I had a website yet.  I figure it would make it easier to explain what I'm trying to do if I had a site to point to so last week I put one together.
+</p>
+
+<p>
+    While working on it, I realized that I'd really like a simple visual that instantly explained the gist of the idea I'm working on. I originally experiemented with a technical diagram, but I thought it looked a little to stiff for a company that is really focused on the impact we will have on people.
+</p>
+
+<p>
+    So instead, I wanted to make a more cartoonish characterization of the project.
+</p>
+
+<img src="/assets/images/2020/road_animation.gif" alt="foodtruck with robot inside making salads"/>
+
+<p>
+    I think I definitely hit cartoonish. Honestly, this might be one of the most whimsical things I've built around here for a long while.  It clearly still needs work, but for now, I think it gets the scrappy, unpolished, campy, mad-scientist vibe that I personally want the company to embody.
+</p>
+
+<p>
+    It feels very not-tech, which makes me happy. Hopefully others feel the same.
+</p>
+
+<h4>Building the Animation</h4>
+
+<p>
+    The cool thing about this animation was how much of it was done programmatically.  I honestly, don't have the patience to animate something like that by hand. It combined four different elements that I had to make in stages.
+</p>
+<ul>
+<li>Animate the robot arm</li>
+
+<li>Draw the truck</li>
+
+<li>Add the arm and plates to the truck image</li>
+
+<li>Add the truck to the background</li>
+</ul>
+
+<p>
+    For the first step, I had to find some way to animate a robot arm lifting and rotating.  All of my attempts to hand draw one failed miserably so I decided to just animate that element in 3D. To do that, I grabbed the parts from <a href="https://www.tinkercad.com/things/5gaWJeeW7hr-copy-of-robotic-arm-edge-3312016/edit">this Tinkercad file</a>, and animated them in Blender.  The output images from that looked something like this.
+</p>
+
+<img src="/assets/images/2020/arm_comic.gif" alt="robot arm going through motion"/>
+
+
+<p>
+    The only somewhat actually artistic part that I did was modifying <a href="https://vector.me/browse/345850/cm_isometric_yellow_van">this van image</a> to have a pile of veggies and some people inside.
+</p>
+
+<img src="/assets/images/2020/truck_animator_tst.svg" alt="foodtruck with robot inside making salads"/>
+
+<p>
+    After drawing the truck as it's own <code>svg</code>, I wrote some code to modify the elements of the truck image and save them as separate output <code>png</code> images.
+</p>
+
+<p>
+    Then in my script, I copy the truck images into the correct location in the background image, and crop the image to give it the illusion that the background is moving while the truck stays in the middle.
+</p>
+
+<p>
+    As the last step, I convert from many <code>png</code> images into a single animated <code>gif</code>.
+</p>
+
+<h4>Conclusion</h4>
+<p>The code for adding in the animations is <a href="https://github.com/stedn/worc-site/blob/main/make_animation.py">here</a> if you are needing to do something similar. It's highly under-documented so please <a href="https://viewfoil.bonkerfield.org">reach out</a> if you need to understand it.</p>
+
+<p>And if you have a minute, check out the website I made this animation for at <a href="https://worcfoods.com">worcfoods.com</a>. I'd love to hear what you think.</p>
