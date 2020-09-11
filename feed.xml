@@ -5,9 +5,89 @@
     <description>just your standard information identity spacetime field</description>
     <link>https://bonkerfield.org</link>
     <atom:link href="https://bonkerfield.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 02 Sep 2020 13:22:43 -0700</pubDate>
-    <lastBuildDate>Wed, 02 Sep 2020 13:22:43 -0700</lastBuildDate>
+    <pubDate>Fri, 11 Sep 2020 09:20:58 -0700</pubDate>
+    <lastBuildDate>Fri, 11 Sep 2020 09:20:58 -0700</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <image>https://bonkerfield.org/assets/images/2020/road_animation.gif</image>
+        <title>WORC Foods website animation</title>
+        <description>&lt;p&gt;
+     A few weeks ago, while talking about my &lt;a href=&quot;/su_chef&quot;&gt;startup idea&lt;/a&gt;, someone asked me if I had a website yet.  I figure it would make it easier to explain what I'm trying to do if I had a site to point to so last week I put one together.
+&lt;/p&gt;
+
+&lt;p&gt;
+    While working on it, I realized that I'd really like a simple visual that instantly explained the gist of the idea I'm working on. I originally experiemented with a technical diagram, but I thought it looked a little too stiff for a company that is really focused on the impact we will have on people.
+&lt;/p&gt;
+
+&lt;p&gt;
+    So instead, I wanted to make a more cartoonish characterization of the project.
+&lt;/p&gt;
+
+&lt;img src=&quot;/assets/images/2020/road_animation.gif&quot; alt=&quot;foodtruck with robot inside making salads&quot;/&gt;
+
+&lt;p&gt;
+    I think I definitely hit cartoonish. Honestly, this might be one of the most whimsical things I've built around here for a long while.  It clearly still needs work, but for now, I think it gets the scrappy, unpolished, campy, mad-scientist vibe that I personally want the company to embody.
+&lt;/p&gt;
+
+&lt;p&gt;
+    It feels very not-tech, which makes me happy. Hopefully others feel the same.
+&lt;/p&gt;
+
+&lt;h4&gt;Building the Animation&lt;/h4&gt;
+
+&lt;p&gt;
+    The cool thing about this animation was how much of it was done programmatically.  I honestly, don't have the patience to animate something like that by hand. It combined four different elements that I had to make in stages.
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Animate the robot arm&lt;/li&gt;
+
+&lt;li&gt;Draw the truck&lt;/li&gt;
+
+&lt;li&gt;Add the arm and plates to the truck image&lt;/li&gt;
+
+&lt;li&gt;Add the truck to the background&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;
+    For the first step, I had to find some way to animate a robot arm lifting and rotating.  All of my attempts to hand draw one failed miserably so I decided to just animate that element in 3D. To do that, I grabbed the parts from &lt;a href=&quot;https://www.tinkercad.com/things/5gaWJeeW7hr-copy-of-robotic-arm-edge-3312016/edit&quot;&gt;this Tinkercad file&lt;/a&gt;, and animated them in Blender.  The output images from that looked something like this.
+&lt;/p&gt;
+
+&lt;img src=&quot;/assets/images/2020/arm_comic.gif&quot; alt=&quot;robot arm going through motion&quot;/&gt;
+
+
+&lt;p&gt;
+    The only somewhat actually artistic part that I did was modifying &lt;a href=&quot;https://vector.me/browse/345850/cm_isometric_yellow_van&quot;&gt;this van image&lt;/a&gt; to have a pile of veggies and some people inside.
+&lt;/p&gt;
+
+&lt;img src=&quot;/assets/images/2020/truck_animator_tst.svg&quot; alt=&quot;foodtruck with robot inside making salads&quot;/&gt;
+
+&lt;p&gt;
+    After drawing the truck as it's own &lt;code&gt;svg&lt;/code&gt;, I wrote some code to modify the elements of the truck image and save them as separate output &lt;code&gt;png&lt;/code&gt; images.
+&lt;/p&gt;
+
+&lt;p&gt;
+    Then in my script, I copy the truck images into the correct location in the background image, and crop the image to give it the illusion that the background is moving while the truck stays in the middle.
+&lt;/p&gt;
+
+&lt;p&gt;
+    As the last step, I convert from many &lt;code&gt;png&lt;/code&gt; images into a single animated &lt;code&gt;gif&lt;/code&gt;.
+&lt;/p&gt;
+
+&lt;h4&gt;Conclusion&lt;/h4&gt;
+&lt;p&gt;The code for adding in the animations is &lt;a href=&quot;https://github.com/stedn/worc-site/blob/main/make_animation.py&quot;&gt;here&lt;/a&gt; if you are needing to do something similar. It's highly under-documented so please &lt;a href=&quot;https://viewfoil.bonkerfield.org&quot;&gt;reach out&lt;/a&gt; if you need to understand it.&lt;/p&gt;
+
+&lt;p&gt;And if you have a minute, check out the website I made this animation for at &lt;a href=&quot;https://worcfoods.com&quot;&gt;worcfoods.com&lt;/a&gt;. I'd love to hear what you think.&lt;/p&gt;</description>
+        <pubDate>Thu, 10 Sep 2020 00:00:00 -0700</pubDate>
+        <link>https://bonkerfield.org/2020/09/worc-animation/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2020/09/worc-animation/</guid>
+        
+        <category>animation</category>
+        
+        <category>design</category>
+        
+        
+      </item>
     
       <item>
         <image>https://bonkerfield.org/assets/images/2020/suchef_overhead.jpg</image>
