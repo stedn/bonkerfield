@@ -5,9 +5,104 @@
     <description>just your standard information identity spacetime field</description>
     <link>https://bonkerfield.org</link>
     <atom:link href="https://bonkerfield.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 11 Sep 2020 09:20:58 -0700</pubDate>
-    <lastBuildDate>Fri, 11 Sep 2020 09:20:58 -0700</lastBuildDate>
+    <pubDate>Sat, 10 Oct 2020 11:56:02 -0700</pubDate>
+    <lastBuildDate>Sat, 10 Oct 2020 11:56:02 -0700</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <image>https://bonkerfield.org/assets/images/2020/financial_model_graph.png</image>
+        <title>Financial Modeling for an Automated Foodtruck</title>
+        <description>&lt;p&gt;As I'm trying to think through the business details for &lt;a href=&quot;https://worcfoods.com&quot;&gt;WORC Foods&lt;/a&gt;, I've been building simple models to try to estimate what the financial picture would look like for the food truck business.  I've found lots of blogs that give high level descriptions, but I haven't seen any that really get into the week-to-week operational costs.&lt;/p&gt;
+
+&lt;p&gt;
+    So to get a better picture of how much money would be required and how feasible our plan is, I put together &lt;a href=&quot;https://docs.google.com/spreadsheets/d/1cYGITN9zTR1Qsl9zQoPbA2y2oi66G3BuH59JifmLpiA/edit?usp=sharing&quot;&gt;a spreadsheet&lt;/a&gt; that I hope could be useful to others who'd want to make similar estimates.
+&lt;/p&gt;
+
+&lt;h4&gt;Key Questions&lt;/h4&gt;
+&lt;p&gt;
+    There were a few key questions that I wanted to answer that I think might be useful to others.
+&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;How much would we need to sell to break even?&lt;/li&gt;
+    &lt;li&gt;How much investment would we need to not run out of money?&lt;/li&gt;
+    &lt;li&gt;When would we be able to pay back investors?&lt;/li&gt;
+    &lt;li&gt;How much income would our workers make?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+    Beyond these, I also just wanted to be able to see how the week to week costs would look, assuming some seasonal fluctuation in sales and operational hours.
+&lt;/p&gt;
+
+
+&lt;h4&gt;Assumptions&lt;/h4&gt;
+&lt;p&gt;
+    Any financial model is going to have a lot of assumptions and approximations built into it.  And of course, there is huge variability in the viability of the project based on each of the assumptions and how they interact. So to make it more clear what I have going into this model, I'll just quickly summarize the assumptions that I've included.  The exact values in these tables are of course all just estimates.
+&lt;/p&gt;
+&lt;p&gt;
+    The first set of assumptions are all around the costs of equipment, materials, and wages.
+&lt;/p&gt;
+&lt;img class=&quot;small_img&quot; src=&quot;/assets/images/2020/financial_model_costs.png&quot; alt=&quot;Spreadsheet of cost values&quot; /&gt;
+
+&lt;p&gt;
+    The second set are around how much money we'll make from sales and what the operating hours will look like.
+&lt;/p&gt;
+&lt;img class=&quot;small_img&quot; src=&quot;/assets/images/2020/financial_model_operations.png&quot; alt=&quot;Spreadsheet of operations values&quot; /&gt;
+&lt;p&gt;
+    Finally, I had to make some assumptions about how much investment we'd take, how much return the investors would expect, and (since we are setting up a cooperative) how we would return our profits to workers.
+&lt;/p&gt;
+&lt;img class=&quot;small_img&quot; src=&quot;/assets/images/2020/financial_model_investment.png&quot; alt=&quot;Spreadsheet of investment values&quot; /&gt;
+&lt;p&gt;
+    For each of these, I attempted to add sensisble estimates, but there's still a lot of uncertainty in each.
+&lt;/p&gt;
+&lt;p&gt;
+    To keep the model flexible, I implemented it as a Google Sheet where the assumptions can be varied to see how each would effect the outcome. In the spreadsheet each row represents one week the columns are estimates of all the costs and revenues for that week.
+&lt;/p&gt;
+
+
+&lt;img class=&quot;small_img&quot; src=&quot;/assets/images/2020/financial_model_weekly.png&quot; alt=&quot;Spreadsheet of weekly costs and revenues&quot; /&gt;
+
+&lt;h4&gt;Model Results&lt;/h4&gt;
+&lt;p&gt;
+    With a particular set of assumptions, I could plot the expected revenue, costs, cash on hand, and investment returns.
+&lt;/p&gt;
+&lt;img src=&quot;/assets/images/2020/financial_model_graph.png&quot; alt=&quot;Graph of cumulative revenue, costs, cash on hand, investment returns&quot; /&gt;
+&lt;p&gt;
+    In the example below you can see the seasonal variability in the cash on hand due to the expected seasonal variation expected from tourism in my area. Importantly, in this scenario, cash on hand never goes negative. I measured a few of the key metrics for this projection.
+&lt;/p&gt;
+
+&lt;img class=&quot;small_img&quot; src=&quot;/assets/images/2020/financial_model_metrics.png&quot; alt=&quot;Table with key metrics&quot; /&gt;
+
+&lt;p&gt;
+    Under these assumptions, two workers running the food truck would be able to make an average of $53k/year over a five year period, though a good deal of that compensation comes later after the initial investment is paid off.
+&lt;/p&gt;
+
+&lt;p&gt;
+    The minimum cash on hand would be $6k, which, admittedly, would be pretty tight, and wouldn't allow much margin for error. By varying, the base sales amount, I was able to find that if we don't sell an average of 18 items per operating hour, then we would run out of money early on, and need to negotiate a longer investment paypack period to stay cash flow positive.
+&lt;/p&gt;
+
+&lt;p&gt;
+    You can check out the results in more detail in the &lt;a href=&quot;https://docs.google.com/spreadsheets/d/1cYGITN9zTR1Qsl9zQoPbA2y2oi66G3BuH59JifmLpiA/edit?usp=sharing&quot;&gt;publicly available spreadsheet&lt;/a&gt;. Keep in mind that this is very much a living document, and we will be continuing to update it as we understand more.
+&lt;/p&gt;
+
+&lt;h4&gt;Conclusion&lt;/h4&gt;
+&lt;p&gt;
+    The overall outlook for WORC Foods looks good based on these results. However, the outcome relies heavily on the underlying assumptions plugged into the model.
+    Since I'm still unsure of the plausibility of some of my assumptions, I hesitate to say with certainty that I think this business will work.
+    Nevertheless the results thus far leave me cautiously optimistic, and they set the stage for more refined predictions as more details come to light.
+&lt;/p&gt;
+&lt;p&gt;
+    Having this model, I'm more prepared to go over some of the assumptions and timelines with my friends and advisors. At some point, I'd also like to build a slightly more advanced financial simulations that take uncertainty into account, but that will have to wait for another time.
+&lt;/p&gt;
+&lt;p&gt;
+    If you think you see a problem and could help make this more useful, please &lt;a href=&quot;https://viewfoil.bonkerfield.org&quot;&gt;contact me&lt;/a&gt;, or send a message to &lt;a href=&quot;https://worcfoods.com/#footer&quot;&gt;WORC Foods&lt;/a&gt;.
+&lt;/p&gt;</description>
+        <pubDate>Sat, 10 Oct 2020 00:00:00 -0700</pubDate>
+        <link>https://bonkerfield.org/2020/10/food-truck-financial-model/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2020/10/food-truck-financial-model/</guid>
+        
+        <category>analysis</category>
+        
+        
+      </item>
     
       <item>
         <image>https://bonkerfield.org/assets/images/2020/road_animation.gif</image>
