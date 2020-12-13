@@ -5,9 +5,53 @@
     <description>just your standard information identity spacetime field</description>
     <link>https://bonkerfield.org</link>
     <atom:link href="https://bonkerfield.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 11 Dec 2020 14:32:27 -0800</pubDate>
-    <lastBuildDate>Fri, 11 Dec 2020 14:32:27 -0800</lastBuildDate>
+    <pubDate>Sun, 13 Dec 2020 10:23:41 -0800</pubDate>
+    <lastBuildDate>Sun, 13 Dec 2020 10:23:41 -0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <image>https://bonkerfield.org</image>
+        <title>The Lisens: a license to simulate the sense of self</title>
+        <description>&lt;p&gt;For the past year, my &lt;a href=&quot;https://viewfoil.bonkerfield.org/2020/03/introducing-viewfoil-my-experiment-with.html&quot;&gt;viewfoil project&lt;/a&gt; has led me to expand my use of identity publication (aka social media) and consolidate my public technological identity footprint into &lt;a href=&quot;https://viewfoil.bonkerfield.org/&quot;&gt;one portal&lt;/a&gt; online.  My long-term goal with the project is to form an artificial intelligence simulation of my personal online behavior. In other words, I aim to someday build an algorithm that can replicate and potentially replace the portion of my mind that generates behavioral artifacts on the internet.&lt;/p&gt;
+
+But this forces me to ask a question:
+&lt;blockquote&gt;
+If I can pursue self-simulation with the data I am collecting, should any entity that comes into possession of such data be allowed to pursue a simulation of my mind?
+&lt;/blockquote&gt;
+
+&lt;p&gt;When researching this question, I realized that I couldn't find a very specific resolution to this in our current legal and ethical discussions about the intersection of data usage and sociological modeling.  To close that gap, I came up with the idea to intentionally license the ability for others to simulate my own consciousness, which I've dubbed &lt;strong&gt;the lisens&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h5&gt;What would it mean to simulate consciousness?&lt;/h5&gt;
+
+&lt;p&gt;What it means &lt;em&gt;to be oneself&lt;/em&gt; is one of the toughest questions to answer. Some current experiments simulating &lt;a href=&quot;https://lexfridman.com/deeptweets/&quot;&gt;public figures with AI&lt;/a&gt; makes us question where the line should be drawn. Is knowing how I might finish a sentence the same as knowing how I think?  Probably not. Truth be told, our current machine learning models are &lt;a href=&quot;https://www.theverge.com/2018/3/20/17138854/cambridge-analytica-facebook-data-trump-campaign-psychographic-microtargeting&quot;&gt;limited&lt;/a&gt; in their ability to replicate human decision making at all.  &lt;/p&gt;
+
+&lt;p&gt;But this limitation won't necessarily be the case forever. As we increase our capacity to simulate people's behavior, some &lt;a href=&quot;https://www.space.com/41749-elon-musk-living-in-simulation-rogan-podcast.html&quot;&gt;notable&lt;/a&gt; &lt;a href=&quot;https://www.scientificamerican.com/article/are-we-living-in-a-computer-simulation/&quot;&gt;figures&lt;/a&gt; have begun to point out that a sufficiently elaborate &lt;a href=&quot;https://www.scientificamerican.com/article/do-we-live-in-a-simulation-chances-are-about-50-50/&quot;&gt;simulation&lt;/a&gt; could in fact start to take on properties of self-awareness that could make the lived experience of simulation and reality &lt;a href=&quot;https://en.wikipedia.org/wiki/Brain_in_a_vat&quot;&gt;indistinguishable&lt;/a&gt;. A form of this idea was evoked memorably in the Matrix films. &lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/t-Nz6us7DUA&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;There are many reasons&lt;a href=&quot;#reason&quot;&gt;*&lt;/a&gt; that such a simulation could be invented, but perhaps the most popular &lt;a href=&quot;https://en.wikipedia.org/wiki/Simulation_hypothesis#The_simulation_argument&quot;&gt;explanation&lt;/a&gt; would be that as our society improves our simulation techniques, we could start to build simulations that could reconstruct our past. As an example, imagine that a socioligist of the future is trying to figure out what the hell happened in 2020 so she builds a model for how every person in the country voted in this election. &lt;/p&gt;
+
+&lt;p&gt;In the most extremely detailed simulation imaginable, the people simulated would actually feel as though they were really alive and making the decisions that you and I are making now. &lt;/p&gt;
+
+&lt;h5&gt;The ethics of consciousness simulation&lt;/h5&gt;
+
+&lt;p&gt;If all of this consciousness simulation sounds incredibly unethical that is because it certainly is. Of course, it becomes decidely less unethical if you can obtain &lt;a href=&quot;https://www.ama-assn.org/delivering-care/ethics/informed-consent&quot;&gt;informed consent&lt;/a&gt; from the person whose consciousness is to be simulated.  I assume that future researchers will be at least ethical enough to require this kind of consent, but this leads me to wonder whether there will be a lack of willing subjects from our era of history. In light of this, I asked myself whether it would be good idea to try to publicly declare my own consent to aid future researchers of human consciousness.&lt;/p&gt;
+
+&lt;p&gt;This caused me to arrive at the concept of a lisens (license of sense of self). The exact content of the lisens is still a work-in-progress, but you can see the current contents on &lt;a href=&quot;https://will.stedden.org/lisens&quot;&gt;my personal website&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I will address my reasons for why I feel comfortable lisens-ing myself in another post. At the very least, I hope that publicizing my decision to adopt a lisens should raise awareness to future researchers that they should definitely NOT simulate anyone's mind without determining whether the person in question had adopted a lisens themselves. As deep-learning impersonation models improve over the next few years, this may become important sooner than one might expect.&lt;/p&gt;
+
+&lt;p&gt;If you are thinking about adopting a lisens for yourself, please feel free to reach out to me.  If there is enough interest in this concept, I want to start to build an easily accessible &lt;a href=&quot;https://github.com/stedn/lisens-index&quot;&gt;index&lt;/a&gt; that could allow future researchers to find those who would be willing to participate in a future simiulation of themselves. Or, perhaps &lt;em&gt;the present&lt;/em&gt; simulation...&lt;/p&gt;
+
+&lt;p id=&quot;reason&quot;&gt;&lt;small&gt;&lt;strong&gt;*PS:&lt;/strong&gt; I actually suspect the most likely reason for why we would be simulated would not be to simulate the past. I think a better explanation would be to validate whether consciousness simulations in the future work well by testing them on data from the past.&lt;/small&gt;&lt;/p&gt;</description>
+        <pubDate>Sun, 13 Dec 2020 00:00:00 -0800</pubDate>
+        <link>https://bonkerfield.org/2020/12/lisens/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2020/12/lisens/</guid>
+        
+        <category>philosophy</category>
+        
+        
+      </item>
     
       <item>
         <image>https://bonkerfield.org/assets/images/2020/financial_model_graph.png</image>
@@ -4622,7 +4666,7 @@ df_scrolls = conn.execute_query(scroll_query)
         
         <category>data science</category>
         
-        <category>philosphy</category>
+        <category>philosophy</category>
         
         <category>code</category>
         
