@@ -385,6 +385,14 @@
 <lastmod>2020-12-13T00:00:00-08:00</lastmod>
 </url>
 <url>
+<loc>https://bonkerfield.org/2020/12/analyzing-attention/</loc>
+<lastmod>2020-12-18T00:00:00-08:00</lastmod>
+</url>
+<url>
+<loc>https://bonkerfield.org/2020/12/oneth/</loc>
+<lastmod>2020-12-18T00:00:00-08:00</lastmod>
+</url>
+<url>
 <loc>https://bonkerfield.org/404</loc>
 </url>
 <url>
@@ -530,5 +538,8 @@
 </url>
 <url>
 <loc>https://bonkerfield.org/tag/animation/</loc>
+</url>
+<url>
+<loc>https://bonkerfield.org/tag/machine-learning/</loc>
 </url>
 </urlset>
