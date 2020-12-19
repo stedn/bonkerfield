@@ -5,66 +5,9 @@
     <description>just your standard information identity spacetime field</description>
     <link>https://bonkerfield.org</link>
     <atom:link href="https://bonkerfield.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 18 Dec 2020 23:00:05 -0800</pubDate>
-    <lastBuildDate>Fri, 18 Dec 2020 23:00:05 -0800</lastBuildDate>
+    <pubDate>Fri, 18 Dec 2020 23:04:21 -0800</pubDate>
+    <lastBuildDate>Fri, 18 Dec 2020 23:04:21 -0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
-    
-      <item>
-        <image>https://bonkerfield.org/assets/images/2020/oneth.png</image>
-        <title>oneth.club: an online discussion society designed to unite rather than divide</title>
-        <description>&lt;p&gt;In early 2016, I wrote an app for my friends to submit and choose articles for our reading/discussion group.  The idea was simple: the people who get to choose the next article should be the people who were the most engaged with the previous one. During our discussion group, we came up with a simple system, but as we used it, we started to contemplate how the same process would be interesting to implement on a larger scale.&lt;/p&gt;
-
-&lt;p&gt;I largely forgot about that little experiment until about 2 weeks ago when I noticed that it was still running under my account. This suddenly caused me to think back to that time and recognize just how little has changed.&lt;/p&gt;
-
-&lt;h4&gt;The Insane Factionization of America&lt;/h4&gt;
-
-&lt;p&gt;Presciently, one of the first articles that we read for our reading club was &lt;a href=&quot;https://www.theatlantic.com/magazine/archive/2016/07/how-american-politics-went-insane/485570/&quot;&gt;How American Politics Went Insanse&lt;/a&gt;, which was a satirical look into the future of American politics in 2020 from the perspective of 2016. The article suggested that the future was grim, with politicians grinding through deadlock, and the public pitted against one another.&lt;/p&gt;
-
-&lt;a href=&quot;https://www.theatlantic.com/magazine/archive/2016/07/how-american-politics-went-insane/485570/&quot;&gt;&lt;img class=&quot;small_img&quot; src=&quot;/assets/images/2020/american_insane.png&quot; alt=&quot;cover of Antlantic magazine with Uncle Sam in a straight-jacket&quot;/&gt;&lt;/a&gt;
-
-&lt;p&gt; While it was meant to be comically extreme, it turned out to be surprisingly tame compared to how things actually turned out. &lt;/p&gt;
-
-&lt;p&gt;The thing that is most insane about rediscovering the article was remembering just how acutely aware of the problem I personally was even back then.  However, despite recognizing the issue, I truly believed that it would probably solve itself over the next couple of years. And of course, I didn't personally do anything about it.  On the contrary, even being aware of it, I too have migrated in my political beliefs toward the edges of the mainstream. &lt;/p&gt;
-
-&lt;p&gt;So when I rediscovered my old webapp, I suddenly wondered if maybe something like that idea could actually work to fix this. And whether it's important that I start talking about it to try to get something like this off the ground.&lt;/p&gt;
-
-&lt;h4&gt;A Common Dialog&lt;/h4&gt;
-&lt;p&gt;Back when I wrote the original site, my friends and I were wondering if we could design a social network that was specifically meant to bring people into a common dialog.  Our current social media is obviously just the opposite. With twitter, facebook, reddit or any of the myriad others, every design choice is meant to push you further into your own silo.  Again, that's great for staying engaged with what makes you personally engaged, but absolutely terrible for fostering common connection across lines.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;h4&gt;What does oneth mean?&lt;/h4&gt;
-&lt;p&gt;I think the word oneth is under-leveraged in the English language.  According to wiktionary it can be used like 201th (two-hundred-and-oneth), but other than that it isn't a real word.  &lt;/p&gt;
-
-&lt;p&gt;For every kind of medium, the boils down to a competition to elevate something that satisfies some definition of &quot;the best.&quot;&quot; Some platforms are looking for the most accurate (scientific articles), the most popular (library), the first (patents), the latest (news), the &quot;hottest&quot; (twitter etc).  &lt;/p&gt;
-
-&lt;p&gt;The new app that we were contemplating called for a new superlative though.  We were trying to describe the &lt;strong&gt;thing most appropriate for everyone to be exposed to together&lt;/strong&gt;. It's a whole different idea altogether, and therefore we realized it was hard to conceptualize it as a specific thing. But wouldn't the idea of hottest be hard to understand if we hadn't been exposed to the it for so long? We needed a new word to describe this ineffable new take on &quot;top.&quot;&lt;/p&gt;
-
-&lt;p&gt;Particular events in history can serve as good examples of the concept.  Certainly, the first moon landing was the oneth event of that moment.  &lt;/p&gt;
-
-&lt;h4&gt;Using the App&lt;/h4&gt;
-&lt;p&gt;If you're intrigued by the idea,  I encourage you to &lt;a href=&quot;https://oneth.club&quot;&gt;try it out&lt;/a&gt;, and please, please, please join the &lt;a href=&quot;https://www.hylo.com/c/oneth&quot;&gt;community on Hylo&lt;/a&gt; to give us feedback.&lt;/p&gt;
-
-&lt;p&gt;The mechanics are pretty simple for now.  You can post an article, and write questions about your own and other people's articles.  As you write questions, you get points, and then then you can vote with those points on whichever article you think should be up for discussion tomorrow. The look-and-feel is &lt;em&gt;extremely&lt;/em&gt; simple compared to the other sites I've been working on in the past few months.&lt;/p&gt;
-
-&lt;img src=&quot;/assets/images/2020/simple_oneth.png&quot; alt=&quot;image of a very simple UI of oneth homepage&quot;/&gt;
-
-&lt;p&gt;However, the actual programming and mechanics behind the scenes is much more complex.  I'm frankly astonished that I was able to work on this four years ago with how little I knew about web development then.  There remains a lot to do both in polishing the site and polishing the decision making mechanics.  If you have idea, I really encourage you to join the &lt;a href=&quot;https://www.hylo.com/c/oneth&quot;&gt;Hylo community&lt;/a&gt; for discussion or if you are you can go straight to the &lt;a href=&quot;https://github.com/lots-of-things/oneth&quot;&gt;Github project&lt;/a&gt; to file issues.&lt;/p&gt;
-
-
-&lt;h4&gt;The Next Round&lt;/h4&gt;
-
-&lt;p&gt;As with pretty much everything I build, all the &lt;a href=&quot;https://github.com/lots-of-things/oneth&quot;&gt;code&lt;/a&gt; to run it is freely available. I don't believe I have the stamina to start a company around this, but I would fully support a community leader who wanted to run with the concept full-time.&lt;/p&gt;
-
-&lt;p&gt;For now, I hope to see you on there.  As the tagline says, lets &lt;em&gt;really share something&lt;/em&gt;.&lt;/p&gt;</description>
-        <pubDate>Fri, 18 Dec 2020 00:00:00 -0800</pubDate>
-        <link>https://bonkerfield.org/2020/12/oneth/</link>
-        <guid isPermaLink="true">https://bonkerfield.org/2020/12/oneth/</guid>
-        
-        <category>web</category>
-        
-        
-      </item>
     
       <item>
         <image>https://bonkerfield.org/assets/images/2020/attntn.png</image>
