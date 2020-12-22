@@ -3,6 +3,8 @@
     <div style="width:30%;display:inline-block;">
         {% if post.image %}
           <img style="max-height:300px;overflow-y:hidden;" src="{{ post.image }}" alt="{{ post.title }}" itemprop="image"/>
+        {% else %}
+          <img style="max-height:200px;overflow-y:hidden;float:right;" src="/assets/images/main/viewfoil.png" alt="{{ post.title }}" itemprop="image"/>
         {% endif %}
 
     </div>
