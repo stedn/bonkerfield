@@ -5,8 +5,8 @@
     <description>just your standard information identity spacetime field</description>
     <link>https://bonkerfield.org</link>
     <atom:link href="https://bonkerfield.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 22 Dec 2020 14:25:58 -0800</pubDate>
-    <lastBuildDate>Tue, 22 Dec 2020 14:25:58 -0800</lastBuildDate>
+    <pubDate>Tue, 22 Dec 2020 15:32:05 -0800</pubDate>
+    <lastBuildDate>Tue, 22 Dec 2020 15:32:05 -0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -80,13 +80,106 @@
       </item>
     
       <item>
+        <image>https://bonkerfield.org/assets/images/2020/dec_net_capital.png</image>
+        <title>Augmented Democracy - Intentional Capitalism | A continuum analysis of collective decision making</title>
+        <description>&lt;p&gt;I've been thinking about how groups make decisions. There are a lot of ways decision-making happens in detail, but I noticed a broad pattern that I wanted to discuss in this post: that the most fundamental component of a decision-making system boils down to how the atomic &quot;decision making unit&quot; (DMU) is distributed across the population. I'll explain what I mean by this using the simplest example first.&lt;/p&gt;
+
+&lt;h4&gt;Democracy: predetermined distribution of DMUs&lt;/h4&gt;
+&lt;p&gt;To start off, lets focus on a pure direct democracy where every decision is voted on by the whole population. Regardless of the details of the voting system (ie winner-takes-all vs consensus etc), a direct democracy is one where every individual's contribution to the decision making calculation is equal. In this case, it's clear that the way power was distributed was pre-determined.&lt;/p&gt;
+
+&lt;p&gt;Other forms of democracy, like a republic or a democracy by committee, still have this fundamental even distribution even though the way it is allocated may cause certain deviations in practice. For example, in a republic, your ability to make decisions on one topic are strongly correlated with other topics because you have to elect a representative to decide on both.  Still at the very core, we always have the notion that each person starts with predetermined, equal amount of DMUs.&lt;/p&gt;
+
+&lt;p&gt;Of course, sometimes republics are set up incorrectly (ahem, United States) with unbalanced allocation of DMUs based on who you are or where you live. (In this case, I am talking just about the unfair distribution due to the electoral college, we'll come to the US's money in politics problem later.)  Nevertheless, as long as the mechanism is well documented, this system still has predetermined distribution of DUMs, even though those units are allocated unfairly.&lt;/p&gt;
+
+&lt;p&gt;However, I think it's safe to say that for a large majority of reasonable humans, there is some basic understanding that democracy should be based on precisely equal amounts of DMUs per person.  For the remainder of this discussion, when I refer to democracy, I mean predetermined, equally distributed DMU.  &lt;/p&gt;
+
+&lt;p&gt;So for democracy, the atomic DUMs are votes for representatives at federal, state, and local levels, and everybody should get an equal number. Hopefully that makes it pretty clear what a DMU looks like in this simplest example. However, there are other ways to play with the same concept in more abstract forms.  &lt;/p&gt;
+
+&lt;h4&gt;Capitalism: constant dynamic reallocation of DMUs&lt;/h4&gt;
+&lt;p&gt;I believe that capitalism constitutes the other major form of DMU distribution system where entities constantly reallocate DMUs to decide what should be done.  In this case the amount of DMUs an individual has for a decision is determined by the supply of DMUs they can gather from others in the past and how they want to distirbute the DMUs they have on current and future decisions. &lt;/p&gt;
+
+&lt;p&gt;I know there are lots of other aspects to the discussion of capitalism, but for now I just want to look at it as a decision making system.  I also want to point out the distinction with the idea of markets here, which is normally looked at from the perspective of exchange of goods. I specifically want to call it capitalism because the core idea behind capitalism is that those with existing capital ultimately have the bulk of the decision making power about what is going to happen in society. For example, who decides what the next &quot;big idea&quot; that comes into existence should be? In a pure capitalist society, this is decided by the group of people who have the money to finance the next set of companies and organizations.&lt;/p&gt;
+
+&lt;p&gt;So in the capitalist system, the unit of money (ie the dollar, yuan, etc) could be considered the DMU. Of course, in reality, some decisions are easier to buy and certain people are more efficient with their money so there will always be gaps between real DMU and dollar value as was the case for democracy with votes. However, ignoring those complications, we'll describe the dollar as the DMU for the remainder of this article.&lt;/p&gt;
+
+
+&lt;h4&gt;Visual comparison of DMU allocation&lt;/h4&gt;
+&lt;p&gt;Where this becomes interesting is when we think about how decisions would be made using these two systems.  To do this, I've come up with a figure for vizualizing the flows of decision units throughout the system until they are allocated to an outcome.  For a simple example, imagine a committee of three that is deciding on the details for the country fair. To keep it simple, lets just assume that there are two choices to make (A and B) that can have a combined total of three possible outcomes.&lt;/p&gt;
+
+&lt;p&gt;So here is a diagram to illustrate what it would look like if:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;the first person really wants the green option for A but doesn't care about choice B&lt;/li&gt;
+  &lt;li&gt;the second person really wants the red option for B but doesn't care about choice A&lt;/li&gt;
+  &lt;li&gt;the third person really wants the yellow option for B (only one choice)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;img alt=&quot;a diagram of decision making power flowing through a network into decision endpoints&quot; src=&quot;/assets/images/2020/dec_net_simple.png&quot;/&gt;
+
+&lt;p&gt;In the diagram, the width of each line is how much support the person gives to a certain outcome.  Note that the total width coming out of each committee member is equal because all committee members have the same amount of say in the final outcome through their votes. The only difference is in how much they split their DMUs.  &lt;/p&gt;
+
+&lt;p&gt;But how do they split their votes? Well, in reality they don't split their vote directly, but they effectively split their vote by assigning which things they would agree to vote for.  Anything that they agree that they would vote for effectively gets an equal part of their vote.  &lt;/p&gt;
+
+&lt;p&gt;Which choice gets picked is dependent on exactly how the voting system works. If it's a majority win vote, then the first or second one could either happen because either would get 2/3 votes, depending on which one comes up for a vote. But for simplicities sake, lets just assume going forward that whichever one has the most weight gets selected.&lt;/p&gt;
+
+&lt;p&gt;Now for any direct democratic voting system, we could use this same form of diagram to get the possible outcomes depending on how each person votes.  For a republic, it's more complicated because we have to pass through intermediaries. However we can apply the same diagram to follow the flow of DMUs for an abstract set of decisions.  For simplicity we'll look at something simple like a 3 seat county board of supervisors voting on some decision. &lt;/p&gt;
+
+&lt;img alt=&quot;diagram of decision making power flowing from voters to represeantives and then into endpoints&quot; src=&quot;/assets/images/2020/dec_net_repub.png&quot;/&gt;
+
+&lt;p&gt;Each band on the left is some group of citizens pooling their DMUs into the top 3 candidates, who go on to vote for something. &lt;/p&gt;
+
+&lt;h4&gt;Visualizing Capitalism&lt;/h4&gt;
+&lt;p&gt;Democracy is fairly simple because we start with an even distribution of DMUs and at every round of decision making we maintain that equal division.  Unfortunately, capitalism is much more complicated because everyone starts with very different amounts of DMUs, and we are constantly dynamically updating the distribution of DMUs during the process of every round of decision making.&lt;/p&gt;
+
+&lt;p&gt;To display this in a fairly simple way, lets look at the case of a small community deciding which of two sites to dig a well for their crops.  The two major land owners want the well on their own land, but only one (owner 1) can afford to pay for it on their own. The other one (owner 2) gets a bank to loan them money, assuming that they can charge for water to pay the bank back.&lt;/p&gt;
+
+&lt;img alt=&quot;a diagram of decision making power in the form of money moving amongst actors&quot; src=&quot;/assets/images/2020/dec_net_capital.png&quot;/&gt;
+
+&lt;p&gt;So in this case, DMUs in the form of capital move from owner 2 and the bank into site 2.  Then in the future site 2 returns DMUs to owner 2 and the bank.  Other users of the well transfer their DMUs to owner 2 and the bank, allowing them to have more weight in decision making later.  I've additionally shown the investment for site 1 from owner 1, which is eventually returned with losses to owner 1, thereby diminishing their total DMUs in the future.&lt;/p&gt;
+
+&lt;p&gt;This example is fairly simple, but I hope that it can help to show the flow of decision making power throughout a system.&lt;/p&gt;
+
+&lt;p&gt;However, the above visual was only a small segment of the whole decision making trajectory because the way that the DMUs were distributed at the beginning was determined by reallocation of DMUs over many previous rounds of decision making.  In order to really inspect the decision making system in capitalism we have to repeat this process many, many times while keeping track of the redistributions.&lt;/p&gt;
+
+&lt;p&gt;This becomes very messy fast, but you can imagine what it might look like if the output of the above diagram was plugged in as inputs to the next one. It would start to look something like these diagrams of neural networks &lt;/p&gt;
+
+&lt;img alt=&quot;image of a recurrent neural net rolled out&quot; src=&quot;/assets/images/2020/nMeys.png&quot;/&gt;
+
+&lt;p&gt;I'll probably have more thoughts on this apparent similarity in the future, but for now, I want to talk about the systems themselves and how they can be related to each other.&lt;/p&gt;
+
+&lt;h4&gt;The Merit and Downfall of Both Systems&lt;/h4&gt;
+
+&lt;p&gt;While the human-centrism of democracy feel very naturally justifiable, it's clear that not all decisions should need to flow through such a centralized system.  Many argue that this is because government centralization is fundamentally inefficient, but I don't believe that is a reasonable justification. It's very possible that we could restructure our democracy to make that kind of centralized planning far more efficient and transparent than it is.  However, I have more fundamental reasons to believe that dynamic reallocation of DMUs has merit on its own.&lt;/p&gt;
+
+&lt;p&gt;Capitalism has one upside, which is that we can almost automatically distribute greater decision making power to those who have shown good decision making behavior in the past. This is part of the unspoken rationale for relying on &quot;the invisible hand of the market&quot; to carry out taks with the most efficiency. I believe that there is an advantage to this because even in the most efficient democratic system, a largely unknowledgable populace could continuously make bad decisions, but with staking your investments with capital should downregulate the influence of the unknowledgable in the decision making process. Unfortunately, there are at least two huge flaws in this presumption. &lt;/p&gt;
+
+&lt;p&gt;First, for capitalism to work the mapping between the output money delivered for a task must match the true social value of the outcome.  This can be strongly violated if people don't have to pay for long-term future costs up front (eg pollution). If this mapping is highly inaccurate then those who will eventually hold all the DMUs will not be good at making decisions, just gaming the system. The other major problem is that unfair distributions of DMUs can at some point render the basic correction mechanism of capitalism inoperable because vested interests can leverage their advantage to set the terms of the output reallocation of DMUs (eg embargoing anyone who does business with a competitor).&lt;/p&gt;
+
+&lt;p&gt;There are merits and downfalls to both systems, and each needs to be considered carefully for a given context.&lt;/p&gt;
+
+&lt;h4&gt;Structuring our System to Find a Balance&lt;/h4&gt;
+
+&lt;p&gt;As a result of my thinking on this, I'm starting to believe that all of our big fights over the balance between these ideologies might be misplaced.  I'm thinking that the big fight we need to fight is not the endless argument over whether to edge closer toward free market capitalism or egalitarian democracy. The smart people in our country should recognize that one balance will never be perfectly appropriate across all times and places and instead we should make the system so that the balance can dynamically adjust.&lt;/p&gt;
+
+&lt;p&gt;We've already organically arrived at a system that has built a feedback system between the two mechanisms, where each can be used to decide the strength of the other. Clearly our government should have the power to regulate our capitalist system, by making laws where it applies, converting negative externalities into capital, and by rebalancing the distribution of DMUs when it becomes too unbalanced. And (perhaps more controversially) capitalism has the ability to influence decision making in democratic government by regulating how information is being distributed. As our understanding of this system advances, it should become possible to fine-tune the strenght of the feedback to optimize the overall decision making system.&lt;/p&gt;
+
+&lt;p&gt;I think the smartest minds should stop arguing for how the balance should be moved momentarily right now, but instead, how the balance could be better monitored and controlled for societal aims.  I think we'd all be better off by outwardly adopting an approach that accepts both ideologies as no more than mechanisms to make decisions in a continuous space of plausible decision making systems.&lt;/p&gt;</description>
+        <pubDate>Sun, 20 Dec 2020 00:00:00 -0800</pubDate>
+        <link>https://bonkerfield.org/2020/12/continuum-decision/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2020/12/continuum-decision/</guid>
+        
+        <category>philosophy</category>
+        
+        
+      </item>
+    
+      <item>
         <image>https://bonkerfield.org/assets/images/2020/attntn.png</image>
         <title>analyzing a.ttent.io/n</title>
         <description>&lt;p&gt;Why do written works of fiction ever have to be finished? What if the story's growth was part of the story itself? My first real work of fiction is finished. But I wonder if my first real story is just beginning? &lt;/p&gt;
 
 &lt;h4&gt;What is a.ttent.io/n?&lt;/h4&gt;
 
-&lt;p&gt;While I've previously alluded to &lt;a href=&quot;https://a.ttent.io/n&quot;&gt;the story&lt;/a&gt; I've been writing, which has been in the works for &lt;a href=&quot;https://viewfoil.bonkerfield.org/2020/12/the-ongoing-process-of-attention.html&quot;&gt;more than 3 years&lt;/a&gt;, I've never directly covered it on this site. It's a story, to be sure, but it's also meant to be an experiment. &lt;/p&gt;
+&lt;p&gt;While I've previously alluded to &lt;a href=&quot;https://a.ttent.io/n&quot;&gt;the story&lt;/a&gt; I've been writing, which has been in the works for &lt;a href=&quot;/2020/12/ongoing-attention&quot;&gt;more than 3 years&lt;/a&gt;, I've never directly covered what it's about on this site. It's a story, to be sure, but it's also meant to be an experiment. &lt;/p&gt;
 
 &lt;p&gt;Writing &lt;em&gt;attention&lt;/em&gt; was a way to discuss the concept of the human attention span while simultaneously consuming a silver of that attention from the reader. It's about this period of history we are living in where machines and minds consume and emit each other recursively, the omnipresent ouroboros of thoughts and algorithms.&lt;/p&gt;
 
@@ -148,6 +241,146 @@
       </item>
     
       <item>
+        <image>https://bonkerfield.org/assets/images/2020/bg_map.png</image>
+        <title>Imagining a new economy on the Co-op Trail</title>
+        <description>&lt;p&gt;I'm honestly grossed out by how our economy works. I never really had the privilege to understand it until now, but now that I'm seeing what it's like for a well-off person, I can't help but recognize the preposterous unfairness of it all. A few months ago I learned about the co-op movement and an idea called the solidarity economy (mostly from following &lt;a href=&quot;https://zebrasunite.coop&quot;&gt;Zebras Unite&lt;/a&gt; ❤️).  I am learning so much and compiling &lt;a href=&quot;https://www.are.na/will-stedden/coop-trail&quot;&gt;articles&lt;/a&gt; and &lt;a href=&quot;https://youtube.com/playlist?list=PLLBGJDEi1qhvPdABWCa5lVio5Ql6jq1TK&quot;&gt;videos&lt;/a&gt;, but as I've learned more and more, I'm really starting to understand just how daunting it is to modify the framework of exploitation underlying our whole society.&lt;/p&gt;
+
+&lt;p&gt;The thing I've struggled with the most is how it will be possible to shift enough people away from the capitalist economy for the solidarity economy to become a self-sufficient alternative to the dominant capitalist model.  Right now, someone has to be deeply invested to even learn what businesses around them share those principles, and I just don't see that happening for the majority of people I know. I could be wrong, but for a solidarity economy to work sustainably, I'd think there needs to be a critical mass of people operating inside of it so that there won't be any reliance on an external, extractive economy. And without easy access for consumers, it will always be way more lucrative to succumb to an exploitative company's tactics rather than do the right thing.&lt;/p&gt;
+
+&lt;p&gt;While discussing this problem with my partner Claire, we brainstormed an idea to showcase the solidarity economy, and help people picture a future where a solidarity economy could replace the traditional capitalist one. We came up with the idea to try to travel around the US using only organizations in the solidarity economy. We've wanted to take our honeymoon and travel around for an extended bit so we figured this was a good chance to do something productive while we're exploring the country.&lt;/p&gt;
+
+&lt;h4&gt;The Co-op Trail&lt;/h4&gt;
+&lt;p&gt;The concept of the trail is pretty straightforward.  We want to get from A to B, without relying on traditional capitalist enterprises. Now this would be particularly hard if our favorite hobbies were jet skiing and staying at luxury resort, but fortunately what we like most is eating, drinking, hiking, making crafts, and other low-key enterprises.  So we're going to design a long, &lt;a href=&quot;http://www.theartofslowtravel.com/what-is-slow-travel/&quot;&gt;slow moving&lt;/a&gt; honeymoon where we take the time to do those things, and learn about what the world looks like through the lens of a cooperative economic system.
+&lt;/p&gt;
+
+&lt;p&gt;This might seem like a crazy way to enjoy ourselves, but it's my personal opinion that &lt;strong&gt;constraints actually make everything more fun.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;That said, operating this way will definitely change the trip, and so we hope to provide a resource by documenting all the ways we accessed the solidarity economy throughout.   The first big thing that we've realized we have to adapt is how we get around. It would be practically impossible to transport ourselves by car without relying on fossil fuels.  Even if we had an electric car, we'd still need to plug into charging stations, and most of those are also built on the traditional business model.  To overcome that, we've decided that we will do the trip using a solar powered electric tandem bike and trailer, which we'll build mostly ourselves to use sustainable parts where we can.  I'll be writing more about that build over this winter as it comes together. &lt;/p&gt;
+
+&lt;img alt=&quot;&quot; border=&quot;0&quot; width=&quot;400&quot; data-original-height=&quot;360&quot; data-original-width=&quot;480&quot; src=&quot;https://d2w9rnfcy7mm78.cloudfront.net/9900653/original_c022099161583806568992335e540d71.jpg?1608016214?bc=0&quot;/&gt;
+
+&lt;p&gt;Our goal is to make a round trip from California, through the Pacific Northwest, down to Denver, then across the Midwest to Minnesota, Wisconsin, and Illinois, then back around through the southwest to California again.  We expect it to take the better part of a year.  &lt;/p&gt;
+
+&lt;img alt=&quot;&quot; border=&quot;0&quot; width=&quot;400&quot; data-original-height=&quot;553&quot; data-original-width=&quot;1210&quot; src=&quot;/assets/images/2020/bg_map.png&quot;/&gt;
+
+&lt;h4&gt;Documenting the Lifestyle&lt;/h4&gt;
+
+&lt;p&gt;One of my big inspirations is &lt;a href=&quot;https://faircompanies.com/kirsten-dirksen/&quot;&gt;Kirsten Dirksen&lt;/a&gt;, who produces her own series of documentaries on alternative dwelling spaces with a very distinctive style. Her work is something that has totally inspired me and countless others to rethink how our inhabited environments can work in the future. With the Co-op Trail, I thought it would be very cool to do something like that. While we're traveling, we're going to try to make a documentary about all kinds of co-ops and other organizations in the solidarity economy.  &lt;/p&gt;
+
+&lt;p&gt;So what was the first thing I did? Of course, I &lt;a href=&quot;https://cooptrail.org/&quot;&gt;built a website&lt;/a&gt;.  That's now how I structure projects now I guess: &quot;Advertise it like it's already been built, then start to build it.&quot;&lt;/p&gt;
+
+&lt;p&gt;The next step is going to be building our electric tandem bike. I'm already a bit worried that it may be a challenge to source the parts from co-ops, but I will try my best and document where I come up short. I think a crucial part of this whole project will be to catalog what parts of the traditional economy we had to rely on because there just wasn't any other choice. Once that is working though, I'll start the hard part: reaching out to organizations to start doing profiles on them and compiling them into the itinerary. That will really push me to be more proactive in making connections&amp;mdash;something I haven't been so great at in the past, but would totally be worth it to practice.&lt;/p&gt;
+
+&lt;p&gt;I already know it's going to be an amazing trip, but if we do it right, it can also be a resource to launch us and others into a new economy for the rest of our lives.&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 16 Dec 2020 00:00:00 -0800</pubDate>
+        <link>https://bonkerfield.org/2020/12/coop-trail/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2020/12/coop-trail/</guid>
+        
+        <category>philosophy</category>
+        
+        
+      </item>
+    
+      <item>
+        <image>https://bonkerfield.org</image>
+        <title>Renaissance of the Renaissance Person: We should restructure society so anyone can try lots of things.</title>
+        <description>&lt;p&gt;Inspired by the &lt;a href=&quot;https://www.youtube.com/watch?v=CYP2gHgtGiw&quot;&gt;Break 'Em Up! discussion&lt;/a&gt; from &lt;a href=&quot;https://peoplesaction.org/&quot;&gt;People's Action&lt;/a&gt; today, I've been trying to imagine what I think fairness and justice would look like in the world.  It's a lofty thought, but one that I don't think enough people take the time to envision in their day-to-day life.  We all talk about how we want a fair society in an abstract way, but there is a grey area in the &lt;a href=&quot;https://www.lesswrong.com/posts/iAxkfiyG8WizPSPbq/the-bedrock-of-fairness&quot;&gt;definition of fairness&lt;/a&gt; between the obviously unfair distribution of resources today, and another extreme of perfectly regimented identical distribution of life experiences.  So today, I tried to define the thing I've come to cherish most, which I think should fundamentally be available to everyone on earth.&lt;/p&gt;
+
+&lt;h4&gt;The freedom to be a Renaissance Person.&lt;/h4&gt;
+
+&lt;p&gt;It's very hard to try to define the minimum floor that every person should deserve. It can be tempting to set the threshold based on some kind of material possession, like when everyone has a house or something like that.  But I don't believe that's good enough. I think fairness and justice are both about giving a level of true freedom to every person.  Some people might think we already offer that in the US, but that is obviously not true in a place where we don't even offer the bare minimum of survival. You can't have freedom without the freedom to not do anything for a month without the fear of financial ruin. &lt;/p&gt;
+
+&lt;p&gt;But still, there has to be more to life than just the bare ability to survive. That's why I think real agency starts when a person has the freedom to pursue more than one passion as if it could be their life-long career, but without pressure that any passion needs to support you for your whole life. And I think a good way to describe this is the freedom to be a Renaissance Person.&lt;/p&gt;
+
+&lt;h4&gt;In defense of the Renaissance Person&lt;/h4&gt;
+
+&lt;p&gt;To me, the beauty of the Renaissance Person is that they get to make decisions about what they believe is the most intrinsically good thing to pursue, without worrying about incentives from economic concerns. Importantly, I don't just believe that this kind of freedom is good for improving the kinds of things that get created. I think it's fundamentally good for the person. The opportunity to freely change their life's direction is a right that makes a person substantially more well-off than if they only have the right to pursue one career. My goal in life has been to become something of a renaisance person, and now that I'm starting to acheive that goal, I believe that's substantially benefited both my personal well-being and my standing in society.&lt;/p&gt;
+
+&lt;p&gt;For my whole life I've been trying to get to a place where I could have a little space to step away. For anyone who isn't born with excess wealth, we have to meet a bunch of obligations to transition our lives away from the stress of getting above water. And we don't really get the freedom to take a chance and create something that we believe in. Unless we get lucky enough to get past the crap, we end up trapped to pursue things that society effectively dictates to us.&lt;/p&gt;
+
+&lt;p&gt;I got lucky that I learned about the idea of early financial independence when I was pretty young. I got even more lucky that I was able to learn from the bad experience of my family that there are no &quot;get rich quick&quot; schemes that will get you to that independence. &lt;/p&gt;
+
+&lt;p&gt;But now that I'm arriving at this place, I'm convinced that this is something that getting everyone to this level might be one of the best things for improving the well-being of humanity. &lt;/p&gt;
+
+&lt;h4&gt;How would we do it?&lt;/h4&gt;
+
+&lt;p&gt;So what are the steps? Well, the whole problem boils down to redistribution of two things: our society's free time and access to information networks. &lt;/p&gt;
+
+&lt;h5&gt;Redistributing free time&lt;/h5&gt;
+&lt;p&gt;OK, I dodged the issue a little when I wrote &quot;free time.&quot; The thing is, when I say &lt;em&gt;redistribute our free time&lt;/em&gt;, what I mean is redistribute our f**king wealth. If someone wants to have any part of their life free to do what they want, they need to have a store of wealth or a guaranteed income to give them that freedom. Right now, most of our country doesn't get that freedom until their 60s.&lt;/p&gt;
+
+&lt;p&gt;There are a couple of big things to point out.   In 2017, according to &lt;a href=&quot;https://www.cnbc.com/2017/09/14/how-much-money-the-average-millennial-has-in-savings.html&quot;&gt;CNBC&lt;/a&gt; among 18 and 24 years old, 67 percent have less than $1,000 in their savings accounts and 46 percent had $0, and keep in mind that right now, those with college degrees will have an average of $30k in student debt. No one who starts their life in that state can risk &lt;strong&gt;anything&lt;/strong&gt;. They have to walk a razor thin tightrope to get from just-hanging-on to the prosperity our country mythologizes.&lt;/p&gt;
+
+&lt;p&gt;Let me tell you my background because I was one of the tremendously lucky ones. When I was 22, I had $16k in debt. I had the opportunity to go to college, and I'd gotten through college with a physics, math, and comp sci education, graduating a semester early to save money and working 20+ hours every week plus working every summer since I was 13 (yes you &lt;a href=&quot;https://www.sj-r.com/article/20140718/NEWS/140719390&quot;&gt;can work at 13 in agriculture in Illinois&lt;/a&gt;). My mom had something like $20k in saving and a job that paid less than $20k per year, but my grandpa had managed to save a few thousand dollars to give me before he lost everything in one of those get-rich-quick Nigerian prince scheme. Then, over the past 10 years, I got a PhD, ramped up my income, and stored my money away to get to half a million dollars in the bank at 32.  I'm not saying this to brag, I'm saying this to point out what I've got and how I came to have it. &lt;/p&gt;
+
+&lt;p&gt;So just now this year, I've gotten to the point where I feel I can finally breathe somewhat easily. I can get to the point where I can step back and take some chances with my life.  I can try to experiment with new things for myself using my time now, and I don't &lt;em&gt;even think&lt;/em&gt; about the fear of ending up homeless or worse anymore.&lt;/p&gt;
+
+&lt;p&gt;Why shouldn't everyone in this country be able to expect that they can reach this level of freedom long before retirement age? Why should only those with the privilege of intergenerational wealth be afforded that opportunity?&lt;/p&gt;
+
+&lt;h5&gt;Redistributing access to information networks&lt;/h5&gt;
+&lt;p&gt;This one seems to be getting better with the introduction of the internet, but it's important not to lose sight of hurdles that still exist. Today someone can get exposed to the state-of-the-art in a bunch of fields, but there are still many fields where that information is slowed down just far enough that an outsider could never catch up.  In addition, due to the large number of people contributing in each field, the pace of advance is such that it becomes much harder to keep up fast enough to make any substantive contribution. Needless to say, fields shouldn't be shrunk or slowed down to accomadate the hobbyist. Instead, I think improvements in transparency in the process could help make a lot of the social mechanics of a field more transparent and give people more understanding of what's going on behind closed doors.&lt;/p&gt;
+
+&lt;p&gt;On the other end, it isn't always possible to get the word out about outsider work. While our public platforms allow people to publicize their non-establishment ideas, there is still a strong establishment bias.  There are two sources of this. First, voices that have already been established in a field just fundamentally have an interest in crowding out new voices to maintain their own status.  Second, with the financial incentives of platforms and organizations, it is much more valuable to preferentially amplify people who can be expected to remain in the field for a long time. For example, it makes a lot more sense to invest in an author that will generate 15 books over a lifetime than one who writes 2 books and then moves on to mathematics or sculpture.&lt;/p&gt;
+
+&lt;p&gt;For both of these issues, it seems the only fix is a cultural renaissance of the Renaissance Person. If it was customary for people to learn, progress, step back to make room, and then reform themselves in a new field, it'd be easier to accept new ideas and connections. &lt;/p&gt;
+
+&lt;h4&gt;Conclusion&lt;/h4&gt;
+
+&lt;p&gt;This post comes off as pretty prescriptive, but I just want to make sure it's clear that I don't think everybody should &lt;em&gt;have&lt;/em&gt; to do this.  I just think that being a Renaissance Person should be something that's available to everyone because it exemplifies the level of financial and social freedom that I think makes someone really free. Plus, I think a more well-rounded public with diverse experiences would really help us understand and accept each other better. &lt;/p&gt;
+
+&lt;p&gt;*I refer to this as a Renaissance Person instead of the traditional Renaissance Man because (as if it needs to be said), women and non-binary persons could be equally capable and interested to pursue lots of things too.&lt;/p&gt;</description>
+        <pubDate>Tue, 15 Dec 2020 00:00:00 -0800</pubDate>
+        <link>https://bonkerfield.org/2020/12/renaissance/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2020/12/renaissance/</guid>
+        
+        <category>philosophy</category>
+        
+        
+      </item>
+    
+      <item>
+        <image>https://bonkerfield.org</image>
+        <title>The Ongoing Process of a.ttent.io/n</title>
+        <description>&lt;p&gt;I feel like my short story &lt;a href=&quot;https://a.ttent.io/n&quot;&gt;a.ttent.io/n&lt;/a&gt; will never be finished. But rather than fight that, I'm thinking perhaps I should embrace it as part of the core novelty of the medium I'm building.&lt;/p&gt;
+
+&lt;p&gt;If I recall correctly, I came up with the core conceit of the novel sometime before I started grad school in 2010. I sketched out the different story arcs, but I languished with the problem that the whole story was just &lt;strong&gt;too big&lt;/strong&gt;. Then in the fall of 2017, I was chatting with a friend at a writing group who mentioned that she had decided to change her writing of a longer piece to compress it down to a short story.  For some reason, this suddenly clicked in my brain and I realized that part of the point of a/ttent.io/n was that humans were no longer connecting with long ponderous tomes.  Suddenly the pieces all fell into place, and I wrote the story (styled as Attention at the time) in a few weeks in November. I showed it to a few friends, and played with small tweaks for almost a year.&lt;/p&gt;
+
+&lt;p&gt;Finally, in early 2019, I workshhopped it with a few more friends from the &lt;a href=&quot;https://www.meetup.com/SF-Writers-in-Their-20s/&quot;&gt;SF Writers in their 20s and 30s&lt;/a&gt; group (imho &lt;em&gt;the&lt;/em&gt; literary society of San Francisco).  That was when the next idea came.  As I got feedback from different people, I realized that there were clearly too many different opinions about what was &lt;em&gt;good&lt;/em&gt;. In the end, I didn't care what my author friends thought was good, I only cared what made them want to keep &lt;em&gt;paying attention&lt;/em&gt;. Hell, the whole thesis of a.ttent.io/n was that paying attention was the only point of &lt;em&gt;all&lt;/em&gt; stories.&lt;/p&gt;
+
+&lt;h4&gt;Tracking a.ttent.io/n&lt;/h4&gt;
+
+&lt;p&gt;At the same time, in my professional work at a Silicon Valley health-tech startup, I was frequently tasked with measuring what would make our customers pay attention to our product. The techniques I used (Funnel metrics, A/B testing) caused me to ask whether &quot;the perfect story&quot; should also be built with the same kinds of principles. At the very least, that was what the unreliable narrator of my story would think at least.&lt;/p&gt;
+
+&lt;p&gt;As I began to approach a finished version of the story, I started building it into a website equipped with the types of tracking metrics that allows Google or Facebook to measure engagement.  Specifically, I built a page that measured how far down the &lt;a href=&quot;https://bonkerfield.org/2019/06/google-analytics-for-scrolling-on/&quot;&gt;reader had scrolled&lt;/a&gt;.  I put the page live on a few social networking sites, and as one might guess, most of the people who saw it read only a few words and then moved onto something else.  Such is the nature of the internet.&lt;/p&gt;
+
+&lt;h4&gt;An open, evolving story&lt;/h4&gt;
+&lt;p&gt;The story didn't get much traction, and I couldn't tell what was wrong. I had been making edits here and there to improve things, but I didn't know what really mattered.  So then in early 2020, I set about building a way to serve different versions to different visitors.  All-in-all I didn't learn too much from the experiments about what content was best because no matter what I did, no one read past the first chapter. &lt;/p&gt;
+
+&lt;p&gt;So last month, I decided to do another rewrite. This time, I optimize ruthlessly for readability.  I cut the story in half, removed some characters and merged others, and reordered the structure to make stronger connections from one to the next. &lt;/p&gt;
+
+&lt;p&gt;I'll be posting it again soon, and I hope that this time it really works. But even if it doesn't, I hope that the following three innovations I'm proposing get wider &lt;em&gt;attention&lt;/em&gt; themselves.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;tracking the fine grained attention patterns of readers&lt;/li&gt;
+  &lt;li&gt;testing multiple permutations of the core story for readability and engagement&lt;/li&gt;
+  &lt;li&gt;putting the editing process out in the public (my novel edit history is stored &lt;a href=&quot;https://github.com/tcruven/n/commits/master&quot;&gt;on github&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If we are all a part of this world perfecting the story of what it is to be human, why not shorten the feedback loop and let reader's mind contribute too?&lt;/p&gt;
+
+&lt;p&gt;&lt;small&gt;PS As I was writing this my partner read the story and came up with yet another great improvement so back to the drawing board...&lt;/small&gt;&lt;/p&gt;</description>
+        <pubDate>Sun, 13 Dec 2020 00:00:00 -0800</pubDate>
+        <link>https://bonkerfield.org/2020/12/ongoing-attention/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2020/12/ongoing-attention/</guid>
+        
+        <category>philosophy</category>
+        
+        
+      </item>
+    
+      <item>
         <image>https://bonkerfield.org</image>
         <title>The Lisens: a license to simulate the sense of self</title>
         <description>&lt;p&gt;For the past year, my &lt;a href=&quot;https://viewfoil.bonkerfield.org/2020/03/introducing-viewfoil-my-experiment-with.html&quot;&gt;viewfoil project&lt;/a&gt; has led me to expand my use of identity publication (aka social media) and consolidate my public technological identity footprint into &lt;a href=&quot;https://viewfoil.bonkerfield.org/&quot;&gt;one portal&lt;/a&gt; online.  My long-term goal with the project is to form an artificial intelligence simulation of my personal online behavior. In other words, I aim to someday build an algorithm that can replicate and potentially replace the portion of my mind that generates behavioral artifacts on the internet.&lt;/p&gt;
@@ -189,6 +422,32 @@ If I can pursue self-simulation with the data I am collecting, should any entity
         <pubDate>Sun, 13 Dec 2020 00:00:00 -0800</pubDate>
         <link>https://bonkerfield.org/2020/12/lisens/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2020/12/lisens/</guid>
+        
+        <category>philosophy</category>
+        
+        
+      </item>
+    
+      <item>
+        <image>https://bonkerfield.org/assets/images/2020/profbonk_bg.png</image>
+        <title>Prof Bonkerfield Joins the Ampled Co-op</title>
+        <description>&lt;p&gt;This summer I started getting very interested in co-ops and the solidarity economy. A big place where I started to learn was during the &lt;a href=&quot;https://zebrasunite.mn.co/&quot;&gt;Zebras United&lt;/a&gt; Season of the Dazzle, which led to learning about &lt;a href=&quot;https://start.coop/&quot;&gt;start.coop&lt;/a&gt;. And while watching start.coop's 2020 grad class give their presentations, I learned about a very cool artist-ownership payment platform called &lt;a href=&quot;https://www.ampled.com/&quot;&gt;Ampled&lt;/a&gt;. &lt;/p&gt;
+
+&lt;p&gt;Ampled is a pretty straightforward replication of Patreon (or onlyfans), but the interesting part to me is that the business is built and run with the intention to keep the fan's funding in the artist's pockets.  This seems incredibly intuitive to me, and makes me feel like Ampled has a good shot at being one of those places that gets buy-in from consumers to cut-out the capitalist middle-man (I've also become even more anti-capitalist than I used to be thanks to them red rose Twitter lefties).  Since Ampled is trying their best to be an ethical worker-and-artist-owned enterprise, I've found myself, for the first time in my life, feeling pretty good about taking part in ponying up my own cash to provide support to artists.&lt;/p&gt;
+
+&lt;p&gt;In addition to supporting a few artists, I also have started donating to support Ampled the platform itself.  The interesting part about this, is that as a platform supporter, I get to be part of Ampled's community owners who are allowed to jointly elect a few members to sit on their Board.  This is not unlike many member owned co-ops (eg REI), except that at the smaller scale of Ampled, there is still a decent chance that community members will be able to make some difference.&lt;/p&gt;
+
+&lt;h4&gt;Adding my own music&lt;/h4&gt;
+&lt;p&gt;Finally, probably the best part about learning about Ampled is that it has finally spurred me to start &lt;a href=&quot;https://prof.bonkerfield.org/&quot;&gt;putting my music online&lt;/a&gt; and developing a presence for my musician alter-ego (who I've named Prof Bonkerfield).  I've had a project written for a couple of years now that I've thought would be cool to record and put online, but I had never really felt like I had a good mechanism to record my own music. However, the subject matter of the first work I am recording is also deeply entwined with some of my feelings about anti-consumerism, which I think is really well-aligned with where I'm at in my adoption of the solidarity economy mindset.&lt;/p&gt;
+
+&lt;img src=&quot;/assets/images/2020/profbonk_bg.png&quot;/&gt;
+
+&lt;p&gt;Also, the concept of the album seems pretty novel to me. I've written a whole series of works that seem like they come from a time and place in the Midwest folk/Americana scene, and I've tied them all together around a fictional set of events in Oklahoma. The story and music will be interwoven by Prof Bonkerfield in sort of an acadmeic talk meets online course. I plan to record it over this winter and while I do, I'll be recording a bit of the process on my Ampled page.  Should be an interesting experiment. &lt;/p&gt;
+
+&lt;p&gt;And of course, if I can figure out how, I could even work with Ampled's API to embed some of that content back on the viewfoil.&lt;/p&gt;</description>
+        <pubDate>Sat, 12 Dec 2020 00:00:00 -0800</pubDate>
+        <link>https://bonkerfield.org/2020/12/prof-bonkerfield-joins-ampled/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2020/12/prof-bonkerfield-joins-ampled/</guid>
         
         <category>philosophy</category>
         
@@ -2297,6 +2556,160 @@ Hit the &quot;create app&quot; button. Make note of the client ID and client sec
         <guid isPermaLink="true">https://bonkerfield.org/2020/03/skylight-chapters-5-6/</guid>
         
         <category>writing</category>
+        
+        
+      </item>
+    
+      <item>
+        <image>https://bonkerfield.org/assets/images/2020/tupperware_quote.png</image>
+        <title>Why building an AI chatbot that passed as human convinced me to put my whole life on the internet</title>
+        <description>&lt;p&gt;
+In my free time, I like to build stuff and put it on the internet.  Two months ago, I &lt;a href=&quot;https://www.bonkerfield.org/2020/02/combining-gpt-2-and-bert/&quot;&gt;built an AI comment generating chatbot&lt;/a&gt; and deployed it on reddit. The chatbot was designed to leave pertinent, realistic replies to other redditors' comments.  I figured it would say a bunch of weird stuff and then get flagged and blocked.
+&lt;/p&gt;
+
+&lt;p&gt;
+To my surprise, the chatbot was practically perfect at writing coherent English sentences.  And it was also pretty good at understanding the context of a reddit comment and generating replies that were highly relevant. But when I looked at the comments it was sending, I was still a little bit disappointed.  The responses just seemed a little dumb.  Like this one for example
+&lt;/p&gt;
+
+&lt;div class=&quot;separator&quot; style=&quot;clear: both; text-align: center;&quot;&gt;&lt;a href=&quot;https://www.reddit.com/r/scifi/comments/eogano/gene_roddenberry_didnt_get_the_adult_audience_hed/feifu7d/?context=3&quot; imageanchor=&quot;1&quot; style=&quot;margin-left: 1em; margin-right: 1em;&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;/assets/images/2020/tupperware_quote.png&quot; width=&quot;400&quot; height=&quot;162&quot; data-original-width=&quot;717&quot; data-original-height=&quot;291&quot; /&gt;&lt;/a&gt;&lt;/div&gt;
+
+&lt;p&gt;
+As it turns out, this wasn't a problem.  People still responded to the comments as if they were coming from a real person.  In almost all the cases, it looked like the chatbot was just a slightly confused person trying to contribute to the conversation. So the original poster would normally respond by trying to elaborate on their original thought or ask clarifying questions to try to understand what the bot meant.
+&lt;/p&gt;
+
+&lt;p&gt;
+Later that day, as I started looking at other replies on reddit and twitter, I suddenly began to notice just how many replies are also a little incoherent. Top comments are normally smart and pointed, but quantitatively, the majority are pretty nonsensical.
+&lt;/p&gt;
+
+&lt;p&gt;
+Then it dawned on me. &lt;strong&gt;Most responses on social media sound like they are coming from a slightly confused person.&lt;/strong&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+And even scarier than that. My uninformed robot already looked indistinguishable from the uninformed people online.
+&lt;/p&gt;
+
+&lt;h3&gt;How I've Responded&lt;/h3&gt;
+
+&lt;p&gt;
+At first, I thought this was a sure sign that I should &lt;a href=&quot;/2020/03/thoughts-on-hivemind-after-trying.html&quot;&gt;continue to shun social media&lt;/a&gt;.  But as I thought about it more, I realized that I wanted do my part in correcting this problem.  And I figured that my experience might have some value in the public discourse on this topic.
+&lt;/p&gt;
+
+&lt;p&gt;
+So I ruminated for a bit on how in the near future, any comment on the internet could be coming from a similar bot. As many have &lt;a href=&quot;https://apnews.com/4086949d878336f8ea6daa4dee725d94&quot;&gt;pointed out&lt;/a&gt;, this makes it quite easy to wage a massive disinformation campaign. Furthermore, being bot generated isn't the worst part.  If a non-thinking entity could make points that make as much sense as the average online comment, then I feel that our online discourse is very much in need of elevation.
+&lt;/p&gt;
+
+&lt;p&gt;
+I wanted to do my part to raise the level of discourse on the internet and to protect against a world of bot generated misinformation online.  To do that, I want to only post thoughtful, topically relevant information.  And I want to make sure that anyone who sees anything I post on the internet has an easy way to verify that I am a real person who stands behind their opinions.
+&lt;/p&gt;
+
+&lt;p&gt;
+I have decided to try to connect my personal identity to all of the things that I say on the internet.  These are my &lt;em&gt;bona fides&lt;/em&gt; to anyone who wants to know if I am genuine.  This also will help me to ensure that I deeply consider what I write online so as not to contribute to the &quot;noisiness.&quot;
+&lt;/p&gt;
+
+&lt;p&gt;
+Which brings me to this post. This blog is the start of my attempt at radical transparency about my life. I'm using this spot to collect everything about who I am so that you, fine reader, can know that what I say is coming from a real person. As I do this, I'm also changing my approach to writing in order to more closely display my real values and beliefs in everything that I do.
+&lt;/p&gt;
+
+&lt;p&gt;
+I hope that I've articulated the idea well enough for others to understand where I'm coming from. I also hope that anyone who reads this will consider trying out a similar approach for themselves.
+&lt;/p&gt;
+
+&lt;p&gt;&lt;small&gt;&lt;em&gt;
+Note: I'm also starting this immediately without taking too much time to try to work through all the details. I'm hoping that I can preemptively start recording my identity before it becomes too easy to fake a whole online persona in a similar way. Plus recording this process helps others to learn that I am a person constructing and working through my beliefs in real-time, just like everyone else.
+&lt;/em&gt;&lt;/small&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 17 Mar 2020 00:00:00 -0700</pubDate>
+        <link>https://bonkerfield.org/2020/03/building-an-AI-chatbot/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2020/03/building-an-AI-chatbot/</guid>
+        
+        <category>philosophy</category>
+        
+        
+      </item>
+    
+      <item>
+        <image>https://bonkerfield.org</image>
+        <title>Thoughts on the #hivemind after trying social media for the first time</title>
+        <description>&lt;p&gt;
+I was born in 1988, but I somehow resisted any serious engagement with social media until January of 2020.  I want to explain what changed my mind, and why I’m going to stick around.
+&lt;/p&gt;
+
+&lt;h4&gt; Can social media actually do any good? &lt;/h4&gt;
+
+&lt;p&gt;
+ Like a lot of people, when first confronted with social media back in the 2000s I said (out loud) something like, “Tweet my stupid little thoughts, that’s a waste of everybody’s time.”  It sounds like a reasonable rebuttal, but even back then I was being disingenuous.  I still wrote blog posts, I wrote papers, I talked my friends’ ears off if they’d let me.  I wanted my stupid little opinions to be heard just as much as anyone.  So why not join in?
+&lt;/p&gt;
+
+&lt;p&gt;
+ I told myself it was because, “&lt;strong&gt;I wanted to do good things instead of talk about them.&lt;/strong&gt;” I told myself that all that chitter chatter just distracted everybody else from accomplishing the hard stuff that really moves the world forward.  However, there’s an obvious problem with this worldview that I even recognized at the time.
+&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;
+If I do something good, how could it have an impact if no one is listening to me?
+&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;
+I could see the attention span arms race, the good guys in the signal vs the bad guys in the noise.  Once I’d confronted the cognitive dissonance of trying to do good in a vacuum, I developed other defense mechanisms.  I told myself, “&lt;strong&gt;this is the high road, and I should just do good work&lt;a href=&quot;&quot; onclick=&quot;return false&quot; title=&quot;(*Note that by “work” I just mean anything that I do in the real world as opposed to the world of ideas)&quot;&gt;[*]&lt;/a&gt; and eventually it will be recognized&lt;/strong&gt;”.   Then later, when it occurred to me that it was really arrogant to expect an organic following without ever even telling anyone I was doing anything, I constructed another blocker: “&lt;strong&gt;if I start projecting my thoughts before I know enough, then I’ll do more harm than good, and make a fool of myself by the time I really start to understand things&lt;/strong&gt;.”
+&lt;/p&gt;
+&lt;p&gt;
+I made my points quietly on this unread blog, and to any friend who would listen.  In some ways this was practice, but in others it was wasted effort.  I wasn’t getting feedback, and I wasn’t growing my ideas beyond myself.
+&lt;/p&gt;
+&lt;p&gt;
+&lt;strong&gt;Eventually I realized, the only reason I refused to engage was that I was afraid of directly quantifying my own limited contribution to the world.&lt;/strong&gt;
+&lt;/p&gt;
+&lt;p&gt;
+The internet lets you measure who is listening.  If I never tried to get attention, I could fabricate a hypothetical self-worth in my mind, but I never had to worry about validating it in the real world.  What’s more, when I really was honest with myself, I recognized that the crap I’ve been doing isn’t really worth the diversion of the public attention anyway.
+&lt;/p&gt;
+&lt;p&gt;
+It was good to recognize, but on it’s own, this admission doesn’t change whether I should take part in social media. If I want to only do good, and I believe that the impact of my self-promotion is really so minimal, then I should have no choice but to shut my efforts down to conserve resources.  But then, I challenged myself with an epistemological riddle.
+&lt;/p&gt;
+&lt;p&gt;
+&lt;strong&gt;Should I expect to be able to predict my own contribution to the world’s discourse today?&lt;/strong&gt;
+&lt;/p&gt;
+&lt;p&gt;
+Given all the resources that have been poured into me by society, should I really draw down my output?  I surveyed the world around me, and came to the following conclusion.
+&lt;/p&gt;
+&lt;p&gt;
+&lt;strong&gt;Since I have no example data on what my contributions would look like, I have no way of knowing if they’d be worth anything yet.&lt;/strong&gt;
+&lt;/p&gt;
+&lt;p&gt;
+From this, I decided that I have exactly one shot to collect the sample data of my life’s work as measured by the gauge that is the world’s opinions.
+&lt;/p&gt;
+&lt;p&gt;
+So as of today, I am trying my damnedest to inflict my stodgy little views onto the internet.  For the most part, I’m still doing pretty horribly, but at least now I can get better.  I’m contributing, and feeding back into the system at a higher rate than I’d imagined.  And furthermore, I’m learning about how nuanced and rich the feeling of constant feedback is.  I’ve never felt like I was inside the hive mind before, and I must admit I like it a lot.
+&lt;/p&gt;
+&lt;h4&gt;Why I’m staying&lt;/h4&gt;
+That said, there is an awful lot of distraction in this medium.  It takes work to properly present oneself and provide feedback properly, and it’s extremely easy to cut corners in the battle for attention.  Punchy witticisms abound.
+&lt;/p&gt;
+&lt;p&gt;
+I joined twitter right at the onset of a virally amplified panic.  It truly makes me wonder what the system is going to look like once every person’s first thought is no longer “Don’t touch my face!”
+&lt;/p&gt;
+&lt;p&gt;
+Still, I believe there is value in fighting through the distraction as well.  If I can try to stay strong and only amplify the valuable messages, then I can help reign in the negative parts of this medium.
+&lt;/p&gt;
+&lt;p&gt;
+What’s more, if I begin to believe that my ideas are of true value to the progress of the world, then I can use the leverage of this system to help amplify. Attention is the most efficient tool of this era in the same way that the steam engine was the most efficient 200 years ago.
+&lt;/p&gt;
+&lt;p&gt;
+I think that we will look back and call this the Attention Age, where the most precious resource to be mined is our global shared attention.  I do not mean this in a bad way.  I mean quite literally that the most efficient machine for enacting a change is to get many minds thinking about it for a prolonged period. After that the rest has been made easy by our previous mastery of the tools of all the prior ages.
+&lt;/p&gt;
+&lt;p&gt;
+So I’ll definitely be continuing to work on improving my abilities at using social media as a tool. It would be a waste to abstain from engaging in the commerce of attention in this era.  The same way that it would have been a waste to abstain from industry in the Industrial Age, from iron in the Iron Age, or from information in the Information Age.
+&lt;/p&gt;
+&lt;p&gt;
+Of course, this comes with a pretty deep caveat.  If what I just said is true, then my contribution is largely shaped by whatever it was that focused my attention during my formative years. However, this situation isn’t really a new predicament caused by engaging with social media&amp;mdash;it’s merely made more transparent by it.
+&lt;/p&gt;
+&lt;p&gt;
+Nevertheless, if the feedback becomes too strong, then I’ll risk becoming a mindless cog of the higher order conscious mind. And I may need to unplug at some point to ensure that my mind doesn’t conform too closely to this collective, but I can put those safety measures in place when it’s necessary.
+&lt;/p&gt;
+&lt;p&gt;
+But for now, I’m going to tweet these thoughts out.
+&lt;/p&gt;
+</description>
+        <pubDate>Mon, 09 Mar 2020 00:00:00 -0700</pubDate>
+        <link>https://bonkerfield.org/2020/03/thoughts-on-the-hivemind/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2020/03/thoughts-on-the-hivemind/</guid>
+        
+        <category>philosophy</category>
         
         
       </item>
