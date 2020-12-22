@@ -5,8 +5,8 @@
     <description>just your standard information identity spacetime field</description>
     <link>https://bonkerfield.org</link>
     <atom:link href="https://bonkerfield.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 21 Dec 2020 12:05:38 -0800</pubDate>
-    <lastBuildDate>Mon, 21 Dec 2020 12:05:38 -0800</lastBuildDate>
+    <pubDate>Tue, 22 Dec 2020 14:25:58 -0800</pubDate>
+    <lastBuildDate>Tue, 22 Dec 2020 14:25:58 -0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -2284,7 +2284,7 @@ Hit the &quot;create app&quot; button. Make note of the client ID and client sec
 &lt;/p&gt;
 &lt;img class=&quot;small_img&quot; src=&quot;/assets/images/2020/skylight_optical.jpg&quot;&gt;
 &lt;p&gt;
-    Over the past year, my &lt;a href=&quot;https://a.ttent.io/n&quot;&gt;attention&lt;/a&gt; was diverted to another project, but shelter-in-place has given me some free time to finish Chapters 5 and 6.  For context, I've posted &lt;a href=&quot;https://www.bonkerfield.org/2018/05/skylight-chapters-1-2/&quot;&gt;Chapters 1 &amp; 2&lt;/a&gt; and &lt;a href=&quot;https://www.bonkerfield.org/2018/06/skylight-chapters-3-4/&quot;&gt;Chapters 3 &amp; 4&lt;/a&gt; previously.  
+    Over the past year, my &lt;a href=&quot;https://a.ttent.io/n&quot;&gt;attention&lt;/a&gt; was diverted to another project, but shelter-in-place has given me some free time to finish Chapters 5 and 6.  For context, I've posted &lt;a href=&quot;https://www.bonkerfield.org/2018/05/skylight-chapters-1-2/&quot;&gt;Chapters 1 &amp; 2&lt;/a&gt; and &lt;a href=&quot;https://www.bonkerfield.org/2018/06/skylight-chapters-3-4/&quot;&gt;Chapters 3 &amp; 4&lt;/a&gt; previously.
 &lt;/p&gt;
 &lt;p&gt;
     Hope you like it. I'll try to get 7 and 8 out a lot quicker.
@@ -2693,7 +2693,7 @@ Hit the &quot;create app&quot; button. Make note of the client ID and client sec
         step 0: get some reddit comment data from your favorite subreddits and format into strings that look like &quot;comment [SEP] reply&quot;
     &lt;/li&gt;
     &lt;li&gt;
-        step 1: fine tune GPT-2 to generate reddit text in the format &quot;comment [SEP] reply&quot;   
+        step 1: fine tune GPT-2 to generate reddit text in the format &quot;comment [SEP] reply&quot;
     &lt;/li&gt;
     &lt;li&gt;
     step 2: fine tune two BERT classifiers to:
@@ -2703,16 +2703,16 @@ Hit the &quot;create app&quot; button. Make note of the client ID and client sec
     &lt;/ul&gt;
     &lt;/li&gt;
     &lt;li&gt;
-    step 3: use praw to download current comments  
+    step 3: use praw to download current comments
     &lt;/li&gt;
     &lt;li&gt;
-    step 4: use fine-tuned GPT2 to generate many replies for each comment  
+    step 4: use fine-tuned GPT2 to generate many replies for each comment
     &lt;/li&gt;
     &lt;li&gt;
     step 5: pass the generated replies to two BERT models to generate a prediction of realisticness and number of upvotes
     &lt;/li&gt;
     &lt;li&gt;
-    step 6: use some criteria for choosing which replies to submit  
+    step 6: use some criteria for choosing which replies to submit
     &lt;/li&gt;
     &lt;li&gt;
     step 7: use praw to submit the chosen comments
@@ -2728,7 +2728,7 @@ Hit the &quot;create app&quot; button. Make note of the client ID and client sec
 &lt;/p&gt;
 
 &lt;p&gt;
-    The data I used to fine-tune the models came from a &lt;a href=&quot;https://bigquery.cloud.google.com/dataset/fh-bigquery:reddit_comments?pli=1&quot;&gt;large database of previously retrieved reddit comments&lt;/a&gt;.  There is an &lt;a href=&quot;https://www.reddit.com/r/bigquery/wiki/datasets&quot;&gt;ongoing project&lt;/a&gt; that scrapes many sites around the web and stores them in a bunch of Google BigQuery tables.  To me, it's very surprising that I couldn't find a central  page about such a big project, but I used a few &lt;a href=&quot;https://www.reddit.com/r/bigquery/comments/5z957b/more_than_3_billion_reddit_comments_loaded_on/&quot;&gt;reddit&lt;/a&gt; and &lt;a href=&quot;https://towardsdatascience.com/bigquery-without-a-credit-card-discover-learn-and-share-199e08d4a064&quot;&gt;medium&lt;/a&gt; posts to piece together the format of the queries I'd need.  
+    The data I used to fine-tune the models came from a &lt;a href=&quot;https://bigquery.cloud.google.com/dataset/fh-bigquery:reddit_comments?pli=1&quot;&gt;large database of previously retrieved reddit comments&lt;/a&gt;.  There is an &lt;a href=&quot;https://www.reddit.com/r/bigquery/wiki/datasets&quot;&gt;ongoing project&lt;/a&gt; that scrapes many sites around the web and stores them in a bunch of Google BigQuery tables.  To me, it's very surprising that I couldn't find a central  page about such a big project, but I used a few &lt;a href=&quot;https://www.reddit.com/r/bigquery/comments/5z957b/more_than_3_billion_reddit_comments_loaded_on/&quot;&gt;reddit&lt;/a&gt; and &lt;a href=&quot;https://towardsdatascience.com/bigquery-without-a-credit-card-discover-learn-and-share-199e08d4a064&quot;&gt;medium&lt;/a&gt; posts to piece together the format of the queries I'd need.
 &lt;/p&gt;
 
 &lt;p&gt;
@@ -2736,26 +2736,26 @@ Hit the &quot;create app&quot; button. Make note of the client ID and client sec
 &lt;/p&gt;
 
 &lt;pre&gt;
-SELECT s.subreddit as subreddit, 
-s.selftext as submission, a.body AS comment, b.body as reply, 
-s.score as submission_score, a.score as comment_score, b.score as reply_score, 
+SELECT s.subreddit as subreddit,
+s.selftext as submission, a.body AS comment, b.body as reply,
+s.score as submission_score, a.score as comment_score, b.score as reply_score,
 s.author as submission_author, a.author as comment_author, b.author as reply_author
 FROM `fh-bigquery.reddit_comments.{ym}` a
-LEFT JOIN `fh-bigquery.reddit_comments.{ym}` b 
+LEFT JOIN `fh-bigquery.reddit_comments.{ym}` b
 ON CONCAT('t1_',a.id) = b.parent_id
 LEFT JOIN  `fh-bigquery.reddit_posts.{ym}` s
 ON CONCAT('t3_',s.id) = a.parent_id
-where b.body is not null 
+where b.body is not null
   and s.selftext is not null and s.selftext != ''
   and b.author != s.author
   and b.author != a.author
-  and s.subreddit IN ('writing', 
-                      'scifi', 
-                      'sciencefiction', 
-                      'MachineLearning', 
-                      'philosophy', 
-                      'cogsci', 
-                      'neuro', 
+  and s.subreddit IN ('writing',
+                      'scifi',
+                      'sciencefiction',
+                      'MachineLearning',
+                      'philosophy',
+                      'cogsci',
+                      'neuro',
                       'Futurology')
 &lt;/pre&gt;
 
@@ -2772,7 +2772,7 @@ where b.body is not null
 &lt;/pre&gt;
 
 &lt;p&gt;
-    After I train the model with this format, I can then feed the trained model a string like &lt;code&gt;&quot;some new primary comment text&quot; [SEP]&lt;/code&gt;, and it will start to generate the remaining &lt;code&gt;&quot;some new reply&quot;&lt;/code&gt; that it thinks fits best based on the training data. I'll explain in more detail below about how to feed this kind of data into the GPT-2 fine-tuning script.  For now, you can use &lt;a href=&quot;https://github.com/lots-of-things/gpt2-bert-reddit-bot/blob/master/prep_data.py&quot;&gt;this script&lt;/a&gt; to convert the data into the format that GPT-2 fine-tuning will need and save it as &lt;code&gt;gpt2_finetune.csv&lt;/code&gt; 
+    After I train the model with this format, I can then feed the trained model a string like &lt;code&gt;&quot;some new primary comment text&quot; [SEP]&lt;/code&gt;, and it will start to generate the remaining &lt;code&gt;&quot;some new reply&quot;&lt;/code&gt; that it thinks fits best based on the training data. I'll explain in more detail below about how to feed this kind of data into the GPT-2 fine-tuning script.  For now, you can use &lt;a href=&quot;https://github.com/lots-of-things/gpt2-bert-reddit-bot/blob/master/prep_data.py&quot;&gt;this script&lt;/a&gt; to convert the data into the format that GPT-2 fine-tuning will need and save it as &lt;code&gt;gpt2_finetune.csv&lt;/code&gt;
 &lt;/p&gt;
 
 
@@ -2791,7 +2791,7 @@ where b.body is not null
 &lt;/p&gt;
 
 &lt;p&gt;
-    The best part is that the author of gpt-2-simple, even set up a &lt;a href=&quot;https://colab.research.google.com/drive/1VLG8e7YSEwypxU-noRNhsv5dW4NfTGce&quot;&gt;Google Colab notebook&lt;/a&gt; that walked through fine-tuning.  In case you haven't heard, &lt;a href=&quot;https://colab.research.google.com/notebooks/welcome.ipynb&quot;&gt;Google Colab&lt;/a&gt; is an amazing FREE (&lt;a href=&quot;https://meta.stackexchange.com/questions/21932/what-does-the-term-and-free-as-in-free-beer-mean&quot;&gt;as in beer&lt;/a&gt;) resource that lets you &lt;a href=&quot;https://towardsdatascience.com/getting-started-with-google-colab-f2fff97f594c&quot;&gt;run a python jupyter notebook&lt;/a&gt; on a Google GPU server.  Full disclosure, I am officially a lifetime fanboy of Google for making a free tier on Google App Engine, BigQuery, and Google Colab. 
+    The best part is that the author of gpt-2-simple, even set up a &lt;a href=&quot;https://colab.research.google.com/drive/1VLG8e7YSEwypxU-noRNhsv5dW4NfTGce&quot;&gt;Google Colab notebook&lt;/a&gt; that walked through fine-tuning.  In case you haven't heard, &lt;a href=&quot;https://colab.research.google.com/notebooks/welcome.ipynb&quot;&gt;Google Colab&lt;/a&gt; is an amazing FREE (&lt;a href=&quot;https://meta.stackexchange.com/questions/21932/what-does-the-term-and-free-as-in-free-beer-mean&quot;&gt;as in beer&lt;/a&gt;) resource that lets you &lt;a href=&quot;https://towardsdatascience.com/getting-started-with-google-colab-f2fff97f594c&quot;&gt;run a python jupyter notebook&lt;/a&gt; on a Google GPU server.  Full disclosure, I am officially a lifetime fanboy of Google for making a free tier on Google App Engine, BigQuery, and Google Colab.
 &lt;/p&gt;
 
 &lt;p&gt;
@@ -2803,7 +2803,7 @@ where b.body is not null
 &lt;h4&gt;Training BERT models for fake detection and upvote prediction&lt;/h4&gt;
 
 &lt;p&gt;
-    Even after fine-tuning, the output of this model, while normally somewhat reasonable, is often pretty &lt;a href=&quot;/2020/02/combining-gpt-2-and-bert/#gpt2shortcoming&quot;&gt;weird&lt;/a&gt;. To improve the quality of responses, I adapted the concept of GANs to create another meta-model that is able to throw out all the really weird replies.  So I use GPT-2 to generate a 10+ candidate responses for every comment, and then I use another model to filter out which are the best replies I could release.  
+    Even after fine-tuning, the output of this model, while normally somewhat reasonable, is often pretty &lt;a href=&quot;/2020/02/combining-gpt-2-and-bert/#gpt2shortcoming&quot;&gt;weird&lt;/a&gt;. To improve the quality of responses, I adapted the concept of GANs to create another meta-model that is able to throw out all the really weird replies.  So I use GPT-2 to generate a 10+ candidate responses for every comment, and then I use another model to filter out which are the best replies I could release.
 &lt;/p&gt;
 &lt;p&gt;
     To determine the best, I actually want to do two things:
@@ -2849,11 +2849,11 @@ where b.body is not null
 &lt;/p&gt;
 
 &lt;p&gt;
-    To predict how many upvotes a reply will get, I built another model in a &lt;a href=&quot;https://drive.google.com/open?id=1vXJjQbBZZ0Jo-LvcwRaNzCSAgAVem1cC&quot;&gt;similar way&lt;/a&gt;. This time the model was just trained just on a dataset containing a bunch of real reddit comments to predict how many upvotes they actually got. 
+    To predict how many upvotes a reply will get, I built another model in a &lt;a href=&quot;https://drive.google.com/open?id=1vXJjQbBZZ0Jo-LvcwRaNzCSAgAVem1cC&quot;&gt;similar way&lt;/a&gt;. This time the model was just trained just on a dataset containing a bunch of real reddit comments to predict how many upvotes they actually got.
 &lt;/p&gt;
 
 &lt;p&gt;
-    This model also had surprisingly high predictive accuracy.  This &lt;a href=&quot;https://www.dataschool.io/roc-curves-and-auc-explained/&quot;&gt;ROC curve&lt;/a&gt; shows that we can get a lot of true positives correct without having too many false positives. For more on what true positive and false positive means see &lt;a href=&quot;https://developers.google.com/machine-learning/crash-course/classification/true-false-positive-negative&quot;&gt;this article&lt;/a&gt;.  
+    This model also had surprisingly high predictive accuracy.  This &lt;a href=&quot;https://www.dataschool.io/roc-curves-and-auc-explained/&quot;&gt;ROC curve&lt;/a&gt; shows that we can get a lot of true positives correct without having too many false positives. For more on what true positive and false positive means see &lt;a href=&quot;https://developers.google.com/machine-learning/crash-course/classification/true-false-positive-negative&quot;&gt;this article&lt;/a&gt;.
 &lt;/p&gt;
 
 &lt;img title=&quot;comment score prediction ROC curve&quot; src=&quot;/assets/images/2020/bert_upvote_predict.png&quot; alt=&quot;BERT score prediction ROC curve&quot;/&gt;
@@ -2893,7 +2893,7 @@ for subreddit_name in ['sciencefiction',
 
 &lt;h4&gt;Running the generator and discriminators&lt;/h4&gt;
 &lt;p&gt;
-    Finally, I just had to build something to reload all the fine-tuned models and pass the new reddit comments through them to get replies. In an ideal world, I would have run both the GPT-2 and the BERT models in one script that could be run from end to end.  Unfortunately, a quirk in the way the designers immplemented the gpt2-simple package made it impossible to have two computation graphs &lt;a href=&quot;https://github.com/minimaxir/gpt-2-simple/issues/130&quot;&gt;instantiated in the same environment&lt;/a&gt;.  
+    Finally, I just had to build something to reload all the fine-tuned models and pass the new reddit comments through them to get replies. In an ideal world, I would have run both the GPT-2 and the BERT models in one script that could be run from end to end.  Unfortunately, a quirk in the way the designers immplemented the gpt2-simple package made it impossible to have two computation graphs &lt;a href=&quot;https://github.com/minimaxir/gpt-2-simple/issues/130&quot;&gt;instantiated in the same environment&lt;/a&gt;.
 &lt;/p&gt;
 
 &lt;p&gt;
@@ -3423,7 +3423,7 @@ def add_node(node_list, parent_name, parent_time, parent_size, parent_weight):
 &lt;/p&gt;
 
 &lt;p&gt;
-	&lt;em&gt;Update: I forgot that part of the reason for showering was to actually get clean.  As it turns out, after a month of showering for 2 minutes I started to get a little gross.  So I'm moderating my usage, but no longer limiting to 2 minutes.  Oh well, worth it while it lasted.&lt;/em&gt; 
+	&lt;em&gt;Update: I forgot that part of the reason for showering was to actually get clean.  As it turns out, after a month of showering for 2 minutes I started to get a little gross.  So I'm moderating my usage, but no longer limiting to 2 minutes.  Oh well, worth it while it lasted.&lt;/em&gt;
 &lt;/p&gt;</description>
         <pubDate>Sat, 07 Dec 2019 00:00:00 -0800</pubDate>
         <link>https://bonkerfield.org/2019/12/short-post-on-short-showers/</link>
@@ -4443,7 +4443,7 @@ top (bone dry)
  try {
  var tracker = ga.getAll()[0];
  return tracker.get('clientId').toLowerCase().trim();
-} catch(e) {} 
+} catch(e) {}
 return 'false';
 }&lt;/pre&gt;
 &lt;p&gt;
@@ -4498,7 +4498,7 @@ dataLayer = [{'userID': userID,'contentVersion':1}];
   scroll_query = {
   'reportRequests': [{
   'viewId' : '187999039',
-  
+
   'dateRanges': [{
   'startDate' : '2019-11-26',
   'endDate'   : '2020-05-01'}],
@@ -5121,7 +5121,7 @@ Originally, the admins had been using totally static pages. I could have kept th
     &lt;/p&gt;
 &lt;h5&gt;Spoilers...&lt;/h5&gt;
     Now I spoil the ending: the author learns from the I Ching that the story he wrote is actually the truth. By my reading, we can see the I Ching functioning accurately throughout the novel. I believe (not crazy: I found &lt;a href=&quot;https://blog.brian-fitzgerald.net/blog/2015/10/24/meta-fiction-story-and-philip-k-dicks-man-in-the-high-castle/&quot;&gt;others&lt;/a&gt;) we are supposed to interpret the I Ching as a revelatory voice of a true author (maybe Dick) transmitting to the characters in this story. Depending on your perspective on the nature of reality, one might conclude that the I Ching in our universe would then be a voice from the author of our universe. Of course, if the author from another universe were transmitting to the author in our universe what happened in his own universe, which looks a little more like that in the book, well, that would then introduce a lovely recursive &lt;a href=&quot;http://www.crystalinks.com/ouroboros.html&quot;&gt;Ouroboros&lt;/a&gt;.
-    
+
 &lt;img border=&quot;0&quot; src=&quot;https://2.bp.blogspot.com/-EgDqHosxmCk/W7cEjhYfoZI/AAAAAAAAC4U/B1BbGiyZhuYjMRg9jm8Pk4CqL3oqSmABACLcBGAs/s1600/birthday_card_by_paivatar-d68r562.jpg&quot; title=&quot; &quot;/&gt;
 &lt;p&gt;
         Also, I actually stumbled upon adding I Ching references to my narrative by accident with a later puzzle. That inclusion led me to the Man in the High Castle through a &lt;a href=&quot;https://thoughtcatalog.com/christine-stockton/2014/01/the-10-best-wikipedia-black-holes-for-curious-people-who-have-no-impulse-control/&quot;&gt;wikipedia black hole&lt;/a&gt;.
@@ -5236,7 +5236,7 @@ Originally, the admins had been using totally static pages. I could have kept th
 &lt;/p&gt;
 &lt;img border=&quot;0&quot; src=&quot;https://3.bp.blogspot.com/-C9qgUOJXJJM/Wy6snlZXlLI/AAAAAAAACPc/jDZgcjc61lAGFSkN7raveBWt7pDC2CwAACKgBGAs/s1600/IMG_20180511_191827.jpg&quot; title=&quot;
 Sails rigged
-     
+
 Sails rigged
     &quot;/&gt;
 &lt;div&gt;&lt;a href=&quot;https://4.bp.blogspot.com/-sZ-oZ5uLKBs/Wy6snl321fI/AAAAAAAACPc/RhjwV4e38wACQTyHels0qsxWREwjwL1twCKgBGAs/s1600/IMG_20180511_184103.jpg&quot; imageanchor=&quot;1&quot; style=&quot;margin-left: 1em; margin-right: 1em;&quot;&gt;&lt;img border=&quot;0&quot; data-original-height=&quot;1600&quot; data-original-width=&quot;1200&quot; height=&quot;200&quot; src=&quot;https://4.bp.blogspot.com/-sZ-oZ5uLKBs/Wy6snl321fI/AAAAAAAACPc/RhjwV4e38wACQTyHels0qsxWREwjwL1twCKgBGAs/s200/IMG_20180511_184103.jpg&quot; width=&quot;150&quot;/&gt;&lt;/a&gt;&lt;a href=&quot;https://3.bp.blogspot.com/-kc-sNOPsuvw/Wy6snvpdQ8I/AAAAAAAACPc/aIUYw1WEjjoWdHesaFgwfZi5BDuSLZf0QCKgBGAs/s1600/IMG_20180511_184045.jpg&quot; imageanchor=&quot;1&quot; style=&quot;margin-left: 1em; margin-right: 1em;&quot;&gt;&lt;img border=&quot;0&quot; data-original-height=&quot;1600&quot; data-original-width=&quot;1200&quot; height=&quot;200&quot; src=&quot;https://3.bp.blogspot.com/-kc-sNOPsuvw/Wy6snvpdQ8I/AAAAAAAACPc/aIUYw1WEjjoWdHesaFgwfZi5BDuSLZf0QCKgBGAs/s200/IMG_20180511_184045.jpg&quot; width=&quot;150&quot;/&gt;&lt;/a&gt;&lt;a href=&quot;https://2.bp.blogspot.com/-KK_I-uTrtsI/Wy6snvdGRaI/AAAAAAAACPc/Xco0bb6aeK46KlXlqrHt1dPu7reVeJWrQCKgBGAs/s1600/IMG_20180511_184023.jpg&quot; imageanchor=&quot;1&quot; style=&quot;margin-left: 1em; margin-right: 1em;&quot;&gt;&lt;img border=&quot;0&quot; data-original-height=&quot;1600&quot; data-original-width=&quot;1200&quot; height=&quot;200&quot; src=&quot;https://2.bp.blogspot.com/-KK_I-uTrtsI/Wy6snvdGRaI/AAAAAAAACPc/Xco0bb6aeK46KlXlqrHt1dPu7reVeJWrQCKgBGAs/s200/IMG_20180511_184023.jpg&quot; width=&quot;150&quot;/&gt;&lt;/a&gt;&lt;a href=&quot;https://2.bp.blogspot.com/-Jbfcbjp3RDA/Wy6snnsXgjI/AAAAAAAACPc/j9-RCoRLjAc6q1Irrc_sHXFdqyFGPJkPwCKgBGAs/s1600/IMG_20180511_184014.jpg&quot; imageanchor=&quot;1&quot; style=&quot;margin-left: 1em; margin-right: 1em;&quot;&gt;&lt;img border=&quot;0&quot; data-original-height=&quot;1600&quot; data-original-width=&quot;1200&quot; height=&quot;200&quot; src=&quot;https://2.bp.blogspot.com/-Jbfcbjp3RDA/Wy6snnsXgjI/AAAAAAAACPc/j9-RCoRLjAc6q1Irrc_sHXFdqyFGPJkPwCKgBGAs/s200/IMG_20180511_184014.jpg&quot; width=&quot;150&quot;/&gt;&lt;/a&gt;&lt;a href=&quot;https://2.bp.blogspot.com/-tqC-_Jm5eKs/Wy6snlmLKSI/AAAAAAAACPc/Cuy2pOcuI98SaIsZmS9BCaneI6kvp_qmACKgBGAs/s1600/IMG_20180511_183905.jpg&quot; imageanchor=&quot;1&quot; style=&quot;margin-left: 1em; margin-right: 1em;&quot;&gt;&lt;img border=&quot;0&quot; data-original-height=&quot;1600&quot; data-original-width=&quot;1200&quot; height=&quot;200&quot; src=&quot;https://2.bp.blogspot.com/-tqC-_Jm5eKs/Wy6snlmLKSI/AAAAAAAACPc/Cuy2pOcuI98SaIsZmS9BCaneI6kvp_qmACKgBGAs/s200/IMG_20180511_183905.jpg&quot; width=&quot;150&quot;/&gt;&lt;/a&gt;&lt;a href=&quot;https://4.bp.blogspot.com/-yymqkc-AsIs/Wy6sni5Z6oI/AAAAAAAACPc/p9PS7eaPRJoe8tzWNaIckC7XQ1ZuIkbtgCKgBGAs/s1600/IMG_20180511_183837.jpg&quot; imageanchor=&quot;1&quot; style=&quot;margin-left: 1em; margin-right: 1em;&quot;&gt;&lt;img border=&quot;0&quot; data-original-height=&quot;1600&quot; data-original-width=&quot;1200&quot; height=&quot;200&quot; src=&quot;https://4.bp.blogspot.com/-yymqkc-AsIs/Wy6sni5Z6oI/AAAAAAAACPc/p9PS7eaPRJoe8tzWNaIckC7XQ1ZuIkbtgCKgBGAs/s200/IMG_20180511_183837.jpg&quot; width=&quot;150&quot;/&gt;&lt;/a&gt;&lt;br/&gt;Topside hardware, some needs a little TLC&lt;/div&gt;
@@ -5521,7 +5521,7 @@ With everything clean, I reapplied gobs of grease and reinserted the bearings. T
     &lt;/p&gt;
 
     Now, as it just so happened, I had taken my prior prescription to the online eyeglasses retailer, &lt;a href=&quot;https://www.reddit.com/r/malefashionadvice/comments/3yowqq/how_is_the_quality_of_warby_parker_glasses/&quot;&gt;Warby Parker&lt;/a&gt;, so I knew very well that there was no mention of &quot;prism&quot; anywhere on my prescription. Moreover, even though I've been going to the optometrist for more than 20 years, I had never heard about prism before. Since I didn't know what prism was, I asked what it meant for glasses to have prism.
-    
+
 &lt;p&gt;
         Essentially, as my doctor explained, prism means that the center of the focus of the lens is not aligned with the center of your eye. In other words, it means the lens of the glasses are offset. This is normally done intentionally when a person has a misaligned eye that needs to be corrected. But since I knew that my old prescription didn't mention prism, I told the optometrist that it must have been a mistake, and that I remember having a really hard time adjusting to my glasses when I got them. And then he responded with a statement that completely took me by surprise.
     &lt;/p&gt;
@@ -7851,7 +7851,7 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
     I've got the functional &lt;a href=&quot;https://github.com/lots-of-things/task-game/blob/master/taskgame_sim.m&quot;&gt;simulation code&lt;/a&gt; on GitHub. It looks complicated, but it's basically just a loop that picks one probability (33%, 66%, or 100%) and then picks the corresponding &quot;choice&quot; threshold. Then it just simulates the game by offering a random value and letting the &quot;choice&quot; decide whether the offer is accepted. It adds up winnings and time according to the choice and the outcome.
 &lt;/p&gt;
 &lt;pre class=&quot;prettyprint&quot;&gt;
-    
+
 winnings = 0;
 i = 1;
 t = 0;
@@ -7992,7 +7992,7 @@ end
         Here are some pictures of the students working on their projects during the competition.
     &lt;/p&gt;
 &lt;img border=&quot;0&quot; src=&quot;http://1.bp.blogspot.com/-sclBEFVmQKQ/VNI515dlmPI/AAAAAAAAClc/oN1eODMkf6U/s1600/CAM00012.jpg&quot; style=&quot;max-width: 100%;&quot; title=&quot;
-   
+
  &quot;/&gt;
 &lt;br/&gt;
 </description>
@@ -9106,7 +9106,7 @@ end
         &lt;img class=&quot;quantum_im&quot; border=&quot;0&quot; id=&quot;card5&quot; src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Bicyclebackside.jpg/153px-Bicyclebackside.jpg&quot; /&gt;
         &lt;img class=&quot;quantum_im&quot; border=&quot;0&quot; id=&quot;card6&quot; src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Bicyclebackside.jpg/153px-Bicyclebackside.jpg&quot; /&gt;
         &lt;img class=&quot;quantum_im&quot; border=&quot;0&quot; id=&quot;card7&quot; src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Bicyclebackside.jpg/153px-Bicyclebackside.jpg&quot; /&gt;
-        &lt;img class=&quot;quantum_im&quot; border=&quot;0&quot; id=&quot;card8&quot; src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Bicyclebackside.jpg/153px-Bicyclebackside.jpg&quot; /&gt; 
+        &lt;img class=&quot;quantum_im&quot; border=&quot;0&quot; id=&quot;card8&quot; src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Bicyclebackside.jpg/153px-Bicyclebackside.jpg&quot; /&gt;
     &lt;/div&gt;
     &lt;input class=&quot;quantum_input&quot; id=&quot;bet1&quot; max=&quot;9&quot; min=&quot;0&quot; type=&quot;number&quot; value=&quot;0&quot; /&gt;
     &lt;input class=&quot;quantum_input&quot; id=&quot;bet2&quot; max=&quot;9&quot; min=&quot;0&quot; type=&quot;number&quot; value=&quot;0&quot; /&gt;
@@ -9117,11 +9117,11 @@ end
     &lt;input class=&quot;quantum_input&quot; id=&quot;bet7&quot; max=&quot;9&quot; min=&quot;0&quot; type=&quot;number&quot; value=&quot;0&quot; /&gt;
     &lt;input class=&quot;quantum_input&quot; id=&quot;bet8&quot; max=&quot;9&quot; min=&quot;0&quot; type=&quot;number&quot; value=&quot;0&quot; /&gt;
     &lt;div id=&quot;results&quot; style=&quot;display:none&quot;&gt;
-  
+
     &lt;/div&gt;
     &lt;div&gt;
-        &lt;button id=&quot;paybut&quot; onclick=&quot;payup()&quot; style=&quot;display:none;font-size:1.2em;border-radius:5px&quot; type=&quot;button&quot;&gt;Trade Bets&lt;/button&gt; 
-        &lt;button id=&quot;rebut&quot; onclick=&quot;regame()&quot; style=&quot;display:none;font-size:1.2em;border-radius:5px&quot; type=&quot;button&quot;&gt;Restart&lt;/button&gt; 
+        &lt;button id=&quot;paybut&quot; onclick=&quot;payup()&quot; style=&quot;display:none;font-size:1.2em;border-radius:5px&quot; type=&quot;button&quot;&gt;Trade Bets&lt;/button&gt;
+        &lt;button id=&quot;rebut&quot; onclick=&quot;regame()&quot; style=&quot;display:none;font-size:1.2em;border-radius:5px&quot; type=&quot;button&quot;&gt;Restart&lt;/button&gt;
         &lt;button id=&quot;startbut&quot; onclick=&quot;startgame()&quot; style=&quot;font-size:1.2em;border-radius:5px&quot; type=&quot;button&quot;&gt;Place Bets&lt;/button&gt;
         &lt;button id=&quot;swapbut&quot; onclick=&quot;swap()&quot; style=&quot;display:none;font-size:1.2em;border-radius:5px&quot; type=&quot;button&quot;&gt;Redistribute&lt;/button&gt;
         &lt;button id=&quot;endbut&quot; onclick=&quot;endgame()&quot; style=&quot;display:none;font-size:1.2em;border-radius:5px&quot; type=&quot;button&quot;&gt;End Game&lt;/button&gt;
@@ -9288,9 +9288,9 @@ function startgame() {
     for (i = 0; i &lt; bets.length; i++) { bets[i] = bets[i] / nrm; }
 }
 
-function payup() { 
-    for (i = 0; i &lt; bets.length; i++) 
-        { 
+function payup() {
+    for (i = 0; i &lt; bets.length; i++)
+        {
             if (i != index) bets[i] = -bets[i]; }
             refresh();
         }
@@ -9299,14 +9299,14 @@ function swap() { avg = 0; for (i = 0; i &lt; bets.length; i++) { avg = avg + 1 
 
 function refresh() {
     sm = 0;
-    for (i = 0; i &lt; bets.length; i++) { 
-        sm = sm + Math.abs(bets[i]); 
+    for (i = 0; i &lt; bets.length; i++) {
+        sm = sm + Math.abs(bets[i]);
     }
-    if (sm &gt; 0) { 
-        scl = tog / sm; 
-    } else { 
-        scl = 1; 
-    } 
+    if (sm &gt; 0) {
+        scl = tog / sm;
+    } else {
+        scl = 1;
+    }
     document.getElementById(&quot;bet1&quot;).value = Math.abs(scl * bets[0]);
     document.getElementById(&quot;bet2&quot;).value = Math.abs(scl * bets[1]);
     document.getElementById(&quot;bet3&quot;).value = Math.abs(scl * bets[2]);
@@ -9320,22 +9320,22 @@ function refresh() {
 function endgame() {
     val = 0;
     for (i = 0; i &lt; bets.length; i++) { if (i != index) { val = val - Math.abs(bets[i]); } else { val = val + 2 * Math.abs(bets[i]); } } sm = 0;
-    for (i = 0; i &lt; bets.length; i++) { 
-        sm = sm + Math.abs(bets[i]); 
-    } 
+    for (i = 0; i &lt; bets.length; i++) {
+        sm = sm + Math.abs(bets[i]);
+    }
     scl = tog / sm;
     val = val * scl;
     total = total + val;
-    if (val &gt; 0) { 
-        document.getElementById(&quot;results&quot;).innerHTML = &quot;Game over.  You won $&quot; + val.toFixed(2); 
-    } else { 
-        document.getElementById(&quot;results&quot;).innerHTML = &quot;Game over.  You lost $&quot; + (-val).toFixed(2); 
+    if (val &gt; 0) {
+        document.getElementById(&quot;results&quot;).innerHTML = &quot;Game over.  You won $&quot; + val.toFixed(2);
+    } else {
+        document.getElementById(&quot;results&quot;).innerHTML = &quot;Game over.  You lost $&quot; + (-val).toFixed(2);
     }
-    if (total &gt; 0) { 
-        document.getElementById(&quot;results&quot;).innerHTML = document.getElementById(&quot;results&quot;).innerHTML + &quot;. &lt;br /&gt; Total Winnings= $&quot; + total.toFixed(2); 
-    } else { 
-        document.getElementById(&quot;results&quot;).innerHTML = document.getElementById(&quot;results&quot;).innerHTML + &quot;. &lt;br /&gt; Total Winnings= -$&quot; + -total.toFixed(2); 
-    } 
+    if (total &gt; 0) {
+        document.getElementById(&quot;results&quot;).innerHTML = document.getElementById(&quot;results&quot;).innerHTML + &quot;. &lt;br /&gt; Total Winnings= $&quot; + total.toFixed(2);
+    } else {
+        document.getElementById(&quot;results&quot;).innerHTML = document.getElementById(&quot;results&quot;).innerHTML + &quot;. &lt;br /&gt; Total Winnings= -$&quot; + -total.toFixed(2);
+    }
     document.getElementById(&quot;results&quot;).style.display = &quot;inline&quot;;
     document.getElementById(&quot;rebut&quot;).style.display = &quot;inline&quot;;
     document.getElementById(&quot;paybut&quot;).style.display = &quot;none&quot;;

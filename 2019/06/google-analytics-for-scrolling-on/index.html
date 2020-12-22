@@ -2,7 +2,7 @@
  try {
  var tracker = ga.getAll()[0];
  return tracker.get('clientId').toLowerCase().trim();
-} catch(e) {} 
+} catch(e) {}
 return 'false';
 }</pre><p> Apparently, there is a <a href="https://www.simoahava.com/gtm-tips/use-customtask-access-tracker-values-google-tag-manager/">better way</a> to do this, but I didn't find that until now. The drawback with my method is that the clientId variable will be null if Google hasn't set it yet. To take care of this problem I added a second variable (userId), which I manually populate on the first pageload. That way if Google takes a while to setup the clientId, I can go back and use the userId variable to connect earlier events. Kind of hacky but whatever.</p><p> I added the following javascript to my site to make a random ID and add it to the Google Tag Manager's "<a href="https://support.google.com/tagmanager/answer/6164391?hl=en">data layer</a>." The data layer is just a way to pass variables from your local javascript to the GTM's variable space. Note that I also added the variable called contentVersion to track which site update the user was viewing.</p><p> After adding this code into the &gt;head&lt; html of my site:</p><pre>
   function makeid() {
@@ -23,7 +23,7 @@ dataLayer = [{'userID': userID,'contentVersion':1}];
   scroll_query = {
   'reportRequests': [{
   'viewId' : '187999039',
-  
+
   'dateRanges': [{
   'startDate' : '2019-11-26',
   'endDate'   : '2020-05-01'}],
