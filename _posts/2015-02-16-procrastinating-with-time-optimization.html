@@ -3,6 +3,7 @@ layout: post
 title: Procrastinating with a Time Optimization Game
 date: '2015-02-16'
 author: will stedden
+type: project
 tags:
 - games
 - design
@@ -63,7 +64,7 @@ image: http://www.explainxkcd.com/wiki/images/e/e5/is_it_worth_the_time.png
     I've got the functional <a href="https://github.com/lots-of-things/task-game/blob/master/taskgame_sim.m">simulation code</a> on GitHub. It looks complicated, but it's basically just a loop that picks one probability (33%, 66%, or 100%) and then picks the corresponding "choice" threshold. Then it just simulates the game by offering a random value and letting the "choice" decide whether the offer is accepted. It adds up winnings and time according to the choice and the outcome.
 </p>
 <pre class="prettyprint">
-    
+
 winnings = 0;
 i = 1;
 t = 0;

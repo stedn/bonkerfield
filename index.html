@@ -3,6 +3,60 @@ layout: default
 pagination:
   enabled: true
 ---
+<style>
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+}
+.container .box_A,
+.container .box_B {
+    width: 50%;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    display:inline-block;
+    opacity: 0.5;
+}
+.container .box_A {
+    border-right: 1px solid rgba(0,0,0,.1);
+    padding-right: 1%;
+}
+.container .box_B {
+    border-left: 1px solid rgba(0,0,0,.1);
+    padding-left: 1%;
+    float:right;
+}
+
+.container:hover .box_A ,
+.container:hover .box_B {
+    width: 10%;
+    opacity: 0.1;
+}
+.container h2 {
+  text-align:center;
+}
+
+.container:hover .box_A:hover ,
+.container:hover .box_B:hover {
+    width: 90%;
+    opacity: 1;
+}
+#content-mobile {display: none;}
+
+@media screen and (max-width: 768px) {
+
+#content-desktop {display: none;}
+#content-mobile {display: block;}
+
+}
+
+</style>
+
 <!-- The main content area -->
 <a style="display:none;" class="h-card" rel="me" href="https://www.bonkerfield.org/">Will Stedden</a>
 <div class="posts">
@@ -13,25 +67,55 @@ pagination:
       <p class="post__date">a place to put lots of things</p>
       {% tags_list :threshold => 1, :sort_by => count, :order_by => desc, :limit => 12 %}
     </div>
-    
+
 
   </div>
-  <div class="grid-xlarge">
+  <div class="container" id="content-desktop">
+    <div class="grid-xlarge box_A">
+      <h2>Projects</h2>
+      <div class="posts__container" style="width:85vw;overflow-x:hidden;overflow-y:auto;" itemscope itemtype="http://schema.org/Blog" data-columns>
+        {% for post in paginator.posts %}
+          {% if post.type == 'project' %}
+            {% include post-card.html %}
+          {% endif %}
+        {% endfor %}
+      </div>
+      <div class="posts__pagination">
+        <a href="/projects"><h2>All Projects</h2></a>
+      </div>
+    </div>
 
-    <div class="posts__container" itemscope itemtype="http://schema.org/Blog" data-columns>
-
-      {% for post in paginator.posts %}
-
-        <!-- The tag below includes the markup for each post - partials/post-card.html -->
-        {% if post.skiphome != true %}
-        
-          {% include post-card.html %}
-        
-        {% endif %}
-
-      {% endfor %}
+    <div class="box_B">
+      <h2>Essays</h2>
+      <div style="width:90vw;overflow-x:hidden;" itemscope itemtype="http://schema.org/Blog" data-columns>
+        {% for post in paginator.posts %}
+          {% if post.type == 'essay' %}
+            {% include post-card-essay.html %}
+          {% endif %}
+        {% endfor %}
+      </div>
+      <div class="posts__pagination">
+        <a href="/essays"><h2 >All Essays</h2></a>
+      </div>
     </div>
   </div>
 
-  {% include pagination.html %}
+
+  <div id="content-mobile">
+    <div class="grid-xlarge">
+      <div class="posts__container" style="width:85vw;overflow-x:hidden;" itemscope itemtype="http://schema.org/Blog" data-columns>
+        {% for post in paginator.posts %}
+
+         {% include post-card.html %}
+
+        {% endfor %}
+      </div>
+      <div class="posts__pagination">
+        <h2 class="posts__next"><a href="/projects">More Projects</a> | <a href="/essays">More Essays</a></a></h2>
+      </div>
+    </div>
+
+  </div>
+
+
 </div>

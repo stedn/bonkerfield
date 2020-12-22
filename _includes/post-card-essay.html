@@ -1,0 +1,13 @@
+<article style="border:none; border-bottom: 1px solid rgb(0,0,0,0.1);" class="posts__post single_col"  itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+  <a class="posts__link" href="{{ post.url | prepend: site.baseurl }}" itemprop="url">
+    <div style="width:30%;display:inline-block;">
+        {% if post.image %}
+          <img style="max-height:300px;overflow-y:hidden;" src="{{ post.image }}" alt="{{ post.title }}" itemprop="image"/>
+        {% endif %}
+
+    </div>
+    <div style="width:70%;display:inline-block;">
+      <p style="margin:10px;"><strong >{{ post.title }}</strong> — <span ><em>{{ post.content | strip_html | truncatewords: 90, "" }} ...</em></span></p>
+    </div>
+  </a>
+</article>

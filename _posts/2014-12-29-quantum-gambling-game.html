@@ -3,6 +3,7 @@ layout: post
 title: Quantum Gambling Game
 date: '2014-12-29'
 author: will stedden
+type: project
 tags:
 - games
 - quantum
@@ -43,7 +44,7 @@ image: http://3.bp.blogspot.com/-WvR0IUoXD1Y/VKMHxZ7UxbI/AAAAAAAABMQ/_kAvN5N_chs
         <img class="quantum_im" border="0" id="card5" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Bicyclebackside.jpg/153px-Bicyclebackside.jpg" />
         <img class="quantum_im" border="0" id="card6" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Bicyclebackside.jpg/153px-Bicyclebackside.jpg" />
         <img class="quantum_im" border="0" id="card7" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Bicyclebackside.jpg/153px-Bicyclebackside.jpg" />
-        <img class="quantum_im" border="0" id="card8" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Bicyclebackside.jpg/153px-Bicyclebackside.jpg" /> 
+        <img class="quantum_im" border="0" id="card8" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Bicyclebackside.jpg/153px-Bicyclebackside.jpg" />
     </div>
     <input class="quantum_input" id="bet1" max="9" min="0" type="number" value="0" />
     <input class="quantum_input" id="bet2" max="9" min="0" type="number" value="0" />
@@ -54,11 +55,11 @@ image: http://3.bp.blogspot.com/-WvR0IUoXD1Y/VKMHxZ7UxbI/AAAAAAAABMQ/_kAvN5N_chs
     <input class="quantum_input" id="bet7" max="9" min="0" type="number" value="0" />
     <input class="quantum_input" id="bet8" max="9" min="0" type="number" value="0" />
     <div id="results" style="display:none">
-  
+
     </div>
     <div>
-        <button id="paybut" onclick="payup()" style="display:none;font-size:1.2em;border-radius:5px" type="button">Trade Bets</button> 
-        <button id="rebut" onclick="regame()" style="display:none;font-size:1.2em;border-radius:5px" type="button">Restart</button> 
+        <button id="paybut" onclick="payup()" style="display:none;font-size:1.2em;border-radius:5px" type="button">Trade Bets</button>
+        <button id="rebut" onclick="regame()" style="display:none;font-size:1.2em;border-radius:5px" type="button">Restart</button>
         <button id="startbut" onclick="startgame()" style="font-size:1.2em;border-radius:5px" type="button">Place Bets</button>
         <button id="swapbut" onclick="swap()" style="display:none;font-size:1.2em;border-radius:5px" type="button">Redistribute</button>
         <button id="endbut" onclick="endgame()" style="display:none;font-size:1.2em;border-radius:5px" type="button">End Game</button>
@@ -225,9 +226,9 @@ function startgame() {
     for (i = 0; i < bets.length; i++) { bets[i] = bets[i] / nrm; }
 }
 
-function payup() { 
-    for (i = 0; i < bets.length; i++) 
-        { 
+function payup() {
+    for (i = 0; i < bets.length; i++)
+        {
             if (i != index) bets[i] = -bets[i]; }
             refresh();
         }
@@ -236,14 +237,14 @@ function swap() { avg = 0; for (i = 0; i < bets.length; i++) { avg = avg + 1 * b
 
 function refresh() {
     sm = 0;
-    for (i = 0; i < bets.length; i++) { 
-        sm = sm + Math.abs(bets[i]); 
+    for (i = 0; i < bets.length; i++) {
+        sm = sm + Math.abs(bets[i]);
     }
-    if (sm > 0) { 
-        scl = tog / sm; 
-    } else { 
-        scl = 1; 
-    } 
+    if (sm > 0) {
+        scl = tog / sm;
+    } else {
+        scl = 1;
+    }
     document.getElementById("bet1").value = Math.abs(scl * bets[0]);
     document.getElementById("bet2").value = Math.abs(scl * bets[1]);
     document.getElementById("bet3").value = Math.abs(scl * bets[2]);
@@ -257,22 +258,22 @@ function refresh() {
 function endgame() {
     val = 0;
     for (i = 0; i < bets.length; i++) { if (i != index) { val = val - Math.abs(bets[i]); } else { val = val + 2 * Math.abs(bets[i]); } } sm = 0;
-    for (i = 0; i < bets.length; i++) { 
-        sm = sm + Math.abs(bets[i]); 
-    } 
+    for (i = 0; i < bets.length; i++) {
+        sm = sm + Math.abs(bets[i]);
+    }
     scl = tog / sm;
     val = val * scl;
     total = total + val;
-    if (val > 0) { 
-        document.getElementById("results").innerHTML = "Game over.  You won $" + val.toFixed(2); 
-    } else { 
-        document.getElementById("results").innerHTML = "Game over.  You lost $" + (-val).toFixed(2); 
+    if (val > 0) {
+        document.getElementById("results").innerHTML = "Game over.  You won $" + val.toFixed(2);
+    } else {
+        document.getElementById("results").innerHTML = "Game over.  You lost $" + (-val).toFixed(2);
     }
-    if (total > 0) { 
-        document.getElementById("results").innerHTML = document.getElementById("results").innerHTML + ". <br /> Total Winnings= $" + total.toFixed(2); 
-    } else { 
-        document.getElementById("results").innerHTML = document.getElementById("results").innerHTML + ". <br /> Total Winnings= -$" + -total.toFixed(2); 
-    } 
+    if (total > 0) {
+        document.getElementById("results").innerHTML = document.getElementById("results").innerHTML + ". <br /> Total Winnings= $" + total.toFixed(2);
+    } else {
+        document.getElementById("results").innerHTML = document.getElementById("results").innerHTML + ". <br /> Total Winnings= -$" + -total.toFixed(2);
+    }
     document.getElementById("results").style.display = "inline";
     document.getElementById("rebut").style.display = "inline";
     document.getElementById("paybut").style.display = "none";

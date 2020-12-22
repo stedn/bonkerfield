@@ -1,0 +1,34 @@
+---
+layout: default
+---
+<style>
+
+</style>
+
+<!-- The main content area -->
+<a style="display:none;" class="h-card" rel="me" href="https://www.bonkerfield.org/">Will Stedden</a>
+<div class="posts">
+  <div class="post__header">
+    <div class="grid-small">
+      <h2 itemprop="name headline">bonkerfield | essays</h2>
+
+      <p class="post__date"></p>
+      {% tags_list :threshold => 1, :sort_by => count, :order_by => desc, :limit => 12 %}
+    </div>
+
+
+  </div>
+  <div class="container">
+    <div itemscope itemtype="http://schema.org/Blog" data-columns>
+        {% for post in site.posts %}
+          {% if post.type == 'essay' %}
+            {% include post-card-essay.html %}
+          {% endif %}
+        {% endfor %}
+      </div>
+
+  </div>
+
+
+  <!-- {% include pagination.html %} -->
+</div>

@@ -3,8 +3,9 @@ layout: post
 title: How to build a convincing reddit personality with GPT2 and BERT
 date: '2020-02-04'
 author: will stedden
+type: project
 skiphome: true
-tags: 
+tags:
 - machine learning
 - code
 ---
@@ -29,7 +30,7 @@ tags:
         step 0: get some reddit comment data from your favorite subreddits and format into strings that look like "comment [SEP] reply"
     </li>
     <li>
-        step 1: fine tune GPT-2 to generate reddit text in the format "comment [SEP] reply"   
+        step 1: fine tune GPT-2 to generate reddit text in the format "comment [SEP] reply"
     </li>
     <li>
     step 2: fine tune two BERT classifiers to:
@@ -39,16 +40,16 @@ tags:
     </ul>
     </li>
     <li>
-    step 3: use praw to download current comments  
+    step 3: use praw to download current comments
     </li>
     <li>
-    step 4: use fine-tuned GPT2 to generate many replies for each comment  
+    step 4: use fine-tuned GPT2 to generate many replies for each comment
     </li>
     <li>
     step 5: pass the generated replies to two BERT models to generate a prediction of realisticness and number of upvotes
     </li>
     <li>
-    step 6: use some criteria for choosing which replies to submit  
+    step 6: use some criteria for choosing which replies to submit
     </li>
     <li>
     step 7: use praw to submit the chosen comments
@@ -64,7 +65,7 @@ tags:
 </p>
 
 <p>
-    The data I used to fine-tune the models came from a <a href="https://bigquery.cloud.google.com/dataset/fh-bigquery:reddit_comments?pli=1">large database of previously retrieved reddit comments</a>.  There is an <a href="https://www.reddit.com/r/bigquery/wiki/datasets">ongoing project</a> that scrapes many sites around the web and stores them in a bunch of Google BigQuery tables.  To me, it's very surprising that I couldn't find a central  page about such a big project, but I used a few <a href="https://www.reddit.com/r/bigquery/comments/5z957b/more_than_3_billion_reddit_comments_loaded_on/">reddit</a> and <a href="https://towardsdatascience.com/bigquery-without-a-credit-card-discover-learn-and-share-199e08d4a064">medium</a> posts to piece together the format of the queries I'd need.  
+    The data I used to fine-tune the models came from a <a href="https://bigquery.cloud.google.com/dataset/fh-bigquery:reddit_comments?pli=1">large database of previously retrieved reddit comments</a>.  There is an <a href="https://www.reddit.com/r/bigquery/wiki/datasets">ongoing project</a> that scrapes many sites around the web and stores them in a bunch of Google BigQuery tables.  To me, it's very surprising that I couldn't find a central  page about such a big project, but I used a few <a href="https://www.reddit.com/r/bigquery/comments/5z957b/more_than_3_billion_reddit_comments_loaded_on/">reddit</a> and <a href="https://towardsdatascience.com/bigquery-without-a-credit-card-discover-learn-and-share-199e08d4a064">medium</a> posts to piece together the format of the queries I'd need.
 </p>
 
 <p>
@@ -72,26 +73,26 @@ tags:
 </p>
 
 <pre>
-SELECT s.subreddit as subreddit, 
-s.selftext as submission, a.body AS comment, b.body as reply, 
-s.score as submission_score, a.score as comment_score, b.score as reply_score, 
+SELECT s.subreddit as subreddit,
+s.selftext as submission, a.body AS comment, b.body as reply,
+s.score as submission_score, a.score as comment_score, b.score as reply_score,
 s.author as submission_author, a.author as comment_author, b.author as reply_author
 FROM `fh-bigquery.reddit_comments.{ym}` a
-LEFT JOIN `fh-bigquery.reddit_comments.{ym}` b 
+LEFT JOIN `fh-bigquery.reddit_comments.{ym}` b
 ON CONCAT('t1_',a.id) = b.parent_id
 LEFT JOIN  `fh-bigquery.reddit_posts.{ym}` s
 ON CONCAT('t3_',s.id) = a.parent_id
-where b.body is not null 
+where b.body is not null
   and s.selftext is not null and s.selftext != ''
   and b.author != s.author
   and b.author != a.author
-  and s.subreddit IN ('writing', 
-                      'scifi', 
-                      'sciencefiction', 
-                      'MachineLearning', 
-                      'philosophy', 
-                      'cogsci', 
-                      'neuro', 
+  and s.subreddit IN ('writing',
+                      'scifi',
+                      'sciencefiction',
+                      'MachineLearning',
+                      'philosophy',
+                      'cogsci',
+                      'neuro',
                       'Futurology')
 </pre>
 
@@ -108,7 +109,7 @@ where b.body is not null
 </pre>
 
 <p>
-    After I train the model with this format, I can then feed the trained model a string like <code>"some new primary comment text" [SEP]</code>, and it will start to generate the remaining <code>"some new reply"</code> that it thinks fits best based on the training data. I'll explain in more detail below about how to feed this kind of data into the GPT-2 fine-tuning script.  For now, you can use <a href="https://github.com/lots-of-things/gpt2-bert-reddit-bot/blob/master/prep_data.py">this script</a> to convert the data into the format that GPT-2 fine-tuning will need and save it as <code>gpt2_finetune.csv</code> 
+    After I train the model with this format, I can then feed the trained model a string like <code>"some new primary comment text" [SEP]</code>, and it will start to generate the remaining <code>"some new reply"</code> that it thinks fits best based on the training data. I'll explain in more detail below about how to feed this kind of data into the GPT-2 fine-tuning script.  For now, you can use <a href="https://github.com/lots-of-things/gpt2-bert-reddit-bot/blob/master/prep_data.py">this script</a> to convert the data into the format that GPT-2 fine-tuning will need and save it as <code>gpt2_finetune.csv</code>
 </p>
 
 
@@ -127,7 +128,7 @@ where b.body is not null
 </p>
 
 <p>
-    The best part is that the author of gpt-2-simple, even set up a <a href="https://colab.research.google.com/drive/1VLG8e7YSEwypxU-noRNhsv5dW4NfTGce">Google Colab notebook</a> that walked through fine-tuning.  In case you haven't heard, <a href="https://colab.research.google.com/notebooks/welcome.ipynb">Google Colab</a> is an amazing FREE (<a href="https://meta.stackexchange.com/questions/21932/what-does-the-term-and-free-as-in-free-beer-mean">as in beer</a>) resource that lets you <a href="https://towardsdatascience.com/getting-started-with-google-colab-f2fff97f594c">run a python jupyter notebook</a> on a Google GPU server.  Full disclosure, I am officially a lifetime fanboy of Google for making a free tier on Google App Engine, BigQuery, and Google Colab. 
+    The best part is that the author of gpt-2-simple, even set up a <a href="https://colab.research.google.com/drive/1VLG8e7YSEwypxU-noRNhsv5dW4NfTGce">Google Colab notebook</a> that walked through fine-tuning.  In case you haven't heard, <a href="https://colab.research.google.com/notebooks/welcome.ipynb">Google Colab</a> is an amazing FREE (<a href="https://meta.stackexchange.com/questions/21932/what-does-the-term-and-free-as-in-free-beer-mean">as in beer</a>) resource that lets you <a href="https://towardsdatascience.com/getting-started-with-google-colab-f2fff97f594c">run a python jupyter notebook</a> on a Google GPU server.  Full disclosure, I am officially a lifetime fanboy of Google for making a free tier on Google App Engine, BigQuery, and Google Colab.
 </p>
 
 <p>
@@ -139,7 +140,7 @@ where b.body is not null
 <h4>Training BERT models for fake detection and upvote prediction</h4>
 
 <p>
-    Even after fine-tuning, the output of this model, while normally somewhat reasonable, is often pretty <a href="/2020/02/combining-gpt-2-and-bert/#gpt2shortcoming">weird</a>. To improve the quality of responses, I adapted the concept of GANs to create another meta-model that is able to throw out all the really weird replies.  So I use GPT-2 to generate a 10+ candidate responses for every comment, and then I use another model to filter out which are the best replies I could release.  
+    Even after fine-tuning, the output of this model, while normally somewhat reasonable, is often pretty <a href="/2020/02/combining-gpt-2-and-bert/#gpt2shortcoming">weird</a>. To improve the quality of responses, I adapted the concept of GANs to create another meta-model that is able to throw out all the really weird replies.  So I use GPT-2 to generate a 10+ candidate responses for every comment, and then I use another model to filter out which are the best replies I could release.
 </p>
 <p>
     To determine the best, I actually want to do two things:
@@ -185,11 +186,11 @@ where b.body is not null
 </p>
 
 <p>
-    To predict how many upvotes a reply will get, I built another model in a <a href="https://drive.google.com/open?id=1vXJjQbBZZ0Jo-LvcwRaNzCSAgAVem1cC">similar way</a>. This time the model was just trained just on a dataset containing a bunch of real reddit comments to predict how many upvotes they actually got. 
+    To predict how many upvotes a reply will get, I built another model in a <a href="https://drive.google.com/open?id=1vXJjQbBZZ0Jo-LvcwRaNzCSAgAVem1cC">similar way</a>. This time the model was just trained just on a dataset containing a bunch of real reddit comments to predict how many upvotes they actually got.
 </p>
 
 <p>
-    This model also had surprisingly high predictive accuracy.  This <a href="https://www.dataschool.io/roc-curves-and-auc-explained/">ROC curve</a> shows that we can get a lot of true positives correct without having too many false positives. For more on what true positive and false positive means see <a href="https://developers.google.com/machine-learning/crash-course/classification/true-false-positive-negative">this article</a>.  
+    This model also had surprisingly high predictive accuracy.  This <a href="https://www.dataschool.io/roc-curves-and-auc-explained/">ROC curve</a> shows that we can get a lot of true positives correct without having too many false positives. For more on what true positive and false positive means see <a href="https://developers.google.com/machine-learning/crash-course/classification/true-false-positive-negative">this article</a>.
 </p>
 
 <img title="comment score prediction ROC curve" src="/assets/images/2020/bert_upvote_predict.png" alt="BERT score prediction ROC curve"/>
@@ -229,7 +230,7 @@ for subreddit_name in ['sciencefiction',
 
 <h4>Running the generator and discriminators</h4>
 <p>
-    Finally, I just had to build something to reload all the fine-tuned models and pass the new reddit comments through them to get replies. In an ideal world, I would have run both the GPT-2 and the BERT models in one script that could be run from end to end.  Unfortunately, a quirk in the way the designers immplemented the gpt2-simple package made it impossible to have two computation graphs <a href="https://github.com/minimaxir/gpt-2-simple/issues/130">instantiated in the same environment</a>.  
+    Finally, I just had to build something to reload all the fine-tuned models and pass the new reddit comments through them to get replies. In an ideal world, I would have run both the GPT-2 and the BERT models in one script that could be run from end to end.  Unfortunately, a quirk in the way the designers immplemented the gpt2-simple package made it impossible to have two computation graphs <a href="https://github.com/minimaxir/gpt-2-simple/issues/130">instantiated in the same environment</a>.
 </p>
 
 <p>
