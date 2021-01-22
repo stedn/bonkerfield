@@ -5,8 +5,8 @@
     <description>just your standard information identity spacetime field</description>
     <link>https://bonkerfield.org</link>
     <atom:link href="https://bonkerfield.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 22 Jan 2021 02:34:05 -0800</pubDate>
-    <lastBuildDate>Fri, 22 Jan 2021 02:34:05 -0800</lastBuildDate>
+    <pubDate>Fri, 22 Jan 2021 03:05:50 -0800</pubDate>
+    <lastBuildDate>Fri, 22 Jan 2021 03:05:50 -0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -57,7 +57,7 @@
 &lt;img src=&quot;/assets/images/2021/docks.gif&quot; alt=&quot;Big Sleep rendered docks with fog rolling in over nearby rocks&quot;/&gt;
 
 &lt;h4&gt;Try it yourself&lt;/h4&gt;
-&lt;p&gt;All the code needed for this is in a Google Colab notebook available&lt;a href=&quot;&quot;&gt;here&lt;/a&gt;, and it's also available on &lt;a href=&quot;&quot;&gt;github&lt;/a&gt; if you'd like to help me make improvements. My notebook is just a modification of &lt;a href=&quot;https://colab.research.google.com/drive/1MEWKbm-driRNF8PrU7ogS5o3se-ePyPb?usp=sharing&quot;&gt;this one&lt;/a&gt; from &lt;a href=&quot;https://github.com/lucidrains&quot;&gt;Phil Wang&lt;/a&gt; that lays out how to use Big Sleep with CLIP weights.&lt;/p&gt;
+&lt;p&gt;All the code needed for this is in a Google Colab notebook available&lt;a href=&quot;https://drive.google.com/file/d/1jF8pyZ7uaNYbk9ZiVdxTOajkp8kbmkLK/view?usp=sharing&quot;&gt;here&lt;/a&gt;, and it's also available on &lt;a href=&quot;https://github.com/lots-of-things/Story2Hallucination/&quot;&gt;github&lt;/a&gt; if you'd like to help me make improvements. My notebook is just a modification of &lt;a href=&quot;https://colab.research.google.com/drive/1MEWKbm-driRNF8PrU7ogS5o3se-ePyPb?usp=sharing&quot;&gt;this one&lt;/a&gt; from &lt;a href=&quot;https://github.com/lucidrains&quot;&gt;Phil Wang&lt;/a&gt; that lays out how to use Big Sleep with CLIP weights.&lt;/p&gt;
 
 &lt;p&gt;There's a lot of hacky code that tries to modify parts of Big Sleep from the outside, but the only important modification is just the change to dynamically update the text periodically with this line:  &lt;/p&gt;
 
