@@ -1,0 +1,78 @@
+---
+layout: post
+title: 'Story2Hallucination: converting stories to deep learning GAN hallucinated animations'
+date: '2021-01-22'
+author: will stedden
+type: project
+description: 'Using OpenAI CLIP to generate dynamically evolving images as the text of a story is fed in'
+tags:
+- machine learning
+- code
+- computer vision
+image: /assets/images/2020/oneth.png
+---
+
+
+<p>Late last year, I tried working on a method to use the text from my dynamically updating short story website, <a href="https://a.ttent.io/n">a.ttent.io/n</a>, to generate hallucinatory animations. Back then, I was working off of earlier <a href="http://proceedings.mlr.press/v48/reed16.pdf">methods</a> to do this sort of thing and wasn't having great results. But earlier this month OpenAI released a newer method called <a href="https://openai.com/blog/clip/">CLIP</a>, which really improved the text-to-image generation results that I've seen. </p>
+
+<p>The focus of CLIP itself was originally for standalone image generation, and that seems to be what most people are doing with it.  However, working off a CLIP-based package called <a href="https://github.com/lucidrains/big-sleep">BigSleep</a>, I found a pretty cool way to turn paragraphs into quite interesting animations that seem to have at least some connection to the text. As an example, here is an exerpt from the beginning of Franz Kafka's <i>Metamorphosis</i> being used to generate the visuals. </p>
+
+<small>Warning that there is a decent amount of blinking and flickering in the videos that follow.</small>
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kSltslbtblw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+<p>Clearly there are segments where the visualization breaks down, but there are surprisingly a couple of spots that actually map pretty well to the underlying text they are trying to describe. At the very least, the images clearly capture Kafka's surreal tone. (dare I call it Kafkaesque?)</p>
+
+<p>For the next trick, I wanted to try some more positive visual language so I went with a familiar William Wordsworth poem. In the next clip, I show two runs side by side to illustrate how the images randomly decay to noise and need to be periodically reset.</p>
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SOXXQhQf0SE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+<p>Again there are places where the algorithm starts spitting out total noise, but overall, the parts that do connect smoothly are vivid and very pertinent.  I want to dive into the details over the next few weeks and figure out where the algorithm goes off the rails, but for now, I just built in a few safe-guards to "reset" it when things get too messy or it sticks on the same shape for too long.  You can view <a href="https://www.youtube.com/channel/UCjfbKpAq127UVuFeaepkvWg">my Youtube channel</a> to see more experiments.</p>
+
+<h4>a.ttent.io/n</h4>
+<p>But my real application was meant to be used on my own short stories. To optimize that, I fine-tuned the parameter selection manually to see if I could get it to produce more consistent video.  I used the first paragraph of <a href="https://a.ttent.io/n">a.ttent.io/n</a>, and after many rounds of trial and error, I started to get it to pump out artistic renditions of the real features that are mentioned. Take a look.</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9Y-UZquQDf0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+<p>Clearly it does well with any mention of octopus, even fiction "harp-toothed" ones.</p>
+
+
+<img src="/assets/images/2021/octo.gif" />
+
+
+<p>But it also renders a wall, glass narcotics cabinet, and bottles pretty well. </p>
+
+<img src="/assets/images/2021/story2hallucination.png" />
+
+<p>"Distribution center" rendered an interesting overhead map view, it seemed. </p>
+
+<img src="/assets/images/2021/distro_hallucinate.png" />
+
+<p>But my personal favorite though was the rendering of the dock.</p>
+
+<img src="/assets/images/2021/docks/gif" />
+
+<p>That place looks peaceful.</p>
+
+<h4>Try it yourself</h4>
+<p>All the code needed for this is in a Google Colab notebook available<a href="">here</a>, and it's also available on <a href="">github</a> if you'd like to help me make improvements. My notebook is just a modification of <a href="https://colab.research.google.com/drive/1MEWKbm-driRNF8PrU7ogS5o3se-ePyPb?usp=sharing">this one</a> from <a href="https://github.com/lucidrains">Phil Wang</a> that lays out how to use Big Sleep with CLIP weights.</p>
+
+<p>There's a lot of hacky code that tries to modify parts of Big Sleep from the outside, but the only important modification is just the change to dynamically update the text periodically with this line:  </p>
+
+<code>
+model.text = all_text_list[epoch].translate(str.maketrans('', '', string.punctuation))
+model.encoded_text = tokenize(model.text).cuda()
+</code>
+
+<p>Pretty much the rest of the code modifications were just there to get the image to robustly "reset" if it gets stuck looking too similar for too long.  This became an issue because sometimes the image converges to a very stable form and stops morphing from there. This is not such a big deal when you are generating one-off images because you can always try again, but when you are trying to dynamically morph from one text prompt to the next, getting stuck means the whole video is lost.</p>
+
+<p>You can play around with your own texts and let me know what you come up with.  There are quite a few parameters to try to optimize to get good results.</p>
+
+<p>I'd love to see what things happen. If you reference this blog post on twitter or mastodon, then your work will be appended in the comments section.</p>
+
+<p>And have fun hallucinating!</p>
