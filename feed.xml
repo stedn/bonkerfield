@@ -5,9 +5,86 @@
     <description>just your standard information identity spacetime field</description>
     <link>https://bonkerfield.org</link>
     <atom:link href="https://bonkerfield.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 22 Dec 2020 15:32:05 -0800</pubDate>
-    <lastBuildDate>Tue, 22 Dec 2020 15:32:05 -0800</lastBuildDate>
+    <pubDate>Fri, 22 Jan 2021 02:21:24 -0800</pubDate>
+    <lastBuildDate>Fri, 22 Jan 2021 02:21:24 -0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <image>https://bonkerfield.org/assets/images/2021/octo.gif</image>
+        <title>Story2Hallucination: converting stories to deep learning GAN hallucinated animations</title>
+        <description>&lt;p&gt;Late last year, I tried working on a method to use the text from my dynamically updating short story website, &lt;a href=&quot;https://a.ttent.io/n&quot;&gt;a.ttent.io/n&lt;/a&gt;, to generate hallucinatory animations. Back then, I was working off of earlier &lt;a href=&quot;http://proceedings.mlr.press/v48/reed16.pdf&quot;&gt;methods&lt;/a&gt; to do this sort of thing and wasn't having great results. But earlier this month OpenAI released a newer method called &lt;a href=&quot;https://openai.com/blog/clip/&quot;&gt;CLIP&lt;/a&gt;, which really improved the text-to-image generation results that I've seen. &lt;/p&gt;
+
+&lt;p&gt;The focus of CLIP itself was originally for standalone image generation, and that seems to be what most people are doing with it.  However, working off a CLIP-based package called &lt;a href=&quot;https://github.com/lucidrains/big-sleep&quot;&gt;BigSleep&lt;/a&gt;, I found a pretty cool way to turn paragraphs into quite interesting animations that seem to have at least some connection to the text. As an example, here is an exerpt from the beginning of Franz Kafka's &lt;i&gt;Metamorphosis&lt;/i&gt; being used to generate the visuals. &lt;/p&gt;
+
+&lt;small&gt;Warning that there is a decent amount of blinking and flickering in the videos that follow.&lt;/small&gt;
+
+
+&lt;iframe width=&quot;560&quot; height=&quot;400&quot; src=&quot;https://www.youtube.com/embed/kSltslbtblw&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+
+&lt;p&gt;Clearly there are segments where the visualization breaks down, but there are surprisingly a couple of spots that actually map pretty well to the underlying text they are trying to describe. At the very least, the images clearly capture Kafka's surreal tone. (dare I call it Kafkaesque?)&lt;/p&gt;
+
+&lt;p&gt;For the next trick, I wanted to try some more positive visual language so I went with a familiar William Wordsworth poem. In the next clip, I show two runs side by side to illustrate how the images randomly decay to noise and need to be periodically reset.&lt;/p&gt;
+
+
+&lt;iframe width=&quot;560&quot; height=&quot;400&quot; src=&quot;https://www.youtube.com/embed/SOXXQhQf0SE&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+
+&lt;p&gt;Again there are places where the algorithm starts spitting out total noise, but overall, the parts that do connect smoothly are vivid and very pertinent.  I want to dive into the details over the next few weeks and figure out where the algorithm goes off the rails, but for now, I just built in a few safe-guards to &quot;reset&quot; it when things get too messy or it sticks on the same shape for too long.  You can view &lt;a href=&quot;https://www.youtube.com/channel/UCjfbKpAq127UVuFeaepkvWg&quot;&gt;my Youtube channel&lt;/a&gt; to see more experiments.&lt;/p&gt;
+
+&lt;h4&gt;a.ttent.io/n&lt;/h4&gt;
+&lt;p&gt;But my real application was meant to be used on my own short stories. To optimize that, I fine-tuned the parameter selection manually to see if I could get it to produce more consistent video.  I used the first paragraph of &lt;a href=&quot;https://a.ttent.io/n&quot;&gt;a.ttent.io/n&lt;/a&gt;, and after many rounds of trial and error, I started to get it to pump out artistic renditions of the real features that are mentioned. Take a look.&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;400&quot; src=&quot;https://www.youtube.com/embed/9Y-UZquQDf0&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+
+&lt;p&gt;Clearly it does well with any mention of octopus, even fictional &quot;harp-toothed&quot; ones.&lt;/p&gt;
+
+
+&lt;img class=&quot;small_img&quot; src=&quot;/assets/images/2021/octo.gif&quot; alt=&quot;Big Sleep rendered octopus on ocean floor&quot;/&gt;
+
+
+&lt;p&gt;But it also renders a wall, glass narcotics cabinet, and bottles pretty well. &lt;/p&gt;
+
+&lt;img src=&quot;/assets/images/2021/story2hallucination.png&quot; alt=&quot;Big Sleep rendered wall, narcotics in a cabinet, and bottles on a countertop&quot;/&gt;
+
+&lt;p&gt;&quot;Distribution center&quot; rendered an interesting overhead map view, it seemed. &lt;/p&gt;
+
+&lt;img class=&quot;small_img&quot; src=&quot;/assets/images/2021/distro_hallucinate.png&quot; alt=&quot;Big Sleep rendered overhead view of what could be a distribution center&quot;/&gt;
+
+&lt;p&gt;But my personal favorite though was the rendering of the dock.&lt;/p&gt;
+
+&lt;img src=&quot;/assets/images/2021/docks.gif&quot; alt=&quot;Big Sleep rendered docks with fog rolling in over nearby rocks&quot;/&gt;
+
+&lt;h4&gt;Try it yourself&lt;/h4&gt;
+&lt;p&gt;All the code needed for this is in a Google Colab notebook available&lt;a href=&quot;&quot;&gt;here&lt;/a&gt;, and it's also available on &lt;a href=&quot;&quot;&gt;github&lt;/a&gt; if you'd like to help me make improvements. My notebook is just a modification of &lt;a href=&quot;https://colab.research.google.com/drive/1MEWKbm-driRNF8PrU7ogS5o3se-ePyPb?usp=sharing&quot;&gt;this one&lt;/a&gt; from &lt;a href=&quot;https://github.com/lucidrains&quot;&gt;Phil Wang&lt;/a&gt; that lays out how to use Big Sleep with CLIP weights.&lt;/p&gt;
+
+&lt;p&gt;There's a lot of hacky code that tries to modify parts of Big Sleep from the outside, but the only important modification is just the change to dynamically update the text periodically with this line:  &lt;/p&gt;
+
+&lt;code&gt;
+model.text = all_text_list[epoch].translate(str.maketrans('', '', string.punctuation))
+model.encoded_text = tokenize(model.text).cuda()
+&lt;/code&gt;
+
+&lt;p&gt;Pretty much the rest of the code modifications were just there to get the image to robustly &quot;reset&quot; if it gets stuck looking too similar for too long.  This became an issue because sometimes the image converges to a very stable form and stops morphing from there. This is not such a big deal when you are generating one-off images because you can always try again, but when you are trying to dynamically morph from one text prompt to the next, getting stuck means the whole video is lost.&lt;/p&gt;
+
+&lt;p&gt;You can play around with your own texts and let me know what you come up with.  There are quite a few parameters to try to optimize to get good results.&lt;/p&gt;
+
+&lt;p&gt;I'd love to see what things happen. If you reference this blog post on twitter or mastodon, then your work will be appended in the comments section.&lt;/p&gt;
+
+&lt;p&gt;And have fun hallucinating!&lt;/p&gt;</description>
+        <pubDate>Fri, 22 Jan 2021 00:00:00 -0800</pubDate>
+        <link>https://bonkerfield.org/2021/01/story2hallucination/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2021/01/story2hallucination/</guid>
+        
+        <category>machine learning</category>
+        
+        <category>code</category>
+        
+        <category>computer vision</category>
+        
+        
+      </item>
     
       <item>
         <image>https://bonkerfield.org/assets/images/2020/oneth.png</image>

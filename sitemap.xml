@@ -421,6 +421,10 @@
 <lastmod>2020-12-20T00:00:00-08:00</lastmod>
 </url>
 <url>
+<loc>https://bonkerfield.org/2021/01/story2hallucination/</loc>
+<lastmod>2021-01-22T00:00:00-08:00</lastmod>
+</url>
+<url>
 <loc>https://bonkerfield.org/404</loc>
 </url>
 <url>
@@ -563,5 +567,8 @@
 </url>
 <url>
 <loc>https://bonkerfield.org/tag/machine-learning/</loc>
+</url>
+<url>
+<loc>https://bonkerfield.org/tag/computer-vision/</loc>
 </url>
 </urlset>
