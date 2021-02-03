@@ -5,8 +5,8 @@
     <description>just your standard information identity spacetime field</description>
     <link>https://bonkerfield.org</link>
     <atom:link href="https://bonkerfield.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 31 Jan 2021 18:27:08 -0800</pubDate>
-    <lastBuildDate>Sun, 31 Jan 2021 18:27:08 -0800</lastBuildDate>
+    <pubDate>Wed, 03 Feb 2021 11:17:11 -0800</pubDate>
+    <lastBuildDate>Wed, 03 Feb 2021 11:17:11 -0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -56,7 +56,7 @@ In the next sections, I'll explain where these features fit in.
 
 &lt;p&gt;I think the urge to create speculative fiction, particularly during and after the &quot;Golden Age&quot; of scifi, was a very utopian vision, similar to the grand ideals of modernism. The speculative writer aimed to point our minds at a distant horizon, and help us to tease apart just what we want our future world to look like.  I even might think that the fundamental morality of scifi and fantasy was an organic counterinsurgency against the cynical navel gazing of postmodern entertainment.  Even in the later cyberpunk/post-apocalypse/&quot;they're all Cylons&quot; era, the narratives still normally had a fairly idealistic moral core.  The evil tech conglomerate and/or the zombies were bad, and the people using super badass technology to win were good. The modernist glorified the rise of industrial technology powered by modernizing, we glorified the rise of information technology powered by speculation.&lt;/p&gt;
 
-&lt;p&gt;Similar to the postmodernist rebuttal of modernism, the postspeculativist accepts a narrower view of the speculative future: that someday when we live in an era with new technology, our condition will still be fundamentally the same.&lt;/p&gt;
+&lt;p&gt;Similar to the postmodernist rebuttal of modernism, the post-speculativist accepts a narrower view of the speculative future: that someday when we live in an era with new technology, our condition will still be fundamentally the same.&lt;/p&gt;
 
 &lt;p&gt;But now, maybe the era of speculation is coming to a close, and just like the postmodernist, we're getting to the point where we have to fully acknowledge the aftermath of the idealism we neglected to inspect before we let it happen. And if we define a movement of deconstructing our fetishization of speculation, maybe we'll be able to dismantle it before it's too late. &lt;/p&gt;
 
@@ -125,7 +125,7 @@ In the next sections, I'll explain where these features fit in.
 &lt;img src=&quot;/assets/images/2021/docks.gif&quot; alt=&quot;Big Sleep rendered docks with fog rolling in over nearby rocks&quot;/&gt;
 
 &lt;h4&gt;Try it yourself&lt;/h4&gt;
-&lt;p&gt;All the code needed for this is in a Google Colab notebook available&lt;a href=&quot;https://drive.google.com/file/d/1jF8pyZ7uaNYbk9ZiVdxTOajkp8kbmkLK/view?usp=sharing&quot;&gt;here&lt;/a&gt;, and it's also available on &lt;a href=&quot;https://github.com/lots-of-things/Story2Hallucination/&quot;&gt;github&lt;/a&gt; if you'd like to help me make improvements. My notebook is just a modification of &lt;a href=&quot;https://colab.research.google.com/drive/1MEWKbm-driRNF8PrU7ogS5o3se-ePyPb?usp=sharing&quot;&gt;this one&lt;/a&gt; from &lt;a href=&quot;https://github.com/lucidrains&quot;&gt;Phil Wang&lt;/a&gt; that lays out how to use Big Sleep with CLIP weights.&lt;/p&gt;
+&lt;p&gt;All the code needed for this is in a Google Colab notebook available&lt;a href=&quot;https://colab.research.google.com/drive/1yNkvkrHApFR6alyFC1EzhPGHs86yjH1P?usp=sharing&quot;&gt;here&lt;/a&gt;, and it's also available on &lt;a href=&quot;https://github.com/lots-of-things/Story2Hallucination/&quot;&gt;github&lt;/a&gt; if you'd like to help me make improvements. My notebook is just a modification of &lt;a href=&quot;https://colab.research.google.com/drive/1MEWKbm-driRNF8PrU7ogS5o3se-ePyPb?usp=sharing&quot;&gt;this one&lt;/a&gt; from &lt;a href=&quot;https://github.com/lucidrains&quot;&gt;Phil Wang&lt;/a&gt; that lays out how to use Big Sleep with CLIP weights.&lt;/p&gt;
 
 &lt;p&gt;There's a lot of hacky code that tries to modify parts of Big Sleep from the outside, but the only important modification is just the change to dynamically update the text periodically with this line:  &lt;/p&gt;
 
