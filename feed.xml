@@ -5,8 +5,8 @@
     <description>just your standard information identity spacetime field</description>
     <link>https://bonkerfield.org</link>
     <atom:link href="https://bonkerfield.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 03 Feb 2021 11:17:11 -0800</pubDate>
-    <lastBuildDate>Wed, 03 Feb 2021 11:17:11 -0800</lastBuildDate>
+    <pubDate>Sun, 04 Apr 2021 22:55:08 -0700</pubDate>
+    <lastBuildDate>Sun, 04 Apr 2021 22:55:08 -0700</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -73,6 +73,162 @@ In the next sections, I'll explain where these features fit in.
         <category>philosophy</category>
         
         <category>writing</category>
+        
+        
+      </item>
+    
+      <item>
+        <image>https://bonkerfield.org/assets/images/2021/ebike_trailer_demo1.jpg</image>
+        <title>Solar Wagon: tandem ebike and solar charging trailer</title>
+        <description>&lt;p&gt;My partner and I have dreamt of #VanLife for years, but I always worried about the awful carbon footprint of living on the move. A dream incubated in my head for a long while to make that lifestyle work in a downsized, ecologically conscious way.  This past winter, I finally put together the pieces on this most ambitious project of my life thus far: a tandem electric bike with a solar charging trailer filled with all the essentials for life on the road.&lt;/p&gt;
+
+&lt;img src=&quot;/assets/images/2021/ebike_trailer_demo1.jpg&quot; alt=&quot;claire and me riding the solar wagon&quot;/&gt;
+
+&lt;p&gt;The goal of the solar charging trailer was to be able to carry all of the amenities that would make a bikepacking life viable long term. In this post, I'm going to cover some details of building our tandem ebike and solar charging trailer as well as the trip we are planning for this summer. &lt;/p&gt;
+
+&lt;h4&gt;Electric tandem bike&lt;/h4&gt;
+&lt;p&gt;Building an electric bike is easy in this day-and-age, and adapting this process to a tandem bike didn't really add much complication. &gt;We purchased a used 1980s era steel framed Kuwahara tandem bike off of craigslist for $250 and did an electric conversion ourselves. &lt;/p&gt;
+
+&lt;img class=&quot;small_img&quot; src=&quot;/assets/images/2021/ebike_me.jpg&quot; alt=&quot;me holding my tandem ebike&quot;/&gt;
+
+&lt;p&gt;On ebay there are standard ebike conversion kits, which are pretty straightforward to install.  The components cost around $300, and included electric motor mounted in rear wheel, motor controller and display, pedal sensor for the pedal assist, and handlebar brakes to engage the regenerative braking.  In addition we bought two 48V 17.5 Ah ebike batteries for $450 a piece.&lt;/p&gt;
+
+&lt;div style=&quot;text-align:center;margin-left:auto;margin-right:auto;&quot;&gt;
+&lt;img style=&quot;display:inline;&quot; src=&quot;/assets/images/2021/ebike_wheel.jpg&quot; alt=&quot;ebike motor and wheel&quot; width=&quot;40%&quot;/&gt;
+
+&lt;img style=&quot;display:inline;&quot; src=&quot;/assets/images/2021/ebike_controller.jpg&quot; alt=&quot;ebike motor controller&quot; width=&quot;40%&quot;/&gt;
+&lt;/div&gt;
+
+&lt;p&gt; We needed to replace tires and tubes, and add lights and an extra speedometer. We also added panniers to carry additional load, and in the back we built our own rudimentary solar water heating system.&lt;/p&gt;
+
+&lt;div style=&quot;text-align:center;margin-left:auto;margin-right:auto;&quot;&gt;
+&lt;img style=&quot;display:inline;&quot; src=&quot;/assets/images/2021/ebike_trailer_heat1.jpg&quot; alt=&quot;ebike motor and wheel&quot; width=&quot;40%&quot;/&gt;
+
+&lt;img style=&quot;display:inline;&quot; src=&quot;/assets/images/2021/ebike_trailer_heat2.jpg&quot; alt=&quot;ebike motor controller&quot; width=&quot;23%&quot;/&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The great part about running the ebike controls on a tandem is that you can divide up the labor to have one person steer while the other manages the controls and navigates.  It takes a little more communication, but it makes it possible to make adjustments and search for things without stopping.&lt;/p&gt;
+
+&lt;p&gt;We already had a decent amount of biking equipment to outfit the bike so we were repurposing some things. But including everything that went into it, we estimate the etandem setup cost us $1600.&lt;/p&gt;
+
+&lt;h4&gt;Solar charging trailer&lt;/h4&gt;
+&lt;p&gt;The real work came in our solar trailer.  We wanted to be able to carry all the equipment we need for backpacking in various conditions, for surviving as we passed through cities, and for some digital remote work. Plus, we needed to carry ~2 weeks worth of food for travel by bike and for backpacking as well.  The other constraint was being able to recharge one 48V 17.5 Ah battery in approximately 6 hours of sunshine, which equates to 840 Watt-hours.&lt;/p&gt;
+
+&lt;p&gt;We built the trailer in two stages by first building a standalone solar mount on the front buggy, and then (after some trial and error) building the second buggy and attaching it. &lt;/p&gt;
+
+&lt;h4&gt;Panel sizing and design&lt;/h4&gt;
+&lt;p&gt;I already had two solar panels which I had purchased with the intention of solar powering my boat. They aren't the most efficient or lightweight solar cells out there, but I can always upgrade as they get older. They are 40x26 inches and 85 Watts.  So at 175 Watts together, they &lt;em&gt;should&lt;/em&gt; charge the battery at 840/175 = 4.8 hours. Of course, given all the losses in this system I suspect it'll take longer, but that still leaves us with a decent buffer.&lt;/p&gt;
+
+&lt;p&gt;With all the gear and needing two panels end to end, we knew we were looking for a pretty long trailer, larger than the average off-the-shelf trailers for bikes.  Claire and I had lots of ideas for how to build the cart itself, but as usual, I didn't want to build from brand new parts so I let the luck of craigslist decide how we would do it.  We found two used bicycle baby buggies and decided they could easily be converted by fastening them together.&lt;/p&gt;
+
+&lt;h5&gt;Solar mount design&lt;/h5&gt;
+&lt;p&gt;One cool invention was the central mounted solar panel design that allows us to rotate the panel in the direction of the sunlight. I used aluminum L brackets. Here are all the parts required for one trailer. Sizing will vary for you depending on how large the trailer and panels are, and how high you want to build.&lt;/p&gt;
+
+&lt;img src=&quot;/assets/images/2021/ebike_trailer_parts.jpg&quot; alt=&quot;ebike trailer parts&quot; /&gt;
+
+&lt;p&gt;To start, I made two triangle framed braces, one at the front of the buggy and one at the center, with the bottom of the triangle being the cart frame itself.  I ran an aluminum rod through the tops of each brace, connecting them.&lt;/p&gt;
+
+&lt;div style=&quot;text-align:center;margin-left:auto;margin-right:auto;&quot;&gt;
+&lt;img style=&quot;display:inline;&quot; src=&quot;/assets/images/2021/ebike_trailer_cons1.jpg&quot; alt=&quot;triangle frame&quot; width=&quot;40%&quot;/&gt;
+
+&lt;img style=&quot;display:inline;&quot; src=&quot;/assets/images/2021/ebike_trailer_cons2.jpg&quot; alt=&quot;pole down the center of trailer cart&quot; width=&quot;40%&quot;/&gt;
+&lt;/div&gt;
+
+&lt;p&gt;To attach the solar panel to this rod, I attached two more pieces of L-bracket to the underside frame of the solar panel, one across the front and one across the rear, and drilled a hole in the center of each. Then the pole was threaded through. The rod was secured to the panel and triangle braces with cotter pins through the rod, and a few pieces of front to back facing bracing were used to stabilize the whole thing.&lt;/p&gt;
+
+&lt;div style=&quot;text-align:center;margin-left:auto;margin-right:auto;&quot;&gt;
+&lt;img style=&quot;display:inline;&quot; src=&quot;/assets/images/2021/ebike_trailer_cons9.jpg&quot; alt=&quot;&quot; width=&quot;30%&quot;/&gt;
+&lt;img style=&quot;display:inline;&quot; src=&quot;/assets/images/2021/ebike_trailer_cons3.jpg&quot; alt=&quot;&quot; width=&quot;30%&quot;/&gt;
+
+&lt;img style=&quot;display:inline;&quot; src=&quot;/assets/images/2021/ebike_trailer_cons4.jpg&quot; alt=&quot;ebike construction&quot; width=&quot;30%&quot;/&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The panel is &lt;em&gt;mostly&lt;/em&gt; supported by the central pole, but it's kept at the proper angle using another bracket.&lt;/p&gt;
+
+&lt;img class=&quot;small_img&quot; src=&quot;/assets/images/2021/ebike_trailer_cons5.jpg&quot; alt=&quot;ebike trailer solar angle connection&quot; /&gt;
+
+
+&lt;p&gt;Overall, this design has two advantages over a &quot;four corners&quot; design that I've seen in other setups like &lt;a href=&quot;https://sunbiker.com/&quot;&gt;sunbiker.com&lt;/a&gt;. It allows easy rotation to face the sun angle, and it cuts down on parts required to nearly the bare minimum. &lt;/p&gt;
+
+&lt;img class=&quot;small_img&quot; src=&quot;/assets/images/2021/ebike_trailer_panel_rotate.gif&quot; alt=&quot;ebike trailer solar angle connection&quot; /&gt;
+
+&lt;p&gt;This design gives it a little bit of extra flex, but that is probably a good thing to dampen some of the vibration. I'm really pleased with the results.&lt;/p&gt;
+
+&lt;h5&gt;Trailer connection&lt;/h5&gt;
+&lt;p&gt;This part was surprisingly difficult, and we actually experimented with two failed designs before arriving at our solution.  &lt;/p&gt;
+
+&lt;p&gt;One failure was trying to daisy chain the carts using the's standard pivoting bike attachment as a connection.  This wound up creating a double jacknife effect that made it totally impossible to move the cart backwards.&lt;/p&gt;
+
+&lt;img class=&quot;small_img&quot; src=&quot;/assets/images/2021/ebike_trailer_bad.jpg&quot; alt=&quot;solar panel trailer connected using pivoting attachment arms&quot;/&gt;
+
+
+&lt;p&gt;The second failure was more subtle. We attached the carts together firmly, but kept them in their standard orientation with their wheels far apart.  This made it so that on sharp turns, the wheels of the lighter half of the cart had to slide sideways across the ground as it pivoted. So finally, we reversed the back cart so that the wheels were closer together.  After figuring this out, we actually realized that pretty much all 2 axel trailers work this way with &lt;a href=&quot;https://en.wikipedia.org/wiki/Trailer_%28vehicle%29#/media/File:BumperPull.jpg&quot;&gt;their wheels close together&lt;/a&gt;.  Never noticed that before in my whole life!&lt;/p&gt;
+
+&lt;div style=&quot;text-align:center;margin-left:auto;margin-right:auto;&quot;&gt;
+&lt;img style=&quot;display:inline;&quot; src=&quot;/assets/images/2021/ebike_trailer_cons7.jpg&quot; alt=&quot;trailers connected together&quot; width=&quot;30%&quot;/&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;The attachments were just more L-brackets.  The last remaining issue was that the wheels themselves were quite different sizes and this made it hard to line up the frame such that both wheels were on the ground.  We did the best we could, but currently the trailer needs to be loaded with most of the weight in the front in order to keep the front wheel firmly on the ground.&lt;/p&gt;
+
+&lt;img class=&quot;small_img&quot; src=&quot;/assets/images/2021/ebike_trailer_cons6.jpg&quot; alt=&quot;ebike trailer solar panels&quot; /&gt;
+
+&lt;h5&gt;Battery charging station&lt;/h5&gt;
+&lt;p&gt;This setup was very easy to build, and has been &lt;a href=&quot;https://www.youtube.com/watch?v=0Rb77J1bI94&quot;&gt;documented&lt;/a&gt; many places.  I just attached the panels to a &lt;a href=&quot;https://genasun.eu/collections/genasun-boost-mppts&quot;&gt;Genasun charge controller&lt;/a&gt; for a 48V battery. This setup is ideal because it takes essentially any input voltage and current and boosts it to the 54.2 V needed for charging with minimal loss of current. I connected my two 16V panels in series to give me around 32V since a smaller delta is more efficient and panels work better in series if there is a possibility of partial shade (which will be common on the go).&lt;/p&gt;
+
+&lt;div style=&quot;text-align:center;margin-left:auto;margin-right:auto;&quot;&gt;
+&lt;img style=&quot;display:inline;&quot; src=&quot;/assets/images/2021/ebike_trailer_charging1.jpg&quot; alt=&quot;Genasun charge controller mounted in trailer&quot; width=&quot;40%&quot;/&gt;
+
+&lt;img style=&quot;display:inline;&quot; src=&quot;/assets/images/2021/ebike_trailer_charging2.jpg&quot; alt=&quot;embedded switch&quot; width=&quot;40%&quot;/&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Aside from that, I just added a switch and took apart an XLR cord for the three prong attachment to the battery itself. Finally, I mounted the battery to the frame to stabilize it for charging while on the road.&lt;/p&gt;
+
+&lt;h5&gt;Experiment: Lights&lt;/h5&gt;
+&lt;p&gt;As an experiment I also connected some LED headlights, taillights, and a strand along the bike frame, using the ebike battery as a power source.  It looked pretty darn cool, but ultimately the setup was too cumbersome and we decided it was easier to just attach regular rechargable bike lights.&lt;/p&gt;
+
+&lt;img class=&quot;small_img&quot; src=&quot;/assets/images/2021/ebike_trailer_night.jpg&quot; alt=&quot;ebike trailer lit up with blue/green lights and tail light&quot;/&gt;
+
+
+&lt;h5&gt;Completed design&lt;/h5&gt;
+&lt;p&gt;When it's all put together, the tandem bike and trailer is quite a long and brightly colored vehicle. Hard to miss when driving past.&lt;/p&gt;
+
+&lt;img src=&quot;/assets/images/2021/ebike_trailer_claire.jpg&quot; alt=&quot;Claire holding ebike and solar trailer&quot;/&gt;
+
+&lt;p&gt;We typically can travel between 8 and 20 mph, making sure to engage the regenerative braking on steep declines to keep us from getting out of control. &lt;/p&gt;
+
+
+&lt;p&gt;The trailer and solar panels, plus all the hardware together came to $600.  So for bike and trailer together we are looking at $2200. Note that this is like 1/20th the price of an electric car &lt;strong&gt;and&lt;/strong&gt; we shouldn't ever have to pay for electricity like we would with a car. Granted cars can go faster, carry more, and keep you dry, but if the real goal is just mobility and the lower speed is acceptable, clearly this cart is a win!&lt;/p&gt;
+
+
+&lt;h4&gt;Grand Inaugural Test Ride&lt;/h4&gt;
+&lt;p&gt;We took the completed unit for our first test drive and documented it with some footage (including some ✨drone shots✨).&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/pF4-h4UQpLM&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;We traveled 35 miles over 2 days. Keep in mind that we were carrying at least 150 extra pounds of trailer, solar panels, and gear and traveling up and down some substantial hills along the northern California coast.&lt;/p&gt;
+
+&lt;p&gt;The trip was  and our batteries _ even take a dent from this test run. Now it's onwards.&lt;/p&gt;
+
+
+&lt;h4&gt;Trip of a lifetime; transition to a better life?&lt;/h4&gt;
+&lt;p&gt;There are a lot of stories that start with a voyage.  My partner and I are hoping that this trip we are taking is the start of a story for us. During the 2020 lockdowns, like a lot of people, we've had a lot of time to think and focus on how the world works as it changed around us. This has &lt;a href=&quot;https://monthlyreview.org/2020/06/01/covid-19-and-catastrophe-capitalism/&quot;&gt;revealed&lt;/a&gt; some deep problems with the &lt;a href=&quot;https://www.weforum.org/agenda/2020/07/affluence-bigger-threat-than-coronavirus-scientists-capitalism/&quot;&gt;way our society functions&lt;/a&gt;, and that &lt;a href=&quot;https://www.cnn.com/2020/09/20/economy/how-covid-changed-capitalism/index.html&quot;&gt;changes are needed&lt;/a&gt;. With this trip, we're hoping we can take a step away from the extractive careers we've lived in up to now. We want to move toward a better more sustainable lifestyle. As we go, we'll be trying to build out something we are calling the &lt;a href=&quot;https://cooptrail.org/&quot;&gt;Co-op Trail&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The goal of the trip is to tap into the &lt;a href=&quot;https://en.wikipedia.org/wiki/Solidarity_economy#Challenges_of_Solidarity_Economy&quot;&gt;solidarity economy&lt;/a&gt; and try to make it around the country relying as much as possible on human-centric businesses. We're calling this the Co-op Trail and focusing on co-ops, as that is my personal favorite remedy to capitalism, but we'll also be supporting others in the solidarity economy as well. The goal is to make it easier to navigate from place to place via co-ops and other democratic and mutualistic companies, without relying on exploitative businesses along the way.&lt;/p&gt;
+
+&lt;p&gt;The reason we're trying this is because we think it's important to try to bridge all the highly local mutualist networks together so that people can roam the country just as freely as they do in the exploitation economy. In fact, if this trail catches on, I hope that everyone can roam even &lt;em&gt;more&lt;/em&gt; freely as networks of trust expand and resources become less strictly commodified.  I've written a &lt;a href=&quot;/2020/12/coop-trail/&quot;&gt;longer post&lt;/a&gt; about the idea if you want to learn more.&lt;/p&gt;
+
+&lt;p&gt;We're hoping to live this mini-retirement for at least a year and emerge on the other side with a renewed commitment to work in the world in a more sustainable way. I think this style of slow, low-energy travel will catch on as more people can live remotely full-time, and I hope our project to work through and connect the co-op economy will inspire others to reduce their extractive mindset as they go. &lt;/p&gt;
+</description>
+        <pubDate>Fri, 22 Jan 2021 00:00:00 -0800</pubDate>
+        <link>https://bonkerfield.org/2021/01/ebike-solar-trailer/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2021/01/ebike-solar-trailer/</guid>
+        
+        <category>electronics</category>
+        
+        <category>energy</category>
+        
+        <category>bikes</category>
         
         
       </item>
@@ -5203,7 +5359,7 @@ df_scrolls = conn.execute_query(scroll_query)
     There are a few other electrical devices that I might want to add, but at the moment I worry about them drawing too much power for the little battery I have. I have a DC trawling motor that I would love to set up, and I've put together an attachment for a small Peltier cooler. Both of those drain the battery fast so I'll probably need to devise a double battery setup before I can use them. That way even if those drain the energy, I can have a backup to run emergency power for the radio and bilge pumps.
 &lt;/p&gt;
 &lt;p&gt;
-    All in all, the electrical turned out to be quite a bit easier than I thought. It was a good starter before I move onto the next big challenge: plumping.
+    All in all, the electrical turned out to be quite a bit easier than I thought. It was a good starter before I move onto the next big challenge: plumbing.
 &lt;/p&gt;</description>
         <pubDate>Wed, 01 May 2019 19:46:00 -0700</pubDate>
         <link>https://bonkerfield.org/2019/05/ionis-solar-electrical-system/</link>
