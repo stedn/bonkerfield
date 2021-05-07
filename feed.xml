@@ -5,9 +5,30 @@
     <description>just your standard information identity spacetime field</description>
     <link>https://bonkerfield.org</link>
     <atom:link href="https://bonkerfield.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 05 Apr 2021 16:46:19 -0700</pubDate>
-    <lastBuildDate>Mon, 05 Apr 2021 16:46:19 -0700</lastBuildDate>
+    <pubDate>Fri, 07 May 2021 10:14:42 -0700</pubDate>
+    <lastBuildDate>Fri, 07 May 2021 10:14:42 -0700</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <image>https://bonkerfield.org</image>
+        <title>A mixture of identifields</title>
+        <description>What are two totally different sides of your personality that kind of &lt;a href=&quot;/2020/05/what-is-an-identifield/&quot;&gt;came together&lt;/a&gt; to form who you are today?
+
+I've always had a love of nature that kind of gave me a sense of awe and spirituality even though I've never been comfortable talking about it.  At the same time, I've also always been into science fiction of the space and time travel variety. These stories gave me kind of an intellectual sense of imagination about how limited our current social values might be compared to all the possibilities that could exist throughout all of time and space.
+
+Today, I realize that those two sides of me really fused to give me an intuition that there might be some values that cosmic and timeless rather than just socially constructed in our present moment.  I believe this is the source of my beliefs that things like justice, equality, and fairness could be ideas that are fundamentally embedded in the fabric of reality, just waiting for our silly little human social understanding to really grasp.
+
+As musch as I want to move toward equality using the discourse we have on hand, I still feel like our very conceptions of those ideas are still childishly rudimentary.  I wonder how they'll look to some extraterrestrial species that has no sense of time.  Maybe they can help us understand those things that it coulde take the span of a whole universe to figure out for sure.</description>
+        <pubDate>Fri, 07 May 2021 00:00:00 -0700</pubDate>
+        <link>https://bonkerfield.org/2021/05/identifield-mixture/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2021/05/identifield-mixture/</guid>
+        
+        <category>philosophy</category>
+        
+        <category>identifield</category>
+        
+        
+      </item>
     
       <item>
         <image>https://bonkerfield.org/assets/images/2021/postpec_def.gif</image>
@@ -1707,6 +1728,8 @@ If I can pursue self-simulation with the data I am collecting, should any entity
         
         <category>philosophy</category>
         
+        <category>identifield</category>
+        
         
       </item>
     
@@ -1826,6 +1849,8 @@ If I can pursue self-simulation with the data I am collecting, should any entity
         <guid isPermaLink="true">https://bonkerfield.org/2020/05/redefining-identity/</guid>
         
         <category>philosophy</category>
+        
+        <category>identifield</category>
         
         
       </item>
@@ -4067,6 +4092,8 @@ def add_node(node_list, parent_name, parent_time, parent_size, parent_weight):
         <category>philosophy</category>
         
         <category>art</category>
+        
+        <category>identifield</category>
         
         
       </item>
