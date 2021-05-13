@@ -1,0 +1,1067 @@
+<head>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+
+    body {
+       width: 580px;
+       margin: 10px auto;
+        font-family: "Source Sans Pro", "Arial", sans-serif;
+
+    }
+
+    .title {
+        text-align:center;
+        font-family: monospace;
+        font-size: 2em;
+    }
+
+    /*=====BOARD GAME=================*/
+
+    #board {
+        width: 480px;
+        margin: 15px auto 20px auto;
+        background: #ccc;
+        border: 25px solid #fff;
+        border-radius: 10px;
+        box-shadow: inset -1px 1px 7px rgba(0,0,0,.2),
+                    inset 1px -1px 7px rgba(0,0,0,.2),
+                    1px 12px 5px rgba(0,0,0,.4),
+                    4px 3px 8px rgba(0,0,0,.4),
+                    5px 10px 10px rgba(0,0,0,.2),
+                    -5px 10px 10px rgba(0,0,0,.4);
+    }
+
+    #game {
+
+    }
+
+    .row {
+        clear: both;
+        overflow: hidden;
+    }
+
+    .box {
+        width: 60px;
+        height: 60px;
+        float: left;
+        text-align: center;
+        line-height: 60px;
+        font-size: 50px;
+        cursor: default;
+    }
+
+    .placed {
+        cursor: pointer;
+    }
+
+    .selected {
+        -moz-box-shadow:    inset 0 0 10px #311B0B;
+        -webkit-box-shadow: inset 0 0 10px #311B0B;
+        box-shadow:         inset 0 0 10px #311B0B;
+    }
+
+    .suggest {
+
+        -moz-filter: grayscale(50%);
+        -webkit-filter: grayscale(50%);
+        filter: grayscale(50%);
+
+        -moz-box-shadow:    inset 0 0 15px #0f0;
+        -webkit-box-shadow: inset 0 0 15px #0f0;
+        box-shadow:         inset 0 0 15px #0f0;
+
+        cursor: pointer;
+    }
+
+    /*============================================*/
+
+    #result {
+        width: 480px;
+        height: 240;
+        line-height: 240px;
+        position: absolute;
+        background: transparent;
+        text-align: center;
+        font-size: 90px;
+        cursor: default;
+        animation: blur 1.5s ease-out infinite;
+        z-index: 10;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    @keyframes blur{
+      from {
+          text-shadow:0px 0px 10px #fff,
+                      0px 0px 10px #fff,
+                      0px 0px 25px #fff,
+                      0px 0px 25px #fff,
+                      0px 0px 25px #fff,
+                      0px 0px 25px #fff,
+                      0px 0px 25px #fff,
+                      0px 0px 25px #fff,
+                      0px 0px 50px #fff,
+                      0px 0px 50px #fff,
+                      0px 0px 50px #7B96B8,
+                      0px 0px 150px #7B96B8,
+                      0px 10px 100px #7B96B8,
+                      0px 10px 100px #7B96B8,
+                      0px 10px 100px #7B96B8,
+                      0px 10px 100px #7B96B8,
+                      0px -10px 100px #7B96B8,
+                      0px -10px 100px #7B96B8;
+        }
+    }
+
+    #pawn-promotion-option {
+        width: 480px;
+        height: 240;
+        line-height: 240px;
+        position: absolute;
+        background: transparent;
+        text-align: center;
+        font-size: 90px;
+        cursor: default;
+        z-index: 10;
+    }
+
+    #pawn-promotion-option .option {
+        cursor: pointer;
+    }
+
+    /*========================================*/
+
+    .option-nav {
+        height: 20px;
+        width: 500px;
+        font-size: 30px;
+        margin: 0 auto;
+         line-height: 15px;
+    }
+
+    #player-nav {
+        display: inline-block;
+        cursor: default;
+        float: left;
+        width: 200px;
+        text-align: left;
+         margin-top: 5px;
+    }
+
+    #player {
+        font-size: 32px;
+        color: #000;
+    }
+
+    #undo-btn, #option {
+        display: inline-block;
+        float: right;
+        cursor: pointer;
+        margin-left: 50px;
+         position: relative;
+    }
+
+    .btn .tooltiptext {
+        visibility: hidden;
+        font-family: monospace;
+        width: 100px;
+        background: #000;
+        color: #ccc;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        line-height: 20px;
+        font-size: 22px;
+
+        position: absolute;
+        z-index: 1;
+        top: 120%;
+        left: 50%;
+        margin-left: -50px;
+    }
+
+    #undo-btn .tooltiptext {
+        width: 80px;
+        margin-left: -40px;
+    }
+
+    .btn .tooltiptext::after {
+        content: "";
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent #000 transparent;
+    }
+
+    .btn:hover .tooltiptext {
+        visibility: visible;
+    }
+
+    /*=================*/
+
+    #option-menu {
+        width: 480px;
+        height: 240px;
+        position: absolute;
+        background: transparent;
+        text-align: center;
+        font-size: 40px;
+        cursor: default;
+        z-index: 10;
+        letter-spacing: 5px;
+
+    }
+
+    #back-btn {
+        width: 100px;
+        margin: 60px auto 0 auto;
+    }
+
+    #theme-menu {
+        width: 100%;
+        margin: 40px auto 0 auto;
+    }
+
+    #color-menu {
+        width: 100%;
+        margin: 40px auto 0 auto;
+    }
+
+    #restart-btn {
+        width: 280px;
+        margin: 40px auto 0 auto;;
+    }
+
+    .button {
+        cursor: pointer;
+    }
+
+    /* Responsive design */
+
+    @media only screen and (max-width: 570px) {
+        body {
+            width: 100%;
+        }
+
+        #board {
+            width: 320px;
+             border-width: 13px;
+        }
+
+        .box {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 36px;
+             font-weight: normal;
+        }
+
+        #option {
+            width: 80px;
+        }
+
+        #option-menu {
+            width: 320px;
+            height: 320px;
+            font-size: 26px;
+        }
+
+        #back-btn {
+            margin-top: 25px;
+        }
+
+        .option-nav {
+              margin: 0 auto;
+            width: 340px;
+            font-size: 24px;
+              line-height: 10px;
+        }
+
+         #player-nav {
+              width: 30%;
+              margin-top: 5px;
+         }
+
+         #player {
+             font-size: 28px;
+         }
+
+         #undo-btn {
+              margin-left: 20px;
+         }
+
+        #option {
+              margin-left: 20px;
+        }
+
+        #pawn-promotion-option {
+            width: 320px;
+            height: 320px;
+            font-size: 60px;
+            line-height: 320px;
+        }
+
+        #result {
+            width: 320px;
+            height: 320px;
+            font-size: 60px;
+            line-height: 320px;
+        }
+    }
+</style>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+
+
+</head>
+
+<body>
+
+<div class="title"><h1><u>Class Warfare Chess</u></h1></div>
+<div class="option-nav">
+    <div id="player-nav">
+        Player: <span id="player"></span>
+    </div>
+    <div id="option" class="btn">
+        <i class="fa fa-cog" aria-hidden="true"></i>
+        <span class="tooltiptext">OPTION</span>
+    </div>
+    <div id="undo-btn" class="btn">
+        <i class="fa fa-undo" aria-hidden="true"></i>
+        <span class="tooltiptext">UNDO</span>
+    </div>
+</div>
+<div id="board">
+    <div id="result" class="hide"></div>
+    <div id="pawn-promotion-option" class="hide">
+         <span id="queen" class="option"></span>
+         <span id="rook" class="option"></span>
+         <span id="knight" class="option"></span>
+         <span id="bishop" class="option"></span>
+    </div>
+    <div id="option-menu" class="hide">
+         <div id="back-btn" class="button">BACK</div>
+         <div id="restart-btn" class="button">NEW GAME</div>
+    </div>
+    <div id="game" ng-app="myApp" ng-controller="GameController">
+         <div class="row" ng-repeat="y in heights">
+              <div class="box" ng-repeat="x in widths" ng-attr-id="{{'box-' + x + '-' + y}}" piece="">
+              </div>
+         </div>
+    </div>
+</div>
+<div class="description">
+    <p>
+        Welcome to Class Warfare Chess! The game where the pawns try to rise up and the non-pawns try to keep them in their place.  Gameplay is similar to regular chess with a few variations:
+    </p>
+    <ol>
+        <li>The game is played on only one half of the board (8x4), with one row of proletariat pieces (pawns) on one side and the opposite color's bourgeoisie pieces (non-pawns) on the other side.</li>
+        <li>Proletariat pieces (pawns) move like regular pawns.</li>
+        <li>For bourgeoisie pieces (non-pawns), we refer to the squares opposite to their type's starting position as that type's "factory squares."  When both of the factory squares for a given type are occupied, then those bourgeoisie pieces move as in normal chess. However, if either factory square is empty, then the corresponding type moves just like a regular pawn. For example, both bishops can move like bishops only if the squares opposite to both bishops (the bishops' factories) are occupied. If either of those two positions are not occupied, then both bishops operate like pawns. Note that any piece may occupy the factory to keep it running, including other bourgeoisie pieces. </li>
+        <li>The queen's factory squares are the ones across from her and the king. The king has no factory and always moves like the king.</li>
+        <li>If a proletariat piece is captured when in a column with an unoccupied factory square, then the proletariat will not be removed from the board. Instead it will just be returned to the factory square.  However, if the column's factory square is already occupied, then the proletariat is removed from play when captured. </li>
+        <li>If a proletariat piece reaches the farthest row then it can move side-to-side along the back one square at a time for both capturing or moving. However, it cannot move off the back row.</li>
+    </ol>
+    <p>
+        For pawns, The goal of the game is to capture the king.  For the bourgoisie, the goal is to keep the status quo for as long as possible until the proletariat surrenders. For a more detailed explanation, check out this tutorial. Enjoy the struggle comrades!
+    </p>
+    <p>
+        <small>Built by <a href="https://twitter.com/bonkerfield">Will Stedden</a>. Feel free to send me questions or let me know if there are bugs in the game.</small>
+    </p>
+</div>
+<script type="text/javascript">
+    angular.module('myApp', []).controller('GameController', ['$scope', function($scope) {
+
+        //Draw the board game
+        $scope.w_size = 8;
+        $scope.h_size = 4;
+        $scope.widths = [];
+         $scope.heights = [];
+
+        //Draw board
+        for(var i = 0; i < $scope.w_size; i++) {
+            $scope.widths.push(i);
+        }
+        for(var i = 0; i < $scope.h_size; i++) {
+            $scope.heights.push(i);
+        }
+
+    }]);
+
+    $(document).ready(function() {
+        var themes = [
+            {
+                name: 'CLASSIC',
+                boardBorderColor: '#666',
+                lightBoxColor: '#fff',
+                darkBoxColor: '#ccc',
+                optionColor: '#000',
+                optionHoverColor: '#999'
+            },
+            {
+                name: 'WOOD',
+                boardBorderColor: '#803E04',
+                lightBoxColor: '#FFCE9E',
+                darkBoxColor: '#D18B47',
+                optionColor: '#803E04',
+                optionHoverColor: '#311B0B'
+            },
+            {
+                name: 'OCEAN',
+                boardBorderColor: '#023850',
+                lightBoxColor: '#fff',
+                darkBoxColor: '#0A85AE',
+                optionColor: '#023850',
+                optionHoverColor: '#3385ff'
+            },
+            {
+                name: 'FOREST',
+                boardBorderColor: '#005900',
+                lightBoxColor: '#CAC782',
+                darkBoxColor: '#008C00',
+                optionColor: '#005900',
+                optionHoverColor: '#0c0'
+            },
+            {
+                name: 'BLOOD',
+                boardBorderColor: '#f3f3f3',
+                lightBoxColor: '#f3f3f3',
+                darkBoxColor: '#f00',
+                optionColor: '#f00',
+                optionHoverColor: '#f99'
+            }
+        ];
+
+        var colors = [
+            {
+                name: 'BLACK',
+                color: '#000'
+            },
+            {
+                name: 'GREEN',
+                color: '#030'
+            },
+            {
+                name: 'BLUE',
+                color: '#036'
+            },
+            {
+                name: 'PINK',
+                color: '#606'
+            },
+            {
+                name: 'BROWN',
+                color: '#630'
+            }
+        ];
+
+        var colorOption = 0;
+        var themeOption = 1;
+
+        //Change theme
+        $('#theme-option').on('click', function() {
+            themeOption === themes.length - 1 ? themeOption = 0 : themeOption++;
+
+            setTheme();
+        });
+
+        //Set up theme
+        var setTheme = function() {
+            var theme = themes[themeOption];
+
+            $('#theme-option').html(theme.name);
+
+            $('#board').css('border-color', theme.boardBorderColor);
+            $('.light-box').css('background', theme.lightBoxColor);
+            $('.dark-box').css('background', theme.darkBoxColor);
+
+            $('.option-nav').css('color', theme.optionColor);
+
+            //Option button effect
+            $('#option').css('color', theme.optionColor);
+            $('#option').hover(
+                function() {
+                    $(this).css('color', theme.optionHoverColor);
+                }, function() {
+                    $(this).css('color', theme.optionColor);
+                }
+            );
+
+            //Undo button effect
+            $('#undo-btn').css('color', theme.optionColor);
+            $('#undo-btn').hover(
+                function() {
+                    $(this).css('color', theme.optionHoverColor);
+                }, function() {
+                    $(this).css('color', theme.optionColor);
+                }
+            );
+
+            //Option Menu effect
+            $('#option-menu').css('color', theme.optionColor);
+            $('.button').css('color', theme.optionColor);
+            $('.button').hover(
+                function() {
+                    $(this).css('color', theme.optionHoverColor);
+                }, function() {
+                    $(this).css('color', theme.optionColor);
+                }
+            );
+        }
+
+        //Change color
+        $('#color-option').on('click', function() {
+           colorOption === colors.length - 1 ? colorOption = 0 : colorOption++;
+
+            setColor();
+        });
+
+        //Set up color for chess pieces
+        var setColor = function() {
+            var color = colors[colorOption];
+
+            $('#color-option').html(color.name);
+
+            $('.box').css('color', color['color']);
+
+            $('#pawn-promotion-option').css('color', color['color']);
+
+            $('#player').css('color', color['color']);
+        }
+
+         //=====GLOBAL VARIABLES=========//
+
+        //Chess pieces
+        var chessPieces = {
+             'white': {
+                  'king': '&#9812;',
+                  'queen': '&#9813;',
+                  'rook': '&#9814;',
+                  'bishop': '&#9815;',
+                  'knight': '&#9816;',
+                  'pawn': '&#9817;'
+             },
+             'black': {
+                  'king': '&#9818;',
+                  'queen': '&#9819;',
+                  'rook': '&#9820;',
+                  'bishop': '&#9821;',
+                  'knight': '&#9822;',
+                  'pawn': '&#9823;',
+                  'square': '&#9632;'
+             }
+        };
+
+        var player = 'black'; //First player
+
+        //Selected chess piece to move
+        var select = {
+             canMove: false, //Ready to move of not
+             piece: '',      //Color, type of the piece
+             box: ''         //Position of the piece
+        }
+
+        //Game's history (pieces + positions)
+        var historyMoves = [];
+
+        //Position and color of pawn promotion
+        var promotion = {};
+
+        //Set up board game
+        $(function() {
+            $('#player').html(chessPieces.black.pawn);
+
+             //Set up color for boxes, chess pieces
+             for(var i = 0; i < 8; i++) {
+                  for(var j = 0; j < 4; j++) {
+                        var box = $('#box-' + i + '-' + j);
+                        if((i + j) % 2 !== 0) {
+                             box.addClass('light-box');
+                        } else {
+                             box.addClass('dark-box');
+                        }
+                        setNewBoard(box, i, j); //Set up all chess pieces
+                  }
+             }
+             setColor();
+             setTheme();
+        });
+
+        //==============CLICK EVENTS==================//
+
+            $(function() {
+                 //Option menu
+                 $('#option').on('click', function() {
+                      if($('#option-menu').hasClass('hide')) {
+                            $('#game').css('opacity', '0.3');
+                            $('#option-menu').removeClass('hide');
+                      } else {
+                            $('#game').css('opacity', '1');
+                            $('#option-menu').addClass('hide');
+                      }
+                 });
+
+                 //Back button
+                 //Return to game
+                 $('#back-btn').on('click', function() {
+                      $('#option-menu').addClass('hide');
+                      $('#game').css('opacity', '1');
+                 });
+
+             //Undo button
+             $('#undo-btn').on('click', function() {
+                  if(historyMoves.length === 0) {
+                        return;
+                  }
+                  var move = historyMoves.pop();
+
+                  var previous = move.previous;
+                  setPiece($('#' + previous.box), previous.piece.split('-')[0], previous.piece.split('-')[1]);
+
+                  var current = move.current;
+                  if(current.piece === '') {
+                        var currentBox = $('#' + current.box);
+                        currentBox.html('');
+                        currentBox.attr('piece', '');
+                        currentBox.removeClass('placed');
+                  } else {
+                        setPiece($('#' + current.box), current.piece.split('-')[0], current.piece.split('-')[1]);
+                  }
+
+                  //Reset all changes
+                  $('.box').removeClass('selected');
+                  $('.box').removeClass('suggest');
+
+                  switchPlayer();
+
+                  select = { canMove: false, piece: '', box: '' };
+             });
+
+             //Pawn promotion event
+             $('#pawn-promotion-option .option').on('click', function() {
+
+                  var newType = $(this).attr('id');
+                  promotion.box.html(chessPieces[promotion.color][newType]);
+                  promotion.box.addClass('placed');
+                  promotion.box.attr('piece', promotion.color + '-' + newType);
+
+                  $('#pawn-promotion-option').addClass('hide');
+                  $('#game').css('opacity', '1');
+
+                  promotion = {};
+             });
+
+             //Reset game
+             $('#restart-btn').on('click', function() {
+                  resetGame();
+             });
+
+             //Restart when game over
+             $('#result').on('click', function() {
+                  resetGame();
+             });
+
+             //Box click event
+             $('.box').on('click', function() {
+                  if($(this).hasClass('selected')) { //Undo to select new box
+                        $(this).removeClass('selected');
+
+                        $('.box').removeClass('suggest');
+                        select = { canMove: false, piece: '', box: '' };
+                        return;
+                  }
+
+                  //Select new box
+                  if(!select.canMove) {
+                        //Check the right color to play
+                        if($(this).attr('piece').indexOf(player) >= 0) {
+                             //Select a piece to move
+                             selectPiece($(this));
+                        }
+                  }
+
+                  //Set up new destination for selected box
+                  else if(select.canMove) {
+                        var selectedPieceInfo = select.piece.split('-');
+                        var color = selectedPieceInfo[0];
+                        var type = selectedPieceInfo[1];
+
+                        //Select new piece to move if 2 colors are the same
+                        if($(this).attr('piece').indexOf(color) >= 0) {
+                             $('#' + select.box).removeClass('selected');
+                             $('.box').removeClass('suggest');
+                             //Select a piece to move
+                             selectPiece($(this));
+                             return;
+                        }
+
+                        //Can move if it is valid
+                        if($(this).hasClass('suggest')) {
+
+                             //Save move in history
+                             var move = {
+                                  previous: {},
+                                  current: {}
+                             }
+
+                             move.previous.piece = select.piece;
+                             move.previous.box = select.box;
+
+                             move.current.piece = $(this).attr('piece');
+                             move.current.box = $(this).attr('id');
+
+                             historyMoves.push( move );
+
+                             //Move selected piece successfully
+                             setPiece($(this), color, type);
+
+                             //Delete moved box
+                             deleteBox($('#' + select.box));
+
+                             $('.box').removeClass('suggest');
+
+                             select = { canMove: false, piece: '', box: '' };
+
+                             //Switch player
+                             switchPlayer();
+                        }
+                  }
+             });
+        });
+
+        //Get piece and position of the selected piece
+        var selectPiece = function(box) {
+             box.addClass('selected');
+             select.box = box.attr('id');
+             select.piece = box.attr('piece');
+             select.canMove = true;
+
+             suggestNextMoves(getNextMoves(select.piece, select.box));
+        }
+
+        //CALCULATE VALID MOVES=======//
+
+        //Returns possible moves of the selected piece
+        var getNextMoves = function(selectedPiece, selectedBox) {
+             var selectedPieceInfo = selectedPiece.split('-');
+             var color = selectedPieceInfo[0];
+             var type = selectedPieceInfo[1];
+
+             var id = selectedBox.split('-');
+             var i = parseInt(id[1]);
+             var j = parseInt(id[2]);
+
+             var nextMoves = [];
+
+             switch(type) {
+                  case 'pawn':
+                        if (j === 0){
+                            var moves = [
+                                 [1, 0], [-1, 0]
+                            ];
+                            nextMoves = getKnightMoves(i, j, color, moves);
+                        }else {
+                            var moves = [
+                                 [0, -1],  [1, -1], [-1, -1]
+                            ];
+                            nextMoves = getPawnMoves(i, j, color, moves);
+                        }
+                        break;
+                  case 'rook':
+                       if ($('#box-0-3').hasClass('placed') && $('#box-7-3').hasClass('placed')){
+                            var moves = [
+                                 [0, 1], [0, -1], [1, 0], [-1, 0]
+                            ];
+                            nextMoves = getQueenMoves(i, j, color, moves);
+                        } else {
+                            var moves = [
+                                 [0, 1],  [1, 1], [-1, 1]
+                             ];
+                            nextMoves = getPawnMoves(i, j, color, moves);
+                        }
+
+                        break;
+                  case 'knight':
+                       if ($('#box-1-3').hasClass('placed') && $('#box-6-3').hasClass('placed')){
+                            var moves = [
+                                 [-1, -2], [-2, -1], [1, -2], [-2, 1],
+                                 [2, -1], [-1, 2], [2, 1], [1, 2]
+                            ];
+                            nextMoves = getKnightMoves(i, j, color, moves);
+                        } else {
+                            var moves = [
+                                 [0, 1], [1, 1], [-1, 1]
+                             ];
+                            nextMoves = getPawnMoves(i, j, color, moves);
+                        }
+                        break;
+                  case 'bishop':
+                        if ($('#box-2-3').hasClass('placed') && $('#box-5-3').hasClass('placed')){
+                            var moves = [
+                             [1, 1], [1, -1], [-1, 1], [-1, -1]
+                        ];
+                        nextMoves = getQueenMoves(i, j, color, moves);
+                         } else {
+                                var moves = [
+                                     [0, 1],  [1, 1], [-1, 1]
+                                 ];
+                                nextMoves = getPawnMoves(i, j, color, moves);
+                            }
+                        break;
+                  case 'queen':
+                        if ($('#box-3-3').hasClass('placed') && $('#box-4-3').hasClass('placed')){
+                            var moves1 = [
+                                 [1, 1], [1, -1], [-1, 1], [-1, -1]
+                            ];
+                            var moves2 = [
+                                 [0, 1], [0, -1], [1, 0], [-1, 0]
+                            ];
+                            nextMoves = getQueenMoves(i, j, color, moves1)
+                                            .concat(getQueenMoves(i, j, color, moves2));
+                        } else {
+                            var moves = [
+                                 [0, 1], [1, 1], [-1, 1]
+                             ];
+                            nextMoves = getPawnMoves(i, j, color, moves);
+                        }
+                       break;
+                  case 'king':
+                        var moves = [
+                             [1, 1], [1, -1], [-1, 1], [-1, -1],
+                             [0, 1], [0, -1], [1, 0], [-1, 0]
+                        ];
+                        nextMoves = getKnightMoves(i, j, color, moves);
+                        break;
+                  default:
+                        break;
+             }
+             return nextMoves;
+        }
+
+        //Calculate next moves for pawn pieces
+        var getPawnMoves = function(i, j, color, moves) {
+             var nextMoves = [];
+             for(var index = 0; index < moves.length; index++) {
+                  var tI = i + moves[index][0];
+                  var tJ = j + moves[index][1];
+                  if( !outOfBounds(tI, tJ) ) {
+                        var box = $('#box-' + tI + '-' + tJ);
+
+                        if(index < 1) { //First line
+                             if(!box.hasClass('placed')) {
+                                  nextMoves.push([tI, tJ]);
+                             }
+                        } else if(index > 0) { //Other lines
+                             if(box.attr('piece') !== '' && box.attr('piece').indexOf(color) < 0) {
+                                  nextMoves.push([tI, tJ]);
+                             }
+                        }
+                  }
+             }
+             return nextMoves;
+        }
+
+        //Calculate next move of rook, bishop and queen pieces
+        var getQueenMoves = function(i, j, color, moves) {
+             var nextMoves = [];
+             for(var move of moves) {
+                  var tI = i + move[0];
+                  var tJ = j + move[1];
+                  var sugg = true;
+                  while(sugg && !outOfBounds(tI, tJ)) {
+                        var box = $('#box-' + tI + '-' + tJ);
+                        if(box.hasClass('placed')) {
+                             if(box.attr('piece').indexOf(color) >= 0) {
+                                  sugg = false;
+                             } else {
+                                  nextMoves.push([tI, tJ]);
+                                  sugg = false;
+                             }
+                        }
+                        if(sugg) {
+                             nextMoves.push([tI, tJ]);
+                             tI += move[0];
+                             tJ += move[1];
+                        }
+                  }
+             }
+             return nextMoves;
+        }
+
+        //Calculate next moves for knight or king pieces
+        var getKnightMoves = function(i, j, color, moves) {
+             var nextMoves = [];
+             for(var move of moves) {
+                  var tI = i + move[0];
+                  var tJ = j + move[1];
+                  if( !outOfBounds(tI, tJ) ) {
+                        var box = $('#box-' + tI + '-' + tJ);
+                        if(!box.hasClass('placed') || box.attr('piece').indexOf(color) < 0) {
+                             nextMoves.push([tI, tJ]);
+                        }
+                  }
+             }
+             return nextMoves;
+        }
+
+        //Check if position i, j is in the board game
+        var outOfBounds = function(i, j) {
+             return ( i < 0 || i >= 8 || j < 0 || j >= 4 );
+        }
+
+        //Show possible moves by add suggestion to boxes
+        var suggestNextMoves = function(nextMoves) {
+             for(var move of nextMoves) {
+                  var box = $('#box-' + move[0] + '-' + move[1]);
+                  box.addClass('suggest');
+             }
+        }
+
+        //=============================================//
+
+        //Set up piece for clicked box
+        var setPiece = function(box, color, type) {
+
+             //Check end game (if king is defeated)
+             if(box.attr('piece').indexOf('king') >= 0) {
+                  showWinner(player);
+
+                  box.html(chessPieces[color][type]);
+                  box.addClass('placed');
+                  box.attr('piece', color + '-' + type);
+
+                  return;
+             }
+
+             //Check if pawn reached the last line
+    //       var j = parseInt(box.attr('id').charAt(6));
+    //       if(type === 'pawn') {
+    //            if( (player === 'black' && j === 7) ||
+    //                  (player === 'white' && j === 0)) {
+    //                  $('#game').css('opacity', '0.5');
+
+    //                  var option = $('#pawn-promotion-option');
+    //                  option.removeClass('hide');
+    //                  option.find('#queen').html(chessPieces[player].queen);
+    //                  option.find('#rook').html(chessPieces[player].rook);
+    //                  option.find('#knight').html(chessPieces[player].knight);
+    //                  option.find('#bishop').html(chessPieces[player].bishop);
+
+    //                  promotion = { box: box, color: color };
+
+    //                  return;
+    //            }
+    //       }
+             if(box.attr('piece').indexOf('pawn') >= 0) {
+
+                  var id = box.attr('id').split('-');
+                 var i = parseInt(id[1]);
+                  var replaceBox = $('#box-'+ i +'-3')
+                  if (replaceBox.attr('piece').indexOf('pawn') < 0){
+                      setPiece(replaceBox, 'black', 'pawn')
+                  }
+
+             }
+
+             box.html(chessPieces[color][type]);
+             box.addClass('placed');
+             box.attr('piece', color + '-' + type);
+        }
+
+        //Delete selected element
+        var deleteBox = function(box) {
+             box.removeClass('placed');
+             box.removeClass('selected');
+             box.removeClass('suggest');
+             box.html('');
+             box.attr('piece', '');
+        }
+
+        //Default board state
+        var setNewBoard = function(box, i, j) {
+             if(j === 3) {
+                  setPiece(box, 'black', 'pawn');
+             } else if(j === 0) {
+                  if(i === 0 || i === 7) {
+                        setPiece(box, 'white', 'rook');
+                  } else if(i === 1 || i === 6) {
+                        setPiece(box, 'white', 'knight');
+                  } else if(i === 2 || i === 5) {
+                        setPiece(box, 'white', 'bishop');
+                  } else if(i === 3) {
+                        setPiece(box, 'white', 'queen');
+                  } else if(i === 4) {
+                        setPiece(box, 'white', 'king');
+                  }
+             }
+        }
+
+        //Switch player
+        var switchPlayer = function() {
+             if(player === 'black') {
+                  $('#player').html(chessPieces.white.king);
+                  player = 'white';
+             } else {
+                  $('#player').html(chessPieces.black.pawn);
+                  player = 'black';
+             }
+        }
+
+        //Restart game
+        var resetGame = function() {
+             deleteBox($('.box'));
+             $('#player').html(chessPieces.black.pawn);
+             $('#result').addClass('hide');
+             $('#option-menu').addClass('hide');
+             $('#game').css('opacity', '1');
+
+             //Set up color for boxes, chess pieces
+             for(var i = 0; i < 8; i++) {
+                  for(var j = 0; j < 8; j++) {
+                        var box = $('#box-' + i + '-' + j);
+                        setNewBoard(box, i, j);
+                  }
+             }
+
+             //Set global variables to default
+             player = 'black';
+             select = {
+                  canMove: false,
+                  piece: '',
+                  box: ''
+             };
+
+             historyMoves = [];
+             promotion = {};
+        }
+
+        //Announce the winner
+        var showWinner = function(winner) {
+
+             historyMoves = [];
+             promotion = {};
+
+             setTimeout(function() {
+                  if(winner === 'DRAW') { //Game is draw
+                        $('#result').css('color', '#000');
+                        $('#result').html(winner);
+                  } else { //There is a winner
+                        $('#result').css('color', winner + '');
+                        $('#result').html(chessPieces[winner].pawn + ' wins!');
+                  }
+                  $('#result').removeClass('hide');
+                  $('#game').css('opacity', '0.5');
+             }, 1000);
+        }
+
+    });
+</script>
+</body>
