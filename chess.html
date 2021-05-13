@@ -359,14 +359,23 @@
     </div>
 </div>
 <div class="description">
-    Welcome to Class Warfare Chess! The game where the pawns try to rise up and the non-pawns try to keep them in their place.  Gameplay is similar to regular chess with a few variations:
-    <ol><li>The game is played on only one half of the board.</li>
-        <li>Proletariat pieces (pawns) move like regular pawns but they can play both forwards or backwards.</li>
-        <li>For bourgeoisie pieces (non-pawns), we refer to the squares opposite to their type's starting position as that type's "factory squares."  When both of the factory squares for a given type are occupied, then those pieces move as in normal chess. However, if either factory square is empty, then the corresponding type moves just like a regular pawn. For example, the bishops can move like bishops only if the squares opposite to both bishops (the bishops' factories) are occupied. If either of those two positions are not occupied, then both bishops operate like pawns. Note that any piece may occupy the factory to keep it running, including bourgeoisie pieces. </li>
+    <p>
+        Welcome to Class Warfare Chess! The game where the pawns try to rise up and the non-pawns try to keep them in their place.  Gameplay is similar to regular chess with a few variations:
+    </p>
+    <ol>
+        <li>The game is played on only one half of the board (8x4), with one row of proletariat pieces (pawns) on one side and the opposite color's bourgeoisie pieces (non-pawns) on the other side.</li>
+        <li>Proletariat pieces (pawns) move like regular pawns.</li>
+        <li>For bourgeoisie pieces (non-pawns), we refer to the squares opposite to their type's starting position as that type's "factory squares."  When both of the factory squares for a given type are occupied, then those bourgeoisie pieces move as in normal chess. However, if either factory square is empty, then the corresponding type moves just like a regular pawn. For example, both bishops can move like bishops only if the squares opposite to both bishops (the bishops' factories) are occupied. If either of those two positions are not occupied, then both bishops operate like pawns. Note that any piece may occupy the factory to keep it running, including other bourgeoisie pieces. </li>
         <li>The queen's factory squares are the ones across from her and the king. The king has no factory and always moves like the king.</li>
-        <li>If a pawn is in a column where the bottom square (the "factory square") is unoccupied, then the pawn will not be removed from the board when captured. Instead it will just be returned to the factory square.  If the factory square is already occupied, then the pawn will be removed from play. </li>
+        <li>If a proletariat piece is captured when in a column with an unoccupied factory square, then the proletariat will not be removed from the board. Instead it will just be returned to the factory square.  However, if the column's factory square is already occupied, then the proletariat is removed from play when captured. </li>
+        <li>If a proletariat piece reaches the farthest row then it can move side-to-side along the back one square at a time for both capturing or moving. However, it cannot move off the back row.</li>
     </ol>
-            For pawns, The goal of the game is to capture the king.  For the bourgoisie, the goal is to keep the status quo for as long as possible. Built by <a href="https://twitter.com/bonkerfield">Will Stedden</a>. For a more detailed explanation, check out this tutorial.
+    <p>
+        For pawns, The goal of the game is to capture the king.  For the bourgoisie, the goal is to keep the status quo for as long as possible until the proletariat surrenders. For a more detailed explanation, check out this tutorial. Enjoy the struggle comrades!
+    </p>
+    <p>
+        <small>Built by <a href="https://twitter.com/bonkerfield">Will Stedden</a>. Feel free to send me questions or let me know if there are bugs in the game.</small>
+    </p>
 </div>
 <script type="text/javascript">
     angular.module('myApp', []).controller('GameController', ['$scope', function($scope) {
@@ -754,10 +763,17 @@
 
              switch(type) {
                   case 'pawn':
-                         var moves = [
-                             [0, -1], [0, 1],  [1, -1], [-1, -1], [1, 1], [-1, 1]
-                         ];
-                        nextMoves = getPawnMoves(i, j, color, moves);
+                        if (j === 0){
+                            var moves = [
+                                 [1, 0], [-1, 0]
+                            ];
+                            nextMoves = getKnightMoves(i, j, color, moves);
+                        }else {
+                            var moves = [
+                                 [0, -1],  [1, -1], [-1, -1]
+                            ];
+                            nextMoves = getPawnMoves(i, j, color, moves);
+                        }
                         break;
                   case 'rook':
                        if ($('#box-0-3').hasClass('placed') && $('#box-7-3').hasClass('placed')){
@@ -767,7 +783,7 @@
                             nextMoves = getQueenMoves(i, j, color, moves);
                         } else {
                             var moves = [
-                                 [0, -1], [0, 1],  [1, -1], [-1, -1], [1, 1], [-1, 1]
+                                 [0, 1],  [1, 1], [-1, 1]
                              ];
                             nextMoves = getPawnMoves(i, j, color, moves);
                         }
@@ -782,7 +798,7 @@
                             nextMoves = getKnightMoves(i, j, color, moves);
                         } else {
                             var moves = [
-                                 [0, -1], [0, 1],  [1, -1], [-1, -1], [1, 1], [-1, 1]
+                                 [0, 1], [1, 1], [-1, 1]
                              ];
                             nextMoves = getPawnMoves(i, j, color, moves);
                         }
@@ -795,7 +811,7 @@
                         nextMoves = getQueenMoves(i, j, color, moves);
                          } else {
                                 var moves = [
-                                     [0, -1], [0, 1],  [1, -1], [-1, -1], [1, 1], [-1, 1]
+                                     [0, 1],  [1, 1], [-1, 1]
                                  ];
                                 nextMoves = getPawnMoves(i, j, color, moves);
                             }
@@ -812,7 +828,7 @@
                                             .concat(getQueenMoves(i, j, color, moves2));
                         } else {
                             var moves = [
-                                 [0, -1], [0, 1],  [1, -1], [-1, -1], [1, 1], [-1, 1]
+                                 [0, 1], [1, 1], [-1, 1]
                              ];
                             nextMoves = getPawnMoves(i, j, color, moves);
                         }
@@ -839,11 +855,11 @@
                   if( !outOfBounds(tI, tJ) ) {
                         var box = $('#box-' + tI + '-' + tJ);
 
-                        if(index < 2) { //First line
+                        if(index < 1) { //First line
                              if(!box.hasClass('placed')) {
                                   nextMoves.push([tI, tJ]);
                              }
-                        } else if(index > 1) { //Other lines
+                        } else if(index > 0) { //Other lines
                              if(box.attr('piece') !== '' && box.attr('piece').indexOf(color) < 0) {
                                   nextMoves.push([tI, tJ]);
                              }
