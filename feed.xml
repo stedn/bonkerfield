@@ -5,9 +5,69 @@
     <description>just your standard information identity spacetime field</description>
     <link>https://bonkerfield.org</link>
     <atom:link href="https://bonkerfield.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 31 Jul 2021 12:07:29 -0700</pubDate>
-    <lastBuildDate>Sat, 31 Jul 2021 12:07:29 -0700</lastBuildDate>
+    <pubDate>Tue, 22 Feb 2022 21:09:09 -0700</pubDate>
+    <lastBuildDate>Tue, 22 Feb 2022 21:09:09 -0700</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <image>https://bonkerfield.org/assets/images/2022/google_sheet.png</image>
+        <title>Building a website on Google Sheets</title>
+        <description>&lt;p&gt;
+I haven't been writing on here lately as I've been very busy he;ping to build a &lt;a href=&quot;https?//trailcoop.org&quot;&gt;cooperative bicycle touring platform&lt;/a&gt; that I'm helping to start.  But I thought I would write down a quick tutorial since I've basically built the whole database to run for free on top of Google Sheets.
+&lt;/p&gt;
+
+&lt;p&gt;Now the only really good reason to do this is that (1) it is free and (2) it can be edited very easily by non-developers. And I already know that if this platform takes off there will need to be a lot of reworking to make it scalable.  But for now, this is working great and I just wanted to show how it's done.&lt;/p&gt;
+
+&lt;h4&gt;How is that even possible?&lt;/h4&gt;
+&lt;p&gt;If you're thinking running a whole website off of Google Sheets is impossible, you'd be right.  The website itself is built using Jekyll to serve a static website, which is hosted (for free of course) on Github Pages.  This has become a pretty standard way to host a free website for tech savvy (and less tech savvy) people in recent years.&lt;/p&gt;
+
+&lt;p&gt;But the website I'm building doesn't want to just be a static site that we update by adding commits to a git repo!  Our site is designed to be a place to upload routes, cycling resources, and travel logs for people to find ways to bike tour in the local area around their home.  And we hope someday for people to be able to even add private resources, like property that can be used for camping and things like that.&lt;/p&gt;
+
+&lt;p&gt;Typically if you want people to submit their own content to a website, you will have to build your own backend database.  But this means that as a developer I would need to build all the tooling for posting content to a DB. And importantly, most ways of doing this require some operating costs for storage and data transactions with the database.  &lt;/p&gt;
+
+&lt;p&gt;So as a scrappy startup we decided we'd like to short cut all that. And based on a &lt;a href=&quot;2020/05/timeline-streamgraph-google-sheet/&quot;&gt;previous project&lt;/a&gt; where I pulled some data from a Google Sheet, I thought, why not try hosting the content in an editable Google Sheet and running the whole site from there?&lt;/p&gt;
+
+&lt;p&gt;What could go wrong?&lt;/p&gt;
+
+&lt;h4&gt;It's all in the javascript&lt;/h4&gt;
+&lt;p&gt;The entirety of this relies on a few trick of javascript.  Basically, all that needs to happen is for me to make the Google Sheet public so that anyone can view it.  Then in the frontend of the webpage, I just run a little bit of javascript that downloads the contents of the spreadsheet, scans through it, builds the appropriate html, and adds it to the webpage.&lt;/p&gt;
+
+&lt;pre&gt;
+    fetch(&quot;&quot;)
+    .then(res =&gt; res.text())
+    .then(text =&gt; {
+        meta_result = JSON.parse(text.substr(47).slice(0, -2))
+&lt;/pre&gt;
+
+&lt;p&gt;That's the magic line right there.  I don't know exactly why that works, but I copied it from this &lt;a href=&quot;https://stackoverflow.com/questions/68854198/did-google-sheets-stop-allowing-json-access&quot;&gt;stack overflow&lt;/a&gt; and nothing lit on fire.&lt;/p&gt;
+
+&lt;p&gt;At this point, I have a data structure with each row and column. I access the &lt;i&gt;ith&lt;/i&gt; row and &lt;i&gt;jth&lt;/i&gt; column with the following.&lt;/p&gt;
+
+&lt;pre&gt;meta_result.table.rows[i].c[j]&lt;/pre&gt;
+
+&lt;p&gt;At this point it becomes very project specific.  For me, I just iterate through the rows and generate the custom HTML based on that content.  You can see how it works in all it's glory detail on the &lt;a href=&quot;https://github.com/stedn/cooptrail/blob/04f50ddb6b3dc30cfa73aad229b8e42ec9158b3b/_layouts/hub.html#L66&quot;&gt;Github repo&lt;/a&gt; for the site, though at the moment it is very very messy.&lt;/p&gt;
+
+&lt;h4&gt;So what about user input?&lt;/h4&gt;
+
+&lt;p&gt;So we're now displaying data from a google sheet, but we still need to manually input that data into the spreadsheet.  This is great for us since we know how the sheet is set up, but it would totally not work for a random person who wants to submit material to our site.&lt;/p&gt;
+
+&lt;p&gt;So to get around this we used another simple hack that I've applied to &lt;a href=&quot;https://artificechicago.org&quot;&gt;multiple&lt;/a&gt; &lt;a href=&quot;https://bonkerfield.org&quot;&gt;previous&lt;/a&gt; &lt;a href=&quot;https://leftwardist.org&quot;&gt;websites&lt;/a&gt;, which is just making a custom form that submits to a Google Form.  I've covered how this works in a previous &lt;a href=&quot;https://bonkerfield.org/2018/12/rtifice-website-revamp/&quot;&gt;blog post&lt;/a&gt; so I won't rehash it here.&lt;/p&gt;
+
+&lt;p&gt;Now we haven't fully closed the loop by having our form submit directly to the sheet that hosts our content. We thought about it, but based on the amount of random spam that comes through your average form, we figured it'd be best to have a manual check process to copy and paste content over.  &lt;/p&gt;
+
+&lt;p&gt;That said, I'm thinking about making a little script that copies from one spreadsheet to another.  All in all, I'm really happy with the system and am looking forward to launching the project and getting more people biking in their area.&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 22 Feb 2022 00:00:00 -0700</pubDate>
+        <link>https://bonkerfield.org/2022/02/google-sheet-hosted-website/</link>
+        <guid isPermaLink="true">https://bonkerfield.org/2022/02/google-sheet-hosted-website/</guid>
+        
+        <category>web</category>
+        
+        <category>code</category>
+        
+        
+      </item>
     
       <item>
         <image>https://bonkerfield.org</image>
@@ -91,7 +151,7 @@ In the next sections, I'll explain where these features fit in.
 &lt;p&gt;This does raise the question whether we need to make art that works like a proof of concept for the dystopian at all? It might be possible to critique without actually manifesting the art, but thus far, speculative fiction itself hasn't curbed our &quot;progress&quot; yet. Even the darkest of the speculative works still kept us thinking about those as issues to be dealt with by anti-heroes of the future. And based on my experience in this industry, I would say that if concerned people don't implement it out in the open, it'll just take a little more time before the opportunistic implement it behind-the-scenes. &lt;/p&gt;
 
 &lt;p&gt;That said, there may be a bigger problem, and one that may disqualify me from speaking on this matter.  In a very real way, I'm one of many who are fully enthralled with speculative narratives of mind-machine interfaces, planet wide algorithms, and artificial metaconsciousnesses. Honestly, to see them come to life would be thrilling.  Even if I expect the ending.&lt;/p&gt;</description>
-        <pubDate>Tue, 26 Jan 2021 00:00:00 -0800</pubDate>
+        <pubDate>Tue, 26 Jan 2021 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2021/01/post-speculative-fiction/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2021/01/post-speculative-fiction/</guid>
         
@@ -191,7 +251,7 @@ This relates strongly to the next point that my partner has realized.
 
 &lt;h3&gt;Conclusion: Keep On Going&lt;/h3&gt;
 &lt;p&gt;Between the downsides and the upsides we've learned about, we still think that this is an interesting and worthwhile experiment.  We're going to keep it up at least through the end of the year, continuing our story onward through California and into Arizona.  From there, we don't know where the road will lead, but stay tuned to find out.&lt;/p&gt;</description>
-        <pubDate>Fri, 22 Jan 2021 00:00:00 -0800</pubDate>
+        <pubDate>Fri, 22 Jan 2021 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2021/01/coop-trail-update/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2021/01/coop-trail-update/</guid>
         
@@ -345,7 +405,7 @@ This relates strongly to the next point that my partner has realized.
 
 &lt;p&gt;We're hoping to live this mini-retirement for at least a year and emerge on the other side with a renewed commitment to work in the world in a more sustainable way. I think this style of slow, low-energy travel will catch on as more people can live remotely full-time, and I hope our project to work through and connect the co-op economy will inspire others to reduce their extractive mindset as they go. &lt;/p&gt;
 </description>
-        <pubDate>Fri, 22 Jan 2021 00:00:00 -0800</pubDate>
+        <pubDate>Fri, 22 Jan 2021 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2021/01/ebike-solar-trailer/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2021/01/ebike-solar-trailer/</guid>
         
@@ -422,7 +482,7 @@ model.encoded_text = tokenize(model.text).cuda()
 &lt;p&gt;I'd love to see what things happen. If you reference this blog post on twitter or mastodon, then your work will be appended in the comments section.&lt;/p&gt;
 
 &lt;p&gt;And have fun hallucinating!&lt;/p&gt;</description>
-        <pubDate>Fri, 22 Jan 2021 00:00:00 -0800</pubDate>
+        <pubDate>Fri, 22 Jan 2021 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2021/01/story2hallucination/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2021/01/story2hallucination/</guid>
         
@@ -496,7 +556,7 @@ model.encoded_text = tokenize(model.text).cuda()
 
 &lt;p&gt;&lt;small&gt;*I think the word oneth is under-leveraged in the English language.  According to wiktionary it can be used like 201th (two-hundred-and-oneth), but other than that it isn't a real word.  &lt;/small&gt;&lt;/p&gt;
 </description>
-        <pubDate>Sun, 20 Dec 2020 00:00:00 -0800</pubDate>
+        <pubDate>Sun, 20 Dec 2020 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2020/12/oneth/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2020/12/oneth/</guid>
         
@@ -595,7 +655,7 @@ model.encoded_text = tokenize(model.text).cuda()
 &lt;p&gt;I think the smartest minds should stop arguing for how the balance should be moved momentarily right now, but instead, how the balance could be better monitored and controlled for societal aims.  I think we'd all be better off by outwardly adopting an approach that accepts both ideologies as no more than mechanisms to make decisions in a continuous space of plausible decision making systems.&lt;/p&gt;
 
 &lt;p&gt;*I recognize that throughout I am taking the stance of a good faith argument assuming that people want to actually find the system that results in the greatest good for the greatest number.  It's quite likely that many people aren't really making good faith arguments when they support capitalism because they really are saying anything to protect their own privilege. &lt;/p&gt;</description>
-        <pubDate>Sun, 20 Dec 2020 00:00:00 -0800</pubDate>
+        <pubDate>Sun, 20 Dec 2020 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2020/12/continuum-decision/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2020/12/continuum-decision/</guid>
         
@@ -657,7 +717,7 @@ model.encoded_text = tokenize(model.text).cuda()
 &lt;p&gt;After circuiting this ouroboros, I think we've arrived back at the real focal point. The point of &lt;em&gt;a.ttent.io/n&lt;/em&gt; is for the little feedback circuit that I don't even know I'm a part of to find itself. I hope that together we can write and rewrite &lt;em&gt;a.ttent.io/n&lt;/em&gt; until we can all tell that it doesn't end.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;PS: I want to thank my partner Claire for helping me edit this post. I'm glad she pays attention to my ramblings.&lt;/em&gt;&lt;/p&gt;</description>
-        <pubDate>Fri, 18 Dec 2020 00:00:00 -0800</pubDate>
+        <pubDate>Fri, 18 Dec 2020 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2020/12/analyzing-attention/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2020/12/analyzing-attention/</guid>
         
@@ -706,7 +766,7 @@ model.encoded_text = tokenize(model.text).cuda()
 &lt;p&gt;I already know it's going to be an amazing trip, but if we do it right, it can also be a resource to launch us and others into a new economy for the rest of our lives.&lt;/p&gt;
 
 </description>
-        <pubDate>Wed, 16 Dec 2020 00:00:00 -0800</pubDate>
+        <pubDate>Wed, 16 Dec 2020 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2020/12/coop-trail/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2020/12/coop-trail/</guid>
         
@@ -763,7 +823,7 @@ model.encoded_text = tokenize(model.text).cuda()
 &lt;p&gt;This post comes off as pretty prescriptive, but I just want to make sure it's clear that I don't think everybody should &lt;em&gt;have&lt;/em&gt; to do this.  I just think that being a Renaissance Person should be something that's available to everyone because it exemplifies the level of financial and social freedom that I think makes someone really free. Plus, I think a more well-rounded public with diverse experiences would really help us understand and accept each other better. &lt;/p&gt;
 
 &lt;p&gt;*I refer to this as a Renaissance Person instead of the traditional Renaissance Man because (as if it needs to be said), women and non-binary persons could be equally capable and interested to pursue lots of things too.&lt;/p&gt;</description>
-        <pubDate>Tue, 15 Dec 2020 00:00:00 -0800</pubDate>
+        <pubDate>Tue, 15 Dec 2020 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2020/12/renaissance/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2020/12/renaissance/</guid>
         
@@ -803,7 +863,7 @@ model.encoded_text = tokenize(model.text).cuda()
 &lt;p&gt;If we are all a part of this world perfecting the story of what it is to be human, why not shorten the feedback loop and let reader's mind contribute too?&lt;/p&gt;
 
 &lt;p&gt;&lt;small&gt;PS As I was writing this my partner read the story and came up with yet another great improvement so back to the drawing board...&lt;/small&gt;&lt;/p&gt;</description>
-        <pubDate>Sun, 13 Dec 2020 00:00:00 -0800</pubDate>
+        <pubDate>Sun, 13 Dec 2020 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2020/12/ongoing-attention/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2020/12/ongoing-attention/</guid>
         
@@ -851,7 +911,7 @@ If I can pursue self-simulation with the data I am collecting, should any entity
 &lt;p&gt;&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;
 &lt;p &gt;&lt;small&gt;&lt;strong&gt;*PS:&lt;/strong&gt; I actually suspect the most likely reason for why we would be simulated would not be to simulate the past. I think a better explanation would be to validate whether consciousness simulations in the future work well by testing them on data from the past.&lt;/small&gt;&lt;/p&gt;</description>
-        <pubDate>Sun, 13 Dec 2020 00:00:00 -0800</pubDate>
+        <pubDate>Sun, 13 Dec 2020 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2020/12/lisens/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2020/12/lisens/</guid>
         
@@ -877,7 +937,7 @@ If I can pursue self-simulation with the data I am collecting, should any entity
 &lt;p&gt;Also, the concept of the album seems pretty novel to me. I've written a whole series of works that seem like they come from a time and place in the Midwest folk/Americana scene, and I've tied them all together around a fictional set of events in Oklahoma. The story and music will be interwoven by Prof Bonkerfield in sort of an acadmeic talk meets online course. I plan to record it over this winter and while I do, I'll be recording a bit of the process on my Ampled page.  Should be an interesting experiment. &lt;/p&gt;
 
 &lt;p&gt;And of course, if I can figure out how, I could even work with Ampled's API to embed some of that content back on the viewfoil.&lt;/p&gt;</description>
-        <pubDate>Sat, 12 Dec 2020 00:00:00 -0800</pubDate>
+        <pubDate>Sat, 12 Dec 2020 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2020/12/prof-bonkerfield-joins-ampled/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2020/12/prof-bonkerfield-joins-ampled/</guid>
         
@@ -3249,7 +3309,7 @@ But for now, I’m going to tweet these thoughts out.
 &lt;/p&gt;
 &lt;img style=&quot;width:50%;&quot; src=&quot;/assets/images/2020/viewfoil_insta.png&quot;/&gt;
 </description>
-        <pubDate>Sun, 08 Mar 2020 00:00:00 -0800</pubDate>
+        <pubDate>Sun, 08 Mar 2020 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2020/03/viewfoil/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2020/03/viewfoil/</guid>
         
@@ -3502,7 +3562,7 @@ But for now, I’m going to tweet these thoughts out.
 
 
 </description>
-        <pubDate>Tue, 11 Feb 2020 00:00:00 -0800</pubDate>
+        <pubDate>Tue, 11 Feb 2020 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2020/02/wuhan-virus-model/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2020/02/wuhan-virus-model/</guid>
         
@@ -3762,7 +3822,7 @@ for subreddit_name in ['sciencefiction',
 &lt;/p&gt;
 
 </description>
-        <pubDate>Tue, 04 Feb 2020 00:00:00 -0800</pubDate>
+        <pubDate>Tue, 04 Feb 2020 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2020/02/reddit-bot-gpt2-bert/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2020/02/reddit-bot-gpt2-bert/</guid>
         
@@ -3955,7 +4015,7 @@ I'm a 10 year old, and I have never even heard of this novel.
 
 
 </description>
-        <pubDate>Tue, 04 Feb 2020 00:00:00 -0800</pubDate>
+        <pubDate>Tue, 04 Feb 2020 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2020/02/combining-gpt-2-and-bert/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2020/02/combining-gpt-2-and-bert/</guid>
         
@@ -4189,7 +4249,7 @@ def add_node(node_list, parent_name, parent_time, parent_size, parent_weight):
 &lt;h4&gt;More To Do&lt;/h4&gt;
 &lt;p&gt;There's still much more to do to make the identifield concept clearer.  You can fork the code to render identifields from either the &lt;a href=&quot;https://bl.ocks.org/stedn/5d187e873982e441e1f78d6d69af0030&quot;&gt;simple&lt;/a&gt; or the &lt;a href=&quot;https://bl.ocks.org/stedn/33fd840f81627ec0967448fbc832ed9f&quot;&gt;complex&lt;/a&gt; bl.ocks, and the code for generating the json objects is on &lt;a href=&quot;https://github.com/lots-of-things/random-bonkerfield-generator&quot;&gt;github&lt;/a&gt;. If someone out there likes this idea and would like to take it further, please feel free.  Let me know what you come up with. &lt;/p&gt;
 </description>
-        <pubDate>Tue, 28 Jan 2020 00:00:00 -0800</pubDate>
+        <pubDate>Tue, 28 Jan 2020 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2020/01/visualizing-the-bonkerfield/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2020/01/visualizing-the-bonkerfield/</guid>
         
@@ -4231,7 +4291,7 @@ def add_node(node_list, parent_name, parent_time, parent_size, parent_weight):
 &lt;/p&gt;
 
 </description>
-        <pubDate>Mon, 20 Jan 2020 00:00:00 -0800</pubDate>
+        <pubDate>Mon, 20 Jan 2020 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2020/01/qmb-prototype-demo/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2020/01/qmb-prototype-demo/</guid>
         
@@ -4276,7 +4336,7 @@ def add_node(node_list, parent_name, parent_time, parent_size, parent_weight):
 &lt;p&gt;
 	&lt;em&gt;Update: I forgot that part of the reason for showering was to actually get clean.  As it turns out, after a month of showering for 2 minutes I started to get a little gross.  So I'm moderating my usage, but no longer limiting to 2 minutes.  Oh well, worth it while it lasted.&lt;/em&gt;
 &lt;/p&gt;</description>
-        <pubDate>Sat, 07 Dec 2019 00:00:00 -0800</pubDate>
+        <pubDate>Sat, 07 Dec 2019 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2019/12/short-post-on-short-showers/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2019/12/short-post-on-short-showers/</guid>
         
@@ -5735,7 +5795,7 @@ df_scrolls = conn.execute_query(scroll_query)
         They made it through the rest of winter at least!
     &lt;/p&gt;
 &lt;img border=&quot;0&quot; src=&quot;https://3.bp.blogspot.com/-TnbQNHBe0DM/XH3v4ufb1vI/AAAAAAAADeQ/vmI1xoUeT-8lXOU_g3AfULei7NOyPQ_XQCKgBGAs/s800/20190302_082724.jpg&quot; title=&quot; &quot;/&gt;&lt;/p&gt;</description>
-        <pubDate>Mon, 04 Mar 2019 00:00:00 -0800</pubDate>
+        <pubDate>Mon, 04 Mar 2019 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2019/03/redwood-planter-cabinet/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2019/03/redwood-planter-cabinet/</guid>
         
@@ -5768,7 +5828,7 @@ df_scrolls = conn.execute_query(scroll_query)
 &lt;p&gt;
     I found &lt;a href=&quot;https://majeruslucie.eu/H-U-M-A-N-I-V-O-R-Y&quot;&gt;another artist&lt;/a&gt; who did &lt;a href=&quot;https://www.treehugger.com/sustainable-product-design/human-ivory-lucie-majerus.html&quot;&gt;something similar&lt;/a&gt; before. Hopefully people aren't too weirded out by the idea as it seems a hell of a lot more reasonable than poaching ivory or sending people into mines for stupid shiny shit.
 &lt;/p&gt;</description>
-        <pubDate>Mon, 21 Jan 2019 00:00:00 -0800</pubDate>
+        <pubDate>Mon, 21 Jan 2019 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2019/01/human-ivory-earrings/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2019/01/human-ivory-earrings/</guid>
         
@@ -5883,7 +5943,7 @@ Originally, the admins had been using totally static pages. I could have kept th
 &lt;p&gt;
     * The vulnerability is that someone could figure out how to pass a boolean that says that the payment is confirmed even though it isn't. Still, part of @rtifice's ethos is that if you can figure out how to hack our systems you actuallyf deserve whatever tiny spoils you get.
 &lt;/p&gt;</description>
-        <pubDate>Sun, 02 Dec 2018 00:00:00 -0800</pubDate>
+        <pubDate>Sun, 02 Dec 2018 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2018/12/rtifice-website-revamp/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2018/12/rtifice-website-revamp/</guid>
         
@@ -6347,7 +6407,7 @@ With everything clean, I reapplied gobs of grease and reinserted the bearings. T
 &lt;p&gt;
     Unfortunately, the owner hasn't yet let me sail it, but I'm hoping that these cool modifications along with a trial run or two with him this winter will have me sailing that beauty around the Bay by spring. Fingers crossed.
 &lt;/p&gt;</description>
-        <pubDate>Tue, 02 Jan 2018 00:00:00 -0800</pubDate>
+        <pubDate>Tue, 02 Jan 2018 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2018/01/sailboat-light-covers/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2018/01/sailboat-light-covers/</guid>
         
@@ -6500,7 +6560,7 @@ With everything clean, I reapplied gobs of grease and reinserted the bearings. T
         &lt;/p&gt;
 &lt;br/&gt;
 &lt;/p&gt;</description>
-        <pubDate>Sun, 19 Nov 2017 00:00:00 -0800</pubDate>
+        <pubDate>Sun, 19 Nov 2017 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2017/11/making-better-eyes/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2017/11/making-better-eyes/</guid>
         
@@ -6567,7 +6627,7 @@ With everything clean, I reapplied gobs of grease and reinserted the bearings. T
     &lt;/p&gt;
 &lt;br/&gt;
 </description>
-        <pubDate>Fri, 17 Nov 2017 00:00:00 -0800</pubDate>
+        <pubDate>Fri, 17 Nov 2017 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2017/11/hope-you-dance-alone/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2017/11/hope-you-dance-alone/</guid>
         
@@ -8079,7 +8139,7 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
 &lt;/p&gt;
 &lt;br/&gt;
 </description>
-        <pubDate>Sun, 07 Feb 2016 00:00:00 -0800</pubDate>
+        <pubDate>Sun, 07 Feb 2016 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2016/02/star-wars-themed-settlers-of-catan/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2016/02/star-wars-themed-settlers-of-catan/</guid>
         
@@ -8143,7 +8203,7 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
             &lt;/p&gt;
 &lt;br/&gt;
 &lt;/p&gt;&lt;/p&gt;</description>
-        <pubDate>Tue, 22 Dec 2015 00:00:00 -0800</pubDate>
+        <pubDate>Tue, 22 Dec 2015 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2015/12/the-plexirock-boot-tray-accident/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2015/12/the-plexirock-boot-tray-accident/</guid>
         
@@ -8193,7 +8253,7 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
             I hope not. I really want other people to pick this up and work on it so I've put it all up in a &lt;a href=&quot;https://github.com/lots-of-things/route-crime-calculator/blob/master/analysis/crime_maps_viz.ipynb&quot;&gt;GitHub project&lt;/a&gt; for someone else to run with. Anyone is free to modify it any way they want, and I'll push their mods to the original if they work. So please help and have fun.
         &lt;/p&gt;
 &lt;/p&gt;</description>
-        <pubDate>Mon, 14 Dec 2015 00:00:00 -0800</pubDate>
+        <pubDate>Mon, 14 Dec 2015 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2015/12/route-crime-calculator/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2015/12/route-crime-calculator/</guid>
         
@@ -8261,7 +8321,7 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
 &lt;div class=&quot;separator&quot; style=&quot;clear: both; text-align: center;&quot;&gt;&lt;iframe allowfullscreen=&quot;&quot; frameborder=&quot;0&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/jEU99vibnBg&quot; width=&quot;420&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
 &lt;br/&gt;
 </description>
-        <pubDate>Mon, 14 Dec 2015 00:00:00 -0800</pubDate>
+        <pubDate>Mon, 14 Dec 2015 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2015/12/arfi-robotic-dog/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2015/12/arfi-robotic-dog/</guid>
         
@@ -8381,7 +8441,7 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
 &lt;p&gt;
     I can't wait to make the other half and start using this. With a cheap chess set like this, I'll never be without the game again!
 &lt;/p&gt;</description>
-        <pubDate>Sun, 29 Nov 2015 00:00:00 -0800</pubDate>
+        <pubDate>Sun, 29 Nov 2015 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2015/11/paper-chess-set/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2015/11/paper-chess-set/</guid>
         
@@ -8598,7 +8658,7 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
     &lt;/p&gt;
 &lt;br/&gt;
 </description>
-        <pubDate>Sun, 08 Mar 2015 00:00:00 -0800</pubDate>
+        <pubDate>Sun, 08 Mar 2015 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2015/03/week-9-laser-activated-trip-wire/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2015/03/week-9-laser-activated-trip-wire/</guid>
         
@@ -8638,7 +8698,7 @@ function showDiv() { document.getElementById('welcomeDiv').style.display = &quot
 &lt;br/&gt;
 
 &lt;script src=&quot;https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js&quot;&gt;&lt;/script&gt;</description>
-        <pubDate>Sat, 07 Mar 2015 00:00:00 -0800</pubDate>
+        <pubDate>Sat, 07 Mar 2015 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2015/03/raser-week-8-arduino-trip-wire/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2015/03/raser-week-8-arduino-trip-wire/</guid>
         
@@ -8789,7 +8849,7 @@ end
 &lt;br /&gt;
 &lt;script src=&quot;https://latex.codecogs.com/latexit.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js&quot;&gt;&lt;/script&gt;</description>
-        <pubDate>Mon, 16 Feb 2015 00:00:00 -0800</pubDate>
+        <pubDate>Mon, 16 Feb 2015 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2015/02/procrastinating-with-time-optimization/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2015/02/procrastinating-with-time-optimization/</guid>
         
@@ -8847,7 +8907,7 @@ end
  &quot;/&gt;
 &lt;br/&gt;
 </description>
-        <pubDate>Fri, 06 Feb 2015 00:00:00 -0800</pubDate>
+        <pubDate>Fri, 06 Feb 2015 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2015/02/raser-week-5-review-game/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2015/02/raser-week-5-review-game/</guid>
         
@@ -8944,7 +9004,7 @@ end
 &lt;br/&gt;
 &lt;/p&gt;
 &lt;script src=&quot;https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js&quot;&gt;&lt;/script&gt;</description>
-        <pubDate>Sun, 01 Feb 2015 00:00:00 -0800</pubDate>
+        <pubDate>Sun, 01 Feb 2015 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2015/02/raser-week-5-arduino-led-passcode-pad/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2015/02/raser-week-5-arduino-led-passcode-pad/</guid>
         
@@ -9037,7 +9097,7 @@ end
 &lt;br/&gt;
 
 &lt;script src=&quot;https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js&quot;&gt;&lt;/script&gt;</description>
-        <pubDate>Sun, 25 Jan 2015 00:00:00 -0800</pubDate>
+        <pubDate>Sun, 25 Jan 2015 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2015/01/raser-week-4-arduino-led-passcode-pad/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2015/01/raser-week-4-arduino-led-passcode-pad/</guid>
         
@@ -9085,7 +9145,7 @@ end
     &lt;/p&gt;
 &lt;br/&gt;
 </description>
-        <pubDate>Thu, 22 Jan 2015 00:00:00 -0800</pubDate>
+        <pubDate>Thu, 22 Jan 2015 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2015/01/tweetnote-unfakeable-timestamp-notebook/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2015/01/tweetnote-unfakeable-timestamp-notebook/</guid>
         
@@ -9238,7 +9298,7 @@ end
     &lt;/p&gt;
 &lt;br/&gt;
 </description>
-        <pubDate>Wed, 21 Jan 2015 00:00:00 -0800</pubDate>
+        <pubDate>Wed, 21 Jan 2015 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2015/01/the-barbie-hadoop-cluster-stage-1/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2015/01/the-barbie-hadoop-cluster-stage-1/</guid>
         
@@ -9329,7 +9389,7 @@ end
     &lt;/p&gt;
 
 &lt;script src=&quot;https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js&quot;&gt;&lt;/script&gt;</description>
-        <pubDate>Sun, 18 Jan 2015 00:00:00 -0800</pubDate>
+        <pubDate>Sun, 18 Jan 2015 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2015/01/raser-week-3-arduino-led-blinker/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2015/01/raser-week-3-arduino-led-blinker/</guid>
         
@@ -9429,7 +9489,7 @@ end
     &lt;/p&gt;
 &lt;br/&gt;
 </description>
-        <pubDate>Mon, 12 Jan 2015 00:00:00 -0800</pubDate>
+        <pubDate>Mon, 12 Jan 2015 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2015/01/raser-week-2-led-dimmers-and-switches/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2015/01/raser-week-2-led-dimmers-and-switches/</guid>
         
@@ -9506,7 +9566,7 @@ end
     &lt;/p&gt;
 &lt;br/&gt;
 </description>
-        <pubDate>Sun, 11 Jan 2015 00:00:00 -0800</pubDate>
+        <pubDate>Sun, 11 Jan 2015 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2015/01/four-humours-collage/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2015/01/four-humours-collage/</guid>
         
@@ -9643,7 +9703,7 @@ end
     &lt;/p&gt;
 &lt;br/&gt;
 </description>
-        <pubDate>Thu, 08 Jan 2015 00:00:00 -0800</pubDate>
+        <pubDate>Thu, 08 Jan 2015 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2015/01/actsofsuperness-twitter-game/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2015/01/actsofsuperness-twitter-game/</guid>
         
@@ -9731,7 +9791,7 @@ end
     &lt;/p&gt;
 &lt;br/&gt;
 </description>
-        <pubDate>Tue, 06 Jan 2015 00:00:00 -0800</pubDate>
+        <pubDate>Tue, 06 Jan 2015 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2015/01/raser-week-1-led-circuits/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2015/01/raser-week-1-led-circuits/</guid>
         
@@ -9818,7 +9878,7 @@ end
     &lt;/p&gt;
 
 </description>
-        <pubDate>Mon, 05 Jan 2015 00:00:00 -0800</pubDate>
+        <pubDate>Mon, 05 Jan 2015 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2015/01/a-better-linkedin/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2015/01/a-better-linkedin/</guid>
         
@@ -9852,7 +9912,7 @@ end
     &lt;/p&gt;
 &lt;a href=&quot;http://3.bp.blogspot.com/-PSVVtIvd6Ek/VKb0ctyIVPI/AAAAAAAACKo/nc98n1nJIuY/s1600/3595809_b.png&quot; imageanchor=&quot;1&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;http://3.bp.blogspot.com/-PSVVtIvd6Ek/VKb0ctyIVPI/AAAAAAAACKo/nc98n1nJIuY/s1600/3595809_b.png&quot; style=&quot;display:none&quot;/&gt;&lt;/a&gt; &lt;br/&gt;
 </description>
-        <pubDate>Sat, 03 Jan 2015 00:00:00 -0800</pubDate>
+        <pubDate>Sat, 03 Jan 2015 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2015/01/wire-network/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2015/01/wire-network/</guid>
         
@@ -9874,7 +9934,7 @@ end
 &lt;p&gt;
         For closeups of the individual items that I stitched together, you can check &lt;a href=&quot;https://plus.google.com/photos/103585488893025173441/albums/6101303480819525617&quot;&gt;this photo album&lt;/a&gt; on Google+. &lt;img border=&quot;0&quot; src=&quot;http://4.bp.blogspot.com/-MUXg3Mc6wO8/VKrBNbktU0I/AAAAAAAACM4/GXUA-wYINEk/s1600/wallgraph_front.png&quot; style=&quot;display:none&quot;/&gt;&lt;br/&gt;
 &lt;/p&gt;</description>
-        <pubDate>Wed, 31 Dec 2014 00:00:00 -0800</pubDate>
+        <pubDate>Wed, 31 Dec 2014 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2014/12/graph-theory-of-wall-decor/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2014/12/graph-theory-of-wall-decor/</guid>
         
@@ -9911,7 +9971,7 @@ end
 &lt;li&gt;Week 13: Arduino security competition &lt;/li&gt;
 &lt;/ul&gt;&lt;br/&gt;
 </description>
-        <pubDate>Tue, 30 Dec 2014 00:00:00 -0800</pubDate>
+        <pubDate>Tue, 30 Dec 2014 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2014/12/raser-curriculum/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2014/12/raser-curriculum/</guid>
         
@@ -10212,7 +10272,7 @@ function regame() {
     document.getElementById(&quot;bet8&quot;).readOnly = &quot;&quot;;
 }
 &lt;/script&gt;</description>
-        <pubDate>Mon, 29 Dec 2014 00:00:00 -0800</pubDate>
+        <pubDate>Mon, 29 Dec 2014 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2014/12/quantum-gambling-game/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2014/12/quantum-gambling-game/</guid>
         
@@ -10250,7 +10310,7 @@ function regame() {
     &lt;/p&gt;
 &lt;br/&gt;
 </description>
-        <pubDate>Sun, 28 Dec 2014 00:00:00 -0800</pubDate>
+        <pubDate>Sun, 28 Dec 2014 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2014/12/pvc-easel/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2014/12/pvc-easel/</guid>
         
@@ -10265,7 +10325,7 @@ function regame() {
         <description>This is my first attempt at attaching a solar battery charger like &lt;a href=&quot;http://lifehacker.com/5752731/built-a-4-diy-solar-battery-charger&quot;&gt;this one&lt;/a&gt; to a flower pot.  The style of the pot isn't exactly what I was looking for.  I was hoping to have the top at an angle that faced the sun better, but my friend who made the pots couldn't get them to stay flat during baking.  The next edition will have a better pot and hopefully will work to charge cell phones as well. &lt;img border=&quot;0&quot; src=&quot;http://1.bp.blogspot.com/-0cAr7rofgBk/VJ9Aml-NqBI/AAAAAAAAA_Y/5fi1jvpwTxA/s1600/IMG_0154.JPG&quot; title=&quot; &quot;/&gt;
 &lt;br/&gt;
 </description>
-        <pubDate>Sat, 27 Dec 2014 00:00:00 -0800</pubDate>
+        <pubDate>Sat, 27 Dec 2014 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2014/12/solar-battery-charger-flower-pot-first/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2014/12/solar-battery-charger-flower-pot-first/</guid>
         
@@ -10307,7 +10367,7 @@ function regame() {
 &lt;p&gt;
     I'm really pleased with the result. Sewing is a new skill to me, but it's worth it to learn. &lt;br /&gt;
 &lt;/p&gt;</description>
-        <pubDate>Sat, 27 Dec 2014 00:00:00 -0800</pubDate>
+        <pubDate>Sat, 27 Dec 2014 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2014/12/mos-tool-pouch/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2014/12/mos-tool-pouch/</guid>
         
@@ -10323,7 +10383,7 @@ function regame() {
  This is what the old case looked like.  Big and clunky. &lt;img border=&quot;0&quot; src=&quot;http://1.bp.blogspot.com/-xHT7ZbYyI-Q/VJi-Wt0ki5I/AAAAAAAAA98/nwnBz_pJB84/s1600/computer%2Bcases%2Bsamsonite%2B001.JPG&quot; title=&quot; &quot;/&gt;
 &lt;br/&gt;
 </description>
-        <pubDate>Sat, 27 Dec 2014 00:00:00 -0800</pubDate>
+        <pubDate>Sat, 27 Dec 2014 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2014/12/modernizing-my-computer-case/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2014/12/modernizing-my-computer-case/</guid>
         
@@ -10400,7 +10460,7 @@ function regame() {
             Overall, the project took about a week. Now I'll just have to wait to try it out.
         &lt;/p&gt;
 &lt;/p&gt;</description>
-        <pubDate>Tue, 16 Dec 2014 00:00:00 -0800</pubDate>
+        <pubDate>Tue, 16 Dec 2014 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2014/12/introducing-daves-grill-it-all/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2014/12/introducing-daves-grill-it-all/</guid>
         
@@ -10431,7 +10491,7 @@ function regame() {
 &lt;p&gt;
     The approach was simple but still allowed me to improve greatly over the baseline benchmark, reducing the mean error from 1.5 to 0.75. You can check out the &lt;a href=&quot;https://github.com/lots-of-things/biker-predict&quot;&gt;biker-predict&lt;/a&gt; code on github.
 &lt;/p&gt;</description>
-        <pubDate>Mon, 08 Dec 2014 00:00:00 -0800</pubDate>
+        <pubDate>Mon, 08 Dec 2014 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2014/12/predicting-bike-share-usage/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2014/12/predicting-bike-share-usage/</guid>
         
@@ -10446,7 +10506,7 @@ function regame() {
         <description>&lt;div&gt;
 A while back, I wrote a little python code that takes in a word and spits out a list of anagram words.  It kind of takes the fun out of generating anagrams, but it puts the fun back in by letting you figure out how I made them.  Could you do it a better way?  You can look at my &lt;a href=&quot;https://github.com/lots-of-things/simple-anagrammer&quot;&gt; simple-anagrammer &lt;/a&gt; code on github.
 &lt;/div&gt;</description>
-        <pubDate>Mon, 08 Dec 2014 00:00:00 -0800</pubDate>
+        <pubDate>Mon, 08 Dec 2014 00:00:00 -0700</pubDate>
         <link>https://bonkerfield.org/2014/12/a-simple-anagrammer/</link>
         <guid isPermaLink="true">https://bonkerfield.org/2014/12/a-simple-anagrammer/</guid>
         
