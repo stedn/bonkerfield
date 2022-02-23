@@ -1,0 +1,59 @@
+---
+layout: post
+title: 'Building a website on Google Sheets'
+date: '2022-02-22'
+author: will stedden
+type: project
+description: 'why not?'
+tags:
+- web
+- code
+top:
+image: /assets/images/2022/google_sheet.png
+---
+
+<p>
+I haven't been writing on here lately as I've been very busy he;ping to build a <a href="https?//trailcoop.org">cooperative bicycle touring platform</a> that I'm helping to start.  But I thought I would write down a quick tutorial since I've basically built the whole database to run for free on top of Google Sheets.
+</p>
+
+<p>Now the only really good reason to do this is that (1) it is free and (2) it can be edited very easily by non-developers. And I already know that if this platform takes off there will need to be a lot of reworking to make it scalable.  But for now, this is working great and I just wanted to show how it's done.</p>
+
+<h4>How is that even possible?</h4>
+<p>If you're thinking running a whole website off of Google Sheets is impossible, you'd be right.  The website itself is built using Jekyll to serve a static website, which is hosted (for free of course) on Github Pages.  This has become a pretty standard way to host a free website for tech savvy (and less tech savvy) people in recent years.</p>
+
+<p>But the website I'm building doesn't want to just be a static site that we update by adding commits to a git repo!  Our site is designed to be a place to upload routes, cycling resources, and travel logs for people to find ways to bike tour in the local area around their home.  And we hope someday for people to be able to even add private resources, like property that can be used for camping and things like that.</p>
+
+<p>Typically if you want people to submit their own content to a website, you will have to build your own backend database.  But this means that as a developer I would need to build all the tooling for posting content to a DB. And importantly, most ways of doing this require some operating costs for storage and data transactions with the database.  </p>
+
+<p>So as a scrappy startup we decided we'd like to short cut all that. And based on a <a href="2020/05/timeline-streamgraph-google-sheet/">previous project</a> where I pulled some data from a Google Sheet, I thought, why not try hosting the content in an editable Google Sheet and running the whole site from there?</p>
+
+<p>What could go wrong?</p>
+
+<h4>It's all in the javascript</h4>
+<p>The entirety of this relies on a few trick of javascript.  Basically, all that needs to happen is for me to make the Google Sheet public so that anyone can view it.  Then in the frontend of the webpage, I just run a little bit of javascript that downloads the contents of the spreadsheet, scans through it, builds the appropriate html, and adds it to the webpage.</p>
+
+<pre>
+    fetch("{{ page.spreadsheet_url }}")
+    .then(res => res.text())
+    .then(text => {
+        meta_result = JSON.parse(text.substr(47).slice(0, -2))
+</pre>
+
+<p>That's the magic line right there.  I don't know exactly why that works, but I copied it from this <a href="https://stackoverflow.com/questions/68854198/did-google-sheets-stop-allowing-json-access">stack overflow</a> and nothing lit on fire.</p>
+
+<p>At this point, I have a data structure with each row and column. I access the <i>ith</i> row and <i>jth</i> column with the following.</p>
+
+<pre>meta_result.table.rows[i].c[j]</pre>
+
+<p>At this point it becomes very project specific.  For me, I just iterate through the rows and generate the custom HTML based on that content.  You can see how it works in all it's glory detail on the <a href="https://github.com/stedn/cooptrail/blob/04f50ddb6b3dc30cfa73aad229b8e42ec9158b3b/_layouts/hub.html#L66">Github repo</a> for the site, though at the moment it is very very messy.</p>
+
+<h4>So what about user input?</h4>
+
+<p>So we're now displaying data from a google sheet, but we still need to manually input that data into the spreadsheet.  This is great for us since we know how the sheet is set up, but it would totally not work for a random person who wants to submit material to our site.</p>
+
+<p>So to get around this we used another simple hack that I've applied to <a href="https://artificechicago.org">multiple</a> <a href="https://bonkerfield.org">previous</a> <a href="https://leftwardist.org">websites</a>, which is just making a custom form that submits to a Google Form.  I've covered how this works in a previous <a href="https://bonkerfield.org/2018/12/rtifice-website-revamp/">blog post</a> so I won't rehash it here.</p>
+
+<p>Now we haven't fully closed the loop by having our form submit directly to the sheet that hosts our content. We thought about it, but based on the amount of random spam that comes through your average form, we figured it'd be best to have a manual check process to copy and paste content over.  </p>
+
+<p>That said, I'm thinking about making a little script that copies from one spreadsheet to another.  All in all, I'm really happy with the system and am looking forward to launching the project and getting more people biking in their area.</p>
+
