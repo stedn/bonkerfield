@@ -5,8 +5,8 @@
     <description>just your standard information identity spacetime field</description>
     <link>https://bonkerfield.org</link>
     <atom:link href="https://bonkerfield.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 22 Apr 2022 15:45:09 -0700</pubDate>
-    <lastBuildDate>Fri, 22 Apr 2022 15:45:09 -0700</lastBuildDate>
+    <pubDate>Fri, 22 Apr 2022 17:14:41 -0700</pubDate>
+    <lastBuildDate>Fri, 22 Apr 2022 17:14:41 -0700</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -116,7 +116,7 @@ I haven't been writing on here lately as I've been very busy he;ping to build a 
 
 &lt;p&gt;So we're now displaying data from a google sheet, but we still need to manually input that data into the spreadsheet.  This is great for us since we know how the sheet is set up, but it would totally not work for a random person who wants to submit material to our site.&lt;/p&gt;
 
-&lt;p&gt;So to get around this we used another simple hack that I've applied to &lt;a href=&quot;https://artificechicago.org&quot;&gt;multiple&lt;/a&gt; &lt;a href=&quot;https://bonkerfield.org&quot;&gt;previous&lt;/a&gt; &lt;a href=&quot;https://leftwardist.org&quot;&gt;websites&lt;/a&gt;, which is just making a custom form that submits to a Google Form.  I've covered how this works in a previous &lt;a href=&quot;https://bonkerfield.org/2018/12/rtifice-website-revamp/&quot;&gt;blog post&lt;/a&gt; so I won't rehash it here.&lt;/p&gt;
+&lt;p&gt;So to get around this we used another simple hack that I've applied to &lt;a href=&quot;https://artificechicago.org&quot;&gt;multiple&lt;/a&gt; &lt;a href=&quot;https://bonkerfield.org&quot;&gt;previous&lt;/a&gt; &lt;a href=&quot;https://solarpunk.blue&quot;&gt;websites&lt;/a&gt;, which is just making a custom form that submits to a Google Form.  I've covered how this works in a previous &lt;a href=&quot;https://bonkerfield.org/2018/12/rtifice-website-revamp/&quot;&gt;blog post&lt;/a&gt; so I won't rehash it here.&lt;/p&gt;
 
 &lt;p&gt;Now we haven't fully closed the loop by having our form submit directly to the sheet that hosts our content. We thought about it, but based on the amount of random spam that comes through your average form, we figured it'd be best to have a manual check process to copy and paste content over.  &lt;/p&gt;
 
