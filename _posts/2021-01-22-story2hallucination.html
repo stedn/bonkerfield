@@ -14,7 +14,7 @@ image: /assets/images/2021/octo.gif
 ---
 
 
-<p>Late last year, I tried working on a method to use the text from my dynamically updating short story website, <a href="https://a.ttent.io/n">a.ttent.io/n</a>, to generate hallucinatory animations. Back then, I was working off of earlier <a href="http://proceedings.mlr.press/v48/reed16.pdf">methods</a> to do this sort of thing and wasn't having great results. But earlier this month OpenAI released a newer method called <a href="https://openai.com/blog/clip/">CLIP</a>, which really improved the text-to-image generation results that I've seen. </p>
+<p>Late last year, I tried working on a method to use the text from my dynamically updating short story website, <a href="https://bonkerfield.org/attention">a.ttent.io/n</a>, to generate hallucinatory animations. Back then, I was working off of earlier <a href="http://proceedings.mlr.press/v48/reed16.pdf">methods</a> to do this sort of thing and wasn't having great results. But earlier this month OpenAI released a newer method called <a href="https://openai.com/blog/clip/">CLIP</a>, which really improved the text-to-image generation results that I've seen. </p>
 
 <p>The focus of CLIP itself was originally for standalone image generation, and that seems to be what most people are doing with it.  However, working off a CLIP-based package called <a href="https://github.com/lucidrains/big-sleep">BigSleep</a>, I found a pretty cool way to turn paragraphs into quite interesting animations that seem to have at least some connection to the text. As an example, here is an exerpt from the beginning of Franz Kafka's <i>Metamorphosis</i> being used to generate the visuals. </p>
 
@@ -35,7 +35,7 @@ image: /assets/images/2021/octo.gif
 <p>Again there are places where the algorithm starts spitting out total noise, but overall, the parts that do connect smoothly are vivid and very pertinent.  I want to dive into the details over the next few weeks and figure out where the algorithm goes off the rails, but for now, I just built in a few safe-guards to "reset" it when things get too messy or it sticks on the same shape for too long.  You can view <a href="https://www.youtube.com/channel/UCjfbKpAq127UVuFeaepkvWg">my Youtube channel</a> to see more experiments.</p>
 
 <h4>a.ttent.io/n</h4>
-<p>But my real application was meant to be used on my own short stories. To optimize that, I fine-tuned the parameter selection manually to see if I could get it to produce more consistent video.  I used the first paragraph of <a href="https://a.ttent.io/n">a.ttent.io/n</a>, and after many rounds of trial and error, I started to get it to pump out artistic renditions of the real features that are mentioned. Take a look.</p>
+<p>But my real application was meant to be used on my own short stories. To optimize that, I fine-tuned the parameter selection manually to see if I could get it to produce more consistent video.  I used the first paragraph of <a href="https://bonkerfield.org/attention">a.ttent.io/n</a>, and after many rounds of trial and error, I started to get it to pump out artistic renditions of the real features that are mentioned. Take a look.</p>
 
 <iframe width="560" height="400" src="https://www.youtube.com/embed/9Y-UZquQDf0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
