@@ -5,8 +5,8 @@
     <description>just your standard information identity spacetime field</description>
     <link>https://bonkerfield.org</link>
     <atom:link href="https://bonkerfield.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 22 Apr 2022 18:45:53 -0700</pubDate>
-    <lastBuildDate>Fri, 22 Apr 2022 18:45:53 -0700</lastBuildDate>
+    <pubDate>Fri, 22 Apr 2022 19:03:14 -0700</pubDate>
+    <lastBuildDate>Fri, 22 Apr 2022 19:03:14 -0700</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -162,7 +162,7 @@ As much as I want to move toward equality using the discourse we have on hand, I
       <item>
         <image>https://bonkerfield.org/assets/images/2021/postpec_def.gif</image>
         <title>On the emergence of post-speculative fiction</title>
-        <description>&lt;p&gt;I just ran a work of &lt;a href=&quot;https://a.ttent.io/n&quot;&gt;speculative fiction&lt;/a&gt; through a piece of &lt;a href=&quot;https://github.com/lots-of-things/Story2Hallucination/&quot;&gt;artificial intelligence software&lt;/a&gt; that once would have been called speculative. I'm realizing that we very well might be reaching a new era of science fiction and art.&lt;/p&gt;
+        <description>&lt;p&gt;I just ran a work of &lt;a href=&quot;https://bonkerfield.org/attention&quot;&gt;speculative fiction&lt;/a&gt; through a piece of &lt;a href=&quot;https://github.com/lots-of-things/Story2Hallucination/&quot;&gt;artificial intelligence software&lt;/a&gt; that once would have been called speculative. I'm realizing that we very well might be reaching a new era of science fiction and art.&lt;/p&gt;
 
 &lt;p&gt;I'm wondering if we should call this era &lt;em&gt;post-speculative&lt;/em&gt;.&lt;/p&gt;
 
@@ -486,7 +486,7 @@ This relates strongly to the next point that my partner has realized.
       <item>
         <image>https://bonkerfield.org/assets/images/2021/octo.gif</image>
         <title>Story2Hallucination: converting stories to deep learning GAN hallucinated animations</title>
-        <description>&lt;p&gt;Late last year, I tried working on a method to use the text from my dynamically updating short story website, &lt;a href=&quot;https://a.ttent.io/n&quot;&gt;a.ttent.io/n&lt;/a&gt;, to generate hallucinatory animations. Back then, I was working off of earlier &lt;a href=&quot;http://proceedings.mlr.press/v48/reed16.pdf&quot;&gt;methods&lt;/a&gt; to do this sort of thing and wasn't having great results. But earlier this month OpenAI released a newer method called &lt;a href=&quot;https://openai.com/blog/clip/&quot;&gt;CLIP&lt;/a&gt;, which really improved the text-to-image generation results that I've seen. &lt;/p&gt;
+        <description>&lt;p&gt;Late last year, I tried working on a method to use the text from my dynamically updating short story website, &lt;a href=&quot;https://bonkerfield.org/attention&quot;&gt;a.ttent.io/n&lt;/a&gt;, to generate hallucinatory animations. Back then, I was working off of earlier &lt;a href=&quot;http://proceedings.mlr.press/v48/reed16.pdf&quot;&gt;methods&lt;/a&gt; to do this sort of thing and wasn't having great results. But earlier this month OpenAI released a newer method called &lt;a href=&quot;https://openai.com/blog/clip/&quot;&gt;CLIP&lt;/a&gt;, which really improved the text-to-image generation results that I've seen. &lt;/p&gt;
 
 &lt;p&gt;The focus of CLIP itself was originally for standalone image generation, and that seems to be what most people are doing with it.  However, working off a CLIP-based package called &lt;a href=&quot;https://github.com/lucidrains/big-sleep&quot;&gt;BigSleep&lt;/a&gt;, I found a pretty cool way to turn paragraphs into quite interesting animations that seem to have at least some connection to the text. As an example, here is an exerpt from the beginning of Franz Kafka's &lt;i&gt;Metamorphosis&lt;/i&gt; being used to generate the visuals. &lt;/p&gt;
 
@@ -507,7 +507,7 @@ This relates strongly to the next point that my partner has realized.
 &lt;p&gt;Again there are places where the algorithm starts spitting out total noise, but overall, the parts that do connect smoothly are vivid and very pertinent.  I want to dive into the details over the next few weeks and figure out where the algorithm goes off the rails, but for now, I just built in a few safe-guards to &quot;reset&quot; it when things get too messy or it sticks on the same shape for too long.  You can view &lt;a href=&quot;https://www.youtube.com/channel/UCjfbKpAq127UVuFeaepkvWg&quot;&gt;my Youtube channel&lt;/a&gt; to see more experiments.&lt;/p&gt;
 
 &lt;h4&gt;a.ttent.io/n&lt;/h4&gt;
-&lt;p&gt;But my real application was meant to be used on my own short stories. To optimize that, I fine-tuned the parameter selection manually to see if I could get it to produce more consistent video.  I used the first paragraph of &lt;a href=&quot;https://a.ttent.io/n&quot;&gt;a.ttent.io/n&lt;/a&gt;, and after many rounds of trial and error, I started to get it to pump out artistic renditions of the real features that are mentioned. Take a look.&lt;/p&gt;
+&lt;p&gt;But my real application was meant to be used on my own short stories. To optimize that, I fine-tuned the parameter selection manually to see if I could get it to produce more consistent video.  I used the first paragraph of &lt;a href=&quot;https://bonkerfield.org/attention&quot;&gt;a.ttent.io/n&lt;/a&gt;, and after many rounds of trial and error, I started to get it to pump out artistic renditions of the real features that are mentioned. Take a look.&lt;/p&gt;
 
 &lt;iframe width=&quot;560&quot; height=&quot;400&quot; src=&quot;https://www.youtube.com/embed/9Y-UZquQDf0&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
 
@@ -736,7 +736,7 @@ model.encoded_text = tokenize(model.text).cuda()
 
 &lt;h4&gt;What is a.ttent.io/n?&lt;/h4&gt;
 
-&lt;p&gt;While I've previously alluded to &lt;a href=&quot;https://a.ttent.io/n&quot;&gt;the story&lt;/a&gt; I've been writing, which has been in the works for &lt;a href=&quot;/2020/12/ongoing-attention&quot;&gt;more than 3 years&lt;/a&gt;, I've never directly covered what it's about on this site. It's a story, to be sure, but it's also meant to be an experiment. &lt;/p&gt;
+&lt;p&gt;While I've previously alluded to &lt;a href=&quot;https://https://bonkerfield.org/attention&quot;&gt;the story&lt;/a&gt; I've been writing, which has been in the works for &lt;a href=&quot;/2020/12/ongoing-attention&quot;&gt;more than 3 years&lt;/a&gt;, I've never directly covered what it's about on this site. It's a story, to be sure, but it's also meant to be an experiment. &lt;/p&gt;
 
 &lt;p&gt;Writing &lt;em&gt;attention&lt;/em&gt; was a way to discuss the concept of the human attention span while simultaneously consuming a silver of that attention from the reader. It's about this period of history we are living in where machines and minds consume and emit each other recursively, the omnipresent ouroboros of thoughts and algorithms.&lt;/p&gt;
 
@@ -768,7 +768,7 @@ model.encoded_text = tokenize(model.text).cuda()
 
 &lt;h5&gt;The second experiment&lt;/h5&gt;
 
-&lt;p&gt;After the rewrite, I still have many questions to answer, and  to answer them I need more experimental eyeballs. So I'm publicizing the project everywhere I can, the more reads I get, the more data I have to work with. This second experiment is ongoing. If you haven't read the story, you can still be a part of it by clicking &lt;a href=&quot;https://a.ttent.io/n&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;After the rewrite, I still have many questions to answer, and  to answer them I need more experimental eyeballs. So I'm publicizing the project everywhere I can, the more reads I get, the more data I have to work with. This second experiment is ongoing. If you haven't read the story, you can still be a part of it by clicking &lt;a href=&quot;https://bonkerfield.org/attention&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 
 &lt;h4&gt;So what is the point of &lt;em&gt;a.ttent.io/n&lt;/em&gt;?&lt;/h4&gt;
@@ -900,7 +900,7 @@ model.encoded_text = tokenize(model.text).cuda()
       <item>
         <image>https://bonkerfield.org</image>
         <title>The Ongoing Process of a.ttent.io/n</title>
-        <description>&lt;p&gt;I feel like my short story &lt;a href=&quot;https://a.ttent.io/n&quot;&gt;a.ttent.io/n&lt;/a&gt; will never be finished. But rather than fight that, I'm thinking perhaps I should embrace it as part of the core novelty of the medium I'm building.&lt;/p&gt;
+        <description>&lt;p&gt;I feel like my short story &lt;a href=&quot;https://bonkerfield.org/attention&quot;&gt;a.ttent.io/n&lt;/a&gt; will never be finished. But rather than fight that, I'm thinking perhaps I should embrace it as part of the core novelty of the medium I'm building.&lt;/p&gt;
 
 &lt;p&gt;If I recall correctly, I came up with the core conceit of the novel sometime before I started grad school in 2010. I sketched out the different story arcs, but I languished with the problem that the whole story was just &lt;strong&gt;too big&lt;/strong&gt;. Then in the fall of 2017, I was chatting with a friend at a writing group who mentioned that she had decided to change her writing of a longer piece to compress it down to a short story.  For some reason, this suddenly clicked in my brain and I realized that part of the point of a/ttent.io/n was that humans were no longer connecting with long ponderous tomes.  Suddenly the pieces all fell into place, and I wrote the story (styled as Attention at the time) in a few weeks in November. I showed it to a few friends, and played with small tweaks for almost a year.&lt;/p&gt;
 
@@ -3104,7 +3104,7 @@ Hit the &quot;create app&quot; button. Make note of the client ID and client sec
 &lt;/p&gt;
 &lt;img class=&quot;small_img&quot; src=&quot;/assets/images/2020/skylight_optical.jpg&quot;&gt;
 &lt;p&gt;
-    Over the past year, my &lt;a href=&quot;https://a.ttent.io/n&quot;&gt;attention&lt;/a&gt; was diverted to another project, but shelter-in-place has given me some free time to finish Chapters 5 and 6.  For context, I've posted &lt;a href=&quot;https://www.bonkerfield.org/2018/05/skylight-chapters-1-2/&quot;&gt;Chapters 1 &amp; 2&lt;/a&gt; and &lt;a href=&quot;https://www.bonkerfield.org/2018/06/skylight-chapters-3-4/&quot;&gt;Chapters 3 &amp; 4&lt;/a&gt; previously.
+    Over the past year, my &lt;a href=&quot;https://bonkerfield.org/attention&quot;&gt;attention&lt;/a&gt; was diverted to another project, but shelter-in-place has given me some free time to finish Chapters 5 and 6.  For context, I've posted &lt;a href=&quot;https://www.bonkerfield.org/2018/05/skylight-chapters-1-2/&quot;&gt;Chapters 1 &amp; 2&lt;/a&gt; and &lt;a href=&quot;https://www.bonkerfield.org/2018/06/skylight-chapters-3-4/&quot;&gt;Chapters 3 &amp; 4&lt;/a&gt; previously.
 &lt;/p&gt;
 &lt;p&gt;
     Hope you like it. I'll try to get 7 and 8 out a lot quicker.
@@ -3313,7 +3313,7 @@ But for now, I’m going to tweet these thoughts out.
 	Unfortunately, I believe that these are all bandaids, and that they aren't really capable of protecting us from the dangers that the online information exchange poses. I might be paranoid, but I see it playing out like other industries that have garnered massive power.
 &lt;/p&gt;
 &lt;p&gt;
-	People with power and the capacity to exploit our digital connectivity will do it right up to the edge of what is legal. Attempts to regulate will place undue power with established players who will jockey for control of politicians who will grant loopholes. Attempts to outpace the capacity for manipulation will end up exhausting more and more of our resources. Every advance that lets us hide ourselves better, will let a Russian hacker, troll, or &lt;a href=&quot;https://a.ttent.io/n&quot;&gt;quasi-sentient AI&lt;/a&gt; hide themselves better. To combat them, we will need ever more all-encompassing mechanisms of monitoring, which will be exploited by technologists for our control. Only the wealthy will be able to adequately fight back against increasing digital surveillance. They will then use their privileged privacy to circumvent legal grey areas.  And the cycle will continue.
+	People with power and the capacity to exploit our digital connectivity will do it right up to the edge of what is legal. Attempts to regulate will place undue power with established players who will jockey for control of politicians who will grant loopholes. Attempts to outpace the capacity for manipulation will end up exhausting more and more of our resources. Every advance that lets us hide ourselves better, will let a Russian hacker, troll, or &lt;a href=&quot;https://bonkerfield.org/attention&quot;&gt;quasi-sentient AI&lt;/a&gt; hide themselves better. To combat them, we will need ever more all-encompassing mechanisms of monitoring, which will be exploited by technologists for our control. Only the wealthy will be able to adequately fight back against increasing digital surveillance. They will then use their privileged privacy to circumvent legal grey areas.  And the cycle will continue.
 &lt;/p&gt;
 &lt;p&gt;
 	This is a depressing situation that hopefully won't happen, but there isn't really any great safeguard against it.  So if we are heading toward a dystopian world of privacy arms races and corporate surveillance, is there really anything I can do?
@@ -3917,7 +3917,7 @@ for subreddit_name in ['sciencefiction',
 &lt;p&gt;&lt;a href=&quot;https://openai.com/blog/better-language-models/#sample1&quot;&gt;read more&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;
-	When I saw what GPT-2 was capable of generating, I had chills. We are now very close to effectively simulating human creativity.  I find machine imitation of human communication fascinating; in fact, it's something I've explored in &lt;a href=&quot;https://a.ttent.io/n/&quot;&gt;my fiction writing&lt;/a&gt; previously. But since I've never worked on natural language generation or deep learning, I decided to look more closely at just what this machine could do.
+	When I saw what GPT-2 was capable of generating, I had chills. We are now very close to effectively simulating human creativity.  I find machine imitation of human communication fascinating; in fact, it's something I've explored in &lt;a href=&quot;https://bonkerfield.org/attention&quot;&gt;my fiction writing&lt;/a&gt; previously. But since I've never worked on natural language generation or deep learning, I decided to look more closely at just what this machine could do.
 &lt;/p&gt;
 
 
