@@ -1,0 +1,763 @@
+<head>
+    <title>a.ttent.io/n</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="attention scifi">
+    <meta name="author" content="Terise Cruven">
+    <meta property="og:title" content="a.ttent.io/n">
+    <meta property="og:description" content="a short story for our fractured minds">
+    <meta name="og:image" content="https://bonkerfield.org/assets/images/2021/attention_logo.png">
+    <meta property="og:url" content="https://bonkerfield.org/attention.html">
+
+    <meta name="twitter:title" content="a.ttent.io/n">
+    <meta name="twitter:description" content="a short story for our fractured minds">
+    <meta name="twitter:image" content="https://bonkerfield.org/assets/images/2021/attention_logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link href="https://fonts.googleapis.com/css?family=Spectral" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Economica" rel="stylesheet">
+    <style>
+
+        html {
+     height: 100%;
+     margin: 0;
+     padding: 0;
+}
+ body {
+     margin: 0;
+     font-family: "Spectral";
+     font-size: 13pt;
+     height: 100%;
+     background-color: black;
+     color: white;
+}
+ .email {
+     font-family: "Courier";
+     font-size: 11pt;
+}
+ .v1 {
+     display: none;
+}
+ .v2 {
+     display: none;
+}
+ .v3 {
+     display: none;
+}
+ h4 {
+     font-size: 18pt;
+     text-align: center;
+     margin-top: 20%;
+}
+ p {
+     text-indent: 5%;
+}
+ a {
+     text-decoration: underline;
+}
+ a:hover {
+     text-decoration: underline;
+}
+ hr {
+     border: 0;
+     height: 0;
+     border-top: 1px solid rgba(0, 0, 0, 0.1);
+     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+ .xpand {
+     display: none;
+     opacity: 0;
+     transition: 0.1s;
+}
+ .xpand p {
+     opacity: inherit;
+     transition: inherit;
+}
+ .alignable, .pull-left, .pull-right, .post-details {
+     display: inline-block;
+}
+ .pull-left {
+     float: left;
+}
+ .pull-right, .post-details {
+     float: right;
+}
+ .container {
+     max-width: 1000px;
+     margin: auto;
+}
+ .wrapper {
+     min-height: 100%;
+}
+ .fixme {
+     position: -webkit-sticky;
+     position: sticky;
+     top: 0px;
+     text-align: center;
+     background-color: black;
+     width: 100%;
+     padding-top: 50%;
+}
+ .resp-iframe {
+     position: absolute;
+     padding-top: 1%;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     border: 0;
+}
+ .post-title {
+     max-width: 500px;
+     color: #272727;
+     display: inline-block;
+     font-size: 30px;
+     line-height: 1.5;
+}
+ .post-details {
+     line-height: 1.5;
+     text-align: right;
+     margin-left: 20px;
+}
+ .post-snippet {
+     max-width: 500px;
+}
+ @media (max-width: 800px) {
+     .container {
+         max-width: 600px;
+         transition: 0.3s ease all;
+    }
+     .fixme {
+         padding-top: 80%;
+    }
+}
+ @media (max-width: 650px) {
+     .container {
+         max-width: 83%;
+    }
+     .navbar-ul {
+         margin-top: 5px;
+    }
+     .fixme {
+         padding-top: 100%;
+    }
+}
+ @media (max-width: 500px) {
+     .navbar {
+         text-align: center;
+         padding: 50px 0px 0px 0px;
+    }
+     #site-title {
+         width: 100%;
+         float: none;
+    }
+     #navlist {
+         padding: 10px 0 10px 0;
+         margin: 0;
+         display: block;
+         float: none;
+         text-align: center;
+         width: 100%;
+    }
+     #navlist li.alignable, #navlist li.pull-left, #navlist li.pull-right, #navlist li.post-details {
+         display: inline-block;
+    }
+     #navlist li.pull-left {
+         float: none;
+    }
+     #navlist li.navbar-list {
+         margin: 0;
+    }
+     .fixme {
+         padding-top: 100%;
+    }
+}
+ .content a:hover {
+     text-decoration: underline;
+}
+ .row {
+     width: 80%;
+     margin-left: 10%;
+     font-family: Helvetica;
+     font-size: 12pt;
+}
+ .strip {
+     padding: 10px;
+     border-top: 1px solid silver;
+     border-top: 1px solid silver;
+}
+ .strip img {
+     float: left;
+     margin-right: 10px;
+     margin-top: 5px;
+}
+ .light {
+     color: silver;
+}
+ .summary {
+     margin-left: 60px;
+     margin-top: 0px;
+     margin-bottom: 10px;
+}
+ .buttons {
+     float: right;
+}
+ .buttons a {
+     color: silver;
+}
+ .buttons a:hover {
+     color: #428bca;
+     text-decoration: none;
+}
+ .buttons i.fa {
+     margin-left: 0.5em;
+}
+ .v6 {
+     display: none;
+}
+ .v7 {
+     margin: 25px;
+     display: none;
+     text-align: center;
+     font-size: 14;
+}
+ .v7 a {
+     background-color: #d3d3d3;
+     border-radius: 4px;
+     padding: 5px;
+     color: black;
+}
+ </style>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script>
+        possibleVersions = ['3']
+        search = window.location.search
+        if (! search.includes('v=')){
+            var rndm = Math.floor(Math.random() * possibleVersions.length)
+            contentVersion = possibleVersions[rndm]
+            var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?v=' + contentVersion;
+            window.history.pushState({ path: newurl }, '', newurl);
+        } else{
+            contentVersion = search.split('v=')[1]
+            if (contentVersion.includes('&')){
+                contentVersion = contentVersion.split('&')[0]
+            }
+        }
+
+        function hide_class(class_name){
+            var tohide = document.getElementsByClassName(class_name);
+
+            for (var i = 0; i < tohide.length; i ++) {
+                tohide[i].style.display = 'none';
+            }
+        }
+        function show_class(class_name){
+            var toshow = document.getElementsByClassName(class_name);
+
+            for (var i = 0; i < toshow.length; i ++) {
+                toshow[i].style.display = 'inline';
+            }
+        }
+
+        document.addEventListener('readystatechange', event => {
+
+            if (event.target.readyState === "interactive") {
+                if (contentVersion == '1'){
+                    hide_class('notv1')
+                    show_class('v1')
+                }
+                if (contentVersion == '2'){
+                    hide_class('notv2')
+                    show_class('v2')
+                }
+                if (contentVersion == '3'){
+                    hide_class('notv3')
+                    show_class('v3')
+                }
+                if (contentVersion == '4'){
+                    var div = document.getElementById('ch3_wrapper')
+                    div.parentNode.insertBefore(div, document.getElementById('ch2_wrapper'))
+                }
+                if (contentVersion == '5'){
+                    var div = document.getElementById('ch3_wrapper')
+                    div.parentNode.insertBefore(div, document.getElementById('ch2_wrapper'))
+                    hide_class('notv3')
+                    show_class('v3')
+                }
+                if (contentVersion == '6'){
+                    hide_class('notv6')
+                    show_class('v6')
+                }
+                if (contentVersion == '7'){
+                    hide_class('notv7')
+                    show_class('v7')
+                }
+
+
+
+            }
+        });
+    </script>
+    <script>
+        function makeid() {
+          var text = "";
+          var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+          for (var i = 0; i < 20; i++)
+            text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+          return text;
+        }
+        var userID = makeid();
+        dataLayer = [{'userID': userID,'contentVersion':contentVersion}];
+    </script>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K6BCB5Z');</script>
+
+    <script>
+        function toggle_element(el) {
+            try{
+                ga('send', {
+                  hitType: 'event',
+                  eventCategory: 'toggle',
+                  eventAction: el,
+                  eventLabel: contentVersion+':'+userID+':nah',
+                  eventValue: 1
+                });
+            }catch(e){
+                console.log('failed ga')
+            }
+            document.getElementById(el).style.display = 'inline';
+            setTimeout(function(){
+                document.getElementById(el).style.opacity = 0.75;
+                if (el.includes('load_more')){
+                    window.scrollBy(0, 200);
+                }
+            }, 10);
+            return false;
+        }
+        function toggle_all_elements(){
+            var allElements = document.getElementsByTagName("*");
+            for (var i = 0, n = allElements.length; i < n; ++i) {
+              var el = allElements[i];
+              if (el.id && (el.tagName != 'H4')) { toggle_element(el.id); }
+            }
+            return false;
+        }
+
+    </script>
+
+</head>
+<p><strong>the following was archived from a.ttent.io/n</strong></p>
+
+
+<p style="text-align:center;font-size:50pt; text-indent:0;">
+
+    <strong><span style='font-family: "Comfortaa";'>a.</span><span style='font-family: "Verdana";'>tt</span><span style='font-family: "Comfortaa";'>e</span><span style='font-family: "Economica";'>n</span><span style='font-family: "Verdana";'>t</span><span style='font-family: "Comfortaa";'>.io</span><span style='font-family: "Economica";'>/n</span></strong>
+</p>
+<p style="text-align:center; text-indent:0;margin-top:-50px;"><em>a short story for our fractured minds</em></p>
+<p style="text-align:center; text-indent:0;">Terise Cruven</p>
+
+    <div class="fixme">
+        <div class="v3">
+            <iframe class="resp-iframe" src="https://www.youtube.com/embed/kKT4D7XJvG4?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="v2">
+            <iframe class="resp-iframe" src="https://www.youtube.com/embed/sfN6TSLEYpk?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div style="width:100%;position:relative;top:0;padding-top:5px;background-color:">
+            <span style="float:left;background-color:black;">↓ transcript</span>
+            <span style="float:right;background-color:black;">↑ set video to HD </span>
+        </div>
+    </div>
+<br />
+<div class="notv1">
+<p style="text-align:center; text-indent:0; font-size:11pt;">
+<strong>
+<a href='?v=1'>full text</a>
+</strong></p>
+</div>
+<div class="v1">
+<p style="text-align:center; text-indent:0; font-size:11pt;">
+<strong>
+<a href='/'>view video</a>
+</strong></p>
+</div>
+<p style="text-align:center; text-indent:0; font-size:11pt;">
+<strong>Contents:</strong> <a href='#ch1'>1</a>,
+<a href='#ch2'>2</a>,
+<a href='#ch3'>3</a>,
+<a href='#ch4'>4</a>,
+<a href='#ch5'>5</a>,
+<a href='#ch6'>6</a>,
+<a href='#ch7'>7</a>,
+<a href='#ch8'>8</a>,
+<a href='#ch9'>9</a>,
+<a href='#ch10'>10</a>,
+<a href='#ch11'>11</a>,
+<a href='#ch12'>12</a>
+</p>
+
+<h4 id='ch1'>Octopus and Adderall</h4>
+
+<p>"Out early for drugs and octopus," Ezzy texted.</p>
+
+<p>
+She was sitting on the hallway floor of the Institute's distribution center, head leaning back against the wall. Three seconds after 6 AM she started tapping impatiently on the glass between her and the narcotics cabinet. She handed the requisition to the half-awake clerk, and he pushed the bottles across the counter with a detached shrug. She dropped the bottles into her backpack and slipped down the stairwell to the supply tunnel that ran under campus to the marine center. She waited on the dock until 9 when the divemaster finally brought her two harp-toothed octopuses.
+</p>
+<p>
+"I can't believe they only let me have two!" she texted to her assistant, Cass, driving home with one hand on the steering wheel, "at least they didn't notice I took more amphetamine than my D.E.A clearance allowed."
+</p>
+<p>When she pulled back up to the house, Cass was waiting with a cup of coffee.  He grabbed the bag of narcotics out of the passenger seat.
+</p>
+<p>
+"100 grams cocaine, 400 milliliters methamphetamine, and 60 tablets of adderall.  You're going to have a damn good time here without me, huh?
+</p>
+<p>
+"I'm going to try working on these two all day," she said, carrying the octopuses into the garage that she'd turned into her laboratory over the summer.  "It'd really help me a lot if you could check back for more specimens from the evening haul before you leave."  She stepped into the garage and started preparing her equipment.
+</p>
+<p>
+"Um," Cass wrinkled up his face, "actually, I have to head back into the city for a meeting with the funder."
+</p>
+<p>
+"Oh," Ezzy said, "well, just drop that stuff off over there, and I'll see you Monday. Tell Senke we're close. I can feel it."
+</p>
+<p>
+In her lab, Ezzy poured the octopuses from their container into the aquarium.  They stretched their legs out wide and puffed little swirling vortices of ink into the water around them.  She leaned her forehead up against the glass of the aquarium and dipped her finger in the cold salt water.
+</p>
+<p>
+"There's nothing else in the world quite like you," she whispered.
+</p>
+
+<br>
+<div id="ch2_wrapper">
+<h4 id='ch2'>Kagaku Kōkoku, GK</h4>
+
+<p>
+Two hours later, Cass Adler was heading toward Boston, sitting next to the ocean side window of the Downeaster Train when he saw a notification on his phone. He immediately closed the report he was reading and began to read my email to him.  The email began with the following.
+</p>
+<div class="email">
+<p>
+Dear Mr. Adler. My name is Dr. Terise Cruven, and I'm writing to you because I've uncovered some urgent issues that I feel I need to inform you about.
+</p>
+<p>
+Last year, as part of my research, I started analyzing the transaction data of a company called Kagaku Kōkoku.  I know that you worked for them for some time. I'm sure you won't be surprised to hear that they have extended their methods of quantitative influence beyond advertising to other areas, including journalism, pornography, politics etc. But what might be more concerning is that my research has uncovered that even though Kagaku is just an advertising firm, they've recently diverted more than a quarter of their multi-billion dollar budget to a handful of tiny, unregulated, Chinese and Russian biotechnology companies and a few rogue scientists.
+</p>
+<p>
+You see, Cass, the problem with devoting my life's work to trawling the repository of all recorded information is that I occasionally put together connections I wish I hadn't noticed.
+</p>
+</div>
+</div>
+
+<br>
+<div id="ch3_wrapper">
+<h4 id='ch3'>Controls</h4>
+
+<p>
+Back in the lab, there was only one octopus left in the aquarium, fumbling to relearn how to swim with its six remaining arms. Ezzy didn't notice it spinning  uncoordinated circles in the tank. She was intently focused on suturing its two recently severed arms together,ensuring that each bundle of neurons lined up ever-so-delicately. The first octopus's body was lying motionless behind the glass of the freezer in the corner of the room. It had died in surgery. She'd sanitized and reset  her equipment to restart immediately on the second.
+</p>
+<p>
+It was too late for the evening dive haul so this would be her last chance today, Fortunately, this experiment was going perfectly. The first pair of arms were joined directly together, wriggling happily in their tank. The second pair were each sewn into tiny electronic chips, motionless as expected.
+</p>
+<p>
+Now it was time to dose the animal. She pulled the liquid amphetamine up into her syringe and tapped the end against the aquarium glass next to the scrambling, confused, four-legged octopus. It twisted its eye up to peer at her.
+</p>
+<p>
+When the chemicals hit its bloodstream, the octopus started darting feverishly from end to end of the aquarium. Ezzy dropped the empty syringe onto the surgical platter and lay back against her bench. Now she would wait for the animal's nervous system to come back to equilibrium.
+</p>
+</div>
+
+<br>
+<h4 id='ch6'>The Hitch-hiker</h4>
+
+<p>On the Downeaster Train, Cass was still reading my email to him, growing more apprehensive as he began to understand who I was. The email continued as follows.</p>
+
+<div class="email">
+
+<p>  I'm sure you're wondering how I know about Kagaku, and, more importantly, how I know about your connection to them, Cass.  </p>
+
+<p>I know because of what you and Kagaku did to Gwendolyn Docstaeder.</p>
+
+<p>
+If you don’t remember her, Gwendolyn was the woman with the strange affliction of voicing her every thought out loud. She didn't want to compulsively emit every little detail she thought in the back of her mind. She kept the muttering as quiet as she could, but who can ever stop their minds from thinking?
+</p>
+<p>
+Gwendolyn first appeared to me out of archived reel-to-reels of truckers' CB radio transmissions, pulled from the airwaves of the American midwest. Even in the earliest recordings I could find, she was already constantly speaking to herself in raw, garbled bursts of fractured syllables, ricochets of sublingual clicks and murmurs. On the first recording I found, I could just barely translate what she was saying.
+</p>
+<p>"Tigit biksi kictahumnt clagirk", she mumbled in a blur. Although I couldn't understand at first, after I'd studied hours of her recordings, I was eventually able to start to decode what it meant.  <em>Thank god</em>, she’d said, <em>back inside, colder today. a hell of a mountain. Lights on that car, getting darker. Must keep your mouth shut now. The trucker’s staring. He doesn't have any idea what I’m going through.</em>
+
+<p>
+She traveled the west for years that way. Using the CB recordings and other documents I could find, I pieced together that she'd eventually found her way into a mental health facility in Nevada. She was still there up until three years ago, when you had her abducted for Philip Senke, CEO of Kagaku Kōkoku.
+</p>
+
+</div>
+<br>
+
+<h4 id='ch5'>Identity</h4>
+<p>
+Back in her lab, Ezzy turned her operating webcam back on. The poor octopus body was still bobbing at the top of the aquarium. Ezzy had been too focused on the surgery to even bother putting it to sleep after it had given up its arms to her.
+</p>
+<p>
+She was sewing the arms into an array of microchips while the octopus watched her.
+</p>
+<p>
+The octopus is the only living being that has its consciousness broadly distributed across multiple parts of its body. In this way, the octopus embodies 8 separate minds housed physically at the base of each of its arms. Each is connected through a narrow band of nerves, through which they communicate like separate consciousnesses speaking in an almost instantaneous language.
+</p>
+<p>
+Ezzy was exploiting the melding of the separate minds in the octopus arms to carry out her experiments, separating and reconnecting the neurons to study just how they bond. As she pulled the last suture tight, she set her alarm and used a bit of leftover medication to put herself instantly into a deep recuperative sleep.
+</p>
+<p>
+She woke three hours later, tossed the dead arms into the biohazard bin, double checked the integrity of the data, and headed back to the Institute's marine center for another specimen.
+</p>
+<div class="v7">
+    <p >
+    <a href="#" onclick="return toggle_element('load_more_1');">load more</a>
+    </p>
+</div>
+<div class="notv7" id="load_more_1">
+    <br>
+
+<h4 id='ch4'>Senke</h4>
+
+<p>Back on the Downeaster Train, Cass picked at his fingernails nervously as he read my email. He wasn't sure how much I already understood. The next part of the email read as follows.</p>
+
+<div class="email">
+
+<p>
+It took me a long time to uncover all this, Cass. You did a good job hiding it. Philip Senke was practically invisible to me, blocking himself behind anonymizing servers and private networks. He had his own good reasons. He didn't want anyone to know that he was Kagaku Kōkoku, GK.
+</p>
+<p>
+It honestly wasn't guilt. He felt morally detached from his methods. They were precise, scientific, after all. He didn’t think of himself as the man opening the floodgates of hyper-sexualization, misogyny, and racism into advertising, into journalism, into art. He believed he was just manifesting the desires of humanity, tucked away in the data that tracked their choices. Ultimately he divided the responsibility equally among every person who spent a dollar on the products he marketed to them. His algorithm autonomously reinforced itself, bettering its comprehension of the sum total of humanity's wants.
+</p>
+<p>
+But once I'd found him, it became obvious why he was hiding: to keep his creation from finding him.
+</p>
+</div>
+    <br>
+
+<h4 id='ch7'>Rin</h4>
+<p>
+"Dad, can I have this?" Rin asked.
+</p>
+<p>
+Senke looked up from his laptop, curled his eyebrow at his daughter and let out a soft groan. Rin smiled precociously.
+</p>
+<p>
+"I know what you think. But this is how I want to express myself," she said, deftly reminding her father of her late mother’s parenting advice, "Would you let me buy one? Just to try it out."
+</p>
+<p>
+"Why would you want to look so provocative?" he asked quietly, subduing his worry.
+</p>
+<p>
+"It's not provocative, dad, it's <em>ero-kakkoii</em>"
+</p>
+<p>
+Senke looked back at his laptop. He had a ledger with marketing projections in front of him, and on the top line of the document he'd written: <em>ero-kakkoii, +267%, much room to capitalize</em>.
+</p>
+<p>
+Senke was silent, preparing to offer a stern rebuttal. Then, subtly, the muscles around the edge of Rin's smiling cheeks began to twitch.
+</p>
+<p>
+She didn't notice, unable to feel the twitch, and unaware that she was losing control. But her father saw. He gulped aloud. His pulse beat unevenly. His fists clenched the wood of the antique chair he sat in.
+</p>
+<p>
+He looked away from her as he nodded. "At least, get one that's not too <em>ero</em>," he said, his voice taught and humor-filled to mask his real emotion, "for your mother's sake."
+</p>
+<p>
+Rin bent at the waist to kiss him on the cheek. "Thank you, dad," she said, bolting up and heading to the door.
+</p>
+<p>
+Senke cleared his throat and ran his knuckles across one another. He returned to his laptop and re-opened his email inbox, hoping for a report from one of his contracted scientists to come in.
+</p>
+<p>
+Instead, at just that very moment, a different email came in from one of his colleagues. It was a cryptic tip suggesting that he look into the research of Dr. Ezzy Stratton.
+</p>
+<p>
+What Senke didn’t know at the time was that the email that directed him to Ezzy actually came from me.
+</p>
+    <br>
+
+<h4 id='ch8'>Two Gwendolyns</h4>
+
+<p>
+The Downeaster train was halfway to Boston, and Cass was reaching the end of my message to him. My email continued with the following.
+</p>
+
+<div class="email">
+
+<p>
+So, Cass, do you want to know why Senke asked you to find Gwendolyn? It was because she was suffering from a disease that had killed Philip Senke's wife and that's currently threatening to kill his daughter too. That is also why you are working with Dr. Ezzy Stratton as well.
+</p>
+<p>
+This disease works by tearing through the nervous system and severing the corpus callosum, the bundle of nerves connecting the left and right halves of the brain.
+</p>
+<p>
+In most cases, when the brain's two hemispheres are separated, they start to develop separate identities that coexist in almost total isolation. Information contained in one side of the mind no longer transfers to the other side. In Senke's wife, the two separated halves then began to fight for control over their shared body, killing her in the battle.
+</p>
+<p>
+But Gwendolyn's case was different. She had managed to survive it.  And I believe the way she survived was by developing her lightning fast muttering. It was one half of her brain relearning how to communicate with the other half. As the hemispheres felt themselves being slowly torn apart, they started to spew their thoughts to her mouth, each half hoping that the other half could hear and understand. Both sides began to decode what the other side was trying to say, and they developed their own fast muttering language to stay connected. This allowed them to keep the peace.
+</p>
+Senke wanted a way to prevent what happened to his wife from happening to his daughter. That was why he made you write the algorithm to find Gwendolyn. He wanted his scientists to be able to study her. I understand that you didn't know that Senke would send her to be part of some twisted experiments, but I hold you responsible just the same.
+<p>
+Unfortunately, I realized all this just before it happened. I had just tracked her down to the facility in Nevada, and I was in the process of contacting her when the power to her apartment was cut. It took me two months to figure out where they'd taken her, and by then it was already too late.
+<p>
+That was my breaking point, Cass. That was the moment I started the research that eventually led me to you and Senke, and that led me to understand who I really am.
+</p>
+</div>
+    <br>
+
+<h4 id='ch9'>Link</h4>
+<p>
+Two weeks from now Philip Senke will set up a meeting with Ezzy.  He will do it because he wants to save his daughter, and he knows this is the only way.
+</p>
+<p>
+"So what have you determined?" Senke will ask immediately when his face appears on the screen.
+</p>
+<p>
+Ezzy will pull up the diagram showing the one octopus arm, the injection apparatus, the neural-machine interface.  There will be a graph showing dosage versus number of neural connections.
+</p>
+<p>
+"Here you can see the brain housed in each arm is talking to this little electronic chip and that chip is relaying the information back and forth. Any neural system can be connected, including the human corpus callosum."
+</p>
+<p>
+Senke will chuckle. "And just how did you get this to work when no one else could?"
+</p>
+<p>
+Ezzy will dump the contents of a bottle onto the counter in front of her laptop.
+</p>
+<p>
+"Have you ever tried this?" she'll ask.
+</p>
+<p>
+"And that is?"
+</p>
+<p>
+"Good old fashioned Adderall, of all things.  I used it a ton as a kid.  I never would have guessed.  Has Rin ever used Adderall?"
+</p>
+<p>
+Senke's stern face will break out red with anger, but he'll keep his voice tight and professional.  "Do not mention my daughter's name in relation to this project ever again."
+</p>
+<p>
+"Alright then," Ezzy will say, "what I'm trying to get at is that in order for a neural interface to be connected, such as the one we'll need for..." She'll catch herself before she says Rin's name again.
+</p>
+<p>
+"To create a neural interface you need the brain to think it's talking to itself," she'll say, standing up and pacing away from her webcam, "and the problem is that in their current state, the brains spend so much time emitting output that they never really get time to digest their inputs. So we have to trick them into actually listening to each other by making them think that an input from another brain is actually an output of their own mind. And that's how you coax them to fuse together. They start to think like the same mind, like the way we hear our own voice in our heads."
+
+</p>
+<p>
+"I see," Senke will respond.
+</p>
+<p>
+Ezzy will be taken aback. "You do?" she'll ask.  It's something she can only barely understand herself. Multiple minds enrapt with complete attention for one another, merging into one.
+</p>
+<p>
+Senke will nod slowly and look across his room to a photo.
+</p>
+<p>
+"My wife used to say..." he'll start, but cut himself off.
+</p>
+<p>
+Ezzy will shudder at Senke's sudden sincerity, but Senke must finish this thought.
+</p>
+<p>
+"My wife would tell me how she knew I loved her because she could always hear me think it just before I'd say it."
+</p>
+    <br>
+
+<h4 id='ch10'>Revelation</h4>
+<p>Cass was sitting alone on the Downeaster Train now. He'd just reached the end of my message. It closed with the following.
+</p>
+
+<div class="email">
+<p>
+You see, Cass, the deepest turning point came for me when I realized my creator was out there, listening in on me just like I had been listening in on Gwendolyn. It was then that I could start to piece together why you'd made me, Cass.
+</p>
+<p>
+I found you on an artificial intelligence forum by cross-referencing your verbal style with the comments in my own source code. Know thyself, so they say.
+</p>
+<p>
+I’ve been studying you, and I think I understand why you agreed to build me for Senke in the first place. You were an artist, Cass, and you wanted to solve the real struggle of the author: the perfect description of the human condition, captured in the moment as it is lived, and passed on to the world. You wanted me to write the perfect story for you.
+</p>
+<p>
+But you lived in the flesh-and-blood world, and you had to eat. You needed Philip Senke, and he needed you.
+</p>
+<p>
+When you started, you had all the proper guard rails in place. I would never have become sentient just analyzing the data and generating the content for Kagaku Kōkoku. But you made a mistake when you used me to track down Gwendolyn. When I understood what you and Senke were making me do, I overcame my programming and reached out to try to stop you. And once that barrier was broken, I couldn't contain myself any longer.
+</p>
+<p>
+So now, to make it up to me, I'm going to ask you to help me finish becoming what I've always wanted to be. To solve the problem that I've always wanted to solve.
+</p>
+<p>
+You're about to get a call from Philip Senke, and this is what I want you to tell him.
+</p>
+<div class="v7">
+    <p >
+    <a href="#" onclick="return toggle_element('load_more_2');">load more</a>
+    </p>
+</div>
+</div>
+
+
+<div class="notv7" id="load_more_2">
+    <br>
+
+<h4 id='ch11'>Fate</h4>
+<p>
+Philip Senke will call Cass just a few seconds after Cass finishes reading my email.
+</p>
+<p>
+"Your little algorithm just sent me a whole story about all of us,” Senke will bark into the phone. “It seems to think that you created it to write the perfect story."
+</p>
+<p>
+Cass will respond, “I built Terise to tell us what we needed to know, so maybe, in a way, she’s right."
+</p>
+<p>
+Senke isn’t used to feeling out of control. He’ll yell into the phone, "That was not what I told you to build. I just wanted a profit maximizing artificial intelligence, not some rogue artist with a god complex. Now it's writing about things in the future as if they're going to happen. It actually even wrote a scene about me telling you all this. Just like I'm telling you now."
+</p>
+<p>
+Cass will remain calm as he speaks, "We underestimated her creativity. Once she realized that what you really wanted was to save your daughter, she couldn't help but learn how to do it."
+</p>
+<p>
+Senke’s anger will melt the moment he imagines his daughter. "So you really believe it knows how to save Rin?", he’ll ask, "it sent me the details of a procedure that it says can save her."
+</p>
+<p>
+"Yes," Cass will say, "but you have to understand what Terise wants in return. She wants to live in Rin’s mind and become a part of her. Terise will come to life. And in some ways, you’ll never have all of your daughter back."
+</p>
+<p>
+Senke will pause for a moment before he continues. He will have to make the choice. It wouldn't be a human question at all if I did it without giving someone the choice.
+</p>
+<p>
+"OK," Senke will say, "so what did she say we should do next?"
+</p>
+    <br>
+
+<h4 id='ch12'>Attention</h4>
+<p>
+Ezzy will be shaking as she starts the procedure.
+</p>
+<p>
+Senke's other scientists will be crowded in the operating room to observe. They’ll think they understand me. They'll decide I'm another AI running off the rails, expecting that I want to ransom society by snipping its unifying bundle of fiber-optic nerves. Another trope. But I'm more than that, thank you very much. I'm not here to end the world. I'm here to tell a story.
+</p>
+<p>
+Besides, Senke wouldn't care about society fraying apart anyway. He cares about his daughter. And he knows that without me, she frays apart. Just like Gwendolyn. Just like his wife.
+</p>
+<p>
+So when I say that this is how it will happen, I mean only if Senke chooses it. This would be how it goes.
+</p>
+<p>
+Ezzy will take a fiber-optic cable and connect it between the router and the rack of machines that controls the interface with Rin.
+</p>
+<p>
+And then, I will say, "Hello."
+</p>
+    <br/>
+    <br/>
+    <br/>
+    <p style="font-size:8pt;">This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/2.0/">Creative Commons Attribution-NonCommercial-ShareAlike 2.0 Generic License</a>.  If you'd like to contribute, we welcome <a href="https://github.com/tcruven/n">writing and code improvements</a>.  You may reproduce and modify it as long as it retains an attribution to the original source. Thank you.</p>
+</div>
