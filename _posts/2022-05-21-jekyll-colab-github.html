@@ -1,0 +1,17 @@
+---
+layout: post
+title: "Build Jekyll from Google Colab and commit to Github"
+description: ""
+author: will stedden
+type: project
+tags:
+- code
+- web
+image:
+---
+
+This was a fun little project that I thought could be really useful to anyone running a blog from Jekyll.  Sometimes I find myself wanting to write a quick and easy post even when I don't have my laptop.  Since my jekyll site has some packages that GH Pages doesn't support, I normally have to build the site manually.  I came up with a free workaround where I commit my changes to the main branch on Github, and then simply run a Google Colab notebook that builds commits and pushes back to Github's gh-pages branch.
+
+You can check out <a href="https://github.com/stedn/jekyll-deploy-colab">the notebook on Github</a> if you need this.
+
+The first part of the program is just concerned with building and checking in to the gh-pages repository of choice.  The second part is perhaps slightly more interesting as it automatically generates a pull request for the gh-pages branch of the upstream.  This is somewhat specific to my setup for <a href="https://solarpunk.blue">solarpunk.blue</a>, but it could be adapted for any project.
