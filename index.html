@@ -52,7 +52,6 @@ pagination:
 
 #content-desktop {display: none;}
 #content-mobile {display: block;}
-
 }
 
 </style>
@@ -70,7 +69,7 @@ pagination:
 
 
   </div>
-  <div class="container" id="content-desktop">
+<!--   <div class="container" id="content-desktop">
     <div class="grid-xlarge box_A">
       <h2>Projects</h2>
       <div class="posts__container" style="width:85vw;overflow-x:hidden;overflow-y:auto;" itemscope itemtype="http://schema.org/Blog" data-columns>
@@ -98,20 +97,38 @@ pagination:
         <a href="/essays"><h2 >All Essays</h2></a>
       </div>
     </div>
-  </div>
+  </div> -->
 
+
+  <div id="content-desktop">
+    <div class="grid-xlarge">
+      <div itemscope itemtype="http://schema.org/Blog" data-columns>
+        {% for post in paginator.posts %}
+
+
+         {% include post-card-essay.html %}
+
+        {% endfor %}
+      </div>
+      <div class="posts__pagination">
+        <h3 class="posts__next"><a href="/fiction">Fiction</a> | <a href="/projects">Projects</a> | <a href="/essays">Essays</a></h3>
+      </div>
+    </div>
+
+  </div>
 
   <div id="content-mobile">
     <div class="grid-xlarge">
-      <div class="posts__container" style="width:85vw;overflow-x:hidden;" itemscope itemtype="http://schema.org/Blog" data-columns>
+      <div itemscope itemtype="http://schema.org/Blog" data-columns>
         {% for post in paginator.posts %}
+
 
          {% include post-card.html %}
 
         {% endfor %}
       </div>
       <div class="posts__pagination">
-        <h2 class="posts__next"><a href="/projects">More Projects</a> | <a href="/essays">More Essays</a></a></h2>
+        <h3 class="posts__next"><a href="/fiction">Fiction</a> | <a href="/projects">Projects</a> | <a href="/essays">Essays</a></h3>
       </div>
     </div>
 

@@ -1,15 +1,15 @@
 <article style="border:none; border-bottom: 1px solid rgb(0,0,0,0.1);" class="posts__post single_col"  itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
   <a class="posts__link" href="{{ post.url | prepend: site.baseurl }}" itemprop="url">
-    <div style="width:30%;display:inline-block;">
+    <div style="width:25%;display:inline-block;">
         {% if post.image %}
-          <img style="max-height:300px;overflow-y:hidden;" src="{{ post.image }}" alt="{{ post.title }}" itemprop="image"/>
+          <img style="max-height:150px;overflow-y:hidden;float:right;margin:40px;" src="{{ post.image }}" alt="{{ post.title }}" itemprop="image"/>
         {% else %}
-          <img style="max-height:200px;overflow-y:hidden;float:right;" src="/assets/images/main/viewfoil.png" alt="{{ post.title }}" itemprop="image"/>
+          <img style="max-height:150px;overflow-y:hidden;float:right;margin:40px;" src="/assets/images/main/viewfoil.png" alt="{{ post.title }}" itemprop="image"/>
         {% endif %}
 
     </div>
-    <div style="width:70%;display:inline-block;">
-      <p style="margin:10px;"><strong >{{ post.title }}</strong> — <span ><em>{{ post.content | strip_html | truncatewords: 90, "" }} ...</em></span></p>
+    <div style="width:75%;display:inline-block;">
+      <p style="margin:20px;"><strong >{{ post.title }}</strong> — <span ><em>{{ post.content | strip_html | truncatewords: 90, "" }} ...</em></span></p>
     </div>
   </a>
 </article>

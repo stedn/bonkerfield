@@ -1,0 +1,33 @@
+---
+layout: default
+---
+<style>
+
+</style>
+
+<!-- The main content area -->
+<a style="display:none;" class="h-card" rel="me" href="https://www.bonkerfield.org/">Will Stedden</a>
+<div class="posts">
+  <div class="post__header">
+    <div class="grid-small">
+      <h2 itemprop="name headline">fiction</h2>
+      <p class="post__description p-summary"></p>
+
+    </div>
+
+
+  </div>
+  <div class="container">
+    <div itemscope itemtype="http://schema.org/Blog" data-columns>
+        {% for post in site.posts %}
+          {% if post.type == 'fiction' %}
+            {% include post-card-essay.html %}
+          {% endif %}
+        {% endfor %}
+      </div>
+
+  </div>
+
+
+  <!-- {% include pagination.html %} -->
+</div>

@@ -1,0 +1,33 @@
+---
+layout: nondefault
+---
+
+
+
+
+<article class="post h-entry" itemscope itemtype="https://schema.org/BlogPosting" id="main" role="article" aria-label="Content">
+
+  {% if page.title != "" %}
+    <h1 style="padding-top:100px;" class="title post-title p-name" itemprop="name headline">
+      {{ page.title }}
+    </h1>
+  {% endif %}
+  {% if page.subtitle != "" %}
+    <h6 class="subtitle" itemprop="subtitle">
+      {{ page.subtitle }}
+    </h6>
+  {% endif %}
+
+  <div class="post-content e-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+  <div class="post-meta">
+    {% if page.author %}
+      <div itemprop="author">{{ page.author }}</div>
+    {% endif %}
+    <time class="post-date dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%B %-d, %Y" }}</time>
+  </div>
+
+
+</article>

@@ -7,20 +7,15 @@ name: will stedden
 title: bonkerfield
 description: just your standard information identity spacetime field
 url: https://bonkerfield.org
-twitter_username: bonkerfield
 social:
-  - name: twitter
-    url: https://twitter.com/bonkerfield
+  - name: mastodon
+    url: https://fosstodon.org/@bonkerfield
   - name: linkedin
     url: https://www.linkedin.com/in/willstedden
   - name: github
     url: https://github.com/stedn
-  - name: codepen
-    url: https://codepen.io/stedn/
   - name: reddit-alien
     url: https://www.reddit.com/user/bonkerfield
-  - name: mastodon
-    url: https://fosstodon.org/@bonkerfield
 
 # Contact settings
 contact_img: /assets/images/2020/big_bonkerfield.png
@@ -41,7 +36,7 @@ author:
 pagination:
   enabled: true
   debug: false
-  per_page: 30
+  per_page: 10
   permalink: '/page/:num/'
   title: ':title'
   limit: 0
