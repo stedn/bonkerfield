@@ -11,12 +11,13 @@ layout: default
   <div class="post__header">
     <div class="grid-small">
       <h2 itemprop="name headline">essays</h2>
-      <p class="post__description p-summary">the word essay comes from the french for "to try," and I do try, really I do</p>
+      <p class="post__description p-summary">commentary focused on economic democracy and post-speculative fiction</p>
 
     </div>
 
 
   </div>
+<div id="content-desktop">
   <div class="container">
     <div itemscope itemtype="http://schema.org/Blog" data-columns>
         {% for post in site.posts %}
@@ -27,7 +28,20 @@ layout: default
       </div>
 
   </div>
+</div>
 
+<div id="content-mobile">
+  <div class="container">
+    <div itemscope itemtype="http://schema.org/Blog" data-columns>
+        {% for post in site.posts %}
+          {% if post.type == 'essay' %}
+            {% include post-card.html %}
+          {% endif %}
+        {% endfor %}
+      </div>
+
+  </div>
+</div>
 
   <!-- {% include pagination.html %} -->
 </div>
