@@ -1,7 +1,6 @@
 ---
 layout: essay
 title: "What separates utopia and dystopia?"
-author: solarpunk.blue
 type: essay
 tags:
 - philosophy

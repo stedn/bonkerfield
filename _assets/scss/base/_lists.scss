@@ -27,7 +27,7 @@ ol {
 
             &:before {
                 position: absolute;
-                left: 1em;
+                left: -1em;
             }
 
             &:not(:last-child) {
