@@ -1,6 +1,6 @@
 //----------------------------------------------
 // Post
-//---------------------------------------------- 
+//----------------------------------------------
 .post {
 
     // .amp-template & {
@@ -142,7 +142,7 @@
 
 //----------------------------------------------
 // Jekyll
-//---------------------------------------------- 
+//----------------------------------------------
 #markdown {
     display: flex;
     flex-direction: column;
@@ -242,9 +242,9 @@
     }
 
     a {
-        color: $color-black;
-        border-bottom: 0.25px solid $color-grey;
-        box-shadow: inset 0 -3px 0 $color-grey;
+        color: $color-lightgrey;
+        border-bottom: 0.25px solid $color-lightgrey;
+        box-shadow: inset 0 -3px 0 $color-lightgrey;
     }
 
     hr {
