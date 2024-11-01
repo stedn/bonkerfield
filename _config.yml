@@ -1,12 +1,12 @@
 # Site/SEO settings
-email: will@bonkerfield.org
+email: willstedden@gmail.com
 baseurl: ""
 permalink: /:year/:month/:title/
 
 name: will stedden
-title: bonkerfield
+title: opus.stedden
 description: just your standard information identity spacetime field
-url: https://bonkerfield.org
+url: https://opus.stedden.org
 social:
   - name: mastodon
     url: https://sigmoid.social/@bonkerfield

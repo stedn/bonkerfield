@@ -15,10 +15,10 @@ layout: default
                 {% endif %}
                 <p class="post__description p-summary">{{ page.description }}</p>
                 <a class="u-url" style="display:none;" href="{{ page.url | absolute_url }}"></a>
-                
+
             </div>
         </div>
-        
+
         <div class="post__content section-padding">
             <div class="grid">
                 <div class="e-content" id="markdown" itemprop="articleBody">
@@ -26,17 +26,7 @@ layout: default
                 </div>
             </div>
         </div>
-        <div class="section-padding--none">
-            <div class="grid">
-                <hr class="sep" />
-            </div>
-        </div>
-        <div class="section-padding">
-            <div class="grid-small">
-                {% include share.html %}
-            </div>
-        </div>
-        
+
     </article>
 </div>
 <!-- Links to Previous/Next posts -->
