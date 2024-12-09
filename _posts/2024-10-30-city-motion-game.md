@@ -7,10 +7,8 @@ tags:
 - games
 - urban planning
 - sustainability
-image: assets/images/2024/PXL_20241027_165020295.jpg
+image: assets/images/2024/city_motion_board.jpg
 ---
-
-_Update: The game was originally called Walkable, but was updated to the title CITY MOTION based on feedback from game testers. It has been updated below._
 
 I don't think I've ever worked on a project longer than the board game I've finally finished.  The idea was born while I was doing chores on a farm in the New Mexico desert, and now three painstaking years and more than 100 test games later, I'm extremely proud of all the work I've put into it. [And now, I'm ready to share it with the world.](https://kickstarter.com/projects/solarpunktravel/walkable)
 
@@ -20,7 +18,7 @@ I'm hoping that this game will delight the overlapping Venn diagram of board gam
 
 At its core, CITY MOTION is a board game designed for 2-9 players, where each turn players earn points by visiting various destinations on the board. The twist? As the game progresses it gets harder to get everywhere in time by car so players must also _invest_ their time in improving the existing urban environment around them.
 
-<img class="small_img" title="Walkable Board" src="/assets/images/2024/PXL_20241027_165020295.jpg" alt="A game board with small city tiles on top of a gridded city board. In the bottom left there is an upside down board piece with the logo and a futuristic urban city with tram on it.">
+<img class="small_img" title="Walkable Board" src="/assets/images/2024/city_motion_board.jpg" alt="A game board with small city tiles on top of a gridded city board. In the bottom left there is an upside down board piece with the logo and a futuristic urban city with tram on it.">
 
 The game begins with a modular board representing a city on the grid. Each player starts by adding their home to the board-oldest first because that's how real estate works naturally. On each turn, players can spend time to move their character to different locations to earn points or spend time improving the city by advocating for initiatives. Players advocate for adding bike lanes or public transit, increasing density, removing parking and a host of other options.  However, they can't automatically pass initiatives on their own, and the odds of one passing get higher if they team up.
 
