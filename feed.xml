@@ -5,16 +5,14 @@
     <description>just your standard information identity spacetime field</description>
     <link>https://opus.stedden.org</link>
     <atom:link href="https://opus.stedden.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 19 Nov 2024 11:13:41 -0600</pubDate>
-    <lastBuildDate>Tue, 19 Nov 2024 11:13:41 -0600</lastBuildDate>
+    <pubDate>Mon, 09 Dec 2024 00:01:36 -0600</pubDate>
+    <lastBuildDate>Mon, 09 Dec 2024 00:01:36 -0600</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
-        <image>https://opus.stedden.orgassets/images/2024/PXL_20241027_165020295.jpg</image>
+        <image>https://opus.stedden.orgassets/images/2024/city_motion_board.jpg</image>
         <title>CITY MOTION: Transforming Cities One Game at a Time</title>
-        <description>&lt;p&gt;&lt;em&gt;Update: The game was originally called Walkable, but was updated to the title CITY MOTION based on feedback from game testers. It has been updated below.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;I don’t think I’ve ever worked on a project longer than the board game I’ve finally finished.  The idea was born while I was doing chores on a farm in the New Mexico desert, and now three painstaking years and more than 100 test games later, I’m extremely proud of all the work I’ve put into it. &lt;a href=&quot;https://kickstarter.com/projects/solarpunktravel/walkable&quot;&gt;And now, I’m ready to share it with the world.&lt;/a&gt;&lt;/p&gt;
+        <description>&lt;p&gt;I don’t think I’ve ever worked on a project longer than the board game I’ve finally finished.  The idea was born while I was doing chores on a farm in the New Mexico desert, and now three painstaking years and more than 100 test games later, I’m extremely proud of all the work I’ve put into it. &lt;a href=&quot;https://kickstarter.com/projects/solarpunktravel/walkable&quot;&gt;And now, I’m ready to share it with the world.&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;I’m hoping that this game will delight the overlapping Venn diagram of board game / transit nerds that I know and love, and I hope that it’ll also work as an advocacy tool to help non-urbanists start to think about how their cities can work a little better for human life.&lt;/p&gt;
 
@@ -22,7 +20,7 @@
 
 &lt;p&gt;At its core, CITY MOTION is a board game designed for 2-9 players, where each turn players earn points by visiting various destinations on the board. The twist? As the game progresses it gets harder to get everywhere in time by car so players must also &lt;em&gt;invest&lt;/em&gt; their time in improving the existing urban environment around them.&lt;/p&gt;
 
-&lt;p&gt;&lt;img class=&quot;small_img&quot; title=&quot;Walkable Board&quot; src=&quot;/assets/images/2024/PXL_20241027_165020295.jpg&quot; alt=&quot;A game board with small city tiles on top of a gridded city board. In the bottom left there is an upside down board piece with the logo and a futuristic urban city with tram on it.&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;small_img&quot; title=&quot;Walkable Board&quot; src=&quot;/assets/images/2024/city_motion_board.jpg&quot; alt=&quot;A game board with small city tiles on top of a gridded city board. In the bottom left there is an upside down board piece with the logo and a futuristic urban city with tram on it.&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The game begins with a modular board representing a city on the grid. Each player starts by adding their home to the board-oldest first because that’s how real estate works naturally. On each turn, players can spend time to move their character to different locations to earn points or spend time improving the city by advocating for initiatives. Players advocate for adding bike lanes or public transit, increasing density, removing parking and a host of other options.  However, they can’t automatically pass initiatives on their own, and the odds of one passing get higher if they team up.&lt;/p&gt;
 
@@ -62,14 +60,128 @@
 &lt;p&gt;So whether you’re a board game enthusiast, a transit advocate, or just looking to have a good time with some friends, I invite you to join us in reimagining what it means to be an engaged citizen in a walkable world. Now go contribute to that &lt;a href=&quot;https://kickstarter.com/projects/solarpunktravel/walkable&quot;&gt;Kickstarter&lt;/a&gt; please :)&lt;/p&gt;
 </description>
         <pubDate>Wed, 30 Oct 2024 00:00:00 -0500</pubDate>
-        <link>https://opus.stedden.org/2024/10/walkable-board-game/</link>
-        <guid isPermaLink="true">https://opus.stedden.org/2024/10/walkable-board-game/</guid>
+        <link>https://opus.stedden.org/2024/10/city-motion-game/</link>
+        <guid isPermaLink="true">https://opus.stedden.org/2024/10/city-motion-game/</guid>
         
         <category>games</category>
         
         <category>urban planning</category>
         
         <category>sustainability</category>
+        
+        
+      </item>
+    
+      <item>
+        <image>https://opus.stedden.orgassets/images/2024/madison_house_prices.png</image>
+        <title>Analyzing Housing Data in Madison</title>
+        <description>&lt;p&gt;As part of &lt;a href=&quot;https://isthmuscohousing.org&quot;&gt;Isthmus Cohousing&lt;/a&gt;’s &lt;strong&gt;Buy &amp;amp; Build Committee&lt;/strong&gt; in Madison, Wisconsin, my friend &lt;a href=&quot;https://madisonisforpeople.org/about/will-ochowicz/&quot;&gt;Will Ochowicz&lt;/a&gt; and I undertook a deep dive into the local housing market to estimate the costs associated with building a new cohousing complex. Our research involved analyzing recent housing sales, creating cost models for construction, and identifying undervalued land in the city.&lt;/p&gt;
+
+&lt;h3 id=&quot;preliminary-research-on-housing-costs-in-madison&quot;&gt;Preliminary Research on Housing Costs in Madison&lt;/h3&gt;
+
+&lt;p&gt;The analysis began by pulling &lt;strong&gt;Spring/Summer 2024 housing sales data&lt;/strong&gt; from &lt;strong&gt;Redfin&lt;/strong&gt;. Redfin lets you pull sale data pretty easily, including lat/lon coordinates, which allowed us to plot the&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;small_img&quot; title=&quot;Madison Housing Prices Spring.Summer 2024&quot; src=&quot;/assets/images/2024/madison_house_prices.png&quot; alt=&quot;Figure showing Madison with dots indicating house prices. Mainly the isthmus has higher prices and it gets cheaper going outward&quot; /&gt;&lt;/p&gt;
+&lt;div style=&quot;text-align:center;margin-bottom:20px;margin-top:5px;&quot;&gt;Price per square foot of housing sold in Madison in 2024&lt;/div&gt;
+
+&lt;p&gt;While this gave us a sense of the recent pricing trends in the Madison housing market, we needed to break it down by a number of characteristics to get a better sense of what the market rate for various types of housing looked like. One important thing was that the distribution of different types of housing varied greatly by area in the city, and that the price per square foot was different between the different types.&lt;/p&gt;
+
+&lt;p&gt;&lt;img title=&quot;Madison Housing Prices broken out by housing type&quot; src=&quot;/assets/images/2024/madison_house_prices_bytype.png&quot; alt=&quot;3 figures showing the price and distirbution of condos, single family homes, and townhomes&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The key takeaway was that condos on the isthmus were priced in the $400-$500/sqft range while condos on the outskirts were more like $200-$300/sqft. Meanwhile, single-family homes varied from $400/sqft to $200/sqft as we moved from the isthmus outward.&lt;/p&gt;
+
+&lt;p&gt;Building on this, we expanded our analysis to include data from &lt;strong&gt;2019-2024&lt;/strong&gt;. This allowed us to develop a more robust model for estimating housing prices based on property characteristics. The model incorporated &lt;strong&gt;size&lt;/strong&gt; (square footage), &lt;strong&gt;age&lt;/strong&gt; of the property, and &lt;strong&gt;number of bedrooms&lt;/strong&gt; to estimate costs. We found that &lt;strong&gt;newer homes&lt;/strong&gt;, &lt;strong&gt;larger homes&lt;/strong&gt;, and those with more bedrooms generally commanded a higher premium. In addition, &lt;strong&gt;location&lt;/strong&gt; played a major role in pricing, with homes located closer to downtown or the university fetching significantly higher prices than those further out.&lt;/p&gt;
+
+&lt;p&gt;Overall we ended up with a fairly robust and well-performing price explaination model that could accurately predict how much a unit could expect to sell for throughout the city.  You can explore the detailed calculations and code used in this analysis in our &lt;a href=&quot;https://github.com/stedn/isthmuscohousing/blob/main/research.ipynb&quot;&gt;&lt;strong&gt;Jupyter notebook&lt;/strong&gt;&lt;/a&gt;. This notebook contains all the data processing and housing cost modeling steps that we performed.&lt;/p&gt;
+
+&lt;h3 id=&quot;building-a-simple-pro-forma-calculator-for-construction-costs&quot;&gt;Building a Simple Pro-Forma Calculator for Construction Costs&lt;/h3&gt;
+
+&lt;p&gt;Once we had a better understanding of the local housing market, we moved on to estimating the cost of constructing a new cohousing complex. To do this, we built a simple &lt;strong&gt;comparative build cost calculator&lt;/strong&gt;, (somewhat similar to a &lt;a href=&quot;https://www.procore.com/library/construction-pro-forma&quot;&gt;pro forma&lt;/a&gt;). The idea was to estimate the total costs involved in building on a given lot, taking into account various factors like &lt;strong&gt;land cost&lt;/strong&gt;, &lt;strong&gt;construction costs&lt;/strong&gt;, &lt;strong&gt;soft costs&lt;/strong&gt; (such as legal fees and financing), and &lt;strong&gt;parking costs&lt;/strong&gt; (which can be a major expense, especially in urban areas).&lt;/p&gt;
+
+&lt;p&gt;&lt;img title=&quot;Madison Housing Build Cost Estimator&quot; src=&quot;/assets/images/2024/housing_build_cost_estimator.png&quot; alt=&quot;screenshot from spreadhseet&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Our pro-forma calculator provided estimates for total construction costs, the &lt;strong&gt;cost per unit&lt;/strong&gt;, and the &lt;strong&gt;cost per square foot&lt;/strong&gt; based on inputs like lot size and expected building height. It helped us assess how much it would cost to build a cohousing project on different types of properties throughout Madison. This tool also allowed us to break down the cost per unit and per square foot, which can be crucial for budgeting and securing financing.&lt;/p&gt;
+
+&lt;p&gt;You can check out the comparative cost calculators used in this phase of the project in our &lt;a href=&quot;https://docs.google.com/spreadsheets/d/1TtQ2JAtsHY10p2qyAIj3GrdY1GO239JsO1JqY6EAtQ0/edit?usp=sharing&quot;&gt;&lt;strong&gt;Google Spreadsheet&lt;/strong&gt;&lt;/a&gt;. The spreadsheet contains all the assumptions and input values we used to estimate construction costs and per-unit expenses.&lt;/p&gt;
+
+&lt;h3 id=&quot;combining-lot-data-with-zoning-information&quot;&gt;Combining Lot Data with Zoning Information&lt;/h3&gt;
+
+&lt;p&gt;With the initial cost models in place, we wanted to take the next step and analyze the &lt;strong&gt;build potential&lt;/strong&gt; of different lots throughout Madison. This is where we enlisted the help of Will Ochowicz, who helped us combine &lt;strong&gt;lot assessment data&lt;/strong&gt; with &lt;strong&gt;zoning and use codes&lt;/strong&gt; from the city. By doing this, we were able to compute the maximum number of units that could be built on each lot, based on zoning restrictions, lot size, and allowed building height.&lt;/p&gt;
+
+&lt;p&gt;Using this combined dataset, we ran the information through our comparative build cost calculator. This allowed us to estimate how large a building could be constructed on each lot, how much it would cost to build, and what the &lt;strong&gt;cost per unit&lt;/strong&gt; would be for a potential cohousing development. Our goal was to identify &lt;strong&gt;undervalued lots&lt;/strong&gt;—those that might offer a good opportunity for a cohousing project based on their &lt;strong&gt;build potential&lt;/strong&gt; and cost-efficiency.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1TtQ2JAtsHY10p2qyAIj3GrdY1GO239JsO1JqY6EAtQ0/edit?usp=sharing&quot;&gt;&lt;img title=&quot;Madison Housing Prices broken out by housing type&quot; src=&quot;/assets/images/2024/housing_build_cost_estimator_plus.png&quot; alt=&quot;another spreadsheet&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This step was particularly useful in finding lots where we could get the most out of the land and achieve a higher number of units at a lower cost, which is a crucial factor when trying to build an affordable housing project. The data we gathered provided a clearer picture of where the &lt;strong&gt;best opportunities for development&lt;/strong&gt; might lie.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-reality-of-the-madison-housing-market&quot;&gt;The Reality of the Madison Housing Market&lt;/h3&gt;
+
+&lt;p&gt;Despite the promising analysis and our identification of potentially undervalued land, the reality of the Madison housing market quickly became apparent. While we were able to identify several lots with good build potential, the availability of land for sale was &lt;strong&gt;extremely limited&lt;/strong&gt;. Out of all the parcels we analyzed, only a &lt;strong&gt;small handful&lt;/strong&gt; were on the market at the time, and none of these made good financial sense for our cohousing project.&lt;/p&gt;
+
+&lt;p&gt;What we discovered was that developers are snatching up any land that appears to be priced reasonably, leaving little room for new, affordable developments. In Madison, if a piece of land is reasonably priced and has potential for development, developers are quick to act, making it difficult for new cohousing projects to compete in this market.&lt;/p&gt;
+
+&lt;p&gt;In the end, it became clear that the best approach in Madison is to make connections to know what is available before it makes its way to Redfin or Zillow. The housing market is highly competitive, and developers are already moving quickly on any parcels that make financial sense. While our analysis was insightful and gave us a better understanding of the costs and potential for building a cohousing complex in Madison, it also reinforced the reality that finding affordable land in the right locations is incredibly challenging.&lt;/p&gt;
+
+&lt;h3 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h3&gt;
+
+&lt;p&gt;This research exercise was a valuable opportunity to better understand the costs of building and the zoning potential of different properties in Madison. The process helped us gain insights into land availability, housing pricing trends, and how to model construction costs for a cohousing project. However, the biggest takeaway was that in Madison, the availability of land is a major barrier to new affordable housing projects.&lt;/p&gt;
+
+&lt;p&gt;We’re still continuing with the dream of cohousing in Madison, but we now know just how challenging it will be to turn that dream into reality.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;You can explore our &lt;strong&gt;full analysis and data&lt;/strong&gt; from this research through the following resources:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/stedn/isthmuscohousing/blob/main/research.ipynb&quot;&gt;&lt;strong&gt;Jupyter notebook for housing cost calculations&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1TtQ2JAtsHY10p2qyAIj3GrdY1GO239JsO1JqY6EAtQ0/edit?usp=sharing&quot;&gt;&lt;strong&gt;Google Spreadsheet for comparative cost calculators&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Fri, 16 Aug 2024 00:00:00 -0500</pubDate>
+        <link>https://opus.stedden.org/2024/08/madison-housing-data/</link>
+        <guid isPermaLink="true">https://opus.stedden.org/2024/08/madison-housing-data/</guid>
+        
+        <category>data science</category>
+        
+        <category>analysis</category>
+        
+        <category>urban planning</category>
+        
+        <category>sustainability</category>
+        
+        
+      </item>
+    
+      <item>
+        <image>https://opus.stedden.org/assets/images/2024/e_johnson_2049_alone_nolabel.png</image>
+        <title>Somewhere On A Porch In Tenney-Lapham In The Year 2049</title>
+        <description>&lt;p&gt;My &lt;a href=&quot;https://tenneylapham.org/web-data/news/newspdfs/Spring2024&quot;&gt;neighborhood’s community newsletter&lt;/a&gt; was looking for some new content so I submitted a little visioning exercise of the future of Madison’s city streets. I took a few street view images, used Google’s Magic Eraser to remove the cars, and then drew trees, buses, bikes, bike lanes and other modifications to the street.  Finally, I rendered new images through an AI text-to-image generator using my drawings as seed images. Here you can see the before and after:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;small_img&quot; title=&quot;E Johnson St in 2024&quot; src=&quot;/assets/images/2024/ejohnson_orig.png&quot; alt=&quot;A google street view of a 2 lane one-way road with many cars and many parked cars.  Very little shade.&quot; /&gt;
+&lt;img class=&quot;small_img&quot; title=&quot;Imagining E Johnson St in 2024&quot; src=&quot;/assets/images/2024/e_johnson_2049_alone_nolabel.png&quot; alt=&quot;A street level view of a fictitiousrendering of a street, with a bus, on a one-lane road, a separated bike path, a bikeshare rack, lots of shade trees and people walking around&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As part of the creation, I also wrote a little story set in the future to go along with it.&lt;/p&gt;
+
+&lt;h3 id=&quot;somewhere-on-a-porch-in-tenney-lapham-in-the-year-2049&quot;&gt;Somewhere On A Porch In Tenney-Lapham In The Year 2049&lt;/h3&gt;
+
+&lt;h4 id=&quot;by-will--stedden-area-rep&quot;&gt;By Will  Stedden, Area Rep&lt;/h4&gt;
+
+&lt;p&gt;Alright, gather round folks. Here’s a little trip down memory lane. See that young person riding their bike down the street over there? Well, that wasn’t always so easy in this neighborhood. Back when I first moved here, the streets were lined with cars, traffic was a constant worry as our kids darted across the highways that ran right through our neighborhoods. Not to mention, we were all breathing in fumes and tire particles–and you wouldn’t even believe the noises cars made back then.&lt;/p&gt;
+
+&lt;p&gt;But today, as I sit on my porch, gaze out onto the green space that surrounds me, and take a deep breath, it’s hard to believe that this is the same neighborhood I once knew. Our streets didn’t start to look like this overnight. No, the transformation of Tenney-Lapham was a gradual process. Removing on-street parking and narrowing the roads was met with skepticism at first. Many residents, myself included, wondered how we’d ever get around town. But as the years went by, it became clear that the benefits outweighed the inconvenience. Slowly, 2 car households dropped to 1 car, and 1 car households went car free. Our cycling and transit infrastructure improved to compensate, and it seemed like everybody got one of those adorable little cargo bikes to take the littles to school in. And for the trips that still needed a car, we borrowed from the neighborhood carshare, where one shared car could do the work of 10 private cars.&lt;/p&gt;
+
+&lt;p&gt;I can remember the conversations that used to go around in circles for hours as everybody tried to figure out how we could squeeze in a few trees here and there, or how we could make our streets safer for walking and biking, or even how we could make our neighborhood feel spacious in light of all the development going up around us. But once we realized how much of our neighborhood was actually taken up by cars, it became obvious. With the streets cleared, and parking lots turned to parks, space was reclaimed for greenery and socializing. What was once barren asphalt could come to life.&lt;/p&gt;
+
+&lt;p&gt;The canopy trees that were planted decades ago grew up into the majestic giants you can see today. Our neighborhood was always pretty “cool” (as they used to say back in my day). And thanks to their shade, our neighborhood has stayed cool even as the summers have gotten hotter and hotter. As we worked together to create a more sustainable neighborhood, we forged bonds that have lasted as well.&lt;/p&gt;
+
+&lt;p&gt;Of course, there were challenges along the way. Change is never easy, and some folks resisted the transformation of our neighborhood. But in the end, a lot of great things got done. Looking back, I’ve gotta say, I feel a sense of pride in what we accomplished here.  Anyway, enough of my history lesson, let’s go take a walk through East Washington Park.&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 21 Apr 2024 00:00:00 -0500</pubDate>
+        <link>https://opus.stedden.org/2024/04/tenney-lapham-visioning/</link>
+        <guid isPermaLink="true">https://opus.stedden.org/2024/04/tenney-lapham-visioning/</guid>
+        
+        <category>writing</category>
         
         
       </item>
