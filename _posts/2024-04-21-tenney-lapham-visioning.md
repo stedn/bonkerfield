@@ -6,7 +6,7 @@ author: will stedden
 type: fiction
 tags:
 - writing
-image: /assets/images/2024/e_johnson_2049_alone_nolabel.png
+image: /assets/images/2024/e_johnson_2049_alone_nolabel_optimized.png
 ---
 
 My [neighborhood's community newsletter](https://tenneylapham.org/web-data/news/newspdfs/Spring2024) was looking for some new content so I submitted a little visioning exercise of the future of Madison's city streets. I took a few street view images, used Google's Magic Eraser to remove the cars, and then drew trees, buses, bikes, bike lanes and other modifications to the street.  Finally, I rendered new images through an AI text-to-image generator using my drawings as seed images. Here you can see the before and after:
