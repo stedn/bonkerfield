@@ -5,8 +5,8 @@
     <description>just your standard information identity spacetime field</description>
     <link>https://opus.stedden.org</link>
     <atom:link href="https://opus.stedden.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 02 Mar 2025 19:50:34 -0600</pubDate>
-    <lastBuildDate>Sun, 02 Mar 2025 19:50:34 -0600</lastBuildDate>
+    <pubDate>Sun, 02 Mar 2025 20:00:17 -0600</pubDate>
+    <lastBuildDate>Sun, 02 Mar 2025 20:00:17 -0600</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -45,7 +45,12 @@
 
 &lt;h4 id=&quot;2-dynamic-feedback-loop-for-model-refinement&quot;&gt;2. Dynamic Feedback Loop for Model Refinement&lt;/h4&gt;
 
-&lt;p&gt;But what really sets this app apart is its built-in feedback system. After users detect solar panels, they can confirm or deny the presence of panels. This feedback is stored and displayed in a &lt;a href=&quot;https://solarscan.appspot.com/dashboard&quot;&gt;dashboard&lt;/a&gt;, where users can see the performance of each model over the full feedback dataset.&lt;/p&gt;
+&lt;p&gt;But what really sets this app apart is its built-in feedback system. After users detect solar panels, they can confirm or deny the presence of panels.&lt;/p&gt;
+
+&lt;p&gt;&lt;img title=&quot;Zoomed in view of a few detections one that clearly has panels is red, and there is a popup box that says the detection probability = 45% and asks for feedback about whether there are really panels present.&quot; src=&quot;/assets/images/2025/solarscan_app2.png&quot; alt=&quot;Zoomed in view of a few detections one that clearly has panels is red, and there is a popup box that says the detection probability = 45% and asks for feedback about whether there are really panels present.&quot; /&gt;&lt;/p&gt;
+&lt;div style=&quot;text-align:center;margin-bottom:20px;margin-top:5px;font-size:0.9em;&quot;&gt;Showing the detection probability and asking for feedback on true presence/absence of panels.&lt;/div&gt;
+
+&lt;p&gt;This feedback is stored and displayed in a &lt;a href=&quot;https://solarscan.appspot.com/dashboard&quot;&gt;dashboard&lt;/a&gt;, where users can see the performance of each model over the full feedback dataset.&lt;/p&gt;
 
 &lt;p&gt;&lt;img title=&quot;Figures with True Positive and True Negative rates for each CNN model on the feedback dataset&quot; src=&quot;/assets/images/2025/solarscan_dash1.png&quot; alt=&quot;True Positive and True Negative Curves for each CNN model used for classification&quot; /&gt;&lt;/p&gt;
 &lt;div style=&quot;text-align:center;margin-bottom:20px;margin-top:5px;font-size:0.9em;&quot;&gt;Figures with True Positive and True Negative rates for each CNN model on the feedback dataset&lt;/div&gt;
