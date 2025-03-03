@@ -7,7 +7,7 @@ tags:
 - games
 - urban planning
 - sustainability
-image: assets/images/2024/carshare_survey.png
+image: /assets/images/2024/carshare_survey.png
 ---
 I had the incredible opportunity to be part of **Climatebase Fellowship Cohort 4**, and I’m excited to share my journey with you. Over the past few months, I’ve learned so much about climate tech, entrepreneurship, and the power of community-based solutions. The Fellowship not only deepened my understanding of how we can tackle the climate crisis through innovative technologies but also gave me the opportunity to pursue a project that I’m passionate about: **Down the Block Carshare**.
 

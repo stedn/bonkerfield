@@ -7,7 +7,7 @@ tags:
 - games
 - urban planning
 - sustainability
-image: assets/images/2024/city_motion_board.jpg
+image: /assets/images/2024/city_motion_board.jpg
 ---
 
 I don't think I've ever worked on a project longer than the board game I've finally finished.  The idea was born while I was doing chores on a farm in the New Mexico desert, and now three painstaking years and more than 100 test games later, I'm extremely proud of all the work I've put into it. [And now, I'm ready to share it with the world.](https://kickstarter.com/projects/solarpunktravel/walkable)

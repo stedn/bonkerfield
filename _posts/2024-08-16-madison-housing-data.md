@@ -8,7 +8,7 @@ tags:
 - analysis
 - urban planning
 - sustainability
-image: assets/images/2024/madison_house_prices.png
+image: /assets/images/2024/madison_house_prices.png
 ---
 
 As part of [Isthmus Cohousing](https://isthmuscohousing.org)'s **Buy & Build Committee** in Madison, Wisconsin, my friend [Will Ochowicz](https://madisonisforpeople.org/about/will-ochowicz/) and I undertook a deep dive into the local housing market to estimate the costs associated with building a new cohousing complex. Our research involved analyzing recent housing sales, creating cost models for construction, and identifying undervalued land in the city.
