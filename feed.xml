@@ -5,12 +5,12 @@
     <description>just your standard information identity spacetime field</description>
     <link>https://opus.stedden.org</link>
     <atom:link href="https://opus.stedden.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 25 Feb 2025 01:27:57 -0600</pubDate>
-    <lastBuildDate>Tue, 25 Feb 2025 01:27:57 -0600</lastBuildDate>
+    <pubDate>Sun, 02 Mar 2025 19:50:34 -0600</pubDate>
+    <lastBuildDate>Sun, 02 Mar 2025 19:50:34 -0600</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
-        <image>https://opus.stedden.orgassets/images/2025/solarscan_app2.png</image>
+        <image>https://opus.stedden.org/assets/images/2025/solarscan_app1.png</image>
         <title>Detecting Solar Panels from Satellite Imagery</title>
         <description>&lt;p&gt;After moving back to California last month I have been very excited to see the massive quantity of solar PV rooftop installations in the areas I’ve visited.  California is the &lt;a href=&quot;https://www.axios.com/local/san-diego/2024/04/12/california-solar-power-leader-how-much&quot;&gt;largest producer of solar power&lt;/a&gt; in the US, and last year even went &lt;a href=&quot;https://calmatters.org/environment/climate-change/2024/08/california-clean-power-progress-grid/&quot;&gt;100 straight days&lt;/a&gt; where renewables satisfied 100% of demand for at least part of the day.  As you can see in this graph from 2024, during the daylight hours a huge chunk of our power comes from solar, with wind and hydro staying more consistent throughout the day.&lt;/p&gt;
 
@@ -38,10 +38,10 @@
 
 &lt;p&gt;By integrating the Google Maps API, the app allows users to interact with a map and click on locations to detect solar panels in real-time. The app then sends an image from Google Maps to the backend, where it interacts with the models deployed on GCP to predict whether solar panels are present at that location. This makes the app highly scalable, as users can explore large areas and continuously add to the dataset. I also included some cool usability features like centering the map on the user’s approximate location at startup using &lt;a href=&quot;https://ipinfo.io&quot;&gt;ipinfo.io&lt;/a&gt; and allowing search with the &lt;a href=&quot;https://developers.google.com/maps/documentation/geocoding/overview&quot;&gt;Geocoding API&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img title=&quot;Zoomed out view of many detections in a neighborhood showing the pattern of usage&quot; src=&quot;/assets/images/2025/solarscan_app2.png&quot; alt=&quot;Zoomed out map display of solarscan app green/red based on the models detection result&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img title=&quot;Zoomed out view of many detections in a neighborhood showing the pattern of usage&quot; src=&quot;/assets/images/2025/solarscan_app1.png&quot; alt=&quot;Zoomed out map display of solarscan app green/red based on the models detection result&quot; /&gt;&lt;/p&gt;
 &lt;div style=&quot;text-align:center;margin-bottom:20px;margin-top:5px;font-size:0.9em;&quot;&gt;Zoomed out view of many detections in a neighborhood&lt;/div&gt;
 
-&lt;p&gt;If you look closely in the above image, you can see that quite a few tiles in this region had solar panels but didn’t detect them.  The underlying detection models had non-zero predictions probabilities, but they didn’t cross the probability threshold needed for classification.  That was why I started storing the dynamic feedback discussed in the next section to learn from the results and improve the model predictions.&lt;/p&gt;
+&lt;p&gt;If you look closely in the above image, you can see that a few tiles in this region had solar panels that weren’t detected.  The underlying detection models had non-zero predictions probabilities, but they didn’t cross the probability threshold needed for classification.  That was why I started storing the dynamic feedback discussed in the next section to learn from the results and improve the model predictions.&lt;/p&gt;
 
 &lt;h4 id=&quot;2-dynamic-feedback-loop-for-model-refinement&quot;&gt;2. Dynamic Feedback Loop for Model Refinement&lt;/h4&gt;
 
@@ -50,7 +50,7 @@
 &lt;p&gt;&lt;img title=&quot;Figures with True Positive and True Negative rates for each CNN model on the feedback dataset&quot; src=&quot;/assets/images/2025/solarscan_dash1.png&quot; alt=&quot;True Positive and True Negative Curves for each CNN model used for classification&quot; /&gt;&lt;/p&gt;
 &lt;div style=&quot;text-align:center;margin-bottom:20px;margin-top:5px;font-size:0.9em;&quot;&gt;Figures with True Positive and True Negative rates for each CNN model on the feedback dataset&lt;/div&gt;
 
-&lt;p&gt;If the user decides to they can trigger a function that feeds the dataset of prediction probabilities as input features to a &lt;a href=&quot;https://en.wikipedia.org/wiki/Logistic_regression&quot;&gt;logistic regression&lt;/a&gt; “stacked” model, which then find the optimal combination of models to best predict and stores them for use in the frontend classifier.&lt;/p&gt;
+&lt;p&gt;If the user decides to they can trigger a function that feeds the dataset of prediction probabilities as input features to a &lt;a href=&quot;https://en.wikipedia.org/wiki/Logistic_regression&quot;&gt;logistic regression&lt;/a&gt; “stacked” model, which then finds the optimal combination of models to best predict.  This routine also stores the stacked model parameters for use in the main app’s classifier.&lt;/p&gt;
 
 &lt;p&gt;&lt;img class=&quot;small_img&quot; title=&quot;Table of weights used to combine the different models in a logistic regression&quot; src=&quot;/assets/images/2025/solarscan_dash2.png&quot; alt=&quot;Model Weights for optimal prediction&quot; /&gt;&lt;/p&gt;
 &lt;div style=&quot;text-align:center;margin-bottom:20px;margin-top:5px;font-size:0.9em;&quot;&gt;Table of weights used to combine the different models in a logistic regression&lt;/div&gt;
@@ -80,9 +80,11 @@
   &lt;li&gt;&lt;strong&gt;Vertex AI&lt;/strong&gt;:&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;I originally chose Google Cloud’s &lt;a href=&quot;https://cloud.google.com/vertex-ai?hl=en&quot;&gt;Vertex AI&lt;/a&gt; for deploying the models since I was already using Google App Engine for the frontend and I’d heard people talk about Vertex before. Vertex let me package up the PyTorch models and a data ingestion script and deploy that at a named endpoint, accessible from within my Flask app on App Engine. Deploying models involved several steps that weren’t immediately obvious, and I had to figure out how to test with &lt;code&gt;torchserve&lt;/code&gt; locally to get the handler to work before deployment.&lt;/p&gt;
+&lt;p&gt;I originally chose Google Cloud’s &lt;a href=&quot;https://cloud.google.com/vertex-ai?hl=en&quot;&gt;Vertex AI&lt;/a&gt; for deploying the models since part of this project was about learning to use a &lt;em&gt;fancy newfangled&lt;/em&gt; ML Ops system, and I’d heard people talk about Vertex before. Vertex let me package up the PyTorch models and a data ingestion script and deploy that at a named endpoint, accessible from within my Flask app on App Engine.&lt;/p&gt;
 
-&lt;p&gt;While Vertex allowed for easy scalable hosting, it turned out that Vertex AI doesn’t allow deployments to shut down when not in use, which made it more expensive than I wanted. With Vertex, I’d end up spending about $3/day every day even if nobody even used the app at all.&lt;/p&gt;
+&lt;p&gt;For usability, Vertex was a bit of a mess.  Deploying models involved several steps that weren’t well-documented for PyTorch, and I had to figure out how to test with &lt;code&gt;torchserve&lt;/code&gt; locally to get the handler to work before deployment.&lt;/p&gt;
+
+&lt;p&gt;Also, while Vertex allowed for easy scalable hosting, it turned out that Vertex AI doesn’t allow deployments to shut down when not in use, which made it more expensive than I wanted. With Vertex, I’d end up spending about $3/day every day even if nobody even used the app at all.&lt;/p&gt;
 
 &lt;p&gt;I have free trial credits now, but there’s no way I’m spending $1000/year just for an app that isn’t being used at all. I’m glad to have the chance to learn how Vertex works, but I needed to look for other options.&lt;/p&gt;
 
@@ -100,13 +102,13 @@
 
 &lt;p&gt;Finally, I decided to package them up and deploy with another App Engine instance.  I have a small 700 MB instance running the frontend, but I used a separate 1500 MB instance to host all 5 CNNs in memory.  I set that instance up with “&lt;a href=&quot;https://stackoverflow.com/questions/51272392/how-to-scale-down-to-0-instances-in-gae-standard-go&quot;&gt;scaling to 0&lt;/a&gt;” so if there’s no requests for 10 minutes it shuts that machine down.  This saves a lot of money for a rarely used app like this.&lt;/p&gt;
 
-&lt;p&gt;Since it has to restart from cold next time its used, that does make it so that the first response will be a little slower.  Fortunately, I came up with a neat hack that sends a dummy request to wake up the machine as soon as the webpage is loaded.  That way, by the time someone has selected an area and is requesting a result from the model the backend instance will already have a few seconds headstart.&lt;/p&gt;
+&lt;p&gt;Since it has to restart from cold next time its used, that does make it so that the first response will be a little slower.  Fortunately, I came up with a neat hack that sends a dummy request to wake up the machine as soon as the frontend webpage is loaded.  That way, by the time someone has selected an area and is requesting a result from the model the backend instance will already have a few seconds headstart.&lt;/p&gt;
 
 &lt;p&gt;You can view the whole &lt;a href=&quot;https://github.com/lots-of-things/solarscan&quot;&gt;solarscan codebase&lt;/a&gt; on github to see the details of development and to build a clone for yourself if you’d like.&lt;/p&gt;
 
 &lt;h2 id=&quot;looking-ahead-future-goals&quot;&gt;Looking Ahead: Future Goals&lt;/h2&gt;
 
-&lt;p&gt;As useful as the app is now, there are still plenty of opportunities for improvement and expansion. I hope to collaborate with the original authors of the BDAPPV dataset to gather more data and improve future models. One area I’m particularly interested in is tackling the &lt;a href=&quot;https://en.wikipedia.org/wiki/Image_segmentation&quot;&gt;image segmentation&lt;/a&gt; task next, which would help to more accurately assess the total capacity in an area rather than the coarse approximation from the current large scale detector.&lt;/p&gt;
+&lt;p&gt;As useful as the app is now, there are still plenty of opportunities for improvement and expansion. I’ve reached out to try to collaborate with the &lt;a href=&quot;https://gabrielkasmi.github.io/&quot;&gt;original author&lt;/a&gt; of the BDAPPV dataset to use my tool to gather more data and improve future models. One area I’m particularly interested in is tackling the &lt;a href=&quot;https://en.wikipedia.org/wiki/Image_segmentation&quot;&gt;image segmentation&lt;/a&gt; task next, which would help to more accurately assess the total capacity in an area rather than the coarse approximation from the current large scale detector I’m using.&lt;/p&gt;
 
 &lt;p&gt;Ultimately, it’d be cool to compile this information to larger and larger scales and create something similar to the &lt;a href=&quot;https://energy.usgs.gov/uspvdb/viewer/#4.64/37.16/-120.37&quot;&gt;USPVDB map&lt;/a&gt; of grid-scale solar. Scaling the model to that level would be a very expensive task though, but it would be wonderful to collaborate with an energy company or someone who has a marketable use for something like that. If you know anyone who’d be interested to collaborate be sure to &lt;a href=&quot;https://will.stedden.org&quot;&gt;reach out&lt;/a&gt;.&lt;/p&gt;
 </description>
@@ -128,7 +130,7 @@
       </item>
     
       <item>
-        <image>https://opus.stedden.orgassets/images/2024/city_motion_board.jpg</image>
+        <image>https://opus.stedden.org/assets/images/2024/city_motion_board.jpg</image>
         <title>CITY MOTION: Transforming Cities One Game at a Time</title>
         <description>&lt;p&gt;I don’t think I’ve ever worked on a project longer than the board game I’ve finally finished.  The idea was born while I was doing chores on a farm in the New Mexico desert, and now three painstaking years and more than 100 test games later, I’m extremely proud of all the work I’ve put into it. &lt;a href=&quot;https://kickstarter.com/projects/solarpunktravel/walkable&quot;&gt;And now, I’m ready to share it with the world.&lt;/a&gt;&lt;/p&gt;
 
@@ -191,7 +193,7 @@
       </item>
     
       <item>
-        <image>https://opus.stedden.orgassets/images/2024/madison_house_prices.png</image>
+        <image>https://opus.stedden.org/assets/images/2024/madison_house_prices.png</image>
         <title>Analyzing Housing Data in Madison</title>
         <description>&lt;p&gt;As part of &lt;a href=&quot;https://isthmuscohousing.org&quot;&gt;Isthmus Cohousing&lt;/a&gt;’s &lt;strong&gt;Buy &amp;amp; Build Committee&lt;/strong&gt; in Madison, Wisconsin, my friend &lt;a href=&quot;https://madisonisforpeople.org/about/will-ochowicz/&quot;&gt;Will Ochowicz&lt;/a&gt; and I undertook a deep dive into the local housing market to estimate the costs associated with building a new cohousing complex. Our research involved analyzing recent housing sales, creating cost models for construction, and identifying undervalued land in the city.&lt;/p&gt;
 
@@ -305,7 +307,7 @@
       </item>
     
       <item>
-        <image>https://opus.stedden.orgassets/images/2024/carshare_survey.png</image>
+        <image>https://opus.stedden.org/assets/images/2024/carshare_survey.png</image>
         <title>Climatebase Fellowship and Vetting a Carshare</title>
         <description>&lt;p&gt;I had the incredible opportunity to be part of &lt;strong&gt;Climatebase Fellowship Cohort 4&lt;/strong&gt;, and I’m excited to share my journey with you. Over the past few months, I’ve learned so much about climate tech, entrepreneurship, and the power of community-based solutions. The Fellowship not only deepened my understanding of how we can tackle the climate crisis through innovative technologies but also gave me the opportunity to pursue a project that I’m passionate about: &lt;strong&gt;Down the Block Carshare&lt;/strong&gt;.&lt;/p&gt;
 
