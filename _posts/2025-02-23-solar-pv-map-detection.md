@@ -45,7 +45,12 @@ If you look closely in the above image, you can see that a few tiles in this reg
 
 #### 2. Dynamic Feedback Loop for Model Refinement
 
-But what really sets this app apart is its built-in feedback system. After users detect solar panels, they can confirm or deny the presence of panels. This feedback is stored and displayed in a [dashboard](https://solarscan.appspot.com/dashboard), where users can see the performance of each model over the full feedback dataset.
+But what really sets this app apart is its built-in feedback system. After users detect solar panels, they can confirm or deny the presence of panels.
+
+<img title="Zoomed in view of a few detections one that clearly has panels is red, and there is a popup box that says the detection probability = 45% and asks for feedback about whether there are really panels present." src="/assets/images/2025/solarscan_app2.png" alt="Zoomed in view of a few detections one that clearly has panels is red, and there is a popup box that says the detection probability = 45% and asks for feedback about whether there are really panels present.">
+<div style="text-align:center;margin-bottom:20px;margin-top:5px;font-size:0.9em;">Showing the detection probability and asking for feedback on true presence/absence of panels.</div>
+
+This feedback is stored and displayed in a [dashboard](https://solarscan.appspot.com/dashboard), where users can see the performance of each model over the full feedback dataset.
 
 <img title="Figures with True Positive and True Negative rates for each CNN model on the feedback dataset" src="/assets/images/2025/solarscan_dash1.png" alt="True Positive and True Negative Curves for each CNN model used for classification">
 <div style="text-align:center;margin-bottom:20px;margin-top:5px;font-size:0.9em;">Figures with True Positive and True Negative rates for each CNN model on the feedback dataset</div>
