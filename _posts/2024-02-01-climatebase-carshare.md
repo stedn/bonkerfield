@@ -48,7 +48,7 @@ And Chad also included a very cool app that allowed a direct cost comparison bet
 
 <img class="small_img" title="Walkable Board" src="/assets/images/2024/carshare_demo.png" alt="A game board with small city tiles on top of a gridded city board. In the bottom left there is an upside down board piece with the logo and a futuristic urban city with tram on it.">
 
-You can check it out here: [**Why Isthmus Carshare**](https://why.isthmuscarshare.com/).
+You can check it out here: [**Why Isthmus Carshare**](https://isthmuscarshare.github.io/whycarshare/).
 
 ---
 
