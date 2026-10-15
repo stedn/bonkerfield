@@ -6,6 +6,7 @@ type: fiction
 tags:
 - fiction
 - environment
+- sustainability
 image: /assets/images/2021/last_highway.jpg
 ---
 

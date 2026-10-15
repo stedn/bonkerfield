@@ -6,6 +6,9 @@ author: will stedden
 type: fiction
 tags:
 - writing
+- art
+- fiction
+- urban planning
 image: /assets/images/2024/e_johnson_2049_alone_nolabel_optimized.png
 ---
 

@@ -5,6 +5,7 @@ type: essay
 tags:
 - philosophy
 - politics
+- sustainability
 image: /assets/images/2022/new_shade.jpg
 ---
 

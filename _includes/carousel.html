@@ -1,0 +1,72 @@
+{% comment %}
+  Simple photo carousel.
+  Usage: include carousel.html with images="/a.jpg,/b.jpg" alt="description" caption="optional caption"
+  Self-contained (inline style + vanilla JS) so it doesn't need the gulp build.
+{% endcomment %}
+{% assign _carousel_images = include.images | split: "," %}
+{% unless carousel_assets_loaded %}{% assign carousel_assets_loaded = true %}
+<style>
+  .post-carousel { position: relative; max-width: 640px; margin: 1.5em auto; }
+  .post-carousel-window { position: relative; overflow: hidden; border-radius: 4px; background: #111; }
+  .post-carousel-track { display: flex; transition: transform 0.3s ease; }
+  .post-carousel-slide { flex: 0 0 100%; display: flex; align-items: center; justify-content: center; height: 480px; }
+  .post-carousel-slide img { max-width: 100%; max-height: 100%; object-fit: contain; display: block; margin: 0; }
+  .post-carousel button { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: #fff; border: none; width: 2.2em; height: 2.2em; border-radius: 100%; cursor: pointer; font-size: 1em; padding: 0; z-index: 2; }
+  .post-carousel button:hover { background: rgba(0,0,0,0.75); }
+  .post-carousel .post-carousel-prev { left: 0.6em; }
+  .post-carousel .post-carousel-next { right: 0.6em; }
+  .post-carousel-dots { display: flex; justify-content: center; gap: 0.5em; margin-top: 0.6em; }
+  .post-carousel-dot { width: 0.6em; height: 0.6em; border-radius: 100%; background: #bbb; cursor: pointer; }
+  .post-carousel-dot.active { background: #333; }
+  .post-carousel figcaption { text-align: center; font-size: 0.85em; margin-top: 0.4em; }
+  @media (max-width: 600px) { .post-carousel-slide { height: 320px; } }
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.post-carousel').forEach(function (c) {
+      var track = c.querySelector('.post-carousel-track');
+      var slides = c.querySelectorAll('.post-carousel-slide');
+      var dots = c.querySelectorAll('.post-carousel-dot');
+      var index = 0;
+      function go(i) {
+        index = (i + slides.length) % slides.length;
+        track.style.transform = 'translateX(-' + (index * 100) + '%)';
+        dots.forEach(function (d, j) { d.classList.toggle('active', j === index); });
+      }
+      var prev = c.querySelector('.post-carousel-prev');
+      var next = c.querySelector('.post-carousel-next');
+      if (prev) prev.addEventListener('click', function () { go(index - 1); });
+      if (next) next.addEventListener('click', function () { go(index + 1); });
+      dots.forEach(function (d, j) { d.addEventListener('click', function () { go(j); }); });
+      var startX = null;
+      track.addEventListener('touchstart', function (e) { startX = e.touches[0].clientX; }, {passive: true});
+      track.addEventListener('touchend', function (e) {
+        if (startX === null) return;
+        var dx = e.changedTouches[0].clientX - startX;
+        if (Math.abs(dx) > 40) go(index + (dx < 0 ? 1 : -1));
+        startX = null;
+      });
+      go(0);
+    });
+  });
+</script>
+{% endunless %}
+<figure class="post-carousel">
+  <div class="post-carousel-window">
+    <div class="post-carousel-track">
+      {% for _carousel_img in _carousel_images %}
+      <div class="post-carousel-slide"><img loading="lazy" src="{{ _carousel_img | strip }}" alt="{{ include.alt | default: '' }}" /></div>
+      {% endfor %}
+    </div>
+    {% if _carousel_images.size > 1 %}
+    <button type="button" class="post-carousel-prev" aria-label="Previous image">&#10094;</button>
+    <button type="button" class="post-carousel-next" aria-label="Next image">&#10095;</button>
+    {% endif %}
+  </div>
+  {% if _carousel_images.size > 1 %}
+  <div class="post-carousel-dots">
+    {% for _carousel_img in _carousel_images %}<span class="post-carousel-dot"></span>{% endfor %}
+  </div>
+  {% endif %}
+  {% if include.caption %}<figcaption>{{ include.caption }}</figcaption>{% endif %}
+</figure>
