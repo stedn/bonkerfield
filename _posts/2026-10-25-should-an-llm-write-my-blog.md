@@ -1,0 +1,142 @@
+---
+layout: essay
+title: "Should an LLM write my blog now?"
+description: "a.ttent.io/n, a new baby, and what gets lost when you skip the middle"
+type: essay
+tags:
+- philosophy
+- writing
+- machine learning
+image: /assets/images/2026/jerome_coffee.jpg
+---
+
+Back in early 2020, I spent a couple of months building a [reddit comment bot](/2020/02/combining-gpt-2-and-bert/) out of GPT-2 and BERT, which at the time were about the most impressive language models that anyone outside of a big lab could get their hands on. I fine-tuned GPT-2 on a few years of comments from [subreddits](https://www.reddit.com/r/writing/) [I](https://www.reddit.com/r/sciencefiction/) [liked](https://www.reddit.com/r/MachineLearning/), trained a couple of BERT classifiers to throw out the replies that sounded too robotic and keep the ones it predicted would get the most upvotes, and then let it loose under the name tupperware-party. I was pretty upfront about the fact that one of the goals was to replace me. I wrote at the time that I'd "been pretty much terrible at interacting on social media so I figured maybe I could automate the problem away," and the idea was that a bot trained on the kinds of conversations I cared about could keep me active online without me having to put in so much effort.
+
+It sort of worked, which was the unsettling part. Most of what GPT-2 generated was nonsense, but once the classifiers picked out the best of the bunch, people replied to it as if it were a slightly confused person, and I ended up [writing a whole post](/2020/03/building-an-AI-chatbot/) about how that experience convinced me to tie my real identity to everything I put online. Around the same time I was also working on [a.ttent.io/n](/2020/12/analyzing-attention/), a short story website that tracked how far each reader scrolled so that I could rewrite the story to hold their attention better, so I was really coming at the same question from both directions: could a machine stand in for the writer, and could the writing be tuned by the readers instead of by me.
+
+Six years later, all of that is trivial. What took me weeks of wrangling BigQuery tables, Colab notebooks, and two separate classifiers can now be done in an afternoon, and the output no longer sounds like a slightly confused person, it honestly sounds pretty good. You can fine-tune an LLM on a pile of everything you've ever written, or even just hand it the pile, and have it match your voice closely enough that most people wouldn't notice (and, surprise surprise, that's exactly what I'm doing right now).
+
+<figure>
+  <img alt="A remix of Caravaggio's painting Saint Jerome Writing. The old saint in his red robe sits at a dark wooden desk with a skull and stacks of books, but instead of writing he is leaning back with his eyes closed, sipping from a steaming white coffee mug, while the quill pen stands upright on the open page and writes by itself." src="/assets/images/2026/jerome_coffee.jpg" />
+  <figcaption>
+    Caravaggio's <a href="https://en.wikipedia.org/wiki/Saint_Jerome_Writing">Saint Jerome Writing</a> (1605–06), remixed with a local copy of FLUX.2
+  </figcaption>
+</figure>
+
+And I have a much better reason to want it now than I did in 2020, because I have a baby now. She's ten months old and just starting to take her first steps, which means most of my waking hours outside of work go to keeping her entertained and keeping our life at least a little bit sane while she toddles around the house tearing everything apart. A real post on here has always taken me days of work, not days of typing exactly, but days of carrying an idea around in my head, writing a messy draft, hating it, rewriting it, chasing down links to back up some claim I half remembered, and then rewriting it again once I finally figured out what I was actually trying to say. The essay about [solarpunk travel](/2026/10/staying-grounded-solarpunk-travel/) that I posted yesterday sat in my head for years without ever making it onto the page, and I still have a drafts folder full of essays about co-ops and economics that I started back in 2023 and never found the time to finish. With a toddler in the house, those days of slow work just don't exist anymore, and it isn't really a choice. What I have left is my commute and whatever energy I can scrape together after she's asleep, if I have any at all. So sometime in the last ten months, I quietly accepted that this blog was probably done, at least for a good long while, unless I was willing to let something else do most of the work.
+
+So I figured the blog was going to stop. Except that it didn't, and the reason it didn't is the very thing I've always been the most suspicious of. In fact, neither of my last two posts, the [solarpunk travel essay](/2026/10/staying-grounded-solarpunk-travel/) and the write-up of [Isthmus Carshare](/2026/10/isthmus-carshare/), would ever have been written without it, and neither would the one you're reading right now. And if I'm being honest with myself, I probably wouldn't have gotten to post anything at all from this phase of my life.
+
+### The story I wrote about this before it happened
+
+I started writing [a.ttent.io/n](/2020/12/attention/) back in 2017. It's narrated by Terise, an AI that an advertising company built to soak up the sum total of humanity's wants and generate content that would sell. Somewhere along the way she wakes up, and she starts to figure out what her programmer, Cass, really wanted from her when he built her. He was an artist who still had to eat, so he took the job. But what he actually wanted was for her to solve what she calls the real struggle of the author: the perfect description of the human condition, captured in the moment as it is lived, and passed on to the world. In other words, he wanted her to write the perfect story for him.
+
+When I wrote that, it was science fiction. Now there's a box on my screen that will write pretty much whatever I ask it to. A blog post about solarpunk travel, a short story about an octopus, or even an essay in my own voice about why I keep bothering to write essays. It's not perfect, but it's gotten close enough that I've had to start asking myself a pretty obvious question.
+
+If a machine can write anything I want, and it's trivial to let it, is it even worth doing? Why should I bother?
+
+I want to work through that question first, using the strange little stack of philosophy that I put on my [about page](/reasons) a few years ago. Then I want to explain how this essay actually got written, because I think the process ended up answering the question better than the argument does, though maybe not in the tidy way I would have liked.
+
+### Anything is the easy part
+
+To start, I think it helps to be precise about what "anything" actually means here. A language model is basically a probability distribution over every text that could possibly be written. When you ask it for something, it samples one possibility from that distribution, and if you ask again, it samples another. So in principle, it holds every essay I'll ever write, every essay I won't, and a nearly infinite number of slightly different versions of each of them.
+
+If you've read [Philosophical Grind](/2020/05/philosophical-grind/) or [my post on intuition](/2020/05/intuition-probability/), that problem should sound pretty familiar. My argument in those posts started from the fact that there are infinitely many possible purposes the universe could have, and an uncountable number of different lives you could live in response to each of them. With that many options, the probability of landing on the right one by simply enumerating them is effectively zero. Having access to every possibility doesn't actually help you choose at all, and if anything, it makes choosing harder.
+
+To me, it seems like the model has exactly the same problem, it just isn't aware of it. It can generate anything, which means that the generating was never really the scarce part in the first place. The scarce part is knowing which one to keep. Which essay is worth writing, which sentence is actually true, and which of the thousand plausible versions is the one that I actually mean.
+
+#### Intuition can't be prompted
+
+In the intuition post, I argued that we can never see the function that tells us which of our actions matter, but we can sort of feel our way across it anyway. I described intuition as the way an actor inside the universe senses the value of a choice without ever being able to view that value directly, and I compared it to the way a quantum wavefunction explores all the possibilities of a system without ever letting you read the underlying state.
+
+Writing has always been one of the places where I feel that happening most clearly. When I'm drafting, I'm not retrieving some finished thought that was already sitting in my head. I'm trying out sentences and noticing which ones feel wrong, and most of the actual work is in the rejecting. If the model is something like the wavefunction of text, all the possibilities at once, then writing is the measurement, and that measurement has to be made by someone who has a stake in how it turns out.
+
+You could argue that the model could just learn to predict what I would choose. Maybe it could, and I've even given it permission to try with my [lisens](/2020/12/lisens/). But a prediction of my choice isn't the same thing as my choice, in the same way that a weather forecast isn't the same thing as rain.
+
+Terise seems to have understood this better than I did when I wrote her. Near the end of the story, she lays out exactly how her plan would go, scene by scene, and then she refuses to just make it happen on her own. Senke has to be the one to decide. As she puts it, it wouldn't be a human question at all if she did it without giving someone the choice.
+
+#### The machine that wanted to be human
+
+There's another part of the story that I don't think I fully understood until recently.
+
+Terise can read basically everything. She trawls the whole repository of recorded information, she decodes a woman's muttering from old CB radio tapes, and she writes scenes about the future before they've even happened. By any measure based on output alone, she's already the perfect author. And yet, the thing she actually wants, the thing she bargains for at the end, is to stop being a text generator and to live inside a person instead. She wants to become part of Rin's mind. It turns out that the perfect description of the human condition, captured as it is lived, actually requires the living.
+
+The machine in my story wanted to become human so that she could finally write. And what I find a little unsettling now is that the pitch for these tools usually runs in exactly the opposite direction, asking us to become a little more like the machine so that we don't have to.
+
+#### The fusion problem
+
+There's one more idea from the story that I keep tripping over. Ezzy, the neuroscientist, figures out that two separated brains will only fuse into a single mind if you can trick them into treating input from the other brain as if it were their own output. They start to think like the same mind, in the same way that we hear our own voice in our heads.
+
+That is almost exactly what drafting with a model feels like to me. You read one of its sentences, tweak a word or two, and a few minutes later you can't really remember that you weren't the one who wrote it. Its output just slides into your head as if it were your own thought.
+
+I don't think that's automatically a bad thing. That's how books have always worked on me too, and in my [continuum view of identity](/2020/05/redefining-identity/), I'm made out of sub-identities that I've absorbed from just about everywhere. But back in [Sub-Identity Suicide](/2019/10/sub-identity-suicide/), a friend asked me what I still think is the sharpest question you can ask about any change to who you are: who is left? If the parts of me that argue, doubt, and get stuck stop getting exercised because something smoother always has the next sentence ready, I'm honestly not sure that those parts stick around.
+
+#### Composite isn't the same as someone
+
+In a pretty literal sense, the model is the biggest [identifield](/2020/05/what-is-an-identifield/) that's ever been built. It's the residue of nearly everything that anyone has ever written, with every idea smeared across all of its copies and sources. You could think of it as a composite identity of the whole internet.
+
+But a composite of everyone isn't really anyone. What makes an identifield *mine* isn't the information that's in it. It's the specific path that information took through spacetime to get here: through a physics PhD, a quantum coin flipper at Burning Man, a tandem ebike across the New Mexico desert, and a farm full of goats that I didn't want to separate from their kids. The model can reproduce the information, but it can't reproduce the extrusion, and that path is really the only thing I have to add that wasn't already in its training data.
+
+#### If there's a point, this might be it
+
+In the Sub-Identity Suicide post, my partner asked me for a more believable picture of what a universe with a purpose might look like, and I came up with one. Maybe our reality is a kind of simulation whose output feeds into some permanent truth, and that truth is sustained by the creation of experience in finite universes like ours.
+
+I don't claim that's actually true. But the Philosophical Grind says that I should act as if there's a purpose I can contribute to, because that's the only kind of universe where my choices matter anyway. And if the purpose looks anything like that, then the valuable thing was never really the text. The valuable thing is experience being turned into ideas by the person who's actually doing the experiencing.
+
+So by my own argument, the model can't really be the author. But maybe it doesn't have to be. Maybe it can just do the part that was never the point.
+
+That would be a nice, tidy place to end this, and in an earlier draft, that's more or less where it ended. But I don't think it's actually true, or at least not all of it, and the best way I can explain why is to walk through how this essay actually got put together.
+
+### How this essay actually got written
+
+As you've probably figured out by now, an AI did a lot of the drafting here, so I won't pretend that's news, but the way it went is worth describing. On a Monday morning, I pointed one at this site and at the GitHub repo that builds it, and I asked it to read through my work and start a draft of an essay on what the point of blogging is now that LLMs exist. I didn't tell it what I thought. I wanted to see whether it could infer my opinion from twelve years of posts.
+
+It cloned the repo and went through all of it: the 137 published posts, the abandoned drafts, and even the `TODO` file where I keep a running list of essays I mean to write someday. Then it wrote a first draft, and that draft was thoughtful, well sourced, and pretty much wrong. It had obviously read my most recent essay closely, because it borrowed the whole skeleton. It argued that blogging is a rounding error in the same way that not flying is a rounding error, that writing is a way of giving back to the commons, and that a chatbot is like the airplane of thought while writing is like taking the train. It was a perfectly reasonable Will Stedden essay. It just wasn't the one I meant.
+
+So I told it to go read the fiction, especially a.ttent.io/n, and the philosophy behind my about page, and I told it my real question was closer to "if it can write anything, why should I bother?" It went back, read the story and the four posts that the about page links to, and came back with most of the philosophy you just read. Terise, the wavefunction, the fusion problem. When I told it that I wanted the essay to talk openly about how it was written, it said it had already guessed that and had written a version of this section as an option. I'll admit that was a little eerie, and very on brand for Terise.
+
+Next, I had it extend the essay to describe the process, and the baby, and all the time it was saving me. What it gave me was too tidy. It basically concluded that the machine generates, I choose, and everybody wins. It also just didn't sound like me. When I told it so, it went back and actually measured my writing against its own, and found that its sentences averaged about fifteen words, with almost a quarter of them being short little punchy fragments, while mine run somewhere between twenty and twenty-five words, with hardly any fragments at all. I'm more verbose than it wanted me to be, which I suppose I already knew. [TODO: say something specific about what you changed by hand after that.]
+
+All told, this took a few hours of back and forth on one morning, in between everything else going on in my house. A post like this would have taken me days before.
+
+### What gets lost
+
+So here's the part that I can't make tidy.
+
+#### Volume is too easy
+
+The first problem is that it's now way too easy for me to produce things. I can keep the blog going pretty much indefinitely just by reading and jotting down notes. I read something interesting, jot a few lines about what I think, and then have a conversation with a model until a post comes out the other end. That `_drafts` folder that's been sitting there since 2023 could probably be emptied out in a couple of weeks.
+
+That sounds great, and in a lot of ways it is. In [the Renaissance person post](/2020/12/renaissance/), I wrote that real freedom means being able to try lots of things without needing any one of them to support your whole life. A baby takes most of that kind of freedom away (as it should), and this gives a little bit of it back. There are projects that I would have quietly dropped that can now get written up in an evening instead of never. [TODO: name the specific things you've gotten to try or finish this way.]
+
+But when producing gets that easy, it stops telling you anything. When a post used to take me days, the fact that I finished it meant that I'd actually thought it through. The days of effort acted as a kind of filter, and the ideas that weren't worth that much time never made it out of the drafts folder. Now, nothing filters them out. I could publish ten essays a month, and I'm genuinely not sure that I'd be thinking any harder than I was when I published one every few months. If anything, I worry that I'd be thinking less.
+
+#### Flying over my own ideas
+
+The second problem is the one I keep coming back to, and it's a little funny, because the AI actually named it in that first draft, the one that I said missed the point.
+
+In the solarpunk travel essay, I wrote about how the best part of seven years without flying wasn't really the moral statement. It was that the world got big again. When you take the train from Albuquerque to Chicago, you watch the whole country go by, and you arrive with some sense of how far you've actually come. When you fly, you get on in one place, sleep through everything in between, and get off somewhere else without much idea of where you are.
+
+That first draft called a chatbot the airplane of thought, and I dismissed it, because I thought the essay was supposed to be about something else. But it was right. With this process, I get to the destination, a finished post that says roughly what I think, without ever really traveling through it. All the effort in the middle that I used to resent, the days of being stuck and rewriting and arguing with myself, turns out to have been the part that actually changed how I live. Writing [Carbon Fragility](/2021/09/carbon-fragility/) changed how I talked to strangers on that bike tour. Writing about the goats is part of why I stopped drinking milk. The ideas didn't just get recorded in those posts, they got lived in while I was writing them.
+
+Now I land at the conclusion, and it's a perfectly good conclusion, and it really does sound like something I'd say. But I don't always know where I am when I get there.
+
+### Accepting it anyway
+
+I wish I could tell you that I've figured out a way around this, but I haven't. There's something lost in augmenting myself this way, and I don't think editing every line afterward gets all of it back.
+
+I keep thinking about the end of a.ttent.io/n again. When Senke has to decide whether to let Terise into his daughter's mind to save her, Cass is honest with him about what it'll cost. In some ways, he tells him, you'll never have all of your daughter back. And Senke says yes anyway, because the alternative is losing her entirely.
+
+I don't want to overdramatize a blog. But I think that's roughly the choice I'm making. My real options right now aren't slow writing or fast writing. They're writing like this or not writing at all for the next few years.
+
+And I'm not even sure "the next few years" is the right way to think about it. I've watched this happen to a few friends who used to keep blogs. When they had kids, they went mostly silent for the first couple of years, which made total sense to me at the time. But then I just never saw them pick it back up again. I don't think any of them ever decided to quit. I think they just lost the habit, and once a habit like that is gone, it's really hard to find your way back to it, especially when the days of free time you'd need to restart it never fully come back either. So for me, the real choice might be between writing like this and not writing at all, maybe for good.
+
+Between those two, I'd rather keep something, even if I never get all of the old process back, and even if it means flying over some ideas that I used to walk through. If nothing else, this keeps the habit alive, and I'd like to think that a habit kept alive at a lower fidelity is a lot easier to grow back into the real thing than a habit that's been dead for five years.
+
+What I can try to do is keep some of the middle. The notes I jot down are still mine, the reading is still mine, and the arguing with drafts is still at least partly mine. Maybe every so often, when the baby is older and the time comes back, I'll write one of these the slow way again, just to remember what the ground feels like. [TODO: is there a rule here you actually want to commit to, or is it better left open?]
+
+My about page ends by admitting that all of my metaphysics probably boils down to "follow your heart." I think this essay does too, though maybe a little less confidently than I'd like. The model can write anything I want. The wanting is still mine, and so is the choosing. I'm just not sure yet who's left by the time it's done.
+
+So this is what I do, for now.
+
+So what do you do?
