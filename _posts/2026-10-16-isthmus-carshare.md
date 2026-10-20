@@ -16,16 +16,16 @@ I want to write down how it went, partly so the work doesn't just disappear, and
 
 ### The idea
 
-I went car-free back in 2021, and since then I've used Zipcar and other carshares when I really needed a car. They work, sort of. But the cars are never quite where you are. In Madison, Zipcar basically only exists downtown and around campus, so if you live a mile or two out, "carshare" means a bus ride to go pick up your car. Which kind of defeats the purpose.
+My partner and I went fully car-free in 2021 (I was mostly car-free since 2010), and since then I've used Zipcar and other carshares when I really needed a car. They work, sort of. But the cars are never quite where you are. In Madison, Zipcar basically only exists downtown and around campus, so if you live a mile or two out, "carshare" means a bus ride to go pick up your car. Which kind of defeats the purpose.
 
 So my idea was pretty simple. What if everybody on a city block just shared their cars?
 
-Think about a typical block in a neighborhood like Tenney-Lapham. There are maybe a dozen or more households, most of them with one or two cars. The average car owner spends something like $10,000 a year on their car, and that car sits parked [about 95% of the time](https://www.reinventingparking.org/2013/02/cars-are-parked-95-of-time-lets-check.html). If even half of those households pooled their cars into a co-op, with shared ownership, shared insurance, and some lightweight tech to reserve them, you'd have something better than Zipcar could ever give you: a handful of cars within a two-minute walk of your front door, almost always available.
+Think about a typical block in a neighborhood like [Tenney-Lapham](https://www.cityofmadison.com/dpced/planning/documents/plans-projects/neighborhood-plans/TenneyLaphamPlan.pdf). There are maybe a dozen or more households, most of them with one or two cars. The average car owner spends something like $10,000 a year on their car, and that car sits parked [about 95% of the time](https://www.reinventingparking.org/2013/02/cars-are-parked-95-of-time-lets-check.html). If even half of those households pooled their cars into a co-op, with shared ownership, shared insurance, and some lightweight tech to reserve them, you'd have something better than Zipcar could ever give you: a handful of cars within a two-minute walk of your front door, almost always available.
 
 And the economics get better the more cars you convert:
 
-1. **You don't need all the cars.** If ten households pool ten cars, the actual demand can probably be met by three or four of them. You sell the rest, and that money goes back to the members as a payback for joining.
-2. **Fewer cars means less depreciation.** Depreciation is the hidden monster of car ownership. Once you're only owning a third as many cars, the fixed cost per household drops a lot, enough to cover the overhead of insurance, the booking software, and the lockbox.
+1. **You don't need all the cars.** If ten households pool ten cars, the actual demand can probably be met by only five to seven cars. You sell the rest, and that money goes back to the members as a payback for joining.
+2. **Fewer cars means less depreciation.** Depreciation is the hidden monster of car ownership. Once you're owning a third fewer cars, the fixed cost per household drops a lot, enough to cover the overhead of insurance, the booking software, and the lockbox.
 3. **Maintenance becomes a job, not a chore.** Instead of every household separately dealing with oil changes and tire rotations, one member can take the cars in and get paid in free driving credits.
 
 So the operating budget per household should actually come out *lower* than owning your own car, even after you pay for all the coordination. It's better for the climate too. One Dutch study we cited found that car sharers emit 8 to 13% less CO2 per person per year, about half from driving less and half from owning fewer cars. Nothing about this requires a technological breakthrough. It's just a coordination problem, plus some boring legal paperwork.
@@ -50,7 +50,7 @@ I even tried to bootstrap some funding sideways. When I made my [CITY MOTION boa
 
 After the fellowship ended, the project kept going, which is honestly a first for me. In January 2024 we put together a steering committee, and that's where it went from being a fellowship project to being a neighborhood project.
 
-The people who joined made all the difference. Janet Murphy had already been running a carshare at [Arboretum Cohousing](https://www.arboretumcohousing.org/) for years, sharing three cars between about 15 neighbors, and she manages an international group of cohousing carshares. She was basically living proof that the idea worked. Will Ochowicz, who I knew through the Tenney-Lapham neighborhood association and who also helps lead [Madison is for People](https://www.madisonisforpeople.org/), signed on as treasurer and started writing code for the website. Chad stayed on as secretary and "source of ground truth," and Ethan Budreau joined as program manager.
+The people who joined made all the difference. Janet Murphy had already been running a carshare at [Arboretum Cohousing](https://www.arboretumcohousing.org/) for years, sharing three cars between about 15 neighbors, and she manages an [international group of cohousing carshares](https://lists.cohousing.org/archives/cohousing-l/msg50193.html). She was basically living proof that the idea worked. Will Ochowicz, who I knew through the Tenney-Lapham neighborhood association and who also helps lead [Madison is for People](https://www.madisonisforpeople.org/), signed on as treasurer and started writing code for the website. Chad stayed on as secretary and "source of ground truth," and Ethan Budreau joined as program manager.
 
 Over the spring and summer of 2024 we did a whole lot of grown-up business stuff:
 
@@ -88,17 +88,17 @@ I don't regret any of it. I'm proud of how far we got, and I'm really grateful t
 
 ## Why is this so hard?
 
-The part that has stuck with me most isn't the paperwork or the code, it's the conversations. I've been thinking a lot about why something that is so clearly good for the people involved is so hard to get off the ground.
+I've been thinking a lot about why something that is so clearly good for the people involved is so hard to get off the ground. And it really comes down to just a couple core problems:
 
 ### Nobody knows what their car costs
 
-When I did the one-on-one interviews, I would walk people through the actual cost of owning their car: depreciation, insurance, registration, maintenance, gas, parking. Every single person underestimated their cost per mile. Not by a little, but often by half or more. People think of the cost of a car as gas money, because gas is the only part you pay every time you drive. Everything else is paid in big lumps, or never shows up as a bill at all, like depreciation, and so it just kind of vanishes from people's mental accounting.
+When I did the one-on-one interviews, I would walk people through the actual cost of owning their car: depreciation, insurance, registration, maintenance, gas, parking. Every single person underestimated their cost per mile. Not by a little, but often by half or more. People think of the cost of a car as gas money, because gas is the only part you pay every time you drive. Everything else is paid in big lumps, or never shows up as a bill at all, like depreciation, and so it just kind of vanishes from people's mental accounting. Somehow everyone thinks of their car purchase like an investment, even though it is mostly a money pit.
 
-One interview really stuck with me. A younger guy who used his car *extremely* rarely, which is exactly the person a carshare is designed for. Because he barely drove, all those fixed costs got spread over very few miles, so his real cost per mile was enormous. We went through the whole calculation together, and the carshare would have cost him roughly half as much per mile as his own car.
+One interview really stuck with me. A younger guy who used his car *extremely* rarely (exactly the person a carshare is designed for). Because he barely drove, all those fixed costs got spread over very few miles, so his real cost per mile was enormous. We went through the whole calculation together, and the carshare would have cost him roughly half as much per mile as his own car.
 
-But when I told him the carshare's price per mile, he said that was too expensive and he wouldn't do it. Even though his own car was already costing him about twice that. Even though it was cheaper.
+But when I told him the carshare's price per mile, he said that was too expensive and he wouldn't do it. Even though his own car was already costing him about twice that. Even though it was cheaper. Even though we had just laid it all out 5 minutes prior.
 
-I don't think he was being dumb. I think he was being normal. The cost of his own car was invisible, and the cost of the carshare was a number on a screen every time he drove. Owning a thing feels free once you've paid for it, and sharing a thing feels like a fee.
+I don't think he was being dumb (well maybe a little). I think he was being normal. The cost of his own car was invisible, and the cost of the carshare was a number on a screen every time he drove. Owning a thing feels free once you've paid for it, and sharing a thing feels like a fee.
 
 ### Collective goods only ever look like costs
 
@@ -120,17 +120,17 @@ A lot of what makes private car ownership feel easy is that all of those questio
 
 A lot of the advice we got, both during the fellowship and after, was really about how to scale. And I get it, that's how startups are supposed to work. But a cooperative carshare is intentionally non-extractive. The whole point is that the savings go back to the members instead of to investors. There's no 10x return hiding in there, because the "profit" is just people paying less for transportation.
 
-That means it can't be scaled the way the startup world scales things. Zipcar is owned by Avis Budget Group, and it has to make money for Avis. A neighborhood co-op only has to make the cars available and pay the insurance. Those are fundamentally different businesses, even though they look the same from the curb. The way something like this grows isn't by raising a Series A, it's by one neighborhood copying another neighborhood's bylaws. Which is slower, but it's also how Janet's cohousing carshare network ended up spanning five countries.
+That means it can't be scaled the way the startup world scales things. Zipcar is owned by Avis Budget Group, and it has to make money for Avis. A neighborhood co-op only has to make the cars available and pay the insurance. Those are fundamentally different businesses, even though they kind of feel the same to the person using the car. The way something like this grows isn't by raising a Series A, it's by one neighborhood copying another neighborhood's bylaws. Which is slower, but it's also how Janet's cohousing carshare network ended up spanning five countries.
 
 ### The people who get it are often the people who can't organize it
 
-Here's the somber part. A lot of the people I talked to who were most enthusiastically on board were folks who were intrinsically anti-establishment. They loved the idea of a co-op, they hated car companies, and they were totally down to share. But many of them were also, frankly, pretty disorganized. Showing up to meetings, signing contracts, keeping a car clean and returning it on time, those things matter a lot when you're sharing something with your neighbors.
+Here's the somber part. A lot of the people I talked to who were most enthusiastically on board were folks who were intrinsically anti-establishment. They loved the idea of a co-op, they hated car companies, and they were totally down to share. But many of them (with the notable exception of Janet Murphy) were also, frankly, pretty disorganized. Showing up to meetings, signing contracts, keeping a car clean and returning it on time, those things matter a lot when you're sharing something with your neighbors.
 
-Meanwhile the people who were organized and business-like mostly wanted the kind of business they already understood, where somebody makes money. It's really hard to find people who are both organized enough to run something like a business and also don't want it to be extractive. I'll admit I'm not as organized as I wish I was either. A lot of this project was me remembering at 11pm that I'd promised to send someone a draft.
+Meanwhile the people who were organized and business-like mostly wanted the kind of business they already understood, where somebody makes money. It's really hard to find people who are both organized enough to run something like a business and also don't want it to be extractive. I'll admit I'm not as organized as I wish I was either. A lot of this project was me remembering at 11pm that I'd promised to send someone a draft. But honestly, part of the reason that everyone seems disorganized is because they are all doing this at 11 pm after a hard day working for an extractive business elsewhere.
 
 ### Still hopeful
 
-But I don't think this is a dead end. The fact that we got as far as we did, with a handful of volunteers and a $120 lockbox, says a lot. Janet's carshare has been quietly working for years. Co-op carshares like [Modo](https://www.modo.coop/) in Vancouver have been running for decades with thousands of members. The idea works when it gets a foothold.
+I don't think this is a dead end. The fact that we got as far as we did, with a handful of volunteers and a $120 lockbox, says a lot. Janet's carshare has been quietly working for years. Co-op carshares like [Modo](https://www.modo.coop/) in Vancouver have been running for decades with thousands of members. The idea works when it gets a foothold.
 
 What I think needs to happen is for this to move out of the counterculture and into the boring middle class. Not as a protest, but as the obvious financially sensible thing to do, the same way credit unions are just a normal place to get a car loan now. If enough regular households on a regular block figure out that they're spending thousands of dollars a year on a car that mostly sits in the driveway, and that their neighbors are doing the same, then maybe sharing will stop feeling like a cost and start feeling like what it is: owning more, together, for less.
 

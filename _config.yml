@@ -76,3 +76,4 @@ exclude:
   - README.md
   - util
   - TODO
+  - buildit.sh
