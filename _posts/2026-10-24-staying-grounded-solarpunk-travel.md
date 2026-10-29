@@ -16,7 +16,7 @@ For about seven years now, my partner Claire and I have been running a slow expe
 
 Our rule was simple: stay on the ground. No flying. Get places by bike, by train, by bus, or on foot, and if you can't get somewhere that way, maybe you don't need to go there.
 
-The meaning of the project changed a lot while we were in the middle of it. It started out as a very public statement about how living sustainably can be fun and fruitful, but over time it became more about how we wanted to live ourselves.
+The meaning of the project changed a lot while we were in the middle of it. It started out as a very public statement about how living sustainably can be fun and fruitful, but over time it became more about how we wanted to experience the world.
 
 ### The statement
 
@@ -24,7 +24,7 @@ The idea started as a pretty straightforward protest against overconsumption of 
 
 The pandemic hit while we were starting this, and I honestly believed that we were going to come out of it different. People had learned they could work from anywhere, that they didn't need to commute, that the cities were quieter and the air was [cleaner](https://www.nasa.gov/centers-and-facilities/goddard/nasa-satellite-data-show-30-percent-drop-in-air-pollution-over-northeast-u-s/) without all the cars. It didn't seem crazy to think we might redesign life around something like [degrowth](https://en.wikipedia.org/wiki/Degrowth), or at least a little less growth, and that lifestyle changes from people like us would snowball into a systemic change.
 
-Buoyed by this optimism, in June of 2021 we set out on a [solar-powered ebike](/2021/04/ebike-solar-trailer/) [tour of the Pacific Northwest](https://solarpunktravel.org/2021/09/15/a-life-changing-three-months.html) hoping to both live our values and show people what a cool adventure slow travel actually was. By that fall, we'd sold our car and given away half our stuff so that we could keep going. We were visiting cooperatives, working on farms, and documenting how you could travel in a way that would be possible for *everyone* to do. Our [mission statement](https://solarpunktravel.org/regenerative-travel.html) on the site put it as a question:
+Buoyed by this optimism, in June of 2021 we set out on a [solar-powered ebike](/2021/04/ebike-solar-trailer/) [tour of the Pacific Northwest](https://solarpunktravel.org/2021/09/15/a-life-changing-three-months.html) hoping to both live our values and show people what a cool adventure slow travel actually was. By that fall, we'd sold our car and given away half our stuff, and decided to keep going and change our life more permanently. We decided to extend the trip and to slowly migrate to the Midwest so we could live closer to family and build community. We were visiting cooperatives, working on farms, and documenting how you could travel in a way that would be possible for *everyone* to do. Our [mission statement](https://solarpunktravel.org/regenerative-travel.html) on the site put it as a question:
 
 > Could everybody in the world live at the level of consumption that I'm living at for 10 generations without destroying the planet?
 
@@ -62,7 +62,7 @@ Is that a moral way to live? I don't think it is, even if nobody ever catches me
 
 #### Acting as if everyone lived this way
 
-When we wrote our mission question, *could everybody in the world live at the level of consumption that I'm living at for 10 generations*, we didn't think of it as anything in particular. But it's basically a restatement of Kant's [categorical imperative](https://plato.stanford.edu/entries/kant-moral/):
+When we wrote our mission question, *could everybody in the world live at the level of consumption that I'm living at for 10 generations*, we were trying to communicate the notion of fairness succinctly. But I've realized it's also basically a restatement of Kant's [categorical imperative](https://plato.stanford.edu/entries/kant-moral/):
 
 > Act only according to that maxim whereby you can at the same time will that it should become a universal law.
 
@@ -76,19 +76,19 @@ Kant's weakness, at least for me, is that it's all so solitary. It pictures mora
 
 #### Living rightly without reward
 
-I want to be careful here, because "Indigenous philosophy" isn't one thing, and I'm an outsider learning about these traditions secondhand. But a few ideas that come out of specific Indigenous traditions in North America have helped me more than anything in the Western canon.
+I want to be careful here, because "Indigenous philosophy" isn't one thing, and I'm an outsider learning about these traditions secondhand. But I want to mention a few ideas that come out of specific Indigenous traditions in North America that I think also point this out without necessarily getting into all the fancy rhetoric of Kant and Parfit.
 
-The first is the Haudenosaunee [seventh generation principle](https://en.wikipedia.org/wiki/Seven_generation_sustainability), traditionally attributed to the Great Law of Peace: that decisions made today should be weighed against their effect on people seven generations from now. I'll admit it's a little humbling to realize our "10 generations" question was a rough paraphrase of an idea that's been around for centuries.
+The first is the Haudenosaunee [seventh generation principle](https://en.wikipedia.org/wiki/Seven_generation_sustainability), traditionally attributed to the Great Law of Peace: that decisions made today should be weighed against their effect on people seven generations from now. I think this idea has become entrenched enough in the zeitgeist that it influenced our "10 generations" question above.
 
 The second is what the Potawatomi botanist Robin Wall Kimmerer describes in [*Braiding Sweetgrass*](https://milkweed.org/book/braiding-sweetgrass) as the [Honorable Harvest](https://www.upaya.org/2014/06/guidelines-honorable-harvest/), a set of guidelines for taking from the living world: ask permission, take only what you need, never take more than half, use it respectfully, share it, give thanks, and give something back. What strikes me most is her point that these guidelines aren't written down anywhere, or even consistently spoken of as a whole. They're reinforced in small acts of daily life.
 
 That's what's so different from both Kant and from modern Western life. There's no external enforcement and no reward, and nobody is checking. You live rightly because that's what it means to be a member of your community, and your community includes the land, the animals, the people around you, and the people who haven't been born yet.
 
-This is also the kind of morality we kept running into on the road. The rancher who let us leave our solar trailer by the side of his road. The driver who chased us up a mountain road to return a wheel that had fallen off our trailer. The [near-stranger who gave us a ride out of a wildfire evacuation zone](https://solarpunktravel.org/2022/05/22/wildfire-time.html). None of those people were getting anything out of it. They were just doing what you do.
+This is also the kind of morality that I think should be easy to digest in the US. The strange question is: why doesn't the average person see the immorality of living beyond a sustainable level?
 
 #### The trouble with homo economicus
 
-Contrast that with the model of a person that most of Western economics is built on, [*homo economicus*](https://en.wikipedia.org/wiki/Homo_economicus): a rational, self-interested agent who's always maximizing their own utility. Under that model, my decision not to fly isn't noble, it's just irrational. I pay the full cost of the sacrifice, and everyone else shares the tiny benefit. Standard economics would say the correct move is to [free ride](https://en.wikipedia.org/wiki/Free-rider_problem): fly, and let other people worry about the atmosphere.
+I think the problem might stem from the mental model of the human psyche that most of Western economics is built on, [*homo economicus*](https://en.wikipedia.org/wiki/Homo_economicus): a rational, self-interested agent who's always maximizing their own utility. Under that model, my decision not to fly isn't noble, it's just irrational. I pay the full cost of the sacrifice, and everyone else shares the tiny benefit. Standard economics would say the correct move is to [free ride](https://en.wikipedia.org/wiki/Free-rider_problem): fly, and let other people worry about the atmosphere.
 
 Scale that logic up and you get Garrett Hardin's [tragedy of the commons](https://en.wikipedia.org/wiki/Tragedy_of_the_commons), the idea that any shared resource will inevitably be destroyed because each individual is better off taking a little more. The atmosphere is the biggest commons there is, so by that story, we're doomed.
 
@@ -108,17 +108,9 @@ None of this would have surprised Aristotle, whose idea of [*eudaimonia*](https:
 
 And then there's the personal evidence, which is admittedly anecdotal. I've written before about [carbon fragility](/2021/09/carbon-fragility/), the defensiveness that people feel when the gap between what they know and how they live gets pointed out. I think living with that gap is uncomfortable, and it takes ongoing effort to keep the [cognitive dissonance](https://en.wikipedia.org/wiki/Cognitive_dissonance) out of mind. When we stopped flying, a lot of that went away. The way I lived matched what I believed a lot better, and I didn't have to spend as much energy explaining it to myself.
 
-It's not free. It costs real things, and I'll get to that at the end. But in the same way that I argued in [Philosophical Grind](/2020/05/philosophical-grind/) that we should act as if our actions matter, because that's the only kind of universe where acting could matter anyway, I think we should act as if morality and happiness point in the same direction. In my experience, they mostly do.
+It's not free. It costs real things, and I'll get to that at the end. But in the same way that I argued in [Philosophical Grind](/2020/05/philosophical-grind/) that we should act as if our actions matter, because that's the only kind of universe where acting could matter anyway, I think we should act as if morality and happiness point in the same direction. 
 
-#### The goats
-
-Where this got the most concrete for us was with animals.
-
-On Shaw Island, while working on [a farm in the San Juans](https://solarpunktravel.org/2021/09/15/a-life-changing-three-months.html), we took part in slaughtering the meat birds. I'd eaten meat my whole life, and I'd never once been in the room for the part that makes meat possible. After that, we started the slow process of going vegan.
-
-But the thing that really solidified it came a few months later, at [Our Desert Homestead](https://solarpunktravel.org/2022/03/30/winter-in-desert.html), an off-grid farm out past Rio Rancho in New Mexico. One of our jobs there was taking the baby goats away from their mothers so that we could have the milk. That's [standard practice in dairy](https://pmc.ncbi.nlm.nih.gov/articles/PMC9311730/), for goats and for cows, and it's something I'd known in the abstract for years. Doing it ourselves made it a lot harder to ignore. The milk we were drinking was the milk those kids would have been drinking.
-
-It's exactly the same structure as the flying problem. My one glass of milk doesn't change the dairy industry. The honest math says it's a rounding error. But Kant would ask whether I could will that everyone take the baby away so they can have the milk, and Kimmerer would ask whether it was really mine to take in the first place. And I think the answer to both is pretty clear. I can't stop the [industry](https://ourworldindata.org/food-ghg-emissions), but I don't have to be the reason it exists.
+I know I have a experience and viewpoint on the world that might differ from the norm, but I can't quite get to a point of contentment and happiness without morality. And, as I'll describe in the next part, they may be coupled in more tangible ways than just my own self-knowledge of my moral superiority.
 
 ### Part 2: The world is big
 
