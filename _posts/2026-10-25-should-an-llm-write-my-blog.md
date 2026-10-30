@@ -133,7 +133,7 @@ And I'm not even sure "the next few years" is the right way to think about it. I
 
 Between those two, I'd rather keep something, even if I never get all of the old process back, and even if it means flying over some ideas that I used to walk through. If nothing else, this keeps the habit alive, and I'd like to think that a habit kept alive at a lower fidelity is a lot easier to grow back into the real thing than a habit that's been dead for five years.
 
-What I can try to do is keep some of the middle. The notes I jot down are still mine, the reading is still mine, and the arguing with drafts is still at least partly mine. Maybe every so often, when the baby is older and the time comes back, I'll write one of these the slow way again, just to remember what the ground feels like. [TODO: is there a rule here you actually want to commit to, or is it better left open?]
+What I can try to do is keep some of the middle. The notes I jot down are still mine, the reading is still mine, and the arguing with drafts is still at least partly mine. Maybe every so often, when the baby is older and the time comes back, I'll write one of these the slow way again, just to remember what the ground feels like. There's a local writing group that I'd like to take my baby too so we can "write" together, and I'll be doing that with paper and pen.  That should hopefully keep the real habit alive.
 
 My about page ends by admitting that all of my metaphysics probably boils down to "follow your heart." I think this essay does too, though maybe a little less confidently than I'd like. The model can write anything I want. The wanting is still mine, and so is the choosing. I'm just not sure yet who's left by the time it's done.
 
