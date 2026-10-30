@@ -5,9 +5,533 @@
     <description>just your standard information identity spacetime field</description>
     <link>https://opus.stedden.org</link>
     <atom:link href="https://opus.stedden.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 19 Oct 2026 20:43:02 -0700</pubDate>
-    <lastBuildDate>Mon, 19 Oct 2026 20:43:02 -0700</lastBuildDate>
+    <pubDate>Fri, 30 Oct 2026 09:13:54 -0700</pubDate>
+    <lastBuildDate>Fri, 30 Oct 2026 09:13:54 -0700</lastBuildDate>
     <generator>Jekyll v4.4.1</generator>
+    
+      <item>
+        <image>https://opus.stedden.org/assets/images/2026/jerome_coffee.jpg</image>
+        <title>Should an LLM write my blog now?</title>
+        <description>&lt;p&gt;Back in early 2020, I spent a couple of months building a &lt;a href=&quot;/2020/02/combining-gpt-2-and-bert/&quot;&gt;reddit comment bot&lt;/a&gt; out of GPT-2 and BERT, which at the time were about the most impressive language models that anyone outside of a big lab could get their hands on. I fine-tuned GPT-2 on a few years of comments from &lt;a href=&quot;https://www.reddit.com/r/writing/&quot;&gt;subreddits&lt;/a&gt; &lt;a href=&quot;https://www.reddit.com/r/sciencefiction/&quot;&gt;I&lt;/a&gt; &lt;a href=&quot;https://www.reddit.com/r/MachineLearning/&quot;&gt;liked&lt;/a&gt;, trained a couple of BERT classifiers to throw out the replies that sounded too robotic and keep the ones it predicted would get the most upvotes, and then let it loose under the name tupperware-party. I was pretty upfront about the fact that one of the goals was to replace me. I wrote at the time that I’d “been pretty much terrible at interacting on social media so I figured maybe I could automate the problem away,” and the idea was that a bot trained on the kinds of conversations I cared about could keep me active online without me having to put in so much effort.&lt;/p&gt;
+
+&lt;p&gt;It sort of worked, which was the unsettling part. Most of what GPT-2 generated was nonsense, but once the classifiers picked out the best of the bunch, people replied to it as if it were a slightly confused person, and I ended up &lt;a href=&quot;/2020/03/building-an-AI-chatbot/&quot;&gt;writing a whole post&lt;/a&gt; about how that experience convinced me to tie my real identity to everything I put online. Around the same time I was also working on &lt;a href=&quot;/2020/12/analyzing-attention/&quot;&gt;a.ttent.io/n&lt;/a&gt;, a short story website that tracked how far each reader scrolled so that I could rewrite the story to hold their attention better, so I was really coming at the same question from both directions: could a machine stand in for the writer, and could the writing be tuned by the readers instead of by me.&lt;/p&gt;
+
+&lt;p&gt;Six years later, all of that is trivial. What took me weeks of wrangling BigQuery tables, Colab notebooks, and two separate classifiers can now be done in an afternoon, and the output no longer sounds like a slightly confused person, it honestly sounds pretty good. You can fine-tune an LLM on a pile of everything you’ve ever written, or even just hand it the pile, and have it match your voice closely enough that most people wouldn’t notice (and, surprise surprise, that’s exactly what I’m doing right now).&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;img alt=&quot;A remix of Caravaggio&apos;s painting Saint Jerome Writing. The old saint in his red robe sits at a dark wooden desk with a skull and stacks of books, but instead of writing he is leaning back with his eyes closed, sipping from a steaming white coffee mug, while the quill pen stands upright on the open page and writes by itself.&quot; src=&quot;/assets/images/2026/jerome_coffee.jpg&quot; /&gt;
+  &lt;figcaption&gt;
+    Caravaggio&apos;s &lt;a href=&quot;https://en.wikipedia.org/wiki/Saint_Jerome_Writing&quot;&gt;Saint Jerome Writing&lt;/a&gt; (1605–06), remixed with a local copy of FLUX.2
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;And I have a much better reason to want it now than I did in 2020, because I have a baby now. She’s ten months old and just starting to take her first steps, which means most of my waking hours outside of work go to keeping her entertained and keeping our life at least a little bit sane while she toddles around the house tearing everything apart. A real post on here has always taken me days of work, not days of typing exactly, but days of carrying an idea around in my head, writing a messy draft, hating it, rewriting it, chasing down links to back up some claim I half remembered, and then rewriting it again once I finally figured out what I was actually trying to say. The essay about &lt;a href=&quot;/2026/10/staying-grounded-solarpunk-travel/&quot;&gt;solarpunk travel&lt;/a&gt; that I posted yesterday sat in my head for years without ever making it onto the page, and I still have a drafts folder full of essays about co-ops and economics that I started back in 2023 and never found the time to finish. With a toddler in the house, those days of slow work just don’t exist anymore, and it isn’t really a choice. What I have left is my commute and whatever energy I can scrape together after she’s asleep, if I have any at all. So sometime in the last ten months, I quietly accepted that this blog was probably done, at least for a good long while, unless I was willing to let something else do most of the work.&lt;/p&gt;
+
+&lt;p&gt;So I figured the blog was going to stop. Except that it didn’t, and the reason it didn’t is the very thing I’ve always been the most suspicious of. In fact, neither of my last two posts, the &lt;a href=&quot;/2026/10/staying-grounded-solarpunk-travel/&quot;&gt;solarpunk travel essay&lt;/a&gt; and the write-up of &lt;a href=&quot;/2026/10/isthmus-carshare/&quot;&gt;Isthmus Carshare&lt;/a&gt;, would ever have been written without it, and neither would the one you’re reading right now. And if I’m being honest with myself, I probably wouldn’t have gotten to post anything at all from this phase of my life.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-story-i-wrote-about-this-before-it-happened&quot;&gt;The story I wrote about this before it happened&lt;/h3&gt;
+
+&lt;p&gt;I started writing &lt;a href=&quot;/2020/12/attention/&quot;&gt;a.ttent.io/n&lt;/a&gt; back in 2017. It’s narrated by Terise, an AI that an advertising company built to soak up the sum total of humanity’s wants and generate content that would sell. Somewhere along the way she wakes up, and she starts to figure out what her programmer, Cass, really wanted from her when he built her. He was an artist who still had to eat, so he took the job. But what he actually wanted was for her to solve what she calls the real struggle of the author: the perfect description of the human condition, captured in the moment as it is lived, and passed on to the world. In other words, he wanted her to write the perfect story for him.&lt;/p&gt;
+
+&lt;p&gt;When I wrote that, it was science fiction. Now there’s a box on my screen that will write pretty much whatever I ask it to. A blog post about solarpunk travel, a short story about an octopus, or even an essay in my own voice about why I keep bothering to write essays. It’s not perfect, but it’s gotten close enough that I’ve had to start asking myself a pretty obvious question.&lt;/p&gt;
+
+&lt;p&gt;If a machine can write anything I want, and it’s trivial to let it, is it even worth doing? Why should I bother?&lt;/p&gt;
+
+&lt;p&gt;I want to work through that question first, using the strange little stack of philosophy that I put on my &lt;a href=&quot;/reasons&quot;&gt;about page&lt;/a&gt; a few years ago. Then I want to explain how this essay actually got written, because I think the process ended up answering the question better than the argument does, though maybe not in the tidy way I would have liked.&lt;/p&gt;
+
+&lt;h3 id=&quot;anything-is-the-easy-part&quot;&gt;Anything is the easy part&lt;/h3&gt;
+
+&lt;p&gt;To start, I think it helps to be precise about what “anything” actually means here. A language model is basically a probability distribution over every text that could possibly be written. When you ask it for something, it samples one possibility from that distribution, and if you ask again, it samples another. So in principle, it holds every essay I’ll ever write, every essay I won’t, and a nearly infinite number of slightly different versions of each of them.&lt;/p&gt;
+
+&lt;p&gt;If you’ve read &lt;a href=&quot;/2020/05/philosophical-grind/&quot;&gt;Philosophical Grind&lt;/a&gt; or &lt;a href=&quot;/2020/05/intuition-probability/&quot;&gt;my post on intuition&lt;/a&gt;, that problem should sound pretty familiar. My argument in those posts started from the fact that there are infinitely many possible purposes the universe could have, and an uncountable number of different lives you could live in response to each of them. With that many options, the probability of landing on the right one by simply enumerating them is effectively zero. Having access to every possibility doesn’t actually help you choose at all, and if anything, it makes choosing harder.&lt;/p&gt;
+
+&lt;p&gt;To me, it seems like the model has exactly the same problem, it just isn’t aware of it. It can generate anything, which means that the generating was never really the scarce part in the first place. The scarce part is knowing which one to keep. Which essay is worth writing, which sentence is actually true, and which of the thousand plausible versions is the one that I actually mean.&lt;/p&gt;
+
+&lt;h4 id=&quot;intuition-cant-be-prompted&quot;&gt;Intuition can’t be prompted&lt;/h4&gt;
+
+&lt;p&gt;In the intuition post, I argued that we can never see the function that tells us which of our actions matter, but we can sort of feel our way across it anyway. I described intuition as the way an actor inside the universe senses the value of a choice without ever being able to view that value directly, and I compared it to the way a quantum wavefunction explores all the possibilities of a system without ever letting you read the underlying state.&lt;/p&gt;
+
+&lt;p&gt;Writing has always been one of the places where I feel that happening most clearly. When I’m drafting, I’m not retrieving some finished thought that was already sitting in my head. I’m trying out sentences and noticing which ones feel wrong, and most of the actual work is in the rejecting. If the model is something like the wavefunction of text, all the possibilities at once, then writing is the measurement, and that measurement has to be made by someone who has a stake in how it turns out.&lt;/p&gt;
+
+&lt;p&gt;You could argue that the model could just learn to predict what I would choose. Maybe it could, and I’ve even given it permission to try with my &lt;a href=&quot;/2020/12/lisens/&quot;&gt;lisens&lt;/a&gt;. But a prediction of my choice isn’t the same thing as my choice, in the same way that a weather forecast isn’t the same thing as rain.&lt;/p&gt;
+
+&lt;p&gt;Terise seems to have understood this better than I did when I wrote her. Near the end of the story, she lays out exactly how her plan would go, scene by scene, and then she refuses to just make it happen on her own. Senke has to be the one to decide. As she puts it, it wouldn’t be a human question at all if she did it without giving someone the choice.&lt;/p&gt;
+
+&lt;h4 id=&quot;the-machine-that-wanted-to-be-human&quot;&gt;The machine that wanted to be human&lt;/h4&gt;
+
+&lt;p&gt;There’s another part of the story that I don’t think I fully understood until recently.&lt;/p&gt;
+
+&lt;p&gt;Terise can read basically everything. She trawls the whole repository of recorded information, she decodes a woman’s muttering from old CB radio tapes, and she writes scenes about the future before they’ve even happened. By any measure based on output alone, she’s already the perfect author. And yet, the thing she actually wants, the thing she bargains for at the end, is to stop being a text generator and to live inside a person instead. She wants to become part of Rin’s mind. It turns out that the perfect description of the human condition, captured as it is lived, actually requires the living.&lt;/p&gt;
+
+&lt;p&gt;The machine in my story wanted to become human so that she could finally write. And what I find a little unsettling now is that the pitch for these tools usually runs in exactly the opposite direction, asking us to become a little more like the machine so that we don’t have to.&lt;/p&gt;
+
+&lt;h4 id=&quot;the-fusion-problem&quot;&gt;The fusion problem&lt;/h4&gt;
+
+&lt;p&gt;There’s one more idea from the story that I keep tripping over. Ezzy, the neuroscientist, figures out that two separated brains will only fuse into a single mind if you can trick them into treating input from the other brain as if it were their own output. They start to think like the same mind, in the same way that we hear our own voice in our heads.&lt;/p&gt;
+
+&lt;p&gt;That is almost exactly what drafting with a model feels like to me. You read one of its sentences, tweak a word or two, and a few minutes later you can’t really remember that you weren’t the one who wrote it. Its output just slides into your head as if it were your own thought.&lt;/p&gt;
+
+&lt;p&gt;I don’t think that’s automatically a bad thing. That’s how books have always worked on me too, and in my &lt;a href=&quot;/2020/05/redefining-identity/&quot;&gt;continuum view of identity&lt;/a&gt;, I’m made out of sub-identities that I’ve absorbed from just about everywhere. But back in &lt;a href=&quot;/2019/10/sub-identity-suicide/&quot;&gt;Sub-Identity Suicide&lt;/a&gt;, a friend asked me what I still think is the sharpest question you can ask about any change to who you are: who is left? If the parts of me that argue, doubt, and get stuck stop getting exercised because something smoother always has the next sentence ready, I’m honestly not sure that those parts stick around.&lt;/p&gt;
+
+&lt;h4 id=&quot;composite-isnt-the-same-as-someone&quot;&gt;Composite isn’t the same as someone&lt;/h4&gt;
+
+&lt;p&gt;In a pretty literal sense, the model is the biggest &lt;a href=&quot;/2020/05/what-is-an-identifield/&quot;&gt;identifield&lt;/a&gt; that’s ever been built. It’s the residue of nearly everything that anyone has ever written, with every idea smeared across all of its copies and sources. You could think of it as a composite identity of the whole internet.&lt;/p&gt;
+
+&lt;p&gt;But a composite of everyone isn’t really anyone. What makes an identifield &lt;em&gt;mine&lt;/em&gt; isn’t the information that’s in it. It’s the specific path that information took through spacetime to get here: through a physics PhD, a quantum coin flipper at Burning Man, a tandem ebike across the New Mexico desert, and a farm full of goats that I didn’t want to separate from their kids. The model can reproduce the information, but it can’t reproduce the extrusion, and that path is really the only thing I have to add that wasn’t already in its training data.&lt;/p&gt;
+
+&lt;h4 id=&quot;if-theres-a-point-this-might-be-it&quot;&gt;If there’s a point, this might be it&lt;/h4&gt;
+
+&lt;p&gt;In the Sub-Identity Suicide post, my partner asked me for a more believable picture of what a universe with a purpose might look like, and I came up with one. Maybe our reality is a kind of simulation whose output feeds into some permanent truth, and that truth is sustained by the creation of experience in finite universes like ours.&lt;/p&gt;
+
+&lt;p&gt;I don’t claim that’s actually true. But the Philosophical Grind says that I should act as if there’s a purpose I can contribute to, because that’s the only kind of universe where my choices matter anyway. And if the purpose looks anything like that, then the valuable thing was never really the text. The valuable thing is experience being turned into ideas by the person who’s actually doing the experiencing.&lt;/p&gt;
+
+&lt;p&gt;So by my own argument, the model can’t really be the author. But maybe it doesn’t have to be. Maybe it can just do the part that was never the point.&lt;/p&gt;
+
+&lt;p&gt;That would be a nice, tidy place to end this, and in an earlier draft, that’s more or less where it ended. But I don’t think it’s actually true, or at least not all of it, and the best way I can explain why is to walk through how this essay actually got put together.&lt;/p&gt;
+
+&lt;h3 id=&quot;how-this-essay-actually-got-written&quot;&gt;How this essay actually got written&lt;/h3&gt;
+
+&lt;p&gt;As you’ve probably figured out by now, an AI did a lot of the drafting here, so I won’t pretend that’s news, but the way it went is worth describing. On a Monday morning, I pointed one at this site and at the GitHub repo that builds it, and I asked it to read through my work and start a draft of an essay on what the point of blogging is now that LLMs exist. I didn’t tell it what I thought. I wanted to see whether it could infer my opinion from twelve years of posts.&lt;/p&gt;
+
+&lt;p&gt;It cloned the repo and went through all of it: the 137 published posts, the abandoned drafts, and even the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TODO&lt;/code&gt; file where I keep a running list of essays I mean to write someday. Then it wrote a first draft, and that draft was thoughtful, well sourced, and pretty much wrong. It had obviously read my most recent essay closely, because it borrowed the whole skeleton. It argued that blogging is a rounding error in the same way that not flying is a rounding error, that writing is a way of giving back to the commons, and that a chatbot is like the airplane of thought while writing is like taking the train. It was a perfectly reasonable Will Stedden essay. It just wasn’t the one I meant.&lt;/p&gt;
+
+&lt;p&gt;So I told it to go read the fiction, especially a.ttent.io/n, and the philosophy behind my about page, and I told it my real question was closer to “if it can write anything, why should I bother?” It went back, read the story and the four posts that the about page links to, and came back with most of the philosophy you just read. Terise, the wavefunction, the fusion problem. When I told it that I wanted the essay to talk openly about how it was written, it said it had already guessed that and had written a version of this section as an option. I’ll admit that was a little eerie, and very on brand for Terise.&lt;/p&gt;
+
+&lt;p&gt;Next, I had it extend the essay to describe the process, and the baby, and all the time it was saving me. What it gave me was too tidy. It basically concluded that the machine generates, I choose, and everybody wins. It also just didn’t sound like me. When I told it so, it went back and actually measured my writing against its own, and found that its sentences averaged about fifteen words, with almost a quarter of them being short little punchy fragments, while mine run somewhere between twenty and twenty-five words, with hardly any fragments at all. I’m more verbose than it wanted me to be, which I suppose I already knew. [TODO: say something specific about what you changed by hand after that.]&lt;/p&gt;
+
+&lt;p&gt;All told, this took a few hours of back and forth on one morning, in between everything else going on in my house. A post like this would have taken me days before.&lt;/p&gt;
+
+&lt;h3 id=&quot;what-gets-lost&quot;&gt;What gets lost&lt;/h3&gt;
+
+&lt;p&gt;So here’s the part that I can’t make tidy.&lt;/p&gt;
+
+&lt;h4 id=&quot;volume-is-too-easy&quot;&gt;Volume is too easy&lt;/h4&gt;
+
+&lt;p&gt;The first problem is that it’s now way too easy for me to produce things. I can keep the blog going pretty much indefinitely just by reading and jotting down notes. I read something interesting, jot a few lines about what I think, and then have a conversation with a model until a post comes out the other end. That &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_drafts&lt;/code&gt; folder that’s been sitting there since 2023 could probably be emptied out in a couple of weeks.&lt;/p&gt;
+
+&lt;p&gt;That sounds great, and in a lot of ways it is. In &lt;a href=&quot;/2020/12/renaissance/&quot;&gt;the Renaissance person post&lt;/a&gt;, I wrote that real freedom means being able to try lots of things without needing any one of them to support your whole life. A baby takes most of that kind of freedom away (as it should), and this gives a little bit of it back. There are projects that I would have quietly dropped that can now get written up in an evening instead of never. [TODO: name the specific things you’ve gotten to try or finish this way.]&lt;/p&gt;
+
+&lt;p&gt;But when producing gets that easy, it stops telling you anything. When a post used to take me days, the fact that I finished it meant that I’d actually thought it through. The days of effort acted as a kind of filter, and the ideas that weren’t worth that much time never made it out of the drafts folder. Now, nothing filters them out. I could publish ten essays a month, and I’m genuinely not sure that I’d be thinking any harder than I was when I published one every few months. If anything, I worry that I’d be thinking less.&lt;/p&gt;
+
+&lt;h4 id=&quot;flying-over-my-own-ideas&quot;&gt;Flying over my own ideas&lt;/h4&gt;
+
+&lt;p&gt;The second problem is the one I keep coming back to, and it’s a little funny, because the AI actually named it in that first draft, the one that I said missed the point.&lt;/p&gt;
+
+&lt;p&gt;In the solarpunk travel essay, I wrote about how the best part of seven years without flying wasn’t really the moral statement. It was that the world got big again. When you take the train from Albuquerque to Chicago, you watch the whole country go by, and you arrive with some sense of how far you’ve actually come. When you fly, you get on in one place, sleep through everything in between, and get off somewhere else without much idea of where you are.&lt;/p&gt;
+
+&lt;p&gt;That first draft called a chatbot the airplane of thought, and I dismissed it, because I thought the essay was supposed to be about something else. But it was right. With this process, I get to the destination, a finished post that says roughly what I think, without ever really traveling through it. All the effort in the middle that I used to resent, the days of being stuck and rewriting and arguing with myself, turns out to have been the part that actually changed how I live. Writing &lt;a href=&quot;/2021/09/carbon-fragility/&quot;&gt;Carbon Fragility&lt;/a&gt; changed how I talked to strangers on that bike tour. Writing about the goats is part of why I stopped drinking milk. The ideas didn’t just get recorded in those posts, they got lived in while I was writing them.&lt;/p&gt;
+
+&lt;p&gt;Now I land at the conclusion, and it’s a perfectly good conclusion, and it really does sound like something I’d say. But I don’t always know where I am when I get there.&lt;/p&gt;
+
+&lt;h3 id=&quot;accepting-it-anyway&quot;&gt;Accepting it anyway&lt;/h3&gt;
+
+&lt;p&gt;I wish I could tell you that I’ve figured out a way around this, but I haven’t. There’s something lost in augmenting myself this way, and I don’t think editing every line afterward gets all of it back.&lt;/p&gt;
+
+&lt;p&gt;I keep thinking about the end of a.ttent.io/n again. When Senke has to decide whether to let Terise into his daughter’s mind to save her, Cass is honest with him about what it’ll cost. In some ways, he tells him, you’ll never have all of your daughter back. And Senke says yes anyway, because the alternative is losing her entirely.&lt;/p&gt;
+
+&lt;p&gt;I don’t want to overdramatize a blog. But I think that’s roughly the choice I’m making. My real options right now aren’t slow writing or fast writing. They’re writing like this or not writing at all for the next few years.&lt;/p&gt;
+
+&lt;p&gt;And I’m not even sure “the next few years” is the right way to think about it. I’ve watched this happen to a few friends who used to keep blogs. When they had kids, they went mostly silent for the first couple of years, which made total sense to me at the time. But then I just never saw them pick it back up again. I don’t think any of them ever decided to quit. I think they just lost the habit, and once a habit like that is gone, it’s really hard to find your way back to it, especially when the days of free time you’d need to restart it never fully come back either. So for me, the real choice might be between writing like this and not writing at all, maybe for good.&lt;/p&gt;
+
+&lt;p&gt;Between those two, I’d rather keep something, even if I never get all of the old process back, and even if it means flying over some ideas that I used to walk through. If nothing else, this keeps the habit alive, and I’d like to think that a habit kept alive at a lower fidelity is a lot easier to grow back into the real thing than a habit that’s been dead for five years.&lt;/p&gt;
+
+&lt;p&gt;What I can try to do is keep some of the middle. The notes I jot down are still mine, the reading is still mine, and the arguing with drafts is still at least partly mine. Maybe every so often, when the baby is older and the time comes back, I’ll write one of these the slow way again, just to remember what the ground feels like. [TODO: is there a rule here you actually want to commit to, or is it better left open?]&lt;/p&gt;
+
+&lt;p&gt;My about page ends by admitting that all of my metaphysics probably boils down to “follow your heart.” I think this essay does too, though maybe a little less confidently than I’d like. The model can write anything I want. The wanting is still mine, and so is the choosing. I’m just not sure yet who’s left by the time it’s done.&lt;/p&gt;
+
+&lt;p&gt;So this is what I do, for now.&lt;/p&gt;
+
+&lt;p&gt;So what do you do?&lt;/p&gt;
+</description>
+        <pubDate>Sun, 25 Oct 2026 00:00:00 -0700</pubDate>
+        <link>https://opus.stedden.org/2026/10/should-an-llm-write-my-blog/</link>
+        <guid isPermaLink="true">https://opus.stedden.org/2026/10/should-an-llm-write-my-blog/</guid>
+        
+        <category>philosophy</category>
+        
+        <category>writing</category>
+        
+        <category>machine learning</category>
+        
+        
+      </item>
+    
+      <item>
+        <image>https://opus.stedden.org/assets/images/2026/slow/mendocino.jpg</image>
+        <title>An experiment in staying grounded, seven years of solarpunk travel</title>
+        <description>&lt;p&gt;For about seven years now, my partner Claire and I have been running a slow experiment that we eventually started calling &lt;a href=&quot;https://solarpunktravel.org&quot;&gt;Solarpunk Travel&lt;/a&gt;. From the outside it mostly looked like a sustainable travel blog and social media account. But the longer we did it, the more I’ve come to think of it as something closer to a piece of durational art, in the spirit of something like &lt;a href=&quot;https://en.wikipedia.org/wiki/Tehching_Hsieh&quot;&gt;Tehching Hsieh’s one-year performances&lt;/a&gt;, where the work isn’t any single object but the act of living by a rule for a long time and seeing what it does to you.&lt;/p&gt;
+
+&lt;p&gt;Our rule was simple: stay on the ground. No flying. Get places by bike, by train, by bus, or on foot, and if it’s too hard to get somewhere that way, maybe we didn’t really need to be there that badly anyway.&lt;/p&gt;
+
+&lt;p&gt;The meaning of the project changed a lot while we were in the middle of it. It started out as a very public statement about how living sustainably can be fun and fruitful, but over time it became more about how we wanted to experience the world.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-statement&quot;&gt;The statement&lt;/h3&gt;
+
+&lt;p&gt;The idea started as a pretty straightforward protest against overconsumption of energy. Flying is &lt;a href=&quot;https://ourworldindata.org/travel-carbon-footprint&quot;&gt;one&lt;/a&gt; of the &lt;a href=&quot;https://thetyee.ca/Opinion/2016/02/17/Climate-Scientist-No-Fly/&quot;&gt;single&lt;/a&gt; &lt;a href=&quot;https://ourworldindata.org/co2-emissions-from-aviation&quot;&gt;most&lt;/a&gt; energy-intensive things a normal person can do. A cross-country round trip can easily burn through a larger share of your &lt;a href=&quot;https://hotorcool.org/hc-projects/1-5-degree-lifestyles&quot;&gt;personal carbon budget&lt;/a&gt; than months of everything else you do. And in 2019 there was a growing &lt;a href=&quot;https://flightfree.org/&quot;&gt;flight-free movement&lt;/a&gt; out of Sweden, people talking about &lt;a href=&quot;https://en.wikipedia.org/wiki/Flight_shame&quot;&gt;&lt;em&gt;flygskam&lt;/em&gt;&lt;/a&gt;, slow travel getting &lt;a href=&quot;https://www.cnn.com/travel/article/train-travel-flying-climate-scn-intl-c2e&quot;&gt;written up in magazines&lt;/a&gt;. We took the pledge that year, inspired in part by climate scientist &lt;a href=&quot;https://thetyee.ca/Opinion/2016/02/17/Climate-Scientist-No-Fly/&quot;&gt;Peter Kalmus&lt;/a&gt;, and eventually even ended up &lt;a href=&quot;https://www.sierraclub.org/sierra/these-americans-quit-flying-planet&quot;&gt;in&lt;/a&gt; &lt;a href=&quot;https://www.cnn.com/travel/article/lbg-iyw-flight-free-travel/index.html&quot;&gt;the&lt;/a&gt; magazines ourselves. I even got Jeff Dean to sign a petition to make ML conferences allow virtual presentation. It felt like we could be part of something.&lt;/p&gt;
+
+&lt;p&gt;The pandemic hit while we were starting this, and I honestly believed that we were going to come out of it different. People had learned they could work from anywhere, that they didn’t need to commute, that the cities were quieter and the air was &lt;a href=&quot;https://www.nasa.gov/centers-and-facilities/goddard/nasa-satellite-data-show-30-percent-drop-in-air-pollution-over-northeast-u-s/&quot;&gt;cleaner&lt;/a&gt; without all the cars. It didn’t seem crazy to think we might redesign life around something like &lt;a href=&quot;https://en.wikipedia.org/wiki/Degrowth&quot;&gt;degrowth&lt;/a&gt;, or at least a little less growth, and that lifestyle changes from people like us would snowball into a systemic change.&lt;/p&gt;
+
+&lt;p&gt;Buoyed by this optimism, in June of 2021 we set out on a &lt;a href=&quot;/2021/04/ebike-solar-trailer/&quot;&gt;solar-powered ebike&lt;/a&gt; &lt;a href=&quot;https://solarpunktravel.org/2021/09/15/a-life-changing-three-months.html&quot;&gt;tour of the Pacific Northwest&lt;/a&gt; hoping to both live our values and show people what a cool adventure slow travel actually was. By that fall, we’d sold our car and given away half our stuff, and decided to keep going and change our life more permanently. We decided to extend the trip and to slowly migrate to the Midwest so we could live closer to family and build community. We were visiting cooperatives, working on farms, and documenting how you could travel in a way that would be possible for &lt;em&gt;everyone&lt;/em&gt; to do. Our &lt;a href=&quot;https://solarpunktravel.org/regenerative-travel.html&quot;&gt;mission statement&lt;/a&gt; on the site put it as a question:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Could everybody in the world live at the level of consumption that I’m living at for 10 generations without destroying the planet?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Along the way, we met a lot of people who were genuinely living that answer. &lt;a href=&quot;https://solarpunktravel.org/2021/09/15/a-life-changing-three-months.html&quot;&gt;Farmers on the San Juan Islands&lt;/a&gt;, &lt;a href=&quot;https://solarpunktravel.org/2022/03/30/winter-in-desert.html&quot;&gt;off-grid homesteaders in the New Mexico desert&lt;/a&gt;, &lt;a href=&quot;https://solarpunktravel.org/2022/02/03/tfs.html&quot;&gt;a solar company in Tucson&lt;/a&gt; that started out delivering panels by bicycle, &lt;a href=&quot;https://solarpunktravel.org/2021/09/15/a-life-changing-three-months.html#arcata-to-ca-or-border&quot;&gt;bike&lt;/a&gt; &lt;a href=&quot;https://solarpunktravel.org/2021/09/15/a-life-changing-three-months.html#south-oregon-coast&quot;&gt;co-ops&lt;/a&gt; in &lt;a href=&quot;https://solarpunktravel.org/2021/09/15/a-life-changing-three-months.html#portland-co-op-loop&quot;&gt;nearly&lt;/a&gt; &lt;a href=&quot;https://solarpunktravel.org/2021/12/30/the-journey-will-continue.html#resetting-for-the-next-segment&quot;&gt;every&lt;/a&gt; &lt;a href=&quot;https://solarpunktravel.org/2021/12/30/the-journey-will-continue.html#the-big-sur-coastline&quot;&gt;city&lt;/a&gt; we &lt;a href=&quot;https://solarpunktravel.org/2021/12/30/the-journey-will-continue.html#the-southern-california-vibes&quot;&gt;passed through&lt;/a&gt;. For the first few months, I thought we were seeing the start of something.&lt;/p&gt;
+
+&lt;style&gt;
+  .post-carousel { position: relative; max-width: 640px; margin: 1.5em auto; }
+  .post-carousel-window { position: relative; overflow: hidden; border-radius: 4px; background: #111; }
+  .post-carousel-track { display: flex; transition: transform 0.3s ease; }
+  .post-carousel-slide { flex: 0 0 100%; display: flex; align-items: center; justify-content: center; height: 480px; }
+  .post-carousel-slide img { max-width: 100%; max-height: 100%; object-fit: contain; display: block; margin: 0; }
+  .post-carousel button { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: #fff; border: none; width: 2.2em; height: 2.2em; border-radius: 100%; cursor: pointer; font-size: 1em; padding: 0; z-index: 2; }
+  .post-carousel button:hover { background: rgba(0,0,0,0.75); }
+  .post-carousel .post-carousel-prev { left: 0.6em; }
+  .post-carousel .post-carousel-next { right: 0.6em; }
+  .post-carousel-dots { display: flex; justify-content: center; gap: 0.5em; margin-top: 0.6em; }
+  .post-carousel-dot { width: 0.6em; height: 0.6em; border-radius: 100%; background: #bbb; cursor: pointer; }
+  .post-carousel-dot.active { background: #333; }
+  .post-carousel figcaption { text-align: center; font-size: 0.85em; margin-top: 0.4em; }
+  @media (max-width: 600px) { .post-carousel-slide { height: 320px; } }
+&lt;/style&gt;
+
+&lt;script&gt;
+  document.addEventListener(&apos;DOMContentLoaded&apos;, function () {
+    document.querySelectorAll(&apos;.post-carousel&apos;).forEach(function (c) {
+      var track = c.querySelector(&apos;.post-carousel-track&apos;);
+      var slides = c.querySelectorAll(&apos;.post-carousel-slide&apos;);
+      var dots = c.querySelectorAll(&apos;.post-carousel-dot&apos;);
+      var index = 0;
+      function go(i) {
+        index = (i + slides.length) % slides.length;
+        track.style.transform = &apos;translateX(-&apos; + (index * 100) + &apos;%)&apos;;
+        dots.forEach(function (d, j) { d.classList.toggle(&apos;active&apos;, j === index); });
+      }
+      var prev = c.querySelector(&apos;.post-carousel-prev&apos;);
+      var next = c.querySelector(&apos;.post-carousel-next&apos;);
+      if (prev) prev.addEventListener(&apos;click&apos;, function () { go(index - 1); });
+      if (next) next.addEventListener(&apos;click&apos;, function () { go(index + 1); });
+      dots.forEach(function (d, j) { d.addEventListener(&apos;click&apos;, function () { go(j); }); });
+      var startX = null;
+      track.addEventListener(&apos;touchstart&apos;, function (e) { startX = e.touches[0].clientX; }, {passive: true});
+      track.addEventListener(&apos;touchend&apos;, function (e) {
+        if (startX === null) return;
+        var dx = e.changedTouches[0].clientX - startX;
+        if (Math.abs(dx) &gt; 40) go(index + (dx &lt; 0 ? 1 : -1));
+        startX = null;
+      });
+      go(0);
+    });
+  });
+&lt;/script&gt;
+
+&lt;figure class=&quot;post-carousel&quot;&gt;
+  &lt;div class=&quot;post-carousel-window&quot;&gt;
+    &lt;div class=&quot;post-carousel-track&quot;&gt;
+      
+      &lt;div class=&quot;post-carousel-slide&quot;&gt;&lt;img loading=&quot;lazy&quot; src=&quot;/assets/images/2026/slow/mendocino.jpg&quot; alt=&quot;Photos from our 2021 solar ebike tour of the Pacific coast&quot; /&gt;&lt;/div&gt;
+      
+      &lt;div class=&quot;post-carousel-slide&quot;&gt;&lt;img loading=&quot;lazy&quot; src=&quot;/assets/images/2026/slow/fun_us.jpg&quot; alt=&quot;Photos from our 2021 solar ebike tour of the Pacific coast&quot; /&gt;&lt;/div&gt;
+      
+      &lt;div class=&quot;post-carousel-slide&quot;&gt;&lt;img loading=&quot;lazy&quot; src=&quot;/assets/images/2026/slow/wildcat.jpg&quot; alt=&quot;Photos from our 2021 solar ebike tour of the Pacific coast&quot; /&gt;&lt;/div&gt;
+      
+      &lt;div class=&quot;post-carousel-slide&quot;&gt;&lt;img loading=&quot;lazy&quot; src=&quot;/assets/images/2026/slow/central_california.jpg&quot; alt=&quot;Photos from our 2021 solar ebike tour of the Pacific coast&quot; /&gt;&lt;/div&gt;
+      
+      &lt;div class=&quot;post-carousel-slide&quot;&gt;&lt;img loading=&quot;lazy&quot; src=&quot;/assets/images/2026/slow/columbia_gorge.jpg&quot; alt=&quot;Photos from our 2021 solar ebike tour of the Pacific coast&quot; /&gt;&lt;/div&gt;
+      
+      &lt;div class=&quot;post-carousel-slide&quot;&gt;&lt;img loading=&quot;lazy&quot; src=&quot;/assets/images/2026/slow/rainier.jpg&quot; alt=&quot;Photos from our 2021 solar ebike tour of the Pacific coast&quot; /&gt;&lt;/div&gt;
+      
+      &lt;div class=&quot;post-carousel-slide&quot;&gt;&lt;img loading=&quot;lazy&quot; src=&quot;/assets/images/2026/slow/ebike_trailer_claire.jpg&quot; alt=&quot;Photos from our 2021 solar ebike tour of the Pacific coast&quot; /&gt;&lt;/div&gt;
+      
+      &lt;div class=&quot;post-carousel-slide&quot;&gt;&lt;img loading=&quot;lazy&quot; src=&quot;/assets/images/2026/slow/warmshower.jpg&quot; alt=&quot;Photos from our 2021 solar ebike tour of the Pacific coast&quot; /&gt;&lt;/div&gt;
+      
+    &lt;/div&gt;
+    
+    &lt;button type=&quot;button&quot; class=&quot;post-carousel-prev&quot; aria-label=&quot;Previous image&quot;&gt;&amp;#10094;&lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;post-carousel-next&quot; aria-label=&quot;Next image&quot;&gt;&amp;#10095;&lt;/button&gt;
+    
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;post-carousel-dots&quot;&gt;
+    &lt;span class=&quot;post-carousel-dot&quot;&gt;&lt;/span&gt;&lt;span class=&quot;post-carousel-dot&quot;&gt;&lt;/span&gt;&lt;span class=&quot;post-carousel-dot&quot;&gt;&lt;/span&gt;&lt;span class=&quot;post-carousel-dot&quot;&gt;&lt;/span&gt;&lt;span class=&quot;post-carousel-dot&quot;&gt;&lt;/span&gt;&lt;span class=&quot;post-carousel-dot&quot;&gt;&lt;/span&gt;&lt;span class=&quot;post-carousel-dot&quot;&gt;&lt;/span&gt;&lt;span class=&quot;post-carousel-dot&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  
+  &lt;figcaption&gt;The first leg of the tour, 2021: Mendocino, the Lost Coast, the Columbia Gorge, Mt Rainier.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;the-realization&quot;&gt;The realization&lt;/h3&gt;
+
+&lt;p&gt;But somewhere around the middle of our trip, roughly the winter we spent riding across the Arizona and New Mexico desert, it started to become pretty clear that the world wasn’t waking up. Air travel was already rebounding toward &lt;a href=&quot;https://www.tsa.gov/news/press/releases/2022/07/05/tsa-screened-over-11-million-travelers-during-fourth-july-weekend&quot;&gt;pre-pandemic levels&lt;/a&gt;. Everybody &lt;a href=&quot;https://www.hcamag.com/us/news/general/tesla-workers-ordered-back-to-office-full-time/408125&quot;&gt;went&lt;/a&gt; &lt;a href=&quot;https://fortune.com/2022/12/26/how-top-ceos-elon-musk-tim-cook-tackled-return-to-office-2022/&quot;&gt;back&lt;/a&gt; to the office, or at least back to the same consumption patterns they had before. There were a lot of people who had decided to live differently during that time, but a lot more were tired of the change and wanted to go back to the glitzy old ways. We weren’t watching a movement grow so much as finding the people who’d been doing this all along.&lt;/p&gt;
+
+&lt;p&gt;Nobody told us we were wrong. It was more of a slow realization, the same way I &lt;a href=&quot;/2021/09/carbon-fragility/&quot;&gt;noticed people freeze up&lt;/a&gt; whenever I mentioned the environmental part of bike touring. Most people just weren’t going to change, and our example wasn’t going to be the thing that changed them.&lt;/p&gt;
+
+&lt;figure class=&quot;post-carousel&quot;&gt;
+  &lt;div class=&quot;post-carousel-window&quot;&gt;
+    &lt;div class=&quot;post-carousel-track&quot;&gt;
+      
+      &lt;div class=&quot;post-carousel-slide&quot;&gt;&lt;img loading=&quot;lazy&quot; src=&quot;/assets/images/2026/slow/tucson.jpg&quot; alt=&quot;Photos from riding across the Arizona and New Mexico desert in winter&quot; /&gt;&lt;/div&gt;
+      
+      &lt;div class=&quot;post-carousel-slide&quot;&gt;&lt;img loading=&quot;lazy&quot; src=&quot;/assets/images/2026/slow/nm.jpg&quot; alt=&quot;Photos from riding across the Arizona and New Mexico desert in winter&quot; /&gt;&lt;/div&gt;
+      
+      &lt;div class=&quot;post-carousel-slide&quot;&gt;&lt;img loading=&quot;lazy&quot; src=&quot;/assets/images/2026/slow/us.jpg&quot; alt=&quot;Photos from riding across the Arizona and New Mexico desert in winter&quot; /&gt;&lt;/div&gt;
+      
+    &lt;/div&gt;
+    
+    &lt;button type=&quot;button&quot; class=&quot;post-carousel-prev&quot; aria-label=&quot;Previous image&quot;&gt;&amp;#10094;&lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;post-carousel-next&quot; aria-label=&quot;Next image&quot;&gt;&amp;#10095;&lt;/button&gt;
+    
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;post-carousel-dots&quot;&gt;
+    &lt;span class=&quot;post-carousel-dot&quot;&gt;&lt;/span&gt;&lt;span class=&quot;post-carousel-dot&quot;&gt;&lt;/span&gt;&lt;span class=&quot;post-carousel-dot&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  
+  &lt;figcaption&gt;Winter 2022, crossing the desert, about when the realization set in.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;So what was the point anymore? Over the second half of the trip and the years that followed, I think the piece split into two different things.&lt;/p&gt;
+
+&lt;h3 id=&quot;part-1-living-morally-even-if-it-doesnt-change-anything&quot;&gt;Part 1: Living morally even if it doesn’t change anything&lt;/h3&gt;
+
+&lt;h4 id=&quot;the-honest-math&quot;&gt;The honest math&lt;/h4&gt;
+
+&lt;p&gt;I want to be honest about the math here, because I think a lot of climate messaging isn’t. Me not flying does almost nothing. Airlines set their schedules months in advance, and planes &lt;a href=&quot;https://www.iata.org/en/pressroom/2025-releases/2025-01-30-01/&quot;&gt;don’t fly completely full&lt;/a&gt; anyway, so when I don’t buy a seat, the plane almost certainly takes off regardless. There is a real effect though: at the margin, the fare drops a few dollars and someone else who wasn’t going to fly buys the seat. So my missing demand decreases the airline’s reinvestment and profitability by a tiny tiny tiny fraction. But it isn’t really even the equivalent of 1 seat on the plane.&lt;/p&gt;
+
+&lt;p&gt;If you zoom way out, and imagine thousands of people stopping that would &lt;em&gt;eventually&lt;/em&gt; lead to planes being grounded or delayed expansion. But even that still wouldn’t show up in any way that matters. We’re already &lt;a href=&quot;https://climate.copernicus.eu/copernicus-2024-first-year-exceed-15degc-above-pre-industrial-level&quot;&gt;so&lt;/a&gt; &lt;a href=&quot;https://climate.copernicus.eu/copernicus-2025-course-be-joint-second-warmest-year-november-third-warmest-record&quot;&gt;far&lt;/a&gt; &lt;a href=&quot;https://www.carbonbrief.org/guest-post-what-the-tiny-remaining-1-5c-carbon-budget-means-for-climate-policy/&quot;&gt;past&lt;/a&gt; &lt;a href=&quot;https://www.unep.org/resources/emissions-gap-report-2025&quot;&gt;the&lt;/a&gt; &lt;a href=&quot;https://www.ipcc.ch/report/ar6/syr/&quot;&gt;point&lt;/a&gt; where warming was avoidable that the difference between this world and that world would be imperceptible in the temperature record. Aviation is &lt;a href=&quot;https://ourworldindata.org/co2-emissions-from-aviation&quot;&gt;a few percent&lt;/a&gt; of global emissions. Our individual choices are a rounding error on a rounding error.&lt;/p&gt;
+
+&lt;p&gt;Philosophers have actually argued about this exact problem. Derek Parfit listed it among his &lt;a href=&quot;https://en.wikipedia.org/wiki/Reasons_and_Persons&quot;&gt;“mistakes in moral mathematics”&lt;/a&gt;: the belief that if an act’s effects on other people are imperceptible, then the act can’t be wrong because of those effects. His thought experiment is the &lt;a href=&quot;https://sites.nd.edu/kristin-shrader-frechette/files/2025/01/ShraderFrechette-ParfitMistakesMoral-1987.pdf&quot;&gt;harmless torturers&lt;/a&gt;, a thousand people who each turn a dial that increases a thousand victims’ pain by an amount too small for anyone to notice. No single torturer makes anyone perceptibly worse off, and yet together they’ve committed torture. Parfit’s conclusion is that each one of them is doing something wrong.&lt;/p&gt;
+
+&lt;p&gt;I find that pretty convincing, and it’s a decent answer to the rounding-error problem. But it still frames the whole thing in terms of outcomes, just outcomes that are spread very thin. So I don’t believe not flying saves the planet, and I’ve made my peace with that. What I want to argue is that it matters for reasons that don’t depend on the outcome at all.&lt;/p&gt;
+
+&lt;h4 id=&quot;fairness-in-a-finite-world&quot;&gt;Fairness in a finite world&lt;/h4&gt;
+
+&lt;p&gt;But I do think it matters for a different reason, and it’s a reason about fairness rather than impact. We live in a world that is resource-constrained. There is only &lt;a href=&quot;https://www.carbonbrief.org/guest-post-refining-the-remaining-1-5c-carbon-budget&quot;&gt;so much carbon&lt;/a&gt; that can be emitted before things get much worse than they already are, and there’s only so much of everything else too. If you divide that up evenly among everyone alive today, and leave something for the people who come after us, each person gets &lt;a href=&quot;https://hotorcool.org/hc-projects/1-5-degree-lifestyles&quot;&gt;a share&lt;/a&gt;. When I consume &lt;a href=&quot;https://www.downtoearth.org.in/news/climate-change/richest-1-emit-twice-as-much-carbon-as-poorest-50-oxfam-report-73612&quot;&gt;much&lt;/a&gt; &lt;a href=&quot;https://www.eceee.org/all-news/news/richest-1-account-for-more-carbon-emissions-than-poorest-66-report-says/&quot;&gt;more&lt;/a&gt; than my share, I’m not just doing something “unsustainable” in some abstract sense. I’m effectively taking from someone else. From somebody in a country that will &lt;a href=&quot;https://www.preventionweb.net/publication/climate-change-2023-synthesis-report-summary-policymakers&quot;&gt;flood or burn first&lt;/a&gt;. From my own descendants.&lt;/p&gt;
+
+&lt;p&gt;Is that a moral way to live? I don’t think it is, even if nobody ever catches me, and even if the outcome is the same either way. Most of us wouldn’t pocket money from a stranger’s wallet just because we were confident they’d never notice, or because the stranger was going to lose it anyway. So for me the question is less about whether my taking changes the outcome, and more about whether I want to be someone who takes.&lt;/p&gt;
+
+&lt;h4 id=&quot;acting-as-if-everyone-lived-this-way&quot;&gt;Acting as if everyone lived this way&lt;/h4&gt;
+
+&lt;p&gt;When we wrote our mission question, &lt;em&gt;could everybody in the world live at the level of consumption that I’m living at for 10 generations&lt;/em&gt;, we were trying to communicate the notion of fairness succinctly. But I’ve realized it’s also basically a restatement of Kant’s &lt;a href=&quot;https://plato.stanford.edu/entries/kant-moral/&quot;&gt;categorical imperative&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Act only according to that maxim whereby you can at the same time will that it should become a universal law.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The important thing about Kant’s test is that it doesn’t ask what will happen because of your specific act. It asks whether the rule you’re living by could be &lt;em&gt;everybody’s&lt;/em&gt; rule. And when you apply it to flying, the answer is not ambiguous. A single cross-country round trip comes out to &lt;a href=&quot;https://ourworldindata.org/travel-carbon-footprint&quot;&gt;somewhere between one and two tonnes&lt;/a&gt; of CO&lt;sub&gt;2&lt;/sub&gt;-equivalent per passenger, depending on how you count the effects of emissions at altitude. A fair share for one person’s &lt;a href=&quot;https://hotorcool.org/hc-projects/1-5-degree-lifestyles&quot;&gt;entire year of consumption&lt;/a&gt; by 2030 is about two and a half. “Fly whenever it’s convenient” is a maxim that simply can’t be universalized. If everyone did it, there’d be nothing left for food or heat or anything else.&lt;/p&gt;
+
+&lt;p&gt;That’s also why Kant calls it &lt;em&gt;categorical&lt;/em&gt;. A hypothetical imperative says “if you want X, do Y,” and it stops applying the moment you stop wanting X. A categorical one doesn’t depend on what you want or on what results. So the objection that “it won’t change anything” just isn’t relevant to it. For Kant, what matters is whether I’m living by a rule I could defend if everyone lived by it.&lt;/p&gt;
+
+&lt;p&gt;Kant has a second formulation that I think fits even better: treat people always as ends in themselves, and &lt;a href=&quot;https://plato.stanford.edu/entries/kant-moral/&quot;&gt;never merely as means&lt;/a&gt;. When I burn through my share and somebody else’s, the people downwind of that decision, in Bangladesh or in the year 2080, become a means to my convenience, and they don’t get any say in it.&lt;/p&gt;
+
+&lt;p&gt;Kant’s weakness, at least for me, is that it’s all so solitary. It pictures morality as a lone person in a study reasoning out universal laws from pure logic. And that’s not really how anyone I met on our trip was living.&lt;/p&gt;
+
+&lt;h4 id=&quot;living-rightly-without-reward&quot;&gt;Living rightly without reward&lt;/h4&gt;
+
+&lt;p&gt;I want to be careful here, because “Indigenous philosophy” isn’t one thing, and I’m an outsider learning about these traditions secondhand. But I want to mention a few ideas that come out of specific Indigenous traditions in North America that I think also point this out without necessarily getting into all the fancy rhetoric of Kant and Parfit.&lt;/p&gt;
+
+&lt;p&gt;The first is the Haudenosaunee &lt;a href=&quot;https://en.wikipedia.org/wiki/Seven_generation_sustainability&quot;&gt;seventh generation principle&lt;/a&gt;, traditionally attributed to the Great Law of Peace: that decisions made today should be weighed against their effect on people seven generations from now. I think this idea has become entrenched enough in the zeitgeist that it influenced our “10 generations” question above.&lt;/p&gt;
+
+&lt;p&gt;The second is what the Potawatomi botanist Robin Wall Kimmerer describes in &lt;a href=&quot;https://milkweed.org/book/braiding-sweetgrass&quot;&gt;&lt;em&gt;Braiding Sweetgrass&lt;/em&gt;&lt;/a&gt; as the &lt;a href=&quot;https://www.upaya.org/2014/06/guidelines-honorable-harvest/&quot;&gt;Honorable Harvest&lt;/a&gt;, a set of guidelines for taking from the living world: ask permission, take only what you need, never take more than half, use it respectfully, share it, give thanks, and give something back. What strikes me most is her point that these guidelines aren’t written down anywhere, or even consistently spoken of as a whole. They’re reinforced in small acts of daily life.&lt;/p&gt;
+
+&lt;p&gt;That’s what’s so different from both Kant and from modern Western life. There’s no external enforcement and no reward, and nobody is checking. You live rightly because that’s what it means to be a member of your community, and your community includes the land, the animals, the people around you, and the people who haven’t been born yet.&lt;/p&gt;
+
+&lt;p&gt;This is also the kind of morality that I think should be easy to digest in the US. The strange question is: why doesn’t the average person see the immorality of living beyond a sustainable level?&lt;/p&gt;
+
+&lt;h4 id=&quot;the-trouble-with-homo-economicus&quot;&gt;The trouble with homo economicus&lt;/h4&gt;
+
+&lt;p&gt;I think the problem might stem from the mental model of the human psyche that most of Western economics is built on, &lt;a href=&quot;https://en.wikipedia.org/wiki/Homo_economicus&quot;&gt;&lt;em&gt;homo economicus&lt;/em&gt;&lt;/a&gt;: a rational, self-interested agent who’s always maximizing their own utility. Under that model, my decision not to fly isn’t noble, it’s just irrational. I pay the full cost of the sacrifice, and everyone else shares the tiny benefit. Standard economics would say the correct move is to &lt;a href=&quot;https://en.wikipedia.org/wiki/Free-rider_problem&quot;&gt;free ride&lt;/a&gt;: fly, and let other people worry about the atmosphere.&lt;/p&gt;
+
+&lt;p&gt;Scale that logic up and you get Garrett Hardin’s &lt;a href=&quot;https://en.wikipedia.org/wiki/Tragedy_of_the_commons&quot;&gt;tragedy of the commons&lt;/a&gt;, the idea that any shared resource will inevitably be destroyed because each individual is better off taking a little more. The atmosphere is the biggest commons there is, so by that story, we’re doomed.&lt;/p&gt;
+
+&lt;p&gt;But this is where the model starts to fall apart. Elinor Ostrom won a &lt;a href=&quot;https://www.nobelprize.org/prizes/economic-sciences/2009/ostrom/facts/&quot;&gt;Nobel Prize&lt;/a&gt; for showing that real communities manage shared resources successfully all the time, for centuries, through exactly the kind of norms, trust, and mutual obligation that homo economicus is supposed to make impossible. And when sociologists actually tested the free rider hypothesis in the lab, most people &lt;a href=&quot;https://econweb.ucsd.edu/~jandreon/Econ264/papers/Marwell%20Ames%20JPubE%201981.pdf&quot;&gt;didn’t free ride&lt;/a&gt;. They contributed to the public good even when it cost them. The group that came closest to behaving like homo economicus? Economics graduate students.&lt;/p&gt;
+
+&lt;p&gt;I think that result says a lot. Homo economicus isn’t really a description of how people are. It’s a description of how we’ve &lt;em&gt;taught&lt;/em&gt; people to be, and the more we teach it, the more true it becomes. Every advertisement, every loyalty program, every “treat yourself” is training us to treat life as an optimization problem where the variable being optimized is our own pleasure. If you’re homo economicus, taking a cheap flight somewhere nice for a long weekend is a perfectly rational thing to do.&lt;/p&gt;
+
+&lt;h4 id=&quot;is-a-moral-life-a-happier-one&quot;&gt;Is a moral life a happier one?&lt;/h4&gt;
+
+&lt;p&gt;The obvious response is: fine, maybe it’s more moral, but isn’t it just less fun? If everyone’s trying to maximize their happiness, and I’m voluntarily giving up things that would make me happy, aren’t I just worse off?&lt;/p&gt;
+
+&lt;p&gt;I actually believe the opposite. I think living morally leads to a happier life, and I don’t think that’s just a comforting story.&lt;/p&gt;
+
+&lt;p&gt;To start, the evidence that getting more of what you want makes you happier is surprisingly weak. People adapt to almost any improvement in their circumstances and drift back toward where they started, the so-called &lt;a href=&quot;https://en.wikipedia.org/wiki/Hedonic_treadmill&quot;&gt;hedonic treadmill&lt;/a&gt;. A &lt;a href=&quot;https://pubmed.ncbi.nlm.nih.gov/25347131/&quot;&gt;meta-analysis of more than 250 studies&lt;/a&gt; found that people with more materialistic values consistently report lower well-being. Meanwhile, people who were randomly assigned to &lt;a href=&quot;https://www.science.org/doi/10.1126/science.1150952&quot;&gt;spend money on others&lt;/a&gt; ended up happier than people who spent it on themselves.&lt;/p&gt;
+
+&lt;p&gt;None of this would have surprised Aristotle, whose idea of &lt;a href=&quot;https://en.wikipedia.org/wiki/Eudaimonia&quot;&gt;&lt;em&gt;eudaimonia&lt;/em&gt;&lt;/a&gt; is usually translated as “happiness” but really means something closer to flourishing. For Aristotle, you don’t become happy and then act well. Acting well is a big part of what being happy &lt;em&gt;is&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;And then there’s the personal evidence, which is admittedly anecdotal. I’ve written before about &lt;a href=&quot;/2021/09/carbon-fragility/&quot;&gt;carbon fragility&lt;/a&gt;, the defensiveness that people feel when the gap between what they know and how they live gets pointed out. I think living with that gap is uncomfortable, and it takes ongoing effort to keep the &lt;a href=&quot;https://en.wikipedia.org/wiki/Cognitive_dissonance&quot;&gt;cognitive dissonance&lt;/a&gt; out of mind. When we stopped flying, a lot of that went away. The way I lived matched what I believed a lot better, and I didn’t have to spend as much energy explaining it to myself.&lt;/p&gt;
+
+&lt;p&gt;It’s not free. It costs real things, and I’ll get to that at the end. But in the same way that I argued in &lt;a href=&quot;/2020/05/philosophical-grind/&quot;&gt;Philosophical Grind&lt;/a&gt; that we should act as if our actions matter, because that’s the only kind of universe where acting could matter anyway, I think we should act as if morality and happiness point in the same direction.&lt;/p&gt;
+
+&lt;p&gt;I know I have an experience and viewpoint on the world that might differ from the norm, but I can’t quite get to a point of contentment and happiness without morality. And, as I’ll describe in the next part, they may be coupled in more tangible ways than just my own self-knowledge of my moral superiority.&lt;/p&gt;
+
+&lt;h3 id=&quot;part-2-the-world-is-big&quot;&gt;Part 2: The world is big&lt;/h3&gt;
+
+&lt;p&gt;The other thing that happened is less about morality and more about perception, and it’s the part I’m most grateful for.&lt;/p&gt;
+
+&lt;p&gt;Effectively, we did a seven-year experiment in believing that crossing the United States is an insanely far distance. Which, it turns out, it is, and it has been for all of human history before the last few generations. When we finished our tour, we &lt;a href=&quot;https://solarpunktravel.org/2022/05/22/wildfire-time.html&quot;&gt;took the train from Albuquerque to Chicago&lt;/a&gt; and watched the whole thing go by. When we wanted to see the West again, we took the &lt;a href=&quot;https://www.amtrak.com/california-zephyr-train&quot;&gt;California Zephyr&lt;/a&gt; through the Rockies and the Empire Builder past Glacier. Partway through, a blizzard dumped so much snow on the Sierras that the tracks had to be physically cleared, and the trains past Salt Lake City were cancelled, so we ended up spending a few extra days in Glenwood Springs waiting for the line to reopen. If we’d been on a plane, the airline would have just rerouted us some other way, and if we’d been in a car, the plows would have had the highway open much faster, or we could have just gone a little farther south. But the train only goes where the track goes, so clearing the path took about as long as it would have decades ago, and we had to wait out the very real physical connection between where we were and where we were going. It’s honestly kind of wild to think about, that there’s a single continuous chain of iron running all the way from Chicago, where we met, to Berkeley, where we live today, and that the whole time we were sitting in Glenwood Springs, the only thing standing between us and California was a few miles of it buried under snow. &lt;a href=&quot;https://solarpunktravel.org/2023/03/01/amtrak-west-us.html&quot;&gt;That trip&lt;/a&gt; took a little over two weeks, and I came away with a much better sense of how the West fits together than I ever got from flying over it.&lt;/p&gt;
+
+&lt;figure class=&quot;post-carousel&quot;&gt;
+  &lt;div class=&quot;post-carousel-window&quot;&gt;
+    &lt;div class=&quot;post-carousel-track&quot;&gt;
+      
+      &lt;div class=&quot;post-carousel-slide&quot;&gt;&lt;img loading=&quot;lazy&quot; src=&quot;/assets/images/2026/slow/PXL_20230302_164755350.jpg&quot; alt=&quot;Photos from looking out the window on long Amtrak trips across the western US&quot; /&gt;&lt;/div&gt;
+      
+      &lt;div class=&quot;post-carousel-slide&quot;&gt;&lt;img loading=&quot;lazy&quot; src=&quot;/assets/images/2026/slow/PXL_20230303_190017409.jpg&quot; alt=&quot;Photos from looking out the window on long Amtrak trips across the western US&quot; /&gt;&lt;/div&gt;
+      
+      &lt;div class=&quot;post-carousel-slide&quot;&gt;&lt;img loading=&quot;lazy&quot; src=&quot;/assets/images/2026/slow/PXL_20230311_011822401.jpg&quot; alt=&quot;Photos from looking out the window on long Amtrak trips across the western US&quot; /&gt;&lt;/div&gt;
+      
+      &lt;div class=&quot;post-carousel-slide&quot;&gt;&lt;img loading=&quot;lazy&quot; src=&quot;/assets/images/2026/slow/PXL_20230310_235403106.jpg&quot; alt=&quot;Photos from looking out the window on long Amtrak trips across the western US&quot; /&gt;&lt;/div&gt;
+      
+      &lt;div class=&quot;post-carousel-slide&quot;&gt;&lt;img loading=&quot;lazy&quot; src=&quot;/assets/images/2026/slow/PXL_20230318_191320026.jpg&quot; alt=&quot;Photos from looking out the window on long Amtrak trips across the western US&quot; /&gt;&lt;/div&gt;
+      
+      &lt;div class=&quot;post-carousel-slide&quot;&gt;&lt;img loading=&quot;lazy&quot; src=&quot;/assets/images/2026/slow/PXL_20230318_202309706.jpg&quot; alt=&quot;Photos from looking out the window on long Amtrak trips across the western US&quot; /&gt;&lt;/div&gt;
+      
+    &lt;/div&gt;
+    
+    &lt;button type=&quot;button&quot; class=&quot;post-carousel-prev&quot; aria-label=&quot;Previous image&quot;&gt;&amp;#10094;&lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;post-carousel-next&quot; aria-label=&quot;Next image&quot;&gt;&amp;#10095;&lt;/button&gt;
+    
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;post-carousel-dots&quot;&gt;
+    &lt;span class=&quot;post-carousel-dot&quot;&gt;&lt;/span&gt;&lt;span class=&quot;post-carousel-dot&quot;&gt;&lt;/span&gt;&lt;span class=&quot;post-carousel-dot&quot;&gt;&lt;/span&gt;&lt;span class=&quot;post-carousel-dot&quot;&gt;&lt;/span&gt;&lt;span class=&quot;post-carousel-dot&quot;&gt;&lt;/span&gt;&lt;span class=&quot;post-carousel-dot&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  
+  &lt;figcaption&gt;Out the window of the Zephyr and the Empire Builder, 2023.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;I’ve come to believe that traveling that far &lt;em&gt;should&lt;/em&gt; be experienced, rather than slept through on a plane. Looking out the window of a train, or riding a bicycle through someone else’s neighborhood, should be how you move through the world. You see the land change and the towns get farther apart and closer together, and you get a sense of how big things actually are.&lt;/p&gt;
+
+&lt;p&gt;Our era of magically teleporting to faraway lands devalues all of that. When you can be in Japan tomorrow, everything in between becomes empty space that you’re trying to skip. And I’d argue it even devalues the destination. I could go to Japan tomorrow and “experience” something “new,” but I’ve started to suspect that anything I can get to that easily has already been packaged up for people like me who are just passing through, and that the experiences that really change you are the ones that take a lot more than a plane ticket to reach. And because I’ve decided that isn’t an option for me, I value being in Berkeley more. I value the &lt;a href=&quot;https://solarpunktravel.org/2026/06/10/transit-to-trails.html&quot;&gt;hills I can bike to&lt;/a&gt;. I value the fact that a weekend on the &lt;a href=&quot;https://solarpunktravel.org/2026/06/10/transit-to-trails.html&quot;&gt;Coast Starlight to Monterey&lt;/a&gt; feels like a real trip.&lt;/p&gt;
+
+&lt;p&gt;The same thing happened when we lived in Madison. We moved there after the tour partly to live closer to our families in the Midwest so that we didn’t need to fly to see them. And because we’d taken flying off the table, Wisconsin had to become our whole world, and it turned out to be plenty big. We rode out to &lt;a href=&quot;https://solarpunktravel.org/2024/10/20/hosted-bike-trips-wisconsin.html&quot;&gt;Blue Mounds&lt;/a&gt; every year and took friends. We &lt;a href=&quot;https://solarpunktravel.org/2024/01/01/madison-crosscountryski.html&quot;&gt;skied across the frozen lake&lt;/a&gt; and took the bus to the &lt;a href=&quot;https://arboretum.wisc.edu/&quot;&gt;arboretum&lt;/a&gt; with skis in tow. We spent four days stringing together three different rural bus agencies just to get to the &lt;a href=&quot;https://solarpunktravel.org/2026/06/10/transit-to-trails.html&quot;&gt;Apostle Islands&lt;/a&gt;, a trip that used to be a few hours on the &lt;a href=&quot;https://en.wikipedia.org/wiki/Wisconsin_Central_Railway_%281897%E2%80%931954%29&quot;&gt;railroad&lt;/a&gt; back in 1900, and by the time we got into our kayaks in the sea caves it felt like a real expedition, even though it was only a few hundred miles from home.&lt;/p&gt;
+
+&lt;figure class=&quot;post-carousel&quot;&gt;
+  &lt;div class=&quot;post-carousel-window&quot;&gt;
+    &lt;div class=&quot;post-carousel-track&quot;&gt;
+      
+      &lt;div class=&quot;post-carousel-slide&quot;&gt;&lt;img loading=&quot;lazy&quot; src=&quot;/assets/images/2026/slow/CtpE-qvOwmY_4.jpg&quot; alt=&quot;Photos of local bike trips, camping, and skiing around Madison, Wisconsin&quot; /&gt;&lt;/div&gt;
+      
+      &lt;div class=&quot;post-carousel-slide&quot;&gt;&lt;img loading=&quot;lazy&quot; src=&quot;/assets/images/2026/slow/CtpE-qvOwmY_9.jpg&quot; alt=&quot;Photos of local bike trips, camping, and skiing around Madison, Wisconsin&quot; /&gt;&lt;/div&gt;
+      
+      &lt;div class=&quot;post-carousel-slide&quot;&gt;&lt;img loading=&quot;lazy&quot; src=&quot;/assets/images/2026/slow/CvvM0_XPbts_4.jpg&quot; alt=&quot;Photos of local bike trips, camping, and skiing around Madison, Wisconsin&quot; /&gt;&lt;/div&gt;
+      
+      &lt;div class=&quot;post-carousel-slide&quot;&gt;&lt;img loading=&quot;lazy&quot; src=&quot;/assets/images/2026/slow/C-GJ2zVOB8J_3.jpg&quot; alt=&quot;Photos of local bike trips, camping, and skiing around Madison, Wisconsin&quot; /&gt;&lt;/div&gt;
+      
+      &lt;div class=&quot;post-carousel-slide&quot;&gt;&lt;img loading=&quot;lazy&quot; src=&quot;/assets/images/2026/slow/C-GJ2zVOB8J_5.jpg&quot; alt=&quot;Photos of local bike trips, camping, and skiing around Madison, Wisconsin&quot; /&gt;&lt;/div&gt;
+      
+      &lt;div class=&quot;post-carousel-slide&quot;&gt;&lt;img loading=&quot;lazy&quot; src=&quot;/assets/images/2026/slow/C_cB6ETOi-O_4.jpg&quot; alt=&quot;Photos of local bike trips, camping, and skiing around Madison, Wisconsin&quot; /&gt;&lt;/div&gt;
+      
+      &lt;div class=&quot;post-carousel-slide&quot;&gt;&lt;img loading=&quot;lazy&quot; src=&quot;/assets/images/2026/slow/uwarb.jpg&quot; alt=&quot;Photos of local bike trips, camping, and skiing around Madison, Wisconsin&quot; /&gt;&lt;/div&gt;
+      
+      &lt;div class=&quot;post-carousel-slide&quot;&gt;&lt;img loading=&quot;lazy&quot; src=&quot;/assets/images/2026/slow/mccarthy.jpg&quot; alt=&quot;Photos of local bike trips, camping, and skiing around Madison, Wisconsin&quot; /&gt;&lt;/div&gt;
+      
+    &lt;/div&gt;
+    
+    &lt;button type=&quot;button&quot; class=&quot;post-carousel-prev&quot; aria-label=&quot;Previous image&quot;&gt;&amp;#10094;&lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;post-carousel-next&quot; aria-label=&quot;Next image&quot;&gt;&amp;#10095;&lt;/button&gt;
+    
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;post-carousel-dots&quot;&gt;
+    &lt;span class=&quot;post-carousel-dot&quot;&gt;&lt;/span&gt;&lt;span class=&quot;post-carousel-dot&quot;&gt;&lt;/span&gt;&lt;span class=&quot;post-carousel-dot&quot;&gt;&lt;/span&gt;&lt;span class=&quot;post-carousel-dot&quot;&gt;&lt;/span&gt;&lt;span class=&quot;post-carousel-dot&quot;&gt;&lt;/span&gt;&lt;span class=&quot;post-carousel-dot&quot;&gt;&lt;/span&gt;&lt;span class=&quot;post-carousel-dot&quot;&gt;&lt;/span&gt;&lt;span class=&quot;post-carousel-dot&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  
+  &lt;figcaption&gt;The slower life in Madison: group rides, Blue Mounds, Scheidegger Forest, skiing the arboretum.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure class=&quot;post-carousel&quot;&gt;
+  &lt;div class=&quot;post-carousel-window&quot;&gt;
+    &lt;div class=&quot;post-carousel-track&quot;&gt;
+      
+      &lt;div class=&quot;post-carousel-slide&quot;&gt;&lt;img loading=&quot;lazy&quot; src=&quot;/assets/images/2026/slow/C_mbC-rOa5a_2.jpg&quot; alt=&quot;A map comparing train travel times to Bayfield in 1900 with bus travel times in 2024, and photos of kayaking the Apostle Islands&quot; /&gt;&lt;/div&gt;
+      
+      &lt;div class=&quot;post-carousel-slide&quot;&gt;&lt;img loading=&quot;lazy&quot; src=&quot;/assets/images/2026/slow/C_6QUV5ykPg_2.jpg&quot; alt=&quot;A map comparing train travel times to Bayfield in 1900 with bus travel times in 2024, and photos of kayaking the Apostle Islands&quot; /&gt;&lt;/div&gt;
+      
+      &lt;div class=&quot;post-carousel-slide&quot;&gt;&lt;img loading=&quot;lazy&quot; src=&quot;/assets/images/2026/slow/C_6QUV5ykPg_7.jpg&quot; alt=&quot;A map comparing train travel times to Bayfield in 1900 with bus travel times in 2024, and photos of kayaking the Apostle Islands&quot; /&gt;&lt;/div&gt;
+      
+      &lt;div class=&quot;post-carousel-slide&quot;&gt;&lt;img loading=&quot;lazy&quot; src=&quot;/assets/images/2026/slow/C_6QUV5ykPg_3.jpg&quot; alt=&quot;A map comparing train travel times to Bayfield in 1900 with bus travel times in 2024, and photos of kayaking the Apostle Islands&quot; /&gt;&lt;/div&gt;
+      
+      &lt;div class=&quot;post-carousel-slide&quot;&gt;&lt;img loading=&quot;lazy&quot; src=&quot;/assets/images/2026/slow/C_6QUV5ykPg_6.jpg&quot; alt=&quot;A map comparing train travel times to Bayfield in 1900 with bus travel times in 2024, and photos of kayaking the Apostle Islands&quot; /&gt;&lt;/div&gt;
+      
+    &lt;/div&gt;
+    
+    &lt;button type=&quot;button&quot; class=&quot;post-carousel-prev&quot; aria-label=&quot;Previous image&quot;&gt;&amp;#10094;&lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;post-carousel-next&quot; aria-label=&quot;Next image&quot;&gt;&amp;#10095;&lt;/button&gt;
+    
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;post-carousel-dots&quot;&gt;
+    &lt;span class=&quot;post-carousel-dot&quot;&gt;&lt;/span&gt;&lt;span class=&quot;post-carousel-dot&quot;&gt;&lt;/span&gt;&lt;span class=&quot;post-carousel-dot&quot;&gt;&lt;/span&gt;&lt;span class=&quot;post-carousel-dot&quot;&gt;&lt;/span&gt;&lt;span class=&quot;post-carousel-dot&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  
+  &lt;figcaption&gt;Madison to the Apostle Islands: 4–8 hours by train in 1900, two days by bus in 2024. Worth it.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;In a way, everyone’s world is always the size of the places they can reach, and for most people today that just happens to include anywhere with an airport. The difference is in how you fill it in. You can have a single line sketch of where you live, and then another single line sketch of ten other cities and attractions scattered around the globe, or you can spend your time filling in all the detail of the tapestry that’s right around you. What we spent seven years rediscovering is that once you start filling in that detail, the world close to home turns out to be enormous. It’s big enough to spend a whole winter getting to know the trails of one arboretum, big enough that a few hundred miles of rural bus connections can feel like an expedition, and big enough that I’ll probably never run out of places within a day’s ride of my own front door. When we made everyone’s world the size of the whole planet, I don’t think we actually made anybody’s world any bigger, we just made all of it feel a little bit smaller, and I’m really grateful that we got the chance to make ours big again.&lt;/p&gt;
+
+&lt;h3 id=&quot;relenting&quot;&gt;Relenting&lt;/h3&gt;
+
+&lt;p&gt;The last part is the one I have the most mixed feelings about.&lt;/p&gt;
+
+&lt;p&gt;In 2025 we &lt;a href=&quot;https://solarpunktravel.org/2025/03/20/we-moved-back-to-california.html&quot;&gt;moved back to California&lt;/a&gt; to &lt;a href=&quot;https://solarpunktravel.org/2026/08/25/babys-first-year-on-the-rails.html&quot;&gt;start our family&lt;/a&gt;. It was the right decision for &lt;a href=&quot;https://www.nbcnews.com/politics/2024-elections/wisconsin-president-results&quot;&gt;lots&lt;/a&gt; &lt;a href=&quot;https://www.commonwealthfund.org/publications/issue-briefs/2022/dec/us-maternal-health-divide-limited-services-worse-outcomes&quot;&gt;of&lt;/a&gt; &lt;a href=&quot;https://www.wpr.org/news/wisconsin-second-largest-brain-drain-country&quot;&gt;reasons&lt;/a&gt;, but it broke one of the core principles that had held the whole thing together. Our families are in the Midwest. Taking a newborn on a three-day train ride each way to see grandparents isn’t really workable, and neither is telling those grandparents that they’ll only see their grandchild once every few years.&lt;/p&gt;
+
+&lt;p&gt;So we’ve had to relent on “never flying.” We haven’t actually gotten on a plane yet, but this Christmas we’re going to fly home to the Midwest for the first time since we took the pledge.&lt;/p&gt;
+
+&lt;figure class=&quot;post-carousel&quot;&gt;
+  &lt;div class=&quot;post-carousel-window&quot;&gt;
+    &lt;div class=&quot;post-carousel-track&quot;&gt;
+      
+      &lt;div class=&quot;post-carousel-slide&quot;&gt;&lt;img loading=&quot;lazy&quot; src=&quot;/assets/images/2026/slow/DXmzD8fkk8Y_2.jpg&quot; alt=&quot;Photos of local hikes, ferry rides, and BART-to-bike trips around Berkeley with our baby&quot; /&gt;&lt;/div&gt;
+      
+      &lt;div class=&quot;post-carousel-slide&quot;&gt;&lt;img loading=&quot;lazy&quot; src=&quot;/assets/images/2026/slow/DTsyKWBFLb0_4.jpg&quot; alt=&quot;Photos of local hikes, ferry rides, and BART-to-bike trips around Berkeley with our baby&quot; /&gt;&lt;/div&gt;
+      
+      &lt;div class=&quot;post-carousel-slide&quot;&gt;&lt;img loading=&quot;lazy&quot; src=&quot;/assets/images/2026/slow/DUBX4LaFLu3_2.jpg&quot; alt=&quot;Photos of local hikes, ferry rides, and BART-to-bike trips around Berkeley with our baby&quot; /&gt;&lt;/div&gt;
+      
+      &lt;div class=&quot;post-carousel-slide&quot;&gt;&lt;img loading=&quot;lazy&quot; src=&quot;/assets/images/2026/slow/DIMeV2jyABp_2.jpg&quot; alt=&quot;Photos of local hikes, ferry rides, and BART-to-bike trips around Berkeley with our baby&quot; /&gt;&lt;/div&gt;
+      
+      &lt;div class=&quot;post-carousel-slide&quot;&gt;&lt;img loading=&quot;lazy&quot; src=&quot;/assets/images/2026/slow/DIMeV2jyABp_5.jpg&quot; alt=&quot;Photos of local hikes, ferry rides, and BART-to-bike trips around Berkeley with our baby&quot; /&gt;&lt;/div&gt;
+      
+      &lt;div class=&quot;post-carousel-slide&quot;&gt;&lt;img loading=&quot;lazy&quot; src=&quot;/assets/images/2026/slow/DXmzD8fkk8Y_5.jpg&quot; alt=&quot;Photos of local hikes, ferry rides, and BART-to-bike trips around Berkeley with our baby&quot; /&gt;&lt;/div&gt;
+      
+    &lt;/div&gt;
+    
+    &lt;button type=&quot;button&quot; class=&quot;post-carousel-prev&quot; aria-label=&quot;Previous image&quot;&gt;&amp;#10094;&lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;post-carousel-next&quot; aria-label=&quot;Next image&quot;&gt;&amp;#10095;&lt;/button&gt;
+    
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;post-carousel-dots&quot;&gt;
+    &lt;span class=&quot;post-carousel-dot&quot;&gt;&lt;/span&gt;&lt;span class=&quot;post-carousel-dot&quot;&gt;&lt;/span&gt;&lt;span class=&quot;post-carousel-dot&quot;&gt;&lt;/span&gt;&lt;span class=&quot;post-carousel-dot&quot;&gt;&lt;/span&gt;&lt;span class=&quot;post-carousel-dot&quot;&gt;&lt;/span&gt;&lt;span class=&quot;post-carousel-dot&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  
+  &lt;figcaption&gt;Life on the ground in the Bay Area: Berkeley paths, the ferry, BART to bike to hike.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;I expect it to feel strange. We’ve spent years thinking of that trip as a few days on a train, and now it’s going to take an afternoon. But the years on the ground have already changed how we’re planning it. We’re going to be home for three weeks, and we’re trying to see every friend and relative we can while we’re there. If we’re going to spend that much of our share on one trip, we want to get as much out of it as possible, and a long weekend doesn’t make sense for a distance that big.&lt;/p&gt;
+
+&lt;p&gt;Looking back, the experiment didn’t start a movement, and it didn’t change anything measurable about the climate, but it did change how we think about distance, and I expect that part to stick even after we get on the plane. It’s also left us feeling a lot less alone than we did on that ride across the desert in 2022. Living in Berkeley, we’ve gotten to know more people who have gone flight-free than we ever met anywhere else, and it’s honestly been amazing to find that kind of camaraderie with people who made the same strange choice and came out the other side just as glad they did. So even with the Christmas trip, we’re planning to stay flight-light for the next several years, and to only fly when it’s really the one way to keep our family close.&lt;/p&gt;
+
+&lt;p&gt;And we do have big plans for later on. Once our family has grown up a bit, we want to travel through Asia and Europe, and because we’ve learned to take a distance that big so seriously, I’m pretty sure those trips won’t end up as quick hops between airports. They’ll be long, slow, epic adventures, the kind where you spend months getting to know a place rather than a long weekend.&lt;/p&gt;
+
+&lt;p&gt;I still think about that single chain of iron running from Chicago to Berkeley, and how it connects the place where our story started to the place where we’re living it now. Someday we’ll take the train back across it with our daughter, and I hope she gets to watch the whole country go by the way we did, and arrive knowing exactly how far she’s come. And when she’s old enough to decide for herself how big she wants her world to be, I hope she at least knows how much there is to fill in close to home first.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 24 Oct 2026 00:00:00 -0700</pubDate>
+        <link>https://opus.stedden.org/2026/10/staying-grounded-solarpunk-travel/</link>
+        <guid isPermaLink="true">https://opus.stedden.org/2026/10/staying-grounded-solarpunk-travel/</guid>
+        
+        <category>philosophy</category>
+        
+        <category>environment</category>
+        
+        <category>sustainability</category>
+        
+        <category>art</category>
+        
+        <category>bikes</category>
+        
+        
+      </item>
     
       <item>
         <image>https://opus.stedden.org/assets/images/2026/carshare/flyer.png</image>
